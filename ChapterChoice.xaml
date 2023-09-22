@@ -1,0 +1,58 @@
+﻿<Window x:Class="Abituria.ChapterChoice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Abituria"
+        mc:Ignorable="d"
+        Title="ChapterChoice" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="175*"/>
+            <ColumnDefinition Width="23*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="2">
+
+            <Image HorizontalAlignment="Left" Height="43" Margin="269,14,0,0" VerticalAlignment="Top" Width="46"/>
+        </Grid>
+        <Grid Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Abituria" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="35"></TextBlock>
+
+            <StackPanel HorizontalAlignment="Left" Height="257" Margin="18,21,0,0" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Top" Width="171">
+                <Button x:Name="BDzial1" Click="PrzyciskDzialI" Content="Dział I" HorizontalAlignment="Left" Margin="40,26,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+                <Button x:Name="BDzial2" Click="PrzyciskDzialII" Content="Dział II" HorizontalAlignment="Left" Margin="40,26,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+                <Button x:Name="BDzial3" Click="PrzyciskDzialIII" Content="Dział III" HorizontalAlignment="Left" Margin="40,26,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+                <Button x:Name="BDzial4" Click="PrzyciskDzialIV" Content="Dział IV" HorizontalAlignment="Left" Margin="40,26,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+                <Button x:Name="BDzial5" Click="PrzyciskDzialV" Content="Dział V" HorizontalAlignment="Left" Margin="40,26,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100"/>
+            </StackPanel>
+            <TextBox x:Name="tekstPow" Visibility="Visible" HorizontalAlignment="Left" Height="75" Margin="205,103,0,0" TextWrapping="Wrap" Text="Wybierz interesujący cię dział." VerticalAlignment="Top" Width="435" FontSize="30" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+            <RichTextBox x:Name="TestTekst" Visibility="Collapsed" HorizontalAlignment="Left" Height="242" Margin="0,48,0,0" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Top" Width="469" Grid.ColumnSpan="2" TextChanged="RichTextBox_TextChanged" Grid.Column="1">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+            <ListBox x:Name="Lista" Grid.Column="1" Visibility="Collapsed" HorizontalAlignment="Left" Height="43" VerticalAlignment="Top" Width="469" Grid.ColumnSpan="2" Grid.Row="1" >
+                <ListBoxItem x:Name="listaEl1">Item 1</ListBoxItem>
+                <TextBox x:Name="tekstEl1" Visibility="Visible" HorizontalAlignment="Left" Height="75" Margin="205,103,0,0" TextWrapping="Wrap" Text="Przykładowy tekst." VerticalAlignment="Top" Width="435" FontSize="30" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+                <ListBoxItem x:Name="listaEl2">Item 2</ListBoxItem>
+                <TextBox x:Name="tekstEl2" Visibility="Visible" HorizontalAlignment="Left" Height="75" Margin="205,103,0,0" TextWrapping="Wrap" Text="Przykładowy tekst." VerticalAlignment="Top" Width="435" FontSize="30" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+                <ListBoxItem x:Name="listaEl3">Item 3</ListBoxItem>
+                <TextBox x:Name="tekstEl3" Visibility="Visible" HorizontalAlignment="Left" Height="75" Margin="205,103,0,0" TextWrapping="Wrap" Text="Przykładowy tekst." VerticalAlignment="Top" Width="435" FontSize="30" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+                <ListBoxItem x:Name="listaEl4">Item 4</ListBoxItem>
+                <TextBox x:Name="tekstEl4" Visibility="Visible" HorizontalAlignment="Left" Height="75" Margin="205,103,0,0" TextWrapping="Wrap" Text="Przykładowy tekst." VerticalAlignment="Top" Width="435" FontSize="30" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+            </ListBox>
+        </Grid>
+    </Grid>
+</Window>

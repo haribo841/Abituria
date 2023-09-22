@@ -6,7 +6,36 @@
         xmlns:local="clr-namespace:Abituria"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
 
-    </Grid>
+    <StackPanel>
+        <TextBlock x:Name="ResultText" />
+        <TextBlock x:Name="CurrentOperationText" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Button x:Name="Button1" Click="Button_Click" Grid.Row="0" Grid.Column="0" Content="1" />
+            <Button x:Name="Button2" Click="Button_Click" Grid.Row="0" Grid.Column="1" Content="2" />
+            <Button x:Name="Button3" Click="Button_Click" Grid.Row="0" Grid.Column="2" Content="3" />
+            <Button x:Name="Button4" Click="Button_Click" Grid.Row="1" Grid.Column="0" Content="4" />
+            <Button x:Name="Button5" Click="Button_Click" Grid.Row="1" Grid.Column="1" Content="5" />
+            <Button x:Name="Button6" Click="Button_Click" Grid.Row="1" Grid.Column="2" Content="6" />
+            <Button x:Name="Button7" Click="Button_Click" Grid.Row="2" Grid.Column="0" Content="7" />
+            <Button x:Name="Button9" Click="Button_Click" Grid.Row="2" Grid.Column="1" Content="8" />
+            <Button x:Name="Button10" Click="Button_Click" Grid.Row="2" Grid.Column="2" Content="9" />
+        </Grid>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="0" />
+        </StackPanel>
+
+    </StackPanel>
+
 </Window>
