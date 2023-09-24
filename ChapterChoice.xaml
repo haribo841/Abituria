@@ -53,6 +53,9 @@
                 <ListBoxItem x:Name="listaEl4">Item 4</ListBoxItem>
                 <TextBox x:Name="tekstEl4" Visibility="Visible" HorizontalAlignment="Left" Height="75" Margin="205,103,0,0" TextWrapping="Wrap" Text="Przykładowy tekst." VerticalAlignment="Top" Width="435" FontSize="30" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
             </ListBox>
+
+
+
         </Grid>
     </Grid>
 </Window>

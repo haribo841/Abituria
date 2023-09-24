@@ -24,5 +24,10 @@ namespace Abituria
         {
             InitializeComponent();
         }
+       private void DZIALY(object sender, RoutedEventArgs e)
+        {
+            //NavigationService Navserv = new NavigationService();
+            //Navserv.Navigate(new Uri("WyborDzialu.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

@@ -23,7 +23,6 @@ namespace Abituria
         {
             InitializeComponent();
         }
-
         private void PrzyciskDzialI(object sender, RoutedEventArgs e)
         {
             tekstPow.Visibility = Visibility.Hidden;
@@ -38,34 +37,21 @@ namespace Abituria
                 this.TestTekst.Visibility = Visibility.Collapsed;
                 this.Lista.Visibility = Visibility.Collapsed;
             }
-
-
         }
-
-
         private void PrzyciskDzialII(object sender, RoutedEventArgs e)
         {
-
         }
-
         private void PrzyciskDzialIII(object sender, RoutedEventArgs e)
         {
-
         }
-
         private void PrzyciskDzialIV(object sender, RoutedEventArgs e)
         {
-
         }
-
         private void PrzyciskDzialV(object sender, RoutedEventArgs e)
         {
-
         }
-
         private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
         }
     }
 }

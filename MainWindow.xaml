@@ -23,7 +23,6 @@
 
         </Border>
 
-        <Image Source="E:\Obrazy\Projektowe\Calc2.png" HorizontalAlignment="Center" Margin="-200,0,0,0"  Width="54" Grid.Column="2"/>
         <TextBlock Text="Abituria" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.ColumnSpan="5"/>
 
         <TextBlock Grid.Row="1" Text="Witaj w programie ABITURIA, twoim matematycznym korepetytorze." FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5"/>
@@ -31,9 +30,41 @@
         <TextBlock Grid.Row="1" Text="Wybierz moduł:" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Margin="0,0,0,10" Grid.Column="1" Grid.ColumnSpan="3"/>
         <Button Grid.Row="2" Content="Kalkulator" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Button Grid.Row="2" Grid.Column="1" Content="Matura" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Button Grid.Row="2" Grid.Column="2" Content="Działy" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+        <!--<DockPanel>
+            <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />-->
+        <Button Grid.Row="2" Grid.Column="2" Content="Działy" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="DZIALY" x:Name="dzialy"/>
+        <!--</DockPanel> -->
         <Button Grid.Row="2" Grid.Column="3" Content="Zadania" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Button Grid.Row="2" Grid.Column="4" Content="Wideo" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
     </Grid>
+    <!--	<StackPanel>
+		<TextBlock x:Name="ResultText" />
+		<TextBlock x:Name="CurrentOperationText" />
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Button x:Name="Button1" Click="Button_Click" Grid.Row="0" Grid.Column="0" Content="1" />
+			<Button x:Name="Button2" Click="Button_Click" Grid.Row="0" Grid.Column="1" Content="2" />
+			<Button x:Name="Button3" Click="Button_Click" Grid.Row="0" Grid.Column="2" Content="3" />
+			<Button x:Name="Button4" Click="Button_Click" Grid.Row="1" Grid.Column="0" Content="4" />
+			<Button x:Name="Button5" Click="Button_Click" Grid.Row="1" Grid.Column="1" Content="5" />
+			<Button x:Name="Button6" Click="Button_Click" Grid.Row="1" Grid.Column="2" Content="6" />
+			<Button x:Name="Button7" Click="Button_Click" Grid.Row="2" Grid.Column="0" Content="7" />
+			<Button x:Name="Button9" Click="Button_Click" Grid.Row="2" Grid.Column="1" Content="8" />
+			<Button x:Name="Button10" Click="Button_Click" Grid.Row="2" Grid.Column="2" Content="9" />
+		</Grid>
+		<StackPanel Orientation="Horizontal">
+			<Button Content="0" />
+		</StackPanel>
+	</StackPanel>-->
 </Window>
