@@ -38,20 +38,10 @@ namespace Abituria
                 this.Lista.Visibility = Visibility.Collapsed;
             }
         }
-        private void PrzyciskDzialII(object sender, RoutedEventArgs e)
-        {
-        }
-        private void PrzyciskDzialIII(object sender, RoutedEventArgs e)
-        {
-        }
-        private void PrzyciskDzialIV(object sender, RoutedEventArgs e)
-        {
-        }
-        private void PrzyciskDzialV(object sender, RoutedEventArgs e)
-        {
-        }
-        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-        }
+        private void PrzyciskDzialII(object sender, RoutedEventArgs e){}
+        private void PrzyciskDzialIII(object sender, RoutedEventArgs e){}
+        private void PrzyciskDzialIV(object sender, RoutedEventArgs e){}
+        private void PrzyciskDzialV(object sender, RoutedEventArgs e){}
+        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e){}
     }
 }
