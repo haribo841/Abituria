@@ -5,10 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Abituria"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+           d:DesignHeight="450" d:DesignWidth="800"
       Title="PageMatura">
 
     <Grid>
-        
+
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Strona z maturami" VerticalAlignment="Center" Width="120"/>
+
+
     </Grid>
 </Page>
