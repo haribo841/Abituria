@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Abituria"
         mc:Ignorable="d"
-        Title="Calculator" Height="450" Width="800">
+               Title="Kalkulator maturzysty" Height="450" Width="800">
     <Grid>
-        
+        <TextBox HorizontalAlignment="Left" Height="87" Margin="242,160,0,0" TextWrapping="Wrap" Text="TODO" VerticalAlignment="Top" Width="186"/>
     </Grid>
 </Window>
