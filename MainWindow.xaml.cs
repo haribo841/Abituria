@@ -24,10 +24,20 @@ namespace Abituria
         {
             InitializeComponent();
         }
-       private void DZIALY(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //NavigationService Navserv = new NavigationService();
-            //Navserv.Navigate(new Uri("WyborDzialu.xaml", UriKind.RelativeOrAbsolute));
+            var calculator = new Calculator();
+            calculator.Show();
+        }
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            //MainFrame.NavigationService.Navigate(new Uri("PageMatura.xaml", UriKind.Relative));
+            //MainFrame.NavigationService.Navigate(new PageMatura());
+            // MainFrame.Content = new PageMatura();
+            NavigationWindow window = new NavigationWindow();
+            window.Source = new Uri("PageMatura.xaml", UriKind.Relative);
+            window.Show();
+            this.Visibility = Visibility.Hidden;
         }
     }
 }
