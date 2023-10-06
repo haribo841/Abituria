@@ -17,9 +17,9 @@ namespace Abituria
     /// <summary>
     /// Logika interakcji dla klasy ChapterChoice.xaml
     /// </summary>
-    public partial class ChapterChoice : Window
+    public partial class PageChapters : Window
     {
-        public ChapterChoice()
+        public PageChapters()
         {
             InitializeComponent();
         }

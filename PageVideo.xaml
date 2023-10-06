@@ -7,8 +7,52 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PageVideo">
-
     <Grid>
-        
+        <Frame Margin="0,60,0,0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="MaturaFrame" NavigationUIVisibility="Hidden"/>
+        <DockPanel Margin="5">
+            <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="55*"/>
+                        <RowDefinition Height="35*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Column="2" Grid.Row="0" Margin="5" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Button Background="Transparent" BorderThickness="0" Content="Abituria" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonKalkulator"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonMatura"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonDzialy"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="3" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonZadania"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="4" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Wideo" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonWideo"/>
+                    </TextBlock>
+                    <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
+                </Grid>
+            </Border>
+            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+                <Grid>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean blandit hendrerit magna, vitae tempus enim dapibus ac. Aenean sed cursus sem. Praesent ut dignissim tellus. Vivamus pretium tortor in hendrerit tincidunt. Pellentesque ullamcorper sodales luctus. Phasellus commodo erat nec dictum pulvinar. Integer nec rhoncus erat, non placerat ipsum. Cras leo mi, facilisis in aliquet ac, efficitur at odio. Morbi dui velit, egestas quis nibh eget, elementum rutrum ex. Nam et vulputate tellus, laoreet semper nisl. Nulla facilisi. Aliquam vel facilisis quam, a ultricies orci. Nullam vehicula mi augue, ut ultrices est fermentum et. Etiam id justo nec nisl auctor tristique nec vitae tellus. Pellentesque venenatis efficitur ipsum, sit amet hendrerit nulla porttitor nec. Aenean viverra vitae urna nec venenatis.
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare ultrices tortor non sodales. Donec molestie condimentum consequat. Morbi bibendum quis libero sed fringilla. Praesent eu sodales justo. Nunc et laoreet tellus, ut porta sem. Donec feugiat pellentesque iaculis. Nunc maximus arcu risus, quis mollis massa tristique quis. Morbi non massa quis diam varius eleifend. Proin faucibus mauris vel placerat dapibus. Vestibulum facilisis nulla quis velit sodales varius.
+Suspendisse fermentum, eros a consequat gravida, augue lacus facilisis nunc, at semper quam orci varius velit. Fusce hendrerit purus massa, id porttitor augue ultricies at. Sed iaculis euismod nulla sed posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nec facilisis dui. Suspendisse augue tellus, dignissim ut lectus eu, maximus fringilla erat. Proin eu leo tincidunt, vestibulum lacus sit amet, fringilla lorem.
+                    </TextBlock>
+                </Grid>
+            </Border>
+        </DockPanel>
     </Grid>
 </Page>

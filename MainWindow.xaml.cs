@@ -39,7 +39,7 @@ namespace Abituria
         private void ButtonDzialy(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("ChapterChoice.xaml", UriKind.Relative);
+            window.Source = new Uri("PageChapters.xaml", UriKind.Relative);
             window.Show();
             this.Visibility = Visibility.Hidden;
         }
