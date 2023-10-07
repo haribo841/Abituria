@@ -10,38 +10,52 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Abituria
 {
     /// <summary>
-    /// Logika interakcji dla klasy ChapterChoice.xaml
+    /// Logika interakcji dla klasy PageChapters.xaml
     /// </summary>
-    public partial class PageChapters : Window
+    public partial class PageChapters : Page
     {
         public PageChapters()
         {
             InitializeComponent();
         }
-        private void PrzyciskDzialI(object sender, RoutedEventArgs e)
+        private void ButtonAbituria(object sender, RoutedEventArgs e)
         {
-            tekstPow.Visibility = Visibility.Hidden;
-
-            if (this.TestTekst.Visibility == Visibility.Collapsed)
-            {
-                this.TestTekst.Visibility = Visibility.Visible;
-                this.Lista.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                this.TestTekst.Visibility = Visibility.Collapsed;
-                this.Lista.Visibility = Visibility.Collapsed;
-            }
+            var mainWin = new MainWindow();
+            mainWin.Show();
         }
-        private void PrzyciskDzialII(object sender, RoutedEventArgs e) { }
-        private void PrzyciskDzialIII(object sender, RoutedEventArgs e) { }
-        private void PrzyciskDzialIV(object sender, RoutedEventArgs e) { }
-        private void PrzyciskDzialV(object sender, RoutedEventArgs e) { }
-        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e) { }
+        private void ButtonKalkulator(object sender, RoutedEventArgs e)
+        {
+            var calculator = new Calculator();
+            calculator.Show();
+        }
+        private void ButtonMatura(object sender, RoutedEventArgs e)
+        {
+            //MaturaFrame.NavigationService.Navigate(new Uri("PageMatura.xaml", UriKind.Relative));
+            //MaturaFrame.NavigationService.Navigate(new PageMatura());
+            //MaturaFrame.Content = new PageMatura();
+            PageMatura pageMatura = new PageMatura();
+            NavigationService.Navigate(pageMatura);
+        }
+        private void ButtonDzialy(object sender, RoutedEventArgs e)
+        {
+            PageChapters pageChapters = new PageChapters();
+            NavigationService.Navigate(pageChapters);
+        }
+        private void ButtonZadania(object sender, RoutedEventArgs e)
+        {
+            PageExercises pageExercises = new PageExercises();
+            NavigationService.Navigate(pageExercises);
+        }
+        private void ButtonWideo(object sender, RoutedEventArgs e)
+        {
+            PageVideo pageVideo = new PageVideo();
+            NavigationService.Navigate(pageVideo);
+        }
     }
 }
