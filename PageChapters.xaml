@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:Abituria"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageExercises">
+      Title="PageExercises"
+      ShowsNavigationUI="False">
     <Grid>
         <DockPanel Margin="5">
             <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">

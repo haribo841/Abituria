@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:Abituria"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageVideo">
+      Title="PageVideo"
+      ShowsNavigationUI="False">
     <Grid>
         <Frame Margin="0,60,0,0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="MaturaFrame" NavigationUIVisibility="Hidden"/>
         <DockPanel Margin="5">

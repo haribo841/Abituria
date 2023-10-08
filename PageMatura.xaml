@@ -47,10 +47,16 @@
             <Grid>
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Margin="5" FontWeight="Bold" Foreground="Black">Arkusz z roku:</TextBlock>
                 <ComboBox HorizontalAlignment="Center" Margin="35" VerticalAlignment="Top" Width="120">
-                    <ComboBoxItem>2021</ComboBoxItem>
-                    <ComboBoxItem>2020</ComboBoxItem>
-                    <ComboBoxItem>2019</ComboBoxItem>
-                </ComboBox>
+                        <ComboBoxItem>
+                            <Button Grid.Row="2" Content="2021" ToolTip="Arkusz maturalny z 2021" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button2021"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Grid.Row="2" Content="2020" ToolTip="Arkusz maturalny z 2020" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button2020"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Grid.Row="2" Content="2019" ToolTip="Arkusz maturalny z 2019" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button2019"/>
+                        </ComboBoxItem>
+                    </ComboBox>
             </Grid>
         </Border>
         <Border Background="White" BorderBrush="Black" BorderThickness="1">
