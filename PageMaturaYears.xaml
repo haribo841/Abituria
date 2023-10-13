@@ -6,9 +6,64 @@
       xmlns:local="clr-namespace:Abituria"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageMaturaYears">
-
+      Title="PageMaturaYears"
+      ShowsNavigationUI="False">
     <Grid>
-        
+        <DockPanel Margin="5">
+            <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="55*"/>
+                        <RowDefinition Height="35*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Column="2" Grid.Row="0" Margin="5" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Button Background="Transparent" BorderThickness="0" Content="Abituria" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonKalkulator"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonMatura"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonDzialy"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="3" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonZadania"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="4" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Wideo" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonWideo"/>
+                    </TextBlock>
+                    <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
+                </Grid>
+            </Border>
+            <Border Background="White" BorderBrush="Black" BorderThickness="10" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="Wybierz arkusz maturalny do rozwiązania:" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Margin="15,5,15,0" Grid.ColumnSpan="5"/>
+                    <Button Grid.Column="1" Grid.Row="1" Margin="10" Content="2019" ToolTip="Arkusz maturalny z roku 2019" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button2019"/>
+                    <Button Grid.Column="2" Grid.Row="1" Margin="10" Content="2020" ToolTip="Arkusz maturalny z roku 2020" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button2020"/>
+                    <Button Grid.Column="3" Grid.Row="1" Margin="10" Content="2021" ToolTip="Arkusz maturalny z roku 2021" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button2021"/>
+                </Grid>
+            </Border>
+        </DockPanel>
     </Grid>
 </Page>
