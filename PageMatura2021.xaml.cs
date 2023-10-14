@@ -37,8 +37,8 @@ namespace Abituria
         }
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {
-            PageMatura pageMatura = new PageMatura();
-            NavigationService.Navigate(pageMatura);
+            PageMaturaYears pageMaturaYears = new PageMaturaYears();
+            NavigationService.Navigate(pageMaturaYears);
         }
         private void ButtonDzialy(object sender, RoutedEventArgs e)
         {
