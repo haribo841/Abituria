@@ -9,7 +9,7 @@
       Title="PageMatura2020">
     <Grid>
         <DockPanel Margin="5">
-            <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
+            <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="0" DockPanel.Dock="Top">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="60*"/>
@@ -48,13 +48,13 @@
                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Margin="5" FontWeight="Bold" Foreground="Black">Zadanie:</TextBlock>
                     <ComboBox HorizontalAlignment="Center" Margin="35" VerticalAlignment="Top" Width="120">
                         <ComboBoxItem>
-                            <Button Grid.Row="2" Content="Zadanie 1" ToolTip="Arkusz maturalny z 2021" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button2021"/>
+                            <Button Width="108" Background="Transparent" BorderThickness="0" Grid.Row="2" Content="Zadanie 1" ToolTip="Arkusz maturalny z 2021" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonZad1"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Grid.Row="2" Content="Zadanie 2" ToolTip="Arkusz maturalny z 2020" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button2020"/>
+                            <Button Width="108" Background="Transparent" BorderThickness="0" Grid.Row="2" Content="Zadanie 2" ToolTip="Arkusz maturalny z 2020" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonZad2"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Grid.Row="2" Content="Zadanie 3" ToolTip="Arkusz maturalny z 2019" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button2019"/>
+                            <Button Width="108" Background="Transparent" BorderThickness="0" Grid.Row="2" Content="Zadanie 3" ToolTip="Arkusz maturalny z 2019" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonZad3"/>
                         </ComboBoxItem>
                     </ComboBox>
                 </Grid>

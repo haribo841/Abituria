@@ -57,8 +57,8 @@ namespace Abituria
         }
         private void Button2021(object sender, RoutedEventArgs e)
         {
-            PageMatura2021 pageMatura2021 = new PageMatura2021();
-            NavigationService.Navigate(pageMatura2021);
+            PageMaturaCorrection2021 pageMaturaCorrection2021 = new PageMaturaCorrection2021();
+            NavigationService.Navigate(pageMaturaCorrection2021);
         }
         private void Button2020(object sender, RoutedEventArgs e)
         {

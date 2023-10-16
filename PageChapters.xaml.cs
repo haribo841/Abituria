@@ -54,5 +54,20 @@ namespace Abituria
             PageVideo pageVideo = new PageVideo();
             NavigationService.Navigate(pageVideo);
         }
+        private void ButtonDzial1(object sender, RoutedEventArgs e)
+        {
+            PageChapter1 pageChapter1 = new PageChapter1();
+            NavigationService.Navigate(pageChapter1);
+        }
+        private void ButtonDzial2(object sender, RoutedEventArgs e)
+        {
+            PageChapter2 pageChapter2 = new PageChapter2();
+            NavigationService.Navigate(pageChapter2);
+        }
+        private void ButtonDzial3(object sender, RoutedEventArgs e)
+        {
+            PageChapter3 pageChapter3 = new PageChapter3();
+            NavigationService.Navigate(pageChapter3);
+        }
     }
 }

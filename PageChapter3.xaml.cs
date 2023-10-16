@@ -24,5 +24,49 @@ namespace Abituria
         {
             InitializeComponent();
         }
+        private void ButtonAbituria(object sender, RoutedEventArgs e)
+        {
+            var mainWin = new MainWindow();
+            mainWin.Show();
+        }
+        private void ButtonKalkulator(object sender, RoutedEventArgs e)
+        {
+            var calculator = new Calculator();
+            calculator.Show();
+        }
+        private void ButtonMatura(object sender, RoutedEventArgs e)
+        {
+            PageMaturaYears pageMaturaYears = new PageMaturaYears();
+            NavigationService.Navigate(pageMaturaYears);
+        }
+        private void ButtonDzialy(object sender, RoutedEventArgs e)
+        {
+            PageChapters pageChapters = new PageChapters();
+            NavigationService.Navigate(pageChapters);
+        }
+        private void ButtonZadania(object sender, RoutedEventArgs e)
+        {
+            PageExercises pageExercises = new PageExercises();
+            NavigationService.Navigate(pageExercises);
+        }
+        private void ButtonWideo(object sender, RoutedEventArgs e)
+        {
+            PageVideo pageVideo = new PageVideo();
+            NavigationService.Navigate(pageVideo);
+        }
+        private void ButtonPoddzial1(object sender, RoutedEventArgs e)
+        {
+            InitializeComponent();
+        }
+
+        private void ButtonPoddzial2(object sender, RoutedEventArgs e)
+        {
+            InitializeComponent();
+        }
+
+        private void ButtonPoddzial3(object sender, RoutedEventArgs e)
+        {
+            InitializeComponent();
+        }
     }
 }

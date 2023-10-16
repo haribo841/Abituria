@@ -7,8 +7,69 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PageChapter3">
-
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="209*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Margin="5" Grid.RowSpan="2">
+            <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="0" DockPanel.Dock="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="55*"/>
+                        <RowDefinition Height="35*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Column="2" Grid.Row="0" Margin="5" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Button Background="Transparent" BorderThickness="0" Content="Abituria" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonKalkulator"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonMatura"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonDzialy"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="3" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonZadania"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="4" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Wideo" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonWideo"/>
+                    </TextBlock>
+                    <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
+                </Grid>
+            </Border>
+            <Border Width="200" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Left">
+                <Grid>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Margin="5" FontWeight="Bold" Foreground="Black">Poddział:</TextBlock>
+                    <ComboBox HorizontalAlignment="Center" Margin="35" VerticalAlignment="Top" Width="120">
+                        <ComboBoxItem>
+                            <Button  Background="Transparent" BorderThickness="0" Grid.Row="2" Content="Poddział I" ToolTip="Poddział I" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonPoddzial1" Width="108"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Grid.Row="2" Content="Poddział II" ToolTip="Poddział II" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonPoddzial2" Width="108"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Grid.Row="2" Content="Poddział III" ToolTip="Poddział III" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonPoddzial3" Width="108"/>
+                        </ComboBoxItem>
+                    </ComboBox>
+                </Grid>
+            </Border>
+            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+                <Grid>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                        Treść ogólna działu III.
+                    </TextBlock>
+                </Grid>
+            </Border>
+        </DockPanel>
     </Grid>
 </Page>
