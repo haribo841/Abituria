@@ -10,7 +10,7 @@
       ShowsNavigationUI="False">
     <Grid>
         <DockPanel Margin="5">
-            <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
+            <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="0" DockPanel.Dock="Top">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="60*"/>
@@ -44,7 +44,7 @@
                     <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
                 </Grid>
             </Border>
-            <Border Background="White" BorderBrush="Black" BorderThickness="10" >
+            <Border Background="White" BorderBrush="Black" BorderThickness="1" >
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="60*"/>

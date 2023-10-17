@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="WpfMath" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="PageChapters.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
