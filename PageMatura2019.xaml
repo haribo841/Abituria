@@ -47,6 +47,7 @@
                     <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
                 </Grid>
             </Border>
+
             <Border Width="200" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Left">
                 <Grid>
                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Margin="5" FontWeight="Bold" Foreground="Black">Zadanie:</TextBlock>
@@ -62,6 +63,7 @@
                         </ComboBoxItem>
                     </ComboBox>
                 </Grid>
+
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>

@@ -6,12 +6,11 @@
         xmlns:local="clr-namespace:Abituria"
         mc:Ignorable="d"
         Title="Abituria" Height="450" Width="800">
-    <!-- Closed="Window_Closed"> -->
-    <!--<Window.Resources> -->
-    <!--    <Style TargetType="Button"> -->
-    <!--        <Setter Property="Padding" Value="2" /> -->
-    <!--    </Style> -->
-    <!-- </Window.Resources> -->
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="2" />
+        </Style>
+    </Window.Resources>
     <Grid>
         <Frame Margin="0,60,0,0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
         <Grid Margin="-1,0,-1,0" HorizontalAlignment="Center" Width="794">

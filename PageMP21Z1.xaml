@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:Abituria"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageMP21Z1">
+      Title="PageMP21Z1"
+      xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath">
     <Grid>
         <DockPanel Margin="5">
             <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
@@ -73,7 +74,7 @@
                             </TextBlock.LayoutTransform>
                             </TextBlock>
                     <TextBlock Text="{Binding Path=Version, StringFormat={} v{0}}"/>
-                        ⋅ 3<Run Typography.Variants="Superscript">19</Run> 
+                        ⋅ 3
                         <TextBlock Text="19">
                             <TextBlock.LayoutTransform>
                                 <!-- Typography.Variants="Superscript" didn't work -->
