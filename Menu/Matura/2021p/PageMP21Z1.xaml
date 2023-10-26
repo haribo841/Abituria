@@ -61,32 +61,9 @@
                 </Grid>
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
-                <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
-                        <TextBlock Text="Liczba 9"/>
-                            <TextBlock Text="-10">
-                            <TextBlock.LayoutTransform>
-                                <!-- Typography.Variants="Superscript" didn't work -->
-                                <TransformGroup>
-                                    <ScaleTransform ScaleX=".75" ScaleY=".75"/>
-                                    <TranslateTransform Y="-5"/>
-                                </TransformGroup>
-                            </TextBlock.LayoutTransform>
-                            </TextBlock>
-                    <TextBlock Text="{Binding Path=Version, StringFormat={} v{0}}"/>
-                        ⋅ 3
-                        <TextBlock Text="19">
-                            <TextBlock.LayoutTransform>
-                                <!-- Typography.Variants="Superscript" didn't work -->
-                                <TransformGroup>
-                                    <ScaleTransform ScaleX=".75" ScaleY=".75"/>
-                                    <TranslateTransform Y="-5"/>
-                                </TransformGroup>
-                            </TextBlock.LayoutTransform>
-                            </TextBlock>
-                        <TextBlock Text="jest równa"/>
-                    </TextBlock>
-                </Grid>
+                <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\left(x^2 + 2 \cdot x + 2\right) = 0" />
+                        </InlineUIContainer></TextBlock>
             </Border>
         </DockPanel>
     </Grid>

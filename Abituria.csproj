@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="PageChapters.xaml.cs">
+    <Compile Update="Menu\PageChapters.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
