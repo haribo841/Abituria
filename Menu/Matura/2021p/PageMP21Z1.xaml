@@ -61,9 +61,15 @@
                 </Grid>
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
-                <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\left(x^2 + 2 \cdot x + 2\right) = 0" />
-                        </InlineUIContainer></TextBlock>
+                <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                    <Run Text="Liczba "/>
+                    <InlineUIContainer>
+                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
+                        </InlineUIContainer>jest równa<LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
             </Border>
         </DockPanel>
     </Grid>

@@ -59,9 +59,10 @@
                         <RowDefinition Height="10*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Row="0" Text="Wybierz arkusz maturalny do rozwiązania:" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Margin="15,5,15,0" Grid.ColumnSpan="5"/>
-                    <Button Grid.Column="1" Grid.Row="1" Margin="10" Content="2019" ToolTip="Arkusz maturalny z roku 2019" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button2019"/>
-                    <Button Grid.Column="2" Grid.Row="1" Margin="10" Content="2020" ToolTip="Arkusz maturalny z roku 2020" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button2020"/>
-                    <Button Grid.Column="3" Grid.Row="1" Margin="10" Content="2021" ToolTip="Arkusz maturalny z roku 2021" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button2021"/>
+                    <Button Grid.Row="1" Margin="107,38,109,38" Content="2019" ToolTip="Arkusz maturalny z roku 2019" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button2019" Grid.ColumnSpan="2"/>
+                    <Button Grid.Column="1" Grid.Row="1" Margin="108,38,107,38" Content="2020" ToolTip="Arkusz maturalny z roku 2020" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button2020" Grid.ColumnSpan="2"/>
+                    <Button Grid.Column="2" Grid.Row="1" Margin="109,38,105.5,38" Content="2021" ToolTip="Arkusz maturalny z roku 2021" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button2021" Grid.ColumnSpan="2"/>
+                    <Button Grid.Column="3" Grid.Row="1" Margin="107.5,38,108,38" Content="Poprawkowy &#xa;       2021" ToolTip="Poprawkowy arkusz maturalny z roku 2021" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button2021" Grid.ColumnSpan="2"/>
                 </Grid>
             </Border>
         </DockPanel>

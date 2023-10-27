@@ -6,9 +6,64 @@
       xmlns:local="clr-namespace:Abituria.Menu"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CalculatorChoice">
-
+      Title="CalculatorChoice"
+      ShowsNavigationUI="False">
     <Grid>
-        
+        <DockPanel Margin="5">
+            <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="0" DockPanel.Dock="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="55*"/>
+                        <RowDefinition Height="35*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Column="2" Grid.Row="0" Margin="5" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Button Background="Transparent" BorderThickness="0" Content="Abituria" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonKalkulator"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonMatura"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonDzialy"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="3" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonZadania"/>
+                    </TextBlock>
+                    <TextBlock Grid.Column="4" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Wideo" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonWideo"/>
+                    </TextBlock>
+                    <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
+                </Grid>
+            </Border>
+            <Border Background="White" BorderBrush="Black" BorderThickness="1" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="60*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="10*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" TextWrapping="Wrap" Text="ABITURIA oferuje narzędzia pomocne każdemu maturzyście, w tym gotowe kalkulatory pomagające zrozumieć i obliczyć popularne zagadnienia z zadań maturalnych." FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5" Padding="15"/>
+                    <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Wybierz rodzaj kalkulatora:" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Margin="15,5,15,0" Grid.ColumnSpan="5" Padding="15"/>
+                    <Button Grid.Column="1" Grid.Row="2" Margin="10" Content="Kalkulator podstawowy" ToolTip="Dział I" FontFamily="Cavolini" Height="40" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="10" Click="ButtonCalculatorBasic"/>
+                    <Button Grid.Column="3" Grid.Row="3" Margin="10" Content="Funkcja kwadratowa" ToolTip="Dział II" FontFamily="Cavolini" Height="40" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="10" Click="ButtonCalcQuad"/>
+                </Grid>
+            </Border>
+        </DockPanel>
     </Grid>
 </Page>

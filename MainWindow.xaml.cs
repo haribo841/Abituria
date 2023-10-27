@@ -27,8 +27,10 @@ namespace Abituria
         }
         private void ButtonCalculator(object sender, RoutedEventArgs e)
         {
-            var calculator = new Calculator();
-            calculator.Show();
+            NavigationWindow window = new NavigationWindow();
+            window.Source = new Uri("CalculatorChoice.xaml", UriKind.Relative);
+            window.Show();
+            this.Visibility = Visibility.Hidden;
         }
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {
