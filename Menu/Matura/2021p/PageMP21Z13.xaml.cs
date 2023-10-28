@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Abituria.Menu.Calculators
+namespace Abituria.Menu.Matura._2021p
 {
     /// <summary>
-    /// Logika interakcji dla klasy CalcQuadraticFunc.xaml
+    /// Logika interakcji dla klasy PageMP21Z13.xaml
     /// </summary>
-    public partial class CalcQuadraticFunc : Window
+    public partial class PageMP21Z13 : Page
     {
-        public CalcQuadraticFunc()
+        public PageMP21Z13()
         {
             InitializeComponent();
         }

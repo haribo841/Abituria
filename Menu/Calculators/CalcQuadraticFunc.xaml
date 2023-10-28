@@ -9,17 +9,30 @@
     Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="266*"/>
-            <ColumnDefinition Width="266*"/>
-            <ColumnDefinition Width="266*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="150*"/>
-            <RowDefinition Height="150*"/>
-            <RowDefinition Height="150*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="100"/>
+
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5" Padding="15">
             WIP
         </TextBlock>
+        <TextBlock Text="Podaj następujące współczynniki funkcji:" Grid.Column="1" Grid.Row="1" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Grid.ColumnSpan="2" Padding="15"/>
+        <TextBlock Text="a = " Grid.Column="1" Grid.Row="2" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Right"  VerticalAlignment="Top" Padding="15" />
+        <TextBox Text="" Width="75" Grid.Column="2" Grid.Row="2" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Background="LightGray" Padding="5"/>
+        <TextBlock Text="b = " Grid.Column="1" Grid.Row="3" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Right"  VerticalAlignment="Top" Padding="15" />
+        <TextBox Text="" Width="75" Grid.Column="2" Grid.Row="3" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Background="LightGray" Padding="5"/>
+        <TextBlock Text="c = " Grid.Column="1" Grid.Row="4" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Right"  VerticalAlignment="Top" Padding="15" />
+        <TextBox Text="" Width="75" Grid.Column="2" Grid.Row="4" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Background="LightGray" Padding="5"/>
     </Grid>
     </Window>

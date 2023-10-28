@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Abituria.Menu.Calculators;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -54,14 +55,15 @@ namespace Abituria.Menu
             PageVideo pageVideo = new PageVideo();
             NavigationService.Navigate(pageVideo);
         }
-        private void ButtonCalculatorBasic(object sender, RoutedEventArgs e)
+        private void ButtonCalcBasic(object sender, RoutedEventArgs e)
         {
             var calculator = new Calculator();
             calculator.Show();
         }
         private void ButtonCalcQuad(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("WIP");
+            var calcQuad = new CalcQuadraticFunc();
+            calcQuad.Show();
         }
     }
 }
