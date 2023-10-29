@@ -24,5 +24,14 @@ namespace Abituria.Menu.Calculators
         {
             InitializeComponent();
         }
+        private void ButtonPCalculate(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("WIP");
+        }
+
+        private void ButtonReset(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("WIP");
+        }
     }
 }

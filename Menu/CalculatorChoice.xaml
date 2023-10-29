@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Abituria.Menu"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CalculatorChoice"
+      Title="CalculatorChoice" 
       ShowsNavigationUI="False">
     <Grid>
         <DockPanel Margin="5">
