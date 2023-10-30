@@ -62,13 +62,17 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Ciąg arytmetyczny "/>
+                        <InlineUIContainer>
+                            <controls:FormulaControl Formula="(a_n)\:" />
+                        </InlineUIContainer><Run Text="jest określony dla każdej liczby naturalnej "/>
+                        <InlineUIContainer>
+                            <controls:FormulaControl Formula="\:n\geq1\:" />
+                        </InlineUIContainer>. Różnica tego ciągu jest równa <controls:FormulaControl Formula="\:2\:" />. Wtedy<LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="a_{24}-a_{6}=18" /><LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="a_{24}-a_{6}=20" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="a_{24}-a_{6}=36" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="a_{24}-a_{6}=38" /></TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

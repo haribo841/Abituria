@@ -55,6 +55,11 @@ namespace Abituria
             PageVideo pageVideo = new PageVideo();
             NavigationService.Navigate(pageVideo);
         }
+        private void Button2021Correction(object sender, RoutedEventArgs e)
+        {
+            PageMaturaCorrection2021 pageMaturaCorrection2021 = new PageMaturaCorrection2021();
+            NavigationService.Navigate(pageMaturaCorrection2021);
+        }
         private void Button2021(object sender, RoutedEventArgs e)
         {
             PageMatura2021 pageMatura2021 = new PageMatura2021();

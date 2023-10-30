@@ -62,13 +62,19 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                        <Run Text="Funkcja kwadratowa "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:f\:" />
+                        </InlineUIContainer>jest określona wzorem <InlineUIContainer>
+                            <controls:FormulaControl Formula="\:f(x) = -2(x+3)(x-5)\:" />
+                        </InlineUIContainer>. Wierzchołek paraboli, która jest wykresem funkcji <InlineUIContainer>
+                            <controls:FormulaControl Formula="\:f\:" />
+                        </InlineUIContainer>, ma współrzędną  
+                            <controls:FormulaControl Formula="\:x\:" /> równą<LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="(-3)" /><LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="(-3)" /><LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="1" /><LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="5" /><LineBreak/></TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

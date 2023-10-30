@@ -66,13 +66,17 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Czworokąt "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="ABCD" />
+                        </InlineUIContainer> jest wpisany w okrąg o środku<controls:FormulaControl Formula="S" />. Bok <controls:FormulaControl Formula="AD" />
+                         jest średnicą tego okręgu, a miara kąta <controls:FormulaControl Formula="BDC" /> jest równa 
+                        <controls:FormulaControl Formula="\: 20\text{°}" /> (zobacz rysunek). 
+                        <LineBreak/><LineBreak/>Wtedy miara kąta<controls:FormulaControl Formula="BSC" /> jest równa<LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="10\text{°}" /><LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="20\text{°}" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="30\text{°}" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="40\text{°}" /></TextBlock>
+                    <!--<Image Width="300" Height="200" Source="/img/mp21z17.png" Margin="278,138,10,10" />-->
                 </Grid>
             </Border>
         </DockPanel>

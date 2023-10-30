@@ -62,13 +62,19 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                        <Run Text="Funkcja "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:f\:" />
+                        </InlineUIContainer>jest określona wzorem <InlineUIContainer>
+                            <controls:FormulaControl Formula="\:f(x) = -x^2+4\:" />
+                        </InlineUIContainer>  dla każdej liczby rzeczywistej <InlineUIContainer>
+                            <controls:FormulaControl Formula="\:x\:" />
+                        </InlineUIContainer>. Zbiorem wartości funkcji  
+                            <controls:FormulaControl Formula="\:f\:" /> jest przedział<LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="(-{\infty},-2]" /><LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="[2,+{\infty})" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="[-4,+{\infty})" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="(-{\infty},4]" /><LineBreak/></TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

@@ -73,6 +73,7 @@
                         <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
                         <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <!--<Image Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />-->
                 </Grid>
             </Border>
         </DockPanel>

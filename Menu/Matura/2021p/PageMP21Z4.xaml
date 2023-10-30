@@ -66,13 +66,17 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Dla każdej liczby rzeczywistej "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:x\:" />
+                        </InlineUIContainer>i każdej liczby rzeczywistej<InlineUIContainer>
+                            <controls:FormulaControl Formula="\:y\:" />
+                        </InlineUIContainer>wyrażenie<InlineUIContainer>
+                            <controls:FormulaControl Formula="(3x+8y)^2\:" />
+                        </InlineUIContainer>jest równe<LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="9x^2+48xy+64y^2" /><LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="9x^2+64y^2" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="3x^2+48xy+8y^2" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="3x^2+8y^2" /><LineBreak/></TextBlock>
                 </Grid>
             </Border>
         </DockPanel>
