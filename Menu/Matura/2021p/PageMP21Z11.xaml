@@ -71,10 +71,11 @@
                             <controls:FormulaControl Formula="\:x\:" />
                         </InlineUIContainer>. Zbiorem wartości funkcji  
                             <controls:FormulaControl Formula="\:f\:" /> jest przedział<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="(-{\infty},-2]" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="[2,+{\infty})" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="[-4,+{\infty})" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="(-{\infty},4]" /><LineBreak/></TextBlock>
+                        <LineBreak/>A. <controls:FormulaControl Formula="(-{\infty},-2\rangle" /><LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="\langle2,+{\infty})" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="\langle-4,+{\infty})" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="(-{\infty},4\rangle" /><LineBreak/>
+                    </TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

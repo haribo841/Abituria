@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Abituria.Menu.Matura._2021p;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -55,20 +56,20 @@ namespace Abituria
             PageVideo pageVideo = new PageVideo();
             NavigationService.Navigate(pageVideo);
         }
-        private void Button2021(object sender, RoutedEventArgs e)
+        private void MP2021Exe1(object sender, RoutedEventArgs e)
         {
-            PageMatura2021 pageMatura2021 = new PageMatura2021();
-            NavigationService.Navigate(pageMatura2021);
+            PageMP21Z1 pageMP21Z1 = new PageMP21Z1();
+            NavigationService.Navigate(pageMP21Z1);
         }
-        private void Button2020(object sender, RoutedEventArgs e)
+        private void MP2021Exe2(object sender, RoutedEventArgs e)
         {
-            PageMatura2020 pageMatura2020 = new PageMatura2020();
-            NavigationService.Navigate(pageMatura2020);
+            PageMP21Z2 pageMP21Z2 = new PageMP21Z2();
+            NavigationService.Navigate(pageMP21Z2);
         }
-        private void Button2019(object sender, RoutedEventArgs e)
+        private void MP2021Exe3(object sender, RoutedEventArgs e)
         {
-            PageMatura2019 pageMatura2019 = new PageMatura2019();
-            NavigationService.Navigate(pageMatura2019);
+            PageMP21Z3 pageMP21Z3 = new PageMP21Z3();
+            NavigationService.Navigate(pageMP21Z3);
         }
     }
 }

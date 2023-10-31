@@ -33,5 +33,19 @@ namespace Abituria.Menu.Calculators
         {
             MessageBox.Show("WIP");
         }
+
+        private void ButtonStandard(object sender, RoutedEventArgs e)
+        {
+            InitializeComponent();
+        }
+
+        private void ButtonFactored(object sender, RoutedEventArgs e)
+        {
+            InitializeComponent();
+        }
+        private void ButtonVertex(object sender, RoutedEventArgs e)
+        {
+            InitializeComponent();
+        }
     }
 }

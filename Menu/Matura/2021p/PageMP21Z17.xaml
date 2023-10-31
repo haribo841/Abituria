@@ -68,7 +68,7 @@
                 <Grid>
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Czworokąt "/><InlineUIContainer>
                             <controls:FormulaControl Formula="ABCD" />
-                        </InlineUIContainer> jest wpisany w okrąg o środku<controls:FormulaControl Formula="S" />. Bok <controls:FormulaControl Formula="AD" />
+                        </InlineUIContainer> jest wpisany w okrąg o środku <controls:FormulaControl Formula="S" />. Bok <controls:FormulaControl Formula="AD" />
                          jest średnicą tego okręgu, a miara kąta <controls:FormulaControl Formula="BDC" /> jest równa 
                         <controls:FormulaControl Formula="\: 20\text{°}" /> (zobacz rysunek). 
                         <LineBreak/><LineBreak/>Wtedy miara kąta<controls:FormulaControl Formula="BSC" /> jest równa<LineBreak/>

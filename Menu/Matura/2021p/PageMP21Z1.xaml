@@ -49,13 +49,13 @@
                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Margin="5" FontWeight="Bold" Foreground="Black">Zadanie:</TextBlock>
                     <ComboBox HorizontalAlignment="Center" Margin="35" VerticalAlignment="Top" Width="120">
                         <ComboBoxItem>
-                            <Button Grid.Row="2" Content="Zadanie 1" ToolTip="Arkusz maturalny z 2021" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button2021"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 1" ToolTip="Arkusz maturalny z 2021" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe1"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Grid.Row="2" Content="Zadanie 2" ToolTip="Arkusz maturalny z 2020" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button2020"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 2" ToolTip="Arkusz maturalny z 2020" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe2"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Grid.Row="2" Content="Zadanie 3" ToolTip="Arkusz maturalny z 2019" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button2019"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 3" ToolTip="Arkusz maturalny z 2019" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe3"/>
                         </ComboBoxItem>
                     </ComboBox>
                 </Grid>

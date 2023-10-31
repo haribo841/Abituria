@@ -42,10 +42,8 @@
                         <Button Background="Transparent" BorderThickness="0" Content="Wideo" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonWideo"/>
                     </TextBlock>
                     <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
-
                 </Grid>
             </Border>
-
             <Border Width="200" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Left">
                 <Grid>
                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Margin="5" FontWeight="Bold" Foreground="Black">Zadanie:</TextBlock>
@@ -59,20 +57,30 @@
                         <ComboBoxItem>
                             <Button Grid.Row="2" Content="Zadanie 3" ToolTip="Arkusz maturalny z 2019" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button2019"/>
                         </ComboBoxItem>
-
                     </ComboBox>
                 </Grid>
-
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Funkcja liniowa "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:f\:" />
+                        </InlineUIContainer><Run Text="jest określona wzorem "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:f(x) = ax + 4\:" />
+                        </InlineUIContainer><Run Text="dla każdej liczby rzeczywistej "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:x\:" />
+                        </InlineUIContainer><Run Text=". Miejscem zerowym tej funkcji jest liczba "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:(-1)\:" />
+                        </InlineUIContainer><Run Text=". Wtedy"/><LineBreak/><LineBreak/><Run Text="A. "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="a = -4" />
+                        </InlineUIContainer><LineBreak/><LineBreak/><Run Text="B. "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="a = 1" />
+                        </InlineUIContainer><LineBreak/><LineBreak/><Run Text="C. "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="a = 4" />
+                        </InlineUIContainer><LineBreak/><LineBreak/><Run Text="D. "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="a = 5" />
+                        </InlineUIContainer><InlineUIContainer>
+                        </InlineUIContainer><LineBreak/></TextBlock>
+                    <!--<Image Width="300" Height="200" Source="/img/mp21z9.png" Margin="278,138,10,10" />-->
                 </Grid>
             </Border>
         </DockPanel>
