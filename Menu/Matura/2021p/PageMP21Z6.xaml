@@ -65,10 +65,10 @@
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Zbiorem wszystkich rozwiązań nierówności "/><InlineUIContainer>
                             <controls:FormulaControl Formula="5-{\frac{2-6x}{4}}\geq2x+1\:" />
                         </InlineUIContainer>jest przedział<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="(-{\infty},1]" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="[1,+{\infty})" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="(-{\infty},7]" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="[7,+\infty)" /><LineBreak/></TextBlock>
+                        <LineBreak/>A. <controls:FormulaControl Formula="(-{\infty},1\rangle" /><LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="\langle1,+{\infty})" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="(-{\infty},7\rangle" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="\langle7,+\infty)" /><LineBreak/></TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

@@ -70,7 +70,7 @@
                         </InlineUIContainer>. Wykres funkcji <InlineUIContainer>
                             <controls:FormulaControl Formula="\:f\:" />
                         </InlineUIContainer>przesunięto wzdłuż osi  
-                            <controls:FormulaControl Formula="\:0x\:" /> o <controls:FormulaControl Formula="\:2\:" />
+                            <controls:FormulaControl Formula="\:Ox\:" /> o <controls:FormulaControl Formula="\:2\:" />
                         jednostki w lewo (tzn. przeciwnie do zwrotu osi), w wyniku czego otrzymano wykres funkcji
                         <controls:FormulaControl Formula="\:g\:" />. Funkcja <controls:FormulaControl Formula="\:g\:" /> jest określona wzorem<LineBreak/>
                         <LineBreak/>A. <controls:FormulaControl Formula="g(x) = -2x + 2" /><LineBreak/>

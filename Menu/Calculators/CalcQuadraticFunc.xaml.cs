@@ -24,21 +24,50 @@ namespace Abituria.Menu.Calculators
         {
             InitializeComponent();
         }
-        private void ButtonPCalculate(object sender, RoutedEventArgs e)
+        private void Calculate(object sender, RoutedEventArgs e)
+        {
+            switch (StandardGroup.Visibility)
+            {
+                case Visibility.Visible:
+                    {
+                        float warA = float.Parse(fieldA.Text);
+                        StandardForm(warA, 20, 10);
+                        break;
+                    }
+
+                default:
+                    MessageBox.Show("WIP");
+                    break;
+            }
+        }
+
+        private void Reset(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("WIP");
         }
-
-        private void ButtonReset(object sender, RoutedEventArgs e)
+        private void StandardForm(float a, float b, float c)
         {
-            MessageBox.Show("WIP");
-        }
 
+            float result = a + b + c;
+
+            MessageBox.Show("WIP " + result);
+        }
         private void ButtonStandard(object sender, RoutedEventArgs e)
         {
-            InitializeComponent();
+            switch (pOgolna.Visibility)
+            {
+                case Visibility.Collapsed when buttonPrzelicz.Visibility == Visibility.Collapsed && buttonReset.Visibility == Visibility.Collapsed:
+                    pOgolna.Visibility = Visibility.Visible;
+                    buttonPrzelicz.Visibility = Visibility.Visible;
+                    buttonReset.Visibility = Visibility.Visible;
+                    break;
+                default:
+                    pOgolna.Visibility = Visibility.Collapsed;
+                    buttonPrzelicz.Visibility = Visibility.Collapsed;
+                    buttonReset.Visibility = Visibility.Collapsed;
+                    break;
+            }
         }
-
         private void ButtonFactored(object sender, RoutedEventArgs e)
         {
             InitializeComponent();

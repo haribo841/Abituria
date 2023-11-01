@@ -67,7 +67,7 @@
                         </InlineUIContainer><Run Text="przechodzi przez punkt "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:A = (2, -3) \:" />
                         </InlineUIContainer><Run Text=" i jest nachylona do osi  "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:0x\:" />
+                            <controls:FormulaControl Formula="\:Ox\:" />
                         </InlineUIContainer><Run Text="pod kątem "/>
                             <controls:FormulaControl Formula="\: 45\text{°}\:" />(zobacz rysunek). Prosta
                         <controls:FormulaControl Formula="\:k\:" /> ma równanie<LineBreak/>
