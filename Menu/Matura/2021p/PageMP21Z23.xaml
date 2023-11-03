@@ -66,13 +66,13 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Punkty "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:A = (3, 7) \:" /></InlineUIContainer> i <controls:FormulaControl Formula="\:C = (-4, 6) \:" /> są końcami przekątnej kwadratu
+                        <controls:FormulaControl Formula="\:ABCD" />. Promień okręgu opisanego na tym kwadracie jest równy<LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="\frac{\sqrt{2}}2" /><LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="\frac{5}2" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="\frac{5\sqrt{2}}2" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="5" /></TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

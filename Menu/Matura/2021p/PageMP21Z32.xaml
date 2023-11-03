@@ -66,13 +66,13 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="W trójkącie  "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="ABC " /></InlineUIContainer> kąt przy wierzchołku <controls:FormulaControl Formula="\:A" /> jest prosty, a kąt przy wierzchołku
+                        <controls:FormulaControl Formula="\:B" /> ma miarę <controls:FormulaControl Formula="30\text{°}" />. Na boku
+                        <controls:FormulaControl Formula="\:AB" /> tego trójkąta obrano punkt <controls:FormulaControl Formula="D" /> tak, że miara kąta
+                        <controls:FormulaControl Formula="CDA" /> jest równa<controls:FormulaControl Formula="\:60\text{°}" />oraz
+                        <controls:FormulaControl Formula="\:\mid{AD}\mid=6" /> (zobacz rysunek). Oblicz<controls:FormulaControl Formula="\:\mid{BD}\mid" />.<LineBreak/></TextBlock>
+                    <!--Image  Width="300" Height="200" Source="/img/mp21z32.png" Margin="278,138,10,10" /-->
                 </Grid>
             </Border>
         </DockPanel>

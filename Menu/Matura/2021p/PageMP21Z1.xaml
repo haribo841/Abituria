@@ -66,10 +66,10 @@
                     <InlineUIContainer>
                             <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
                         </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                        <CheckBox x:Name="checkBox1" HorizontalAlignment="Center" VerticalAlignment="Center" /> A. <controls:FormulaControl Scale="27" Formula="27^9"/><LineBreak/>
+                        <CheckBox x:Name="checkBox2" HorizontalAlignment="Center" VerticalAlignment="Center" /> B. <controls:FormulaControl  Scale="27" Formula="9^{-2}" /><LineBreak/>
+                        <CheckBox x:Name="checkBox3" HorizontalAlignment="Center" VerticalAlignment="Center" /> C. <controls:FormulaControl  Scale="27" Formula="3^{10}" /><LineBreak/>
+                        <CheckBox x:Name="checkBox4" HorizontalAlignment="Center" VerticalAlignment="Center" /> D. <controls:FormulaControl  Scale="27" Formula="3^{-1}" /></TextBlock>
             </Border>
         </DockPanel>
     </Grid>

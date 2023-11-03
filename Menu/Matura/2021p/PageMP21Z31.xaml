@@ -66,13 +66,9 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wykaż, że dla każdej liczby rzeczywistej "/>
+                        <controls:FormulaControl Formula="a" /> i każdej liczby rzeczywistej<controls:FormulaControl Formula="b" />spełniona jest nierówność<LineBreak/><LineBreak/>
+                    <controls:FormulaControl Formula="b(5b-4a)+a^2\geq0" /></TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

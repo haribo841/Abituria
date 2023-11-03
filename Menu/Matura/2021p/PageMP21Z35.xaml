@@ -66,13 +66,13 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Dany jest ciąg "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="(a_n)\:" /></InlineUIContainer>określony wzorem 
+                        <controls:FormulaControl Formula="a_n=\frac{5-3n}{7}\:" />dla każdej liczby naturalnej
+                        <controls:FormulaControl Formula="n\geq1\:" />. Trójwyrazowy ciąg
+                        <controls:FormulaControl Formula="(a_4,x^2+2,a_{11})\:" />, gdzie
+                        <controls:FormulaControl Formula="x" />jest liczbą rzeczywistą, jest geometryczny. Oblicz
+                        <controls:FormulaControl Formula="x" />oraz iloraz tego ciągu geometrycznego.<LineBreak/></TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

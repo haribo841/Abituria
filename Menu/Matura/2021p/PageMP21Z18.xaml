@@ -66,8 +66,7 @@
                             <controls:FormulaControl Formula="O" />
                         </InlineUIContainer> jest wpisany w trójkąt <controls:FormulaControl Formula="ABC" /> . Wiadomo, że <controls:FormulaControl Formula="\mid{AB}\mid=\mid{AC}\mid" />
                         i <controls:FormulaControl Formula="\mid{BOC}\mid=100\text{°}" /> (zobacz rysunek). Miara kąta 
-                        <controls:FormulaControl Formula="\: BAC" /> jest równa
-<LineBreak/>
+                        <controls:FormulaControl Formula="\: BAC" /> jest równa <LineBreak/>
                         <LineBreak/>A. <controls:FormulaControl Formula="20\text{°}" /><LineBreak/>
                         <LineBreak/>B. <controls:FormulaControl Formula="30\text{°}" /><LineBreak/>
                         <LineBreak/>C. <controls:FormulaControl Formula="40\text{°}" /><LineBreak/>

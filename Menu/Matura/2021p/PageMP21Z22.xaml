@@ -66,13 +66,13 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Prosta "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:k\:" /></InlineUIContainer> ma równanie <controls:FormulaControl Formula="\:y=-\frac{4}7x+24\:" />. Współczynnik kierunkowy prostej prostopadłej do prostej
+                        <controls:FormulaControl Formula="\:k\:" /> jest równy<LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="\frac{7}4" /><LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="(-\frac{7}4)" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="(-\frac{4}7)" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="\frac{4}7" /></TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

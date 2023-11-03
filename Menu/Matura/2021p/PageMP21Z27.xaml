@@ -66,13 +66,13 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="W pudełku znajdują się tylko kule białe i kule czerwone. Stosunek liczby kul białych do liczby kul czerwonych jest równy "/>
+                    <controls:FormulaControl Formula="3:4" />. Wylosowanie każdej kuli z tego pudełka jest jednakowo prawdopodobne. Losujemy jedną kulę. Niech<controls:FormulaControl Formula="\:A" />
+                    oznacza zdarzenie polegające na tym, że wylosowana z pudełka kula będzie biała. Prawdopodobieństwo zdarzenia<controls:FormulaControl Formula="\:A" /> jest równe<LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="\frac{1}{4}" /><LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="\frac{1}{3}" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="\frac{3}{7}" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="\frac{3}{4}" /></TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

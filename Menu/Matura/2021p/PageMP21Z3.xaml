@@ -64,17 +64,17 @@
                 <Grid>
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
                             <controls:FormulaControl Formula="x\:" />
-                        </InlineUIContainer>stanowi<InlineUIContainer>
+                        </InlineUIContainer>stanowi <InlineUIContainer>
                             <controls:FormulaControl Formula="80\%\:" />
                         </InlineUIContainer>liczby dodatniej<InlineUIContainer>
                             <controls:FormulaControl Formula="\:y\:" />
                         </InlineUIContainer>. Wynika stąd, że liczba<InlineUIContainer>
                             <controls:FormulaControl Formula="\:y\:" />
                         </InlineUIContainer>to<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="125\%" />liczby<controls:FormulaControl Formula="\:x" />.<LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="120\%" />liczby<controls:FormulaControl Formula="\:x" />.<LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="25\%" />liczby<controls:FormulaControl Formula="\:x" />.<LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="20\%" />liczby<controls:FormulaControl Formula="\:x" />.<LineBreak/></TextBlock>
+                        <LineBreak/>A. <controls:FormulaControl Formula="125\%" /> liczby<controls:FormulaControl Formula="\:x" />.<LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="120\%" /> liczby<controls:FormulaControl Formula="\:x" />.<LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="25\%" /> liczby<controls:FormulaControl Formula="\:x" />.<LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="20\%" /> liczby<controls:FormulaControl Formula="\:x" />.<LineBreak/></TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

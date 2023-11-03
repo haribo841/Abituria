@@ -66,13 +66,14 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Każda krawędź graniastosłupa prawidłowego sześciokątnego ma długość równą "/>
+                        <InlineUIContainer>
+                            <controls:FormulaControl Formula="\:2\:" /></InlineUIContainer> (zobacz rysunek). Pole powierzchni całkowitej tego graniastosłupa jest równe <LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="24+2\sqrt{3}" /><LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="24+6\sqrt{3}" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="24+12\sqrt{3}" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="24+24\sqrt{3}" /></TextBlock>
+                    <!--Image Width="300" Height="200" Source="/img/mp21z24.png" Margin="278,138,10,10" /-->
                 </Grid>
             </Border>
         </DockPanel>

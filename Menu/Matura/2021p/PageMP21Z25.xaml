@@ -66,13 +66,13 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Przekątna sześcianu jest równa "/>
+                        <InlineUIContainer>
+                            <controls:FormulaControl Formula="6\:" /></InlineUIContainer>. Wynika stąd, że objętość tego sześcianu jest równa <LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="24\sqrt{3}" /><LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="72" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="54\sqrt{2}" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="648\sqrt{3}" /></TextBlock>
                 </Grid>
             </Border>
         </DockPanel>

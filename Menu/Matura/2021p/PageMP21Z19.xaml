@@ -66,13 +66,16 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Punkty "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="A, B, C " /></InlineUIContainer> i <controls:FormulaControl Formula="\:D" /> leżą na okręgu o środku w punkcie
+                        <controls:FormulaControl Formula="\:O" />. Cięciwy <controls:FormulaControl Formula="DB" /> i
+                        <controls:FormulaControl Formula="AC" /> przecinają się w punkcie <controls:FormulaControl Formula="\:E,\mid{ACB}\mid=55\text{°}" />oraz
+                        <controls:FormulaControl Formula="\:\mid{AEB}\mid=140\text{°}" />(zobacz rysunek). Miara kąta<controls:FormulaControl Formula="\:DAC" /> jest równa<LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="45\text{°}" /><LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="55\text{°}" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="70\text{°}" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="85\text{°}" /></TextBlock>
+                    <!--<Image Width="300" Height="200" Source="/img/mp21z19.png" Margin="278,138,10,10" /-->
                 </Grid>
             </Border>
         </DockPanel>

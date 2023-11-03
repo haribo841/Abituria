@@ -66,13 +66,19 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Liczba "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="9^{-10}\cdot3^{19}\:" />
-                        </InlineUIContainer>jest równa<LineBreak/>
-                        <LineBreak/>A. <controls:FormulaControl Formula="27^9" /><LineBreak/>
-                        <LineBreak/>B. <controls:FormulaControl Formula="9^{-2}" /><LineBreak/>
-                        <LineBreak/>C. <controls:FormulaControl Formula="3^{10}" /><LineBreak/>
-                        <LineBreak/>D. <controls:FormulaControl Formula="3^{-1}" /></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Przekątna  "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="AC " /></InlineUIContainer> prostokąta <controls:FormulaControl Formula="\:ABCD" /> ma długość
+                        <controls:FormulaControl Formula="\:70" />. Na boku <controls:FormulaControl Formula="AB" /> obrano punkt
+                        <controls:FormulaControl Formula="E" /> , na przekątnej <controls:FormulaControl Formula="\:AC" /> obrano punkt
+                        <controls:FormulaControl Formula="\:F" />, a na boku<controls:FormulaControl Formula="\:AD" />  obrano punkt
+                        <controls:FormulaControl Formula="\:G" /> – tak, że czworokąt<controls:FormulaControl Formula="\:AEFG" />jest prostokątem (zobacz rysunek). Ponadto
+                        <controls:FormulaControl Formula="\:\mid{EF}\mid=30" /> i<controls:FormulaControl Formula="\:\mid{GF}\mid=40" />. Obwód prostokąta
+                        <controls:FormulaControl Formula="\:ABCD" /> jest równy<LineBreak/>
+                        <LineBreak/>A. <controls:FormulaControl Formula="158" /><LineBreak/>
+                        <LineBreak/>B. <controls:FormulaControl Formula="196" /><LineBreak/>
+                        <LineBreak/>C. <controls:FormulaControl Formula="336" /><LineBreak/>
+                        <LineBreak/>D. <controls:FormulaControl Formula="490" /></TextBlock>
+                    <!--Image Width="300" Height="200" Source="/img/mp21z20.png" Margin="278,138,10,10" /-->
                 </Grid>
             </Border>
         </DockPanel>
