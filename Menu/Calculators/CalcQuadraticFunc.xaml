@@ -7,7 +7,15 @@
       mc:Ignorable="d"
         WindowState="Maximized"
       Title="CalcQuadraticFunc"
-    Height="1080" Width="1980">
+    Height="1080" Width="1920">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontFamily" Value="Cavolini" />
+            <Setter Property="Padding" Value="15" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+        </Style>
+    </Window.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -18,36 +26,36 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="150"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" TextWrapping="Wrap" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Padding="15">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </TextBlock>
-            <TextBlock Text="Podaj postać funkcji kwadratowej" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" TextWrapping="Wrap" FontSize="25" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Padding="10"/>
+            <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0">
+                <TextBlock Text="Funkcja kwadratowa" Grid.ColumnSpan="5" HorizontalAlignment="Center"  VerticalAlignment="Top"  FontSize="30" FontWeight="Bold" Padding="10"/>
+                <Border BorderBrush="LightGray" BorderThickness="1" >
+                    <TextBlock>
+            Kalkulator funkcji kwadratowej jest narzędziem, które nie tylko pomoże ci sprawdzić poprawność swoich rozwiązań, ale przede wszystkim w praktyczny sposób przeprowadzi cię przez proces analizy oraz zrozumienia funkcji, nad którą pracujesz. Zatrzymałeś się w zadaniu, o czymś zapomniałeś, albo po prostu chcesz poćwiczyć? Kalkulator przeliczy dla ciebie wszystkie istotne informacje na konkretnym przykładzie funkcji, której parametry podasz, pomoże też znaleźć jej postać ogólną, iloczynową oraz kanoniczną.
+                    </TextBlock>
+                </Border>
+            </StackPanel>
+            <TextBlock Text="Wybór postaci:" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" TextWrapping="Wrap" FontSize="25" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Padding="10"/>
             <Button Click="ButtonStandard"  Grid.Column="1" Grid.Row="1" Content="Ogólna" ToolTip="Kalkulator dla postaci ogólnej funkcji kwadratowej" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Button Click="ButtonFactored"  Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Content="Iloczynowa" ToolTip="Kalkulator dla postaci iloczynowej funkcji kwadratowej" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Button Click="ButtonVertex"  Grid.Column="2" Grid.Row="1" Content="Kanoniczna" ToolTip="Kalkulator dla postaci kanonicznej funkcji kwadratowej" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <GroupBox x:Name="StandardGroup" Visibility="Collapsed" Header="Postać ogólna funkcji kwadratowej" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Margin="10" Padding="10">
+
+            <GroupBox Header="Postać ogólna funkcji kwadratowej" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="12" Margin="10" Padding="10">
                 <StackPanel>
-                    <TextBlock Text="Podaj następujące współczynniki funkcji y=ax2+bx+c:" Grid.Column="1" Grid.Row="1" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Padding="15"/>
-                    <TextBlock Text="Współczynnik a:" Grid.Column="1" Grid.Row="2" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Padding="5"/>
-                    <TextBox x:Name="fieldA" Text="" Width="100" Grid.Column="2" Grid.Row="2" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Background="LightGray" Padding="5" Margin="0,0,0,10" />
-                    <TextBlock Text="Współczynnik b:" Grid.Column="1" Grid.Row="3" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Padding="5" />
-                    <TextBox x:Name="fieldB" Text="" Width="100" Grid.Column="2" Grid.Row="3" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Background="LightGray" Padding="5" Margin="0,0,0,10" />
-                    <TextBlock Text="Współczynnik c:" Grid.Column="1" Grid.Row="4" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Padding="5" />
-                    <TextBox x:Name="fieldC" Text="" Width="100" Grid.Column="2" Grid.Row="4" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Background="LightGray" Padding="5" Margin="0,0,0,10" />
+                    <TextBlock Text="Podaj następujące współczynniki funkcji:" Grid.Column="1" Grid.Row="1" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Grid.ColumnSpan="2" Padding="15"/>
+                    <TextBlock Text="a = " Grid.Column="1" Grid.Row="2" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Padding="15" />
+                    <TextBox x:Name="fieldA" Text="" Width="75" Grid.Column="2" Grid.Row="2" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Top" Background="LightGray" Padding="5"/>
+                    <TextBlock Text="b = " Grid.Column="1" Grid.Row="3" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Right"  VerticalAlignment="Top" Padding="15" />
+                    <TextBox x:Name="fieldB" Text="" Width="75" Grid.Column="2" Grid.Row="3" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Background="LightGray" Padding="5"/>
+                    <TextBlock Text="c = " Grid.Column="1" Grid.Row="4" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Right"  VerticalAlignment="Top" Padding="15" />
+                    <TextBox x:Name="fieldC" Text="" Width="75" Grid.Column="2" Grid.Row="4" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Background="LightGray" Padding="5"/>
                 </StackPanel>
             </GroupBox>
-            <Button Click="Calculate" x:Name="buttonCalculate" Visibility="Collapsed" Grid.Column="1" Grid.Row="5" Content="Przelicz" ToolTip="Sprawdź rozwiązanie dla wprowadzonych liczb!" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-            <Button Click="Reset" x:Name="buttonReset" Visibility="Collapsed" Grid.Column="2" Grid.Row="5" Content="Reset" ToolTip="Wyczyść wproadzone dane i spróbuj ponownie" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock x:Name="resultHead" Text="Wynik:" Visibility="Collapsed" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" FontFamily="Cavolini" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Center" />
-            <TextBlock x:Name="result" Visibility="Collapsed" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2" FontFamily="Cavolini" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Button Click="ButtonPrzelicz"  Grid.Column="1" Grid.Row="5" Content="Przelicz" ToolTip="Sprawdź rozwiązanie dla wprowadzonych liczb!" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <Button Click="ButtonReset" Grid.Column="2" Grid.Row="5" Content="Reset" ToolTip="Wyczyść wproadzone dane i spróbuj ponownie" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         </Grid>
     </ScrollViewer>
 </Window>

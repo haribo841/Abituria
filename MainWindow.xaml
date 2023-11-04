@@ -27,7 +27,7 @@
                 <RowDefinition Height="10*"/>
                 <RowDefinition Height="8*"/>
             </Grid.RowDefinitions>
-            <Border BorderBrush="Black" BorderThickness="1" Padding="10" Grid.ColumnSpan="5">
+            <Border BorderBrush="Black" BorderThickness="1" Padding="10" Grid.ColumnSpan="5" Margin="10, 10, 10, 0">
             </Border>
             <TextBlock Text="Abituria" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.ColumnSpan="5"/>
             <TextBlock Grid.Row="1" Text="Witaj w programie ABITURIA, twoim matematycznym korepetytorze." FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5"/>
