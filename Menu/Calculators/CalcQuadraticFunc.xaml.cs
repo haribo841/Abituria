@@ -24,41 +24,26 @@ namespace Abituria.Menu.Calculators
         {
             InitializeComponent();
         }
-        private void Calculate(object sender, RoutedEventArgs e)
+        private void ShowResult(object sender, RoutedEventArgs e)
         {
-            switch (StandardGroup.Visibility)
-            {
-                case Visibility.Visible:
-                    {
-                        double a = double.Parse(fieldA.Text);
-                        double b = double.Parse(fieldB.Text);
-                        double c = double.Parse(fieldC.Text);
-                        StandardForm(a, b, c);
-                        break;
-                    }
-
-                case Visibility.Hidden:
-                    break;
-                case Visibility.Collapsed:
-                    break;
-                default:
-                    MessageBox.Show("WIP");
-                    break;
-            }
+            double a = double.Parse(fieldA.Text);
+            double b = double.Parse(fieldB.Text);
+            double c = double.Parse(fieldC.Text);
+            QuadraticFunctionStandardForm(a, b, c);
+            this.StandardGroup.Text = $"y = {a}x2 + {b}x + {c}";
         }
-
         private void Reset(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("WIP");
+            fieldA.Text = "";
+            fieldB.Text = "";
+            fieldC.Text = "";
         }
-        private void StandardForm(double a, double b, double c)
+        private void QuadraticFunctionStandardForm(double a, double b, double c)
         {
-            double delta = Math.Pow(b, 2) - 4 * a * c;
-            double x0 = -b / (2 * a);
-            double x1 = Math.Round((-b - Math.Sqrt(delta)) / (2 * a), 2);
-            double x2 = Math.Round((-b + Math.Sqrt(delta)) / (2 * a), 2);
-
-
+            double delta = Math.Pow(b, 2) - (4 * a * c);
+            double x0 = (-b) / (2 * a);
+            double x1 = Math.Round(((-b) - Math.Sqrt(delta)) / (2 * a), 2);
+            double x2 = Math.Round(((-b) + Math.Sqrt(delta)) / (2 * a), 2);
             switch (delta)
             {
                 case < 0:
@@ -67,14 +52,12 @@ namespace Abituria.Menu.Calculators
                         result.Text = resultTxt;
                         break;
                     }
-
                 case 0:
                     {
                         string resultTxt = "Δ = 0, funkcja posiada jedno miejsce zerowe, gdzie wierzchołek dotyka osi x";
                         result.Text = resultTxt;
                         break;
                     }
-
                 default:
                     {
                         string resultTxt = $"Δ > 0, funkcja posiada dwa miejsca zerowe: x1 = {x1} i x2 = {x2}";
@@ -82,35 +65,7 @@ namespace Abituria.Menu.Calculators
                         break;
                     }
             }
-
-            this.resultHead.Visibility = Visibility.Visible;
             this.result.Visibility = Visibility.Visible;
-        }
-        private void ButtonStandard(object sender, RoutedEventArgs e)
-        {
-            switch (StandardGroup.Visibility)
-            {
-                case Visibility.Collapsed when buttonCalculate.Visibility == Visibility.Collapsed && buttonReset.Visibility == Visibility.Collapsed:
-                    StandardGroup.Visibility = Visibility.Visible;
-                    buttonCalculate.Visibility = Visibility.Visible;
-                    buttonReset.Visibility = Visibility.Visible;
-                    break;
-                default:
-                    StandardGroup.Visibility = Visibility.Collapsed;
-                    buttonCalculate.Visibility = Visibility.Collapsed;
-                    buttonReset.Visibility = Visibility.Collapsed;
-                    this.resultHead.Visibility = Visibility.Collapsed;
-                    this.result.Visibility = Visibility.Collapsed;
-                    break;
-            }
-        }
-        private void ButtonFactored(object sender, RoutedEventArgs e)
-        {
-            InitializeComponent();
-        }
-        private void ButtonVertex(object sender, RoutedEventArgs e)
-        {
-            InitializeComponent();
         }
     }
 }

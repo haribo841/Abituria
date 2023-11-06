@@ -49,13 +49,109 @@
                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Margin="5" FontWeight="Bold" Foreground="Black">Zadanie:</TextBlock>
                     <ComboBox HorizontalAlignment="Center" Margin="35" VerticalAlignment="Top" Width="120">
                         <ComboBoxItem>
-                            <Button Grid.Row="2" Content="Zadanie 1" ToolTip="Arkusz maturalny z 2021" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button2021"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 1" ToolTip="Zadanie 1" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe1"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Grid.Row="2" Content="Zadanie 2" ToolTip="Arkusz maturalny z 2020" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button2020"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 2" ToolTip="Zadanie 2" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe2"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Grid.Row="2" Content="Zadanie 3" ToolTip="Arkusz maturalny z 2019" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button2019"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 3" ToolTip="Zadanie 3" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe3"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 4" ToolTip="Zadanie 4" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe4"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 5" ToolTip="Zadanie 5" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe5"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 6" ToolTip="Zadanie 6" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe6"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 7" ToolTip="Zadanie 7" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe7"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 8" ToolTip="Zadanie 8" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe8"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 9" ToolTip="Zadanie 9" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe9"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 10" ToolTip="Zadanie 10" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe10"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 11" ToolTip="Zadanie 11" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe11"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 12" ToolTip="Zadanie 12" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe12"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 13" ToolTip="Zadanie 13" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe13"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 14" ToolTip="Zadanie 14" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe14"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 15" ToolTip="Zadanie 15" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe15"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 16" ToolTip="Zadanie 16" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe16"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 17" ToolTip="Zadanie 17" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe17"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 18" ToolTip="Zadanie 18" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe18"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 19" ToolTip="Zadanie 19" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe19"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 20" ToolTip="Zadanie 20" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe20"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 21" ToolTip="Zadanie 21" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe21"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 22" ToolTip="Zadanie 22" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe22"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 23" ToolTip="Zadanie 23" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe23"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 24" ToolTip="Zadanie 24" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe24"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 25" ToolTip="Zadanie 25" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe25"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 26" ToolTip="Zadanie 26" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe26"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 27" ToolTip="Zadanie 27" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe27"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 28" ToolTip="Zadanie 28" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe28"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 29" ToolTip="Zadanie 29" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe29"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 30" ToolTip="Zadanie 30" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe30"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 31" ToolTip="Zadanie 31" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe31"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 32" ToolTip="Zadanie 32" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe32"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 33" ToolTip="Zadanie 33" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe33"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 34" ToolTip="Zadanie 34" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe34"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 35" ToolTip="Zadanie 35" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe35"/>
                         </ComboBoxItem>
                     </ComboBox>
                 </Grid>
