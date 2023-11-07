@@ -24,25 +24,24 @@
                         <RowDefinition Height="35*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Column="2" Grid.Row="0" Margin="5" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center" VerticalAlignment="Top">
-                        <Button Background="Transparent" BorderThickness="0" Content="Abituria" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
+        <Button Background="Transparent" BorderThickness="0" Content="Abituria" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
                     </TextBlock>
                     <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonKalkulator"/>
+        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonCalculator"/>
                     </TextBlock>
                     <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonMatura"/>
+        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonMatura"/>
                     </TextBlock>
                     <TextBlock Grid.Column="2" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonDzialy"/>
+        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonChapters"/>
                     </TextBlock>
                     <TextBlock Grid.Column="3" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonZadania"/>
+        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonExercises"/>
                     </TextBlock>
                     <TextBlock Grid.Column="4" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Button Background="Transparent" BorderThickness="0" Content="Wideo" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonWideo"/>
+        <Button Background="Transparent" BorderThickness="0" Content="Wideo" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonVideo"/>
                     </TextBlock>
                     <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
-
                 </Grid>
             </Border>
 
