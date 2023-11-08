@@ -28,35 +28,35 @@ namespace Abituria
         private void ButtonCalculator(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("CalculatorChoice.xaml", UriKind.Relative);
+            window.Source = new Uri("Menu/CalculatorChoice.xaml", UriKind.Relative);
             window.Show();
             this.Visibility = Visibility.Hidden;
         }
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("PageMaturaYears.xaml", UriKind.Relative);
+            window.Source = new Uri("Menu/Matura/PageMaturaYears.xaml", UriKind.Relative);
             window.Show();
             this.Visibility = Visibility.Hidden;
         }
         private void ButtonDzialy(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("PageChapters.xaml", UriKind.Relative);
+            window.Source = new Uri("Menu/PageChapters.xaml", UriKind.Relative);
             window.Show();
             this.Visibility = Visibility.Hidden;
         }
         private void ButtonZadania(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("PageExercises.xaml", UriKind.Relative);
+            window.Source = new Uri("Menu/PageExercises.xaml", UriKind.Relative);
             window.Show();
             this.Visibility = Visibility.Hidden;
         }
         private void ButtonWideo(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("PageVideo.xaml", UriKind.Relative);
+            window.Source = new Uri("Menu/PageVideo.xaml", UriKind.Relative);
             window.Show();
             this.Visibility = Visibility.Hidden;
         }

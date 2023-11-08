@@ -40,7 +40,8 @@ namespace Abituria.Menu.Calculators
                     break;
             }
         }
-        private void Reset(object sender, RoutedEventArgs e)
+        private void ButtonReset(object sender, RoutedEventArgs e) => Reset();
+        private void Reset()
         {
             fieldA.Text = "";
             fieldB.Text = "";
@@ -78,89 +79,14 @@ namespace Abituria.Menu.Calculators
         }
         private void StandardFormShow(double a, double b, double c)
         {
-            switch (b)
-            {
-                case > 0:
-                    switch (c)
-                    {
-                        case > 0:
-                            StandardGroup.Text = a switch
-                            {
-                                1 => b switch
-                                {
-                                    1 => $"y = x2 + x + {c}",
-                                    _ => $"y = x2 + {b}x + {c}",
-                                },
-                                _ => b switch
-                                {
-                                    1 => $"y = {a}x^2 + x + {c}",
-                                    _ => $"y = {a}x^2 + {b}x + {c}",
-                                },
-                            };
-                            break;
-                        case < 0:
-                            StandardGroup.Text = (a, b) switch
-                            {
-                                (1, _) => $"y = x^2 + x - {-c}",
-                                (_, 1) => $"y = {a}x^2 + x - {-c}",
-                                _ => $"y = {a}x^2 + {b}x - {-c}",
-                            };
-                            break;
-                        case 0:
-                            StandardGroup.Text = (a, b) switch
-                            {
-                                (1, 1) => "y = x^2 + x",
-                                (1, _) => $"y = x^2 + {b}x",
-                                (_, 1) => $"y = {a}x^2 + x",
-                                _ => $"y = {a}x^2 + {b}x",
-                            };
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case < 0:
-                    this.StandardGroup.Text = a switch
-                    {
-                        1 => c > 0 ? $"y = x^2 - {-b}x + {c}" :
-                             c < 0 ? $"y = x^2 - {-b}x - {-c}" :
-                             $"y = x^2 - {-b}x",
-                        _ => c > 0 ? $"y = {a}x^2 - {-b}x + {c}" :
-                             c < 0 ? $"y = {a}x^2 - {-b}x - {-c}" :
-                             $"y = {a}x^2 - {-b}x",
-                    };
-                    break;
-                case 0:
-                    switch (c)
-                    {
-                        case > 0:
-                            StandardGroup.Text = a switch
-                            {
-                                1 => $"y = x2 + {c}",
-                                _ => $"y = {a}x2 + {c}",
-                            };
-                            break;
-                        case < 0:
-                            StandardGroup.Text = a switch
-                            {
-                                1 => $"y = x2 - {c * -1}",
-                                _ => $"y = {a}x2 - {c * -1}",
-                            };
-                            break;
-                        case 0:
-                            StandardGroup.Text = a switch
-                            {
-                                1 => $"y = x2",
-                                _ => $"y = {a}x2",
-                            };
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                default:
-                    break;
-            }
+            string aTerm = (a == 1) ? "x^2" : $"{a}x^2";
+            string bTerm = (b == 0) ? "" : (b > 0 ? $" + {b}x" : $" - {Math.Abs(b)}x");
+            string cTerm = (c == 0) ? "" : (c > 0 ? $" + {c}" : $" - {Math.Abs(c)}");
+
+            string equation = $"y = {aTerm}{bTerm}{cTerm}";
+
+            StandardGroup.Text = equation;
         }
+
     }
 }
