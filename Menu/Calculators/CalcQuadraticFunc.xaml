@@ -5,9 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Abituria.Menu.Calculators"
       mc:Ignorable="d"
-        WindowState="Maximized"
+      WindowState="Maximized"
       Title="CalcQuadraticFunc"
-    Height="1080" Width="1920">
+      Height="1080" Width="1920"
+      xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="20" />
@@ -41,7 +42,9 @@
             <GroupBox Header="Postać ogólna funkcji kwadratowej" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Margin="10" Padding="10">
                 <StackPanel>
                     <TextBlock Grid.Column="1" Grid.Row="1" TextAlignment="Center"  VerticalAlignment="Bottom" Grid.ColumnSpan="2" ToolTip="Pamiętaj, że współczynnik a nie może wynosić 0!">
-                        Funkcja kwadratowa ma postać ogólną y=ax2+bx+c 
+                        Funkcja kwadratowa ma postać ogólną
+                        <LineBreak/>
+                        <controls:FormulaControl Formula="y = ax^2 + bx + c" />
                         <LineBreak/>
                         Podaj jej współczynniki:
                     </TextBlock>
@@ -55,7 +58,7 @@
             </GroupBox>
             <Button Click="ShowResult" x:Name="buttonPrzelicz" Grid.Column="1" Grid.Row="2" Content="Przelicz" ToolTip="Sprawdź rozwiązanie dla wprowadzonych liczb!" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
             <Button Click="ButtonReset" x:Name="buttonReset" Grid.Column="2" Grid.Row="2" Content="Reset" ToolTip="Wyczyść wproadzone dane i spróbuj ponownie" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <GroupBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="15">
+            <GroupBox Header="Rozwiązanie" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="15">
                 <StackPanel>
                     <TextBlock Text="Postać ogólna funkcji kwadratowej:" />
                     <TextBlock x:Name="StandardGroup" />

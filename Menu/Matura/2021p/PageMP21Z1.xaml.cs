@@ -1,4 +1,5 @@
-﻿using Abituria.Menu.Matura._2021p;
+﻿using Abituria.Menu;
+using Abituria.Menu.Matura._2021p;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,14 +28,15 @@ namespace Abituria
         }
         private void ButtonAbituria(object sender, RoutedEventArgs e)
         {
-            var mainWin = new MainWindow();
-            mainWin.Show();
-
+            Window currentWindow = Window.GetWindow(this);
+            currentWindow.Close();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
         }
         private void ButtonCalculator(object sender, RoutedEventArgs e)
         {
-            var calculator = new Calculator();
-            calculator.Show();
+            CalculatorChoice calculator = new CalculatorChoice();
+            NavigationService.Navigate(calculator);
         }
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {

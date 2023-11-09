@@ -79,7 +79,7 @@ namespace Abituria.Menu.Calculators
         }
         private void StandardFormShow(double a, double b, double c)
         {
-            string aTerm = (a == 1) ? "x^2" : $"{a}x^2";
+            string aTerm = (a == 1) ? "x²" : $"{a}x²";
             string bTerm = (b == 0) ? "" : (b > 0 ? $" + {b}x" : $" - {Math.Abs(b)}x");
             string cTerm = (c == 0) ? "" : (c > 0 ? $" + {c}" : $" - {Math.Abs(c)}");
 
