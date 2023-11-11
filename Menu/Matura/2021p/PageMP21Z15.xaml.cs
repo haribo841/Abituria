@@ -53,7 +53,7 @@ namespace Abituria.Menu.Matura._2021p
         }
         private void ButtonVideo(object sender, RoutedEventArgs e)
         {
-            PageVideo pageVideo = new PageVideo();
+            PageFormulas pageVideo = new PageFormulas();
             NavigationService.Navigate(pageVideo);
         }
         private void MP2021Exe1(object sender, RoutedEventArgs e)

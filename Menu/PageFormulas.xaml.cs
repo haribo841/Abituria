@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 namespace Abituria
 {
     /// <summary>
-    /// Logika interakcji dla klasy PageVideo.xaml
+    /// Logika interakcji dla klasy PageFormulas.xaml
     /// </summary>
-    public partial class PageVideo : Page
+    public partial class PageFormulas : Page
     {
-        public PageVideo()
+        public PageFormulas()
         {
             InitializeComponent();
         }
@@ -52,10 +52,10 @@ namespace Abituria
             PageExercises pageExercises = new PageExercises();
             NavigationService.Navigate(pageExercises);
         }
-        private void ButtonVideo(object sender, RoutedEventArgs e)
+        private void ButtonFormulas(object sender, RoutedEventArgs e)
         {
-            PageVideo pageVideo = new PageVideo();
-            NavigationService.Navigate(pageVideo);
+            PageFormulas pageFormulas = new PageFormulas();
+            NavigationService.Navigate(pageFormulas);
         }
     }
 }

@@ -27,7 +27,10 @@ namespace Abituria
         }
         private void ButtonCalculator(object sender, RoutedEventArgs e)
         {
-            MainFrame.NavigationService.Navigate(new Uri("Menu/CalculatorChoice.xaml", UriKind.Relative));
+            NavigationWindow window = new NavigationWindow();
+            window.Source = new Uri("Menu/CalculatorChoice.xaml", UriKind.Relative);
+            window.Show();
+            this.Visibility = Visibility.Hidden;
         }
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {
@@ -50,10 +53,10 @@ namespace Abituria
             window.Show();
             this.Visibility = Visibility.Hidden;
         }
-        private void ButtonVideo(object sender, RoutedEventArgs e)
+        private void ButtonFormulas(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("Menu/PageVideo.xaml", UriKind.Relative);
+            window.Source = new Uri("Menu/PageFormulas.xaml", UriKind.Relative);
             window.Show();
             this.Visibility = Visibility.Hidden;
         }

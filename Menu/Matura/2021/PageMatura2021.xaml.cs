@@ -54,7 +54,7 @@ namespace Abituria
         }
         private void ButtonVideo(object sender, RoutedEventArgs e)
         {
-            PageVideo pageVideo = new PageVideo();
+            PageFormulas pageVideo = new PageFormulas();
             NavigationService.Navigate(pageVideo);
         }
         private void Button2021(object sender, RoutedEventArgs e)
