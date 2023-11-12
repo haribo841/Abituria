@@ -52,10 +52,10 @@ namespace Abituria
             PageExercises pageExercises = new PageExercises();
             NavigationService.Navigate(pageExercises);
         }
-        private void ButtonVideo(object sender, RoutedEventArgs e)
+        private void ButtonFormulas(object sender, RoutedEventArgs e)
         {
-            PageFormulas pageVideo = new PageFormulas();
-            NavigationService.Navigate(pageVideo);
+            PageFormulas pageFormulas = new PageFormulas();
+            NavigationService.Navigate(pageFormulas);
         }
         private void Button2021(object sender, RoutedEventArgs e)
         {

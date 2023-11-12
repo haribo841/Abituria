@@ -25,30 +25,43 @@ namespace Abituria.Menu.Calculators
         {
             InitializeComponent();
         }
+        private readonly string variable = "𝑥";
+        private readonly string square = "²";
         private void ShowResult(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(fieldA.Text) || string.IsNullOrWhiteSpace(fieldB.Text) || string.IsNullOrWhiteSpace(fieldC.Text))
+            if (!TryParseInput(out double a, out double b, out double c))
             {
-                MessageBox.Show("Wszystkie pola muszą być uzupełnione.");
+                DisplayErrorMessage("Ups, coś poszło nie tak. Sprawdź, czy wprowadzone dane są prawidłowe i spróbuj jeszcze raz.");
+                Reset();
                 return;
             }
             else
             {
-                double a = double.Parse(fieldA.Text);
-                double b = double.Parse(fieldB.Text);
-                double c = double.Parse(fieldC.Text);
-                switch (a)
+                if (a == 0)
                 {
-                    case 0:
-                        MessageBox.Show("Pamiętaj, że w każdej funkcji kwadratowej współczynnik a jest liczbą rzeczywistą różną od 0!");
-                        return;
-                    default:
-                        QuadraticFunctionStandardForm(a, b, c);
-                        this.groupResult.Visibility = Visibility.Visible;
-                        break;
+                    DisplayErrorMessage("W każdej funkcji kwadratowej współczynnik a powinien być liczbą rzeczywistą różną od 0! Spróbuj jeszcze raz.");
+                    Reset();
+                    return;
+                }
+                else
+                {
+                    QuadraticFunctionStandardForm(a, b, c);
+                    groupResult.Visibility = Visibility.Visible;
                 }
             }
         }
+
+        private bool TryParseInput(out double a, out double b, out double c)
+        {
+            a = b = c = 0;
+            return double.TryParse(fieldA.Text, out a) && double.TryParse(fieldB.Text, out b) && double.TryParse(fieldC.Text, out c);
+        }
+
+        private void DisplayErrorMessage(string message)
+        {
+            MessageBox.Show(message, "Nieprawidłowa wartość!");
+        }
+
         private void ButtonReset(object sender, RoutedEventArgs e) => Reset();
         private void Reset()
         {
@@ -73,13 +86,13 @@ namespace Abituria.Menu.Calculators
                     }
                 case 0:
                     {
-                        string resultTxt = $"Δ = 0, funkcja posiada jedno miejsce zerowe, gdzie wierzchołek dotyka osi x: \n x₀ = {x0}";
+                        string resultTxt = $"Δ = 0, funkcja posiada jedno miejsce zerowe, gdzie wierzchołek dotyka osi x: \n 𝑥₀ = {x0}";
                         result.Text = resultTxt;
                         break;
                     }
                 default:
                     {
-                        string resultTxt = $"Δ > 0, funkcja posiada dwa miejsca zerowe: \n x₁ = {x1} i x₂ = {x2}";
+                        string resultTxt = $"Δ > 0, funkcja posiada dwa miejsca zerowe: \n 𝑥₁ = {x1} i 𝑥₂ = {x2}";
                         result.Text = resultTxt;
                         break;
                     }
@@ -90,39 +103,92 @@ namespace Abituria.Menu.Calculators
             this.result.Visibility = Visibility.Visible;
             StandardFormShow(a, b, c);
             VertexFormShow(a, p, q);
-            FactoredFormShow(a, x1, x2, delta);
-            Explanation(a, b, c, delta, vertex, x1, x2);
+            FactoredFormShow(a, x1, x2, delta, vertex);
+            Explanation(a, b, c, delta, vertex, x0, x1, x2);
         }
         private void StandardFormShow(double a, double b, double c)
         {
-            string aTerm = (a == 1) ? "x²" : $"{a}x²";
-            string bTerm = (b == 0) ? "" : (b > 0 ? $" + {b}x" : $" - {Math.Abs(b)}x");
-            string cTerm = (c == 0) ? "" : (c > 0 ? $" + {c}" : $" - {Math.Abs(c)}");
-            string equation = $"y = {aTerm}{bTerm}{cTerm}";
+            string GetTerm(double coefficient, string variable)
+            {
+                return coefficient switch
+                {
+                    1 => variable,
+                    -1 => $"-{variable}",
+                    _ => $"{coefficient}{variable}"
+                };
+            }
+
+            string FormatTerm(double coefficient, string variable)
+            {
+                return coefficient > 0 ? $" + {GetTerm(coefficient, variable)}" :
+                       coefficient < 0 ? $" - {GetTerm(-coefficient, variable)}" : "";
+            }
+
+            string equation = $"𝑓(𝑥) = {GetTerm(a, variable)}{square}";
+            equation += FormatTerm(b, variable);
+            equation += FormatTerm(c, "");
+
             StandardGroup.Text = equation;
         }
+
         private void VertexFormShow(double a, double p, double q)
         {
-            string VertexForm = $"f(x) = {a}(x {(p >= 0 ? "-" : "+")} {Math.Abs(p)})² {(q >= 0 ? "+" : "-")} {Math.Abs(q)}";
+            string VertexForm = $"𝑓(𝑥) = {a}(𝑥 {(p >= 0 ? "-" : "+")} {Math.Abs(p)})² {(q >= 0 ? "+" : "-")} {Math.Abs(q)}";
             VertexGroup.Text = VertexForm;
         }
-        private void FactoredFormShow(double a, double x1, double x2, double delta)
+        private void FactoredFormShow(double a, double x1, double x2, double delta, string vertex)
         {
-            StringBuilder message = new StringBuilder();
-            message.Append(delta switch
+            string Factored = "";
+            switch (delta)
             {
-                < 0 => "Funkcja nie ma miejsc zerowych, nie ma też zatem postaci iloczynowej!",
-                0 => $"f(x) = {a}(x {(x1 < 0 ? '+' : '-')} {Math.Abs(x1):F2})²",
-                _ => $"f(x) = {a}(x {(x1 >= 0 ? '-' : '+')} {Math.Abs(x1):F2})(x {(x2 >= 0 ? '-' : '+')} {Math.Abs(x2):F2})"
-            });
-            FactoredGroup.Text = message.ToString();
+                case < 0:
+                    Factored = "Funkcja nie ma miejsc zerowych, nie ma też zatem postaci iloczynowej!";
+                    break;
+                case 0:
+                    Factored = $"𝑓(𝑥) = {a}(𝑥 {(x1 < 0 ? '+' : '-')} {Math.Abs(x1)})" + square;
+                    break;
+                default:
+                    Factored += $"𝑓(𝑥) = {a}(𝑥 {(x1 >= 0 ? '-' : '+')} {Math.Abs(x1)})(𝑥 {(x2 >= 0 ? '-' : '+')} {Math.Abs(x2)})";
+                    break;
+            }
+
+            FactoredGroup.Text = Factored;
+
+            string parable = a > 0 ? "Ramiona paraboli skierowane są do góry, ponieważ współczynnik 𝒂 jest dodatni: ⎝⎠" :
+                  "Ramiona paraboli skierowane są do dołu, ponieważ współczynnik 𝒂 jest ujemny: ⎛⎞";
+            string vertexInfo = $"Współrzędne wierzchołka paraboli znajdują się w punkcie W(p;q), czyli W = {vertex}";
+            pParable.Text = $"\n{parable}\n{vertexInfo}";
         }
-        private void Explanation(double a, double b, double c, double delta, string vertex, double x1, double x2)
+        private void Explanation(double a, double b, double c, double delta, string vertex, double x0, double x1, double x2)
         {
-            string explained = $"Znając wzór na postać ogólną funkcji kwadratowej, zaczynamy od policzenia Δ.\nUżyjemy wzoru Δ = b² − 4⋅a⋅c\n";
-            explained += $"Δ = ({b}) - 4⋅({a})⋅({c}) = {delta}";
+            string[] specialScript = { "₀", "₁", "₂", "²", "√" };
+
+            string deltaText = GetDeltaText(delta, x0, x1, x2, specialScript);
+
+            string explained = $@"
+Znając wzór na postać ogólną funkcji kwadratowej, zaczynamy od wyliczenia wartości Δ (delty, inaczej wyróżnika funkcji kwadratowej). Użyjemy wzoru: 
+                        Δ = 𝑏{specialScript[3]} − 4⋅𝑎⋅𝑐
+                Δ = ({b}){specialScript[3]} - 4⋅({a})⋅({c}) = {delta}
+
+Sama znajomość delty da nam już bardzo dużo, bo dowiemy się ile pierwiastków trójmianu kwadratowego (to znaczy miejsc zerowych funkcji kwadratowej) znajdziemy w naszej konkretnej funkcji.
+
+Pod uwagę bierzemy zawsze jeden z trzech przypadków.
+
+W tym przypadku, {deltaText}.
+";
+
             explanation.Text = explained;
-            string vertexExplanation = $"Współrzędne wierzchołka paraboli znajdują się w punkcie W(p, q), czyli W = {vertex}";
         }
+
+        private string GetDeltaText(double delta, double x0, double x1, double x2, string[] specialScript)
+        {
+            return delta switch
+            {
+                < 0 => "Δ < 0 i funkcja nie posiada miejsc zerowych",
+                0 => $"Δ = 0, funkcja posiada jedno miejsce zerowe: 𝑥{specialScript[0]} = {x0}",
+                _ => $"Δ > 0, funkcja posiada dwa miejsca zerowe: 𝑥{specialScript[1]} = {x1} oraz 𝑥{specialScript[2]} = {x2}"
+            };
+        }
+
     }
 }
