@@ -233,11 +233,17 @@ namespace Abituria
             PageMP21Z35 pageMP21Z35 = new PageMP21Z35();
             NavigationService.Navigate(pageMP21Z35);
         }
-        /*private void ConfirmBtn(object sender, RoutedEventArgs e)
+        private void ConfirmBtn(object sender, RoutedEventArgs e)
         {
-            bool ansChecked = CheckAnswer(correctAnsw);
-            return isAnsCorrect;
-        }*/
+            MessageBox.Show("WIP");
+        }
+
+        private void HintBtn(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("TODO");
+            string test = HintsClass.HintMP21Z1(2);
+            this.hintField.Text = test;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
