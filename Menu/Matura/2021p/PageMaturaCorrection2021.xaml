@@ -48,6 +48,9 @@
                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Margin="5" FontWeight="Bold" Foreground="Black">Zadanie:</TextBlock>
                     <ComboBox HorizontalAlignment="Center" Margin="35" VerticalAlignment="Top" Width="120">
                         <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 1" ToolTip="Zadanie 1" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe1"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
                             <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Zadanie 2" ToolTip="Zadanie 2" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MP2021Exe2"/>
                         </ComboBoxItem>
                         <ComboBoxItem>

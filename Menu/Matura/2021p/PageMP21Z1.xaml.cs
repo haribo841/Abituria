@@ -22,6 +22,8 @@ namespace Abituria
     /// </summary>
     public partial class PageMP21Z1 : Page
     {
+        public int ClickCounter { get; private set; } = 0;
+        public int CorrectAnswer { get; } = 4;
         public PageMP21Z1()
         {
             InitializeComponent();
@@ -235,14 +237,25 @@ namespace Abituria
         }
         private void ConfirmBtn(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("WIP");
+            bool ansChecked = CheckAnswer(CorrectAnswer);
+            string answer = HintsClass.AnswerButtonChange(sender, ansChecked);
+            this.brdHint.Visibility = Visibility.Visible;
+            this.hintField.Text = answer;
         }
-
         private void HintBtn(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("TODO");
-            string test = HintsClass.HintMP21Z1(2);
-            this.hintField.Text = test;
+            ClickCounter++;
+            string hint = HintsClass.HintMP21Z1(ClickCounter);
+            this.brdHint.Visibility = Visibility.Visible;
+            this.hintField.Text = hint;
+        }
+        private bool CheckAnswer(int correct)
+        {
+            return checkBox4.IsChecked switch
+            {
+                true when checkBox1.IsChecked != true && checkBox2.IsChecked != true && checkBox3.IsChecked != true => true,
+                _ => false,
+            };
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
