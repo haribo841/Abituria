@@ -157,7 +157,59 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black" Text="Poprawkowy arkusz maturalny z 2021"/>
+                    <GroupBox Grid.Column="2" Grid.Row="1" BorderThickness="0">
+                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                            <Button Content="1" Height="50" Width="50" Margin="5"/>
+                            <Button Content="2" Height="50" Width="50" Margin="5"/>
+                            <Button Content="3" Height="50" Width="50" Margin="5"/>
+                            <Button Content="4" Height="50" Width="50" Margin="5"/>
+                            <Button Content="5" Height="50" Width="50" Margin="5"/>
+                            <Button Content="6" Height="50" Width="50" Margin="5"/>
+                            <Button Content="7" Height="50" Width="50" Margin="5"/>
+                            <Button Content="8" Height="50" Width="50" Margin="5"/>
+                            <Button Content="9" Height="50" Width="50" Margin="5"/>
+                            <Button Content="10" Height="50" Width="50" Margin="5"/>
+                            <Button Content="11" Height="50" Width="50" Margin="5"/>
+                            <Button Content="12" Height="50" Width="50" Margin="5"/>
+                            <Button Content="13" Height="50" Width="50" Margin="5"/>
+                            <Button Content="14" Height="50" Width="50" Margin="5"/>
+                            <Button Content="15" Height="50" Width="50" Margin="5"/>
+                            <Button Content="16" Height="50" Width="50" Margin="5"/>
+                            <Button Content="17" Height="50" Width="50" Margin="5"/>
+                            <Button Content="18" Height="50" Width="50" Margin="5"/>
+                            <Button Content="19" Height="50" Width="50" Margin="5"/>
+                            <Button Content="20" Height="50" Width="50" Margin="5"/>
+                            <Button Content="21" Height="50" Width="50" Margin="5"/>
+                            <Button Content="22" Height="50" Width="50" Margin="5"/>
+                            <Button Content="23" Height="50" Width="50" Margin="5"/>
+                            <Button Content="24" Height="50" Width="50" Margin="5"/>
+                            <Button Content="25" Height="50" Width="50" Margin="5"/>
+                            <Button Content="26" Height="50" Width="50" Margin="5"/>
+                            <Button Content="27" Height="50" Width="50" Margin="5"/>
+                            <Button Content="28" Height="50" Width="50" Margin="5"/>
+                            <Button Content="29" Height="50" Width="50" Margin="5"/>
+                            <Button Content="30" Height="50" Width="50" Margin="5"/>
+                            <Button Content="31" Height="50" Width="50" Margin="5"/>
+                            <Button Content="32" Height="50" Width="50" Margin="5"/>
+                            <Button Content="33" Height="50" Width="50" Margin="5"/>
+                            <Button Content="34" Height="50" Width="50" Margin="5"/>
+                            <Button Content="35" Height="50" Width="50" Margin="5"/>
+                        </WrapPanel>
+                    </GroupBox>
                 </Grid>
             </Border>
         </DockPanel>

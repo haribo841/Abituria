@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Abituria"
         mc:Ignorable="d"
-        Title="MainWindowLogin" Height="450" Width="800">
+        WindowState="Maximized"
+        Title="Abituria" Height="450" Width="800">
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="2" />
+            <Setter Property="FontFamily" Value="Cavolini" />
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        
+        <Frame Margin="0,60,0,0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        <Grid Margin="-1,0,-1,0" HorizontalAlignment="Center" Width="794">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="8*"/>
+            </Grid.RowDefinitions>
+            <Border BorderBrush="Black" BorderThickness="1" Padding="10" Grid.ColumnSpan="5" Margin="10, 10, 10, 0">
+            </Border>
+            <TextBlock Text="Abituria" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.ColumnSpan="5"/>
+            <TextBlock Grid.Row="1" Text="Witaj w programie ABITURIA, twoim matematycznym korepetytorze." FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5"/>
+            <TextBox x:Name="txt1" Grid.Row="2" Text="" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5"/>
+        </Grid>
     </Grid>
 </Window>

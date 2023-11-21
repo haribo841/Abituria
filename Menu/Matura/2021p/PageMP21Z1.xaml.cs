@@ -245,7 +245,8 @@ namespace Abituria
         private void HintBtn(object sender, RoutedEventArgs e)
         {
             ClickCounter++;
-            string hint = HintsClass.HintMP21Z1(ClickCounter);
+            string[] hintsArray = { "Krok 1: podpowiedź", "Krok 2: podpowiedź", "Krok 3: podpowiedź", "Krok 4: podpowiedź" };
+            string hint = HintsClass.Hint(ClickCounter, hintsArray);
             this.brdHint.Visibility = Visibility.Visible;
             this.hintField.Text = hint;
         }

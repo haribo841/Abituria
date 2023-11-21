@@ -18,21 +18,19 @@ namespace Abituria
             switch (ansChecked)
             {
                 case true:
-                    button.Background = Brushes.Green;
+                    button.Background = Brushes.LimeGreen;
                     message = "To prawidłowa odpowiedź!";
                     break;
                 default:
-                    button.Background = Brushes.Red;
+                    button.Background = Brushes.IndianRed;
                     message = "Odpowiedź jest niepoprawna. Spróbuj jeszcze raz.";
                     break;
             }
             return message;
         }
-        public static string HintMP21Z1(int counter)
+        public static string Hint(int counter, string[] hintsArray)
         {
-            string hint = "";
-            string[] hintsArray = { "Krok 1: podpowiedź", "Krok 2: podpowiedź", "Krok 3: podpowiedź", "Krok 4: podpowiedź" };
-            hint = counter switch
+            string hint = counter switch
             {
                 1 => hintsArray[0],
                 2 => hintsArray[0] + "\n" + hintsArray[1],
