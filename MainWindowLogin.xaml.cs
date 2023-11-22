@@ -25,7 +25,11 @@ namespace Abituria
             InitializeComponent();
             Login();
         }
-
+        class MyClass
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+        }
         private void Login()
         {
             string username = "";
@@ -33,12 +37,12 @@ namespace Abituria
 
             if (File.Exists(path))
             {
-                string readText = File.ReadAllText(path);
-                this.txt1.Text = readText;
+                using StreamWriter writer = File.AppendText(path);
             }
             else
             {
                 MessageBox.Show("The user file does not exist or cannot be found.");
+                comboBox1.ItemsSource = new List<string> { "TODO", "WIP"};
             }
         }
 

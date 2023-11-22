@@ -6,10 +6,10 @@
       xmlns:local="clr-namespace:Abituria"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageVideo"
-      ShowsNavigationUI="False">
+      Title="Tablice matematyczne"
+      xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath">
+
     <Grid>
-        <Frame Margin="0,60,0,0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="MaturaFrame" NavigationUIVisibility="Hidden"/>
         <DockPanel Margin="5">
             <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
                 <Grid>
@@ -25,35 +25,102 @@
                         <RowDefinition Height="35*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Column="2" Grid.Row="0" Margin="5" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center" VerticalAlignment="Top">
-        <Button Background="Transparent" BorderThickness="0" Content="Abituria" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
+<Button Background="Transparent" BorderThickness="0" Content="Abituria" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
                     </TextBlock>
                     <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonCalculator"/>
+<Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonCalculator"/>
                     </TextBlock>
                     <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonMatura"/>
+<Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonMatura"/>
                     </TextBlock>
                     <TextBlock Grid.Column="2" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonChapters"/>
+<Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonChapters"/>
                     </TextBlock>
                     <TextBlock Grid.Column="3" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonExercises"/>
+<Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonExercises"/>
                     </TextBlock>
                     <TextBlock TextWrapping="Wrap" Grid.Column="4" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Button Background="Transparent" BorderThickness="0" Content="Tablice matematyczne" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonFormulas"/>
+                <Button Background="Transparent" BorderThickness="0" Content="Tablice matematyczne" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonFormulas"/>
                     </TextBlock>
                     <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
                 </Grid>
             </Border>
-            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+
+            <Border Width="200" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Left">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean blandit hendrerit magna, vitae tempus enim dapibus ac. Aenean sed cursus sem. Praesent ut dignissim tellus. Vivamus pretium tortor in hendrerit tincidunt. Pellentesque ullamcorper sodales luctus. Phasellus commodo erat nec dictum pulvinar. Integer nec rhoncus erat, non placerat ipsum. Cras leo mi, facilisis in aliquet ac, efficitur at odio. Morbi dui velit, egestas quis nibh eget, elementum rutrum ex. Nam et vulputate tellus, laoreet semper nisl. Nulla facilisi. Aliquam vel facilisis quam, a ultricies orci. Nullam vehicula mi augue, ut ultrices est fermentum et. Etiam id justo nec nisl auctor tristique nec vitae tellus. Pellentesque venenatis efficitur ipsum, sit amet hendrerit nulla porttitor nec. Aenean viverra vitae urna nec venenatis.
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare ultrices tortor non sodales. Donec molestie condimentum consequat. Morbi bibendum quis libero sed fringilla. Praesent eu sodales justo. Nunc et laoreet tellus, ut porta sem. Donec feugiat pellentesque iaculis. Nunc maximus arcu risus, quis mollis massa tristique quis. Morbi non massa quis diam varius eleifend. Proin faucibus mauris vel placerat dapibus. Vestibulum facilisis nulla quis velit sodales varius.
-Suspendisse fermentum, eros a consequat gravida, augue lacus facilisis nunc, at semper quam orci varius velit. Fusce hendrerit purus massa, id porttitor augue ultricies at. Sed iaculis euismod nulla sed posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nec facilisis dui. Suspendisse augue tellus, dignissim ut lectus eu, maximus fringilla erat. Proin eu leo tincidunt, vestibulum lacus sit amet, fringilla lorem.
-                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Margin="5" FontWeight="Bold" Foreground="Black">Zadanie:</TextBlock>
+                    <ComboBox HorizontalAlignment="Center" Margin="35" VerticalAlignment="Top" Width="120">
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Wartość Bezwzględna" ToolTip="Wartość Bezwzględna Liczby" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F1"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Potęgi i pierwiastki" ToolTip=" Potęgi i pierwiastki" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F2"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Logarytmy" ToolTip="Logarytmy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F3"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Silnia" ToolTip="Silnia. Współczynnik dwumianowy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F4"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Dwumian Newtona" ToolTip="Wzór dwumianowy Newtona" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F5"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Wzory skróconego mnożenia" ToolTip="Wzory skróconego mnożenia" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F6"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Ciągi" ToolTip="Ciągi" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F7"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Funkcja kwadratowa" ToolTip="Funkcja kwadratowa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F8"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Geometria" ToolTip="Geometria analityczna" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F9"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Planimetria" ToolTip=" Planimetria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F10"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Stereometria" ToolTip="Stereometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F11"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Trygonometria" ToolTip="Trygonometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F12"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Kombinatoryka" ToolTip="Kombinatoryka" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F13"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Prawdopodobieństwo" ToolTip="Rachunek prawdopodobieństwa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F14"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Statystyka" ToolTip="Parametry danych statystycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F15"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Granice" ToolTip="Granica ciągu" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F16"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Pochodne" ToolTip="Pochodna funkcji" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F17"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Tablice Trygonometyczne" ToolTip="Tablica wartości funkcji trygonometrycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F18"/>
+                        </ComboBoxItem>
+                    </ComboBox>
                 </Grid>
             </Border>
+            <Border Background="White" BorderBrush="Black" BorderThickness="1">
+                <Grid>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:x\:" />
+                        </InlineUIContainer><Run Text="definiujemy wzorem:"/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\mid{x}\mid=\cases{x\;\mathrm{dla}\;x\geq0\cr-x\;\mathrm{dla}\;x\lt0 }" />
+                        </InlineUIContainer><LineBreak/><Run Text="Liczba"/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:\mid{x}\mid\:" />
+                        </InlineUIContainer><Run Text="jest to odległość na osi liczbowej punktu "/>
+                            <controls:FormulaControl Formula="\:x\:" /> od punktu
+                        <controls:FormulaControl Formula="\:0" />.<LineBreak/></TextBlock>
+                </Grid>
+            </Border>
+
         </DockPanel>
     </Grid>
 </Page>

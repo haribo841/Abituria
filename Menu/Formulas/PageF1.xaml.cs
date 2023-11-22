@@ -4,21 +4,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Findows;
-using System.Findows.Controls;
-using System.Findows.Data;
-using System.Findows.Documents;
-using System.Findows.Input;
-using System.Findows.Media;
-using System.Findows.Media.Imaging;
-using System.Findows.Navigation;
-using System.Findows.Shapes;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Windows;
+using Abituria.Menu.Formulas;
 
 namespace Abituria
 {
     /// <summary>
-    /// Logika interakcji dla klasy PageMatura.xaml
+    /// Interaction logic for PageF1.xaml
     /// </summary>
     public partial class PageF1 : Page
     {
@@ -28,9 +29,9 @@ namespace Abituria
         }
         private void ButtonAbituria(object sender, RoutedEventArgs e)
         {
-            Findow currentFindow = Findow.GetFindow(this);
+            Window currentFindow = Window.GetWindow(this);
             currentFindow.Close();
-            MainFindow mainFindow = new MainFindow();
+            MainWindow mainFindow = new MainWindow();
             mainFindow.Show();
         }
         private void ButtonCalculator(object sender, RoutedEventArgs e)
