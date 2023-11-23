@@ -28,8 +28,10 @@
                 <RowDefinition Height="8*"/>
             </Grid.RowDefinitions>
             <Border BorderBrush="Black" BorderThickness="1" Padding="10" Grid.ColumnSpan="5" Margin="10, 10, 10, 0">
+                <TextBlock Grid.Column="2" Grid.Row="0" Margin="5" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" BorderThickness="0" Content="Abituria" ToolTip="Zaloguj się" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
+                </TextBlock>
             </Border>
-            <TextBlock Text="Abituria" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.ColumnSpan="5"/>
             <TextBlock Grid.Row="1" Text="Witaj w programie ABITURIA, twoim matematycznym korepetytorze." FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5"/>
             <TextBlock Grid.Row="1" Text="Wybierz moduł:" FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Margin="0,0,0,10" Grid.Column="1" Grid.ColumnSpan="3"/>
             <Button Grid.Row="2" Content="Kalkulator" ToolTip="Zaawansowany kalkulator do wykonania dowolnego obliczenia matematycznego" FontFamily="Cavolini" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Click="ButtonCalculator"/>

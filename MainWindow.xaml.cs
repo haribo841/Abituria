@@ -25,6 +25,13 @@ namespace Abituria
         {
             InitializeComponent();
         }
+        private void ButtonAbituria(object sender, RoutedEventArgs e)
+        {
+            Window currentWindow = Window.GetWindow(this);
+            currentWindow.Close();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+        }
         private void ButtonCalculator(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();

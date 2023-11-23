@@ -109,15 +109,14 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:x\:" />
-                        </InlineUIContainer><Run Text="definiujemy wzorem:"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\mid{x}\mid=\cases{x\;\mathrm{dla}\;x\geq0\cr-x\;\mathrm{dla}\;x\lt0 }" />
-                        </InlineUIContainer><LineBreak/><Run Text="Liczba"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:\mid{x}\mid\:" />
-                        </InlineUIContainer><Run Text="jest to odległość na osi liczbowej punktu "/>
-                            <controls:FormulaControl Formula="\:x\:" /> od punktu
-                        <controls:FormulaControl Formula="\:0" />.<LineBreak/></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Niech "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:n\:" />
+                        </InlineUIContainer><Run Text=" będzie liczbą całkowitą dodatnią. Dla dowolnej liczby"/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:a\:" />
+                        </InlineUIContainer><Run Text=" definiujemy jej"/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:n" />
+                        </InlineUIContainer><Run Text="-tą potęgę:"/><LineBreak/>
+                    </TextBlock>
                 </Grid>
             </Border>
 

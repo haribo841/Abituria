@@ -50,5 +50,20 @@ namespace Abituria
         {
 
         }
+        private void BtnAcntExists(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnCreateNew(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Confirm(object sender, RoutedEventArgs e)
+        {
+            string eh = comboBox1.SelectedItem as string;
+            MessageBox.Show(eh);
+        }
     }
 }
