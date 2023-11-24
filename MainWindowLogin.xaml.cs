@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -34,10 +35,10 @@ namespace Abituria
         {
             string username = "";
             string path = @"user.txt";
-
+            List<string> usersList = new List<string>();
             if (File.Exists(path))
             {
-                using StreamWriter writer = File.AppendText(path);
+                using StreamWriter reader = File.AppendText(path);
             }
             else
             {
@@ -52,7 +53,8 @@ namespace Abituria
         }
         private void BtnAcntExists(object sender, RoutedEventArgs e)
         {
-
+            btn1.Visibility = Visibility.Collapsed;
+            comboBox1.Visibility = Visibility.Visible;
         }
 
         private void BtnCreateNew(object sender, RoutedEventArgs e)

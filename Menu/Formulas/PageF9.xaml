@@ -108,17 +108,28 @@
                 </Grid>
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
-                <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:x\:" />
-                        </InlineUIContainer><Run Text="definiujemy wzorem:"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\mid{x}\mid=\cases{x\;\mathrm{dla}\;x\geq0\cr-x\;\mathrm{dla}\;x\lt0 }" />
-                        </InlineUIContainer><LineBreak/><Run Text="Liczba"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:\mid{x}\mid\:" />
-                        </InlineUIContainer><Run Text="jest to odległość na osi liczbowej punktu "/>
-                            <controls:FormulaControl Formula="\:x\:" /> od punktu
-                        <controls:FormulaControl Formula="\:0" />.<LineBreak/></TextBlock>
-                </Grid>
+                <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Odcinek"/><LineBreak/><InlineUIContainer>
+                        </InlineUIContainer><Run Text="Długość odcinka o końcach w punktach"/><LineBreak/><InlineUIContainer>
+                            <controls:FormulaControl Formula="A=(x_A, y_A),B=(x_B,y_B)" />
+                        </InlineUIContainer><Run Text=" jest dana wzorem:"/><LineBreak/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:\mid{AB}\mid=\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}" />
+                        </InlineUIContainer><LineBreak/><Run Text="Współrzędne środka odcinka"/>
+                        <controls:FormulaControl Formula="\:AB" />:<LineBreak/>
+                        <controls:FormulaControl Formula="\left(\frac{x_A+x_B}2,\frac{y_A+y_B}2\right)\:" /><LineBreak/>
+                        <Run Text="Wektory"/><LineBreak/><InlineUIContainer>
+                        </InlineUIContainer><Run Text="Współrzędne wektora"/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:\vec{AB}" />
+                        </InlineUIContainer>:<LineBreak/>
+                        <controls:FormulaControl Formula="\:\vec{AB}=[x_B-x_A,y_B-y_A]" /><LineBreak/>Jeżeli
+                        <controls:FormulaControl Formula="\:\vec{u}=[u_1,u_2]" />,
+                        <controls:FormulaControl Formula="\:\vec{v}=[v_1,v_2]" />są wektorami, zaś
+                        <controls:FormulaControl Formula="\:a" /> jest liczbą, to<LineBreak/>
+                        <controls:FormulaControl Formula="\:\vec{u}+\vec{v}=[u_1+v_1,u_2+v_2]" /><LineBreak/>
+                        <controls:FormulaControl Formula="\:a\cdot\vec{u}=[a\cdot{u_1},a\cdot{u_2}]" /><LineBreak/>
+                        <Run Text="Prosta"/><LineBreak/><InlineUIContainer>
+                        </InlineUIContainer><Run Text="Równanie ogólne prostej:"/><LineBreak/><!--dalej nie widze-->
+                </TextBlock>
+                <!--Image  Width="300" Height="200" Source="/img/w9a.png" Margin="278,138,10,10" /-->
             </Border>
 
         </DockPanel>

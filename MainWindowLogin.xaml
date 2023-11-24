@@ -27,14 +27,15 @@
                 <ColumnDefinition Width="60*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="3*"/>
-                <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="8*"/>
             </Grid.RowDefinitions>
             <Border BorderBrush="Black" BorderThickness="1" Padding="10" Grid.ColumnSpan="5" Margin="10, 10, 10, 0">
             </Border>
-            <TextBlock Text="Abituria" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.ColumnSpan="5"/>
+            <TextBlock Text="Abituria" FontSize="35" FontFamily="Harlow Solid Italic" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="5"/>
             <TextBlock Grid.Row="1" Text="Witaj w programie ABITURIA, twoim matematycznym korepetytorze." FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5"/>
             <TextBlock Text="Witaj, maturzysto!" Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5" FontFamily="Cavolini" FontSize="20"/>
             <TextBlock Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5" FontFamily="Cavolini" FontSize="20" TextWrapping="Wrap">
@@ -47,8 +48,8 @@
 
             <Button x:Name="btn1" Click="BtnAcntExists" Content="Mam już konto" ToolTip="Zaloguj się używając istniejącego profilu" Visibility="Visible" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" FontFamily="Cavolini" FontSize="10" Height="40" Width="130" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20"/>
             <Button x:Name="btn2" Click="BtnCreateNew" Content="Chcę stworzyć nowy profil" ToolTip="Utwórz i zaloguj się na nowym profilu" Visibility="Visible" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" FontFamily="Cavolini" FontSize="10" Height="40" Width="130" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20"/>
-            <ComboBox x:Name="comboBox1" Visibility="Visible" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Height="20" Width="150" HorizontalAlignment="Center" VerticalAlignment="Top" IsEditable="False"/>
-            <Button x:Name="btnConfirm" Click="Confirm" Content="Logowanie" ToolTip="Potwierdź swój wybór" Visibility="Visible" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" FontFamily="Cavolini" FontSize="10" Height="20" Width="65" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <ComboBox x:Name="comboBox1" Visibility="Collapsed" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Height="30" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" IsEditable="False"/>
+            <Button x:Name="btnConfirm" Visibility="Visible" Click="Confirm" Content="Logowanie" ToolTip="Potwierdź swój wybór" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" FontFamily="Cavolini" FontSize="10" Height="40" Width="130" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Grid>
     </Grid>
 </Window>

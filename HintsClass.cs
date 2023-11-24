@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ using System.Windows.Media;
 
 namespace Abituria
 {
+    [DebuggerDisplay("{" + nameof(DebuggerDisplay) + "(),nq}")]
     class HintsClass
     {
         public static string AnswerButtonChange(object sender, bool ansChecked)
@@ -30,15 +32,16 @@ namespace Abituria
         }
         public static string Hint(int counter, string[] hintsArray)
         {
-            string hint = counter switch
+            string hint = hintsArray[0];
+            for (int i = 1; i < counter; i++)
             {
-                1 => hintsArray[0],
-                2 => hintsArray[0] + "\n" + hintsArray[1],
-                3 => hintsArray[0] + "\n" + hintsArray[1] + "\n" + hintsArray[2],
-                4 => hintsArray[0] + "\n" + hintsArray[1] + "\n" + hintsArray[2] + "\n" + hintsArray[3],
-                _ => hintsArray[0] + "\n" + hintsArray[1] + "\n" + hintsArray[2] + "\n" + hintsArray[3],
-            };
+                if (i < hintsArray.Length)
+                {
+                    hint = hint + @" \\ " + hintsArray[i];
+                }
+            }
             return hint;
         }
+        private string DebuggerDisplay => ToString();
     }
 }

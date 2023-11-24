@@ -109,15 +109,31 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:x\:" />
-                        </InlineUIContainer><Run Text="definiujemy wzorem:"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\mid{x}\mid=\cases{x\;\mathrm{dla}\;x\geq0\cr-x\;\mathrm{dla}\;x\lt0 }" />
-                        </InlineUIContainer><LineBreak/><Run Text="Liczba"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:\mid{x}\mid\:" />
-                        </InlineUIContainer><Run Text="jest to odległość na osi liczbowej punktu "/>
-                            <controls:FormulaControl Formula="\:x\:" /> od punktu
-                        <controls:FormulaControl Formula="\:0" />.<LineBreak/></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Postać ogólna funkcji kwadratowej: "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:f(x)=ax^2+bx+c\:" />
+                        </InlineUIContainer><Run Text=","/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:a\neq0\:" />
+                        </InlineUIContainer><Run Text=","/>
+                        <controls:FormulaControl Formula="x\in{R}" /><LineBreak/>Wzór każdej funkcji kwadratowej można doprowadzić do postaci kanonicznej: 
+                        <controls:FormulaControl Formula="\:f(x)=a(x-p)^2+q\:" />, gdzie
+                        <controls:FormulaControl Formula="p=-\frac{b}{2a}" />,
+                        <controls:FormulaControl Formula="1=-\frac{\Delta}{4a}" />,
+                        <controls:FormulaControl Formula="\Delta=b^2-4ac" /><LineBreak/>Wykresem funkcji kwadratowej jest parabola o wierzchołku w punkcie o współrzędnych
+                        <controls:FormulaControl Formula="\:(p,q)\:" />. Ramiona paraboli skierowane są do góry, gdy
+                        <controls:FormulaControl Formula="\:a\gt0\:" />; do dołu, gdy
+                        <controls:FormulaControl Formula="\:a\lt0\:" />.<LineBreak/>Liczba miejsc zerowych funkcji kwadratowej
+                        <controls:FormulaControl Formula="\:f(x)=ax^2+bx+c\:" /> (liczba pierwiastków trójmianu kwadratowego, liczba rzeczywistych rozwiązań równania
+                        <controls:FormulaControl Formula="\:ax^2+bx+c=0\:" />), zależy od wyróżnika
+                        <controls:FormulaControl Formula="\Delta=b^2-4ac" />:<LineBreak/>
+                        <controls:FormulaControl Formula="-" /> jeżeli
+                        <controls:FormulaControl Formula="\Delta\lt0" />, to funkcja kwadratowa nie ma miejsc zerowych (trójmian kwadratowy nie ma pierwiastków rzeczywistych, równanie kwadratowe nie ma rozwiązań rzeczywistych),<LineBreak/>
+                        <controls:FormulaControl Formula="-" /> jeżeli
+                        <controls:FormulaControl Formula="\Delta=0" />, to funkcja kwadratowa ma dokładnie jedno miejsce zerowe (trójmian kwadratowy ma jeden pierwiastek podwójny, równanie kwadratowe ma dokładnie jedno rozwiązanie rzeczywiste):
+                        <controls:FormulaControl Formula="x_1=x_2=" /><LineBreak/>
+                        <!--dalej nie widze-->
+                        <controls:FormulaControl Formula="-\frac{b}{2a}" /> jeżeli
+                        <controls:FormulaControl Formula="\Delta\gt0" />, to funkcja kwadratowa ma dwa miejsca zerowe (trójmian kwadratowy ma dwa różnepierwiastki rzeczywiste, równanie kwadratowe ma dwa rozwiązania rzeczywiste):<LineBreak/>
+                    </TextBlock>
                 </Grid>
             </Border>
 
