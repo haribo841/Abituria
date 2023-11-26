@@ -109,15 +109,27 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:x\:" />
-                        </InlineUIContainer><Run Text="definiujemy wzorem:"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\mid{x}\mid=\cases{x\;\mathrm{dla}\;x\geq0\cr-x\;\mathrm{dla}\;x\lt0 }" />
-                        </InlineUIContainer><LineBreak/><Run Text="Liczba"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:\mid{x}\mid\:" />
-                        </InlineUIContainer><Run Text="jest to odległość na osi liczbowej punktu "/>
-                            <controls:FormulaControl Formula="\:x\:" /> od punktu
-                        <controls:FormulaControl Formula="\:0" />.<LineBreak/></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Ciąg arytmetyczny"/><LineBreak/><InlineUIContainer>
+                        </InlineUIContainer><Run Text="Wzór na"/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:n" />
+                        </InlineUIContainer><Run Text="-ty wyraz ciągu arytmetycznego"/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:(a_n)\:" />
+                        </InlineUIContainer><Run Text="o pierwszym wyrazie"/>
+                        <controls:FormulaControl Formula="\:a_1\:" />i różnicy
+                        <controls:FormulaControl Formula="\:r\:" />:<LineBreak/>
+                        <controls:FormulaControl Formula="a_n=a_1+(n-1)r" /><LineBreak/>Wzór na sumę
+                        <controls:FormulaControl Formula="S_n=a_1+a_2+...+a_n" /> początkowych
+                        <controls:FormulaControl Formula="\:n" /> n wyrazów ciągu arytmetycznego:<LineBreak/>
+                        <controls:FormulaControl Formula="S_n=\frac{a_1+a_n}{2}\cdot{n}=\frac{2a_1+(n-1)r}{2}\cdot{n}" /><LineBreak/>Między sąsiednimi wyrazami ciągu arytmetycznego zachodzi związek:
+                        <controls:FormulaControl Formula="a_n=\frac{a_{n-1}+a_{n+1}}{2}" /> dla
+                        <controls:FormulaControl Formula="\:n\geq2" /><LineBreak/>Ciąg geometryczny<LineBreak/>Wzór na
+                        <controls:FormulaControl Formula="\:n" />-ty wyraz ciągu geometrycznego
+                        <controls:FormulaControl Formula="\:(a_n)\:" />o pierwszym wyrazie
+                        <controls:FormulaControl Formula="\:a_1\:" />i ilorazie
+                        <controls:FormulaControl Formula="\:q\:" />:<LineBreak/>
+                        <controls:FormulaControl Formula="a_n=a_1+(n-1)r" />dla
+                        <controls:FormulaControl Formula="\:n\geq2" /><LineBreak/>Wzór na sumę
+                    </TextBlock>
                 </Grid>
             </Border>
 

@@ -62,7 +62,7 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
                     <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
-                        Arkusz maturalny z 2021
+                        W 2021 maturę z matematyki zdało 79% absolwentów, ale wyniki różniły się między liceum a technikum – w liceach 84%, a w technikach 71%. Ogólnie wynik uzyskany z egzaminu pisemnego z matematyki na poziomie podstawowym to średnio 56% możliwych punktów. To oznacza, że wśród absolwentów liceów uzyskano średnio 62%, a wśród absolwentów techników - 47%. Pomimo zmian związanych z pandemią, ogólna ocena matematyki na maturze jest zbliżona do poprzednich lat.
                     </TextBlock>
                 </Grid>
             </Border>

@@ -109,15 +109,31 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:x\:" />
-                        </InlineUIContainer><Run Text="definiujemy wzorem:"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\mid{x}\mid=\cases{x\;\mathrm{dla}\;x\geq0\cr-x\;\mathrm{dla}\;x\lt0 }" />
-                        </InlineUIContainer><LineBreak/><Run Text="Liczba"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:\mid{x}\mid\:" />
-                        </InlineUIContainer><Run Text="jest to odległość na osi liczbowej punktu "/>
-                            <controls:FormulaControl Formula="\:x\:" /> od punktu
-                        <controls:FormulaControl Formula="\:0" />.<LineBreak/></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Dla dowolnych liczb "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:a\:" />
+                        </InlineUIContainer><Run Text=","/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:b\:" />
+                        </InlineUIContainer><Run Text=":"/><LineBreak/>
+                        <controls:FormulaControl Formula="(a+b)^2=a^2+2ab+b^2" /><LineBreak/>
+                        <controls:FormulaControl Formula="(a-b)^2=a^2-2ab+b^2" /><LineBreak/>
+                        <controls:FormulaControl Formula="(a+b)^3=a^3+3a^2b+3ab^2+b^3" /><LineBreak/>
+                        <controls:FormulaControl Formula="(a-b)^3=a^3-3a^2b+3ab^2-b^3" /><LineBreak/>
+                        <Run Text="Dla dowolnej liczby całkowitej dodatniej "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:n\:" />
+                        </InlineUIContainer><Run Text="oraz dowolnych liczb"/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:a\:" />
+                        </InlineUIContainer><Run Text=","/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:b\:" />
+                        </InlineUIContainer><Run Text="zachodzi wzór:"/><LineBreak/>
+                        <controls:FormulaControl Formula="a^n-b^n=(a-b)(a^{n-1}+a^{n-2}b+...+a^{n-k}b^{k-1}+...+ab^{n-2}+b^{n-1})" /><LineBreak/>W szczególności:<LineBreak/>
+                        <controls:FormulaControl Formula="a^2-b^2=(a-b)(a+b)" /><LineBreak/>
+                        <controls:FormulaControl Formula="a^3-b^3=(a-b)(a^2+ab+b^2)" /><LineBreak/>
+                        <controls:FormulaControl Formula="a^3+b^3=(a+b)(a^2-ab+b^2)" /><LineBreak/>
+                        <controls:FormulaControl Formula="a^2-1=(a-1)(a+1)" /><LineBreak/>
+                        <controls:FormulaControl Formula="a^3-1=(a-1)(a^2+a+1)" /><LineBreak/>
+                        <controls:FormulaControl Formula="a^3-1=(a+1)(a^2-a+1)" /><LineBreak/>
+                        <controls:FormulaControl Formula="a^n-1=(a-1)(a^{n-1}+a^{n-2}+...+a+1)" /><LineBreak/>
+                    </TextBlock>
                 </Grid>
             </Border>
 

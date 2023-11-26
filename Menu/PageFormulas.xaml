@@ -109,15 +109,14 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:x\:" />
-                        </InlineUIContainer><Run Text="definiujemy wzorem:"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\mid{x}\mid=\cases{x\;\mathrm{dla}\;x\geq0\cr-x\;\mathrm{dla}\;x\lt0 }" />
-                        </InlineUIContainer><LineBreak/><Run Text="Liczba"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:\mid{x}\mid\:" />
-                        </InlineUIContainer><Run Text="jest to odległość na osi liczbowej punktu "/>
-                            <controls:FormulaControl Formula="\:x\:" /> od punktu
-                        <controls:FormulaControl Formula="\:0" />.<LineBreak/></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                        W czasie matury z matematyki na obu poziomach możesz korzystać z tablic matematycznych przygotowanych przez CKE.
+                        Znajdziesz tam bardzo dużo wzorów i przydatnych informacji, które będą pomocne w czasie egzaminu, gdy stres spowoduje braki w pamięci. 
+                        Przejrzyj na spokojnie całe tablice, tak abyś w czasie egzaminu wiedział gdzie czego szukać. 
+                        Oszczędzi Ci to trochę stresu, którego na pewno i tak w tym czasie będziesz miał/a<!-- not gender inclusive --> pod dostatkiem. 
+                        Jeżeli zdajesz tylko poziom podstawowy to pamiętaj że nie cały tablice matematyczne Cię obowiązują. 
+                        Duża część z zawartości to poziom rozszerzony więc warto wiedzieć co będzie dla Ciebie "nieprzydatne" i od razu pomijać te strony w czasie egzaminu. 
+                        <!--Wzory których nie ma w tablicach maturalnych.Jest całkiem sporo przydatnych wzorów, których nie znajdziesz w tablicach maturalnych CKE. --></TextBlock>
                 </Grid>
             </Border>
 

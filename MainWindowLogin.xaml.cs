@@ -1,71 +1,112 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Reflection.PortableExecutable;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Abituria
 {
-    /// <summary>
-    /// Interaction logic for MainWindowLogin.xaml
-    /// </summary>
     public partial class MainWindowLogin : Window
     {
+        string UsersFilePath = @"users.txt";
+
         public MainWindowLogin()
         {
             InitializeComponent();
-            Login();
         }
-        class MyClass
+        private List<string> LoadUsersList(string filePath)
         {
-            public int Id { get; set; }
-            public string Name { get; set; }
-        }
-        private void Login()
-        {
-            string username = "";
-            string path = @"user.txt";
             List<string> usersList = new List<string>();
-            if (File.Exists(path))
+
+            try
             {
-                using StreamWriter reader = File.AppendText(path);
+                if (File.Exists(filePath))
+                {
+                    using (StreamReader reader = new StreamReader(filePath))
+                    {
+                        string user;
+                        while ((user = reader.ReadLine()) != null && usersList.Count < 10)
+                        {
+                            usersList.Add(user);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Plik użytkowników nie istnieje.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("The user file does not exist or cannot be found.");
-                comboBox1.ItemsSource = new List<string> { "TODO", "WIP"};
+                MessageBox.Show($"Wystąpił błąd podczas odczytu pliku użytkowników: {ex.Message}");
             }
+
+            comboBox1.ItemsSource = usersList;
+            return usersList;
         }
 
-        private static void CreateProfile()
-        {
-
-        }
         private void BtnAcntExists(object sender, RoutedEventArgs e)
         {
             btn1.Visibility = Visibility.Collapsed;
+            btn2.Visibility = Visibility.Collapsed;
+            btnConfirm.Visibility = Visibility.Visible;
             comboBox1.Visibility = Visibility.Visible;
+
+            LoadUsersList(UsersFilePath);
         }
 
+        private void LoginConfirm(object sender, RoutedEventArgs e)
+        {
+            string username = comboBox1.SelectedItem as string;
+            if (!string.IsNullOrEmpty(username))
+            {
+                MessageBox.Show(username);
+                Window currentWindow = Window.GetWindow(this);
+                currentWindow.Close();
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+            }
+            else
+            {
+                MessageBox.Show("Wybierz nazwę użytkownika!", "Brak wyboru");
+            }
+        }
         private void BtnCreateNew(object sender, RoutedEventArgs e)
         {
-
+            btn1.Visibility = Visibility.Collapsed;
+            btn2.Visibility = Visibility.Collapsed;
+            inputGB.Visibility = Visibility.Visible;
         }
 
-        private void Confirm(object sender, RoutedEventArgs e)
+        private void AddUser(object sender, RoutedEventArgs e)
         {
-            string eh = comboBox1.SelectedItem as string;
-            MessageBox.Show(eh);
+            string newUsername = nameInput.Text.Trim();
+            List<string> usersList = LoadUsersList(UsersFilePath);
+            bool isTaken = usersList.Contains(newUsername);
+            bool isValid = newUsername.Length <= 15 && !isTaken;
+
+            if (!isValid)
+            {
+                if (isTaken)
+                {
+                    MessageBox.Show("Taki użytkownik już istnieje! Wybierz inną nazwę użytkownika", "Nazwa zajęta");
+                }
+                else
+                {
+                    MessageBox.Show("Wybrana nazwa jest za długa!", "Nazwa zbyt długa");
+                }
+                return;
+            }
+
+            CreateProfile(newUsername, UsersFilePath);
+
+            void CreateProfile(string newUsername, string usersFile)
+            {
+                using (StreamWriter writer = File.AppendText(usersFile))
+                {
+                    writer.WriteLine(newUsername);
+                }
+            }
         }
     }
 }

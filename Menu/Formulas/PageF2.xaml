@@ -116,6 +116,24 @@
                         </InlineUIContainer><Run Text=" definiujemy jej"/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:n" />
                         </InlineUIContainer><Run Text="-tą potęgę:"/><LineBreak/>
+                                                <controls:FormulaControl Formula="a^n=a\cdot...\cdot{a}" /><LineBreak/>Pierwiastkiem arytmetycznym
+                        <controls:FormulaControl Formula="\sqrt[n]{a}\:"/> stopnia
+                        <controls:FormulaControl Formula="n\:"/>z liczby
+                        <controls:FormulaControl Formula="\:a\geq0\:"/>nazywamy liczbę
+                        <controls:FormulaControl Formula="\:b\geq0\:"/>taką, że
+                        <controls:FormulaControl Formula="b^n=a" />.<LineBreak/>W szczególności, dla dowolnej liczby
+                        <controls:FormulaControl Formula="a\:"/>zachodzi równość:
+                        <controls:FormulaControl Formula="\sqrt{a^2}=\mid{a}\mid\:" />.<LineBreak/>Jeżeli
+                        <controls:FormulaControl Formula="a\lt0\:"/>oraz liczba n jest nieparzysta, to
+                        <controls:FormulaControl Formula="\sqrt[n]{a}\:"/> oznacza liczbę
+                        <controls:FormulaControl Formula="\:b\lt0\:"/>taką, że
+                        <controls:FormulaControl Formula="b^n=a" />.<LineBreak/>Pierwiastki stopni parzystych z liczb ujemnych nie istnieją.<LineBreak/>Niech
+                        <controls:FormulaControl Formula="\:m,n\:"/>będą liczbami całkowitymi dodatnimi. Definiujemy:<LineBreak/>dla
+                        <controls:FormulaControl Formula="\:a\neq0\:"/>:
+                        <controls:FormulaControl Formula="\:a^{-n}=\frac1{a^n}\:"/>oraz
+                        <controls:FormulaControl Formula="\:a^0=1\:"/><LineBreak/>dla
+                        <controls:FormulaControl Formula="\:a\geq0\:"/>:
+                        <controls:FormulaControl Formula="\:a^{-n}=\frac1{a^n}\:"/>
                     </TextBlock>
                 </Grid>
             </Border>

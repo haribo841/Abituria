@@ -109,15 +109,26 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:x\:" />
-                        </InlineUIContainer><Run Text="definiujemy wzorem:"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\mid{x}\mid=\cases{x\;\mathrm{dla}\;x\geq0\cr-x\;\mathrm{dla}\;x\lt0 }" />
-                        </InlineUIContainer><LineBreak/><Run Text="Liczba"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:\mid{x}\mid\:" />
-                        </InlineUIContainer><Run Text="jest to odległość na osi liczbowej punktu "/>
-                            <controls:FormulaControl Formula="\:x\:" /> od punktu
-                        <controls:FormulaControl Formula="\:0" />.<LineBreak/></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Silnią liczby całkowitej dodatniej "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:n\:" />
+                        </InlineUIContainer><Run Text="nazywamy iloczyn kolejnych liczb całkowitych od"/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:1\:" />
+                        </InlineUIContainer><Run Text="do"/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:n\:" />
+                        </InlineUIContainer><Run Text="włącznie:"/><LineBreak/>
+                        <controls:FormulaControl Formula="n!=1\cdot{2}\cdot{...}\cdot{n}" /><LineBreak/>Ponadto przyjmujemy umowę, że
+                        <controls:FormulaControl Formula="0!=1"/>.<LineBreak/>Dla dowolnej liczby całkowitej
+                        <controls:FormulaControl Formula="n\geq0\:"/>zachodzi związek:<LineBreak/>
+                        <controls:FormulaControl Formula="(n+1)!=n!\cdot(n+1)"/><LineBreak/>Dla liczb całkowitych
+                        <controls:FormulaControl Formula="\:n,k\:" />spełniających warunki
+                        <controls:FormulaControl Formula="0\leq{k}\leq{n}" />definiujemy współczynnik dwumianowy
+                        <controls:FormulaControl Formula="\binom{n}{k}"/>(symbol Newtona):<LineBreak/>
+                        <controls:FormulaControl Formula="\binom{n}{k}=\frac{n!}{k!(n-k)!}" /><LineBreak/>Zachodzą równości:<LineBreak/>
+                        <controls:FormulaControl Formula="\binom{n}{k}=\frac{n!}{k!(n-k)!}"/><LineBreak/>
+                        <controls:FormulaControl Formula="\binom{n}{k}=\binom{n}{n-k}"/><LineBreak/>
+                        <controls:FormulaControl Formula="\binom{n}{0}=1"/><LineBreak/>
+                        <controls:FormulaControl Formula="\binom{n}{n}=1"/><LineBreak/>
+                    </TextBlock>
                 </Grid>
             </Border>
 

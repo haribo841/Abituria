@@ -109,15 +109,36 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:x\:" />
-                        </InlineUIContainer><Run Text="definiujemy wzorem:"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\mid{x}\mid=\cases{x\;\mathrm{dla}\;x\geq0\cr-x\;\mathrm{dla}\;x\lt0 }" />
-                        </InlineUIContainer><LineBreak/><Run Text="Liczba"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:\mid{x}\mid\:" />
-                        </InlineUIContainer><Run Text="jest to odległość na osi liczbowej punktu "/>
-                            <controls:FormulaControl Formula="\:x\:" /> od punktu
-                        <controls:FormulaControl Formula="\:0" />.<LineBreak/></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Logarytmem "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:\log_ac\:" />
+                        </InlineUIContainer><Run Text=" dodatniej liczby"/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:c\:" />
+                        </InlineUIContainer><Run Text=" przy dodatniej i różnej od "/><InlineUIContainer>
+                            <controls:FormulaControl Formula="\:1\:" />
+                        </InlineUIContainer><Run Text="podstawie"/>
+                        <controls:FormulaControl Formula="a" /> nazywamy wykładnik
+                        <controls:FormulaControl Formula="b"/> potęgi, do której należy podnieść
+                        <controls:FormulaControl Formula="a\:"/>, aby otrzymać
+                        <controls:FormulaControl Formula="\:c\:"/>:<LineBreak/>
+                        <controls:FormulaControl Formula="\:\log_ac=b\:" />wtedy i tylko wtedy, gdy
+                        <controls:FormulaControl Formula="a^b=c" /><LineBreak/>Równoważnie:<LineBreak/>
+                        <controls:FormulaControl Formula="a^{\log_ac}=c\:"/><LineBreak/>Dla dowolnych liczb
+                        <controls:FormulaControl Formula="x\gt0" />,
+                        <controls:FormulaControl Formula="y\gt0" />oraz
+                        <controls:FormulaControl Formula="r"/> zachodzą wzory:<LineBreak/>
+                        <controls:FormulaControl Formula="\:\log_a(x\cdot{y})=\log_ax+\log_ay"/><LineBreak/>
+                        <controls:FormulaControl Formula="\:\log_ax^r=r\cdot\log_ax" />.<LineBreak/>
+                        <controls:FormulaControl Formula="\:\log_a\frac{x}{y}=\log_ax-\log_ay"/><LineBreak/>Wzór na zamianę podstawy logarytmu:<LineBreak/>jeżeli
+                        <controls:FormulaControl Formula="\:a\gt0"/>,
+                        <controls:FormulaControl Formula="\:a\neq1"/>,
+                        <controls:FormulaControl Formula="\:b\gt0"/>,
+                        <controls:FormulaControl Formula="\:b\neq1\:"/>oraz
+                        <controls:FormulaControl Formula="\:c\gt0"/>, to<LineBreak/>
+                        <controls:FormulaControl Formula="\:\log_bc=\frac{\log_ac}{\log_ab}"/><LineBreak/>Logarytm
+                        <controls:FormulaControl Formula="\:\log_{10}x"/>można też zapisać jako
+                        <controls:FormulaControl Formula="\:\log{x}"/> lub
+                        <controls:FormulaControl Formula="\:\lg{x}"/>.
+                    </TextBlock>
                 </Grid>
             </Border>
 
