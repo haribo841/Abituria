@@ -108,19 +108,77 @@
                 </Grid>
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
-                <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:x\:" />
-                        </InlineUIContainer><Run Text="definiujemy wzorem:"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\mid{x}\mid=\cases{x\;\mathrm{dla}\;x\geq0\cr-x\;\mathrm{dla}\;x\lt0 }" />
-                        </InlineUIContainer><LineBreak/><Run Text="Liczba"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:\mid{x}\mid\:" />
-                        </InlineUIContainer><Run Text="jest to odległość na osi liczbowej punktu "/>
-                            <controls:FormulaControl Formula="\:x\:" /> od punktu
-                        <controls:FormulaControl Formula="\:0" />.<LineBreak/></TextBlock>
-                </Grid>
-            </Border>
+                <ScrollViewer>
+                    <Grid>
+                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                            <TextBlock FontSize="17" ><Bold>PLANIMETRIA</Bold></TextBlock><LineBreak/>
+                                <controls:FormulaControl Formula="\cdot" />
+                                <Run/><Underline>Cechy przystawania trójkątów</Underline><LineBreak/>
+                                <StackPanel Orientation="Horizontal">
+                                    <!--Image  Width="300" Height="200" Source="/img/w10a.png" Margin="0,10,20,10"/>
+                                    <Image  Width="300" Height="200" Source="/img/w10b.png" Margin="0,0,20,10"/-->
+                                </StackPanel><LineBreak/>
+                                <Run Text="To, że dwa trójkąty"/>
+                                <controls:FormulaControl Formula="\:ABC" /> i
+                                <controls:FormulaControl Formula="DEF"/> są przystające
+                                <controls:FormulaControl Formula="(\Delta{ABC}\equiv\Delta{DEF})"/>, możemy stwierdzić na podstawie każdej z następujących
+                                <Run FontWeight="Bold" FontSize="15" Text="cech przystawania trójkątów" />:<LineBreak/><LineBreak/>
+                            <InlineUIContainer><controls:FormulaControl Height="73" Formula="-" /></InlineUIContainer>
+                            <TextBlock FontSize="15" Margin="4" TextWrapping="WrapWithOverflow" Foreground="Black">cecha przystawania „bok – bok – bok”:<LineBreak/>odpowiadające sobie boki obu trójkątów mają te same długości:<LineBreak/>
+                                <controls:FormulaControl Formula="\mid{AB}\mid=\mid{DE}\mid , \;\mid{AC}\mid=\mid{DF}\mid , \;\mid{BC}\mid=\mid{EF}\mid" /><LineBreak/>
+                            </TextBlock><LineBreak/>
+                            <WrapPanel Orientation="Horizontal" ItemHeight="120">
+                            <controls:FormulaControl Height="102" Formula="-" />
+                            <TextBlock FontSize="15" Margin="4" TextWrapping="WrapWithOverflow" Foreground="Black">cecha przystawania „bok – kąt – bok”:<LineBreak/>dwa boki jednego trójkąta są równe odpowiadającym im bokom drugiego trójkąta oraz kąt zawarty między tymi bokami jednego trójkąta ma taką samą miarę jak odpowiadający mu kąt drugiego trójkąta, np.<LineBreak/>
+                            <controls:FormulaControl Formula="|AB|=|DE| , |AC|=|DF| , |BAC|=|EDF|"/></TextBlock>
+                            </WrapPanel><LineBreak/>
+                            <WrapPanel Orientation="Horizontal" ItemHeight="120">
+                            <controls:FormulaControl Height="102" Formula="-" />
+                            <TextBlock FontSize="15" Margin="4" TextWrapping="WrapWithOverflow" Foreground="Black">cecha przystawania „kąt – bok – kąt”:<LineBreak/>jeden bok jednego trójkąta ma tę samą długość, co odpowiadający mu bok drugiego trójkąta
+oraz miary odpowiadających sobie kątów obu trójkątów, przyległych do boku, są równe, np.<LineBreak/>
+                            <controls:FormulaControl Formula="|AB|=|DE| , |BAC|=|EDF| , |ABC|=|DEF|"/></TextBlock>
+                            </WrapPanel><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot" />
+                            <Underline>Cechy podobieństwa trójkątów</Underline><LineBreak/>
+                            <!--Image  Width="600" Height="200" Source="/img/w10c.png" Margin="0,0,20,10"/--><LineBreak/>
+                            To, że dwa trójkąty <controls:FormulaControl Formula="ABC"/> i <controls:FormulaControl Formula="DEF"/> są podobne <controls:FormulaControl Formula="( \Delta ABC \sim \Delta DEF )"/>
+                            , możemy stwierdzić na podstawie każdej z następujących <Run FontWeight="Bold" Text ="cech podobieństwa trójkątów" />:<LineBreak/>
+                            <controls:FormulaControl Formula="-" />
+                            cecha podobieństwa „bok – bok – bok”:<LineBreak/>długości boków jednego trójkąta są proporcjonalne do odpowiednich długości boków drugiego trójkąta, np.<LineBreak/>
+                            <controls:FormulaControl Formula="\frac{|AB|}{|DE|} = \frac{|AC|}{|DF|} = \frac{|BC|}{|EF|}"/><LineBreak/>
+                            <controls:FormulaControl Formula="-" />
+                            cecha podobieństwa „bok – kąt – bok”:<LineBreak/>długości dwóch boków jednego trójkąta są proporcjonalne do odpowiednich długości dwóch boków drugiego trójkąta i kąty między tymi parami boków są przystające, np.
+                            <controls:FormulaControl Formula="\frac{|AB|}{|DE|} = \frac{|AC|}{|DF|} , |BAC| = |EDF|"/><LineBreak/>
+                            <controls:FormulaControl Formula="-" />
+                            cecha podobieństwa „kąt – kąt – kąt”:<LineBreak/>dwa kąty jednego trójkąta są przystające do odpowiednich dwóch kątów drugiego trójkąta (więc też i trzecie kąty obu trójkątów są przystające):
+                            <controls:FormulaControl Formula="|BAC|=|EDF| , |ABC|=|DEF| , |ACB|=|DFE|"/><LineBreak/><LineBreak/>
+                            <Underline>Przyjmujemy oznaczenia w trójkącie ABC:</Underline><LineBreak/>
+                            <controls:FormulaControl Margin="0, 5, 0, 0" Formula="a, b, c"/> - długości boków, leżących odpowiednio naprzeciwko wierzchołków A, B, C<LineBreak/>
+                            <controls:FormulaControl Formula="2p=a+b+c "/> - obwód trójkąta<LineBreak/>
+                            <controls:FormulaControl Formula="\alpha , \beta , \gamma"/> - miary kątów przy wierzchołkach A, B, C<LineBreak/>
+                            <controls:FormulaControl Formula="h_a , h_b , h_c"/> - wysokości opuszczone z wierzchołków A, B, C<LineBreak/>
+                            <controls:FormulaControl Formula="R, r"/> - promienie okręgów opisanego i wpisanego<LineBreak/>
+                            <LineBreak/>
+                            <!--Image Width="430" Height="280" Source="/img/w10d.png" Margin="0,0,20,10"/--><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot" />
+                            <Underline>Twierdzenie sinusów</Underline><LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="\frac{a}{\sin \alpha} = \frac{b}{\sin \beta} = \frac{c}{\sin \gamma} = 2R"/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Twierdzenie cosinusów</Underline><LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="a^2 = b^2 + c^2 - 2bc \cos \alpha"/><LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="b^2 = a^2 + c^2 - 2ac \cos \beta"/><LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="c^2 = a^2 + b^2 - 2ab \cos \gamma"/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot" />
+                            <Underline>Wzory na pole trójkąta</Underline><LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="P_ \Delta _A_B_C = \frac{1}{2} \cdot a \cdot h_a = \frac{1}{2} \cdot b \cdot h_b = \frac{1}{2} \cdot c \cdot h_c"/><LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="P_ \Delta _A_B_C = \frac{1}{2} a \cdot b \cdot \sin \gamma = \frac{1}{2} a \cdot c \cdot \sin \beta = \frac{1}{2} b \cdot c \cdot \sin \alpha"/><LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="P_ \Delta _A_B_C = \frac{1}{2} a^2 \frac{\sin \beta \cdot \sin \gamma}{\sin \alpha} = \frac{1}{2} b^2 \frac{\sin \alpha \cdot \sin \gamma}{\sin \beta} = \frac{1}{2} c^2 \frac{\sin \alpha \cdot \sin \beta}{\sin \gamma}"/><LineBreak/>
 
+
+                        </TextBlock>
+                    </Grid>
+                </ScrollViewer>
+            </Border>
         </DockPanel>
     </Grid>
 </Page>

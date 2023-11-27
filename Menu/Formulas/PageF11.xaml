@@ -109,15 +109,23 @@
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:x\:" />
-                        </InlineUIContainer><Run Text="definiujemy wzorem:"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\mid{x}\mid=\cases{x\;\mathrm{dla}\;x\geq0\cr-x\;\mathrm{dla}\;x\lt0 }" />
-                        </InlineUIContainer><LineBreak/><Run Text="Liczba"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:\mid{x}\mid\:" />
-                        </InlineUIContainer><Run Text="jest to odległość na osi liczbowej punktu "/>
-                            <controls:FormulaControl Formula="\:x\:" /> od punktu
-                        <controls:FormulaControl Formula="\:0" />.<LineBreak/></TextBlock>
+                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                            <TextBlock FontSize="17" ><Bold>STEREOMETRIA</Bold></TextBlock><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Twierdzenie o trzech prostych prostopadłych</Underline><LineBreak/>
+                            <!--Image  Width="440" Height="210" Source="/img/w11a.png" Margin="0,10,20,10"/--><LineBreak/>
+                            Prosta <controls:FormulaControl Margin="-4" Formula="\: k \:"/> przebija płaszczyznę w punkcie <controls:FormulaControl Margin="-4" Formula="\: P \:"/>. Prosta <controls:FormulaControl Margin="-4" Formula="\: l \:"/> jest rzutem prostokątnym prostej <controls:FormulaControl Margin="-4" Formula="\: k \:"/> na tę płaszczyznę.
+Prosta <controls:FormulaControl Margin="-4" Formula="\: m \:"/> leży na tej płaszczyźnie i przechodzi przez punkt <controls:FormulaControl Margin="-4" Formula="\: P \:"/>.
+Wówczas prosta <controls:FormulaControl Margin="-4" Formula="\: m \:"/> jest prostopadła do prostej <controls:FormulaControl Margin="-4" Formula="\: k \:"/> wtedy i tylko wtedy, gdy jest prostopadła do prostej <controls:FormulaControl Margin="-4" Formula="\: l \:"/>.<LineBreak/><LineBreak/>
+                            <Underline>Przyjmujemy oznaczenia:</Underline><LineBreak/>
+                            <controls:FormulaControl Margin="0,-4,0,-5" Formula="\: P \:"/> – pole powierzchni całkowitej <LineBreak/>
+                            <controls:FormulaControl Margin="0,-4,0,-10" Formula="\: P_p \:"/> – pole podstawy <LineBreak/>
+                            <controls:FormulaControl Margin="0,-4,0,-15"  Formula="\: P_b \:"/> – pole powierzchni bocznej<LineBreak/>
+                            <controls:FormulaControl Margin="0,-4,0,-20"  Formula="\: V \:"/> – objętość<LineBreak/>
+
+
+                            <LineBreak/>
+                        </TextBlock>
                 </Grid>
             </Border>
 

@@ -108,30 +108,124 @@
                 </Grid>
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
-                <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Odcinek"/><LineBreak/><InlineUIContainer>
-                        </InlineUIContainer><Run Text="Długość odcinka o końcach w punktach"/><LineBreak/><InlineUIContainer>
-                            <controls:FormulaControl Formula="A=(x_A, y_A),B=(x_B,y_B)" />
-                        </InlineUIContainer><Run Text=" jest dana wzorem:"/><LineBreak/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:\mid{AB}\mid=\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}" />
-                        </InlineUIContainer><LineBreak/><Run Text="Współrzędne środka odcinka"/>
-                        <controls:FormulaControl Formula="\:AB" />:<LineBreak/>
-                        <controls:FormulaControl Formula="\left(\frac{x_A+x_B}2,\frac{y_A+y_B}2\right)\:" /><LineBreak/>
-                        <Run Text="Wektory"/><LineBreak/><InlineUIContainer>
-                        </InlineUIContainer><Run Text="Współrzędne wektora"/><InlineUIContainer>
-                            <controls:FormulaControl Formula="\:\vec{AB}" />
-                        </InlineUIContainer>:<LineBreak/>
-                        <controls:FormulaControl Formula="\:\vec{AB}=[x_B-x_A,y_B-y_A]" /><LineBreak/>Jeżeli
-                        <controls:FormulaControl Formula="\:\vec{u}=[u_1,u_2]" />,
-                        <controls:FormulaControl Formula="\:\vec{v}=[v_1,v_2]" />są wektorami, zaś
-                        <controls:FormulaControl Formula="\:a" /> jest liczbą, to<LineBreak/>
-                        <controls:FormulaControl Formula="\:\vec{u}+\vec{v}=[u_1+v_1,u_2+v_2]" /><LineBreak/>
-                        <controls:FormulaControl Formula="\:a\cdot\vec{u}=[a\cdot{u_1},a\cdot{u_2}]" /><LineBreak/>
-                        <Run Text="Prosta"/><LineBreak/><InlineUIContainer>
-                        </InlineUIContainer><Run Text="Równanie ogólne prostej:"/><LineBreak/><!--dalej nie widze-->
-                </TextBlock>
-                <!--Image  Width="300" Height="200" Source="/img/w9a.png" Margin="278,138,10,10" /-->
-            </Border>
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid>
+                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                            <TextBlock FontSize="17" ><Bold>GEOMETRIA ANALITYCZNA</Bold></TextBlock><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot" />
+                            <Run/><Underline>Odcinek</Underline><LineBreak/><InlineUIContainer>
+                            </InlineUIContainer><Run Text="Długość odcinka o końcach w punktach"/><LineBreak/><InlineUIContainer>
+                                <controls:FormulaControl Formula="A=(x_A, y_A),B=(x_B,y_B)" />
+                            </InlineUIContainer><Run Text=" jest dana wzorem:"/><LineBreak/><InlineUIContainer>
+                                <controls:FormulaControl Formula="\:\mid{AB}\mid=\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}" />
+                            </InlineUIContainer><LineBreak/><Run Text="Współrzędne środka odcinka"/>
+                            <controls:FormulaControl Formula="\:AB" />:<LineBreak/>
+                            <controls:FormulaControl Formula="\left(\frac{x_A+x_B}2,\frac{y_A+y_B}2\right)\:" /><LineBreak/>
+                            <!--Image  Width="300" Height="200" Source="/img/w9a.png" Margin="0,20,20,10"/--><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot" />
+                            <Run/><Underline>Wektory</Underline><LineBreak/><InlineUIContainer>
+                            </InlineUIContainer><Run Text="Współrzędne wektora"/><InlineUIContainer>
+                                <controls:FormulaControl Formula="\:\overline{AB}" />
+                            </InlineUIContainer>:<LineBreak/>
+                            <controls:FormulaControl Formula="\:\overline{AB}=[x_B-x_A,y_B-y_A]" /><LineBreak/>Jeżeli
+                            <controls:FormulaControl Formula="\:\vec{u}=[u_1,u_2]" />,
+                            <controls:FormulaControl Formula="\:\vec{v}=[v_1,v_2]" />są wektorami, zaś
+                            <controls:FormulaControl Formula="\:a" /> jest liczbą, to<LineBreak/>
+                            <controls:FormulaControl Formula="\:\vec{u}+\vec{v}=[u_1+v_1,u_2+v_2]" /><LineBreak/>
+                            <controls:FormulaControl Formula="\:a\cdot\vec{u}=[a\cdot{u_1},a\cdot{u_2}]" /><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot" />
+                            <Run/><Underline>Prosta</Underline><LineBreak/><InlineUIContainer>
+                            </InlineUIContainer><Run Text="Równanie ogólne prostej:"/><LineBreak/>
+                            <controls:FormulaControl Formula="Ax+By+C=0" />,<LineBreak/> gdzie
+                            <controls:FormulaControl Formula="\:A^2+B^2\neq0" /> (tj. współczynniki
+                            <controls:FormulaControl Formula="A" />,
+                            <controls:FormulaControl Formula="B" /> nie są równocześnie równe
+                            <controls:FormulaControl Formula="0" />).<LineBreak/>Jeżeli
+                            <controls:FormulaControl Formula="A=0" />, to prosta jest równoległa do osi
+                            <controls:FormulaControl Formula="\:Ox" />; jeżeli
+                            <controls:FormulaControl Formula="\:B=0" />, to prosta jest równoległa do osi
+                            <controls:FormulaControl Formula="\:Oy" />:<LineBreak/>jeżeli
+                            <controls:FormulaControl Formula="\:C=0" />, to prosta przechodzi przez początek układu współrzędnych.<LineBreak/>Jeżeli prosta nie jest równoległa do osi
+                            <controls:FormulaControl Formula="\:Oy" />, to ma ona równanie kierunkowe:<LineBreak/>
+                            <controls:FormulaControl Formula="\:y=ax+b" />,<LineBreak/>Liczba
+                            <controls:FormulaControl Formula="\:a" /> to współczynnik kierunkowy prostej:<LineBreak/>
+                            <controls:FormulaControl Formula="\:a=\tg\alpha" /><LineBreak/>Współczynnik
+                            <controls:FormulaControl Formula="\:b" /> wyznacza na osi
+                            <controls:FormulaControl Formula="\:Oy" /> punkt, w którym dana prosta ją przecina.<LineBreak/>
+                            <!--Image  Width="300" Height="200" Source="/img/w9b.png" Margin="0,20,20,10"/--><LineBreak/>
+                            Równanie kierunkowe prostej o współczynniku kierunkowym
+                            <controls:FormulaControl Formula="\:a" />, która przechodzi przez punkt
+                            <controls:FormulaControl Formula="P=(x_0, y_0)" />:<LineBreak/>
+                            <controls:FormulaControl Formula="y=a(x-x_0)+y_0" /><LineBreak/>Równanie prostej, która przechodzi przez dwa dane punkty
+                            <controls:FormulaControl Formula="A=(x_A, y_A),B=(x_B,y_B)" />:<LineBreak/>
+                            <controls:FormulaControl Formula="(y-y_A)(x_B-x_A)-(y_B-y_A)(x-x_A)=0" /><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot" />
+                            <Run/><Underline>Prosta i punkt</Underline><LineBreak/><InlineUIContainer>
+                            </InlineUIContainer><Run Text="Odległość punktu"/><LineBreak/>
+                            <controls:FormulaControl Formula="P=(x_0, y_0)" />od prostej o równaniu
+                            <controls:FormulaControl Formula="Ax+By+C=0" /> jest dana wzorem:<LineBreak/>
+                            <controls:FormulaControl Formula="\frac{Ax_0+By_0+C=0}{\sqrt{A^2+B^2}}" /><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot" />
+                            <Run/><Underline>Para prostych</Underline><LineBreak/><InlineUIContainer>
+                            </InlineUIContainer><Run Text="Dwie proste o równaniach kierunkowych"/><LineBreak/>
+                            <controls:FormulaControl Formula="\:y=a_1x+b_1" /><LineBreak/>
+                            <controls:FormulaControl Formula="\:y=a_2x+b_2" /><LineBreak/>spełniają jeden z następujących warunków:<LineBreak/>
+                            <controls:FormulaControl Formula="-" /> są równoległe, gdy
+                            <controls:FormulaControl Formula="\:A_1B_2-A_2B_1=0" /><LineBreak/>
+                            <controls:FormulaControl Formula="-" /> są prostopadłe, gdy
+                            <controls:FormulaControl Formula="\:A_1B_2+A_2B_1=0" /><LineBreak/>
+                            <controls:FormulaControl Formula="-" /> tworzą kąt ostry
+                            <controls:FormulaControl Formula="\:\phi" /> i
+                            <controls:FormulaControl Formula="\:\tg\phi=\mid{\frac{A_1B_2-A_2B_1}{A_1A_2+B_1B_2}}\mid" /><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot" />
+                            <Run/><Underline>Trójkąt</Underline><LineBreak/><InlineUIContainer>
+                            </InlineUIContainer><Run Text="Pole trójkąta"/><LineBreak/>
+                            <controls:FormulaControl Formula="ABC" /> o wierzchołkach
+                            <controls:FormulaControl Formula="A=(x_A, y_A),B=(x_B,y_B),C=(x_C,y_C)" />, jest dane wzorem:<LineBreak/>
+                            <controls:FormulaControl Formula="\:P_{\Delta{ABC}}=\frac{1}{2}\mid{(x_B-x_A)(y_C-y_A)-(y_B-y_A)(x_C-x_A)}\mid" /><LineBreak/>Środek ciężkości trójkąta
+                            <controls:FormulaControl Formula="ABC" />, czyli punkt przecięcia jego środkowych, ma współrzędne:<LineBreak/>
+                            <controls:FormulaControl Formula="\:(\frac{x_A+x_B+x_C}{3},\frac{y_A+y_B+y_C}{3})" /><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot" />
+                            <Run/><Underline>Przekształcenia geometryczne</Underline><LineBreak/>
+                            <controls:FormulaControl Formula="-" /><InlineUIContainer>
+                            </InlineUIContainer><Run Text="przesunięcie o wektor"/><LineBreak/>
+                            <controls:FormulaControl Formula="\:\vec{u}=[a,b]" /> przekształca punkt
+                            <controls:FormulaControl Formula="\:A=(x,y)" /> na punkt
+                            <controls:FormulaControl Formula="\:A'=(x+a,y+b)" /><LineBreak/>
+                            <controls:FormulaControl Formula="-" /> symetria względem osi
+                            <controls:FormulaControl Formula="\:Ox" /> przekształca punkt
+                            <controls:FormulaControl Formula="\:A=(x,y)" />na punkt
+                            <controls:FormulaControl Formula="\:A'=(x,-y)"/><LineBreak/>
+                            <controls:FormulaControl Formula="-" /> symetria względem osi
+                            <controls:FormulaControl Formula="\:Oy" /> przekształca punkt
+                            <controls:FormulaControl Formula="\:A=(x,y)" />na punkt
+                            <controls:FormulaControl Formula="\:A'=(-x,y)"/><LineBreak/>
+                            <controls:FormulaControl Formula="-" /> symetria względem punktu
+                            <controls:FormulaControl Formula="\:(a,b)" /> przekształca punkt
+                            <controls:FormulaControl Formula="\:A=(x,y)" />na punkt
+                            <controls:FormulaControl Formula="\:A'=(2a-x,2b-y)"/><LineBreak/>
+                            <controls:FormulaControl Formula="-" /> jednokładność o środku w punkcie
+                            <controls:FormulaControl Formula="\:O" /> i skali
+                            <controls:FormulaControl Formula="\:s\neq0" />przekształca punkt
+                            <controls:FormulaControl Formula="\:A"/>  na punkt
+                            <controls:FormulaControl Formula="\:A'"/> taki, że
+                            <controls:FormulaControl Formula="\:\overline{OA'}=s\cdot{\overline{OA}}"/>, a więc, jeśli
+                            <controls:FormulaControl Formula="\:O=(x_0,y_0)" />, to jednokładność ta przekształca punkt
+                            <controls:FormulaControl Formula="\:A=(x,y)" /> na punkt
+                            <controls:FormulaControl Formula="\:A'=(sx+(1-s)x_0,sy+(1-s)y_0)" /><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot" />
+                            <Run/><InlineUIContainer>
+                            </InlineUIContainer><Run/><Underline>Równanie okręgu o środku w punkcie</Underline><LineBreak/>
+                            <controls:FormulaControl Formula="\:S=(a,b)" />i promieniu
+                            <controls:FormulaControl Formula="\:r\gt0" />:<LineBreak/>
+                            <controls:FormulaControl Formula="\:(x-a)^2+(y-b)^2=r^2" /><LineBreak/>lub
+                            <controls:FormulaControl Formula="\:x^2+y^2-2ax-2by+c=0" /> gdy
+                            <controls:FormulaControl Formula="\:r^2=a^2+b^2-c\gt0" />
+                        </TextBlock>
 
+                    </Grid>
+                </ScrollViewer>
+            </Border>
         </DockPanel>
     </Grid>
 </Page>
