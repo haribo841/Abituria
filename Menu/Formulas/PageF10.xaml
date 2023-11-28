@@ -173,8 +173,163 @@ oraz miary odpowiadających sobie kątów obu trójkątów, przyległych do boku
                             <controls:FormulaControl Margin="5" Formula="P_ \Delta _A_B_C = \frac{1}{2} \cdot a \cdot h_a = \frac{1}{2} \cdot b \cdot h_b = \frac{1}{2} \cdot c \cdot h_c"/><LineBreak/>
                             <controls:FormulaControl Margin="5" Formula="P_ \Delta _A_B_C = \frac{1}{2} a \cdot b \cdot \sin \gamma = \frac{1}{2} a \cdot c \cdot \sin \beta = \frac{1}{2} b \cdot c \cdot \sin \alpha"/><LineBreak/>
                             <controls:FormulaControl Margin="5" Formula="P_ \Delta _A_B_C = \frac{1}{2} a^2 \frac{\sin \beta \cdot \sin \gamma}{\sin \alpha} = \frac{1}{2} b^2 \frac{\sin \alpha \cdot \sin \gamma}{\sin \beta} = \frac{1}{2} c^2 \frac{\sin \alpha \cdot \sin \beta}{\sin \gamma}"/><LineBreak/>
-
-
+<StackPanel Orientation="Horizontal">
+                                <controls:FormulaControl Margin="5" Formula="P_ \Delta _A_B_C = \frac{abc}{4R}"/>
+                                <controls:FormulaControl Margin="100,15,0,0" Formula="P_ \Delta _A_B_C = 2R^2 \cdot \sin \alpha \cdot \sin \beta \cdot \sin \gamma"/>
+                            </StackPanel><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <controls:FormulaControl Margin="5,8,0,0" Formula="P_ \Delta _A_B_C = rp"/>
+                                <controls:FormulaControl Margin="110,0,0,0" Formula="P_ \Delta _A_B_C = \sqrt[]{p(p - a)(p - b)(p - c)}"/>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Twierdzenie Pitagorasa </Underline> (wraz z twierdzeniem odwrotnym do niego)<LineBreak/>
+                            W trójkącie <controls:FormulaControl Formula="ABC"/> kąt <controls:FormulaControl Formula="\gamma"/> jest prosty wtedy i tylko wtedy, gdy <controls:FormulaControl Formula="a^2 + b^2 = c^2."/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Związki miarowe w trójkącie prostokątnym</Underline><LineBreak/>
+                            <!--Image Width="420" Height="240" Source="/img/w10e.png"/--><LineBreak/>
+                            Załóżmy, że kąt <controls:FormulaControl Formula="\gamma"/> jest prosty. Wówczas:<LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="h_c^2 = |AD| \cdot |DB|"/><LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="h_c = \frac{ab}{c}"/><LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="a = c \cdot \sin \alpha = c \cdot \cos \beta"/><LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="a = b \cdot \tg \alpha = b \cdot \frac{1}{\tg \beta}"/><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <controls:FormulaControl Margin="5,0,0,0" Formula="R = \frac{1}{2}c"/>
+                                <controls:FormulaControl Margin="100,0,0,0" Formula="r = \frac{a + b - c}{2} = p - c"/>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Trójkąt równoboczny</Underline><LineBreak/>
+                            <!--Image Width="270" Height="250" Source="/img/w10f.png"/--><LineBreak/>
+                            <controls:FormulaControl Formula="a"/> - długość boku<LineBreak/>
+                            <controls:FormulaControl Formula="h"/> - wysokość trójkąta<LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <controls:FormulaControl Margin="5,5,0,0" Formula="h = \frac{a \sqrt{3}}{2}"/>
+                                <controls:FormulaControl Margin="100,5,0,0" Formula="R = \frac{2}{3}h"/>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <controls:FormulaControl Margin="5,0,0,0" Formula="P_\Delta = \frac{a^2 \sqrt{3}}{4}"/>
+                                <controls:FormulaControl Margin="80,0,0,0" Formula="r = \frac{1}{3}h"/>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Twierdzenie Talesa</Underline> (wraz z twierdzeniem odwrotnym do niego)<LineBreak/>
+                            Różne proste <controls:FormulaControl Margin="0,5,0,0" Formula="AC"/> i <controls:FormulaControl Margin="0,5,0,0" Formula="BD"/> przecinają się w punkcie <controls:FormulaControl Margin="0,5,0,0" Formula="P"/>, przy czym spełniony jest jeden z warunków:<LineBreak/>
+                            <controls:FormulaControl Formula="-" />
+                            punkt <controls:FormulaControl Margin="0,5,0,0" Formula="A"/> leży wewnątrz odcinka <controls:FormulaControl Margin="0,5,0,0" Formula="PC"/> oraz punkt <controls:FormulaControl Margin="0,5,0,0" Formula="B"/> leży wewnątrz odcinka <controls:FormulaControl Margin="0,5,0,0" Formula="PD"/> <LineBreak/><LineBreak/> lub <LineBreak/>
+                            <controls:FormulaControl Formula="-" />
+                            punkt <controls:FormulaControl Margin="0,5,0,0" Formula="A"/> leży na zewnątrz odcinka <controls:FormulaControl Margin="0,5,0,0" Formula="PC"/> oraz punkt <controls:FormulaControl Margin="0,5,0,0" Formula="B"/> leży na zewnątrz odcinka <controls:FormulaControl Margin="0,5,0,0" Formula="PD"/><LineBreak/>
+                            Wówczas proste <controls:FormulaControl Margin="0,5,0,0" Formula="AB"/> i <controls:FormulaControl Margin="0,5,0,0" Formula="CD"/> są równoległe wtedy i tylko wtedy, gdy <LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="\frac{|PA|}{|AC|} = \frac{|PB|}{|BD|}"/><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                            <!--Image Width="370" Height="260" Source="/img/w10g.png"/-->
+                            <!--Image Width="590" Height="340" Source="/img/w10h.png"/-->
+                            </StackPanel><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Czworokąty</Underline><LineBreak/><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <!--Image Width="380" Height="190" Source="/img/w10i.png"/-->
+                                <TextBlock Margin="70" TextWrapping="WrapWithOverflow">
+                                    <Bold>Trapez</Bold><LineBreak/>
+                                    Czworokąt, który ma co najmniej jedną parę boków równoległych. <LineBreak/> Wzór na pole trapezu:<LineBreak/>
+                                    <controls:FormulaControl Formula="\frac{a + b}{2} \cdot h"/>
+                                </TextBlock>
+                            </StackPanel><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <!--Image Width="440" Height="200" Source="/img/w10j.png"/-->
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
+                                    <Bold>Równoległobok</Bold><LineBreak/>
+                                    Czworokąt, który ma dwie pary boków równoległych. <LineBreak/> Wzory na pole równoległoboku:<LineBreak/>
+                                    <controls:FormulaControl Formula="P = ah = a \cdot b \cdot \sin \alpha = \frac{1}{2} \cdot |AC| \cdot |BD| \cdot \sin \varphi"/>
+                                </TextBlock>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <!--Image Width="380" Height="230" Source="/img/w10k.png"/-->
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
+                                    <Bold>Romb</Bold><LineBreak/>
+                                    Czworokąt, który ma wszystkie boki jednakowej długości.<LineBreak/>Wzory na pole rombu:<LineBreak/>
+                                    <controls:FormulaControl Formula="P = ah = a^2 \cdot \sin \alpha = \frac{1}{2} \cdot |AC| \cdot |BD|"/>
+                                </TextBlock>
+                            </StackPanel><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <!--Image Width="380" Height="230" Source="/img/w10l.png"/-->
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
+                                    <Bold>Deltoid</Bold><LineBreak/>
+                                    Czworokąt wypukły, który ma oś symetrii zawierającą jedną z przekątnych.<LineBreak/>Wzór na pole deltoidu:<LineBreak/>
+                                    <controls:FormulaControl Formula="P = \frac{1}{2} \cdot |AC| \cdot |BD|"/>
+                                </TextBlock>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin="10">
+                                    <controls:FormulaControl Formula="\cdot"/>
+                                    <Underline>Koło</Underline><LineBreak/><LineBreak/>
+                                </TextBlock>
+                                <!--Image Width="230" Height="230" Source="/img/w10m.png"/-->
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
+                                    Wzór na pole koła o promieniu <controls:FormulaControl Margin="0,10,0,0" Formula="r"/>:<LineBreak/>
+                                    <controls:FormulaControl Margin="70,10,0,0" Formula="P = \pi r^2"/><LineBreak/><LineBreak/><LineBreak/><LineBreak/>
+                                    Obwód koła o promieniu r:<LineBreak/>
+                                    <controls:FormulaControl Margin="60,10,0,0" Formula="L = 2\pi r"/>
+                                </TextBlock>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
+                                    <controls:FormulaControl Formula="\cdot"/>
+                                    <Underline>Wycinek koła</Underline><LineBreak/><LineBreak/>
+                                </TextBlock>
+                                <!--Image Width="250" Height="251" Source="/img/w10n.png"/-->
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
+                                    Wzór na pole wycinka koła o promieniu <controls:FormulaControl Margin="0,10,0,0" Formula="r"/> i kącie środkowym <controls:FormulaControl Margin="0,10,0,0" Formula="\alpha"/> wyrażonym w stopniach:<LineBreak/>
+                                    <controls:FormulaControl Margin="70,10,0,0" Formula="P = \pi r^2 \cdot \frac{\alpha}{360 ^\circ}"/><LineBreak/><LineBreak/><LineBreak/><LineBreak/>
+                                    Długość łuku <controls:FormulaControl Formula="AB"/> wycinka koła o promieniu <controls:FormulaControl Formula="r"/> i kącie środkowym <controls:FormulaControl Formula="\alpha"/> wyrażonym w stopniach:<LineBreak/>
+                                    <controls:FormulaControl Margin="60,10,0,0" Formula="l = 2\pi r \cdot \frac{\alpha}{360^ \circ}"/>
+                                </TextBlock>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin="10">
+                                    <controls:FormulaControl Formula="\cdot"/>
+                                    <Underline>Kąty w okręgu</Underline><LineBreak/><LineBreak/>
+                                </TextBlock>
+                                <!--Image Width="250" Height="251" Source="/img/w10o.png"/-->
+                                <TextBlock Margin="10,80,0,0" TextWrapping="WrapWithOverflow">
+                                    Miara kąta wpisanego w okrąg jest równa połowie miary kąta środkowego, opartego na tym samym łuku.<LineBreak/><LineBreak/>
+                                    Miary kątów wpisanych w okrąg, opartych na tym samym łuku, są równe.<LineBreak/><LineBreak/>
+                                    Miary kątów wpisanych w okrąg, opartych na łukach równych, są równe.<LineBreak/><LineBreak/>
+                                </TextBlock>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Twierdzenie o kącie między styczną i cięciwą</Underline><LineBreak/><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <!--Image Width="440" Height="340" Source="/img/w10p.png"/-->
+                                <!--Image Width="420" Height="355" Source="/img/w10r.png"/-->
+                            </StackPanel><LineBreak/>
+                            Dany jest okrąg o środku w punkcie <controls:FormulaControl Margin="-4" Formula="\: O \:"/> i jego cięciwa <controls:FormulaControl Margin="-4" Formula="\: AB \:"/>. Prosta <controls:FormulaControl Margin="-4" Formula="\: AC \:"/> jest styczna do tego okręgu w punkcie <controls:FormulaControl Margin="-4" Formula="\: A \:"/>.<LineBreak/>
+                            Wtedy <controls:FormulaControl Margin="-8" Formula="\: |AOB| = 2 \cdot |CAB| \: \:"/>, przy czym wybieramy ten z kątów środkowych <controls:FormulaControl Margin="-4" Formula="\: AOB \:"/>, który jest oparty na łuku znajdującym się wewnątrz kąta <controls:FormulaControl Margin="-4" Formula="\: CAB \:"/>.<LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Twierdzenie o odcinkach stycznych</Underline><LineBreak/>
+                            Jeżeli styczne do okręgu w punktach <controls:FormulaControl Margin="-4" Formula="\: A \:"/> i <controls:FormulaControl Margin="-4" Formula="\: B \:"/> przecinają się w punkcie <controls:FormulaControl Margin="-4" Formula="\: P \:"/>, to<LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="|PA| = |PB|"/><LineBreak/>
+                            <!--Image Width="540" Height="370" Source="/img/w10s.png"/--><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Twierdzenie o odcinkach siecznej i stycznej</Underline><LineBreak/>
+                            Dane są: prosta przecinająca okrąg w punktach <controls:FormulaControl Margin="-4" Formula="\: A \:"/> i <controls:FormulaControl Margin="-4" Formula="\: B \:"/> oraz prosta styczna do tego okręgu w punkcie <controls:FormulaControl Margin="-4" Formula="\: C \:"/>. Jeżeli proste te przecinają się w punkcie <controls:FormulaControl Margin="-4" Formula="\: P \:"/>, to<LineBreak/>
+                            <controls:FormulaControl Margin="5" Formula="|PA| \cdot |PB| = |PC|^2"/><LineBreak/>
+                            <!--Image Width="620" Height="370" Source="/img/w10t.png"/--><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Okrąg opisany na czworokącie</Underline><LineBreak/><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <!--Image Width="380" Height="380" Source="/img/w10u.png"/-->
+                                <TextBlock Margin="10,80,0,0" TextWrapping="WrapWithOverflow">
+                                    Na czworokącie można opisać okrąg wtedy i tylko wtedy, gdy sumy miar jego przeciwległych kątów wewnętrznych są równe <controls:FormulaControl Margin="-4" Formula="\: 180^ \circ \:"/>:<LineBreak/>
+                                    <controls:FormulaControl Margin="5" Formula="\: \alpha + \gamma = \beta + \delta = 180^ \circ \:"/>
+                                </TextBlock>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Okrąg wpisany w czworokąt</Underline><LineBreak/><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <!--Image Width="460" Height="350" Source="/img/w10w.png"/-->
+                                <TextBlock Margin="10,80,0,0" TextWrapping="WrapWithOverflow">
+                                    W czworokąt wypukły można wpisać okrąg wtedy i tylko wtedy, gdy sumy długości jego przeciwległych boków są równe:<LineBreak/>
+                                    <controls:FormulaControl Margin="5" Formula="\: a + c = b + d \:"/>
+                                </TextBlock>
+                            </StackPanel><LineBreak/>
                         </TextBlock>
                     </Grid>
                 </ScrollViewer>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Abituria.viewmodel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows;
@@ -13,6 +14,7 @@ namespace Abituria
         public MainWindowLogin()
         {
             InitializeComponent();
+            this.DataContext = new WindowViewModel(this);
         }
         private List<string> LoadUsersList(string filePath)
         {

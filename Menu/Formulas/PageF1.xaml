@@ -108,8 +108,9 @@
                 </Grid>
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
-                <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
+                <ScrollViewer>
+                    <Grid>
+                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:x\:" />
                         </InlineUIContainer><Run Text="definiujemy wzorem:"></Run><LineBreak/><InlineUIContainer>
                             <controls:FormulaControl Formula="\mid{x}\mid=\cases{x\;\mathrm{dla}\;x\geq0\cr-x\;\mathrm{dla}\;x\lt0 }" />
@@ -133,10 +134,10 @@
                         <controls:FormulaControl Formula="\:a-r{\leq}x{\leq}a+r\:"/><LineBreak/>
                         <controls:FormulaControl Formula="\mid{x-a}\mid{\geq}r\:" /> wtedy i tylko wtedy, gdy
                         <controls:FormulaControl Formula="\:x{\leq}a-r"/> lub <controls:FormulaControl Formula="\:x{\geq}a+r"/><LineBreak/>
-                    </TextBlock>
-                </Grid>
+                        </TextBlock>
+                    </Grid>
+                </ScrollViewer>
             </Border>
-
         </DockPanel>
     </Grid>
 </Page>
