@@ -8,7 +8,6 @@
       d:DesignHeight="450" d:DesignWidth="800"
      Title="GeometriaAnalityczna"
       xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath">
-
     <Grid>
         <DockPanel Margin="5">
             <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
@@ -25,93 +24,37 @@
                         <RowDefinition Height="35*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Column="2" Grid.Row="0" Margin="5" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center" VerticalAlignment="Top">
-<Button Background="Transparent" BorderThickness="0" Content="Abituria" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Abituria" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
                     </TextBlock>
                     <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-<Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonCalculator"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonKalkulator"/>
                     </TextBlock>
                     <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-<Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonMatura"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonMatura"/>
                     </TextBlock>
                     <TextBlock Grid.Column="2" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-<Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonChapters"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonDzialy"/>
                     </TextBlock>
                     <TextBlock Grid.Column="3" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-<Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonExercises"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonZadania"/>
                     </TextBlock>
                     <TextBlock TextWrapping="Wrap" Grid.Column="4" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button Background="Transparent" BorderThickness="0" Content="Tablice matematyczne" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonFormulas"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Tablice matematyczne" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonWzory"/>
                     </TextBlock>
                     <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
                 </Grid>
             </Border>
-
             <Border Width="200" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Left">
                 <Grid>
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Margin="5" FontWeight="Bold" Foreground="Black">Zadanie:</TextBlock>
-                    <ComboBox HorizontalAlignment="Center" Margin="35" VerticalAlignment="Top" Width="120">
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Wartość Bezwzględna" ToolTip="Wartość Bezwzględna Liczby" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F1"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Potęgi i pierwiastki" ToolTip=" Potęgi i pierwiastki" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F2"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Logarytmy" ToolTip="Logarytmy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F3"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Silnia" ToolTip="Silnia. Współczynnik dwumianowy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F4"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Dwumian Newtona" ToolTip="Wzór dwumianowy Newtona" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F5"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Wzory skróconego mnożenia" ToolTip="Wzory skróconego mnożenia" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F6"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Ciągi" ToolTip="Ciągi" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F7"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Funkcja kwadratowa" ToolTip="Funkcja kwadratowa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F8"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Geometria" ToolTip="Geometria analityczna" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F9"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Planimetria" ToolTip=" Planimetria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F10"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Stereometria" ToolTip="Stereometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F11"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Trygonometria" ToolTip="Trygonometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F12"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Kombinatoryka" ToolTip="Kombinatoryka" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F13"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Prawdopodobieństwo" ToolTip="Rachunek prawdopodobieństwa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F14"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Statystyka" ToolTip="Parametry danych statystycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F15"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Granice" ToolTip="Granica ciągu" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F16"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Pochodne" ToolTip="Pochodna funkcji" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F17"/>
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Tablice Trygonometyczne" ToolTip="Tablica wartości funkcji trygonometrycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F18"/>
-                        </ComboBoxItem>
-                    </ComboBox>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Margin="5" FontWeight="Bold" Foreground="Black">Rozdział:</TextBlock>
+                    <ComboBox x:Name="cbChapters" SelectionChanged="ChangePage" HorizontalAlignment="Center" Margin="35" VerticalAlignment="Top" Width="120"/>
                 </Grid>
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <Grid>
                         <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
-                            <TextBlock FontSize="17" ><Bold>GEOMETRIA ANALITYCZNA</Bold></TextBlock><LineBreak/>
+                            <TextBlock FontSize="17" ><Bold>GEOMETRIA ANALITYCZNA</Bold></TextBlock><LineBreak/><LineBreak/>
                             <controls:FormulaControl Formula="\cdot" />
                             <Run/><Underline>Odcinek</Underline><LineBreak/><InlineUIContainer>
                             </InlineUIContainer><Run Text="Długość odcinka o końcach w punktach"/><LineBreak/><InlineUIContainer>
@@ -121,7 +64,7 @@
                             </InlineUIContainer><LineBreak/><Run Text="Współrzędne środka odcinka"/>
                             <controls:FormulaControl Formula="\:AB" />:<LineBreak/>
                             <controls:FormulaControl Formula="\left(\frac{x_A+x_B}2,\frac{y_A+y_B}2\right)\:" /><LineBreak/>
-                            <!--Image  Width="300" Height="200" Source="/img/w9a.png" Margin="0,20,20,10"/--><LineBreak/><LineBreak/>
+                            <Image  Width="300" Height="200" Source="/img/w9a.png" Margin="0,20,20,10"/><LineBreak/><LineBreak/>
                             <controls:FormulaControl Formula="\cdot" />
                             <Run/><Underline>Wektory</Underline><LineBreak/><InlineUIContainer>
                             </InlineUIContainer><Run Text="Współrzędne wektora"/><InlineUIContainer>
@@ -152,7 +95,7 @@
                             <controls:FormulaControl Formula="\:a=\tg\alpha" /><LineBreak/>Współczynnik
                             <controls:FormulaControl Formula="\:b" /> wyznacza na osi
                             <controls:FormulaControl Formula="\:Oy" /> punkt, w którym dana prosta ją przecina.<LineBreak/>
-                            <!--Image  Width="300" Height="200" Source="/img/w9b.png" Margin="0,20,20,10"/--><LineBreak/>
+                            <Image  Width="300" Height="200" Source="/img/w9b.png" Margin="0,20,20,10"/><LineBreak/>
                             Równanie kierunkowe prostej o współczynniku kierunkowym
                             <controls:FormulaControl Formula="\:a" />, która przechodzi przez punkt
                             <controls:FormulaControl Formula="P=(x_0, y_0)" />:<LineBreak/>

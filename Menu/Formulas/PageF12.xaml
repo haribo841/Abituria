@@ -8,7 +8,6 @@
       d:DesignHeight="450" d:DesignWidth="800"
        Title="Trygonometria"
       xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath">
-
     <Grid>
         <DockPanel Margin="5">
             <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
@@ -25,96 +24,96 @@
                         <RowDefinition Height="35*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Column="2" Grid.Row="0" Margin="5" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center" VerticalAlignment="Top">
-<Button Background="Transparent" BorderThickness="0" Content="Abituria" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Abituria" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
                     </TextBlock>
                     <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-<Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonCalculator"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonKalkulator"/>
                     </TextBlock>
                     <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-<Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonMatura"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonMatura"/>
                     </TextBlock>
                     <TextBlock Grid.Column="2" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-<Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonChapters"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonDzialy"/>
                     </TextBlock>
                     <TextBlock Grid.Column="3" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-<Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonExercises"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonZadania"/>
                     </TextBlock>
                     <TextBlock TextWrapping="Wrap" Grid.Column="4" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button Background="Transparent" BorderThickness="0" Content="Tablice matematyczne" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonFormulas"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Tablice matematyczne" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonWzory"/>
                     </TextBlock>
                     <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
                 </Grid>
             </Border>
-
             <Border Width="200" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Left">
                 <Grid>
                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Margin="5" FontWeight="Bold" Foreground="Black">Zadanie:</TextBlock>
                     <ComboBox HorizontalAlignment="Center" Margin="35" VerticalAlignment="Top" Width="120">
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Wartość Bezwzględna" ToolTip="Wartość Bezwzględna Liczby" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F1"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Wartość Bezwzględna" ToolTip="Wartość Bezwzględna Liczby" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W1"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Potęgi i pierwiastki" ToolTip=" Potęgi i pierwiastki" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F2"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Potęgi i pierwiastki" ToolTip=" Potęgi i pierwiastki" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W2"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Logarytmy" ToolTip="Logarytmy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F3"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Logarytmy" ToolTip="Logarytmy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W3"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Silnia" ToolTip="Silnia. Współczynnik dwumianowy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F4"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Silnia" ToolTip="Silnia. Współczynnik dwumianowy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W4"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Dwumian Newtona" ToolTip="Wzór dwumianowy Newtona" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F5"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Dwumian Newtona" ToolTip="Wzór dwumianowy Newtona" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W5"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Wzory skróconego mnożenia" ToolTip="Wzory skróconego mnożenia" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F6"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Wzory skróconego mnożenia" ToolTip="Wzory skróconego mnożenia" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W6"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Ciągi" ToolTip="Ciągi" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F7"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Ciągi" ToolTip="Ciągi" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W7"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Funkcja kwadratowa" ToolTip="Funkcja kwadratowa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F8"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Funkcja kwadratowa" ToolTip="Funkcja kwadratowa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W8"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Geometria" ToolTip="Geometria analityczna" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F9"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Geometria" ToolTip="Geometria analityczna" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W9"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Planimetria" ToolTip=" Planimetria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F10"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Planimetria" ToolTip=" Planimetria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W10"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Stereometria" ToolTip="Stereometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F11"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Stereometria" ToolTip="Stereometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W11"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Trygonometria" ToolTip="Trygonometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F12"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Trygonometria" ToolTip="Trygonometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W12"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Kombinatoryka" ToolTip="Kombinatoryka" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F13"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Kombinatoryka" ToolTip="Kombinatoryka" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W13"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Prawdopodobieństwo" ToolTip="Rachunek prawdopodobieństwa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F14"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Prawdopodobieństwo" ToolTip="Rachunek prawdopodobieństwa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W14"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Statystyka" ToolTip="Parametry danych statystycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F15"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Statystyka" ToolTip="Parametry danych statystycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W15"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Granice" ToolTip="Granica ciągu" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F16"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Granice" ToolTip="Granica ciągu" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W16"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Pochodne" ToolTip="Pochodna funkcji" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F17"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Pochodne" ToolTip="Pochodna funkcji" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W17"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Tablice Trygonometyczne" ToolTip="Tablica wartości funkcji trygonometrycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F18"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Tablice Trygonometyczne" ToolTip="Tablica wartości funkcji trygonometrycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W18"/>
                         </ComboBoxItem>
                     </ComboBox>
                 </Grid>
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
-                <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
-                            <TextBlock FontSize="17" ><Bold>TRYGONOMETRIA</Bold></TextBlock><LineBreak/><LineBreak/>
+                <ScrollViewer>
+                    <Grid>
+                        <TextBlock FontSize="17" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                            <TextBlock FontSize="18" ><Bold>TRYGONOMETRIA</Bold></TextBlock><LineBreak/><LineBreak/>
                             <controls:FormulaControl Formula="\cdot"/>
                             <Underline>Definicje funkcji trygonometrycznych kąta ostrego w trójkącie prostokątnym</Underline><LineBreak/>
                             <StackPanel Orientation="Horizontal">
-                                <!--Image Width="360" Height="240" Source="/img/w12a.png"/-->
+                                <!--Image Width="360" Height="240" Margin="0,0,0,20" Source="/img/w12a.png"/-->
                                 <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
                                     <LineBreak/><LineBreak/>
                                     <controls:FormulaControl Margin="100,0,90,0" Formula="\sin \alpha = \frac{a}{c}"/><controls:FormulaControl Formula="\sin \beta = \frac{b}{c}"/><LineBreak/><LineBreak/>
@@ -123,28 +122,125 @@
                                 </TextBlock>
                             </StackPanel><LineBreak/><LineBreak/>
                             <controls:FormulaControl Formula="\cdot"/>
-                            <Underline>Definicje funkcji trygonometrycznych</Underline><LineBreak/>
+                            <Underline>Definicje funkcji trygonometrycznych</Underline><LineBreak/><LineBreak/>
                             <StackPanel Orientation="Horizontal">
-                                <!--Image Width="420" Height="300" Source="/img/w12b.png"/-->
+                                <!--Image Width="420" Height="300" Margin="0,0,0,50" Source="/img/w12b.png"/-->
                                 <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
-                                    <LineBreak/>
+                                    <LineBreak/><LineBreak/>
                                     <controls:FormulaControl Formula="\sin \alpha = \frac{y}{r}"/><LineBreak/><LineBreak/>
                                     <controls:FormulaControl Formula="\cos \alpha = \frac{x}{r}"/><LineBreak/><LineBreak/>
-                                    <controls:FormulaControl Formula="\tg \alpha = \frac{y}{x}"/>, gdy x ≠ 0<LineBreak/><LineBreak/>
-                                    gdzie <controls:FormulaControl Formula="r = \sqrt{x^2 + y^2} > 0"/> jest promieniem wodzącym punktu <controls:FormulaControl Formula="M"/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="\tg \alpha = \frac{y}{x}, \: gdy \: x \neq 0"/><LineBreak/><LineBreak/>
+                                    gdzie <controls:FormulaControl Margin="-4" Formula="\: r = \sqrt{x^2 + y^2} > 0\: "/> jest promieniem wodzącym punktu <controls:FormulaControl Margin="-4" Formula="\: M"/><LineBreak/><LineBreak/>
                                 </TextBlock>
                             </StackPanel><LineBreak/><LineBreak/>
-
-
-
-
-
-
-
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Wykresy funkcji trygonometrycznych</Underline><LineBreak/><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel>
+                                    <TextBlock TextWrapping="WrapWithOverflow">
+                                        <!--Image Width="420" Source="/img/w12c.png"/-->
+                                        <LineBreak/><controls:FormulaControl Margin="150,10,0,0" Formula="y = \sin x"/><LineBreak/><LineBreak/><LineBreak/>
+                                        <!--Image Width="420" Source="/img/w12d.png"/-->
+                                        <LineBreak/><controls:FormulaControl Margin="150,10,0,0" Formula="y = \cos x"/><LineBreak/><LineBreak/><LineBreak/>
+                                    </TextBlock>
+                                </StackPanel>
+                                    <TextBlock TextWrapping="WrapWithOverflow" Margin="40">
+                                        <!--Image Width="400" Source="/img/w12e.png"/-->
+                                        <LineBreak/><controls:FormulaControl Margin="170,10,0,0" Formula="y = \tg x"/><LineBreak/><LineBreak/><LineBreak/>
+                                    </TextBlock>
+                            </StackPanel><LineBreak/>                    
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Związki między funkcjami tego samego kąta</Underline><LineBreak/>
+                            <StackPanel>
+                                    <controls:FormulaControl Margin="10" Formula="\sin ^2 \alpha + \cos ^2 \alpha = 1"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <controls:FormulaControl Margin="10" Formula="\tg \alpha = \frac{\sin \alpha}{\cos \alpha}"/>
+                                    <TextBlock Margin="18" TextWrapping="WrapWithOverflow"> dla </TextBlock>
+                                    <controls:FormulaControl Margin="10" Formula="\: \alpha \neq \frac{\pi}{2} + k \pi ,  \: k "/>
+                                    <TextBlock Margin="0,18,0,0" TextWrapping="WrapWithOverflow"> - całkowite </TextBlock>
+                                </StackPanel>      
+                            </StackPanel><LineBreak/><LineBreak/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Niektóre wartości funkcji trygonometrycznych</Underline><LineBreak/><LineBreak/>
+                            <!--Image Width="500" Source="/img/w12f.png"/--><LineBreak/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Funkcje sumy i różnicy kątów</Underline><LineBreak/>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontSize="17" Margin="7">Dla dowolnych kątów <controls:FormulaControl Margin="-5" Formula="\: \alpha , \beta \:"/> zachodzą równości:<LineBreak/></TextBlock>
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <controls:FormulaControl Margin="90,-15,100,0" Formula="\sin (\alpha + \beta ) = \sin \alpha \cos \beta + \cos \alpha \sin \beta"/>
+                                    <controls:FormulaControl Margin="0,-15,0,0" Formula="\sin (\alpha - \beta ) = \sin \alpha \cos \beta - \cos \alpha \sin \beta"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <controls:FormulaControl Margin="90,0,100,0" Formula="\cos (\alpha + \beta ) = \cos \alpha \cos \beta - \sin \alpha \sin \beta"/>
+                                    <controls:FormulaControl Margin="0,0,0,0" Formula="\cos (\alpha - \beta ) = \cos \alpha \cos \beta + \sin \alpha \sin \beta"/>
+                                </StackPanel>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontSize="17" Margin="7"><LineBreak/>Ponadto mamy równości:</TextBlock><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                    <controls:FormulaControl Margin="90,0,100,0" Formula="\tg (\alpha + \beta ) = \frac{\tg \alpha + \tg \beta}{1 - \tg \alpha \cdot \tg \beta}"/>
+                                    <controls:FormulaControl Margin="0,0,0,0" Formula="\tg (\alpha - \beta ) = \frac{\tg \alpha - \tg \beta}{1 + \tg \alpha \cdot \tg \beta}"/>
+                            </StackPanel><LineBreak/>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontSize="17" Margin="7">które zachodzą zawsze, gdy są określone i mianownik prawej strony nie jest zerem.</TextBlock><LineBreak/><LineBreak/><LineBreak/>                            
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Funkcje podwojonego kąta</Underline><LineBreak/>
+                            <StackPanel>
+                                <controls:FormulaControl Margin="7" Formula="\sin 2 \alpha = 2 \sin \alpha \cos \alpha"/>
+                                <controls:FormulaControl Margin="7" Formula="\cos 2 \alpha = \cos ^2 a - \sin ^2 \alpha = 2 \cos ^2 \alpha - 1 = 1 - 2 \sin ^2 \alpha"/>
+                                <controls:FormulaControl Margin="7" Formula="\tg 2 \alpha = \frac{2 \tg \alpha}{1 - \tg ^2 \alpha}"/>
+                            </StackPanel><LineBreak/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Sumy, różnice i iloczyny funkcji trygonometrycznych</Underline><LineBreak/>
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <controls:FormulaControl Margin="90,10,0,0" Formula="\sin \alpha + \sin \beta = 2\sin \frac{\alpha + \beta}{2} \cos \frac{\alpha - \beta}{2}"/>
+                                    <controls:FormulaControl Margin="90,10,0,0" Formula="\sin \alpha \sin \beta = - \frac{1}{2} ( \cos ( \alpha + \beta ) - \cos ( \alpha - \beta ))"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <controls:FormulaControl Margin="90,10,0,0" Formula="\sin \alpha - \sin \beta = 2\cos \frac{\alpha + \beta}{2} \sin \frac{\alpha - \beta}{2}"/>
+                                    <controls:FormulaControl Margin="90,10,0,0" Formula="\cos \alpha \cos \beta = \frac{1}{2} ( \cos ( \alpha + \beta ) + \cos ( \alpha - \beta ))"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <controls:FormulaControl Margin="90,10,0,0" Formula="\cos \alpha + \cos \beta = 2\cos \frac{\alpha + \beta}{2} \cos \frac{\alpha - \beta}{2}"/>
+                                    <controls:FormulaControl Margin="80,10,0,0" Formula="\sin \alpha \cos \beta = \frac{1}{2} ( \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ))"/>
+                                </StackPanel>
+                                <controls:FormulaControl Margin="90,10,0,0" Formula="\cos \alpha - \cos \beta = - 2\sin \frac{\alpha + \beta}{2} \sin \frac{\alpha - \beta}{2}"/>
+                            </StackPanel><LineBreak/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Wybrane wzory redukcyjne</Underline><LineBreak/>
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <controls:FormulaControl Margin="90,10,0,0" Formula="\sin (90^ \circ - \alpha ) = \cos \alpha"/>
+                                    <controls:FormulaControl Margin="97,10,0,0" Formula="\cos (90^ \circ - \alpha ) = \sin \alpha"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <controls:FormulaControl Margin="90,10,0,0" Formula="\sin (90^ \circ + \alpha ) = \cos \alpha"/>
+                                    <controls:FormulaControl Margin="97,10,0,0" Formula="\cos (90^ \circ + \alpha ) = -\sin \alpha"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <controls:FormulaControl Margin="90,10,0,0" Formula="\sin (180^ \circ - \alpha ) = \sin \alpha"/>
+                                    <controls:FormulaControl Margin="90,10,0,0" Formula="\cos (180^ \circ - \alpha ) = -\cos \alpha"/>
+                                    <controls:FormulaControl Margin="90,10,0,0" Formula="\tg (180^ \circ - \alpha ) = -\tg \alpha"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <controls:FormulaControl Margin="90,10,0,0" Formula="\sin (180^ \circ + \alpha ) = -\sin \alpha"/>
+                                    <controls:FormulaControl Margin="72,10,0,0" Formula="\cos (180^ \circ + \alpha ) = -\cos \alpha"/>
+                                    <controls:FormulaControl Margin="90,10,0,0" Formula="\tg (180^ \circ + \alpha ) = \tg \alpha"/>
+                                </StackPanel>
+                            </StackPanel><LineBreak/><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Okresowość funkcji trygonometrycznych</Underline><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <controls:FormulaControl Margin="10,10,0,0" Formula="\sin (\alpha + k \cdot 360^ \circ ) = \sin \alpha"/>
+                                <controls:FormulaControl Margin="50,10,0,0" Formula="\cos (\alpha + k \cdot 360^ \circ ) = \cos \alpha"/>
+                                <controls:FormulaControl Margin="50,10,0,0" Formula="\tg (\alpha + k \cdot 180^ \circ ) = \tg \alpha"/>
+                                <controls:FormulaControl Margin="50,10,0,0" Formula="k"/>
+                                <TextBlock TextWrapping="WrapWithOverflow" FontSize="17" Margin="10" Text="– całkowite" />
+                            </StackPanel>
                         </TextBlock>
-                </Grid>
+                    </Grid>
+                </ScrollViewer>
             </Border>
-
         </DockPanel>
     </Grid>
 </Page>

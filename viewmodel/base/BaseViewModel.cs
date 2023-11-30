@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Abituria.datamodels
+namespace Abituria.viewmodel.base
 {
-    public enum ApplicationPage///Strona aplikacji
+    class BaseViewModel
     {
-        Login = 0,///Początkowa strona logowania
     }
 }

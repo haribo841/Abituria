@@ -4,6 +4,14 @@
              xmlns:local="clr-namespace:Abituria"
              StartupUri="MainWindowLogin.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--Kolejjność jest istotna-->
+                <ResourceDictionary Source="styles/Colors.xaml"/>
+                <!--ResourceDictionary Source="styles/Fonts.xaml"/-->
+                <ResourceDictionary Source="styles/Buttons.xaml"/>
+                <ResourceDictionary Source="styles/Texts.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -111,7 +111,7 @@
                 <ScrollViewer>
                     <Grid>
                         <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
-                            <TextBlock FontSize="17" ><Bold>PLANIMETRIA</Bold></TextBlock><LineBreak/>
+                            <TextBlock FontSize="17" ><Bold>PLANIMETRIA</Bold></TextBlock><LineBreak/><LineBreak/>
                                 <controls:FormulaControl Formula="\cdot" />
                                 <Run/><Underline>Cechy przystawania trójkątów</Underline><LineBreak/>
                                 <StackPanel Orientation="Horizontal">

@@ -89,7 +89,8 @@
                                         </Border.Background>
                                     </Border>
                                     <Border Grid.Row="2" Padding="{Binding InnerContentPadding}">
-                                        <!--Cień belki-->
+                                        <!--Zawartość strony-->
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
                                     </Border>
                                 </Grid>
                             </Grid>
@@ -109,5 +110,6 @@
     </WindowChrome.WindowChrome>
     <Grid Background="{StaticResource BackgroundLightBrush}">
         <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
+        <Button Content="WIP"/>
     </Grid>
 </Window>

@@ -149,5 +149,9 @@ namespace Abituria
             PageF18 pageF18 = new PageF18();
             NavigationService.Navigate(pageF18);
         }
+        private void ComboBox_DropDownClosed(object sender, EventArgs e)
+        {
+
+        }
     }
 }

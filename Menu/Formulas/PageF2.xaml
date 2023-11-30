@@ -8,7 +8,6 @@
       d:DesignHeight="450" d:DesignWidth="800"
        Title="PotęgiPierwiastki."
       xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath">
-
     <Grid>
         <DockPanel Margin="5">
             <Border Height="90" Background="LightGray" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
@@ -25,98 +24,100 @@
                         <RowDefinition Height="35*"/>
                     </Grid.RowDefinitions>
                     <TextBlock Grid.Column="2" Grid.Row="0" Margin="5" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center" VerticalAlignment="Top">
-<Button Background="Transparent" BorderThickness="0" Content="Abituria" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Abituria" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
                     </TextBlock>
                     <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-<Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonCalculator"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonKalkulator"/>
                     </TextBlock>
                     <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-<Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonMatura"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonMatura"/>
                     </TextBlock>
                     <TextBlock Grid.Column="2" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-<Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonChapters"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonDzialy"/>
                     </TextBlock>
                     <TextBlock Grid.Column="3" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-<Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonExercises"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonZadania"/>
                     </TextBlock>
                     <TextBlock TextWrapping="Wrap" Grid.Column="4" Grid.Row="1" Margin="5" FontSize="15" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button Background="Transparent" BorderThickness="0" Content="Tablice matematyczne" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonFormulas"/>
+                        <Button Background="Transparent" BorderThickness="0" Content="Tablice matematyczne" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto" Click="ButtonWzory"/>
                     </TextBlock>
                     <Rectangle  Grid.Row="0" HorizontalAlignment="Stretch" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Fill="Black" Height="1"/>
                 </Grid>
             </Border>
-
             <Border Width="200" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Left">
                 <Grid>
                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Margin="5" FontWeight="Bold" Foreground="Black">Zadanie:</TextBlock>
                     <ComboBox HorizontalAlignment="Center" Margin="35" VerticalAlignment="Top" Width="120">
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Wartość Bezwzględna" ToolTip="Wartość Bezwzględna Liczby" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F1"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Wartość Bezwzględna" ToolTip="Wartość Bezwzględna Liczby" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W1"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Potęgi i pierwiastki" ToolTip=" Potęgi i pierwiastki" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F2"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Potęgi i pierwiastki" ToolTip=" Potęgi i pierwiastki" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W2"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Logarytmy" ToolTip="Logarytmy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F3"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Logarytmy" ToolTip="Logarytmy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W3"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Silnia" ToolTip="Silnia. Współczynnik dwumianowy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F4"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Silnia" ToolTip="Silnia. Współczynnik dwumianowy" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W4"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Dwumian Newtona" ToolTip="Wzór dwumianowy Newtona" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F5"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Dwumian Newtona" ToolTip="Wzór dwumianowy Newtona" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W5"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Wzory skróconego mnożenia" ToolTip="Wzory skróconego mnożenia" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F6"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Wzory skróconego mnożenia" ToolTip="Wzory skróconego mnożenia" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W6"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Ciągi" ToolTip="Ciągi" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F7"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Ciągi" ToolTip="Ciągi" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W7"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Funkcja kwadratowa" ToolTip="Funkcja kwadratowa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F8"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Funkcja kwadratowa" ToolTip="Funkcja kwadratowa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W8"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Geometria" ToolTip="Geometria analityczna" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F9"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Geometria" ToolTip="Geometria analityczna" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W9"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Planimetria" ToolTip=" Planimetria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F10"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content=" Planimetria" ToolTip=" Planimetria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W10"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Stereometria" ToolTip="Stereometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F11"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Stereometria" ToolTip="Stereometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W11"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Trygonometria" ToolTip="Trygonometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F12"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Trygonometria" ToolTip="Trygonometria" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W12"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Kombinatoryka" ToolTip="Kombinatoryka" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F13"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Kombinatoryka" ToolTip="Kombinatoryka" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W13"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Prawdopodobieństwo" ToolTip="Rachunek prawdopodobieństwa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F14"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Prawdopodobieństwo" ToolTip="Rachunek prawdopodobieństwa" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W14"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Statystyka" ToolTip="Parametry danych statystycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F15"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Statystyka" ToolTip="Parametry danych statystycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W15"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Granice" ToolTip="Granica ciągu" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F16"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Granice" ToolTip="Granica ciągu" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W16"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Pochodne" ToolTip="Pochodna funkcji" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F17"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Pochodne" ToolTip="Pochodna funkcji" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W17"/>
                         </ComboBoxItem>
                         <ComboBoxItem>
-                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Tablice Trygonometyczne" ToolTip="Tablica wartości funkcji trygonometrycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="F18"/>
+                            <Button Background="Transparent" BorderThickness="0" Width ="108" Grid.Row="2" Content="Trygonometria" ToolTip="Tablica wartości funkcji trygonometrycznych" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" Click="W18"/>
                         </ComboBoxItem>
                     </ComboBox>
                 </Grid>
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
-                <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Niech "/><InlineUIContainer>
+                <ScrollViewer>
+                    <Grid>
+                        <TextBlock FontSize="15" TextWrapping="WrapWithOverflow" Foreground="Black">
+                        <TextBlock FontSize="17" Margin="10"><Bold>POTĘGI I PIERWIASTKI</Bold></TextBlock><LineBreak/>
+                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Niech "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:n\:" />
                         </InlineUIContainer><Run Text=" będzie liczbą całkowitą dodatnią. Dla dowolnej liczby"/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:a\:" />
                         </InlineUIContainer><Run Text=" definiujemy jej"/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:n" />
                         </InlineUIContainer><Run Text="-tą potęgę:"/><LineBreak/>
-                                                <controls:FormulaControl Formula="a^n=a\cdot...\cdot{a}" /><LineBreak/>Pierwiastkiem arytmetycznym
+                        <controls:FormulaControl Formula="a^n=a\cdot...\cdot{a}" /><LineBreak/>Pierwiastkiem arytmetycznym
                         <controls:FormulaControl Formula="\sqrt[n]{a}\:"/> stopnia
                         <controls:FormulaControl Formula="n\:"/>z liczby
                         <controls:FormulaControl Formula="\:a\geq0\:"/>nazywamy liczbę
@@ -128,16 +129,35 @@
                         <controls:FormulaControl Formula="\sqrt[n]{a}\:"/> oznacza liczbę
                         <controls:FormulaControl Formula="\:b\lt0\:"/>taką, że
                         <controls:FormulaControl Formula="b^n=a" />.<LineBreak/>Pierwiastki stopni parzystych z liczb ujemnych nie istnieją.<LineBreak/>Niech
-                        <controls:FormulaControl Formula="\:m,n\:"/>będą liczbami całkowitymi dodatnimi. Definiujemy:<LineBreak/>dla
+                        <controls:FormulaControl Formula="\:m,n\:"/>będą liczbami całkowitymi dodatnimi. Definiujemy:<LineBreak/>
+                        <controls:FormulaControl Formula="-"/> dla
                         <controls:FormulaControl Formula="\:a\neq0\:"/>:
                         <controls:FormulaControl Formula="\:a^{-n}=\frac1{a^n}\:"/>oraz
-                        <controls:FormulaControl Formula="\:a^0=1\:"/><LineBreak/>dla
+                        <controls:FormulaControl Formula="\:a^0=1\:"/><LineBreak/>
+                        <controls:FormulaControl Formula="-"/> dla
                         <controls:FormulaControl Formula="\:a\geq0\:"/>:
-                        <controls:FormulaControl Formula="\:a^{-n}=\frac1{a^n}\:"/>
-                    </TextBlock>
-                </Grid>
+                        <controls:FormulaControl Formula="\:a^{\frac{m}n}=\sqrt[n]{a^m}"/><LineBreak/>
+                        <controls:FormulaControl Formula="-"/> dla
+                        <controls:FormulaControl Formula="\:a\gt0\:"/>:<LineBreak/>
+                        <controls:FormulaControl Formula="\:a^{-\frac{m}n}={\frac{1}{\sqrt[n]{a^m}}}"/><LineBreak/>Niech
+                        <controls:FormulaControl Formula="\:r" />,
+                        <controls:FormulaControl Formula="\:s\:" />będą dowolnymi liczbami rzeczywistymi. Jeśli
+                        <controls:FormulaControl Formula="\:a\gt0\:"/> i
+                        <controls:FormulaControl Formula="\:b\gt0\:"/>, to zachodzą równości:<LineBreak/>
+                        <controls:FormulaControl Formula="\:a^r\cdot{a^s}=a^{r+s}"/><LineBreak/>
+                        <controls:FormulaControl Formula="\:(a^r)^s=a^{r\cdot{s}}"/><LineBreak/>
+                        <controls:FormulaControl Formula="\:\frac{a^r}{a^s}=a^{r-s}"/><LineBreak/>
+                        <controls:FormulaControl Formula="\:({a}\cdot{b})^r=a^r\cdot{b^r}"/><LineBreak/>
+                        <controls:FormulaControl Formula="\:(\frac{a}{b})^r=\frac{a^r}{b^r}"/><LineBreak/>Jeżeli wykładniki
+                        <controls:FormulaControl Formula="\:r" />,
+                        <controls:FormulaControl Formula="\:s\:" />są liczbami całkowitymi, to powyższe wzory obowiązują dla wszystkich liczb
+                        <controls:FormulaControl Formula="\:a\neq0\:"/> i
+                        <controls:FormulaControl Formula="\:b\neq0\:"/>.<LineBreak/>
+                        </TextBlock>
+                        </TextBlock>
+                    </Grid>
+                </ScrollViewer>
             </Border>
-
         </DockPanel>
     </Grid>
 </Page>

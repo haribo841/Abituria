@@ -122,8 +122,73 @@ Wówczas prosta <controls:FormulaControl Margin="-4" Formula="\: m \:"/> jest pr
                             <controls:FormulaControl Margin="0,-4,0,-10" Formula="\: P_p \:"/> – pole podstawy <LineBreak/>
                             <controls:FormulaControl Margin="0,-4,0,-15"  Formula="\: P_b \:"/> – pole powierzchni bocznej<LineBreak/>
                             <controls:FormulaControl Margin="0,-4,0,-20"  Formula="\: V \:"/> – objętość<LineBreak/>
-
-
+<controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Prostopadłościan</Underline><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <!--Image Width="420" Height="300" Source="/img/w11b.png"/-->
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
+                                    <LineBreak/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="P = 2(ab + bc + ac)"/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="V = abc"/><LineBreak/><LineBreak/>
+                                    gdzie <controls:FormulaControl Formula="a, b, c"/> są długościami krawędzi prostopadłościanu
+                                </TextBlock>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Graniastosłup prosty</Underline><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <!--Image Width="420" Height="300" Source="/img/w11c.png"/-->
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
+                                    <LineBreak/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="P_b = 2p \cdot h"/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="V = P_p \cdot h"/><LineBreak/><LineBreak/>
+                                    gdzie <controls:FormulaControl Formula="2p"/> jest obwodem podstawy graniastosłupa
+                                </TextBlock>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Ostrosłup</Underline><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <!--Image Width="420" Height="300" Source="/img/w11d.png"/-->
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
+                                    <LineBreak/><LineBreak/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="V = \frac{1}{3} P_p \cdot h"/><LineBreak/><LineBreak/>
+                                    gdzie <controls:FormulaControl Formula="h"/> jest wysokością ostrosłupa
+                                </TextBlock>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Walec</Underline><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <!--Image Width="420" Height="300" Source="/img/w11e.png"/-->
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
+                                    <LineBreak/><LineBreak/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="P_b = 2 \pi rh"/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="P = 2 \pi r(r + h)"/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="V = \pi r^2h"/><LineBreak/><LineBreak/>
+                                    gdzie <controls:FormulaControl Formula="r"/> jest promieniem podstawy, <controls:FormulaControl Formula="h"/> – wysokością walca
+                                </TextBlock>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Stożek</Underline><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <!--Image Width="420" Height="300" Source="/img/w11f.png"/-->
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
+                                    <LineBreak/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="P_b = \pi rl"/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="P = \pi r(r + l)"/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="V = \frac{1}{3} \pi r^2h"/><LineBreak/><LineBreak/>
+                                    gdzie <controls:FormulaControl Formula="r"/> jest promieniem podstawy, <controls:FormulaControl Formula="h"/> – wysokością, <controls:FormulaControl Formula="l"/> – długością tworzącej stożka
+                                </TextBlock>
+                            </StackPanel><LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
+                            <Underline>Kula</Underline><LineBreak/>
+                            <StackPanel Orientation="Horizontal">
+                                <!--Image Width="260" Height="250" Margin="70,0,90,0" Source="/img/w11g.png"/-->
+                                <TextBlock Margin="10" TextWrapping="WrapWithOverflow">
+                                    <LineBreak/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="P = 4 \pi r^2"/><LineBreak/><LineBreak/>
+                                    <controls:FormulaControl Formula="V = \frac{4}{3} \pi r^3"/><LineBreak/><LineBreak/>
+                                    gdzie <controls:FormulaControl Formula="r"/> jest promieniem kuli
+                                </TextBlock>
+                            </StackPanel><LineBreak/><LineBreak/>
                             <LineBreak/>
                         </TextBlock>
                 </Grid>
