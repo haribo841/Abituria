@@ -7,8 +7,53 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LoginPage">
-
-    <Grid>
-        
-    </Grid>
+    <Border Background="{StaticResource WordBlueBrush}">
+        <Grid>
+            <Frame Margin="0,60,0,0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+            <Grid Margin="-1,0,-1,0" HorizontalAlignment="Center" Width="794">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="60*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+                <Border BorderBrush="Black" BorderThickness="1" Padding="10" Grid.ColumnSpan="5" Margin="10, 10, 10, 0">
+                    <TextBlock Grid.Column="2" Grid.Row="0" Margin="5" FontSize="35" FontFamily="Harlow Solid Italic" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button Background="Transparent" FontSize="35" FontFamily="Harlow Solid Italic" Grid.ColumnSpan="5" Padding="20" BorderThickness="0" Content="Abituria" ToolTip="Strona główna" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Click="ButtonAbituria"/>
+                    </TextBlock>
+                </Border>
+                <TextBlock Grid.Row="1" Text="Witaj w programie ABITURIA, twoim matematycznym korepetytorze." FontSize="20" FontFamily="Cavolini" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5"/>
+                <TextBlock Text="Witaj, maturzysto!" Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5" FontFamily="Cavolini" FontSize="20" Padding="20"/>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="15,5,15,0" Grid.ColumnSpan="5" FontFamily="Cavolini" FontSize="20" TextWrapping="Wrap" Padding="20">
+                <LineBreak></LineBreak>
+                Abituria przechowuje informacje o twoich postępach. Spokojnie, tylko ty możesz je śledzić. 
+                Aby było to możliwe, domyślnie stworzyliśmy dla ciebie profil "Maturzysta", który możesz wybrać po kliknięciu opcji "Mam już konto".
+                W każdym momencie możesz jednak utworzyć do dziesięciu indywidualnych profili dla danego urządzenia, wystarczy wybrać opcję "Chcę stworzyć nowy profil" i podać imię, jakim pragniesz się posługiwać.
+                Przy każdym uruchomieniu Abiturii możesz zalogować się na dowolny profil, a przypisane do niego rozwiązania nigdzie nie uciekną.
+                </TextBlock>
+                <Button x:Name="btn1" Click="BtnAcntExists" Content="Mam już konto" ToolTip="Zaloguj się używając istniejącego profilu" Visibility="Visible" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" FontFamily="Cavolini" FontSize="10" Height="40" Width="130" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20"/>
+                <Button x:Name="btn2" Click="BtnCreateNew" Content="Chcę stworzyć nowy profil" ToolTip="Utwórz i zaloguj się na nowym profilu" Visibility="Visible" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" FontFamily="Cavolini" FontSize="10" Height="40" Width="130" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20"/>
+                <ComboBox x:Name="comboBox1" Visibility="Collapsed" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Height="30" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" IsEditable="False"/>
+                <Button x:Name="btnConfirm" Click="LoginConfirm" Visibility="Collapsed" Content="Logowanie" ToolTip="Potwierdź swój wybór" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" FontFamily="Cavolini" FontSize="10" Height="40" Width="130" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <GroupBox x:Name="inputGB" Visibility="Collapsed" Header="Nowy profil" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3" Padding="20">
+                    <StackPanel>
+                        <TextBlock Text="Wprowadź swoje imię:" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Cavolini" FontSize="20" Padding="10"/>
+                        <TextBox x:Name="nameInput" FontFamily="Cavolini" FontSize="15" Padding="10"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Name="btnAddUser" Click="AddUser" Content="Dodaj użytkownika" Margin="10" FontFamily="Cavolini" FontSize="10" Height="40" Width="130"/>
+                            <Button x:Name="btnCancel" Click="UserCancel" Content="Cofnij" Margin="10" FontFamily="Cavolini" FontSize="10" Height="40" Width="130"/>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+            </Grid>
+        </Grid>
+    </Border>
 </Page>

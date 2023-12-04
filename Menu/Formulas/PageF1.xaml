@@ -110,7 +110,9 @@
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
                 <ScrollViewer>
                     <Grid>
-                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
+                        <TextBlock FontSize="17" Margin="0" TextWrapping="WrapWithOverflow" Foreground="Black">
+                        <TextBlock FontSize="17" Margin="10"><Bold>WARTOŚĆ BEZWZGLĘDNA LICZBY</Bold></TextBlock><LineBreak/>
+                        <TextBlock FontSize="17" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black"><Run Text="Wartość bezwzględną liczby rzeczywistej "/><InlineUIContainer>
                             <controls:FormulaControl Formula="\:x\:" />
                         </InlineUIContainer><Run Text="definiujemy wzorem:"></Run><LineBreak/><InlineUIContainer>
                             <controls:FormulaControl Formula="\mid{x}\mid=\cases{x\;\mathrm{dla}\;x\geq0\cr-x\;\mathrm{dla}\;x\lt0 }" />
@@ -128,12 +130,13 @@
                         <controls:FormulaControl Formula="\mid{x+y}\mid\:\leq\mid{x}\mid+\mid{y}\mid\:"/><LineBreak/>
                         <controls:FormulaControl Formula="\mid{x-y}\mid\:\leq\mid{x}\mid+\mid{y}\mid\:"/><LineBreak/>
                         <controls:FormulaControl Formula="\mid{x{\cdot}y}\mid\:\geq\mid{x}\mid\cdot\mid{y}\mid\:"/><LineBreak/>Ponadto, jeśli
-                        <controls:FormulaControl Formula="\:y\neq0\:"/>, to<controls:FormulaControl Formula="\mid\frac{\:{x}}{{y}}\mid=\frac{\:\mid{x}\mid}{\:\mid{y}\mid}" />.
-                        <LineBreak/>Dla dowolnych liczb <controls:FormulaControl Formula="\:a\:"/>oraz <controls:FormulaControl Formula="\:r\geq0\:"/>mamy:<LineBreak/>
+                        <controls:FormulaControl Formula="\:y\neq0\:"/>, to<controls:FormulaControl Formula="\mid\frac{\:{x}}{{y}}\mid=\frac{\:\mid{x}\mid}{\:\mid{y}\mid}" />.<LineBreak/>Dla dowolnych liczb
+                        <controls:FormulaControl Formula="\:a\:"/>oraz <controls:FormulaControl Formula="\:r\geq0\:"/>mamy:<LineBreak/>
                         <controls:FormulaControl Formula="\mid{x-a}\mid{\leq}r\:" /> wtedy i tylko wtedy, gdy
                         <controls:FormulaControl Formula="\:a-r{\leq}x{\leq}a+r\:"/><LineBreak/>
                         <controls:FormulaControl Formula="\mid{x-a}\mid{\geq}r\:" /> wtedy i tylko wtedy, gdy
                         <controls:FormulaControl Formula="\:x{\leq}a-r"/> lub <controls:FormulaControl Formula="\:x{\geq}a+r"/><LineBreak/>
+                        </TextBlock>
                         </TextBlock>
                     </Grid>
                 </ScrollViewer>

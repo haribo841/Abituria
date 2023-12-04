@@ -108,8 +108,9 @@
                 </Grid>
             </Border>
             <Border Background="White" BorderBrush="Black" BorderThickness="1">
-                <Grid>
-                    <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
+                <ScrollViewer>
+                    <Grid>
+                        <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
                             <TextBlock FontSize="17" ><Bold>STEREOMETRIA</Bold></TextBlock><LineBreak/>
                             <controls:FormulaControl Formula="\cdot"/>
                             <Underline>Twierdzenie o trzech prostych prostopadłych</Underline><LineBreak/>
@@ -117,12 +118,14 @@
                             Prosta <controls:FormulaControl Margin="-4" Formula="\: k \:"/> przebija płaszczyznę w punkcie <controls:FormulaControl Margin="-4" Formula="\: P \:"/>. Prosta <controls:FormulaControl Margin="-4" Formula="\: l \:"/> jest rzutem prostokątnym prostej <controls:FormulaControl Margin="-4" Formula="\: k \:"/> na tę płaszczyznę.
 Prosta <controls:FormulaControl Margin="-4" Formula="\: m \:"/> leży na tej płaszczyźnie i przechodzi przez punkt <controls:FormulaControl Margin="-4" Formula="\: P \:"/>.
 Wówczas prosta <controls:FormulaControl Margin="-4" Formula="\: m \:"/> jest prostopadła do prostej <controls:FormulaControl Margin="-4" Formula="\: k \:"/> wtedy i tylko wtedy, gdy jest prostopadła do prostej <controls:FormulaControl Margin="-4" Formula="\: l \:"/>.<LineBreak/><LineBreak/>
-                            <Underline>Przyjmujemy oznaczenia:</Underline><LineBreak/>
-                            <controls:FormulaControl Margin="0,-4,0,-5" Formula="\: P \:"/> – pole powierzchni całkowitej <LineBreak/>
-                            <controls:FormulaControl Margin="0,-4,0,-10" Formula="\: P_p \:"/> – pole podstawy <LineBreak/>
-                            <controls:FormulaControl Margin="0,-4,0,-15"  Formula="\: P_b \:"/> – pole powierzchni bocznej<LineBreak/>
-                            <controls:FormulaControl Margin="0,-4,0,-20"  Formula="\: V \:"/> – objętość<LineBreak/>
-<controls:FormulaControl Formula="\cdot"/>
+                            <TextBlock Margin="5">
+                                <Underline>Przyjmujemy oznaczenia:</Underline>
+                            </TextBlock><LineBreak/>
+                            <controls:FormulaControl Formula="\: P \:"/> – pole powierzchni całkowitej <LineBreak/>
+                            <controls:FormulaControl Formula="\: P_p \:"/> – pole podstawy <LineBreak/>
+                            <controls:FormulaControl Formula="\: P_b \:"/> – pole powierzchni bocznej<LineBreak/>
+                            <controls:FormulaControl Formula="\: V \:"/> – objętość<LineBreak/><LineBreak/>
+                            <controls:FormulaControl Formula="\cdot"/>
                             <Underline>Prostopadłościan</Underline><LineBreak/>
                             <StackPanel Orientation="Horizontal">
                                 <!--Image Width="420" Height="300" Source="/img/w11b.png"/-->
@@ -191,9 +194,9 @@ Wówczas prosta <controls:FormulaControl Margin="-4" Formula="\: m \:"/> jest pr
                             </StackPanel><LineBreak/><LineBreak/>
                             <LineBreak/>
                         </TextBlock>
-                </Grid>
+                    </Grid>
+                </ScrollViewer>
             </Border>
-
         </DockPanel>
     </Grid>
 </Page>
