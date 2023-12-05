@@ -15,7 +15,7 @@ namespace Abituria.valueconverters
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            switch ((ApplicationPage)value)///Znajdź odpowiednią strone
+            switch ((ApplicationPage)value)
             {
                 case ApplicationPage.Login:
                     return new LoginPage();
@@ -23,6 +23,7 @@ namespace Abituria.valueconverters
                     Debugger.Break();
                     return null;
             }
+
         }
 
         public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
