@@ -111,7 +111,7 @@
                 <ScrollViewer>
                     <Grid>
                         <TextBlock FontSize="15" Margin="10" TextWrapping="WrapWithOverflow" Foreground="Black">
-                            <TextBlock FontSize="17" ><Bold>STEREOMETRIA</Bold></TextBlock><LineBreak/>
+                            <TextBlock FontSize="17" ><Bold>STEREOMETRIA</Bold></TextBlock><LineBreak/><LineBreak/>
                             <controls:FormulaControl Formula="\cdot"/>
                             <Underline>Twierdzenie o trzech prostych prostopadłych</Underline><LineBreak/>
                             <!--Image  Width="440" Height="210" Source="/img/w11a.png" Margin="0,10,20,10"/--><LineBreak/>

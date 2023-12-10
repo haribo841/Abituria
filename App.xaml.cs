@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.Text;
+using System.Diagnostics;
 
 namespace Abituria
 {
@@ -23,12 +24,22 @@ namespace Abituria
     /// </summary>
     public partial class App : Application
     {
+        public static new App Current
+        {
+            get { return (App)Application.Current; }
+        }
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            Trace.AutoFlush = true;
+        }
+        private void Application_Exit(object sender, ExitEventArgs e)
+        {
+        }
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
         }
-
         private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             Exception ex = (Exception)e.ExceptionObject;

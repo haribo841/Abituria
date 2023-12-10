@@ -59,9 +59,14 @@
                                                 <Image Source="/img/min.png"/>
                                             </Button>
                                         </StackPanel>
-                                        <Viewbox Grid.Column="1" Margin="0">
+                                        <Viewbox Grid.Column="0" Grid.ColumnSpan="3" Margin="0">
                                             <!--Tytuł belki-->
-                                            <TextBlock Text="{Binding Title, FallbackValue=Tytuł, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                            <StackPanel>
+                                                <TextBlock FontFamily="{StaticResource MulishBold}">
+                                                    <Run Text="Pla" Foreground="{StaticResource WordBlueBrush}"/><Run Text="ce" Foreground="{StaticResource WordOrangeBrush}"/>
+                                                    <Run Text="Ho" Foreground="{StaticResource WordRedBrush}"/><Run Text="lder" Foreground="{StaticResource WordGreenBrush}"/>
+                                                </TextBlock>
+                                            </StackPanel>
                                         </Viewbox>
                                         <Button Grid.Column="2" Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}">
                                             <!--Ikonka-->

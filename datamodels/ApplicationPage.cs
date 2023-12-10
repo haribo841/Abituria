@@ -8,6 +8,7 @@ namespace Abituria.datamodels
 {
     public enum ApplicationPage///Strona aplikacji
     {
-        Login = 0,///Początkowa strona logowania
+        Main = 0,///Strona główna
+        Login = 1,///Początkowa strona logowania
     }
 }

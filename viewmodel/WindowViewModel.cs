@@ -11,40 +11,36 @@ namespace Abituria.viewmodel
     public class WindowViewModel : BaseViewModel///Model widoku dla niestandardowego okna
     {
         private readonly Window mWindow;///Okno, które kontroluje Model widoku
+        private WindowResizer mWindowResizer;///Utrzymuje odpowiedni rozmiar okna
         private int mOuterMarginSize = 10;///Margines okna pozwalający na cień
         private int mWindowRadius = 10;///Promień od krawędzi okna
-        public Thickness InnerContentPadding { get { return new Thickness(ResizeBorder); } }///Wypełnienie wewnętrznej zawartoścu okna
-        public double WindowMinimumWidth { get; set; } = 1115;///najmniejsza szerokość jaką może mieć okno
-        public double WindowMinimumHeight { get; set; } = 815;///najmniejsza wysokość jaką może mieć okno
-        public int ResizeBorder { get; set; } = 6;
+        private WindowDockPosition mDockPosition = WindowDockPosition.Undocked;///Ostatnia znana pozycja doku
+        public double WindowMinimumWidth { get; set; } = 1115;///Najmniejsza szerokość jaką może mieć okno
+        public double WindowMinimumHeight { get; set; } = 815;///Najmniejsza wysokość jaką może mieć okno
+        public bool BeingMoved { get; set; }///Prawda jeśli okno jest obecnie przeciągane
+        public bool Borderless => (mWindow.WindowState == WindowState.Maximized || mDockPosition != WindowDockPosition.Undocked);///Prawda jeśli okno powinno być bez ramki bo jest zmaksymalizowane albo zadokowane
+        public int ResizeBorder => mWindow.WindowState == WindowState.Maximized ? 0 : 4;///Rozmiar granicy zmiany rozmiaru wokół okna
         public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }///Rozmiar obramówki okna do zewnętrznego marginesu
-        public int OuterMarginSize///Zmaksymalizowane okno nie będzie miało przeźroczystego marginesu
+        public Thickness InnerContentPadding { get; set; } = new Thickness(0);///Wypełnienie wewnętrznej zawartoścu okna
+        public int OuterMarginSize///Margines wokół okna pozwalający na cień
         {
             get
             {
                 return mWindow.WindowState == WindowState.Maximized ? 0 : mOuterMarginSize;
             }
-            set
-            {
-                mOuterMarginSize = value;
-            }
+            set => mOuterMarginSize = value; ///Okno powinno być bez ramki bo jest zmaksymalizowane albo zadokowane
         }
         public Thickness OuterMarginSizeThickness { get { return new Thickness(OuterMarginSize); } }
-        public int WindowRadius
+        public int WindowRadius///Promień krawędzi okna
         {
-            get
-            {
-                return mWindow.WindowState == WindowState.Maximized ? 0 : mWindowRadius;
-            }
-            set
-            {
-                mWindowRadius = value;
-            }
+            get => Borderless ? 0 : mWindowRadius;
+            set => mWindowRadius = value;
         }
-        public CornerRadius WindowCornerRadius { get { return new CornerRadius(WindowRadius); } }
-        public int TitleHeight { get; set; } = 42;///wysokość paska tytułowego
-        public GridLength TitleHeightGridLength { get { return new GridLength(ResizeBorder + TitleHeight); } }
-        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;///Obecna strona aplikacji
+        public int FlatBorderThickness => Borderless && mWindow.WindowState != WindowState.Maximized ? 1 : 0;///Prostokątna granica wokół okna podczas zadokowania
+        public CornerRadius WindowCornerRadius => new CornerRadius(WindowRadius);///Promień krawędzi okna
+        public int TitleHeight { get; set; } = 42;///Wysokość paska tytułowego
+        public GridLength TitleHeightGridLength => new GridLength(TitleHeight + ResizeBorder);///Wysokość paska tytułowego
+        public bool DimmableOverlayVisible { get; set; }
         public ICommand MinimizeCommand { get; set; }///Komenda do minimalizacji okna
         public ICommand MaximizeCommand { get; set; }///Komenda do maksymalizacji okna
         public ICommand CloseCommand { get; set; }///Komenda do zamykania okna
@@ -54,22 +50,39 @@ namespace Abituria.viewmodel
             mWindow = window;
             mWindow.StateChanged += (sender, e) =>
             {
-                OnPropertyChanged(nameof(ResizeBorderThickness));///Odpala wydarzenia dla wszystkich właściwości zmiany rozmiaru
-                OnPropertyChanged(nameof(OuterMarginSize));
-                OnPropertyChanged(nameof(OuterMarginSizeThickness));
-                OnPropertyChanged(nameof(WindowRadius));
-                OnPropertyChanged(nameof(WindowCornerRadius));
+                WindowResized();///Odpala wydarzenia dla wszystkich właściwości zmiany rozmiaru
             };
             MinimizeCommand = new RelayCommand(() => mWindow.WindowState = WindowState.Minimized);///Tworzenie komend
             MaximizeCommand = new RelayCommand(() => mWindow.WindowState ^= WindowState.Maximized);
             CloseCommand = new RelayCommand(() => mWindow.Close());
             MenuCommand = new RelayCommand(() => SystemCommands.ShowSystemMenu(mWindow, GetMousePosition()));
-            var resizer = new WindowResizer(mWindow);///Naprawia problem ze zmianą rozmiaru okna
+            mWindowResizer = new WindowResizer(mWindow);///Naprawia problem ze zmianą rozmiaru okna
+            mWindowResizer.WindowDockChanged += (dock) =>///Nasłuchuje zmian w doku
+            {
+                mDockPosition = dock;///Przechowuje ostatnią pozycje
+                WindowResized();///Odpala wydarzenia zmian rozmiaru
+            };
+            mWindowResizer.WindowStartedMove += () =>
+            {
+                BeingMoved = true;///Aktualizuje flage bycia przenoszonym
+            };
+            mWindowResizer.WindowFinishedMove += () =>///Naprawia upuszczanie niezadokowanego okna
+            {
+                BeingMoved = false;///Aktualizuje flage bycia przenoszonym
+            };
         }
         private Point GetMousePosition()///Bierze aktualną pozycje kursora na ekranie
         {
-            var position = Mouse.GetPosition(mWindow);///Pozycja myszki względem okna
-            return new Point(position.X + mWindow.Left, position.Y + mWindow.Top);///Dodaje pozycje okna
+            return mWindowResizer.GetCursorPosition();///Pozycja myszki względem okna
+        }
+        private void WindowResized()///Funkcja do konstruktora
+        {
+            OnPropertyChanged(nameof(Borderless));
+            OnPropertyChanged(nameof(ResizeBorderThickness));
+            OnPropertyChanged(nameof(OuterMarginSize));
+            OnPropertyChanged(nameof(OuterMarginSizeThickness));
+            OnPropertyChanged(nameof(WindowRadius));
+            OnPropertyChanged(nameof(WindowCornerRadius));
         }
     }
 }
