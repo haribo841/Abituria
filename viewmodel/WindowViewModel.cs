@@ -14,14 +14,15 @@ namespace Abituria.viewmodel
         private WindowResizer mWindowResizer;///Utrzymuje odpowiedni rozmiar okna
         private int mOuterMarginSize = 10;///Margines okna pozwalający na cień
         private int mWindowRadius = 10;///Promień od krawędzi okna
-        private WindowDockPosition mDockPosition = WindowDockPosition.Undocked;///Ostatnia znana pozycja doku
+        private WindowDockPosition mDockPosition = WindowDockPosition.Undocked;
+        ///Ostatnia znana pozycja doku
         public double WindowMinimumWidth { get; set; } = 1115;///Najmniejsza szerokość jaką może mieć okno
         public double WindowMinimumHeight { get; set; } = 815;///Najmniejsza wysokość jaką może mieć okno
         public bool BeingMoved { get; set; }///Prawda jeśli okno jest obecnie przeciągane
         public bool Borderless => (mWindow.WindowState == WindowState.Maximized || mDockPosition != WindowDockPosition.Undocked);///Prawda jeśli okno powinno być bez ramki bo jest zmaksymalizowane albo zadokowane
         public int ResizeBorder => mWindow.WindowState == WindowState.Maximized ? 0 : 4;///Rozmiar granicy zmiany rozmiaru wokół okna
         public Thickness ResizeBorderThickness { get { return new Thickness(ResizeBorder + OuterMarginSize); } }///Rozmiar obramówki okna do zewnętrznego marginesu
-        public Thickness InnerContentPadding { get; set; } = new Thickness(0);///Wypełnienie wewnętrznej zawartoścu okna
+        public Thickness InnerContentPadding { get { return new Thickness(ResizeBorder); } }///Wypełnienie wewnętrznej zawartoścu okna
         public int OuterMarginSize///Margines wokół okna pozwalający na cień
         {
             get
@@ -40,6 +41,7 @@ namespace Abituria.viewmodel
         public CornerRadius WindowCornerRadius => new CornerRadius(WindowRadius);///Promień krawędzi okna
         public int TitleHeight { get; set; } = 42;///Wysokość paska tytułowego
         public GridLength TitleHeightGridLength => new GridLength(TitleHeight + ResizeBorder);///Wysokość paska tytułowego
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;///Obecna strona aplikacji
         public bool DimmableOverlayVisible { get; set; }
         public ICommand MinimizeCommand { get; set; }///Komenda do minimalizacji okna
         public ICommand MaximizeCommand { get; set; }///Komenda do maksymalizacji okna

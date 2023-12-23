@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Abituria"
+        d:DataContext="{d:DesignInstance Type=local:WindowViewModel}"
         mc:Ignorable="d"
         WindowState="Maximized"
          MinWidth="{Binding WindowMinimumWidth}"
@@ -49,13 +50,13 @@
                                             <!--Kolumna na ikonke-->
                                         </Grid.ColumnDefinitions>
                                         <StackPanel Grid.Column="0" Orientation="Horizontal">
-                                            <Button Style="{StaticResource WindowCloseButton}" Command="{Binding CloseCommand}">
+                                            <Button ToolTip="Zamknij" Style="{StaticResource WindowCloseButton}" Command="{Binding CloseCommand}">
                                                 <Image Source="/img/close.png"/>
                                             </Button>
-                                            <Button Grid.Column="0" Style="{StaticResource WindowControlButton}" Command="{Binding MaximizeCommand}">
+                                            <Button ToolTip="Maksymalizuj" Grid.Column="0" Style="{StaticResource WindowControlButton}" Command="{Binding MaximizeCommand}">
                                                 <Image Source="/img/max.png"/>
                                             </Button>
-                                            <Button Grid.Column="0" Style="{StaticResource WindowControlButton}" Command="{Binding MinimizeCommand}">
+                                            <Button ToolTip="Minimalizuj" Grid.Column="0" Style="{StaticResource WindowControlButton}" Command="{Binding MinimizeCommand}">
                                                 <Image Source="/img/min.png"/>
                                             </Button>
                                         </StackPanel>
@@ -68,7 +69,7 @@
                                                 </TextBlock>
                                             </StackPanel>
                                         </Viewbox>
-                                        <Button Grid.Column="2" Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}">
+                                        <Button ToolTip="Dasz radę!" Grid.Column="2" Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}">
                                             <!--Ikonka-->
                                             <Image Source="img/icon.png"/>
                                         </Button>
