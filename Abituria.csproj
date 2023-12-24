@@ -18,8 +18,4 @@
     </Compile>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="controls\" />
-  </ItemGroup>
-
 </Project>

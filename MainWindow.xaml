@@ -9,7 +9,7 @@
         WindowState="Maximized"
          MinWidth="{Binding WindowMinimumWidth}"
         MinHeight="{Binding WindowMinimumHeight}"
-        Title="Abituria" Height="450" Width="800">
+        Title="Abituria" Height="800" Width="1000">
     <Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">
             <Setter Property="Template">
@@ -94,7 +94,7 @@
             GlassFrameThickness="0"
             />
     </WindowChrome.WindowChrome>
-    <Grid Background="{StaticResource ForegroundLightBrush}">
-        <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
-    </Grid>
+    <local:LoginControl>
+        <Button>UserControl</Button>
+    </local:LoginControl>
 </Window>
