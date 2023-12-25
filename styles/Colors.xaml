@@ -27,8 +27,10 @@
     <SolidColorBrush x:Key="WordDarkBlueBrush" Color="{StaticResource WordDarkBlue}" />
     <Color x:Key="WordOrange">#ffa800</Color>
     <SolidColorBrush x:Key="WordOrangeBrush" Color="{StaticResource WordOrange}" />
-    <Color x:Key="WordRed">#ff4747</Color>
-    <SolidColorBrush x:Key="WordRedBrush" Color="{StaticResource WordRed}" />
-    <Color x:Key="WordGreen">#00c541</Color>
-    <SolidColorBrush x:Key="WordGreenBrush" Color="{StaticResource WordGreen}" />
+    <Color x:Key="MenuButtonBackground">#22202f</Color>
+    <SolidColorBrush x:Key="MenuButtonBackgroundBrush" Color="{StaticResource MenuButtonBackground}" />
+    <Color x:Key="Strawberry">#dc0d27</Color>
+    <SolidColorBrush x:Key="StrawberryBrush" Color="{StaticResource Strawberry}" />
+    <Color x:Key="MainPurple">#272537</Color>
+    <SolidColorBrush x:Key="MainPurpleBrush" Color="{StaticResource MainPurple}" />
 </ResourceDictionary>

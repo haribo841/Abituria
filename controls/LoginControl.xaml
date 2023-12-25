@@ -6,7 +6,11 @@
              xmlns:local="clr-namespace:Abituria.controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <UserControl.Template>
+        <ControlTemplate>
+            <Grid Background="{StaticResource ForegroundLightBrush}">
+                <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
+            </Grid>
+        </ControlTemplate>
+    </UserControl.Template>
 </UserControl>

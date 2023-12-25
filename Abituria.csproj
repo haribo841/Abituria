@@ -18,4 +18,10 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="expressions\" />
+    <Folder Include="pages\chapters\" />
+    <Folder Include="pages\finalexams\" />
+  </ItemGroup>
+
 </Project>

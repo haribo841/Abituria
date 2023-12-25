@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Abituria.attachedproperites
 {
-    class IsBusyProperty
+    public class IsBusyProperty : BaseAttachedProperty<IsBusyProperty, bool>///Jest właściwością dołączoną do wszystkiego, co chce oflagować, jeśli kontrolka jest zajęta
     {
     }
 }

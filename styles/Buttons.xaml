@@ -55,13 +55,13 @@
         <!--Guzik zamykający okno-->
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="Brown"/>
+                <Setter Property="Background" Value="{StaticResource StrawberryBrush}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}">
         <!--Zwykły guzik-->
-        <Setter Property="Background" Value="{StaticResource WordOrangeBrush}" />
+        <Setter Property="Background" Value="{StaticResource MainPurpleBrush}" />
         <Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="FontSize" Value="{StaticResource FontSizeXXLarge}" />
@@ -145,6 +145,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Foreground" Value="{StaticResource WordOrangeBrush}"/>
+                            <!--Mam już konto-->
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Foreground" Value="{StaticResource ForegroundDarkBrush}"/>
@@ -270,5 +271,25 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+    <Style x:Key="MenuButton" BasedOn="{StaticResource {x:Type ToggleButton}}" TargetType="{x:Type RadioButton}">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{StaticResource MainPurpleBrush}">
+                            <TextBlock Text="{TemplateBinding Property=Content}" VerticalAlignment="Center" Margin="50,0,0,0"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Background" Value="{StaticResource MenuButtonBackgroundBrush}"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>

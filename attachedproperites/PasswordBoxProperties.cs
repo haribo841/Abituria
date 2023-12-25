@@ -16,7 +16,8 @@ namespace Abituria.attachedproperites
         {
             var passwordBox = (d as PasswordBox);
             if (passwordBox == null)
-                return;//passwordBox.PasswordChanged -=
+                return;
+            passwordBox.PasswordChanged -= PasswordBox_PasswordChanged;
             if ((bool)e.NewValue)
             {
                 passwordBox.PasswordChanged += PasswordBox_PasswordChanged;
