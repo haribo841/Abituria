@@ -8,42 +8,30 @@ using System.Windows;
 
 namespace Abituria.attachedproperites
 {
-    public class PasswordBoxProperties///nie moge public bool HasText {get; set;}=false; bo seald
+    public class MonitorPasswordProperty : BaseAttachedProperty<MonitorPasswordProperty, bool>///Właściwość dołączona hasła
     {
-        public static readonly DependencyProperty MonitorPasswordProperty = DependencyProperty.RegisterAttached("MonitorPassword", typeof(bool), typeof(PasswordBoxProperties), new PropertyMetadata(false, OnMonitorPasswordChanged));
-
-        private static void OnMonitorPasswordChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)///Działa jak konstruktor
+        public override void OnValueChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
         {
-            var passwordBox = (d as PasswordBox);
-            if (passwordBox == null)
+            var passwordBox = (sender as PasswordBox);///Ustaw wywołującego
+            if (passwordBox == null)///Upewnij sie, że to password box
                 return;
-            passwordBox.PasswordChanged -= PasswordBox_PasswordChanged;
+            passwordBox.PasswordChanged -= PasswordBox_PasswordChanged;///Usuń jakiekolwiek poprzednie wydarzenia
             if ((bool)e.NewValue)
             {
-                passwordBox.PasswordChanged += PasswordBox_PasswordChanged;
+                HasTextProperty.SetValue(passwordBox);///Ustaw wartość domyślną
+                passwordBox.PasswordChanged += PasswordBox_PasswordChanged;///Jeśli wywołujący ustawi MonitorPassword jako prawda, to nasłuchuj
             }
         }
-        private static void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        private static void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)///Odpalone, gdy wartość hasła w password boksie się zmienia
         {
-            throw new NotImplementedException();
+            HasTextProperty.SetValue((PasswordBox)sender);///Ustawia właściwość dołączoną
         }
-
-        public static void SetMonitorPassword(PasswordBox element, bool value)
+    }
+    public class HasTextProperty : BaseAttachedProperty<HasTextProperty, bool>///Ustawia właściwość dołączoną jeżeli wywołujący PasswordBox ma jakikolwiek tekst
+    {
+        public static void SetValue(DependencyObject sender)
         {
-            element.SetValue(MonitorPasswordProperty, value);
-        }
-        public static bool GetMonitorPassword(PasswordBox element)
-        {
-            return (bool)element.GetValue(MonitorPasswordProperty);
-        }
-        public static readonly DependencyProperty HasTextProperty = DependencyProperty.RegisterAttached("HasText", typeof(bool), typeof(PasswordBoxProperties), new PropertyMetadata(false));
-        private static void SetHasText(PasswordBox element)
-        {
-            element.SetValue(HasTextProperty, element.SecurePassword.Length > 0);
-        }
-        public static bool GetHasText(PasswordBox element)
-        {
-            return (bool)element.GetValue(HasTextProperty);
+            SetValue(sender, ((PasswordBox)sender).SecurePassword.Length > 0);
         }
     }
 }

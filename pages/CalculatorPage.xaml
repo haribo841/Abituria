@@ -5,10 +5,192 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Abituria.pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="CalculatorPage">
+      d:DesignHeight="800" d:DesignWidth="1000"
+      Title="KalkulatorPage"
+      Background="Transparent">
+    <Border Background="{StaticResource MainPurpleBrush}">
+        <Viewbox>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="62.5"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="62.5"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="62.5"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="62.5"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <TextBlock Text="Wypróbuj nasz nowy kalkulator funkcji kwadratowej!" 
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                           FontSize="{StaticResource FontSizeLarge}"/>
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="1">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Border Width="210" Height="210" CornerRadius="10" Margin="0,0,30,0">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                    <GradientStop Color="DodgerBlue" Offset="0.0"/>
+                                    <GradientStop Color="MidnightBlue" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Button Name="ButtonCalculator" 
+                                                Background="Transparent" 
+                                                Foreground="White" 
+                                                Width="auto"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                ToolTip="Oblicz pierwiastki i właściwości funkcji kwadratowej">
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToKwadratowaPage}"/>
+                                </Button.InputBindings>
+                                <StackPanel>
+                                    <TextBlock Text="Kalkulator" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,10,10,0"/>
+                                    <TextBlock Text="Funkcji" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,10,10,0"/>
+                                    <TextBlock Text="Kwadratowej" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,10,10,0"/>
 
-    <Grid>
-        
-    </Grid>
+                                </StackPanel>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Border>
+                        <Border Width="210" Height="210" CornerRadius="10" Margin="0,0,0,0">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                    <GradientStop Color="{StaticResource ForegroundDark}" Offset="0.0"/>
+                                    <GradientStop Color="{StaticResource ForegroundVeryDark}" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Button Background="Transparent" 
+                                                Foreground="White" 
+                                                Width="auto"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                ToolTip="Zawartość dostępna wktótce!">
+                                <StackPanel>
+                                    <TextBlock Text="Kalkulator" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="10,10,10,0"/>
+                                    <TextBlock Text="Podstawowy" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="10,5,10,0"/>
+                                    <TextBlock Text="Niedostępne" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="20,35,10,0"/>
+                                </StackPanel>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="3">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Border Width="210" Height="210" CornerRadius="10" Margin="0,0,0,0">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                    <GradientStop Color="{StaticResource ForegroundDark}" Offset="0.0"/>
+                                    <GradientStop Color="{StaticResource ForegroundVeryDark}" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Button Background="Transparent" 
+                                                Foreground="White" 
+                                                Width="auto"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                ToolTip="Zawartość dostępna wktótce!">
+                                <StackPanel>
+                                    <TextBlock Text="Generator" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,10,10,0"/>
+                                    <TextBlock Text="Wykresów" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,5,10,0"/>
+                                    <TextBlock Text="Funkcji" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,5,10,0"/>
+
+                                    <TextBlock Text="Niedostępne" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="20,15,10,0"/>
+                                </StackPanel>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Border>
+                        <Border Width="210" Height="210" CornerRadius="10" Margin="30,0,0,0">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                    <GradientStop Color="{StaticResource ForegroundDark}" Offset="0.0"/>
+                                    <GradientStop Color="{StaticResource ForegroundVeryDark}" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Button Background="Transparent" 
+                                                Foreground="White" 
+                                                Width="auto"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                ToolTip="Zawartość dostępna wktótce!">
+                                <StackPanel>
+                                    <TextBlock Text="Kalkulator" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="10,10,10,0"/>
+                                    <TextBlock Text="Funkcji" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXLarge}"
+                                                       Margin="10,5,10,0"/>
+                                    <TextBlock Text="Trygonometrycznych" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="10,5,10,0"/>
+
+                                    <TextBlock Text="Niedostępne" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="20,35,10,0"/>
+                                </StackPanel>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Viewbox>
+    </Border>
 </Page>
