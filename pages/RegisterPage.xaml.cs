@@ -1,5 +1,4 @@
-﻿using Abituria.viewmodel.;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,14 +16,13 @@ using System.Windows.Shapes;
 namespace Abituria.pages
 {
     /// <summary>
-    /// Interaction logic for MainPage.xaml
+    /// Interaction logic for RegisterPage.xaml
     /// </summary>
-    public partial class MainPage
+    public partial class RegisterPage : Page
     {
-        public MainPage()
+        public RegisterPage()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
         }
     }
 }

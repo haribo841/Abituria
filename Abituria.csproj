@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="security\" />
     <Folder Include="pages\finalexams\" />
   </ItemGroup>
 

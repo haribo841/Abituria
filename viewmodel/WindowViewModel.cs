@@ -48,11 +48,13 @@ namespace Abituria.viewmodel
         public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;///Obecna strona aplikacji
         public ApplicationPage CurrentPage1 { get; set; } = ApplicationPage.Main;///Główna strona aplikacji
         public ApplicationPage CurrentPage2 { get; set; } = ApplicationPage.Menu;///Główna strona aplikacji
+
         public bool DimmableOverlayVisible { get; set; }
         public ICommand MinimizeCommand { get; set; }///Komenda do minimalizacji okna
         public ICommand MaximizeCommand { get; set; }///Komenda do maksymalizacji okna
         public ICommand CloseCommand { get; set; }///Komenda do zamykania okna
         public ICommand MenuCommand { get; set; }///Komenda do pokazania menu okna
+        public ICommand GoToMenuPage { get; set; }///Komenda przechodzi do strony MenuPage
         public WindowViewModel(Window window)///Standardowy konstruktor
         {
             mWindow = window;

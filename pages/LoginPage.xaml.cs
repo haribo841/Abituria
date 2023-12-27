@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,6 +27,8 @@ namespace Abituria.pages
         {
             InitializeComponent();
         }
+        public SecureString SecurePassword => PasswordText.SecurePassword;///Chronione hasło dla tej strony
+        /*
         private List<string> SetUsersList(string usersFile)
         {
             List<string> usersList = new List<string>();
@@ -157,5 +160,6 @@ namespace Abituria.pages
         {
             InitializeComponent();
         }
+        */
     }
 }
