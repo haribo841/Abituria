@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,15 +16,13 @@ using System.Windows.Shapes;
 namespace Abituria.pages
 {
     /// <summary>
-    /// Interaction logic for RegisterPage.xaml
+    /// Interaction logic for MenuPage.xaml
     /// </summary>
-    public partial class RegisterPage : Page
+    public partial class MenuPage : Page
     {
-        public RegisterPage()
+        public MenuPage()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
         }
-        public SecureString SecurePassword => PasswordText.SecurePassword;///Chronione hasło dla tej strony
     }
 }

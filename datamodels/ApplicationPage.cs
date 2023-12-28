@@ -18,7 +18,7 @@ namespace Abituria.datamodels
         Wzory = 7,///Wybór wzoru
         Kwadratowa = 8,///Kalkulator funkcji kwadratowej
         Wektory = 9,///Strona o wektorach
-        MP21 = 10,
+        MP21 = 10,///Strona początkowa matury poprawkowej z roku 2021
         Z1 = 11,
         Z2 = 12,
         Z3 = 13,
@@ -54,7 +54,7 @@ namespace Abituria.datamodels
         Z33 = 43,
         Z34 = 44,
         Z35 = 45,
-        W1 = 46,
+        W = 46,
         W2 = 47,
         W3 = 48,
         W4 = 49,

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Abituria.pages
+namespace Abituria.pages.finalexams
 {
     /// <summary>
-    /// Interaction logic for RegisterPage.xaml
+    /// Interaction logic for FER21Page.xaml
     /// </summary>
-    public partial class RegisterPage : Page
+    public partial class FER21Page : Page
     {
-        public RegisterPage()
+        public FER21Page()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
         }
-        public SecureString SecurePassword => PasswordText.SecurePassword;///Chronione hasło dla tej strony
     }
 }

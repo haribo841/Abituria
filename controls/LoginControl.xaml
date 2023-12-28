@@ -9,7 +9,7 @@
     <UserControl.Template>
         <ControlTemplate>
             <Grid Background="{StaticResource ForegroundLightBrush}">
-                <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
+                <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
             </Grid>
         </ControlTemplate>
     </UserControl.Template>

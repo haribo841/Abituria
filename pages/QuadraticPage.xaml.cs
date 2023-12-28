@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Abituria.pages
 {
     /// <summary>
-    /// Interaction logic for ManuPage.xaml
+    /// Interaction logic for QuadraticPage.xaml
     /// </summary>
-    public partial class ManuPage : Page
+    public partial class QuadraticPage : Page
     {
-        public ManuPage()
+        public QuadraticPage()
         {
             InitializeComponent();
         }

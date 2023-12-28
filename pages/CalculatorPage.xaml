@@ -3,7 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Abituria.pages"
+      xmlns:local="clr-namespace:Abituria"
+      xmlns:viewModel="clr-namespace:Abituria.viewmodel"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1000"
       Title="KalkulatorPage"
@@ -54,15 +55,15 @@
                                     <TextBlock Text="Kalkulator" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,10,10,0"/>
+                                                       Margin="10,10,10,0"/>
                                     <TextBlock Text="Funkcji" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,10,10,0"/>
+                                                       Margin="10,10,10,0"/>
                                     <TextBlock Text="Kwadratowej" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,10,10,0"/>
+                                                       Margin="10,10,10,0"/>
 
                                 </StackPanel>
                                 <Button.Template>
@@ -127,20 +128,20 @@
                                     <TextBlock Text="Generator" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,10,10,0"/>
+                                                       Margin="10,10,10,0"/>
                                     <TextBlock Text="Wykresów" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,5,10,0"/>
+                                                       Margin="10,5,10,0"/>
                                     <TextBlock Text="Funkcji" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,5,10,0"/>
+                                                       Margin="10,5,10,0"/>
 
                                     <TextBlock Text="Niedostępne" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeLarge}"
-                                                       Margin="20,15,10,0"/>
+                                                       Margin="10,15,10,0"/>
                                 </StackPanel>
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">

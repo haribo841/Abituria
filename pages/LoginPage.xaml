@@ -5,9 +5,9 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Abituria" d:DataContext="{d:DesignInstance Type=local:LoginViewModel}"
-      mc:Ignorable="d" 
-      x:Name="Page"
-      d:DesignHeight="800" d:DesignWidth="1000"
+                mc:Ignorable="d"     
+                x:Name="Page"
+                d:DesignHeight="800" d:DesignWidth="1000"
                 Title="LoginPage">
     <Border Background="{StaticResource WordBlueBrush}">
         <Grid>
@@ -24,7 +24,7 @@
                             <TextBlock Text="Zaloguj się"
                                        ToolTip="Wypełnij poniższy formularz"
                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                       FontFamily="{StaticResource MulishRegular}"
+                                       FontFamily="{StaticResource MulishBold}"
                                        Foreground="{StaticResource WordBlueBrush}"/>
                             <!--Nagłówek tworzenia konta-->
                             <TextBlock Text="Zostań abiturientem!"
@@ -55,10 +55,9 @@
                             FontSize="{StaticResource FontSizeLarge}"
                             FontWeight="DemiBold"
                             ToolTip="Załóż konto i zachowaj swoje postępy!"
-                            HorizontalAlignment="Center"
-                            Command="{Binding CurrentPage2}">
+                            HorizontalAlignment="Center">
                         <Button.InputBindings>
-                            <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMenuPage}"/>
+                            <MouseBinding MouseAction="LeftClick" Command="{Binding GoToRegisterPage}"/>
                         </Button.InputBindings>
                         <Button.Content>
                             Nie mam konta
@@ -68,4 +67,4 @@
             </ScrollViewer>
         </Grid>
     </Border>
-    </local:BasePage>
+</local:BasePage>

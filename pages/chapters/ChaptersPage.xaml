@@ -3,12 +3,194 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Abituria.pages.chapters"
+      xmlns:local="clr-namespace:Abituria"
+      xmlns:viewModel="clr-namespace:Abituria.viewmodel"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="ChaptersPage">
+      d:DesignHeight="800" d:DesignWidth="1000"
+      Title="DzialyPage"
+      Background="Transparent">
+    <Border Background="{StaticResource MainPurpleBrush}">
+        <Viewbox>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="62.5"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="62.5"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="62.5"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="62.5"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <TextBlock Text="Działy matematyki" 
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                           FontSize="{StaticResource FontSizeLarge}"/>
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="1">
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Border Width="210" Height="210" CornerRadius="10" Margin="0,0,30,0">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                        <GradientStop Color="SpringGreen" Offset="0.0"/>
+                                        <GradientStop Color="MidnightBlue" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Button Name="ButtonWektory" 
+                                                Background="Transparent" 
+                                                Foreground="White" 
+                                                Width="auto"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                ToolTip="Podstawowa wiedza o wektorach">
+                                    <Button.InputBindings>
+                                        <MouseBinding MouseAction="LeftClick" Command="{Binding GoToWektoryPage}"/>
+                                    </Button.InputBindings>
+                                    <StackPanel>
+                                        <TextBlock Text="Wektory" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,10,10,0"/>
+                                        <TextBlock Text="Iloczyn skalarny" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="20,10,10,0"/>
+                                    </StackPanel>
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </Border>
+                            <Border Width="210" Height="210" CornerRadius="10" Margin="0,0,0,0">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                        <GradientStop Color="{StaticResource ForegroundDark}" Offset="0.0"/>
+                                        <GradientStop Color="{StaticResource ForegroundVeryDark}" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Button Background="Transparent" 
+                                                Foreground="White" 
+                                                Width="auto"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                ToolTip="Zawartość dostępna wktótce!">
+                                    <StackPanel>
+                                        <TextBlock Text="Rachunek" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="10,10,10,0"/>
+                                        <TextBlock Text="zbiorów i " 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="10,5,10,0"/>
+                                        <TextBlock Text="logika" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="10,5,10,0"/>
 
-    <Grid>
-        
-    </Grid>
+                                        <TextBlock Text="Niedostępne" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="20,35,10,0"/>
+                                    </StackPanel>
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="3">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Border Width="210" Height="210" CornerRadius="10" Margin="0,0,0,0">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                    <GradientStop Color="{StaticResource ForegroundDark}" Offset="0.0"/>
+                                    <GradientStop Color="{StaticResource ForegroundVeryDark}" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Button Background="Transparent" 
+                                                Foreground="White" 
+                                                Width="auto"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                ToolTip="Zawartość dostępna wktótce!">
+                                <StackPanel>
+                                    <TextBlock Text="Równania" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,10,10,0"/>
+                                    <TextBlock Text="i" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,5,10,0"/>
+                                    <TextBlock Text="nierówności" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,5,10,0"/>
+
+                                    <TextBlock Text="Niedostępne" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="20,15,10,0"/>
+                                </StackPanel>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Border>
+                        <Border Width="210" Height="210" CornerRadius="10" Margin="30,0,0,0">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                    <GradientStop Color="{StaticResource ForegroundDark}" Offset="0.0"/>
+                                    <GradientStop Color="{StaticResource ForegroundVeryDark}" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Button Background="Transparent" 
+                                                Foreground="White" 
+                                                Width="auto"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                ToolTip="Zawartość dostępna wktótce!">
+                                <StackPanel>
+                                    <TextBlock Text="Ciągi" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="10,10,10,0"/>
+                                    <TextBlock Text="liczbowe" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="10,5,10,0"/>
+
+                                    <TextBlock Text="Niedostępne" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="20,60,10,0"/>
+                                </StackPanel>
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Viewbox>
+    </Border>
+
 </Page>
