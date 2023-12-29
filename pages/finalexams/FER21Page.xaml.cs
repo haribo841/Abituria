@@ -23,6 +23,7 @@ namespace Abituria.pages.finalexams
         public FER21Page()
         {
             InitializeComponent();
+            DataContext = new LoginViewModel();
         }
     }
 }

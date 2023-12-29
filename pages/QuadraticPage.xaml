@@ -4,11 +4,137 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Abituria.pages"
+      xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath" 
+      xmlns:abituria="clr-namespace:Abituria" 
+      d:DataContext="{d:DesignInstance Type=abituria:LoginViewModel}"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="QuadraticPage">
-
-    <Grid>
-        
-    </Grid>
+      Title="KwadratowaPage">
+    <Border Background="{StaticResource MainPurpleBrush}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="122*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1"  StretchDirection="Both">
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeLarge}">
+                        <Button Content="Cofnij" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeXXLarge}"  FontFamily="{StaticResource MulishBold}">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToKalkulatorPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                    </TextBlock>
+                </Grid>
+            </Viewbox>
+            <Viewbox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Stretch="UniformToFill" StretchDirection="Both">
+                <Grid>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Matura" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMaturaPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToDzialyPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                        <TextBlock Grid.Column="3" Grid.Row="1" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZadaniaPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                        <TextBlock TextWrapping="Wrap" Grid.Column="4" Grid.Row="1" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Tablice matematyczne" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToWzoryPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Viewbox>
+            <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="{StaticResource MainPurpleBrush}">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Column="0" Grid.Row="0"  Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="15,5,15,0">
+                            <TextBlock Text="Funkcja kwadratowa" FontFamily="{StaticResource MulishBold}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeXXLarge}" TextWrapping="WrapWithOverflow" Grid.ColumnSpan="5" HorizontalAlignment="Center"  VerticalAlignment="Top" FontWeight="Bold" Padding="10"/>
+                            <Border BorderBrush="LightGray" BorderThickness="1">
+                                <TextBlock  Width="auto" Height="auto" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeLarge}" TextWrapping="WrapWithOverflow" Padding="50">
+            Kalkulator funkcji kwadratowej jest narzędziem, które nie tylko pomoże ci sprawdzić poprawność swoich rozwiązań, ale przede wszystkim w praktyczny sposób przeprowadzi cię przez proces analizy oraz zrozumienia funkcji, nad którą pracujesz. Zatrzymałeś się w zadaniu, o czymś zapomniałeś, albo po prostu chcesz poćwiczyć? Kalkulator przeliczy dla ciebie wszystkie istotne informacje na konkretnym przykładzie funkcji, której parametry podasz, pomoże też znaleźć jej postać ogólną, iloczynową oraz kanoniczną.
+                                </TextBlock>
+                            </Border>
+                        </StackPanel>
+                        <GroupBox Header="Postać ogólna funkcji kwadratowej" FontFamily="{StaticResource MulishRegular}" Width="auto" Background="{StaticResource MenuButtonBackgroundBrush}" HorizontalAlignment="Center" Foreground="{StaticResource ForegroundLightBrush}" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Margin="15" Padding="10">
+                            <StackPanel>
+                                <TextBlock Grid.Column="1" Grid.Row="1" TextAlignment="Center" Width="auto" VerticalAlignment="Bottom" Grid.ColumnSpan="2" ToolTip="Pamiętaj, że współczynnik a nie może wynosić 0!">
+                        Funkcja kwadratowa ma postać ogólną 
+                        <LineBreak/>
+                        <controls:FormulaControl Formula="y = ax^2 + bx + c" />
+                        <LineBreak/>
+                        Podaj jej współczynniki:
+                                </TextBlock>
+                                <TextBlock Text="Współczynnik a:" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Top" Padding="5"/>
+                                <TextBox x:Name="fieldA" Text="" Width="100" Grid.Column="2" Grid.Row="2" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Top" Background="LightGray" Padding="5" Margin="0,0,0,10" />
+                                <TextBlock Text="Współczynnik b:" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center"  VerticalAlignment="Top" Padding="5" />
+                                <TextBox x:Name="fieldB" Text="" Width="100" Grid.Column="2" Grid.Row="3" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Top" Background="LightGray" Padding="5" Margin="0,0,0,10" />
+                                <TextBlock Text="Współczynnik c:" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center"  VerticalAlignment="Top" Padding="5" />
+                                <TextBox x:Name="fieldC" Text="" Width="100" Grid.Column="2" Grid.Row="4" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Background="LightGray" Padding="5" Margin="0,0,0,10" />
+                                <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center">
+                                    <Button Click="ShowResult" x:Name="buttonPrzelicz" Grid.Column="1" Grid.Row="3" Content="Przelicz" Margin="10" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeXXLarge}" ToolTip="Sprawdź rozwiązanie dla wprowadzonych liczb!" FontFamily="Cavolini" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                                    <Button Click="ResetBtn" x:Name="buttonReset" Grid.Column="1" Grid.Row="3" Content="Reset" Margin="10" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeXXLarge}" ToolTip="Wyczyść wprowadzone dane i spróbuj ponownie" FontFamily="Cavolini" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox x:Name="groupResult" Visibility="Collapsed" Header="Rozwiązanie" FontFamily="{StaticResource MulishBold}" Foreground="{StaticResource ForegroundLightBrush}"  Width="auto" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10" FontSize="{StaticResource FontSizeLarge}" Padding="30">
+                            <StackPanel>
+                                <TextBlock Text="Postać ogólna funkcji kwadratowej:" FontWeight="DemiBold" TextBlock.Foreground="{StaticResource ForegroundDarkBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
+                                <TextBlock x:Name="pOgolna" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
+                                <TextBlock x:Name="result" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 0, 20" Padding="0"/>
+                                <TextBlock Text="Postać kanoniczna funkcji kwadratowej:" FontWeight="DemiBold" TextBlock.Foreground="{StaticResource ForegroundDarkBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
+                                <TextBlock x:Name="pKanoniczna" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 0, 20" Padding="0"/>
+                                <TextBlock Text="Postać iloczynowa funkcji kwadratowej:" FontWeight="DemiBold" TextBlock.Foreground="{StaticResource ForegroundDarkBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
+                                <TextBlock x:Name="pIloczynowa" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 0, 20" Padding="0"/>
+                                <TextBlock x:Name="pParable" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 0, 0, 20" Padding="0"/>
+                                <TextBlock Text="A teraz krok po kroku..."  HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="DemiBold" Margin="0, 20, 0, 0" Padding="0"/>
+                                <TextBlock x:Name="explanation1"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
+                                <TextBlock x:Name="explanation2"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
+                                <TextBlock x:Name="explanation3"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
+                                <TextBlock x:Name="explanation4"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
+                                <TextBlock x:Name="explanation5"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
+                                <TextBlock x:Name="explanation6"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
+                                <TextBlock x:Name="explanation7"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" xml:space="preserve">
+                                    <controls:FormulaControl Formula="p = \frac{-b}{2 \cdot a}" />          <controls:FormulaControl Formula="q = -\frac{\Delta}{4 \cdot a}"/>
+                                </TextBlock>
+                                <TextBlock x:Name="explanation8"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
+                                <TextBlock x:Name="explanation9"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
+                                <TextBlock x:Name="explanation10"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0"/>
+                            </StackPanel>
+                        </GroupBox>
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
+            <ContentControl Grid.Row="1" Grid.Column="1" Margin="10" Content="{Binding CurrentView}" Grid.ColumnSpan="2"/>
+        </Grid>
+    </Border>
 </Page>

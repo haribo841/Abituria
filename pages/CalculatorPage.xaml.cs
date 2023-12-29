@@ -23,6 +23,7 @@ namespace Abituria.pages
         public CalculatorPage()
         {
             InitializeComponent();
+            this.DataContext = new LoginViewModel();
         }
     }
 }

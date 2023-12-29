@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Abituria"
-      xmlns:viewModel="clr-namespace:Abituria.viewmodel"
+      xmlns:viewModel="clr-namespace:Abituria.viewmodel" d:DataContext="{d:DesignInstance Type=local:LoginViewModel}"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1000"
       Title="KalkulatorPage"
@@ -25,6 +25,11 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="62.5"/>
                 </Grid.RowDefinitions>
+                <Button Content="⮌" Background="Transparent" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeXXLarge}" Margin="-100" Padding="-100" Height="60" Width="60">
+                    <Button.InputBindings>
+                        <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMenuPage}"/>
+                    </Button.InputBindings>
+                </Button>
                 <Grid Grid.Row="0" Grid.Column="1">
                     <TextBlock Text="Wypróbuj nasz nowy kalkulator funkcji kwadratowej!" 
                                            HorizontalAlignment="Center"

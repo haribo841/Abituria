@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Abituria.pages"
-xmlns:viewModel="clr-namespace:Abituria.viewmodel" xmlns:abituria="clr-namespace:Abituria" d:DataContext="{d:DesignInstance Type=abituria:LoginViewModel}"
+      xmlns:viewModel="clr-namespace:Abituria.viewmodel" xmlns:abituria="clr-namespace:Abituria" d:DataContext="{d:DesignInstance Type=abituria:LoginViewModel}"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1000"
       Title="RegisterPage"
@@ -51,7 +51,19 @@ xmlns:viewModel="clr-namespace:Abituria.viewmodel" xmlns:abituria="clr-namespace
                         </StackPanel>
                     </Border>
                     <Button Style="{StaticResource TextButton}"
-	@@ -58,4 +65,4 @@
+                            FontSize="{StaticResource FontSizeLarge}"
+                            FontWeight="DemiBold"
+                            ToolTip="Zaloguj się"
+                            HorizontalAlignment="Center"
+                            Command="{Binding CurrentPage2}">
+                        <Button.InputBindings>
+                            <MouseBinding MouseAction="LeftClick" Command="{Binding GoToLoginPage}"/>
+                        </Button.InputBindings>
+                        <Button.Content>
+                            Cofnij
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
             </ScrollViewer>
         </Grid>
     </Border>

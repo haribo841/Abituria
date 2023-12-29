@@ -7,8 +7,270 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="FER21Page">
+    <Border Background="{StaticResource MainPurpleBrush}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="43*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Margin="24,0,5,0" >
+                <Grid Grid.Row="0" Grid.Column="0" Height="auto" Width="116" >
+                    <TextBlock Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeSmaller}"><InlineUIContainer>
+                            <Button Margin="25 10 0 0" Padding="0" Height="10" Width="40" Content="Cofnij" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeSmaller}"  FontFamily="{StaticResource MulishBold}" HorizontalAlignment="Center">
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMaturaPage}"/>
+                                </Button.InputBindings>
+                            </Button>
+                        </InlineUIContainer></TextBlock>
+                </Grid>
+            </Viewbox>
+            <Viewbox Grid.Row="0" Grid.Column="2" Stretch="Uniform" StretchDirection="Both">
+                <Grid>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Kalkulator" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToKalkulatorPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                        <TextBlock TextWrapping="Wrap" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Działy" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToDzialyPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                        <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Zadania" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZadaniaPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
+                        <TextBlock Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource MulishRegular}" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}">
+                        <Button Background="Transparent" BorderThickness="0" Content="Tablice matematyczne" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="Auto">
+                            <Button.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding GoToWzoryPage}"/>
+                            </Button.InputBindings>
+                        </Button>
+                        </TextBlock>
 
-    <Grid>
-        
-    </Grid>
+                    </StackPanel>
+                </Grid>
+            </Viewbox>
+            <Grid Background="Transparent" Grid.Column="0" Grid.Row="1">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True" IsEnabled="True">
+                    <Viewbox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" Stretch="UniformToFill" StretchDirection="Both">
+                        <StackPanel Orientation="Vertical" CanVerticallyScroll="True"  IsEnabled="True">
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 1" ToolTip="Zadanie 1" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ1Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 2" ToolTip="Zadanie 2" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ2Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 3" ToolTip="Zadanie 3" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ3Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 4" ToolTip="Zadanie 4" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ4Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 5" ToolTip="Zadanie 5" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ5Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 6" ToolTip="Zadanie 6" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ6Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 7" ToolTip="Zadanie 7" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ7Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 8" ToolTip="Zadanie 8" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ8Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 9" ToolTip="Zadanie 9" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ9Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 10" ToolTip="Zadanie 10" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ10Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 11" ToolTip="Zadanie 11" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ11Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 12" ToolTip="Zadanie 12" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ12Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 13" ToolTip="Zadanie 13" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ13Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 14" ToolTip="Zadanie 14" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ14Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 15" ToolTip="Zadanie 15" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ15Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 16" ToolTip="Zadanie 16" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ16Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 17" ToolTip="Zadanie 17" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ17Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 18" ToolTip="Zadanie 18" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ18Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 19" ToolTip="Zadanie 19" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ19Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 20" ToolTip="Zadanie 20" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToz20Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 21" ToolTip="Zadanie 21" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ21Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 22" ToolTip="Zadanie 22" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ22Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 23" ToolTip="Zadanie 23" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ23Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 24" ToolTip="Zadanie 24" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ24Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 25" ToolTip="Zadanie 25" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ25Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 26" ToolTip="Zadanie 26" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ26Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 27" ToolTip="Zadanie 27" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ27Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 28" ToolTip="Zadanie 28" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ28Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 29" ToolTip="Zadanie 29" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ29Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 30" ToolTip="Zadanie 30" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ30Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 31" ToolTip="Zadanie 31" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ31Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 32" ToolTip="Zadanie 32" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ32Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 33" ToolTip="Zadanie 33" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ33Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 34" ToolTip="Zadanie 34" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ34Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                            <Button Background="Transparent" BorderThickness="0" Width ="auto" Content="Zadanie 35" ToolTip="Zadanie 35" FontFamily="Cavolini" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZ35Page}"/>
+                                </Button.InputBindings>
+                            </Button>
+                        </StackPanel>
+                    </Viewbox>
+                </ScrollViewer>
+            </Grid>
+            <Border Grid.Row="1" Grid.Column="2"  BorderThickness="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.05*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="0.05*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.05*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0.1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                        <TextBlock FontSize="22" Margin="20" HorizontalAlignment="Stretch" Foreground="{StaticResource ForegroundLightBrush}" VerticalAlignment="Stretch" TextWrapping="WrapWithOverflow">
+                            Matura poprawkowa jest egzaminem przysługującym maturzystom, którzy przystąpili do egzaminu ze wszystkich przedmiotów obowiązkowych i nie zdali egzaminu z wyłącznie jednego przedmiotu obowiązkowego. 
+                            <LineBreak/><LineBreak/>
+                            Arkusz maturalny zawiera 28 zadań zamkniętych oraz 7 zadań otwartych. <LineBreak/> Łącznie możesz zdobyć 45 punktów, a sugerowany maksymalny czas rozwiązywania to 170 minut.
+                            Zaliczenie egzaminu jest możliwe po zdobyciu minimum 30% możliwych do zdobycia punktów.<LineBreak/><LineBreak/>
+                    W tym roku maturę zdało 74,5% maturzystów. Oznacza to, że egzaminu maturalnego nie zaliczyło 25,5% przystępujących do egzaminu osób. <LineBreak/><LineBreak/> Osoby, które nie zdały tylko jednego z przedmiotów obowiązkowych mają prawo do poprawki. 7,8% zdających nie ma możliwości poprawy egzaminu.
+                        </TextBlock>
+                    </Grid>
+                </Grid>
+            </Border>
+            <ContentControl Grid.Row="1" Grid.Column="2" Margin="3,10,10,10" Content="{Binding CurrentView}"/>
+        </Grid>
+    </Border>
 </Page>

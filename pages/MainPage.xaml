@@ -3,31 +3,24 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Abituria.pages"
-      xmlns:viewModel="clr-namespace:Abituria.viewmodel"
+      xmlns:local="clr-namespace:Abituria" d:DataContext="{d:DesignInstance Type=local:LoginViewModel}"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1000"
       Title="MainPage"
       Background="Transparent">
-
     <Border Background="{StaticResource MainPurpleBrush}">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="75"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock Text="mniam mniam" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeLarge}" Margin="20,0,0,0"/>
-            <StackPanel Grid.Row="1">
-                <RadioButton Content="1" Height="50" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}" Style="{StaticResource MenuButton}"/>
-                <RadioButton Content="2" Height="50" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}" Style="{StaticResource MenuButton}"/>
-                <RadioButton Content="3" Height="50" Foreground="{StaticResource ForegroundLightBrush}" FontSize="{StaticResource FontSizeRegular}" Style="{StaticResource MenuButton}"/>
-            </StackPanel>
-            <TextBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="{StaticResource FontSizeRegular}" Margin="5" Style="{StaticResource ModernTextBox}"/>
-            <ContentControl Grid.Row="1" Grid.Column="1" Margin="10" Content="{Binding CurrentView}"/>
+            <Grid Grid.Row="0" Grid.Column="0">
+                <local:HomeView>
+                    <Button>UserControl</Button>
+                </local:HomeView>
+            </Grid>
         </Grid>
     </Border>
 </Page>

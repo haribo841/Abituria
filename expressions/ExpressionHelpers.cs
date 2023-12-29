@@ -16,9 +16,9 @@ namespace Abituria.expressions
         }
         public static void SetPropertyValue<T>(this Expression<Func<T>> lambda, T value)///Ustawia właściwości z wyrrażenia
         {
-            var expression = (lambda as LambdaExpression).Body as MemberExpression;///Konwertuje lambda()=>jakaś.Właściwość na jakaś.Właściwość
-            var propertyInfo = (PropertyInfo)expression.Member;///Weź informacje o właściwości
-            var target = Expression.Lambda(expression.Expression).Compile().DynamicInvoke();
+            MemberExpression? expression = (lambda as LambdaExpression).Body as MemberExpression;///Konwertuje lambda()=>jakaś.Właściwość na jakaś.Właściwość
+            PropertyInfo propertyInfo = (PropertyInfo)expression.Member;///Weź informacje o właściwości
+            object? target = Expression.Lambda(expression.Expression).Compile().DynamicInvoke();
             propertyInfo.SetValue(target, value);/// Ustaw wartość właściwości
         }
     }
