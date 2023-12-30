@@ -54,8 +54,8 @@
                             FontSize="{StaticResource FontSizeLarge}"
                             FontWeight="DemiBold"
                             ToolTip="Zaloguj się"
-                            HorizontalAlignment="Center"
-                            Command="{Binding CurrentPage2}">
+                            HorizontalAlignment="Center">
+                        <!--="{Binding CurrentPage2}"-->
                         <Button.InputBindings>
                             <MouseBinding MouseAction="LeftClick" Command="{Binding GoToLoginPage}"/>
                         </Button.InputBindings>

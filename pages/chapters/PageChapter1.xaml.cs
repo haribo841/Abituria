@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace Abituria.pages.chapters
 {
     /// <summary>
-    /// Interaction logic for ChaptersPage.xaml
+    /// Interaction logic for PageChapter1.xaml
     /// </summary>
-    public partial class ChaptersPage : Page
+    public partial class PageChapter1 : Page
     {
-        public ChaptersPage()
+        public PageChapter1()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Abituria.pages
         public MainPage()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
+            DataContext = new LoginViewModel();
         }
     }
 }

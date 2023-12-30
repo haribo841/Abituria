@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Abituria.pages.chapters
+namespace Abituria.pages.equations
 {
     /// <summary>
-    /// Interaction logic for ChaptersPage.xaml
+    /// Interaction logic for EquationsPage.xaml
     /// </summary>
-    public partial class ChaptersPage : Page
+    public partial class EquationsPage : Page
     {
-        public ChaptersPage()
+        public EquationsPage()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
         }
     }
 }

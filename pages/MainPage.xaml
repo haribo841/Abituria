@@ -9,18 +9,383 @@
       Title="MainPage"
       Background="Transparent">
     <Border Background="{StaticResource MainPurpleBrush}">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Grid.Column="0">
-                <local:HomeView>
-                    <Button>UserControl</Button>
-                </local:HomeView>
+        <Viewbox>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock x:Name="Greeting"
+                                   Tag="Greeting"
+                                   Text="{Binding Greeting}"
+                                   Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                   FontSize="{StaticResource FontSizeXXLarge}"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,10,0,0"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="62.5"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="62.5"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="62.5"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Column="1" Grid.Row="1">
+                            <Border Width="500" Height="300" CornerRadius="10" HorizontalAlignment="Left">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                        <GradientStop Color="DodgerBlue" Offset="0.0"/>
+                                        <GradientStop Color="Indigo" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Border.Clip>
+                                    <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,500,300"/>
+                                </Border.Clip>
+                                <Grid>
+                                    <Button Name="ButtonMatura" 
+                                                Background="Transparent" 
+                                                Foreground="White" 
+                                                Width="auto"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                ToolTip="Zobacz arkusze i rozwiązywanie zadań!">
+                                        <Button.InputBindings>
+                                            <MouseBinding MouseAction="LeftClick" Command="{Binding GoToMaturaPage}"/>
+                                        </Button.InputBindings>
+                                        <StackPanel>
+                                            <TextBlock Text="Matura" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="100,10,10,0"/>
+                                            <TextBlock Text="Rozwiąż arkusze maturalne" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="20,10,10,0"/>
+                                        </StackPanel>
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter Content="{TemplateBinding Content}"/>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Image Width="250"
+                                               Height="250"
+                                               Source="/img/matura.png"
+                                               HorizontalAlignment="Right"
+                                               VerticalAlignment="Bottom"
+                                               Margin="0,0,-66,-25"
+                                               RenderTransformOrigin="0.5,0.5">
+                                        <Image.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform/>
+                                                <SkewTransform/>
+                                                <RotateTransform Angle="-155"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </Image.RenderTransform>
+                                    </Image>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        <Grid Grid.Column="2" Grid.Row="1">
+                            <Border Width="300" Height="300" CornerRadius="10" HorizontalAlignment="Right">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                        <GradientStop Color="Goldenrod" Offset="0.0"/>
+                                        <GradientStop Color="Red" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Border.Clip>
+                                    <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,300,300"/>
+                                </Border.Clip>
+                                <Grid>
+                                    <Button Name="ButtonCalculator" 
+                                                Background="Transparent" 
+                                                Foreground="White" 
+                                                Width="auto"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                ToolTip="Zaawansowany kalkulator do wykonania dowolnego obliczenia matematycznego">
+                                        <Button.InputBindings>
+                                            <MouseBinding MouseAction="LeftClick" Command="{Binding GoToKalkulatorPage}"/>
+                                        </Button.InputBindings>
+                                        <StackPanel>
+                                            <TextBlock Text="Kalkulator" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,10,10,0"/>
+                                            <TextBlock Text="funkcja kwadratowa" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="20,10,10,0"/>
+                                        </StackPanel>
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter Content="{TemplateBinding Content}"/>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Image Width="250"
+                                               Height="250"
+                                               Source="/img/kalkulator.png"
+                                               HorizontalAlignment="Right"
+                                               VerticalAlignment="Bottom"
+                                               Margin="0,0,-86,-33"
+                                               RenderTransformOrigin="0.5,0.5">
+                                        <Image.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform/>
+                                                <SkewTransform/>
+                                                <RotateTransform Angle="27.382"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </Image.RenderTransform>
+                                    </Image>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="62.5"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="62.5"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="62.5"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="62.5"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" Grid.Column="1">
+                            <TextBlock Text="Witaj w programie ABITURIA, twoim matematycznym korepetytorze." 
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                           FontSize="{StaticResource FontSizeLarge}"/>
+                        </Grid>
+                        <Grid Grid.Column="1" Grid.Row="1">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border Width="190" Height="190" CornerRadius="10" Margin="0,0,30,0">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                            <GradientStop Color="BlueViolet" Offset="0.0"/>
+                                            <GradientStop Color="MidnightBlue" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                    <Button Name="ButtonLogin" 
+                                                Background="Transparent" 
+                                                Foreground="White" 
+                                                Width="auto"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                ToolTip="Zaawansowany kalkulator do wykonania dowolnego obliczenia matematycznego">
+                                        <Button.InputBindings>
+                                            <MouseBinding MouseAction="LeftClick" Command="{Binding GoToLoginPage}"/>
+                                        </Button.InputBindings>
+                                        <StackPanel>
+                                            <TextBlock Text="Zmień" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,10,10,0"/>
+                                            <TextBlock Text="Profil" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="20,10,10,0"/>
+                                            <Image Width="121"
+                                               Height="171"
+                                               Source="/img/zmien.png"
+                                               HorizontalAlignment="Right"
+                                               VerticalAlignment="Stretch"
+                                               Margin="0,-60,-23,0"
+                                               RenderTransformOrigin="0.576,-0.234">
+                                                <Image.RenderTransform>
+                                                    <TransformGroup>
+                                                        <ScaleTransform/>
+                                                        <SkewTransform/>
+                                                        <RotateTransform Angle="-9.476"/>
+                                                        <TranslateTransform X="0" Y="0"/>
+                                                    </TransformGroup>
+                                                </Image.RenderTransform>
+                                            </Image>
+
+                                        </StackPanel>
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter Content="{TemplateBinding Content}"/>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                </Border>
+                                <Border Width="190" Height="190" CornerRadius="10" Margin="0,0,30,0">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                            <GradientStop Color="DodgerBlue" Offset="0.0"/>
+                                            <GradientStop Color="MidnightBlue" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                    <Button Name="ButtonDzialy" 
+                                                Background="Transparent" 
+                                                Foreground="White" 
+                                                Width="auto"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                ToolTip="Zaawansowany kalkulator do wykonania dowolnego obliczenia matematycznego">
+                                        <Button.InputBindings>
+                                            <MouseBinding MouseAction="LeftClick" Command="{Binding GoToDzialyPage}"/>
+                                        </Button.InputBindings>
+                                        <StackPanel>
+                                            <TextBlock Text="Działy" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,10,10,0"/>
+                                            <TextBlock Text="Czysta teoria" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="20,10,10,0"/>
+                                            <Image Width="105"
+                                               Height="205"
+                                               Source="/img/dzialy.png"
+                                               HorizontalAlignment="Right"
+                                               VerticalAlignment="Stretch"
+                                               Margin="0,-60,-4,0"
+                                               RenderTransformOrigin="0.576,-0.234">
+                                                <Image.RenderTransform>
+                                                    <TransformGroup>
+                                                        <ScaleTransform/>
+                                                        <SkewTransform/>
+                                                        <RotateTransform Angle="-9.476"/>
+                                                        <TranslateTransform X="0" Y="0"/>
+                                                    </TransformGroup>
+                                                </Image.RenderTransform>
+                                            </Image>
+
+                                        </StackPanel>
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter Content="{TemplateBinding Content}"/>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                </Border>
+                                <Border Width="190" Height="190" CornerRadius="10" Margin="0,0,30,0">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                            <GradientStop Color="SpringGreen" Offset="0.0"/>
+                                            <GradientStop Color="MidnightBlue" Offset="1"/>
+                                        </LinearGradientBrush>
+
+                                    </Border.Background>
+                                    <Button Name="ButtonZadania" 
+                                                Background="Transparent" 
+                                                Foreground="White" 
+                                                Width="auto"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                ToolTip="Zaawansowany kalkulator do wykonania dowolnego obliczenia matematycznego">
+                                        <Button.InputBindings>
+                                            <MouseBinding MouseAction="LeftClick" Command="{Binding GoToZadaniaPage}"/>
+                                        </Button.InputBindings>
+                                        <StackPanel>
+                                            <TextBlock Text="Zadania" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,10,10,0"/>
+                                            <TextBlock Text="Czysta praktyka" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="20,10,10,0"/>
+                                            <Image Width="85"
+                                               Height="198"
+                                               Source="/img/zadania.png"
+                                               HorizontalAlignment="Right"
+                                               VerticalAlignment="Stretch"
+                                               Margin="0,-60,-21,0"
+                                               RenderTransformOrigin="0.576,-0.234">
+                                                <Image.RenderTransform>
+                                                    <TransformGroup>
+                                                        <ScaleTransform/>
+                                                        <SkewTransform/>
+                                                        <RotateTransform Angle="-9.476"/>
+                                                        <TranslateTransform X="0" Y="0"/>
+                                                    </TransformGroup>
+                                                </Image.RenderTransform>
+                                            </Image>
+
+                                        </StackPanel>
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter Content="{TemplateBinding Content}"/>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                </Border>
+                                <Border Width="190" Height="190" CornerRadius="10" Margin="0,0,0,0">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                            <GradientStop Color="Gold" Offset="0.0"/>
+                                            <GradientStop Color="Crimson" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                    <Button Name="ButtonWzory" 
+                                                Background="Transparent" 
+                                                Foreground="White" 
+                                                Width="auto"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                ToolTip="Zaawansowany kalkulator do wykonania dowolnego obliczenia matematycznego">
+                                        <Button.InputBindings>
+                                            <MouseBinding MouseAction="LeftClick" Command="{Binding GoToWzoryPage}"/>
+                                        </Button.InputBindings>
+                                        <StackPanel>
+                                            <TextBlock Text="Wzory" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeXXLarge}"
+                                                       Margin="20,10,10,0"/>
+                                            <TextBlock Text="Tablice" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="20,10,10,0"/>
+                                            <TextBlock Text="matematyczne" 
+                                                       Foreground="{StaticResource BackgroundVeryLightBrush}"
+                                                       FontSize="{StaticResource FontSizeLarge}"
+                                                       Margin="20,0,10,0"/>
+                                            <Image Width="67"
+                                               Height="172"
+                                               Source="/img/wzory.png"
+                                               HorizontalAlignment="Right"
+                                               VerticalAlignment="Stretch"
+                                               Margin="0,-60,8,0"
+                                               RenderTransformOrigin="0.576,-0.234">
+                                                <Image.RenderTransform>
+                                                    <TransformGroup>
+                                                        <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                                                        <SkewTransform/>
+                                                        <RotateTransform Angle="-559.871"/>
+                                                        <TranslateTransform X="0" Y="0"/>
+                                                    </TransformGroup>
+                                                </Image.RenderTransform>
+                                            </Image>
+
+                                        </StackPanel>
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <ContentPresenter Content="{TemplateBinding Content}"/>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                </Border>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Grid>
             </Grid>
-        </Grid>
+        </Viewbox>
+
     </Border>
 </Page>

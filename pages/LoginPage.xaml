@@ -5,7 +5,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Abituria" d:DataContext="{d:DesignInstance Type=local:LoginViewModel}"
-                mc:Ignorable="d"     
+                  mc:Ignorable="d"
                 x:Name="Page"
                 d:DesignHeight="800" d:DesignWidth="1000"
                 Title="LoginPage">
@@ -18,7 +18,9 @@
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                 <!--Scroll z główną zawartością-->
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.TextAlignment="Center">
-                    <Border Background="{StaticResource ForegroundLightBrush}" CornerRadius="10" Padding="15 50 15 15" Width="400" Margin="50 50 50 0">
+                    <Border Background="{StaticResource ForegroundLightBrush}"
+                            CornerRadius="10"
+                            Padding="15 50 15 15" Width="400" Margin="50 50 50 0" Height="400">
                         <!--Główne pudełko od logowania-->
                         <StackPanel>
                             <TextBlock Text="Zaloguj się"
@@ -48,23 +50,18 @@
                                     ToolTip="Przejdź dalej"
                                     Content="Dalej"
                                     HorizontalAlignment="Center"/>
-                            <!--Guzik od przechodzenia dalej-->
-                        </StackPanel>
-                    </Border>
-                    <Button Style="{StaticResource TextButton}"
+                            <Button Style="{StaticResource TextButton}"
                             FontSize="{StaticResource FontSizeLarge}"
                             FontWeight="DemiBold"
                             ToolTip="Załóż konto i zachowaj swoje postępy!"
-                            HorizontalAlignment="Center">
-                        <Button.InputBindings>
-                            <MouseBinding MouseAction="LeftClick" Command="{Binding GoToRegisterPage}"/>
-                        </Button.InputBindings>
-                        <Button.Content>
-                            Nie mam konta
-                        </Button.Content>
-                    </Button>
+                            HorizontalAlignment="Center" Margin="60,10,60,0">
+                                <Button.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding GoToRegisterPage}"/>
+                                </Button.InputBindings> Nie mam konta
+                            </Button>
+                            <!--Guzik od przechodzenia dalej-->
+                        </StackPanel>
+                    </Border>
                 </StackPanel>
             </ScrollViewer>
         </Grid>
-    </Border>
-</local:BasePage>

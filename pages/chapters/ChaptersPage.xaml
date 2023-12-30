@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Abituria"
-      xmlns:viewModel="clr-namespace:Abituria.viewmodel"
+      xmlns:viewModel="clr-namespace:Abituria.viewmodel" d:DataContext="{d:DesignInstance Type=local:LoginViewModel}"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1000"
       Title="DzialyPage"
@@ -26,7 +26,7 @@
                     <RowDefinition Height="62.5"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Grid.Column="1">
-                    <TextBlock Text="Działy matematyki" 
+                    <TextBlock Text="Dzialy matematyki" 
                                            HorizontalAlignment="Center"
                                            VerticalAlignment="Center"
                                            Foreground="{StaticResource BackgroundVeryLightBrush}"
@@ -81,7 +81,7 @@
                                                 Width="auto"
                                                 BorderBrush="Transparent"
                                                 BorderThickness="0"
-                                                ToolTip="Zawartość dostępna wktótce!">
+                                                ToolTip="Zawartosc dostepna wktótce!">
                                     <StackPanel>
                                         <TextBlock Text="Rachunek" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
@@ -90,13 +90,13 @@
                                         <TextBlock Text="zbiorów i " 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="10,5,10,0"/>
+                                                       Margin="10,0,10,0"/>
                                         <TextBlock Text="logika" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="10,5,10,0"/>
+                                                       Margin="10,0,10,0"/>
 
-                                        <TextBlock Text="Niedostępne" 
+                                        <TextBlock Text="Niedostepne" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeLarge}"
                                                        Margin="20,35,10,0"/>
@@ -125,7 +125,7 @@
                                                 Width="auto"
                                                 BorderBrush="Transparent"
                                                 BorderThickness="0"
-                                                ToolTip="Zawartość dostępna wktótce!">
+                                                ToolTip="Zawartosc dostepna wktótce!">
                                 <StackPanel>
                                     <TextBlock Text="Równania" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
@@ -134,16 +134,15 @@
                                     <TextBlock Text="i" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,5,10,0"/>
-                                    <TextBlock Text="nierówności" 
+                                                       Margin="20,0,10,0"/>
+                                    <TextBlock Text="nierównosci" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
-                                                       Margin="20,5,10,0"/>
-
-                                    <TextBlock Text="Niedostępne" 
+                                                       Margin="20,0,10,0"/>
+                                    <TextBlock Text="Niedostepne" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeLarge}"
-                                                       Margin="20,15,10,0"/>
+                                                       Margin="20,30,10,0"/>
                                 </StackPanel>
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
@@ -164,9 +163,9 @@
                                                 Width="auto"
                                                 BorderBrush="Transparent"
                                                 BorderThickness="0"
-                                                ToolTip="Zawartość dostępna wktótce!">
+                                                ToolTip="Zawartosc dostepna wktótce!">
                                 <StackPanel>
-                                    <TextBlock Text="Ciągi" 
+                                    <TextBlock Text="Ciagi" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeXXLarge}"
                                                        Margin="10,10,10,0"/>
@@ -175,7 +174,7 @@
                                                        FontSize="{StaticResource FontSizeXXLarge}"
                                                        Margin="10,5,10,0"/>
 
-                                    <TextBlock Text="Niedostępne" 
+                                    <TextBlock Text="Niedostepne" 
                                                        Foreground="{StaticResource BackgroundVeryLightBrush}"
                                                        FontSize="{StaticResource FontSizeLarge}"
                                                        Margin="20,60,10,0"/>
@@ -192,5 +191,4 @@
             </Grid>
         </Viewbox>
     </Border>
-
 </Page>

@@ -18,9 +18,4 @@
     </Compile>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="pages\equations\" />
-    <Folder Include="pages\finalexams\E\" />
-  </ItemGroup>
-
 </Project>
