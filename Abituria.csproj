@@ -18,4 +18,8 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="pages\exercises\" />
+  </ItemGroup>
+
 </Project>

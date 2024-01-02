@@ -42,7 +42,7 @@ namespace Abituria
         private void ButtonMatura(object sender, RoutedEventArgs e)
         {
             NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("Menu/Matura/PageMaturaYears.xaml", UriKind.Relative);
+            window.Source = new Uri("Menu/FinalExam/PageMaturaYears.xaml", UriKind.Relative);
             window.Show();
             this.Visibility = Visibility.Hidden;
         }

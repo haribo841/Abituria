@@ -39,7 +39,7 @@ namespace Abituria.Menu.Calculators
             {
                 if (a == 0)
                 {
-                    DisplayErrorMessage("W każdej funkcji kwadratowej współczynnik a powinien być liczbą rzeczywistą różną od 0! Spróbuj jeszcze raz.");
+                    DisplayErrorMessage("Eq każdej funkcji kwadratowej współczynnik a powinien być liczbą rzeczywistą różną od 0! Spróbuj jeszcze raz.");
                     Reset();
                     return;
                 }
@@ -178,7 +178,7 @@ Sama znajomość delty da nam już bardzo dużo, bo dowiemy się ile pierwiastk�
 
 Pod uwagę bierzemy zawsze jeden z trzech przypadków.
 
-W tym przypadku, {deltaText}.
+Eq tym przypadku, {deltaText}.
 Znając współczynniki funkcji kwadratowej, możemy przekształcić jej postać ogólną do postaci kanonicznej lub iloczynowej. Postać kanoniczna funkcji kwadratowej wyrażona jest wzorem:
 ";
             explanation4.Text = explained4;

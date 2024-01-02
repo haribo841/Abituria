@@ -248,7 +248,7 @@ Sama znajomość delty da nam już bardzo dużo, bo dowiemy się ile pierwiastk�
 ◍ Δ > 0 oznaczać będzie, że funkcja ma dwa rozwiązania - miejsca zerowe 𝑥{specialScript[1]} oraz 𝑥{specialScript[2]},
 ◍ Δ = 0 funkcja ma jedno rozwiązanie, gdzie 𝑥{specialScript[0]} jest jedynym miejscem zerowym,
 ◍ Δ < 0 funkcja nie posiada miejsc zerowych.
-W tym przypadku, {delText}. 
+Eq tym przypadku, {delText}. 
 Znając współczynniki funkcji kwadratowej, możemy przekształcić jej postać ogólną do postaci kanonicznej lub iloczynowej. Postać kanoniczna funkcji kwadratowej wyrażona jest wzorem:
 ";
             explanation4.Text = explained4;
