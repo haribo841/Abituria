@@ -1,25 +1,33 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <UseWPF>true</UseWPF>
+    <RootNamespace>Abituria</RootNamespace>
+    <AssemblyName>Abituria</AssemblyName>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <AvaloniaUseCompiledBindingsByDefault>false</AvaloniaUseCompiledBindingsByDefault>
+    <NuGetAudit>false</NuGetAudit>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
-    <PackageReference Include="WpfMath" Version="2.1.0" />
+    <PackageReference Include="Avalonia" Version="12.0.4" />
+    <PackageReference Include="Avalonia.BuildServices" Version="11.3.2" ExcludeAssets="build;buildTransitive;analyzers" PrivateAssets="all" />
+    <PackageReference Include="Avalonia.Desktop" Version="12.0.4" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="12.0.4" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="12.0.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Menu\PageChapters.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="AvaloniaApp\**\*.cs" />
+    <AvaloniaXaml Include="AvaloniaApp\**\*.axaml" />
+    <AvaloniaResource Include="img\**\*.*" />
+    <AvaloniaResource Include="fonts\**\*.ttf" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="pages\exercises\" />
-  </ItemGroup>
-
+  <Target Name="DisableAvaloniaBuildStats" BeforeTargets="AvaloniaStats">
+    <PropertyGroup>
+      <UsedAvaloniaProducts></UsedAvaloniaProducts>
+    </PropertyGroup>
+  </Target>
 </Project>
