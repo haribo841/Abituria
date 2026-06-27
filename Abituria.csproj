@@ -3,6 +3,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Abituria</RootNamespace>
     <AssemblyName>Abituria</AssemblyName>
     <EnableDefaultItems>false</EnableDefaultItems>
@@ -16,11 +17,16 @@
     <PackageReference Include="Avalonia.Desktop" Version="12.0.4" />
     <PackageReference Include="Avalonia.Themes.Fluent" Version="12.0.4" />
     <PackageReference Include="Avalonia.Fonts.Inter" Version="12.0.4" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.17" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.17" />
+    <PackageReference Include="Sylinko.CSharpMath.Avalonia" Version="12.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Include="AvaloniaApp\**\*.cs" />
     <AvaloniaXaml Include="AvaloniaApp\**\*.axaml" />
+    <AvaloniaResource Include="Content\**\*.json" />
     <AvaloniaResource Include="img\**\*.*" />
     <AvaloniaResource Include="fonts\**\*.ttf" />
   </ItemGroup>

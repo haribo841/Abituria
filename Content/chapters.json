@@ -1,0 +1,107 @@
+﻿{
+    "schemaVersion":  1,
+    "chapters":  [
+                     {
+                         "id":  "vectors",
+                         "title":  "Wektory",
+                         "status":  "available",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Podstawowa wiedza o wektorach\n\nWektor - to uporządkowana para punktów (strzałka wyznaczona przez dwa punkty)."
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/1.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Rys. 1 Wektor wyznaczony przez dwa punkty\n\nWektor ma trzy cechy, które go jednoznacznie wyznaczają:\n\n\\(\\cdot\\)długość (czasami inaczej zwana modułem lub wartością)\n\\(\\cdot\\)kierunek (kierunek prostej zawierającej wektor)\n\\(\\cdot\\)zwrot (grot strzałki)\n\nJeżeli znamy punkt w którym wektor ma początek, to taki wektor nazywamy wektorem zaczepionym.\nWektor zaczepiony w punkcie \\(A\\,\\) i o końcu w punkcie \\(\\,B\\,\\) zapiszemy tak: \\(\\:\\vec{AB}\\).\nJeżeli wektor może być opisany tylko przez długość, kierunek i zwrot. Wtedy taki wektor nazywamy wektorem swobodnym i oznaczamy najczęściej małymi literami, np. tak: \\(\\:\\vec{v},\\vec{u},\\vec{w}\\)."
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/2.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Rys. 2 Wektory swobodne\n\nPojęcia: wektor zaczepiony oraz wektorem swobodnym są w praktyce rzadko stosowane. Najczęściej oba rodzaje wektorów określa się krótko pojęciem: wektor.\n\nPrzykład 1.\n\nW równoległoboku \\(\\:ABCD\\) wektory zaczepione \\(\\:\\vec{AD}\\) i \\(\\:\\vec{BC}\\) wyznaczają ten sam wektor swobodny:"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/3.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Rys. 3 Wektory w równoległoboku\n\nPodobnie wektory \\(\\:\\vec{AB}\\:\\) i \\(\\:\\vec{DC}\\:\\) wyznaczają ten sam wektor swobodny.\nZauważmy, że kolejność punktów ma znaczenie. Wektor \\(\\:\\vec{CD}\\:\\) ma przeciwny zwrot do wektora \\(\\:\\vec{DC}\\).\nZatem wektory \\(\\:\\vec{AB}\\:\\) i \\(\\:\\vec{CD}\\:\\) nie wyznaczają tego samego wektora swobodnego.\nWspółrzędne wektora zapisujemy w nawiasach kwadratowych, np.:\n\n\\(\\:\\vec{v}=[3,4]\\:\\)\n\\(\\:\\vec{AB}=[2,-1]\\:\\)\nPierwsza współrzędna oznacza przesunięcie wzdłuż osi \\(\\:Ox\\), a druga wzdłuż osi \\(\\:Oy\\).\n\nPrzykład 2.\n\nNarysujmy wektory: \\(\\:\\vec{v}=[3,4]\\:\\) oraz \\(\\:\\vec{AB}=[2,-1]\\):"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/4.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Rys. 4 Współrzędne wektorów\n\nWspółrzędna \\(\\:y\\)-owa wektora \\(\\:\\vec{AB}\\:\\) jest ujemna i dlatego przesuwamy się w dół. Na rysunku pionowe przesunięcie zostało podpisane dodatnią liczbą \\(\\:1\\), ponieważ długość odcinka jest zawsze dodatnia.\n\nJeżeli mamy \\(\\:A=(x_1,y_1)\\,\\) oraz \\(\\:B=(x_2,y_2)\\,\\) to:\n\n\\(\\:\\vec{AB}=[x_2-x_1,y_2-y_1]\\)\nDługość wektora o danych współrzędnych \\(\\:\\vec{AB}=[x,y]\\:\\) obliczamy ze wzoru:\n\n\\(\\mid{\\vec{AB}}\\mid{}=\\sqrt{x^2+y^2}\\)\n\nPrzykład 3.\n\nOblicz współrzędne wektora o początku w punkcie \\(\\:A=(5,2)\\,\\) i końcu w punkcie \\(\\:B=(-3,8)\\). Oblicz długość wektora \\(\\:\\vec{AB}\\:\\).\n\nRozwiązanie:\n\nNajpierw liczymy współrzędne wektora:\n\n\\(\\:\\vec{AB}=[x_2-x_1,y_2-y_1]\\)"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/5.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Rys. 5 Wektor w układzie współrzędnych\n\nTeraz możemy obliczyć jego długość:\n\n\\(\\mid{\\vec{AB}}\\mid{}=\\sqrt{(-8)^2+6^2}=\\sqrt{64+36}=\\sqrt{100}=10\\)\n\nWektor przeciwny - to taki, który ma współrzędne przeciwnych znaków.\nJeżeli wektory \\(\\:\\vec{v}\\) i \\(\\:\\vec{u}\\) są przeciwne, to mają tą samą długość i kierunek, ale przeciwne zwroty."
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/6.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Rys. 6 Wektory przeciwne\n\nPrzykład 4.\nZnajdź wektor przeciwny \\(\\:\\vec{u}\\:\\)do wektora:\n\na) \\(\\:\\vec{v}=[5,11]\\)\n\nb) \\(\\:\\vec{v}=[-4,0]\\)\n\nc) \\(\\:\\vec{v}=[-\\frac{1}{2},3]\\)\n\nRozwiązanie:\n\na) \\(\\:\\vec{u}=-\\vec{v}=[-5,-11]\\)\n\nb) \\(\\:\\vec{u}=-\\vec{v}=[4,0]\\)\n\nc) \\(\\:\\vec{u}=-\\vec{v}=[\\frac{1}{2},-3]\\)\n\nDodawanie wektorów wykonujemy dodając ich współrzędne.\n\nPrzykład 5.\n\nWykonaj dodawanie wektorów \\(\\:\\vec{v}=[2,3]\\) i \\(\\:\\vec{u}=[4,-1]\\)\n\nRozwiązanie:\n\n\\(\\:\\vec{v}+\\vec{w}=[2,3]+[4,-1]=[2+4,3+(-1)]=[6,2]\\)"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/7.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Rys. 7 Dodawanie wektorów - interpretacja graficzna\n\nOdejmowanie wektorów wykonujemy odejmując ich współrzędne.\n\nPrzykład 6.\n\nWykonaj odejmowanie wektorów \\(\\:\\vec{v}=[2,3]\\) i \\(\\:\\vec{u}=[4,-1]\\)\n\nRozwiązanie:\n\n\\(\\:\\vec{v}-\\vec{w}=[2,3]-[4,-1]=[2-4,3-(-1)]=[-2,4]\\)"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/8.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Rys. 8 Odejmowanie wektorów - interpretacja graficzna\n\nPodstawowa wiedza o wektorach\n\nIloczyn skalarny wektorów \\(\\:\\vec{a}=(a_1,a_2)\\,\\) i \\(\\:\\vec{b}=(b_1,b_2)\\,\\) - to liczba, którą obliczamy dodając iloczyny odpowiednich współrzędnych:\n\n\\(\\:\\vec{a}\\circ\\vec{b}=a_1\\cdot{b_1}+a_2\\cdot{b_2}\\)\nIloczyn skalarny możemy również obliczyć znając długości wektorów \\(\\:\\mid\\vec{a}\\mid\\) i \\(\\:\\mid\\vec{b}\\mid\\) oraz kąt \\(\\:\\alpha\\:\\) między nimi:\n\n\\(\\:\\vec{a}\\circ\\vec{b}=\\mid\\vec{a}\\mid\\cdot\\mid\\vec{b}\\mid\\cdot\\:{cos{\\:\\alpha}}\\)\n\nPrzykład 1.\n\nOblicz iloczyn skalarny wektorów \\(\\:\\vec{v}=[1,2]\\) oraz \\(\\:\\vec{w}=[3,-5]\\).\n\nRozwiązanie:\n\n\\(\\:\\vec{v}\\circ\\vec{w}=[1,2]\\circ[3,-5]=1\\cdot3+2\\cdot(-5)=3-10=-7\\)\n\nPrzykład 2.\n\nKąt między wektorami \\(\\:\\vec{d}\\) i \\(\\:\\vec{e}\\) jest równy \\(60^{\\circ}\\). Ponadto \\(\\:\\mid\\vec{d}\\mid{}=3\\) i \\(\\:\\mid\\vec{e}\\mid{}=4\\) Oblicz \\(\\:\\vec{d}\\circ\\vec{e}\\).\n\nRozwiązanie:\n\n\\(\\:\\vec{d}\\circ\\vec{e}=\\mid\\vec{d}\\mid\\cdot\\mid\\vec{e}\\mid\\cdot\\:{cos{\\:60}^\\circ}=3\\cdot4\\cdot\\frac{1}{2}=6\\)"
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "chapter-1",
+                         "title":  "Dział I",
+                         "status":  "placeholder",
+                         "message":  "Treść ogólna działu I",
+                         "blocks":  [
+
+                                    ]
+                     },
+                     {
+                         "id":  "chapter-2",
+                         "title":  "Dział II",
+                         "status":  "placeholder",
+                         "message":  "Treść ogólna działu II",
+                         "blocks":  [
+
+                                    ]
+                     },
+                     {
+                         "id":  "chapter-3",
+                         "title":  "Dział III",
+                         "status":  "placeholder",
+                         "message":  "Treść ogólna działu III",
+                         "blocks":  [
+
+                                    ]
+                     }
+                 ]
+}
