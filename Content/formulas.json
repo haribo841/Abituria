@@ -1,0 +1,503 @@
+﻿{
+    "schemaVersion":  1,
+    "articles":  [
+                     {
+                         "id":  "formula-1",
+                         "order":  1,
+                         "title":  "Wartość bezwzględna liczby",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "WARTOŚĆ BEZWZGLĘDNA LICZBY\nWartość bezwzględną liczby rzeczywistej \\(\\:x\\:\\)definiujemy wzorem:\n\\(\\mid{x}\\mid{}=\\begin{cases}x\\;\\mathrm{dla}\\;x\\geq0\\\\-x\\;\\mathrm{dla}\\;x\u003c0 \\end{cases}\\)\nLiczba\\(\\:\\mid{x}\\mid\\:\\)jest to odległość na osi liczbowej punktu \\(\\:x\\:\\) od punktu \\(\\:0\\).\nDla dowolnej liczby \\(\\:x\\:\\)mamy:\n\\(\\mid{x}\\mid\\:\\geq0\\)\n\\(\\mid{x}\\mid\\:=0\\:\\) wtedy i tylko wtedy, gdy \\(\\:x=0\\:\\)\n\\(\\mid{-x}\\mid\\:=\\mid{x}\\mid\\:\\:\\)\nDla dowolnych liczb \\(\\:x,y\\:\\)mamy:\n\\(\\mid{x+y}\\mid\\:\\leq\\mid{x}\\mid+\\mid{y}\\mid\\:\\)\n\\(\\mid{x-y}\\mid\\:\\leq\\mid{x}\\mid+\\mid{y}\\mid\\:\\)\n\\(\\mid{x{\\cdot}y}\\mid\\:\\geq\\mid{x}\\mid\\cdot\\mid{y}\\mid\\:\\)\nPonadto, jeśli \\(\\:y\\neq0\\:\\), to\\(\\mid\\frac{\\:{x}}{{y}}\\mid{}=\\frac{\\:\\mid{x}\\mid}{\\:\\mid{y}\\mid}\\).\nDla dowolnych liczb \\(\\:a\\:\\)oraz \\(\\:r\\geq0\\:\\)mamy:\n\\(\\mid{x-a}\\mid{\\leq}r\\:\\) wtedy i tylko wtedy, gdy \\(\\:a-r{\\leq}x{\\leq}a+r\\:\\)\n\\(\\mid{x-a}\\mid{\\geq}r\\:\\) wtedy i tylko wtedy, gdy \\(\\:x{\\leq}a-r\\) lub \\(\\:x{\\geq}a+r\\)"
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-2",
+                         "order":  2,
+                         "title":  "Potęgi i pierwiastki",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "POTĘGI I PIERWIASTKI\nNiech \\(\\:n\\:\\) będzie liczbą całkowitą dodatnią. Dla dowolnej liczby\\(\\:a\\:\\) definiujemy jej\\(\\:n\\)-tą potęgę:\n\\(a^n=a\\cdot...\\cdot{a}\\)\nPierwiastkiem arytmetycznym \\(\\sqrt[n]{a}\\:\\) stopnia \\(n\\:\\)z liczby \\(\\:a\\geq0\\:\\)nazywamy liczbę \\(\\:b\\geq0\\:\\)taką, że \\(b^n=a\\).\nW szczególności, dla dowolnej liczby \\(a\\:\\)zachodzi równość: \\(\\sqrt{a^2}=\\mid{a}\\mid\\:\\).\nJeżeli \\(a\u003c0\\:\\)oraz liczba n jest nieparzysta, to \\(\\sqrt[n]{a}\\:\\) oznacza liczbę \\(\\:b\u003c0\\:\\)taką, że \\(b^n=a\\).\nPierwiastki stopni parzystych z liczb ujemnych nie istnieją.\nNiech \\(\\:m,n\\:\\)będą liczbami całkowitymi dodatnimi. Definiujemy:\n\\(-\\) dla \\(\\:a\\neq0\\:\\): \\(\\:a^{-n}=\\frac1{a^n}\\:\\)oraz \\(\\:a^0=1\\:\\)\n\\(-\\) dla \\(\\:a\\geq0\\:\\): \\(\\:a^{\\frac{m}n}=\\sqrt[n]{a^m}\\)\n\\(-\\) dla \\(\\:a\u003e0\\:\\):\n\\(\\:a^{-\\frac{m}n}={\\frac{1}{\\sqrt[n]{a^m}}}\\)\nNiech \\(\\:r\\), \\(\\:s\\:\\)będą dowolnymi liczbami rzeczywistymi. Jeśli \\(\\:a\u003e0\\:\\) i \\(\\:b\u003e0\\:\\), to zachodzą równości:\n\\(\\:a^r\\cdot{a^s}=a^{r+s}\\)\n\\(\\:(a^r)^s=a^{r\\cdot{s}}\\)\n\\(\\:\\frac{a^r}{a^s}=a^{r-s}\\)\n\\(\\:({a}\\cdot{b})^r=a^r\\cdot{b^r}\\)\n\\(\\:(\\frac{a}{b})^r=\\frac{a^r}{b^r}\\)\nJeżeli wykładniki \\(\\:r\\), \\(\\:s\\:\\)są liczbami całkowitymi, to powyższe wzory obowiązują dla wszystkich liczb \\(\\:a\\neq0\\:\\) i \\(\\:b\\neq0\\:\\)."
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-3",
+                         "order":  3,
+                         "title":  "Logarytmy",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "LOGARYTMY\nLogarytmem \\(\\:\\log_ac\\:\\) dodatniej liczby\\(\\:c\\:\\) przy dodatniej i różnej od \\(\\:1\\:\\)podstawie\\(a\\) nazywamy wykładnik \\(b\\) potęgi, do której należy podnieść \\(a\\:\\), aby otrzymać \\(\\:c\\:\\):\n\\(\\:\\log_ac=b\\:\\)wtedy i tylko wtedy, gdy \\(a^b=c\\)\nRównoważnie:\n\\(a^{\\log_ac}=c\\:\\)\nDla dowolnych liczb \\(x\u003e0\\), \\(y\u003e0\\)oraz \\(r\\) zachodzą wzory:\n\\(\\:\\log_a(x\\cdot{y})=\\log_ax+\\log_ay\\)\n\\(\\:\\log_ax^r=r\\cdot\\log_ax\\).\n\\(\\:\\log_a\\frac{x}{y}=\\log_ax-\\log_ay\\)\nWzór na zamianę podstawy logarytmu:\njeżeli \\(\\:a\u003e0\\), \\(\\:a\\neq1\\), \\(\\:b\u003e0\\), \\(\\:b\\neq1\\:\\)oraz \\(\\:c\u003e0\\), to\n\\(\\:\\log_bc=\\frac{\\log_ac}{\\log_ab}\\)\nLogarytm \\(\\:\\log_{10}x\\)można też zapisać jako \\(\\:\\log{x}\\) lub \\(\\:\\lg{x}\\)."
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-4",
+                         "order":  4,
+                         "title":  "Silnia i współczynnik dwumianowy",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "SILNIA. WSPÓŁCZYNNIK DWUMIANOWY\nSilnią liczby całkowitej dodatniej \\(\\:n\\:\\)nazywamy iloczyn kolejnych liczb całkowitych od\\(\\:1\\:\\)do\\(\\:n\\:\\)włącznie:\n\\(n!=1\\cdot{2}\\cdot{...}\\cdot{n}\\)\nPonadto przyjmujemy umowę, że \\(0!=1\\).\nDla dowolnej liczby całkowitej \\(n\\geq0\\:\\)zachodzi związek:\n\\((n+1)!=n!\\cdot(n+1)\\)\nDla liczb całkowitych \\(\\:n,k\\:\\)spełniających warunki \\(0\\leq{k}\\leq{n}\\)definiujemy współczynnik dwumianowy \\(\\binom{n}{k}\\)(symbol Newtona):\n\\(\\binom{n}{k}=\\frac{n!}{k!(n-k)!}\\)\nZachodzą równości:\n\\(\\binom{n}{k}=\\frac{n!}{k!(n-k)!}\\)\n\\(\\binom{n}{k}=\\binom{n}{n-k}\\)\n\\(\\binom{n}{0}=1\\)\n\\(\\binom{n}{n}=1\\)"
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-5",
+                         "order":  5,
+                         "title":  "Wzór dwumianowy Newtona",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "WZÓR DWUMIANOWY NEWTONA\nDla dowolnej liczby całkowitej dodatniej \\(\\:n\\:\\)oraz dla dowolnych liczb\\(\\:a\\:\\),\\(\\:b\\:\\)mamy:\n\\((a+b)^n=\\binom{n}{0}=a^n+\\binom{n}{1}a^{n-1}b+...+\\binom{n}{k}a^{n-k}b^k+...+\\binom{n}{n-1}ab^{n-1}+\\binom{n}{n}b^n\\)"
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-6",
+                         "order":  6,
+                         "title":  "Wzory skróconego mnożenia",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "WZORY SKRÓCONEGO MNOŻENIA\nDla dowolnych liczb \\(\\:a\\:\\),\\(\\:b\\:\\):\n\\((a+b)^2=a^2+2ab+b^2\\)\n\\((a-b)^2=a^2-2ab+b^2\\)\n\\((a+b)^3=a^3+3a^2b+3ab^2+b^3\\)\n\\((a-b)^3=a^3-3a^2b+3ab^2-b^3\\)\nDla dowolnej liczby całkowitej dodatniej \\(\\:n\\:\\)oraz dowolnych liczb\\(\\:a\\:\\),\\(\\:b\\:\\)zachodzi wzór:\n\\(a^n-b^n=(a-b)(a^{n-1}+a^{n-2}b+...+a^{n-k}b^{k-1}+...+ab^{n-2}+b^{n-1})\\)\nW szczególności:\n\\(a^2-b^2=(a-b)(a+b)\\)\n\\(a^3-b^3=(a-b)(a^2+ab+b^2)\\)\n\\(a^3+b^3=(a+b)(a^2-ab+b^2)\\)\n\\(a^2-1=(a-1)(a+1)\\)\n\\(a^3-1=(a-1)(a^2+a+1)\\)\n\\(a^3-1=(a+1)(a^2-a+1)\\)\n\\(a^n-1=(a-1)(a^{n-1}+a^{n-2}+...+a+1)\\)"
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-7",
+                         "order":  7,
+                         "title":  "Ciągi",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "CIĄGI\n\\(\\:\\cdot\\:\\)Ciąg arytmetyczny\nWzór na\\(\\:n\\)-ty wyraz ciągu arytmetycznego\\(\\:(a_n)\\:\\)o pierwszym wyrazie\\(\\:a_1\\:\\)i różnicy \\(\\:r\\:\\):\n\\(a_n=a_1+(n-1)r\\)\nWzór na sumę \\(S_n=a_1+a_2+...+a_n\\) początkowych \\(\\:n\\) n wyrazów ciągu arytmetycznego:\n\\(S_n=\\frac{a_1+a_n}{2}\\cdot{n}=\\frac{2a_1+(n-1)r}{2}\\cdot{n}\\)\nMiędzy sąsiednimi wyrazami ciągu arytmetycznego zachodzi związek: \\(a_n=\\frac{a_{n-1}+a_{n+1}}{2}\\) dla \\(\\:n\\geq2\\)\n\\(\\:\\cdot\\:\\) Ciąg geometyczny\nWzór na \\(\\:n\\)-ty wyraz ciągu geometrycznego \\(\\:(a_n)\\:\\)o pierwszym wyrazie \\(\\:a_1\\:\\)i ilorazie \\(\\:q\\:\\):\n\\(\\:a_n=a_1\\cdot{q^{n-1}}\\:\\) dla \\(\\:n\\geq2\\)\nWzór na sumę \\(S_n=a_1+a_2+...+a_n\\) początkowych \\(\\:n\\) n wyrazów ciągu geometrycznego:\n\\(S_n=\\begin{cases}{a_1\\cdot\\frac{1-q^n}{1-q}}\\;\\mathrm{dla}\\;q\\neq1\\\\{n\\cdot{a_1}}\\;\\mathrm{dla}\\;q=1 \\end{cases}\\)\nMiędzy sąsiednimi wyrazami ciągu geometrycznego zachodzi związek:\n\\(\\:a^2_n=a_{n-1}\\cdot{a_{n+1}}\\:\\) dla \\(\\:n\\geq2\\)\n\\(\\:\\cdot\\:\\) Procent składany\nJeżeli kapitał początkowy \\(\\:K\\) złożymy na \\(\\:n\\) lat w banku, w którym oprocentowanie lokat wynosi \\(\\:p\\%\\) w skali rocznej i kapitalizacja odsetek następuje po upływie każdego roku trwania lokaty, to kapitał końcowy \\(\\:K_n\\) wyraża się wzorem:\n\\(\\:K_n=K\\cdot(1+\\frac{p}{100})^n\\)"
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-8",
+                         "order":  8,
+                         "title":  "Funkcja kwadratowa",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "FUNKCJA KWADRATOWA\nPostać ogólna funkcji kwadratowej: \\(\\:f(x)=ax^2+bx+c\\:\\),\\(\\:a\\neq0\\:\\),\\(x\\in{R}\\)\nWzór każdej funkcji kwadratowej można doprowadzić do postaci kanonicznej: \\(\\:f(x)=a(x-p)^2+q\\:\\), gdzie \\(\\:p=-\\frac{b}{2a}\\), \\(q=-\\frac{\\Delta}{4a}\\), \\(\\Delta{}=b^2-4ac\\)\nWykresem funkcji kwadratowej jest parabola o wierzchołku w punkcie o współrzędnych \\(\\:(p,q)\\:\\). Ramiona paraboli skierowane są do góry, gdy \\(\\:a\u003e0\\:\\); do dołu, gdy \\(\\:a\u003c0\\:\\).\nLiczba miejsc zerowych funkcji kwadratowej \\(\\:f(x)=ax^2+bx+c\\:\\) (liczba pierwiastków trójmianu kwadratowego, liczba rzeczywistych rozwiązań równania \\(\\:ax^2+bx+c=0\\:\\)), zależy od wyróżnika \\(\\Delta{}=b^2-4ac\\):\n\\(-\\) jeżeli \\(\\Delta\u003c0\\), to funkcja kwadratowa nie ma miejsc zerowych (trójmian kwadratowy nie ma pierwiastków rzeczywistych, równanie kwadratowe nie ma rozwiązań rzeczywistych),\n\\(-\\) jeżeli \\(\\Delta{}=0\\), to funkcja kwadratowa ma dokładnie jedno miejsce zerowe (trójmian kwadratowy ma jeden pierwiastek podwójny, równanie kwadratowe ma dokładnie jedno rozwiązanie rzeczywiste): \\(x_1=x_2=\\)\\(-\\frac{b}{2a}\\)\n\\(-\\) jeżeli \\(\\Delta\u003e0\\), to funkcja kwadratowa ma dwa miejsca zerowe (trójmian kwadratowy ma dwa różnepierwiastki rzeczywiste, równanie kwadratowe ma dwa rozwiązania rzeczywiste):\n\\(\\:x_1=\\frac{-b-\\sqrt{\\Delta}}{2a}\\)\n\\(\\:x_2=\\frac{-b+\\sqrt{\\Delta}}{2a}\\)\nJeśli \\(\\:\\Delta\\geq0\\), to wzór funkcji kwadratowej można doprowadzić do postaci iloczynowej:\n\\(\\:f(x)=a(x-x_1)(x-x_2)\\)\n\\(\\:\\cdot\\:\\) Wzory Viéte’a\nJeżeli \\(\\:\\Delta\\geq0\\), to\n\\(\\:x_1+x_2=\\frac{-b}{a}\\)\n\\(\\:x_1\\cdot{x_2}=\\frac{c}{a}\\)"
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-9",
+                         "order":  9,
+                         "title":  "Geometria analityczna",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "GEOMETRIA ANALITYCZNA\n\n\\(\\cdot\\)Odcinek\nDługość odcinka o końcach w punktach\n\\(A=(x_A, y_A),B=(x_B,y_B)\\) jest dana wzorem:\n\\(\\:\\mid{AB}\\mid{}=\\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}\\)\nWspółrzędne środka odcinka\\(\\:AB\\):\n\\(\\left(\\frac{x_A+x_B}2,\\frac{y_A+y_B}2\\right)\\:\\)"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w9a.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(\\cdot\\)Wektory\nWspółrzędne wektora\\(\\:\\overline{AB}\\):\n\\(\\:\\overline{AB}=[x_B-x_A,y_B-y_A]\\)\nJeżeli \\(\\:\\vec{u}=[u_1,u_2]\\), \\(\\:\\vec{v}=[v_1,v_2]\\)są wektorami, zaś \\(\\:a\\) jest liczbą, to\n\\(\\:\\vec{u}+\\vec{v}=[u_1+v_1,u_2+v_2]\\)\n\\(\\:a\\cdot\\vec{u}=[a\\cdot{u_1},a\\cdot{u_2}]\\)\n\n\\(\\cdot\\)Prosta\nRównanie ogólne prostej:\n\\(Ax+By+C=0\\),\ngdzie \\(\\:A^2+B^2\\neq0\\) (tj. współczynniki \\(A\\), \\(B\\) nie są równocześnie równe \\(0\\)).\nJeżeli \\(A=0\\), to prosta jest równoległa do osi \\(\\:Ox\\); jeżeli \\(\\:B=0\\), to prosta jest równoległa do osi \\(\\:Oy\\):\njeżeli \\(\\:C=0\\), to prosta przechodzi przez początek układu współrzędnych.\nJeżeli prosta nie jest równoległa do osi \\(\\:Oy\\), to ma ona równanie kierunkowe:\n\\(\\:y=ax+b\\),\nLiczba \\(\\:a\\) to współczynnik kierunkowy prostej:\n\\(\\:a=\\operatorname{tg}\\alpha\\)\nWspółczynnik \\(\\:b\\) wyznacza na osi \\(\\:Oy\\) punkt, w którym dana prosta ją przecina."
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w9b.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Równanie kierunkowe prostej o współczynniku kierunkowym \\(\\:a\\), która przechodzi przez punkt \\(P=(x_0, y_0)\\):\n\\(y=a(x-x_0)+y_0\\)\nRównanie prostej, która przechodzi przez dwa dane punkty \\(A=(x_A, y_A),B=(x_B,y_B)\\):\n\\((y-y_A)(x_B-x_A)-(y_B-y_A)(x-x_A)=0\\)\n\n\\(\\cdot\\)Prosta i punkt\nOdległość punktu\n\\(P=(x_0, y_0)\\)od prostej o równaniu \\(Ax+By+C=0\\) jest dana wzorem:\n\\(\\frac{Ax_0+By_0+C=0}{\\sqrt{A^2+B^2}}\\)\n\n\\(\\cdot\\)Para prostych\nDwie proste o równaniach kierunkowych\n\\(\\:y=a_1x+b_1\\)\n\\(\\:y=a_2x+b_2\\)\nspełniają jeden z następujących warunków:\n\\(-\\) są równoległe, gdy \\(\\:A_1B_2-A_2B_1=0\\)\n\\(-\\) są prostopadłe, gdy \\(\\:A_1B_2+A_2B_1=0\\)\n\\(-\\) tworzą kąt ostry \\(\\:\\phi\\) i \\(\\:\\operatorname{tg}\\phi{}=\\mid{\\frac{A_1B_2-A_2B_1}{A_1A_2+B_1B_2}}\\mid\\)\n\n\\(\\cdot\\)Trójkąt\nPole trójkąta\n\\(ABC\\) o wierzchołkach \\(A=(x_A, y_A),B=(x_B,y_B),C=(x_C,y_C)\\), jest dane wzorem:\n\\(\\:P_{\\Delta{ABC}}=\\frac{1}{2}\\mid{(x_B-x_A)(y_C-y_A)-(y_B-y_A)(x_C-x_A)}\\mid\\)\nŚrodek ciężkości trójkąta \\(ABC\\), czyli punkt przecięcia jego środkowych, ma współrzędne:\n\\(\\:(\\frac{x_A+x_B+x_C}{3},\\frac{y_A+y_B+y_C}{3})\\)\n\n\\(\\cdot\\)Przekształcenia geometryczne\n\\(-\\)przesunięcie o wektor\n\\(\\:\\vec{u}=[a,b]\\) przekształca punkt \\(\\:A=(x,y)\\) na punkt \\(\\:A\u0027=(x+a,y+b)\\)\n\\(-\\) symetria względem osi \\(\\:Ox\\) przekształca punkt \\(\\:A=(x,y)\\)na punkt \\(\\:A\u0027=(x,-y)\\)\n\\(-\\) symetria względem osi \\(\\:Oy\\) przekształca punkt \\(\\:A=(x,y)\\)na punkt \\(\\:A\u0027=(-x,y)\\)\n\\(-\\) symetria względem punktu \\(\\:(a,b)\\) przekształca punkt \\(\\:A=(x,y)\\)na punkt \\(\\:A\u0027=(2a-x,2b-y)\\)\n\\(-\\) jednokładność o środku w punkcie \\(\\:O\\) i skali \\(\\:s\\neq0\\)przekształca punkt \\(\\:A\\) na punkt \\(\\:A\u0027\\) taki, że \\(\\:\\overline{OA\u0027}=s\\cdot{\\overline{OA}}\\), a więc, jeśli \\(\\:O=(x_0,y_0)\\), to jednokładność ta przekształca punkt \\(\\:A=(x,y)\\) na punkt \\(\\:A\u0027=(sx+(1-s)x_0,sy+(1-s)y_0)\\)\n\n\\(\\cdot\\)Równanie okręgu o środku w punkcie\n\\(\\:S=(a,b)\\)i promieniu \\(\\:r\u003e0\\):\n\\(\\:(x-a)^2+(y-b)^2=r^2\\)\nlub \\(\\:x^2+y^2-2ax-2by+c=0\\) gdy \\(\\:r^2=a^2+b^2-c\u003e0\\)"
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-10",
+                         "order":  10,
+                         "title":  "Planimetria",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "PLANIMETRIA\n\n\\(\\cdot\\)Cechy przystawania trójkątów"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10a.png"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10b.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "To, że dwa trójkąty\\(\\:ABC\\) i \\(DEF\\) są przystające \\((\\Delta{ABC}\\equiv\\Delta{DEF})\\), możemy stwierdzić na podstawie każdej z następujących cech przystawania trójkątów:\n\n\\(-\\)cecha przystawania „bok – bok – bok”:\nodpowiadające sobie boki obu trójkątów mają te same długości:\n\\(\\mid{AB}\\mid{}=\\mid{DE}\\mid , \\;\\mid{AC}\\mid{}=\\mid{DF}\\mid , \\;\\mid{BC}\\mid{}=\\mid{EF}\\mid\\)\n\n\\(-\\)cecha przystawania „bok – kąt – bok”:\ndwa boki jednego trójkąta są równe odpowiadającym im bokom drugiego trójkąta oraz kąt zawarty między tymi bokami jednego trójkąta ma taką samą miarę jak odpowiadający mu kąt drugiego trójkąta, np.\n\\(|AB|=|DE| , |AC|=|DF| , |BAC|=|EDF|\\)\n\\(-\\)cecha przystawania „kąt – bok – kąt”:\njeden bok jednego trójkąta ma tę samą długość, co odpowiadający mu bok drugiego trójkąta oraz miary odpowiadających sobie kątów obu trójkątów, przyległych do boku, są równe, np.\n\\(|AB|=|DE| , |BAC|=|EDF| , |ABC|=|DEF|\\)\n\\(\\cdot\\)Cechy podobieństwa trójkątów"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10c.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "To, że dwa trójkąty \\(ABC\\) i \\(DEF\\) są podobne \\(( \\Delta ABC \\sim \\Delta DEF )\\), możemy stwierdzić na podstawie każdej z następujących cech podobieństwa trójkątów:\n\\(-\\)cecha podobieństwa „bok – bok – bok”:\ndługości boków jednego trójkąta są proporcjonalne do odpowiednich długości boków drugiego trójkąta, np.\n\\(\\frac{|AB|}{|DE|} = \\frac{|AC|}{|DF|} = \\frac{|BC|}{|EF|}\\)\n\\(-\\)cecha podobieństwa „bok – kąt – bok”:\ndługości dwóch boków jednego trójkąta są proporcjonalne do odpowiednich długości dwóch boków drugiego trójkąta i kąty między tymi parami boków są przystające, np. \\(\\frac{|AB|}{|DE|} = \\frac{|AC|}{|DF|} , |BAC| = |EDF|\\)\n\\(-\\)cecha podobieństwa „kąt – kąt – kąt”:\ndwa kąty jednego trójkąta są przystające do odpowiednich dwóch kątów drugiego trójkąta (więc też i trzecie kąty obu trójkątów są przystające): \\(|BAC|=|EDF| , |ABC|=|DEF| , |ACB|=|DFE|\\)\n\nPrzyjmujemy oznaczenia w trójkącie ABC:\n\\(a, b, c\\) - długości boków, leżących odpowiednio naprzeciwko wierzchołków A, B, C\n\\(2p=a+b+c\\) - obwód trójkąta\n\\(\\alpha , \\beta , \\gamma\\) - miary kątów przy wierzchołkach A, B, C\n\\(h_a , h_b , h_c\\) - wysokości opuszczone z wierzchołków A, B, C\n\\(R, r\\) - promienie okręgów opisanego i wpisanego"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10d.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(\\cdot\\)Twierdzenie sinusów\n\\(\\frac{a}{\\sin \\alpha} = \\frac{b}{\\sin \\beta} = \\frac{c}{\\sin \\gamma} = 2R\\)\n\n\\(\\cdot\\)Twierdzenie cosinusów\n\\(a^2 = b^2 + c^2 - 2bc \\cos \\alpha\\)\n\\(b^2 = a^2 + c^2 - 2ac \\cos \\beta\\)\n\\(c^2 = a^2 + b^2 - 2ab \\cos \\gamma\\)\n\n\\(\\cdot\\)Wzory na pole trójkąta\n\\(P_ \\Delta _A_B_C = \\frac{1}{2} \\cdot a \\cdot h_a = \\frac{1}{2} \\cdot b \\cdot h_b = \\frac{1}{2} \\cdot c \\cdot h_c\\)\n\\(P_ \\Delta _A_B_C = \\frac{1}{2} a \\cdot b \\cdot \\sin \\gamma = \\frac{1}{2} a \\cdot c \\cdot \\sin \\beta = \\frac{1}{2} b \\cdot c \\cdot \\sin \\alpha\\)\n\\(P_ \\Delta _A_B_C = \\frac{1}{2} a^2 \\frac{\\sin \\beta \\cdot \\sin \\gamma}{\\sin \\alpha} = \\frac{1}{2} b^2 \\frac{\\sin \\alpha \\cdot \\sin \\gamma}{\\sin \\beta} = \\frac{1}{2} c^2 \\frac{\\sin \\alpha \\cdot \\sin \\beta}{\\sin \\gamma}\\)\n\\(P_ \\Delta _A_B_C = \\frac{abc}{4R}\\)\\(P_ \\Delta _A_B_C = 2R^2 \\cdot \\sin \\alpha \\cdot \\sin \\beta \\cdot \\sin \\gamma\\)\n\\(P_ \\Delta _A_B_C = rp\\)\\(P_ \\Delta _A_B_C = \\sqrt[]{p(p - a)(p - b)(p - c)}\\)\n\n\\(\\cdot\\)Twierdzenie Pitagorasa (wraz z twierdzeniem odwrotnym do niego)\nW trójkącie \\(ABC\\) kąt \\(\\gamma\\) jest prosty wtedy i tylko wtedy, gdy \\(a^2 + b^2 = c^2.\\)\n\n\\(\\cdot\\)Związki miarowe w trójkącie prostokątnym"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10e.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Załóżmy, że kąt \\(\\gamma\\) jest prosty. Wówczas:\n\\(h_c^2 = |AD| \\cdot |DB|\\)\n\\(h_c = \\frac{ab}{c}\\)\n\\(a = c \\cdot \\sin \\alpha = c \\cdot \\cos \\beta\\)\n\\(a = b \\cdot \\operatorname{tg} \\alpha = b \\cdot \\frac{1}{\\operatorname{tg} \\beta}\\)\n\\(R = \\frac{1}{2}c\\)\\(r = \\frac{a + b - c}{2} = p - c\\)\n\n\\(\\cdot\\)Trójkąt równoboczny"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10f.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(a\\) - długość boku\n\\(h\\) - wysokość trójkąta\n\\(h = \\frac{a \\sqrt{3}}{2}\\)\\(R = \\frac{2}{3}h\\)\n\n\\(P_\\Delta = \\frac{a^2 \\sqrt{3}}{4}\\)\\(r = \\frac{1}{3}h\\)\n\n\\(\\cdot\\)Twierdzenie Talesa (wraz z twierdzeniem odwrotnym do niego)\nRóżne proste \\(AC\\) i \\(BD\\) przecinają się w punkcie \\(P\\), przy czym spełniony jest jeden z warunków:\n\\(-\\)punkt \\(A\\) leży wewnątrz odcinka \\(PC\\) oraz punkt \\(B\\) leży wewnątrz odcinka \\(PD\\)\n\nlub\n\\(-\\)punkt \\(A\\) leży na zewnątrz odcinka \\(PC\\) oraz punkt \\(B\\) leży na zewnątrz odcinka \\(PD\\)\nWówczas proste \\(AB\\) i \\(CD\\) są równoległe wtedy i tylko wtedy, gdy\n\\(\\frac{|PA|}{|AC|} = \\frac{|PB|}{|BD|}\\)"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10g.png"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10h.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(\\cdot\\)Czworokąty"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10i.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Trapez\nCzworokąt, który ma co najmniej jedną parę boków równoległych.\nWzór na pole trapezu:\n\\(\\frac{a + b}{2} \\cdot h\\)"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10j.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Równoległobok\nCzworokąt, który ma dwie pary boków równoległych.\nWzory na pole równoległoboku:\n\\(P = ah = a \\cdot b \\cdot \\sin \\alpha = \\frac{1}{2} \\cdot |AC| \\cdot |BD| \\cdot \\sin \\varphi\\)"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10k.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Romb\nCzworokąt, który ma wszystkie boki jednakowej długości.\nWzory na pole rombu:\n\\(P = ah = a^2 \\cdot \\sin \\alpha = \\frac{1}{2} \\cdot |AC| \\cdot |BD|\\)"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10l.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Deltoid\nCzworokąt wypukły, który ma oś symetrii zawierającą jedną z przekątnych.\nWzór na pole deltoidu:\n\\(P = \\frac{1}{2} \\cdot |AC| \\cdot |BD|\\)\n\n\\(\\cdot\\)Koło"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10m.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Wzór na pole koła o promieniu \\(r\\):\n\\(P = \\pi r^2\\)\n\nObwód koła o promieniu r:\n\\(L = 2\\pi r\\)\n\n\\(\\cdot\\)Wycinek koła"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10n.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Wzór na pole wycinka koła o promieniu \\(r\\) i kącie środkowym \\(\\alpha\\) wyrażonym w stopniach:\n\\(P = \\pi r^2 \\cdot \\frac{\\alpha}{360 ^\\circ}\\)\n\nDługość łuku \\(AB\\) wycinka koła o promieniu \\(r\\) i kącie środkowym \\(\\alpha\\) wyrażonym w stopniach:\n\\(l = 2\\pi r \\cdot \\frac{\\alpha}{360^ \\circ}\\)\n\n\\(\\cdot\\)Kąty w okręgu"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10o.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Miara kąta wpisanego w okrąg jest równa połowie miary kąta środkowego, opartego na tym samym łuku.\n\nMiary kątów wpisanych w okrąg, opartych na tym samym łuku, są równe.\n\nMiary kątów wpisanych w okrąg, opartych na łukach równych, są równe.\n\n\\(\\cdot\\)Twierdzenie o kącie między styczną i cięciwą"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10p.png"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10r.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Dany jest okrąg o środku w punkcie \\(\\: O \\:\\) i jego cięciwa \\(\\: AB \\:\\). Prosta \\(\\: AC \\:\\) jest styczna do tego okręgu w punkcie \\(\\: A \\:\\).\nWtedy \\(\\: |AOB| = 2 \\cdot |CAB| \\: \\:\\), przy czym wybieramy ten z kątów środkowych \\(\\: AOB \\:\\), który jest oparty na łuku znajdującym się wewnątrz kąta \\(\\: CAB \\:\\).\n\n\\(\\cdot\\)Twierdzenie o odcinkach stycznych\nJeżeli styczne do okręgu w punktach \\(\\: A \\:\\) i \\(\\: B \\:\\) przecinają się w punkcie \\(\\: P \\:\\), to\n\\(|PA| = |PB|\\)"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10s.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(\\cdot\\)Twierdzenie o odcinkach siecznej i stycznej\nDane są: prosta przecinająca okrąg w punktach \\(\\: A \\:\\) i \\(\\: B \\:\\) oraz prosta styczna do tego okręgu w punkcie \\(\\: C \\:\\). Jeżeli proste te przecinają się w punkcie \\(\\: P \\:\\), to\n\\(|PA| \\cdot |PB| = |PC|^2\\)"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10t.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(\\cdot\\)Okrąg opisany na czworokącie"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10u.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Na czworokącie można opisać okrąg wtedy i tylko wtedy, gdy sumy miar jego przeciwległych kątów wewnętrznych są równe \\(\\: 180^ \\circ \\:\\):\n\\(\\: \\alpha + \\gamma = \\beta + \\delta = 180^ \\circ \\:\\)\n\n\\(\\cdot\\)Okrąg wpisany w czworokąt"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w10w.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "W czworokąt wypukły można wpisać okrąg wtedy i tylko wtedy, gdy sumy długości jego przeciwległych boków są równe:\n\\(\\: a + c = b + d \\:\\)"
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-11",
+                         "order":  11,
+                         "title":  "Stereometria",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "STEREOMETRIA\n\n\\(\\cdot\\)Twierdzenie o trzech prostych prostopadłych"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w11a.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Prosta \\(\\: k \\:\\) przebija płaszczyznę w punkcie \\(\\: P \\:\\). Prosta \\(\\: l \\:\\) jest rzutem prostokątnym prostej \\(\\: k \\:\\) na tę płaszczyznę. Prosta \\(\\: m \\:\\) leży na tej płaszczyźnie i przechodzi przez punkt \\(\\: P \\:\\). Wówczas prosta \\(\\: m \\:\\) jest prostopadła do prostej \\(\\: k \\:\\) wtedy i tylko wtedy, gdy jest prostopadła do prostej \\(\\: l \\:\\).\n\nPrzyjmujemy oznaczenia:\n\\(\\: P \\:\\) – pole powierzchni całkowitej\n\\(\\: P_p \\:\\) – pole podstawy\n\\(\\: P_b \\:\\) – pole powierzchni bocznej\n\\(\\: V \\:\\) – objętość\n\n\\(\\cdot\\)Prostopadłościan"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w11b.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(P = 2(ab + bc + ac)\\)\n\n\\(V = abc\\)\n\ngdzie \\(a, b, c\\) są długościami krawędzi prostopadłościanu\n\n\\(\\cdot\\)Graniastosłup prosty"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w11c.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(P_b = 2p \\cdot h\\)\n\n\\(V = P_p \\cdot h\\)\n\ngdzie \\(2p\\) jest obwodem podstawy graniastosłupa\n\n\\(\\cdot\\)Ostrosłup"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w11d.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(V = \\frac{1}{3} P_p \\cdot h\\)\n\ngdzie \\(h\\) jest wysokością ostrosłupa\n\n\\(\\cdot\\)Walec"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w11e.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(P_b = 2 \\pi rh\\)\n\n\\(P = 2 \\pi r(r + h)\\)\n\n\\(V = \\pi r^2h\\)\n\ngdzie \\(r\\) jest promieniem podstawy, \\(h\\) – wysokością walca\n\n\\(\\cdot\\)Stożek"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w11f.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(P_b = \\pi rl\\)\n\n\\(P = \\pi r(r + l)\\)\n\n\\(V = \\frac{1}{3} \\pi r^2h\\)\n\ngdzie \\(r\\) jest promieniem podstawy, \\(h\\) – wysokością, \\(l\\) – długością tworzącej stożka\n\n\\(\\cdot\\)Kula"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w11g.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(P = 4 \\pi r^2\\)\n\n\\(V = \\frac{4}{3} \\pi r^3\\)\n\ngdzie \\(r\\) jest promieniem kuli"
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-12",
+                         "order":  12,
+                         "title":  "Trygonometria",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "TRYGONOMETRIA\n\n\\(\\cdot\\)Definicje funkcji trygonometrycznych kąta ostrego w trójkącie prostokątnym"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w12a.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(\\sin \\alpha = \\frac{a}{c}\\)\\(\\sin \\beta = \\frac{b}{c}\\)\n\n\\(\\cos \\alpha = \\frac{b}{c}\\)\\(\\cos \\beta = \\frac{a}{c}\\)\n\n\\(\\operatorname{tg} \\alpha = \\frac{a}{b}\\)\\(\\operatorname{tg} \\beta = \\frac{b}{a}\\)\n\n\\(\\cdot\\)Definicje funkcji trygonometrycznych"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w12b.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(\\sin \\alpha = \\frac{y}{r}\\)\n\n\\(\\cos \\alpha = \\frac{x}{r}\\)\n\n\\(\\operatorname{tg} \\alpha = \\frac{y}{x}, \\: gdy \\: x \\neq 0\\)\n\ngdzie \\(\\: r = \\sqrt{x^2 + y^2} \u003e 0\\:\\) jest promieniem wodzącym punktu \\(\\: M\\)\n\n\\(\\cdot\\)Wykresy funkcji trygonometrycznych"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w12c.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(y = \\sin x\\)"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w12d.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(y = \\cos x\\)"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w12e.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(y = \\operatorname{tg} x\\)\n\n\\(\\cdot\\)Związki między funkcjami tego samego kąta\n\\(\\sin ^2 \\alpha + \\cos ^2 \\alpha = 1\\)\\(\\operatorname{tg} \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha}\\) dla\\(\\: \\alpha \\neq \\frac{\\pi}{2} + k \\pi , \\: k\\) - całkowite\n\n\\(\\cdot\\)Niektóre wartości funkcji trygonometrycznych"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w12f.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(\\cdot\\)Funkcje sumy i różnicy kątów\nDla dowolnych kątów \\(\\: \\alpha , \\beta \\:\\) zachodzą równości:\n\\(\\sin (\\alpha + \\beta ) = \\sin \\alpha \\cos \\beta + \\cos \\alpha \\sin \\beta\\)\\(\\sin (\\alpha - \\beta ) = \\sin \\alpha \\cos \\beta - \\cos \\alpha \\sin \\beta\\)\\(\\cos (\\alpha + \\beta ) = \\cos \\alpha \\cos \\beta - \\sin \\alpha \\sin \\beta\\)\\(\\cos (\\alpha - \\beta ) = \\cos \\alpha \\cos \\beta + \\sin \\alpha \\sin \\beta\\)\n\nPonadto mamy równości:\n\\(\\operatorname{tg} (\\alpha + \\beta ) = \\frac{\\operatorname{tg} \\alpha + \\operatorname{tg} \\beta}{1 - \\operatorname{tg} \\alpha \\cdot \\operatorname{tg} \\beta}\\)\\(\\operatorname{tg} (\\alpha - \\beta ) = \\frac{\\operatorname{tg} \\alpha - \\operatorname{tg} \\beta}{1 + \\operatorname{tg} \\alpha \\cdot \\operatorname{tg} \\beta}\\)\nktóre zachodzą zawsze, gdy są określone i mianownik prawej strony nie jest zerem.\n\n\\(\\cdot\\)Funkcje podwojonego kąta\n\\(\\sin 2 \\alpha = 2 \\sin \\alpha \\cos \\alpha\\)\\(\\cos 2 \\alpha = \\cos ^2 a - \\sin ^2 \\alpha = 2 \\cos ^2 \\alpha - 1 = 1 - 2 \\sin ^2 \\alpha\\)\\(\\operatorname{tg} 2 \\alpha = \\frac{2 \\operatorname{tg} \\alpha}{1 - \\operatorname{tg} ^2 \\alpha}\\)\n\n\\(\\cdot\\)Sumy, różnice i iloczyny funkcji trygonometrycznych\n\\(\\sin \\alpha + \\sin \\beta = 2\\sin \\frac{\\alpha + \\beta}{2} \\cos \\frac{\\alpha - \\beta}{2}\\)\\(\\sin \\alpha \\sin \\beta = - \\frac{1}{2} ( \\cos ( \\alpha + \\beta ) - \\cos ( \\alpha - \\beta ))\\)\\(\\sin \\alpha - \\sin \\beta = 2\\cos \\frac{\\alpha + \\beta}{2} \\sin \\frac{\\alpha - \\beta}{2}\\)\\(\\cos \\alpha \\cos \\beta = \\frac{1}{2} ( \\cos ( \\alpha + \\beta ) + \\cos ( \\alpha - \\beta ))\\)\\(\\cos \\alpha + \\cos \\beta = 2\\cos \\frac{\\alpha + \\beta}{2} \\cos \\frac{\\alpha - \\beta}{2}\\)\\(\\sin \\alpha \\cos \\beta = \\frac{1}{2} ( \\sin ( \\alpha + \\beta ) + \\sin ( \\alpha - \\beta ))\\)\\(\\cos \\alpha - \\cos \\beta = - 2\\sin \\frac{\\alpha + \\beta}{2} \\sin \\frac{\\alpha - \\beta}{2}\\)\n\n\\(\\cdot\\)Wybrane wzory redukcyjne\n\\(\\sin (90^ \\circ - \\alpha ) = \\cos \\alpha\\)\\(\\cos (90^ \\circ - \\alpha ) = \\sin \\alpha\\)\\(\\sin (90^ \\circ + \\alpha ) = \\cos \\alpha\\)\\(\\cos (90^ \\circ + \\alpha ) = -\\sin \\alpha\\)\\(\\sin (180^ \\circ - \\alpha ) = \\sin \\alpha\\)\\(\\cos (180^ \\circ - \\alpha ) = -\\cos \\alpha\\)\\(\\operatorname{tg} (180^ \\circ - \\alpha ) = -\\operatorname{tg} \\alpha\\)\\(\\sin (180^ \\circ + \\alpha ) = -\\sin \\alpha\\)\\(\\cos (180^ \\circ + \\alpha ) = -\\cos \\alpha\\)\\(\\operatorname{tg} (180^ \\circ + \\alpha ) = \\operatorname{tg} \\alpha\\)\n\n\\(\\cdot\\)Okresowość funkcji trygonometrycznych\n\\(\\sin (\\alpha + k \\cdot 360^ \\circ ) = \\sin \\alpha\\)\\(\\cos (\\alpha + k \\cdot 360^ \\circ ) = \\cos \\alpha\\)\\(\\operatorname{tg} (\\alpha + k \\cdot 180^ \\circ ) = \\operatorname{tg} \\alpha\\)\\(k\\)"
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-13",
+                         "order":  13,
+                         "title":  "Kombinatoryka",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "KOMBINATORYKA\n\n\\(\\cdot\\)Wariacje z powtórzeniami\nLiczba sposobów, na które z \\(\\: n \\:\\) różnych elementów można utworzyć ciąg, składający się z \\(\\: k \\:\\) niekoniecznie różnych wyrazów, jest równa \\(\\: n^k \\:\\).\n\n\\(\\cdot\\)Wariacje bez powtórzeń\nLiczba sposobów, na które z \\(\\: n \\:\\) różnych elementów można utworzyć ciąg, składający się z \\(\\: k (1 \\leq k \\leq n) \\:\\) różnych wyrazów, jest równa\n\\(n \\cdot (n-1) \\cdot ... \\cdot (n-k+1) = \\frac{n!}{(n-k)!}\\)\n\n\\(\\cdot\\)Permutacje\nLiczba sposobów, na które \\(\\: n(n \\geq 1) \\:\\) różnych elementów można ustawić w ciąg, jest równa \\(\\: n! \\:\\).\n\n\\(\\cdot\\)Kombinacje\nLiczba sposobów, na które spośród \\(\\: n \\:\\) różnych elementów można wybrać \\(\\: k (0 \\leq k \\leq n) \\:\\) elementów, jest równa \\(\\: \\: \\binom{n}{k} \\: \\: \\:\\)."
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-14",
+                         "order":  14,
+                         "title":  "Rachunek prawdopodobieństwa",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "RACHUNEK PRAWDOPODOBIEŃSTWA\n\n\\(\\cdot\\)Własności prawdopodobieństwa\n\\(0 \\leq P(A) \\leq 1\\)dla każdego zdarzenia\\(A \\subset \\Omega\\)\n\\(P( \\Omega ) = 1\\)\\(\\Omega \\: \\:\\) - zdarzenie pewne\n\\(P( \\emptyset ) = 0\\)\\(\\emptyset \\: \\:\\) - zdarzenie niemożliwe (pusty podzbiór \\(\\Omega\\) )\n\\(P(A) \\leq P(B), \\: gdy \\: A \\subset B \\subset \\Omega\\)\n\\(P(A\u0027) = 1 - P(A),\\)gdzie\\(A\u0027\\) oznacza zdarzenie przeciwne do zdarzenia \\(A\\)\n\\(P(A \\cup B) = P(A) + P(B) - P(A \\cap B),\\) dla dowolnych zdarzeń \\(A, B \\subset \\Omega\\)\n\\(P(A \\cup B) \\leq P(A) + P(B),\\) dla dowolnych zdarzeń \\(A, B \\subset \\Omega\\)\n\n\\(\\cdot\\)Twierdzenie: Klasyczna definicja prawdopodobieństwa\nNiech \\(\\: \\Omega \\:\\) będzie skończonym zbiorem wszystkich zdarzeń elementarnych. Jeżeli wszystkie zdarzenia jednoelementowe są jednakowo prawdopodobne, to prawdopodobieństwo zdarzenia \\(\\: A \\subset \\Omega \\:\\) jest równe\n\\(P(A) = \\frac{|A|}{| \\Omega |}\\)\ngdzie \\(\\: |A| \\:\\) oznacza liczbę elementów zbioru \\(\\: A \\:\\), zaś \\(\\: | \\Omega | \\:\\) – liczbę elementów zbioru \\(\\: \\Omega \\:\\).\n\n\\(\\cdot\\)Prawdopodobieństwo warunkowe\nNiech \\(\\: \\: A, B \\: \\:\\) będą zdarzeniami losowymi zawartymi w \\(\\: \\Omega \\:\\) przy czym \\(\\: \\: P(B) \u003e 0 \\:\\). Prawdopodobieństwem warunkowym \\(\\: P(A|B) \\:\\) nazywamy liczbę\n\\(P(A|B) = \\frac{P(A \\cap B)}{P(B)}\\)\n\n\\(\\cdot\\)Twierdzenie o prawdopodobieństwie całkowitym\nJeżeli zdarzenia losowe \\(\\: \\: B_1, B_2,..., B_n\\: \\:\\) zawarte w \\(\\: \\: \\Omega \\: \\:\\) spełniają warunki:\n\\(1. \\: \\: \\: \\: \\: B_1, B_2,..., B_n\\: \\:\\) są parami rozłączne, tzn. \\(B_i \\cap B_j = \\emptyset\\) dla \\(i \\neq j, \\: 1 \\leq i \\leq n, \\: 1 \\leq j \\leq n,\\)\n\\(2. \\: \\: \\: \\: \\: B_1 \\cup B_2 \\cup ... \\cup B_n = \\Omega ,\\)\n\\(3. \\: \\: \\: \\: \\: P(B_i) \u003e 0 \\: dla \\: 1 \\leq i \\leq n,\\)\n\nto dla każdego zdarzenia losowego \\(\\: A \\:\\) zawartego w \\(\\: \\Omega \\:\\) zachodzi równość\n\n\\(P(A) = P(A|B_1) \\cdot P(B_1) + P(A|B_2) \\cdot P(B_2) + ... + P(A|B_n) \\cdot P(B_n)\\)"
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-15",
+                         "order":  15,
+                         "title":  "Parametry danych statystycznych",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "PARAMETRY DANYCH STATYSTYCZNYCH\n\n\\(\\cdot\\)Średnia arytmetyczna\nŚrednia arytmetyczna \\(\\: n \\:\\) liczb \\(\\: a_1, a_2,..., a_n \\:\\) jest równa:\n\\(\\bar{a} = \\frac{a_1 + a_2 + ... + a_n}{n}\\)\n\n\\(\\cdot\\)Średnia ważona\nŚrednia ważona \\(\\: n \\:\\) liczb \\(\\: a_1, a_2,..., a_n, \\:\\) którym przypisano dodatnie wagi – odpowiednio: \\(\\: w_1, w_2,..., w_n \\:\\) jest równa:\n\\(\\frac{w_1 \\cdot a_1 + w_2 \\cdot a_2 + ... + w_n \\cdot a_n}{w_1 + w_2 + ... +w_n}\\)\n\n\\(\\cdot\\)Średnia geometryczna\nŚrednia geometryczna \\(\\: n \\:\\) nieujemnych liczb \\(\\: a_1, a_2,..., a_n, \\:\\) jest równa:\n\\(\\sqrt[n]{a_1 \\cdot a_2 \\cdot ... \\cdot a_n}\\)\n\n\\(\\cdot\\)Mediana\nMedianą uporządkowanego w kolejności niemalejącej zbioru \\(\\: n \\:\\) danych liczbowych \\(\\: \\: a_1 \\leq a_2 \\leq a_3 \\leq ... \\leq a_n \\: \\:\\) jest:\n\n\\(-\\) dla \\(\\: n \\:\\) nieparzystych: \\(\\: a_{ \\frac{n+1}{2} } \\:\\) (środkowy wyraz ciągu)\n\\(-\\) dla \\(\\: n \\:\\) parzystych: \\(\\: \\frac{1}{2}( a_{ \\frac{n}{2} } + a_{ \\frac{n}{2} +1 }) \\:\\) (średnia arytmetyczna środkowych wyrazów ciągu)\n\n\\(\\cdot\\)Wariancja i odchylenie standardowe\nWariancją \\(\\: n \\:\\) danych liczbowych \\(\\: a_1, a_2,..., a_n, \\:\\) o średniej arytmetycznej \\(\\: \\bar{a} \\:\\) jest liczba:\n\\(\\sigma ^2 = \\frac{(a_1 - \\bar{a})^2 + (a_2 - \\bar{a})^2+...+(a_n - \\bar{a})^2}{n} = \\frac{a_1^2 + a_2^2+...+a_n^2}{n} - ( \\bar{a} )^2\\)\n\nOdchylenie standardowe \\(\\: \\sigma \\:\\) jest pierwiastkiem kwadratowym z wariancji."
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-16",
+                         "order":  16,
+                         "title":  "Granica ciągu",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "GRANICA CIĄGU\n\n\\(\\cdot\\)Granica sumy, różnicy, iloczynu i ilorazu ciągów\n\nDane są ciągi \\(\\: \\: (a_n) \\: \\:\\) i \\(\\: \\: (b_n), \\: \\:\\) określone dla \\(\\: \\: n \\geq 1 \\:\\).\nJeżeli \\(\\: \\: \\: \\lim_{{n \\to \\infty}} a_n = a \\: \\: \\:\\) oraz \\(\\: \\: \\: \\lim_{{n \\to \\infty}} b_n = b, \\: \\:\\) to\n\\(\\lim_{{n \\to \\infty}} (a_n + b_n) = a+b\\)\\(\\lim_{{n \\to \\infty}} (a_n - b_n) = a-b\\)\\(\\lim_{{n \\to \\infty}} (a_n \\cdot b_n) = a \\cdot b\\)\n\nJeżeli ponadto \\(\\: b_n \\neq 0 \\:\\) dla \\(\\: n \\geq 1 \\:\\) oraz \\(\\: b \\neq 0 \\:\\), to\n\\(\\lim_{{n \\to \\infty}} \\frac{a_n}{b_n} = \\frac{a}{b}\\)\n\n\\(\\cdot\\)Suma wyrazów nieskończonego ciągu geometrycznego\n\nDany jest nieskończony ciąg geometryczny \\(\\: \\: (a_n), \\: \\:\\) określony dla \\(\\: \\: n \\geq 1, \\: \\:\\) o ilorazie \\(\\: \\: q \\: \\:\\).\nNiech \\(\\: \\: (S_n) \\: \\:\\) oznacza ciąg sum początkowych wyrazów ciągu \\(\\: \\: (a_n), \\: \\:\\) to znaczy ciąg określony wzorem\n\\(S_n = a_1+a_2+...+a_n\\) dla \\(n \\geq 1. \\: \\:\\) Jeżeli \\(|q| \u003c 1,\\) to ciąg \\((S_n)\\) ma granicę\n\\(S = \\lim_{{n \\to \\infty}} S_n = \\frac{a_1}{1-q}\\)\n\nTę granicę nazywamy sumą wszystkich wyrazów ciągu \\(\\: \\: (a_n). \\: \\:\\)"
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-17",
+                         "order":  17,
+                         "title":  "Pochodna funkcji",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "POCHODNA FUNKCJI\n\n\\(\\cdot\\)Pochodna sumy, różnicy, iloczynu i ilorazu funkcji\n\\([ c \\cdot f(x) ]\u0027 = c \\cdot f\u0027(x)\\) dla \\(c \\in R\\)\n\n\\([ f(x)+g(x) ]\u0027 = f\u0027(x)+g\u0027(x)\\)\n\n\\([ f(x)-g(x) ]\u0027 = f\u0027(x)-g\u0027(x)\\)\n\n\\([ f(x) \\cdot g(x) ]\u0027 = f\u0027(x) \\cdot g(x)+f(x) \\cdot g\u0027(x)\\)\n\n\\(\\left[\\frac{f(x)}{g(x)}\\right]\u0027 = \\frac{f\u0027(x) \\cdot g(x)-f(x) \\cdot g\u0027(x)}{[ g(x) ]^2}\\) gdy \\(g(x) \\neq 0\\)\n\n\\(\\cdot\\)Pochodne niektórych funkcji\nNiech \\(a, b, c\\) będą dowolnymi liczbami rzeczywistymi, \\(n\\) dowolną liczbą całkowitą."
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w17a.png"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "\\(\\cdot\\)Równanie stycznej\n\nJeżeli funkcja \\(\\: \\: f \\: \\:\\) ma pochodną w punkcie \\(\\: \\: x_0 \\: \\:\\), to równanie stycznej do wykresu funkcji \\(\\: \\: f \\: \\:\\) w punkcie \\(\\: \\: (x_0, f(x_0)) \\: \\:\\) dane jest wzorem\n\\(y = ax+b,\\)\ngdzie współczynnik kierunkowy stycznej jest równy wartości pochodnej funkcji \\(\\: \\: f \\: \\:\\) w punkcie \\(\\: \\: x_0, \\: \\:\\) to znaczy \\(\\: \\: a = f\u0027(x_0), \\: \\:\\) natomiast \\(\\: \\: b = f(x_0)-f\u0027(x_0) \\cdot x_0 \\: \\:\\).\nRównanie stycznej możemy zapisać w postaci\n\\(\\: \\: y = f\u0027(x_0) \\cdot (x-x_0)+f(x_0) \\: \\:\\)"
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "formula-18",
+                         "order":  18,
+                         "title":  "Tablica wartości funkcji trygonometrycznych",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "TABLICA WARTOŚCI FUNKCJI TRYGONOMETRYCZNYCH"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w18a.png"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w18c.png"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w18b.png"
+                                        },
+                                        {
+                                            "type":  "image",
+                                            "asset":  "img/w18d.png"
+                                        }
+                                    ]
+                     }
+                 ]
+}

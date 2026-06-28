@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abituria", "Abituria.csproj", "{DEE391DE-D71F-40ED-9F99-96C930325B75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abituria.Tests", "tests\Abituria.Tests\Abituria.Tests.csproj", "{A17B8574-E44B-4D1F-A4BD-2FB612F294BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DEE391DE-D71F-40ED-9F99-96C930325B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEE391DE-D71F-40ED-9F99-96C930325B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEE391DE-D71F-40ED-9F99-96C930325B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A17B8574-E44B-4D1F-A4BD-2FB612F294BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A17B8574-E44B-4D1F-A4BD-2FB612F294BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A17B8574-E44B-4D1F-A4BD-2FB612F294BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A17B8574-E44B-4D1F-A4BD-2FB612F294BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,35 @@
+﻿{
+    "schemaVersion":  1,
+    "items":  [
+                  {
+                      "id":  "matura-2019",
+                      "title":  "Matura 2019",
+                      "category":  "exam",
+                      "message":  "Arkusz maturalny 2019 nie został jeszcze uzupełniony."
+                  },
+                  {
+                      "id":  "matura-2020",
+                      "title":  "Matura 2020",
+                      "category":  "exam",
+                      "message":  "Arkusz maturalny 2020 nie został jeszcze uzupełniony."
+                  },
+                  {
+                      "id":  "matura-2021",
+                      "title":  "Matura 2021",
+                      "category":  "exam",
+                      "message":  "Podstawowy arkusz maturalny 2021 nie został jeszcze uzupełniony."
+                  },
+                  {
+                      "id":  "general-calculator",
+                      "title":  "Kalkulator ogólny",
+                      "category":  "calculator",
+                      "message":  "Kalkulator ogólny jest w przygotowaniu."
+                  },
+                  {
+                      "id":  "exercise-set-e",
+                      "title":  "Zestaw E1-E35",
+                      "category":  "exercise",
+                      "message":  "Ekrany E1-E35 w starej wersji były pustymi szablonami i pozostają oznaczone jako treść w przygotowaniu."
+                  }
+              ]
+}
