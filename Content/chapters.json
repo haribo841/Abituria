@@ -1,5 +1,11 @@
 ﻿{
-    "schemaVersion":  1,
+    "schemaVersion":  2,
+    "introduction":  [
+                         {
+                             "type":  "richText",
+                             "text":  "Działy łączą teorię, przykłady i zadania. Wektory są dostępne w całości, a pozostałe tematy zachowano jako jawne pozycje planu rozwoju."
+                         }
+                     ],
     "chapters":  [
                      {
                          "id":  "vectors",
@@ -77,28 +83,61 @@
                                     ]
                      },
                      {
-                         "id":  "chapter-1",
-                         "title":  "Dział I",
+                         "id":  "sets-and-logic",
+                         "title":  "Rachunek zbiorów i logika",
                          "status":  "placeholder",
-                         "message":  "Treść ogólna działu I",
+                         "message":  "Dział zaplanowany w starszej wersji projektu.",
+                         "roadmapId":  "chapters-expansion",
                          "blocks":  [
 
                                     ]
                      },
                      {
-                         "id":  "chapter-2",
-                         "title":  "Dział II",
+                         "id":  "equations-and-inequalities",
+                         "title":  "Równania i nierówności",
                          "status":  "placeholder",
-                         "message":  "Treść ogólna działu II",
+                         "message":  "Dział zaplanowany w starszej wersji projektu.",
+                         "roadmapId":  "chapters-expansion",
                          "blocks":  [
 
                                     ]
                      },
                      {
-                         "id":  "chapter-3",
-                         "title":  "Dział III",
+                         "id":  "number-sequences",
+                         "title":  "Ciągi liczbowe",
                          "status":  "placeholder",
-                         "message":  "Treść ogólna działu III",
+                         "message":  "Dział zaplanowany w starszej wersji projektu.",
+                         "roadmapId":  "chapters-expansion",
+                         "blocks":  [
+
+                                    ]
+                     },
+                     {
+                         "id":  "prime-numbers",
+                         "title":  "Liczby pierwsze",
+                         "status":  "placeholder",
+                         "message":  "W tej wersji legacy istniał wyłącznie pusty ekran działu.",
+                         "roadmapId":  "chapters-expansion",
+                         "blocks":  [
+
+                                    ]
+                     },
+                     {
+                         "id":  "quadratic-function",
+                         "title":  "Funkcja kwadratowa",
+                         "status":  "placeholder",
+                         "message":  "W tej wersji legacy istniał wyłącznie pusty ekran działu.",
+                         "roadmapId":  "chapters-expansion",
+                         "blocks":  [
+
+                                    ]
+                     },
+                     {
+                         "id":  "logarithms",
+                         "title":  "Logarytmy",
+                         "status":  "placeholder",
+                         "message":  "W tej wersji legacy istniał wyłącznie pusty ekran działu.",
+                         "roadmapId":  "chapters-expansion",
                          "blocks":  [
 
                                     ]

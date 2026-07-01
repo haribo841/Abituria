@@ -1,35 +1,78 @@
 ﻿{
-    "schemaVersion":  1,
+    "schemaVersion":  2,
     "items":  [
                   {
                       "id":  "matura-2019",
                       "title":  "Matura 2019",
                       "category":  "exam",
-                      "message":  "Arkusz maturalny 2019 nie został jeszcze uzupełniony."
+                      "message":  "Arkusz maturalny 2019 nie został jeszcze uzupełniony.",
+                      "roadmapId":  "exam-archive",
+                      "blocks":  [
+
+                                 ]
                   },
                   {
                       "id":  "matura-2020",
                       "title":  "Matura 2020",
                       "category":  "exam",
-                      "message":  "Arkusz maturalny 2020 nie został jeszcze uzupełniony."
+                      "message":  "Arkusz maturalny 2020 nie został jeszcze uzupełniony.",
+                      "roadmapId":  "exam-archive",
+                      "blocks":  [
+
+                                 ]
                   },
                   {
                       "id":  "matura-2021",
                       "title":  "Matura 2021",
                       "category":  "exam",
-                      "message":  "Podstawowy arkusz maturalny 2021 nie został jeszcze uzupełniony."
+                      "message":  "Podstawowy arkusz maturalny 2021 nie został jeszcze uzupełniony.",
+                      "roadmapId":  "exam-archive",
+                      "blocks":  [
+                                     {
+                                         "type":  "richText",
+                                         "text":  "Dane historyczne zapisane w starej wersji aplikacji: w 2021 roku maturę z matematyki zdało 79% absolwentów - 84% absolwentów liceów i 71% absolwentów techników. Średni wynik egzaminu na poziomie podstawowym wyniósł 56% możliwych punktów: 62% w liceach i 47% w technikach. Pomimo zmian związanych z pandemią ogólny wynik był zbliżony do poprzednich lat. Pełny arkusz i zadania nie były zaimplementowane."
+                                     }
+                                 ]
                   },
                   {
                       "id":  "general-calculator",
                       "title":  "Kalkulator ogólny",
                       "category":  "calculator",
-                      "message":  "Kalkulator ogólny jest w przygotowaniu."
+                      "message":  "Kalkulator ogólny jest w przygotowaniu.",
+                      "roadmapId":  "general-calculator",
+                      "blocks":  [
+
+                                 ]
+                  },
+                  {
+                      "id":  "graph-generator",
+                      "title":  "Generator wykresów",
+                      "category":  "calculator",
+                      "message":  "Generator wykresów był nieaktywnym placeholderem w starszej wersji.",
+                      "roadmapId":  "graph-generator",
+                      "blocks":  [
+
+                                 ]
+                  },
+                  {
+                      "id":  "trigonometric-calculator",
+                      "title":  "Kalkulator funkcji trygonometrycznych",
+                      "category":  "calculator",
+                      "message":  "Kalkulator funkcji trygonometrycznych był nieaktywnym placeholderem w starszej wersji.",
+                      "roadmapId":  "trigonometric-calculator",
+                      "blocks":  [
+
+                                 ]
                   },
                   {
                       "id":  "exercise-set-e",
                       "title":  "Zestaw E1-E35",
                       "category":  "exercise",
-                      "message":  "Ekrany E1-E35 w starej wersji były pustymi szablonami i pozostają oznaczone jako treść w przygotowaniu."
+                      "message":  "Ekrany E1-E35 w starej wersji były pustymi szablonami i zostały zastąpione wspólnym planem rozwoju zadań.",
+                      "roadmapId":  "legacy-empty-exercises",
+                      "blocks":  [
+
+                                 ]
                   }
               ]
 }

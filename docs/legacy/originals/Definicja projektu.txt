@@ -1,0 +1,5 @@
+Abituria to zaawansowane narzędzie do nauki matematyki. Pozwala użytkownikom uczyć się, ćwiczyć i odkrywać zagadnienia matematyczne za pomocą symboli matematycznych i notacji naukowych oraz tekstu. Abituria zapewni zautomatyzowane rozwiązania krok po kroku zagadnień algebraicznych, trygonometrycznych i rachunku różniczkowego obejmujących zakres szkoły średniej.
+
+Abituria będzie oferować bogactwo zaawansowanych kalkulatorów, w tym: równania, nierówności, granice, pochodne, funkcje i wiele innych. Deklarowanym celem programu jest zapewnienie powszechnej dostępności treści naukowych poprzez rozszerzenie przestrzeni do przeszukiwania o naukowe notacje, wyrażenia, równania i formuły.
+
+Uczniowie mogą uczyć się w swoim własnym tempie, sięgając po nowy materiał lub uzupełniając luki w zrozumieniu tego, o czym była już mowa w szkole. W ten sposób skutecznie budują solidną bazę wiedzy. Zawartość i funkcjonalność programu ma na celu podwyższenie poziomu wiedzy matematycznej przyszłych maturzystów i nie tylko.

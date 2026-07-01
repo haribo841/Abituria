@@ -1,0 +1,6 @@
+Przeprowadzenie analizy biznesowej:
+Określenie celów projektu z punktu widzenia klienta, określenie potrzeb użytkownika końcowego co do tworzonego produktu oraz określenie ogólnego modelu biznesowego w ramach którego produkt będzie udostępniany,
+Zdefiniowanie zakresu projektu, w szczególności harmonogramu prowadzonych prac ze wskazaniem kamieni milowych oraz kryteriów akceptacji,
+Wypracowanie modelu licencyjnego dla tworzonego produktu.
+Zebranie wymagań co do tworzonego produktu oraz zapisanie ich w sposób zgodny z wybraną metodyką
+Opracowanie architektury systemu z uwzględnieniem wybranych przez zespół technologii.

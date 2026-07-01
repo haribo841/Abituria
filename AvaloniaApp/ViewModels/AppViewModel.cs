@@ -15,6 +15,7 @@ public enum AppPage
     Chapters,
     ChapterDetail,
     Calculator,
+    Roadmap,
     Profile,
     Placeholder
 }
@@ -26,6 +27,8 @@ public sealed class AppViewModel : ObservableObject
     private FormulaArticle? _selectedFormula;
     private ChapterArticle? _selectedChapter;
     private ExerciseDefinition? _selectedExercise;
+    private string? _selectedTopicId;
+    private string? _selectedRoadmapId;
     private PlaceholderItem? _selectedPlaceholder;
 
     public AppPage CurrentPage
@@ -43,6 +46,8 @@ public sealed class AppViewModel : ObservableObject
     public FormulaArticle? SelectedFormula { get => _selectedFormula; private set => SetProperty(ref _selectedFormula, value); }
     public ChapterArticle? SelectedChapter { get => _selectedChapter; private set => SetProperty(ref _selectedChapter, value); }
     public ExerciseDefinition? SelectedExercise { get => _selectedExercise; private set => SetProperty(ref _selectedExercise, value); }
+    public string? SelectedTopicId { get => _selectedTopicId; private set => SetProperty(ref _selectedTopicId, value); }
+    public string? SelectedRoadmapId { get => _selectedRoadmapId; private set => SetProperty(ref _selectedRoadmapId, value); }
     public PlaceholderItem? SelectedPlaceholder { get => _selectedPlaceholder; private set => SetProperty(ref _selectedPlaceholder, value); }
 
     public void Login(LocalProfile profile)
@@ -61,5 +66,8 @@ public sealed class AppViewModel : ObservableObject
     public void OpenFormula(FormulaArticle article) { SelectedFormula = article; CurrentPage = AppPage.FormulaDetail; }
     public void OpenChapter(ChapterArticle chapter) { SelectedChapter = chapter; CurrentPage = AppPage.ChapterDetail; }
     public void OpenExercise(ExerciseDefinition exercise) { SelectedExercise = exercise; CurrentPage = AppPage.Exercise; }
+    public void OpenExam() { SelectedTopicId = null; CurrentPage = AppPage.ExerciseList; }
+    public void OpenTopic(string topicId) { SelectedTopicId = topicId; CurrentPage = AppPage.ExerciseList; }
+    public void OpenRoadmap(string? itemId = null) { SelectedRoadmapId = itemId; CurrentPage = AppPage.Roadmap; }
     public void OpenPlaceholder(PlaceholderItem item) { SelectedPlaceholder = item; CurrentPage = AppPage.Placeholder; }
 }

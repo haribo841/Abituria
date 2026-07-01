@@ -1,0 +1,99 @@
+Opis struktury systemu:
+
+Backend: C# oraz platforma .NET
+
+Frontend: WPF w programie Visual Studio z Visual Basic
+
+Technologie, których planujemy użyć: C#, biblioteki Visual Studio, .NET
+
+Komunikacja: grupowe spotkania na platformie głosowej (Discord i Teams) oraz tekstowej (Messenger)
+
+Środowisko graficzne: WPF
+
+Wersja demonstracyjna będzie dostępna na Githubie:
+
+Projekt-Inzynierski-AK-AS-FD
+
+Funkcje, które chcemy zaimplementować:
+
+1.interfejs logowania (ewentualne/opcjonalne) wymaga baz danych
+
+2.kalkulator (jak daleko? [ang.] how far?)
+
+dodawanie i odejmowanie
+
+mnożenie i dzielenie
+
+równa się
+
+nawiasy
+
+potęgowanie i pierwiastkowanie
+
+3.działy matematyki
+
+Wraz z wyjaśnieniami konkretnych zagadnień użytkownik będzie otrzymywał zadania do wykonania, których wyniki będą następnie implementowanie przez system, a użytkownik zostanie poinformowany o prawidłowości swojego rozwiązania. ; Odwołanie do - np. 3.c)III.
+
+W przypadku popełnienia błędu lub nieumiejętności rozwiązania zadania, użytkownik może poprosić o podpowiedź. Idea jest taka, że metody rozwiązywania zadań będą podzielone na kroki. Przy kolejnych błędach użytkownik może odsłaniać kolejne z nich.
+
+a)Liczby naturalne
+
+I. Aksjomatyka liczb naturalnych (opis co to jest)
+
+II. Przykłady na zastosowanie aksjomatu indukcji. (przykłady, jako zadanie, jak nie wiesz klikasz dalej i pokaże co robić)
+
+III. Określenie działań na liczbach naturalnych.
+
+b)alfabet grecki (tabelka)
+
+c)Wyrażenia algebraiczne. Równania i nierówności algebraiczne
+
+Część teoretyczna
+
+I. Wzory skróconego mnożenia (wzory)
+
+II. Rozwiązania równania kwadratowego (co jeśli delta ujemna?)
+
+III. Użyteczne wzory i informacje & Zadania
+
+-Obliczenia liczbowe, złożone działania na ułamkach
+
+-Przybliżenie i błąd przybliżenia
+
+-Wyrażenia algebraiczne
+
+-Wzory skróconego mnożenia
+
+-Działania na potęgach i pierwiastkach
+
+-Przedziały liczbowe
+
+-Obliczenia procentowe
+
+-Pojęcie logarytmu i obliczenia logarytmiczne
+
+[Zadania wprowadzające (wymagania i zadania)
+
+Zadania maturalne]
+
+IV. Wyrażenia algebraiczne
+
+V. Równania i nierówności algebraiczne
+
+c)Liczby rzeczywiste. Zbiory... i tak dalej
+
+4.może jakieś wykłady (ewentualne/opcjonalne) wymaga zewnętrznego serwisu do wideo np. Tuba.
+
+Sposób, w jaki program ma działać:
+
+Użytkownik uruchamia program. Wita go interfejs zawierający nazwę oprogramowania oraz wstępne informacje.
+
+W zależności od swoich potrzeb, użytkownik z tego okna może wybrać jedną z opcji: kalkulator, matury poprzednie (także próbne) oraz działy, a także przejść osobno do segmentów takich jak wideo oraz wyłącznie ćwiczenia.
+
+Działy oraz matury przeniosą użytkownika we właściwe miejsca, zmieniając się z ekranu głównego, kalkulator uruchomi się natomiast w nowym oknie (pojedynczym, kilkukrotne wybranie tej opcji nie tworzy go kilkakrotnie).
+
+Segment działy będzie największym i najbardziej funkcjonalnym. Będzie wyglądał (jako bardzo prosty prototyp, przedstawiający tylko rozdział na konkretne moduły, a nie wyszlifowany produkt) następująco:
+
+Użytkownik może się cofnąć do ekranu startowego poprzez kliknięcie na nazwę programu.
+
+Planujemy możliwość losowania zadań, np. Z puli zadań maturalnych.

@@ -9,10 +9,13 @@ Abituria to działająca offline aplikacja edukacyjna w AvaloniaUI i .NET 9. Pro
 - 18 pełnych tablic matematycznych,
 - rozbudowany dział „Wektory” wraz z ilustracjami,
 - 35 zadań z matury poprawkowej 2021,
+- zgodność arkusza i klucza odpowiedzi z dokumentami CKE `EMAP-P0-100-2108`,
+- przeglądanie zadań według arkusza lub 17 tematów oraz sesyjny brudnopis,
 - automatyczne sprawdzanie odpowiedzi A–D w zadaniach 1–28,
 - prowadzenie przez podpowiedzi i ujawnienie odpowiedzi w zadaniach 29–35,
 - kalkulator funkcji kwadratowej z postacią ogólną, kanoniczną i iloczynową,
-- zachowane ekrany informujące o materiałach, które w starym projekcie były tylko placeholderami.
+- zachowane ekrany informujące o materiałach, które w starym projekcie były tylko placeholderami,
+- plan rozwoju rozdzielający elementy przeniesione, zaplanowane i zastąpione.
 
 ## Uruchomienie
 
@@ -46,13 +49,13 @@ Przy pierwszym uruchomieniu aplikacja odczytuje istniejący plik:
 %APPDATA%/Abituria/users.txt
 ```
 
-Nazwy są importowane jako profile gościa. Plik źródłowy nie jest usuwany, a import jest idempotentny.
+Nazwy są importowane jako profile gościa. Plik źródłowy nie jest usuwany, a import jest idempotentny. Gdy po imporcie baza nie zawiera żadnego profilu, aplikacja tworzy domyślnego gościa `Maturzysta`.
 
 ## Treści
 
 Treści edukacyjne są wersjonowane w katalogu `Content` jako JSON. Są renderowane przez generyczne widoki Avalonia, a wzory przez `Sylinko.CSharpMath.Avalonia`.
 
-Importer `tools/Import-LegacyContent.ps1` pozwala ponownie wygenerować zasoby z archiwalnego snapshotu:
+Importer `tools/Import-LegacyContent.ps1` pozwala ponownie wygenerować zasoby z jawnie wskazanego archiwalnego snapshotu. Snapshot nie jest częścią aktywnego repozytorium:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File tools/Import-LegacyContent.ps1 `
@@ -61,13 +64,15 @@ powershell -ExecutionPolicy Bypass -File tools/Import-LegacyContent.ps1 `
 
 Importer poprawia wyłącznie rozpoznane literówki i składnię blokującą renderowanie LaTeX. Wynik jest sprawdzany testami inwentarza.
 
+Końcowy audyt migracji i kryteria pozwalające usunąć stare snapshoty WPF są zapisane w [inwentarzu migracji](docs/MIGRATION_INVENTORY.md).
+
 ## Architektura
 
-- `AvaloniaApp/Models` — kontrakty treści i profili,
-- `AvaloniaApp/Data` — SQLite i migracje EF Core,
-- `AvaloniaApp/Services` — konta, bezpieczeństwo, treści i obliczenia,
-- `AvaloniaApp/ViewModels` — sesja i nawigacja,
-- `AvaloniaApp/Views` — oddzielne ekrany Avalonia,
-- `tests/Abituria.Tests` — testy inwentarza, kont i kalkulatora.
+- `AvaloniaApp/Models` - kontrakty treści i profili,
+- `AvaloniaApp/Data` - SQLite i migracje EF Core,
+- `AvaloniaApp/Services` - konta, bezpieczeństwo, treści i obliczenia,
+- `AvaloniaApp/ViewModels` - sesja i nawigacja,
+- `AvaloniaApp/Views` - oddzielne ekrany Avalonia,
+- `tests/Abituria.Tests` - testy inwentarza, kont i kalkulatora.
 
-Szczegóły konsolidacji starszych wersji opisuje [inwentarz migracji](docs/MIGRATION_INVENTORY.md).
+Szczegóły konsolidacji starszych wersji opisuje [inwentarz migracji](docs/MIGRATION_INVENTORY.md), a dalsze pozycje [plan rozwoju](docs/ROADMAP.md). Oryginalne dokumenty planistyczne oraz historyczna licencja zostały zachowane bajt w bajt w [archiwum legacy](docs/legacy/README.md).

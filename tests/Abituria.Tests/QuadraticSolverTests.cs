@@ -13,8 +13,9 @@ public sealed class QuadraticSolverTests
         Assert.True(result.Success);
         Assert.Contains("x₁ = 1", result.Summary);
         Assert.Contains("x₂ = 2", result.Summary);
-        Assert.Contains(result.Steps, step => step.StartsWith("Postać kanoniczna"));
-        Assert.Contains(result.Steps, step => step.StartsWith("Postać iloczynowa"));
+        Assert.Contains(result.Sections, section => section.Title == "Wierzchołek i postać kanoniczna");
+        Assert.Contains(result.Sections.SelectMany(section => section.Lines), line => line == "Postać iloczynowa: f(x) = (x - 1)(x - 2)");
+        Assert.Contains(result.Sections.SelectMany(section => section.Lines), line => line == "f(x) = x² - 3x + 2");
     }
 
     [Fact]
@@ -30,5 +31,16 @@ public sealed class QuadraticSolverTests
     {
         Assert.False(_solver.Solve("0", "1", "2").Success);
         Assert.False(_solver.Solve("abc", "1", "2").Success);
+    }
+
+    [Fact]
+    public void Formats_signs_unit_coefficients_and_negative_vertex_without_nested_parentheses()
+    {
+        var result = _solver.Solve("-1", "-3", "-2");
+        var lines = result.Sections.SelectMany(section => section.Lines).ToArray();
+
+        Assert.Contains("f(x) = -x² - 3x - 2", lines);
+        Assert.DoesNotContain(lines, line => line.Contains("+ -", StringComparison.Ordinal));
+        Assert.DoesNotContain(lines, line => line.Contains("- (", StringComparison.Ordinal));
     }
 }

@@ -1,0 +1,24 @@
+Działy matematyki:
+a)Liczby naturalne
+I. Aksjomatyka liczb naturalnych (opis co to jest)
+II.Przykłady na zastostosowanie aksjomatu indukcji. (przykłady, jako zadanie, jak nie wiesz klikasz dalej i pokaże co robicz)
+III.Określenie działań na liczbach naturalnych.
+b)alfabet grecki (tabelka)
+c)Wyrażenia algebraiczne. Równania i nierówności algebraiczne
+Część teoretyczna
+I. Wzory skróconego mnożenia (wzory)
+II.Rozwiązania równania kwadratowego (co jeśli delta ujemna?)
+III.Użyteczne wzory i informacje & Zadania
+-Obliczenia liczbowe, złożone działania na ułamkach
+-Przybliżenie i błąd przybliżenia
+-Wyrażenia algebraiczne
+-Wzory skróconego mnożenia
+-Działania na potęgach i pierwiastkach
+-Przedziały liczbowe
+-Obliczenia procentowe
+-Pojęcie logarytmu i obliczenia logarytmiczne
+[Zadania wprowadzające (wymagania i zadania)
+Zadania maturalne]
+IV. Wyrażenia algebraiczne
+V. Równania i nierównopści algebraiczne
+c)Liczby rzeczywiste. Zbiory... i tak dalej

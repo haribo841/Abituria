@@ -1,5 +1,11 @@
 ﻿{
-    "schemaVersion":  1,
+    "schemaVersion":  2,
+    "introduction":  [
+                         {
+                             "type":  "richText",
+                             "text":  "W czasie matury z matematyki na obu poziomach możesz korzystać z tablic matematycznych przygotowanych przez CKE. Znajdziesz w nich wiele wzorów i informacji pomocnych podczas egzaminu. Przejrzyj wcześniej całe tablice, aby wiedzieć, gdzie szukać potrzebnych treści i ograniczyć stres. Jeżeli zdajesz tylko poziom podstawowy, pamiętaj, że część tablic dotyczy poziomu rozszerzonego; warto rozpoznawać te strony i pomijać je podczas egzaminu."
+                         }
+                     ],
     "articles":  [
                      {
                          "id":  "formula-1",

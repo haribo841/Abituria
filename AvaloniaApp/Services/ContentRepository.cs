@@ -19,12 +19,14 @@ public sealed class ContentRepository
         Chapters = Load<ChapterCatalog>("Content/chapters.json");
         Exam = Load<ExamCatalog>("Content/exam-2021-correction.json").Exam;
         Placeholders = Load<PlaceholderCatalog>("Content/placeholders.json");
+        Roadmap = Load<RoadmapCatalog>("Content/roadmap.json");
     }
 
     public FormulaCatalog Formulas { get; }
     public ChapterCatalog Chapters { get; }
     public ExamDefinition Exam { get; }
     public PlaceholderCatalog Placeholders { get; }
+    public RoadmapCatalog Roadmap { get; }
 
     private T Load<T>(string relativePath)
     {

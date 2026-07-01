@@ -10,10 +10,12 @@ namespace Abituria.Views;
 
 public sealed class CalculatorView : UserControl
 {
-    public CalculatorView(QuadraticSolver solver, Action openGeneralCalculator)
+    public CalculatorView(QuadraticSolver solver, Action<string> openPlannedCalculator)
     {
         var root = new StackPanel { Spacing = 18 };
-        root.Children.Add(UiFactory.PageTitle("Kalkulator funkcji kwadratowej", "Analiza równania ax² + bx + c = 0 krok po kroku."));
+        root.Children.Add(UiFactory.PageTitle("Kalkulator funkcji kwadratowej", "Poznaj sposób obliczania delty, miejsc zerowych i postaci funkcji krok po kroku."));
+        root.Children.Add(UiFactory.InfoBand("Jak korzystać", "Kalkulator funkcji kwadratowej pozwala sprawdzić rozwiązanie i przejść przez analizę konkretnego przykładu krok po kroku. Gdy zatrzymasz się w zadaniu, zapomnisz wzoru albo chcesz poćwiczyć, podaj współczynniki funkcji. Otrzymasz jej postać ogólną, iloczynową i kanoniczną oraz najważniejsze własności."));
+        root.Children.Add(UiFactory.InfoBand("Funkcja kwadratowa", "Funkcja f(x) = ax² + bx + c jest kwadratowa, gdy a ≠ 0. Wyróżnik Δ = b² - 4ac określa liczbę rzeczywistych miejsc zerowych: dwa dla Δ > 0, jedno dla Δ = 0 i brak dla Δ < 0."));
         var form = new Grid { ColumnDefinitions = new ColumnDefinitions("*,*,*"), ColumnSpacing = 12 };
         var a = NumberBox("a", "1");
         var b = NumberBox("b", "-3");
@@ -25,30 +27,64 @@ public sealed class CalculatorView : UserControl
 
         var result = new StackPanel { Spacing = 9 };
         result.Children.Add(new TextBlock { Text = "Wynik pojawi się tutaj.", Classes = { "muted" } });
-        var calculate = new Button { Content = "Oblicz", Classes = { "primary" }, HorizontalAlignment = HorizontalAlignment.Left, MinWidth = 150 };
+        var calculate = new Button { Content = "Oblicz", Classes = { "primary" }, MinWidth = 150 };
         calculate.Click += (_, _) =>
         {
             var solution = solver.Solve(a.Text, b.Text, c.Text);
             result.Children.Clear();
             result.Children.Add(new TextBlock
             {
-                Text = solution.Summary, FontSize = 20, FontWeight = Avalonia.Media.FontWeight.SemiBold,
-                Foreground = UiFactory.Brush(solution.Success ? "#19733B" : "#B42318"), TextWrapping = TextWrapping.Wrap
+                Text = solution.Summary,
+                FontSize = 20,
+                FontWeight = Avalonia.Media.FontWeight.SemiBold,
+                Foreground = UiFactory.Brush(solution.Success ? "#19733B" : "#B42318"),
+                TextWrapping = TextWrapping.Wrap
             });
-            foreach (var step in solution.Steps)
-                result.Children.Add(new TextBlock { Text = step, TextWrapping = TextWrapping.Wrap, FontSize = 16 });
+            foreach (var section in solution.Sections)
+            {
+                result.Children.Add(new TextBlock { Text = section.Title, FontSize = 17, FontWeight = Avalonia.Media.FontWeight.SemiBold, Margin = new Thickness(0, 6, 0, 0) });
+                foreach (var line in section.Lines)
+                    result.Children.Add(new TextBlock { Text = line, TextWrapping = TextWrapping.Wrap, FontSize = 16 });
+            }
         };
-        root.Children.Add(calculate);
+        var clear = new Button { Content = "Wyczyść", Classes = { "ghost" }, MinWidth = 120 };
+        clear.Click += (_, _) =>
+        {
+            a.Text = string.Empty;
+            b.Text = string.Empty;
+            c.Text = string.Empty;
+            result.Children.Clear();
+            result.Children.Add(new TextBlock { Text = "Wynik pojawi się tutaj.", Classes = { "muted" } });
+            a.Focus();
+        };
+        var actions = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 10, HorizontalAlignment = HorizontalAlignment.Left };
+        actions.Children.Add(calculate);
+        actions.Children.Add(clear);
+        root.Children.Add(actions);
         root.Children.Add(UiFactory.Card(result, new Thickness(20), "#F7FAFC"));
-        var general = new Button { Content = "Kalkulator ogólny", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Left };
-        general.Click += (_, _) => openGeneralCalculator();
-        root.Children.Add(general);
+        root.Children.Add(new TextBlock { Text = "Pozostałe narzędzia", Classes = { "h2" } });
+        var plannedTools = new WrapPanel { Orientation = Orientation.Horizontal };
+        AddPlannedTool(plannedTools, "Kalkulator ogólny", "general-calculator", openPlannedCalculator);
+        AddPlannedTool(plannedTools, "Generator wykresów", "graph-generator", openPlannedCalculator);
+        AddPlannedTool(plannedTools, "Funkcje trygonometryczne", "trigonometric-calculator", openPlannedCalculator);
+        root.Children.Add(plannedTools);
+        root.Children.Add(UiFactory.InfoBand("Postacie funkcji", "Postać kanoniczna a(x - p)² + q pokazuje wierzchołek P = (p, q). Postać iloczynowa a(x - x₁)(x - x₂) istnieje nad liczbami rzeczywistymi, gdy Δ ≥ 0."));
         root.Children.Add(UiFactory.InfoBand("Format liczb", "Możesz używać przecinka albo kropki jako separatora dziesiętnego."));
         Content = UiFactory.PageScroll(root);
     }
 
     private static TextBox NumberBox(string label, string value) => new()
     {
-        PlaceholderText = label, Text = value, FontSize = 18, HorizontalAlignment = HorizontalAlignment.Stretch
+        PlaceholderText = label,
+        Text = value,
+        FontSize = 18,
+        HorizontalAlignment = HorizontalAlignment.Stretch
     };
+
+    private static void AddPlannedTool(Panel panel, string label, string id, Action<string> open)
+    {
+        var button = new Button { Content = label, Classes = { "ghost" }, Margin = new Thickness(0, 0, 10, 10) };
+        button.Click += (_, _) => open(id);
+        panel.Children.Add(button);
+    }
 }

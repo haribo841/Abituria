@@ -81,6 +81,8 @@ public sealed class ProfileView : UserControl
 
     private static TextBox PasswordBox(string placeholder) => new()
     {
-        PlaceholderText = placeholder, PasswordChar = '●', MaxLength = PasswordHasher.MaximumPasswordLength
+        PlaceholderText = placeholder,
+        PasswordChar = '●',
+        MaxLength = PasswordHasher.MaximumPasswordLength
     };
 }

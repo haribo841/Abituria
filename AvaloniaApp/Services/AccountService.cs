@@ -20,6 +20,7 @@ public sealed class AccountService(AppDbContextFactory contextFactory, PasswordH
         await using var context = contextFactory.CreateDbContext();
         await context.Database.MigrateAsync();
         await ImportLegacyProfilesAsync(context);
+        await EnsureDefaultGuestAsync(context);
     }
 
     public async Task<IReadOnlyList<LocalProfile>> GetProfilesAsync()
@@ -191,13 +192,31 @@ public sealed class AccountService(AppDbContextFactory contextFactory, PasswordH
                 if (await context.Profiles.AnyAsync(profile => profile.NormalizedName == normalized)) continue;
                 context.Profiles.Add(new LocalProfileEntity
                 {
-                    Id = Guid.NewGuid(), DisplayName = name, NormalizedName = normalized,
-                    Kind = ProfileKind.Guest, CreatedUtc = DateTime.UtcNow
+                    Id = Guid.NewGuid(),
+                    DisplayName = name,
+                    NormalizedName = normalized,
+                    Kind = ProfileKind.Guest,
+                    CreatedUtc = DateTime.UtcNow
                 });
             }
         }
 
         context.Metadata.Add(new AppMetadataEntity { Key = LegacyImportKey, Value = DateTime.UtcNow.ToString("O") });
+        await context.SaveChangesAsync();
+    }
+
+    private static async Task EnsureDefaultGuestAsync(AppDbContext context)
+    {
+        if (await context.Profiles.AnyAsync()) return;
+
+        context.Profiles.Add(new LocalProfileEntity
+        {
+            Id = Guid.NewGuid(),
+            DisplayName = "Maturzysta",
+            NormalizedName = NormalizeName("Maturzysta"),
+            Kind = ProfileKind.Guest,
+            CreatedUtc = DateTime.UtcNow
+        });
         await context.SaveChangesAsync();
     }
 }

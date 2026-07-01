@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using Abituria.Models;
@@ -70,8 +71,10 @@ public partial class MainWindow : Window
     {
         var header = new Border
         {
-            Background = UiFactory.Brush("#FFFFFF"), BorderBrush = UiFactory.Brush("#D8DEE4"),
-            BorderThickness = new Thickness(0, 0, 0, 1), Padding = new Thickness(22, 11)
+            Background = UiFactory.Brush("#FFFFFF"),
+            BorderBrush = UiFactory.Brush("#D8DEE4"),
+            BorderThickness = new Thickness(0, 0, 0, 1),
+            Padding = new Thickness(22, 11)
         };
         var grid = new Grid { ColumnDefinitions = new ColumnDefinitions("Auto,*,Auto"), ColumnSpacing = 18 };
         var brand = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 10, VerticalAlignment = VerticalAlignment.Center };
@@ -85,6 +88,7 @@ public partial class MainWindow : Window
         AddNav(nav, "Zadania", AppPage.Exams);
         AddNav(nav, "Działy", AppPage.Chapters);
         AddNav(nav, "Kalkulator", AppPage.Calculator);
+        AddNav(nav, "Plan rozwoju", AppPage.Roadmap);
         AddNav(nav, "Profil", AppPage.Profile);
         Grid.SetColumn(nav, 1);
         grid.Children.Add(nav);
@@ -113,6 +117,7 @@ public partial class MainWindow : Window
         AppPage.Formulas => _viewModel.CurrentPage is AppPage.Formulas or AppPage.FormulaDetail,
         AppPage.Exams => _viewModel.CurrentPage is AppPage.Exams or AppPage.ExerciseList or AppPage.Exercise,
         AppPage.Chapters => _viewModel.CurrentPage is AppPage.Chapters or AppPage.ChapterDetail,
+        AppPage.Roadmap => _viewModel.CurrentPage == AppPage.Roadmap,
         _ => _viewModel.CurrentPage == page
     };
 
@@ -123,36 +128,45 @@ public partial class MainWindow : Window
             () => _viewModel.Navigate(AppPage.Formulas),
             () => _viewModel.Navigate(AppPage.Exams),
             () => _viewModel.Navigate(AppPage.Calculator),
-            () => _viewModel.Navigate(AppPage.Chapters)),
-        AppPage.Formulas => new FormulaListView(_content.Formulas.Articles, _viewModel.OpenFormula),
+            () => _viewModel.Navigate(AppPage.Chapters),
+            () => _viewModel.OpenRoadmap()),
+        AppPage.Formulas => new FormulaListView(_content.Formulas, _viewModel.OpenFormula),
         AppPage.FormulaDetail when _viewModel.SelectedFormula is not null => new ArticleView(
             _viewModel.SelectedFormula.Title, "Tablica matematyczna", _viewModel.SelectedFormula.Blocks,
             () => _viewModel.Navigate(AppPage.Formulas)),
-        AppPage.Exams => new ExamOverviewView(_content.Exam, _content.Placeholders.Items, () => _viewModel.Navigate(AppPage.ExerciseList), _viewModel.OpenPlaceholder),
-        AppPage.ExerciseList => new ExerciseListView(_content.Exam, _viewModel.ActiveProfile!, _accounts, _viewModel.OpenExercise, () => _viewModel.Navigate(AppPage.Exams)),
+        AppPage.Exams => new ExamOverviewView(_content.Exam, _content.Placeholders.Items, _viewModel.OpenExam, _viewModel.OpenTopic, _viewModel.OpenPlaceholder),
+        AppPage.ExerciseList => new ExerciseListView(_content.Exam, _viewModel.SelectedTopicId, _viewModel.ActiveProfile!, _accounts, _viewModel.OpenExercise, () => _viewModel.Navigate(AppPage.Exams)),
         AppPage.Exercise when _viewModel.SelectedExercise is not null => new ExerciseView(
-            _viewModel.SelectedExercise, _content.Exam, _viewModel.ActiveProfile!, _accounts,
+            _viewModel.SelectedExercise, CurrentExerciseContext(), _content.Exam.Source, _viewModel.ActiveProfile!, _accounts,
             () => _viewModel.Navigate(AppPage.ExerciseList), _viewModel.OpenExercise),
-        AppPage.Chapters => new ChapterListView(_content.Chapters.Chapters, OpenChapter),
+        AppPage.Chapters => new ChapterListView(_content.Chapters, OpenChapter),
         AppPage.ChapterDetail when _viewModel.SelectedChapter is { IsAvailable: true } => new ArticleView(
             _viewModel.SelectedChapter.Title, "Materiał działowy", _viewModel.SelectedChapter.Blocks,
             () => _viewModel.Navigate(AppPage.Chapters)),
         AppPage.ChapterDetail when _viewModel.SelectedChapter is not null => new PlaceholderView(
             _viewModel.SelectedChapter.Title, _viewModel.SelectedChapter.Message ?? "Treść w przygotowaniu.",
-            () => _viewModel.Navigate(AppPage.Chapters)),
-        AppPage.Calculator => new CalculatorView(_solver, OpenGeneralCalculator),
+            _viewModel.SelectedChapter.Blocks, () => _viewModel.Navigate(AppPage.Chapters),
+            _viewModel.SelectedChapter.RoadmapId is null ? null : () => _viewModel.OpenRoadmap(_viewModel.SelectedChapter.RoadmapId)),
+        AppPage.Calculator => new CalculatorView(_solver, OpenPlannedCalculator),
+        AppPage.Roadmap => new RoadmapView(_content.Roadmap, _viewModel.SelectedRoadmapId),
         AppPage.Profile => new ProfileView(_viewModel.ActiveProfile!, _accounts, _viewModel.Logout),
         AppPage.Placeholder when _viewModel.SelectedPlaceholder is not null => new PlaceholderView(
             _viewModel.SelectedPlaceholder.Title, _viewModel.SelectedPlaceholder.Message,
-            () => _viewModel.Navigate(_viewModel.SelectedPlaceholder.Category == "calculator" ? AppPage.Calculator : AppPage.Exams)),
+            _viewModel.SelectedPlaceholder.Blocks,
+            () => _viewModel.Navigate(_viewModel.SelectedPlaceholder.Category == "calculator" ? AppPage.Calculator : AppPage.Exams),
+            _viewModel.SelectedPlaceholder.RoadmapId is null ? null : () => _viewModel.OpenRoadmap(_viewModel.SelectedPlaceholder.RoadmapId)),
         _ => new TextBlock { Text = "Nie udało się otworzyć strony.", Margin = new Thickness(30) }
     };
 
     private void OpenChapter(ChapterArticle chapter) => _viewModel.OpenChapter(chapter);
 
-    private void OpenGeneralCalculator()
+    private IReadOnlyList<ExerciseDefinition> CurrentExerciseContext() => _viewModel.SelectedTopicId is null
+        ? _content.Exam.Exercises.OrderBy(item => item.Number).ToList()
+        : _content.Exam.Exercises.Where(item => item.TopicId == _viewModel.SelectedTopicId).OrderBy(item => item.Number).ToList();
+
+    private void OpenPlannedCalculator(string id)
     {
-        var placeholder = _content.Placeholders.Items.Single(item => item.Id == "general-calculator");
+        var placeholder = _content.Placeholders.Items.Single(item => item.Id == id);
         _viewModel.OpenPlaceholder(placeholder);
     }
 }

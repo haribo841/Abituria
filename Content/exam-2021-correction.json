@@ -1,16 +1,182 @@
 ﻿{
-    "schemaVersion":  1,
+    "schemaVersion":  2,
     "exam":  {
                  "id":  "matura-poprawkowa-2021",
                  "title":  "Matura poprawkowa 2021",
                  "year":  2021,
                  "session":  "poprawkowa",
+                 "introduction":  [
+                                      {
+                                          "type":  "richText",
+                                          "text":  "Matura poprawkowa przysługuje osobom, które przystąpiły do wszystkich egzaminów obowiązkowych i nie zdały dokładnie jednego z nich. Ten historyczny arkusz zawiera 28 zadań zamkniętych i 7 otwartych. Można w nim zdobyć 45 punktów, czas pracy wynosił 170 minut, a próg zdania egzaminu obowiązkowego wynosił 30%."
+                                      },
+                                      {
+                                          "type":  "richText",
+                                          "text":  "Dane historyczne z 2021 roku: maturę zdało 74,5% zdających, 25,5% jej nie zdało, a 7,8% zdających nie spełniało warunków przystąpienia do poprawki."
+                                      }
+                                  ],
+                 "topicIntroduction":  [
+                                           {
+                                               "type":  "richText",
+                                               "text":  "W tym segmencie możesz rozwiązywać zadania maturalne podzielone ze względu na dziedzinę, a nie arkusz. Wybierz zagadnienie, które właśnie powtarzasz, aby sprawdzić opanowanie materiału."
+                                           }
+                                       ],
+                 "source":  {
+                                "publisher":  "Centralna Komisja Egzaminacyjna",
+                                "documentCode":  "EMAP-P0-100-2108",
+                                "examDate":  "2021-08-24",
+                                "questionPaperUrl":  "https://arkusze.pl/maturalne/matematyka-2021-sierpien-poprawkowa-podstawowa.pdf",
+                                "answerKeyUrl":  "https://arkusze.pl/maturalne/matematyka-2021-sierpien-poprawkowa-podstawowa-odpowiedzi.pdf",
+                                "verifiedOn":  "2026-06-30"
+                            },
+                 "topics":  [
+                                {
+                                    "id":  "powers",
+                                    "title":  "Potęgi",
+                                    "exerciseNumbers":  [
+                                                            1
+                                                        ]
+                                },
+                                {
+                                    "id":  "logarithms",
+                                    "title":  "Logarytmy",
+                                    "exerciseNumbers":  [
+                                                            2
+                                                        ]
+                                },
+                                {
+                                    "id":  "percentages",
+                                    "title":  "Procenty",
+                                    "exerciseNumbers":  [
+                                                            3
+                                                        ]
+                                },
+                                {
+                                    "id":  "identities",
+                                    "title":  "Wzory skróconego mnożenia",
+                                    "exerciseNumbers":  [
+                                                            4
+                                                        ]
+                                },
+                                {
+                                    "id":  "equations",
+                                    "title":  "Równania",
+                                    "exerciseNumbers":  [
+                                                            5,
+                                                            30
+                                                        ]
+                                },
+                                {
+                                    "id":  "inequalities",
+                                    "title":  "Nierówności",
+                                    "exerciseNumbers":  [
+                                                            6,
+                                                            29
+                                                        ]
+                                },
+                                {
+                                    "id":  "linear-function",
+                                    "title":  "Funkcja liniowa",
+                                    "exerciseNumbers":  [
+                                                            7,
+                                                            8,
+                                                            9
+                                                        ]
+                                },
+                                {
+                                    "id":  "quadratic-function",
+                                    "title":  "Funkcja kwadratowa",
+                                    "exerciseNumbers":  [
+                                                            10,
+                                                            11,
+                                                            12
+                                                        ]
+                                },
+                                {
+                                    "id":  "sequences",
+                                    "title":  "Ciągi",
+                                    "exerciseNumbers":  [
+                                                            13,
+                                                            14,
+                                                            15,
+                                                            35
+                                                        ]
+                                },
+                                {
+                                    "id":  "trigonometry",
+                                    "title":  "Trygonometria",
+                                    "exerciseNumbers":  [
+                                                            16
+                                                        ]
+                                },
+                                {
+                                    "id":  "plane-geometry",
+                                    "title":  "Planimetria",
+                                    "exerciseNumbers":  [
+                                                            17,
+                                                            18,
+                                                            19,
+                                                            20,
+                                                            21,
+                                                            23,
+                                                            32,
+                                                            33
+                                                        ]
+                                },
+                                {
+                                    "id":  "lines-and-segments",
+                                    "title":  "Proste i odcinki",
+                                    "exerciseNumbers":  [
+                                                            22
+                                                        ]
+                                },
+                                {
+                                    "id":  "solid-geometry",
+                                    "title":  "Stereometria",
+                                    "exerciseNumbers":  [
+                                                            24,
+                                                            25
+                                                        ]
+                                },
+                                {
+                                    "id":  "combinatorics",
+                                    "title":  "Kombinatoryka",
+                                    "exerciseNumbers":  [
+                                                            26
+                                                        ]
+                                },
+                                {
+                                    "id":  "probability",
+                                    "title":  "Prawdopodobieństwo",
+                                    "exerciseNumbers":  [
+                                                            27,
+                                                            34
+                                                        ]
+                                },
+                                {
+                                    "id":  "statistics",
+                                    "title":  "Statystyka",
+                                    "exerciseNumbers":  [
+                                                            28
+                                                        ]
+                                },
+                                {
+                                    "id":  "proofs",
+                                    "title":  "Zadania dowodowe",
+                                    "exerciseNumbers":  [
+                                                            31
+                                                        ]
+                                }
+                            ],
                  "exercises":  [
                                    {
                                        "id":  "mp21-z1",
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  1,
                                        "title":  "Zadanie 1",
+                                       "topicId":  "powers",
+                                       "sourcePage":  2,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Liczba \\(9^{-10}\\cdot3^{19}\\:\\)jest równa:",
                                        "options":  [
@@ -36,6 +202,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  2,
                                        "title":  "Zadanie 2",
+                                       "topicId":  "logarithms",
+                                       "sourcePage":  2,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Liczba \\(\\log_6 9+2\\log_6 2\\;\\)jest równa:",
                                        "options":  [
@@ -61,6 +230,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  3,
                                        "title":  "Zadanie 3",
+                                       "topicId":  "percentages",
+                                       "sourcePage":  2,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Liczba \\(x\\:\\)stanowi\\(80\\%\\)liczby dodatniej \\(y.\\)Wynika stąd, że liczba \\(y\\)to:",
                                        "options":  [
@@ -86,6 +258,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  4,
                                        "title":  "Zadanie 4",
+                                       "topicId":  "identities",
+                                       "sourcePage":  2,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Dla każdej liczby rzeczywistej \\(x\\)i każdej liczby rzeczywistej \\(y\\) wyrażenie\n\\((3x+8y)^2\\) jest równe:",
                                        "options":  [
@@ -110,6 +285,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  5,
                                        "title":  "Zadanie 5",
+                                       "topicId":  "equations",
+                                       "sourcePage":  2,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Liczba \\((-2)\\)jest rozwiązaniem równania:",
                                        "options":  [
@@ -125,7 +303,7 @@
                                                      "\\(\\text{Odp. B: Po pomnożeniu stron równania przez 2 otrzymujemy równanie} \\; x+2=2, \\; \\text{co daje} \\; x=0.\\)",
                                                      "\\(\\text{Odp. C: Wartość w mianowniku musi być różna od 0! Liczba -2 nie jest zatem rozwiązaniem, ponieważ } \\\\ x+2 \\neq 0, \\text{więc} \\; x \\neq -2.\\)",
                                                      "\\(\\text{Odp D:} \\; x^2(x+2)+2(x+2)=0\\)",
-                                                     "\\((x^2+2)(x+)=0 \\; \\; x^2+2=0 \\; \\bigvee \\; x+2=0 \\\\ x^2=-2 \\; \\bigvee \\; x=-2\\)",
+                                                     "\\((x^2+2)(x+2)=0 \\; \\; x^2+2=0 \\; \\bigvee \\; x+2=0 \\\\ x^2=-2 \\; \\bigvee \\; x=-2\\)",
                                                      "\\(\\text{Równanie} \\;  x^2=-2 \\; \\text{nie da rozwiązań. Odpowiedź D jest jednak poprawna, ponieważ równanie} \\; x+2=0 \\; \\text{zwraca także} \\; x=-2, \\; \\text{czyli odpowiedź.}\\)"
                                                  ],
                                        "revealedAnswer":  null,
@@ -138,6 +316,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  6,
                                        "title":  "Zadanie 6",
+                                       "topicId":  "inequalities",
+                                       "sourcePage":  4,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Zbiorem wszystkich rozwiązań nierówności \\(5-{\\frac{2-6x}{4}}\\geq2x+1\\)jest przedział:",
                                        "options":  [
@@ -148,13 +329,13 @@
                                                    ],
                                        "correctOption":  3,
                                        "hints":  [
-                                                     "\\(\\text{Rozwiąż równanie. Zacznij od pomnożenia obydwu jego stron przez} \\; 4:\\)",
+                                                     "\\(\\text{Rozwiąż nierówność. Zacznij od pomnożenia obu jej stron przez } 4.\\)",
                                                      "\\(5- \\frac{2-6x}{4} \\geq 2x+1  \\cdot 4 \\\\ 20 - (2-6x) \\geq 8x+4\\)",
                                                      "\\(20-2+6x \\geq 8x+4 \\\\ 18+6x \\geq 8x + 4\\)",
                                                      "\\(-2x \\geq -14 /:(-2)\\)",
                                                      "\\(\\text{Obydwie strony nierówności są dzielone przez liczbę ujemną, dlatego pamiętaj o zmianie znaku na przeciwny.}\\)",
                                                      "\\(x \\leq 7\\)",
-                                                     "\\(\\text{Rozwiązaniem są wszystkie liczby, które są równe lub mniejsze od 7, więc odpowiedzią jest przedział} \\; (- \\infty , 7\u003e.\\)"
+                                                     "\\(\\text{Rozwiązaniem są wszystkie liczby mniejsze lub równe } 7, \\text{ czyli } x\\in(-\\infty,7].\\)"
                                                  ],
                                        "revealedAnswer":  null,
                                        "assets":  [
@@ -166,13 +347,16 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  7,
                                        "title":  "Zadanie 7",
+                                       "topicId":  "linear-function",
+                                       "sourcePage":  4,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Funkcja liniowa \\(f\\)jest określona wzorem \\(f(x) = -2x + 4.\\)\nWykres funkcji \\(f\\) przesunięto wzdłuż osi \\(Ox\\) o 2 jednostki w lewo\n(tzn. przeciwnie do zwrotu osi), w wyniku czego otrzymano wykres funkcji \\(g.\\)\nFunkcja \\(g\\)jest określona wzorem:",
                                        "options":  [
-                                                       "\\(x^2+4=0\\)",
-                                                       "\\(\\frac{x+2}2=1\\)",
-                                                       "\\(\\frac{x}{x+2}=0\\)",
-                                                       "\\(x^2(x+2)+2(x+2)=0\\)"
+                                                       "\\(g(x)=-2x+2\\)",
+                                                       "\\(g(x)=-2x\\)",
+                                                       "\\(g(x)=-2x+6\\)",
+                                                       "\\(g(x)=-2x+8\\)"
                                                    ],
                                        "correctOption":  2,
                                        "hints":  [
@@ -191,6 +375,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  8,
                                        "title":  "Zadanie 8",
+                                       "topicId":  "linear-function",
+                                       "sourcePage":  4,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Funkcja \\(f\\)jest określona wzorem\n\\(f(x) = ax + 4\\) dla każdej liczby rzeczywistej \\(x.\\)\nMiejscem zerowym tej funkcji jest liczba \\((-1).\\)\nWtedy:",
                                        "options":  [
@@ -217,8 +404,11 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  9,
                                        "title":  "Zadanie 9",
+                                       "topicId":  "linear-function",
+                                       "sourcePage":  4,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
-                                       "prompt":  "Prosta \\(k\\)przechodzi przez punkt\n\\(A = (2, -3)\\) i jest nachylona do osi \\(Ox\\) pod kątem \\(45\\text{°}\\)(zobacz rysunek).\nProsta Prosta \\(k\\) ma równanie:",
+                                       "prompt":  "Prosta \\(k\\)przechodzi przez punkt\n\\(A = (2, -3)\\) i jest nachylona do osi \\(Ox\\) pod kątem \\(45\\text{°}\\)(zobacz rysunek).\nProsta \\(k\\) ma równanie:",
                                        "options":  [
                                                        "\\(y = x-5\\)",
                                                        "\\(y = -x-1\\)",
@@ -242,6 +432,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  10,
                                        "title":  "Zadanie 10",
+                                       "topicId":  "quadratic-function",
+                                       "sourcePage":  6,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Funkcja kwadratowa \\(f\\)jest określona wzorem:\n\\(f(x) = -2(x+3)(x-5).\\) Wierzchołek paraboli, która jest wykresem funkcji\n\\(f,\\) ma współrzędną \\(x\\)równą:",
                                        "options":  [
@@ -255,9 +448,9 @@
                                                      "\\(\\text{Wyznacz miejsca zerowe funkcji. Pomoże w tym rozwiązanie równania:} \\; -2(x+3)(x-5)=0\\)",
                                                      "\\(\\text{Równanie to jest równaniem kwadratowym przedstawionym w postaci iloczynowej, w celu jego rozwiązania wystarczy przyrównać wartości w nawiasach do zera:} \\\\ x+3 = 0 \\; \\bigvee \\; x-5=0\\)",
                                                      "\\(x=-3 \\; \\bigvee \\; x=5 \\\\ \\text{Miejscami zerowymi funkcji są} \\; x=-3 \\; \\text{oraz} \\; x=5.\\)",
-                                                     "\\(\\text{Brakuje nam informacji o wartości współrzędnej} \\; x \\; \\text{wierzchołka paraboli, czyli} \\; p. \\; \\text{Oblicz go na podsatwie własności paraboli.}\\)",
+                                                     "\\(\\text{Brakuje nam informacji o wartości współrzędnej} \\; x \\; \\text{wierzchołka paraboli, czyli} \\; p. \\; \\text{Oblicz go na podstawie własności paraboli.}\\)",
                                                      "\\(\\text{Współrzędna} \\; p \\; \\text{wierzchołka paraboli jest średnią arytmetyczną miejsc zerowych funkcji, czyli:} \\\\ p= \\frac{-3+5}{2} = \\frac{2}{2} \\\\ p = 1\\)",
-                                                     "\\(\\text{Zatem} \\; p \\; \\text{czyli wspołrzędna} \\; x \\; \\text{wierzchołka paraboli równa jest} 1.\\)"
+                                                     "\\(\\text{Zatem} \\; p \\; \\text{czyli współrzędna} \\; x \\; \\text{wierzchołka paraboli równa jest} 1.\\)"
                                                  ],
                                        "revealedAnswer":  null,
                                        "assets":  [
@@ -269,6 +462,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  11,
                                        "title":  "Zadanie 11",
+                                       "topicId":  "quadratic-function",
+                                       "sourcePage":  6,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Funkcja \\(f\\)jest określona wzorem\n\\(f(x) = -x^2+4\\)dla każdej liczby rzeczywistej \\(x.\\)\nZbiorem wartości funkcji \\(f\\) jest przedział:",
                                        "options":  [
@@ -280,7 +476,7 @@
                                        "correctOption":  4,
                                        "hints":  [
                                                      "\\(\\text{Sporządź rysunek pomocniczy i odczytaj z niego zbiór wartości funkcji.}\\)",
-                                                     "\\(\\text{Wykresem będzie parabola. Należy przekształcić  wykres funkcji kawadratowej} \\\\ f(x)=x^2 \\; \\text{poprzez odwrócenie paraboli wobec osi } \\; OX, \\; \\text{o czym informuje minus przed } \\; x^2.\n                \\\\ \\text{Parabolę trzeba narysować o 4 jednostki wyżej, o czym informuje +4 zawarte we wzorze.}\\)",
+                                                     "\\(\\text{Wykresem będzie parabola. Należy przekształcić  wykres funkcji kwadratowej} \\\\ f(x)=x^2 \\; \\text{poprzez odwrócenie paraboli wobec osi } \\; OX, \\; \\text{o czym informuje minus przed } \\; x^2.\n                \\\\ \\text{Parabolę trzeba narysować o 4 jednostki wyżej, o czym informuje +4 zawarte we wzorze.}\\)",
                                                      "\\(\\text{Wartości funkcji należy odczytać z osi } \\; OY. \\; \\text{Funkcja przyjmuje wartości od} \\;-\\infty \\; \\text{do 4, więc zbiorem jej wartości jest przedział} \\;  (- \\infty , 4\u003e.\\)"
                                                  ],
                                        "revealedAnswer":  null,
@@ -293,6 +489,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  12,
                                        "title":  "Zadanie 12",
+                                       "topicId":  "quadratic-function",
+                                       "sourcePage":  6,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Na rysunku przedstawiono fragment wykresu funkcji kwadratowej \\(f.\\)\nJeden spośród podanych poniżej wzorów jest wzorem tej funkcji.\nWskaż wzór funkcji \\(f.\\)",
                                        "options":  [
@@ -318,6 +517,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  13,
                                        "title":  "Zadanie 13",
+                                       "topicId":  "sequences",
+                                       "sourcePage":  6,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Ciąg arytmetyczny \\(a_n\\)jest określony dla każdej liczby\nnaturalnej \\(n\\geq 1.\\) Różnica tego ciągu jest równa 2.\nWtedy:",
                                        "options":  [
@@ -328,7 +530,7 @@
                                                    ],
                                        "correctOption":  3,
                                        "hints":  [
-                                                     "\\(\\text{Rozważ własności ciągów geometrycznych.}\\)",
+                                                     "\\(\\text{Skorzystaj z własności ciągu arytmetycznego.}\\)",
                                                      "\\(a_{24} = a_6 + 18r\\)",
                                                      "\\(\\text{W tym przypadku} \\; r=2 \\; \\text{wobec czego:} \\\\ a_{24} = a_6 + 18 \\cdot 2\\)",
                                                      "\\(a_{24} = a_6 + 36\\)",
@@ -344,6 +546,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  14,
                                        "title":  "Zadanie 14",
+                                       "topicId":  "sequences",
+                                       "sourcePage":  8,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Suma wszystkich liczb całkowitych\ndodatnich parzystych i jednocześnie\nmniejszych od \\(1001\\)jest równa:",
                                        "options":  [
@@ -354,10 +559,10 @@
                                                    ],
                                        "correctOption":  2,
                                        "hints":  [
-                                                     "\\(\\text{Zastanów się, jaka jest relacja między liczbami parzystymi mniejszymi od } \\; 1001: \\\\ 2,4,6,8,10,...,996,996,1000\\)",
+                                                     "\\(\\text{Dodatnie liczby parzyste mniejsze od 1001 tworzą ciąg: } 2,4,6,\\ldots,998,1000.\\)",
                                                      "\\(\\text{Jest to ciąg arytmetyczny o następujących właściwościach:} \\\\ a_1 = 2, \\; a_n=1000, \\; r=2 \\\\ \\text{Ustal, ile jest takich wyrazów, czyli } \\; n.\\)",
                                                      "\\(n=500\\)",
-                                                     "\\(\\text{Następnie należy zapisać sumę wyrazów korzystając ze wzoru na sumę} \\; n-\\text{początkowych wyrazów ciągu arytmetycznego:} \\\\ S_n= \\frac{a_1 + a_n)}{2} \\cdot n\\)",
+                                                     "\\(S_n=\\frac{a_1+a_n}{2}\\cdot n\\)",
                                                      "\\(\\text{Podstaw odpowiednie wartości:} \\; S_{500}= \\frac{2+1000}{2} \\cdot 500\\)"
                                                  ],
                                        "revealedAnswer":  null,
@@ -370,8 +575,11 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  15,
                                        "title":  "Zadanie 15",
+                                       "topicId":  "sequences",
+                                       "sourcePage":  8,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
-                                       "prompt":  "Trójwyrazowy ciąg \\((2,x,18)\\)jest rosnących ciągiem geometrycznym.\nWtedy:",
+                                       "prompt":  "Trójwyrazowy ciąg \\((2,x,18)\\)jest rosnącym ciągiem geometrycznym.\nWtedy:",
                                        "options":  [
                                                        "\\(x = 16\\)",
                                                        "\\(x = 10\\)",
@@ -394,6 +602,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  16,
                                        "title":  "Zadanie 16",
+                                       "topicId":  "trigonometry",
+                                       "sourcePage":  8,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Kąt \\(\\alpha\\)jest ostry i \\(\\sin \\alpha = \\frac{7}{25}.\\)\nWynika stąd, że:",
                                        "options":  [
@@ -420,27 +631,27 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  17,
                                        "title":  "Zadanie 17",
+                                       "topicId":  "plane-geometry",
+                                       "sourcePage":  8,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
-                                       "prompt":  "Czworokąt \\(ABCD\\)jest wpisany w okrąg o środku \\(S.\\)\nBok \\(AD\\) jest średnicą tego okręgu, a miara kąta\n\\(BDC\\) jest równa \\(20 ^ \\circ\\) (zobacz rysunek).",
+                                       "prompt":  "Czworokąt \\(ABCD\\) jest wpisany w okrąg o środku \\(S\\). Bok \\(AD\\) jest średnicą tego okręgu, a miara kąta \\(BDC\\) jest równa \\(20^{\\circ}\\) (zobacz rysunek). Wtedy miara kąta \\(BSC\\) jest równa:",
                                        "options":  [
-                                                       "\\(x^2+4=0\\)",
-                                                       "\\(\\frac{x+2}2=1\\)",
-                                                       "\\(\\frac{x}{x+2}=0\\)",
-                                                       "\\(x^2(x+2)+2(x+2)=0\\)"
+                                                       "\\(10^{\\circ}\\)",
+                                                       "\\(20^{\\circ}\\)",
+                                                       "\\(30^{\\circ}\\)",
+                                                       "\\(40^{\\circ}\\)"
                                                    ],
                                        "correctOption":  4,
                                        "hints":  [
-                                                     "\\(\\text{Przeanalizuj odpowiedzi lub podstaw do każdej z nich} \\; x=-2, \\text{aby sprawdzić kiedy obie strony równania będą sobie równe.}\\)",
-                                                     "\\(\\text{Odp. A: 4 zostaje przeniesiona na drugą stronę, co daje równanie } \\; x^2 = -4. \\; \\\\ \\text{Takie równanie nie posiada rozwiązań, ponieważ nie znajdziemy takiej liczby rzeczywistej, która po podniesieniu do kwadratu dałaby ujemny wynik.}\\)",
-                                                     "\\(\\text{Odp. B: Po pomnożeniu stron równania przez 2 otrzymujemy równanie} \\; x+2=2, \\; \\text{co daje} \\; x=0.\\)",
-                                                     "\\(\\text{Odp. C: Wartość w mianowniku musi być różna od 0! Liczba -2 nie jest zatem rozwiązaniem, ponieważ } \\\\ x+2 \\neq 0, \\text{więc} \\; x \\neq -2.\\)",
-                                                     "\\(\\text{Odp D:} \\; x^2(x+2)+2(x+2)=0\\)",
-                                                     "\\((x^2+2)(x+)=0 \\; \\; x^2+2=0 \\; \\bigvee \\; x+2=0 \\\\ x^2=-2 \\; \\bigvee \\; x=-2\\)",
-                                                     "\\(\\text{Równanie} \\;  x^2=-2 \\; \\text{nie da rozwiązań. Odpowiedź D jest jednak poprawna, ponieważ równanie} \\; x+2=0 \\; \\text{zwraca także} \\; x=-2, \\; \\text{czyli odpowiedź.}\\)"
+                                                     "\\(\\text{Kąt } BDC \\text{ jest kątem wpisanym opartym na łuku } BC.\\)",
+                                                     "\\(\\text{Kąt } BSC \\text{ jest kątem środkowym opartym na tym samym łuku.}\\)",
+                                                     "\\(\\text{Kąt środkowy ma miarę dwa razy większą od kąta wpisanego opartego na tym samym łuku.}\\)",
+                                                     "\\(\\angle BSC=2\\cdot20^{\\circ}=40^{\\circ}\\)"
                                                  ],
                                        "revealedAnswer":  null,
                                        "assets":  [
-
+                                                      "img/mp21z17.png"
                                                   ]
                                    },
                                    {
@@ -448,8 +659,11 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  18,
                                        "title":  "Zadanie 18",
+                                       "topicId":  "plane-geometry",
+                                       "sourcePage":  10,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
-                                       "prompt":  "Okrąg o środku w punkcie \\(O\\)jest wpisany w trójkąt\n\\(ABC.\\)Wiadomo, że\\(\\mid{AB}\\mid{}=\\mid{AC}\\mid\\) i \\(\\mid{BOC}\\mid{}=100\\text{°}\\)\n(zobacz rysunek). Miara kąta \\(BAC\\) jest równa:",
+                                       "prompt":  "Okrąg o środku w punkcie \\(O\\) jest wpisany w trójkąt \\(ABC\\). Wiadomo, że \\(|AB|=|AC|\\) i \\(\\angle BOC=100^{\\circ}\\) (zobacz rysunek). Miara kąta \\(BAC\\) jest równa:",
                                        "options":  [
                                                        "\\(20\\text{°}\\)",
                                                        "\\(30\\text{°}\\)",
@@ -459,7 +673,7 @@
                                        "correctOption":  1,
                                        "hints":  [
                                                      "\\(\\text{Przeanalizuj sytuację i oblicz miary kątów} \\; OBC \\; \\text{i} \\; OCB.\\)",
-                                                     "\\(\\text{Trójkąt} \\; COB \\; \\text{jest równoramienny, wobec czegokąty przy podstawie} \\; BC \\; \\text{mają jednakową miarę.}\\)",
+                                                     "\\(\\text{Trójkąt} \\; COB \\; \\text{jest równoramienny, wobec czego kąty przy podstawie} \\; BC \\; \\text{mają jednakową miarę.}\\)",
                                                      "\\(\\text{Miara jednego z kątów } \\; COB \\; \\text{jest znana i wynosi } \\; 100^\\circ . \\\\\n\\text{Suma miar kątów w trójkącie wynosi } \\; 180^ \\circ , \\; \\text{co oznacza, że na kąty } \\\\\nOBC \\; \\text{i} \\; OCB  \\; \\text{pozostało łącznie } \\; 80^\\circ .\\)",
                                                      "\\(80^\\circ : 2=40^\\circ , \\; \\text{więc każdy z tych kątów ma miarę } \\; 40^\\circ .\\)",
                                                      "\\(\\text{W kolejnym kroku należy obliczyć miary kąta BAC. } \\\\ \\text{Odcinki} \\; OB \\; \\text{oraz} \\; OC \\;\n\\text{są dwusiecznymi kątów } ABC \\; \\text{i} \\; ACB \\\\\n\\text{oraz muszą mieć po } \\; 80^\\circ , \\; \\text{skoro kąty } \\; OBC \\; \\text{oraz} \\; OCB \\; \\text{mają po } \\; 40^\\circ .\\)",
@@ -475,8 +689,11 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  19,
                                        "title":  "Zadanie 19",
+                                       "topicId":  "plane-geometry",
+                                       "sourcePage":  10,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
-                                       "prompt":  "Punkty \\(A, B, C\\)i \\(D\\)leżą na okręgu o środku w punkcie \\(O.\\)\nCięciwy \\(DB\\) i \\(AC\\) przecinają się w punkcie \\(E,\\mid{ACB}\\mid{}=55\\text{°}\\)oraz\n\\(\\mid{AEB}\\mid{}=140\\text{°}\\)(zobacz rysunek). Miara kąta \\(DAC\\) jest równa:",
+                                       "prompt":  "Punkty \\(A, B, C\\) i \\(D\\) leżą na okręgu o środku w punkcie \\(O\\). Cięciwy \\(DB\\) i \\(AC\\) przecinają się w punkcie \\(E\\), \\(\\angle ACB=55^{\\circ}\\) oraz \\(\\angle AEB=140^{\\circ}\\) (zobacz rysunek). Miara kąta \\(DAC\\) jest równa:",
                                        "options":  [
                                                        "\\(45\\text{°}\\)",
                                                        "\\(55\\text{°}\\)",
@@ -500,6 +717,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  20,
                                        "title":  "Zadanie 20",
+                                       "topicId":  "plane-geometry",
+                                       "sourcePage":  12,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Przekątna \\(AC\\)prostokąta \\(ABCD\\) ma długość 70. Na boku \\(AB\\) obrano punkt\n\\(E,\\)na przekątnej \\(AC\\) obrano punkt \\(F,\\) a na boku \\(AD\\) obrano punkt \\(G\\) - tak, że czworokąt\n\\(AEFG\\) jest prostokątem (zobacz rysunek). Ponadto \\(|EF|=30\\) i \\(|GF|=40.\\)\nObwód prostokąta \\(ABCD\\) jest równy:",
                                        "options":  [
@@ -529,6 +749,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  21,
                                        "title":  "Zadanie 21",
+                                       "topicId":  "plane-geometry",
+                                       "sourcePage":  12,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "W układzie współrzędnych dane są dwa punkty \\(A = (1, -2)\\)oraz\\(B = (3, 1).\\)\nWspółczynnik kierunkowy prostej \\(AB\\) jest równy:",
                                        "options":  [
@@ -553,6 +776,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  22,
                                        "title":  "Zadanie 22",
+                                       "topicId":  "lines-and-segments",
+                                       "sourcePage":  12,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Prosta \\(k\\)ma równanie\\(y=-\\frac{4}7x+24.\\)\nWspółczynnik kierunkowy prostej prostopadłej do prostej \\(k\\) jest równy:",
                                        "options":  [
@@ -566,7 +792,7 @@
                                                      "\\(\\text{Proste są prostopadłe względem siebie, jeżeli ich współczynniki kierunkowe spełniają zależność:} \\\\ \na_1 \\cdot a_2=-1\\)",
                                                      "\\(- \\frac{4}{7} \\cdot a_k = -1\\)",
                                                      "\\(- \\frac{4}{7} \\cdot \\frac{7}{4} = -1\\)",
-                                                     "\\(\\text{Współczynnik prostej k jest zatem równy } \\; \\frac{7}{4}.\\)"
+                                                     "\\(\\text{Współczynnik prostej prostopadłej do } k \\text{ jest zatem równy } \\frac{7}{4}.\\)"
                                                  ],
                                        "revealedAnswer":  null,
                                        "assets":  [
@@ -578,6 +804,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  23,
                                        "title":  "Zadanie 23",
+                                       "topicId":  "plane-geometry",
+                                       "sourcePage":  12,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Punkty \\(A = (3, 7)\\)i \\(C = (-4, 6)\\)są końcami przekątnej kwadratu \\(ABCD.\\)\nPromień okręgu opisanego na tym kwadracie jest równy:",
                                        "options":  [
@@ -592,7 +821,7 @@
                                                      "\\(|AC| = \\sqrt{(x_C-x_A)^2+(y_C-y_A)^2}\\)",
                                                      "\\(|AC| = \\sqrt{(-4-3)^2+(6-7)^2} = \\sqrt{(-7)^2+(-1)^2} = \\sqrt{49+1} = \\sqrt{50} = \\sqrt{25 \\cdot 2}\\)",
                                                      "\\(|AC| = 5\\sqrt{2}\\)",
-                                                     "\\(\\text{Oblicz długość promienia okręgu pamietając, że promień okręgu opisanego na kwadracie jest równy długości połowy przekątnej,} \\\\  \\text{której długość przed chwilą obliczono, więc:}\n\\\\ r=\\frac{5\\sqrt{2}}{2}\\)"
+                                                     "\\(\\text{Oblicz długość promienia okręgu pamiętając, że promień okręgu opisanego na kwadracie jest równy długości połowy przekątnej,} \\\\  \\text{której długość przed chwilą obliczono, więc:}\n\\\\ r=\\frac{5\\sqrt{2}}{2}\\)"
                                                  ],
                                        "revealedAnswer":  null,
                                        "assets":  [
@@ -604,6 +833,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  24,
                                        "title":  "Zadanie 24",
+                                       "topicId":  "solid-geometry",
+                                       "sourcePage":  14,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Każda krawędź graniastosłupa prawidłowego sześciokątnego\nma długość równą 2 (zobacz rysunek).\n\nPole powierzchni całkowitej tego graniastosłupa jest równe:",
                                        "options":  [
@@ -615,7 +847,7 @@
                                        "correctOption":  3,
                                        "hints":  [
                                                      "\\(\\text{Oblicz pole powierzchni sześciokąta znajdującego się w dolnej i górnej podstawie bryły. } \\\\ \\text{Jego pole jest równe polu sześciu mniejszych trójkątów równobocznych o boku długości 2:}\n\\\\ P_p = 6 \\cdot \\frac{a^2 \\sqrt{3}}{4} = 6 \\cdot \\frac{2^2 \\sqrt{3}}{4} = 6 \\cdot \\frac{4 \\sqrt{3}}{4}\n\\\\ P_p = 6 \\sqrt{3}\\)",
-                                                     "\\(\\text{astępnie należy obliczyć pole powierzchni całkowitej, na którą składają się dwie podstawy o polu policzonym powyżej,}\n\\\\ \\text{a także 6 kwadratowych ścian o boku równym 2:} \\\\ P_c = 2P_p + 6P_b = 2 \\cdot 6 \\sqrt{3} + 6 \\cdot 2 \\cdot 2\nP_c = 12 \\sqrt{3} + 24\\)"
+                                                     "\\(\\text{Następnie oblicz pole całkowite: dwie podstawy oraz sześć kwadratowych ścian bocznych.} \\\\ P_c=2\\cdot6\\sqrt{3}+6\\cdot2\\cdot2=12\\sqrt{3}+24\\)"
                                                  ],
                                        "revealedAnswer":  null,
                                        "assets":  [
@@ -627,6 +859,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  25,
                                        "title":  "Zadanie 25",
+                                       "topicId":  "solid-geometry",
+                                       "sourcePage":  14,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Przekątna sześcianu jest równa 6.\nWynika stąd, że objętość tego sześcianu jest równa:",
                                        "options":  [
@@ -637,9 +872,9 @@
                                                    ],
                                        "correctOption":  1,
                                        "hints":  [
-                                                     "\\(\\text{Oblicz długość krawędzi szcześcianu używając wzoru na przekątną sześcianu:}\n\\\\ d = a \\sqrt{3}\\)",
+                                                     "\\(\\text{Oblicz długość krawędzi sześcianu używając wzoru na przekątną sześcianu:}\n\\\\ d = a \\sqrt{3}\\)",
                                                      "\\(\\text{Przekątna ma długość 6, a zatem po podstawieniu:} \n\\\\ a \\sqrt{3} = 6 \\\\ a = \\frac{6}{\\sqrt{3}} = \\frac{6 \\cdot \\sqrt{3}}{\\sqrt{3} \\cdot \\sqrt{3}} = \\frac{6\\sqrt{3}}{3}\n\\\\ a = 2\\sqrt{3}\\)",
-                                                     "\\(\\text{Oblicz objętość szcześcianu używając wzoru:} \n\\\\ V = a^3\\)",
+                                                     "\\(\\text{Oblicz objętość sześcianu używając wzoru:} \n\\\\ V = a^3\\)",
                                                      "\\(V = (2 \\sqrt{3})^3 = 8 \\cdot 3 \\sqrt{3}\n\\\\ V = 24\\sqrt{3}\\)"
                                                  ],
                                        "revealedAnswer":  null,
@@ -652,6 +887,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  26,
                                        "title":  "Zadanie 26",
+                                       "topicId":  "combinatorics",
+                                       "sourcePage":  14,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Wszystkich liczb naturalnych pięciocyfrowych parzystych jest:",
                                        "options":  [
@@ -664,7 +902,7 @@
                                        "hints":  [
                                                      "\\(\\text{Przypomnij sobie reguły mnożenia i na tej podstawie przeanalizuj możliwości uzupełnienia cyfr.}\\)",
                                                      "\\(\\text{Pierwsza cyfra - żadna liczba nie może zaczynać się od zera, dlatego dostępne są cyfry od 1 do 9,}\n\\\\ \\text{ wobec czego rozważane jest 9 możliwości,}\\)",
-                                                     "\\(\\text{Druga, trzecia i czwarta cyfra - dla każdego z tych miejsc dostępna jest każda cyfra od 0 do 9,}\n\\\\ \\text{ wobec czego rozważane jest 9 możliwości,}\\)",
+                                                     "\\(\\text{Na drugiej, trzeciej i czwartej pozycji można użyć każdej cyfry od 0 do 9, czyli po 10 możliwości.}\\)",
                                                      "\\(\\text{Piąta cyfra - liczba będzie parzysta, gdy będzie kończyła się cyfrą parzystą,}\n\\\\ \\text{ więc dla piątego miejsca dostępne są cyfry 2, 4, 6, 8 oraz 0, co daje łącznie 5 możliwości.}\\)",
                                                      "\\(\\text{Reguła mnożenia mówi, że wszystkich liczb pięciocyfrowych parzystych jest:}\n\\\\ 9 \\cdot 10 \\cdot 10 \\cdot 10 \\cdot 5\\)",
                                                      "\\(10 \\cdot 10 \\cdot 10 = 10^3, więc odpowiedzią jest 9 \\cdot 5 \\cdot 10^3\\)"
@@ -679,6 +917,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  27,
                                        "title":  "Zadanie 27",
+                                       "topicId":  "probability",
+                                       "sourcePage":  14,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "W pudełku znajdują się tylko kule białe i kule czerwone.\nStosunek liczby kul białych do liczby kul czerwonych jest równy 3:4.\nWylosowanie każdej kuli z tego pudełka jest jednakowo prawdopodobne.\nLosujemy jedną kulę. Niech \\(A\\) oznacza zdarzenie polegające na tym,\nże wylosowana z pudełka kula będzie biała.\nPrawdopodobieństwo zdarzenia \\(A\\) jest równe:",
                                        "options":  [
@@ -689,7 +930,7 @@
                                                    ],
                                        "correctOption":  3,
                                        "hints":  [
-                                                     "\\(\\text{Stosunek ku białych do czerwonych (3:4) można zapisać jako:}\n\\\\ 3x - \\text{liczba kul białych} \\\\ 4x - \\text{liczba kul czerwonych}\n\\\\ 3x + 4x = 7x -  \\text{liczba kul łącznie}\n\\\\ A - \\; \\text{- wydarzenie wylosowania kuli białej}\\)",
+                                                     "\\(\\text{Stosunek kul białych do czerwonych (3:4) można zapisać jako:}\n\\\\ 3x - \\text{liczba kul białych} \\\\ 4x - \\text{liczba kul czerwonych}\n\\\\ 3x + 4x = 7x -  \\text{liczba kul łącznie}\n\\\\ A - \\; \\text{- zdarzenie wylosowania kuli białej}\\)",
                                                      "\\(\\text{Prawdopodobieństwo oblicza się ze wzoru:}\n\\\\ P(A) = \\frac{|A|}{| \\Omega |} \\; \\text{gdzie} \\\\\n|A| - \\text{to liczba zdarzeń sprzyjających} \\\\\n| \\Omega | - \\text{to liczba wszystkich możliwych zdarzeń}\\)",
                                                      "\\(P(A) = \\frac{3x}{7x} = \\frac{3}{7}\\)"
                                                  ],
@@ -703,6 +944,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  28,
                                        "title":  "Zadanie 28",
+                                       "topicId":  "statistics",
+                                       "sourcePage":  14,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "multipleChoice",
                                        "prompt":  "Średnia arytmetyczna pięciu liczb:\n\\(5x+6,6x+7,7x+8,8x+9,9x+10 ,\\)\njest równa 8. Wtedy\\(x\\)jest równe:",
                                        "options":  [
@@ -713,10 +957,10 @@
                                                    ],
                                        "correctOption":  2,
                                        "hints":  [
-                                                     "\\(9^{-10} \\cdot 3^{19} = (3^2)^{-10} \\cdot 3^{19}\\)",
-                                                     "\\((3^2)^{-10} \\cdot 3^{19} = 3^{-20} \\cdot 3^{19}\\)",
-                                                     "\\(3^{-20} \\cdot 3^{19} = 3^{-20+19}\\)",
-                                                     "\\(= 3^{-1}\\)"
+                                                     "\\(\\text{Zapisz równanie wynikające z definicji średniej arytmetycznej pięciu liczb.}\\)",
+                                                     "\\(\\frac{(5x+6)+(6x+7)+(7x+8)+(8x+9)+(9x+10)}{5}=8\\)",
+                                                     "\\(\\frac{35x+40}{5}=8 \\quad\\Longrightarrow\\quad 7x+8=8\\)",
+                                                     "\\(7x=0 \\quad\\Longrightarrow\\quad x=0\\)"
                                                  ],
                                        "revealedAnswer":  null,
                                        "assets":  [
@@ -728,6 +972,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  29,
                                        "title":  "Zadanie 29",
+                                       "topicId":  "inequalities",
+                                       "sourcePage":  16,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "revealOnly",
                                        "prompt":  "Rozwiąż nierówność \\(x^2-5\\geq4x:\\)",
                                        "options":  [
@@ -739,10 +986,10 @@
                                                      "\\(x^2 - 5 \\geq 4x \\\\ x^2 - 4x - 5 \\geq 0\\)",
                                                      "\\(\\\\ \\text{Znajdź miejsca zerowe:} \\\\\n\\Delta = b^2 -4ac = (-4)^2 - 4 \\cdot 1 \\cdot (-5)=16-(-20)=16+20=36 \\\\ \\sqrt{\\Delta} = \\sqrt{36} = 6\\)",
                                                      "\\(x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a} = \\frac{-(-4)-6}{2 \\cdot 1} = \\frac{4-6}{2} = \\frac{-2}{2} = -1 \\\\\nx_2 = \\frac{-b + \\sqrt{\\Delta}}{2a} = \\frac{-(-4)+6}{2 \\cdot 1} = \\frac{4+6}{2} = \\frac{10}{2} = 5\\)",
-                                                     "\\(\\text{Narysuj wykres paraboli pamiętając, że współczynnik kierunkowy a jest dodatni, a więc ramiona paraboli} \\\\\n\\text{będą skierowane ku górze. Zaznacz na osi i zamaluj (bo wystąpił znak} \\; \\geq \\; \\text{) miejsca zerowe:}\n\\\\ x = -1, \\; x=5\\)",
-                                                     "\\(\\text{Odczytaj rozwiązanie z wykresu zwracając uwagę na to, co znalazła się na i nad osią. Rozwiązaniem nierówności jest przedział:}  \n\\\\ x \\in (- \\infty ; -1\u003e \\cup \u003c5;+ \\infty )\\)"
+                                                     "\\(\\text{Ponieważ współczynnik wiodący } a=1\u003e0, \\text{ ramiona paraboli są skierowane w górę. Zaznacz miejsca zerowe } -1 \\text{ i } 5.\\)",
+                                                     "\\(\\text{Nierówność jest spełniona na osi i nad osią } Ox, \\text{ więc } x\\in(-\\infty,-1]\\cup[5,+\\infty).\\)"
                                                  ],
-                                       "revealedAnswer":  "\\(\\text{Odpowiedź:} \\; \\; x \\in (- \\infty ; -1\u003e \\cup \u003c5;+ \\infty )\\)",
+                                       "revealedAnswer":  "\\(\\text{Odpowiedź: } x\\in(-\\infty,-1]\\cup[5,+\\infty)\\)",
                                        "assets":  [
 
                                                   ]
@@ -752,6 +999,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  30,
                                        "title":  "Zadanie 30",
+                                       "topicId":  "equations",
+                                       "sourcePage":  17,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "revealOnly",
                                        "prompt":  "Rozwiąż równanie:\n\n\\(\\frac{x+8}{x-7}=2x\\)",
                                        "options":  [
@@ -775,19 +1025,22 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  31,
                                        "title":  "Zadanie 31",
+                                       "topicId":  "proofs",
+                                       "sourcePage":  18,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "revealOnly",
                                        "prompt":  "Wykaż, że dla każdej liczby rzeczywistej \\(a\\) i każdej liczby rzeczywistej\\(\\:b\\) spełniona jest nierówność\n\\(b(5b-4a)+a^2\\geq0.\\)",
                                        "options":  [
 
                                                    ],
-                                       "correctOption":  4,
+                                       "correctOption":  null,
                                        "hints":  [
                                                      "\\(\\text{Spróbuj wymnożyć} \\; b \\; \\text{przez wartości w nawiasach i uporządkować całe wyrażenie, co daje:} \\\\\n5b^2 - 4ab+a^2 \\geq 0 \\\\ a^2 - 4ab+5b^2 \\geq 0\\)",
                                                      "\\(\\text{Otrzymany zapis przypomina nieco to, co przedstawiają wzory skróconego mnożenia, ale przeszkodą jest wartość} \\\\\n5b^2. \\; \\text{Należy rozpisać tę liczbę jako} \\\\\n4b^2+b^2 \\; \\text{co da:} \\\\ a^2 - 4ab + 4b^2 + b^2 \\geq 0\\)",
-                                                     "\\(\\text{Skorzystaj ze wzoru skróconego mnożenia:} \\\\\n(a-b)^2 = a^2 - 2ab + b^2 \\; \\text{czyli:} \\\\ (a-2b^)2+b^2 \\geq 0\\)",
+                                                     "\\(a^2-4ab+4b^2+b^2=(a-2b)^2+b^2\\)",
                                                      "\\((a-2b)^2 \\; \\text{jest większa od zera lub równa zero,ponieważ jakakolwiek liczba podniesiona do kwadratu da wynik nieujemny. \\\\ \nPodobnie wartość} \\; b^2 \\; \\text{jest większa lub równa zero. To oznacza, że suma tych dwóch nieujemnych liczb na pewno będzie większa lub równa zero, co kończy dowodzenie.}\\)"
                                                  ],
-                                       "revealedAnswer":  "Dowiedź na podstawie wzorów skróconego mnożenia.",
+                                       "revealedAnswer":  "\\(b(5b-4a)+a^2=(a-2b)^2+b^2\\geq0\\), ponieważ suma kwadratów liczb rzeczywistych jest nieujemna.",
                                        "assets":  [
 
                                                   ]
@@ -797,19 +1050,22 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  32,
                                        "title":  "Zadanie 32",
+                                       "topicId":  "plane-geometry",
+                                       "sourcePage":  19,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "revealOnly",
                                        "prompt":  "W trójkącie \\(ABC\\) kąt przy wierzchołku \\(\\:A\\) jest prosty, a kąt przy wierzchołku \\(\\:B\\) ma miarę \\(\\; 30\\text{°}\\). Na boku \\(\\:AB\\) tego trójkąta obrano punkt \\(D\\) tak, że miara kąta \\(CDA\\) jest równa\\(\\:60\\text{°}\\)oraz \\(\\:\\mid{AD}\\mid{}=6\\) (zobacz rysunek). Oblicz\\(\\:\\mid{BD}\\mid\\).",
                                        "options":  [
 
                                                    ],
-                                       "correctOption":  4,
+                                       "correctOption":  null,
                                        "hints":  [
-                                                     "\\(\\text{Sporządź rysunek. Trójkąt DBC jest równoramienny, a |CD| = |BD|. Skorzystaj z własności trójkątów o kątach} \\\\ \\; 30^{\\circ}, \\; 60^{\\circ} \\; 90^{\\circ} \\; \\text{by obliczyć długość odcinka CD.}\\)",
-                                                     "\\(\\text{Trójkąt ADC ma kąty }\\)",
-                                                     "\\(\\text{} \\; 30^{\\circ}, \\; 60^{\\circ} \\; 90^{\\circ} \\; \\text{Według własności trójkątów, przyprostokątna leżąca przy kącie } \\; 60^{\\circ} \\\\\n\\text{jest dwa razy krótsza od przeciwprostokątnej, a zatem:} \\\\\n|CD| = 2 \\cdot 6 \\\\ |CD| = 12\\)",
-                                                     "\\(\\text{Boki CD oraz BD mają jednakową miarę, więc} \\\\ |BD| = 12\\)"
+                                                     "\\(\\text{W trójkącie } ADC \\text{ kąty mają miary } 90^{\\circ},60^{\\circ},30^{\\circ}.\\)",
+                                                     "\\(\\text{Bok } AD=6 \\text{ leży naprzeciw kąta } 30^{\\circ}, \\text{ więc przeciwprostokątna } CD=12.\\)",
+                                                     "\\(\\angle DCB=\\angle ABC=30^{\\circ}\\), zatem trójkąt \\(DBC\\) jest równoramienny.",
+                                                     "\\(|BD|=|CD|=12\\)"
                                                  ],
-                                       "revealedAnswer":  "|BD| = 12",
+                                       "revealedAnswer":  "\\(|BD|=12\\)",
                                        "assets":  [
                                                       "img/mp21z32.png"
                                                   ]
@@ -819,12 +1075,15 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  33,
                                        "title":  "Zadanie 33",
+                                       "topicId":  "plane-geometry",
+                                       "sourcePage":  20,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "revealOnly",
                                        "prompt":  "Dany jest trapez \\(ABCD\\) o podstawach \\(\\:AB\\) i \\(\\:CD\\). Przekątne \\(AC\\) i \\(\\:BD\\) tego trapezu przecinają się w punkcie \\(S\\) (zobacz rysunek) tak, że\n\\(\\frac{\\:\\mid{AS}\\mid}{\\:\\mid{SC}\\mid}=\\frac{3}{2}\\).\nPole trójkąta \\(ABS\\) jest równe \\(\\:12\\). Oblicz pole trójkąta\\(\\:CDS\\).",
                                        "options":  [
 
                                                    ],
-                                       "correctOption":  4,
+                                       "correctOption":  null,
                                        "hints":  [
                                                      "\\(\\text{Jedną z własności trapezów jest to, że przekątne trapezu dzielą go na trójkąty podobne ABS oraz CDS}\\)",
                                                      "\\(\\frac{AS}{SC} = \\frac{3}{2} \\; \\text{więc skala podobieństwa trójkątów jest równa } \\; k=\\frac{3}{2} \\; \\text{więc boki trójkąta ABS są o tyle razy większe}\\)",
@@ -844,12 +1103,15 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  34,
                                        "title":  "Zadanie 34",
+                                       "topicId":  "probability",
+                                       "sourcePage":  21,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "revealOnly",
                                        "prompt":  "Doświadczenie losowe polega na dwukrotnym rzucie symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek – od jednego do sześciu oczek. Niech \\(A\\:\\)oznacza zdarzenie polegające na tym, że iloczyn liczb oczek wyrzuconych w dwóch rzutach jest równy \\(\\:12\\). Oblicz prawdopodobieństwo zdarzenia \\(\\:A\\:\\).",
                                        "options":  [
 
                                                    ],
-                                       "correctOption":  4,
+                                       "correctOption":  null,
                                        "hints":  [
                                                      "\\(\\text{Wypisz wszystkie możliwe zdarzenia elementarne. }\\)",
                                                      "\\(\\text{Wykonujemy niezależne rzuty dwoma kostkami. Na każdej kostce może wypaść wynik 1-6. Liczba zdarzeń elementarnych wynosi:}\n\\\\ |\\Omega | = 6 \\cdot 6 = 36\\)",
@@ -867,6 +1129,9 @@
                                        "examId":  "matura-poprawkowa-2021",
                                        "number":  35,
                                        "title":  "Zadanie 35",
+                                       "topicId":  "sequences",
+                                       "sourcePage":  22,
+                                       "verificationSource":  "CKE EMAP-P0-100-2108",
                                        "mode":  "revealOnly",
                                        "prompt":  "Dany jest ciąg \\((a_n)\\:\\)określony wzorem \\(a_n=\\frac{5-3n}{7}\\:\\)dla każdej liczby naturalnej \\(n\\geq1.\\:\\) Trójwyrazowy ciąg \\((a_4,x^2+2,a_{11}),\\:\\) gdzie \\(x\\)jest liczbą rzeczywistą, jest geometryczny. Oblicz \\(x\\)oraz iloraz tego ciągu geometrycznego.",
                                        "options":  [

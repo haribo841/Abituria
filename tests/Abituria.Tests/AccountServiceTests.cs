@@ -68,4 +68,14 @@ public sealed class AccountServiceTests : IAsyncLifetime
         await _accounts.MarkExerciseCompletedAsync(profile.Id, "mp21-z1");
         Assert.Equal(new[] { "mp21-z1" }, await _accounts.GetCompletedExerciseIdsAsync(profile.Id));
     }
+
+    [Fact]
+    public async Task Empty_database_gets_one_idempotent_default_guest()
+    {
+        await _accounts.InitializeAsync();
+        var profiles = await _accounts.GetProfilesAsync();
+        var guest = Assert.Single(profiles, profile => profile.Kind == Models.ProfileKind.Guest);
+
+        Assert.Equal("Maturzysta", guest.DisplayName);
+    }
 }

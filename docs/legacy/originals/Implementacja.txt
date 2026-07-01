@@ -1,0 +1,4 @@
+Wdrożenie:
+W przypadku aplikacji typu open source / freeware – udostępniane aplikacji do swobodnego pobrania przez społeczność internetową na dedykowanej stronie WWW udostępnionej w publicznej domenie internetowej. Umieszczenie na stronie niezbędnych i pełnych informacji dotyczących produktu: produkt do pobrania, źródła - jeżeli licencja na to zezwala, dokumentacja, zasady instalacji, licencja, autorzy, historia wersjonowania produktu.
+Zostało: źródła(paczki nuget), dokumentacja, zasady instalacji, autorzy i historia wersjonowania produktu.
+
