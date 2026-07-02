@@ -19,6 +19,7 @@
 | Rejestracja i logowanie | niedokończony prototyp EF/LocalDB | Lokalne konta SQLite z rzeczywistą walidacją hasła |
 | Ukończone zadania | `CompleteExerciseService`, niewpięty do UI | Idempotentny zapis ukończenia per profil |
 | Kalkulator kwadratowy | `CalcQuadraticFunc`, `QuadraticPage` | Delta, miejsca zerowe, wierzchołek, trzy postacie i kroki obliczeń |
+| Kalkulator ogólny | `Opis struktury systemu.txt`, prototyp i issues #1/#3 | Bezpieczny parser działań, nawiasów, potęg i pierwiastków, Ans oraz historia sesji |
 | Tablice matematyczne | `PageF1`–`PageF18`, `WPage`–`W18Page` | 18 artykułów w `Content/formulas.json` |
 | Wektory | `pages/chapters/WektoryPage.xaml` | Pełny artykuł i 8 ilustracji |
 | Matura poprawkowa 2021 | `Z1Page`–`Z35Page` | 35 zadań, 169 zweryfikowanych podpowiedzi i 9 obrazów |
@@ -28,7 +29,7 @@
 | Zadania 1–28 | checkboxy i `correctAnsw` | Cztery opcje, sprawdzanie i zapis po poprawnej odpowiedzi |
 | Zadania 29–35 | `ShowAnsBtn`/`ConfirmBtn` | Tryb `revealOnly`; zapis po ujawnieniu odpowiedzi |
 | Matury 2019/2020/2021 | pojedyncze ekrany informacyjne | Zachowane jako placeholdery z kontekstem historycznym i linkiem do roadmapy |
-| Planowane kalkulatory | ekrany z `TODO` | Kalkulator ogólny, generator wykresów i kalkulator funkcji trygonometrycznych zachowane jako placeholdery |
+| Planowane kalkulatory | ekrany z `TODO` | Generator wykresów i kalkulator funkcji trygonometrycznych zachowane jako placeholdery |
 | Planowane działy | dwie linie starych ekranów | Sześć nazwanych placeholderów: zbiory i logika, równania i nierówności, ciągi, liczby pierwsze, funkcja kwadratowa i logarytmy |
 | E1–E35 | puste szablony widoków | Jedna jawna pozycja „Zestaw E1–E35” zamiast 35 kopii pustego ekranu |
 | `Window1` / WPF-Math | niepodłączone okno demonstracyjne z eksportem SVG/PNG | Jawna pozycja `superseded` w roadmapie; renderowanie wzorów zastąpił CSharpMath, a nieosiągalnego eksportu nie przeniesiono |

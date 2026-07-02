@@ -15,6 +15,7 @@ public enum AppPage
     Chapters,
     ChapterDetail,
     Calculator,
+    GeneralCalculator,
     Roadmap,
     Profile,
     Placeholder
@@ -68,6 +69,7 @@ public sealed class AppViewModel : ObservableObject
     public void OpenExercise(ExerciseDefinition exercise) { SelectedExercise = exercise; CurrentPage = AppPage.Exercise; }
     public void OpenExam() { SelectedTopicId = null; CurrentPage = AppPage.ExerciseList; }
     public void OpenTopic(string topicId) { SelectedTopicId = topicId; CurrentPage = AppPage.ExerciseList; }
+    public void OpenGeneralCalculator() => CurrentPage = AppPage.GeneralCalculator;
     public void OpenRoadmap(string? itemId = null) { SelectedRoadmapId = itemId; CurrentPage = AppPage.Roadmap; }
     public void OpenPlaceholder(PlaceholderItem item) { SelectedPlaceholder = item; CurrentPage = AppPage.Placeholder; }
 }

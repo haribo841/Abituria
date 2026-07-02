@@ -23,7 +23,7 @@ public sealed class HomeView : UserControl
         };
         AddTile(grid, 0, 0, "Wzory", "18 pełnych tablic matematycznych", "img/wzory.png", showFormulas);
         AddTile(grid, 1, 0, "Zadania", "Matura poprawkowa 2021 i archiwalne zestawy", "img/zadania.png", showExams);
-        AddTile(grid, 0, 1, "Kalkulator", "Pełna analiza funkcji kwadratowej", "img/kalkulator.png", showCalculator);
+        AddTile(grid, 0, 1, "Kalkulator", "Wyrażenia i pełna analiza funkcji kwadratowej", "img/kalkulator.png", showCalculator);
         AddTile(grid, 1, 1, "Działy", "Wektory i zachowane materiały działowe", "img/dzialy.png", showChapters);
         AddTile(grid, 0, 2, "Plan rozwoju", "Przeniesione, zaplanowane i zastąpione elementy starych wersji", "img/abituria.png", showRoadmap, 2);
         root.Children.Add(grid);

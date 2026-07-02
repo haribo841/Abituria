@@ -22,22 +22,25 @@ public partial class MainWindow : Window
     private readonly AccountService _accounts;
     private readonly ContentRepository _content;
     private readonly QuadraticSolver _solver;
+    private readonly CalculatorSession _calculatorSession;
     private Border _shellHost = null!;
 
     public MainWindow() : this(
         App.Services.GetRequiredService<AppViewModel>(),
         App.Services.GetRequiredService<AccountService>(),
         App.Services.GetRequiredService<ContentRepository>(),
-        App.Services.GetRequiredService<QuadraticSolver>())
+        App.Services.GetRequiredService<QuadraticSolver>(),
+        App.Services.GetRequiredService<CalculatorSession>())
     {
     }
 
-    public MainWindow(AppViewModel viewModel, AccountService accounts, ContentRepository content, QuadraticSolver solver)
+    public MainWindow(AppViewModel viewModel, AccountService accounts, ContentRepository content, QuadraticSolver solver, CalculatorSession calculatorSession)
     {
         _viewModel = viewModel;
         _accounts = accounts;
         _content = content;
         _solver = solver;
+        _calculatorSession = calculatorSession;
         InitializeComponent();
         _shellHost = this.FindControl<Border>("ShellHost") ?? throw new InvalidOperationException("Nie znaleziono ShellHost.");
         _viewModel.PropertyChanged += ViewModelOnPropertyChanged;
@@ -117,6 +120,7 @@ public partial class MainWindow : Window
         AppPage.Formulas => _viewModel.CurrentPage is AppPage.Formulas or AppPage.FormulaDetail,
         AppPage.Exams => _viewModel.CurrentPage is AppPage.Exams or AppPage.ExerciseList or AppPage.Exercise,
         AppPage.Chapters => _viewModel.CurrentPage is AppPage.Chapters or AppPage.ChapterDetail,
+        AppPage.Calculator => _viewModel.CurrentPage is AppPage.Calculator or AppPage.GeneralCalculator,
         AppPage.Roadmap => _viewModel.CurrentPage == AppPage.Roadmap,
         _ => _viewModel.CurrentPage == page
     };
@@ -147,7 +151,9 @@ public partial class MainWindow : Window
             _viewModel.SelectedChapter.Title, _viewModel.SelectedChapter.Message ?? "Treść w przygotowaniu.",
             _viewModel.SelectedChapter.Blocks, () => _viewModel.Navigate(AppPage.Chapters),
             _viewModel.SelectedChapter.RoadmapId is null ? null : () => _viewModel.OpenRoadmap(_viewModel.SelectedChapter.RoadmapId)),
-        AppPage.Calculator => new CalculatorView(_solver, OpenPlannedCalculator),
+        AppPage.Calculator => new CalculatorView(_solver, _viewModel.OpenGeneralCalculator, OpenPlannedCalculator),
+        AppPage.GeneralCalculator => new GeneralCalculatorView(
+            _calculatorSession, () => _viewModel.Navigate(AppPage.Calculator)),
         AppPage.Roadmap => new RoadmapView(_content.Roadmap, _viewModel.SelectedRoadmapId),
         AppPage.Profile => new ProfileView(_viewModel.ActiveProfile!, _accounts, _viewModel.Logout),
         AppPage.Placeholder when _viewModel.SelectedPlaceholder is not null => new PlaceholderView(

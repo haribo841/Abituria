@@ -29,9 +29,9 @@ public sealed class ContentInventoryTests
         Assert.Equal("vectors", availableChapter.Id);
         Assert.NotEmpty(availableChapter.Blocks);
         Assert.Equal(8, availableChapter.Blocks.Count(block => block.Type == "image"));
-        Assert.Equal(7, placeholders.Items.Count);
+        Assert.Equal(6, placeholders.Items.Count);
         Assert.Equal(
-            new[] { "exercise-set-e", "general-calculator", "graph-generator", "matura-2019", "matura-2020", "matura-2021", "trigonometric-calculator" },
+            new[] { "exercise-set-e", "graph-generator", "matura-2019", "matura-2020", "matura-2021", "trigonometric-calculator" },
             placeholders.Items.Select(item => item.Id).Order());
         Assert.Equal(
             new[] { "Ciągi liczbowe", "Funkcja kwadratowa", "Liczby pierwsze", "Logarytmy", "Rachunek zbiorów i logika", "Równania i nierówności" },
@@ -46,6 +46,7 @@ public sealed class ContentInventoryTests
         Assert.Contains(roadmap.Items, item => item.Status == RoadmapStatus.Migrated);
         Assert.Contains(roadmap.Items, item => item.Status == RoadmapStatus.Planned);
         Assert.Contains(roadmap.Items, item => item.Status == RoadmapStatus.Superseded);
+        Assert.Contains(roadmap.Items, item => item.Id == "general-calculator" && item.Status == RoadmapStatus.Migrated);
         Assert.Contains(roadmap.Items, item => item.Id == "graph-generator" && item.Status == RoadmapStatus.Planned);
         Assert.Contains(roadmap.Items, item => item.Id == "trigonometric-calculator" && item.Status == RoadmapStatus.Planned);
         Assert.Contains(roadmap.Items, item => item.Id == "formula-editor-prototype" && item.Status == RoadmapStatus.Superseded);

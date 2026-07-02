@@ -10,7 +10,7 @@ namespace Abituria.Views;
 
 public sealed class CalculatorView : UserControl
 {
-    public CalculatorView(QuadraticSolver solver, Action<string> openPlannedCalculator)
+    public CalculatorView(QuadraticSolver solver, Action openGeneralCalculator, Action<string> openPlannedCalculator)
     {
         var root = new StackPanel { Spacing = 18 };
         root.Children.Add(UiFactory.PageTitle("Kalkulator funkcji kwadratowej", "Poznaj sposób obliczania delty, miejsc zerowych i postaci funkcji krok po kroku."));
@@ -64,7 +64,7 @@ public sealed class CalculatorView : UserControl
         root.Children.Add(UiFactory.Card(result, new Thickness(20), "#F7FAFC"));
         root.Children.Add(new TextBlock { Text = "Pozostałe narzędzia", Classes = { "h2" } });
         var plannedTools = new WrapPanel { Orientation = Orientation.Horizontal };
-        AddPlannedTool(plannedTools, "Kalkulator ogólny", "general-calculator", openPlannedCalculator);
+        AddTool(plannedTools, "Kalkulator ogólny", openGeneralCalculator);
         AddPlannedTool(plannedTools, "Generator wykresów", "graph-generator", openPlannedCalculator);
         AddPlannedTool(plannedTools, "Funkcje trygonometryczne", "trigonometric-calculator", openPlannedCalculator);
         root.Children.Add(plannedTools);
@@ -82,9 +82,12 @@ public sealed class CalculatorView : UserControl
     };
 
     private static void AddPlannedTool(Panel panel, string label, string id, Action<string> open)
+        => AddTool(panel, label, () => open(id));
+
+    private static void AddTool(Panel panel, string label, Action open)
     {
         var button = new Button { Content = label, Classes = { "ghost" }, Margin = new Thickness(0, 0, 10, 10) };
-        button.Click += (_, _) => open(id);
+        button.Click += (_, _) => open();
         panel.Children.Add(button);
     }
 }

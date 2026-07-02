@@ -35,16 +35,6 @@
                                  ]
                   },
                   {
-                      "id":  "general-calculator",
-                      "title":  "Kalkulator ogólny",
-                      "category":  "calculator",
-                      "message":  "Kalkulator ogólny jest w przygotowaniu.",
-                      "roadmapId":  "general-calculator",
-                      "blocks":  [
-
-                                 ]
-                  },
-                  {
                       "id":  "graph-generator",
                       "title":  "Generator wykresów",
                       "category":  "calculator",

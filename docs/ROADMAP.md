@@ -9,11 +9,12 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - 18 tablic matematycznych,
 - dział Wektory z ośmioma ilustracjami,
 - 35 zadań matury poprawkowej 2021 zweryfikowanych z materiałami CKE,
+- kalkulator ogólny z parserem wyrażeń, Ans i historią sesji,
 - kalkulator funkcji kwadratowej.
 
 ## Zaplanowane
 
-- kalkulator ogólny, generator wykresów i kalkulator funkcji trygonometrycznych,
+- generator wykresów i kalkulator funkcji trygonometrycznych,
 - rozbudowa sześciu zachowanych działów oraz materiały o liczbach naturalnych i alfabecie greckim,
 - arkusze 2019, 2020 i matura podstawowa 2021,
 - losowanie zadań, materiały wideo i wyszukiwanie zapisu matematycznego,

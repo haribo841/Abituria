@@ -74,11 +74,13 @@
                   {
                       "id":  "general-calculator",
                       "title":  "Kalkulator ogólny",
-                      "status":  "planned",
-                      "summary":  "Działania podstawowe, nawiasy, potęgowanie i pierwiastkowanie.",
+                      "status":  "migrated",
+                      "summary":  "Parser działań, nawiasów, potęg i pierwiastków z Ans oraz historią sesji.",
                       "context":  "calculator",
                       "sourceRefs":  [
-                                         "Opis struktury systemu.txt"
+                                         "Opis struktury systemu.txt",
+                                         "Projekt-Inzynierski issue #1",
+                                         "Projekt-Inzynierski issue #3"
                                      ]
                   },
                   {
