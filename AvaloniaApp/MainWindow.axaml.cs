@@ -129,6 +129,7 @@ public partial class MainWindow : Window
     {
         AppPage.Home => new HomeView(
             _viewModel.ActiveProfile!.DisplayName,
+            _content.UiCopy,
             () => _viewModel.Navigate(AppPage.Formulas),
             () => _viewModel.Navigate(AppPage.Exams),
             () => _viewModel.Navigate(AppPage.Calculator),
@@ -141,7 +142,7 @@ public partial class MainWindow : Window
         AppPage.Exams => new ExamOverviewView(_content.Exam, _content.Placeholders.Items, _viewModel.OpenExam, _viewModel.OpenTopic, _viewModel.OpenPlaceholder),
         AppPage.ExerciseList => new ExerciseListView(_content.Exam, _viewModel.SelectedTopicId, _viewModel.ActiveProfile!, _accounts, _viewModel.OpenExercise, () => _viewModel.Navigate(AppPage.Exams)),
         AppPage.Exercise when _viewModel.SelectedExercise is not null => new ExerciseView(
-            _viewModel.SelectedExercise, CurrentExerciseContext(), _content.Exam.Source, _viewModel.ActiveProfile!, _accounts,
+            _viewModel.SelectedExercise, CurrentExerciseContext(), _content.Exam.Source, _content.UiCopy, _viewModel.ActiveProfile!, _accounts,
             () => _viewModel.Navigate(AppPage.ExerciseList), _viewModel.OpenExercise),
         AppPage.Chapters => new ChapterListView(_content.Chapters, OpenChapter),
         AppPage.ChapterDetail when _viewModel.SelectedChapter is { IsAvailable: true } => new ArticleView(
@@ -151,9 +152,9 @@ public partial class MainWindow : Window
             _viewModel.SelectedChapter.Title, _viewModel.SelectedChapter.Message ?? "Treść w przygotowaniu.",
             _viewModel.SelectedChapter.Blocks, () => _viewModel.Navigate(AppPage.Chapters),
             _viewModel.SelectedChapter.RoadmapId is null ? null : () => _viewModel.OpenRoadmap(_viewModel.SelectedChapter.RoadmapId)),
-        AppPage.Calculator => new CalculatorView(_solver, _viewModel.OpenGeneralCalculator, OpenPlannedCalculator),
+        AppPage.Calculator => new CalculatorView(_solver, _content.UiCopy, _viewModel.OpenGeneralCalculator, OpenPlannedCalculator),
         AppPage.GeneralCalculator => new GeneralCalculatorView(
-            _calculatorSession, () => _viewModel.Navigate(AppPage.Calculator)),
+            _calculatorSession, _content.UiCopy, () => _viewModel.Navigate(AppPage.Calculator)),
         AppPage.Roadmap => new RoadmapView(_content.Roadmap, _viewModel.SelectedRoadmapId),
         AppPage.Profile => new ProfileView(_viewModel.ActiveProfile!, _accounts, _viewModel.Logout),
         AppPage.Placeholder when _viewModel.SelectedPlaceholder is not null => new PlaceholderView(

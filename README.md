@@ -34,7 +34,7 @@ Testy:
 dotnet test Abituria.sln --no-restore
 ```
 
-Szczegółowe pokrycie regresji issues #1-#4 opisuje [macierz testów kalkulatora](docs/CALCULATOR_TEST_MATRIX.md).
+Szczegółowe pokrycie regresji kalkulatora opisuje [macierz testów kalkulatora](docs/CALCULATOR_TEST_MATRIX.md). Testy Avalonia Headless sprawdzają również przewijanie, przepływ inline, linię bazową i obrazy wzorcowe list matematycznych.
 
 ## Dane lokalne
 
@@ -56,7 +56,7 @@ Nazwy są importowane jako profile gościa. Plik źródłowy nie jest usuwany, a
 
 ## Treści
 
-Treści edukacyjne są wersjonowane w katalogu `Content` jako JSON. Są renderowane przez generyczne widoki Avalonia, a wzory przez `Sylinko.CSharpMath.Avalonia`.
+Treści edukacyjne i dłuższe statyczne opisy interfejsu są wersjonowane w katalogu `Content` jako JSON. Są renderowane przez generyczne widoki Avalonia, a wzory przez `Sylinko.CSharpMath.Avalonia`. Kod produkcyjny nie zawiera długich opisów ani wzorów. Zasady edycji i podglądu opisuje [dokumentacja treści](docs/CONTENT_AUTHORING.md).
 
 Importer `tools/Import-LegacyContent.ps1` pozwala ponownie wygenerować zasoby z jawnie wskazanego archiwalnego snapshotu. Snapshot nie jest częścią aktywnego repozytorium:
 
@@ -68,6 +68,8 @@ powershell -ExecutionPolicy Bypass -File tools/Import-LegacyContent.ps1 `
 Importer poprawia wyłącznie rozpoznane literówki i składnię blokującą renderowanie LaTeX. Wynik jest sprawdzany testami inwentarza.
 
 Końcowy audyt migracji i kryteria pozwalające usunąć stare snapshoty WPF są zapisane w [inwentarzu migracji](docs/MIGRATION_INVENTORY.md).
+
+Opcjonalna analiza SonarQube Cloud jest przygotowana w osobnym workflow. Aktywacja wymaga utworzenia rzeczywistego projektu oraz ustawienia zmiennych i sekretu zgodnie z [instrukcją SonarQube](docs/SONARQUBE.md).
 
 ## Architektura
 

@@ -9,6 +9,9 @@ Zestaw chroni obecny kalkulator przed regresjami opisanymi w historycznych issue
 - [#3](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/3) - `FormatException` podczas sprawdzania zera w złożonych wyrażeniach, w tym `0√0:0√0`;
 - [#4](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/4) - błędy `1/x`, `NaN`, konkatenacja cyfr po wyniku i niepoprawne składanie odwrotności z operatorami.
 - [#5](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/5) - pierwiastkowanie zwykłych i ekstremalnych liczb w notacji naukowej oraz pierwiastki po operatorach i wyniku.
+- [#7](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/7) - niedozwolone `1/∞` oraz zapętlenie `1/0` i `1/x`.
+- [#8](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/8) - `FormatException` dla `1/x` z pierwiastkiem, potęgowanie liczb zmiennoprzecinkowych i odtwarzanie historii.
+- [#9](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/9) - fałszywe dzielenie przez zero i niekanoniczne liczby z wieloma zerami wiodącymi.
 
 ## Warstwy pokrycia
 
@@ -25,8 +28,14 @@ Zestaw chroni obecny kalkulator przed regresjami opisanymi w historycznych issue
 | Zakres `double` | 20 tysięcy losowych skończonych wzorców bitowych sprawdzonych przez zapis round-trip |
 | Współbieżność | 50 tysięcy równoległych obliczeń na jednej instancji parsera |
 | `1/x` | Setki kolejnych odwrotności dla siatki liczb małych, dużych, ujemnych, pierwiastków i notacji naukowej |
+| `∞` | Symbol `∞` i aliasy tekstowe w operandach, potęgach, nawiasach, pierwiastkach oraz na każdej pozycji reprezentatywnych wyrażeń |
+| `1/x` po błędzie | 250 kolejnych kliknięć dla każdego wariantu dzielenia przez zero bez zmiany wyrażenia, `Ans`, historii i kodu błędu |
 | Wielokrotne `=` | Powtarzanie ostatniej operacji dla wszystkich operatorów, złożonych prawych argumentów, `Ans`, błędów, przepełnienia i limitu historii |
 | `Ans` i historia | Wszystkie operatory i pierwiastki z `Ans`, błędy bez zmiany stanu, limit historii oraz długa sesja mieszana |
+| Odtwarzanie historii | Pierwotny kontekst `Ans`, potęgi zmiennoprzecinkowe, wszystkie operatory, złożone pierwiastki, `1/x`, kolejne `=` i odrzucone nieaktualne wpisy |
+| Zera wiodące | Dokładne przypadki issue #9, normalizacja każdego literału, komunikat użytkownika, klawiatura ekranowa, wklejanie, historia i rzeczywiste dzielenie przez zero |
+| `Ans` z pierwiastkiem | `1/(Ans∛(Ans))` dla wartości dodatnich, ujemnych, zera, małych liczb, brakującego `Ans` i niedomiaru zakresu |
+| `x²` | Wynik, całe wyrażenie, zaznaczenie, pusty szablon, historia, kolejne `=`, liczby zmiennoprzecinkowe i przepełnienie |
 | Kultury systemowe | Identyczne wyniki dla `pl-PL`, `en-US`, `de-DE`, `fr-FR` i `tr-TR` |
 | Nawigacja | Brak zależności WPF `Page` i `NavigationWindow`, wszystkie widoki jako `UserControl`, jeden skalowalny `ShellHost` i minimalny rozmiar `960x640` |
 

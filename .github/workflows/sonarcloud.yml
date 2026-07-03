@@ -1,0 +1,69 @@
+name: sonarcloud
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    if: ${{ vars.SONAR_PROJECT_KEY != '' && vars.SONAR_ORGANIZATION != '' }}
+    runs-on: windows-latest
+    env:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+      - name: Explain missing token
+        if: ${{ env.SONAR_TOKEN == '' }}
+        shell: pwsh
+        run: Write-Host "Skan pominięty - sekret SONAR_TOKEN nie jest dostępny, np. w pull requeście z forka."
+      - name: Cache SonarScanner
+        if: ${{ env.SONAR_TOKEN != '' }}
+        uses: actions/cache@v4
+        with:
+          path: .\.sonar\scanner
+          key: ${{ runner.os }}-sonarscanner
+      - name: Install SonarScanner for .NET
+        if: ${{ env.SONAR_TOKEN != '' }}
+        shell: pwsh
+        run: |
+          if (-not (Test-Path .\.sonar\scanner\dotnet-sonarscanner.exe)) {
+            dotnet tool install dotnet-sonarscanner --tool-path .\.sonar\scanner
+          }
+      - name: Begin analysis
+        if: ${{ env.SONAR_TOKEN != '' }}
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $PSNativeCommandUseErrorActionPreference = $true
+          .\.sonar\scanner\dotnet-sonarscanner begin `
+            /k:"${{ vars.SONAR_PROJECT_KEY }}" `
+            /o:"${{ vars.SONAR_ORGANIZATION }}" `
+            /d:sonar.token="$env:SONAR_TOKEN" `
+            /d:sonar.qualitygate.wait=true `
+            /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
+      - name: Restore
+        if: ${{ env.SONAR_TOKEN != '' }}
+        run: dotnet restore Abituria.sln --configfile NuGet.Config
+      - name: Build
+        if: ${{ env.SONAR_TOKEN != '' }}
+        run: dotnet build Abituria.sln --configuration Release --no-restore --no-incremental
+      - name: Test with coverage
+        if: ${{ env.SONAR_TOKEN != '' }}
+        run: dotnet test Abituria.sln --configuration Release --no-build --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+      - name: End analysis
+        if: ${{ env.SONAR_TOKEN != '' }}
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $PSNativeCommandUseErrorActionPreference = $true
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="$env:SONAR_TOKEN"

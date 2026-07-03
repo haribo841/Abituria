@@ -137,7 +137,7 @@ public sealed class ExerciseView : UserControl
     private int _hintIndex;
     private int? _selectedOption;
 
-    public ExerciseView(ExerciseDefinition exercise, IReadOnlyList<ExerciseDefinition> exerciseContext, SourceDocument source, LocalProfile profile, AccountService accounts, Action back, Action<ExerciseDefinition> openExercise)
+    public ExerciseView(ExerciseDefinition exercise, IReadOnlyList<ExerciseDefinition> exerciseContext, SourceDocument source, UiCopyCatalog copy, LocalProfile profile, AccountService accounts, Action back, Action<ExerciseDefinition> openExercise)
     {
         var root = new StackPanel { Spacing = 16 };
         var topButtons = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8 };
@@ -214,7 +214,11 @@ public sealed class ExerciseView : UserControl
         };
         root.Children.Add(hint);
         root.Children.Add(_hintHost);
-        root.Children.Add(UiFactory.InfoBand("Źródło", $"{exercise.VerificationSource}, strona {exercise.SourcePage}. Treść i klucz odpowiedzi zweryfikowano {FormatVerifiedOn(source.VerifiedOn)}."));
+        root.Children.Add(UiFactory.InfoBand(copy.FormatRequired(
+            "exam.source",
+            exercise.VerificationSource,
+            exercise.SourcePage,
+            FormatVerifiedOn(source.VerifiedOn))));
         root.Children.Add(_status);
         Content = UiFactory.PageScroll(root);
 

@@ -20,6 +20,7 @@ public sealed class ContentRepository
         Exam = Load<ExamCatalog>("Content/exam-2021-correction.json").Exam;
         Placeholders = Load<PlaceholderCatalog>("Content/placeholders.json");
         Roadmap = Load<RoadmapCatalog>("Content/roadmap.json");
+        UiCopy = Load<UiCopyCatalog>("Content/ui-copy.json");
     }
 
     public FormulaCatalog Formulas { get; }
@@ -27,6 +28,7 @@ public sealed class ContentRepository
     public ExamDefinition Exam { get; }
     public PlaceholderCatalog Placeholders { get; }
     public RoadmapCatalog Roadmap { get; }
+    public UiCopyCatalog UiCopy { get; }
 
     private T Load<T>(string relativePath)
     {

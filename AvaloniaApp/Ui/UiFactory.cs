@@ -1,4 +1,5 @@
 using System;
+using Abituria.Models;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Layout;
@@ -37,6 +38,8 @@ public static class UiFactory
         panel.Children.Add(new TextBlock { Text = body, Classes = { "muted" }, TextWrapping = TextWrapping.Wrap });
         return Card(panel, new Thickness(16), "#F7FAFC");
     }
+
+    public static Border InfoBand(UiCopyEntry content) => InfoBand(content.Title, content.Body);
 
     public static ScrollViewer PageScroll(Control content) => new()
     {

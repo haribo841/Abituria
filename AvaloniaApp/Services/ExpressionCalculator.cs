@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Text;
 
 namespace Abituria.Services;
 
@@ -16,6 +17,7 @@ public enum CalculationErrorCode
     InvalidRoot,
     UndefinedPower,
     MissingAns,
+    InvalidHistoryItem,
     NonFiniteResult
 }
 
@@ -25,7 +27,11 @@ public sealed record CalculationResult(
     string DisplayValue,
     CalculationErrorCode? ErrorCode,
     string Message,
-    int? ErrorPosition);
+    int? ErrorPosition)
+{
+    public string? NormalizedExpression { get; init; }
+    public bool WasNormalized { get; init; }
+}
 
 internal enum RepeatOperator
 {
@@ -44,6 +50,7 @@ public sealed class ExpressionCalculator
 {
     public const int MaxExpressionLength = 512;
     public const int MaxNestingDepth = 64;
+    public const string LeadingZeroNormalizationMessage = "Usunięto niedozwolone zera wiodące.";
 
     private static readonly CultureInfo PolishCulture = CultureInfo.GetCultureInfo("pl-PL");
 
@@ -67,7 +74,19 @@ public sealed class ExpressionCalculator
                 throw new CalculationException(CalculationErrorCode.NonFiniteResult, "Wynik wykracza poza zakres obsługiwanych liczb.", source.Length);
 
             if (value == 0d) value = 0d;
-            var result = new CalculationResult(true, value, value.ToString("G15", PolishCulture), null, "Wynik", null);
+            var normalizedExpression = NormalizeNumericLiterals(source);
+            var wasNormalized = !string.Equals(source, normalizedExpression, StringComparison.Ordinal);
+            var result = new CalculationResult(
+                true,
+                value,
+                value.ToString("G15", PolishCulture),
+                null,
+                wasNormalized ? LeadingZeroNormalizationMessage : "Wynik",
+                null)
+            {
+                NormalizedExpression = normalizedExpression,
+                WasNormalized = wasNormalized
+            };
             return new CalculationEvaluation(result, evaluation.RepeatOperation);
         }
         catch (CalculationException exception)
@@ -81,6 +100,43 @@ public sealed class ExpressionCalculator
 
     private static CalculationEvaluation EvaluationError(CalculationErrorCode code, string message, int position) =>
         new(Error(code, message, position), null);
+
+    internal static string NormalizeNumericLiterals(string source)
+    {
+        if (string.IsNullOrEmpty(source)) return source;
+
+        var normalized = new StringBuilder(source.Length);
+        var index = 0;
+        while (index < source.Length)
+        {
+            if (!char.IsDigit(source[index]) && source[index] is not ('.' or ','))
+            {
+                normalized.Append(source[index]);
+                index++;
+                continue;
+            }
+
+            var start = index;
+            while (index < source.Length && (char.IsDigit(source[index]) || source[index] is '.' or ',')) index++;
+            var mantissaEnd = index;
+
+            if (index < source.Length && source[index] is 'e' or 'E')
+            {
+                index++;
+                if (index < source.Length && source[index] is '+' or '-') index++;
+                while (index < source.Length && char.IsDigit(source[index])) index++;
+            }
+
+            var integerEnd = start;
+            while (integerEnd < mantissaEnd && char.IsDigit(source[integerEnd])) integerEnd++;
+            var firstKeptDigit = start;
+            while (firstKeptDigit + 1 < integerEnd && source[firstKeptDigit] == '0') firstKeptDigit++;
+
+            normalized.Append(source, firstKeptDigit, index - firstKeptDigit);
+        }
+
+        return normalized.ToString();
+    }
 
     private static IReadOnlyList<Token> Tokenize(string source)
     {
@@ -140,7 +196,14 @@ public sealed class ExpressionCalculator
                 var start = index;
                 while (index < source.Length && char.IsLetter(source[index])) index++;
                 var identifier = source[start..index];
-                var type = identifier.ToLowerInvariant() switch
+                var normalizedIdentifier = identifier.ToLowerInvariant();
+                if (normalizedIdentifier is "inf" or "infinity")
+                    throw new CalculationException(
+                        CalculationErrorCode.NonFiniteResult,
+                        "Nieskończoność nie jest obsługiwaną liczbą rzeczywistą.",
+                        start);
+
+                var type = normalizedIdentifier switch
                 {
                     "sqrt" => TokenType.Sqrt,
                     "root" => TokenType.Root,
@@ -150,6 +213,12 @@ public sealed class ExpressionCalculator
                 tokens.Add(new Token(type, identifier, start));
                 continue;
             }
+
+            if (character == '∞')
+                throw new CalculationException(
+                    CalculationErrorCode.NonFiniteResult,
+                    "Symbol ∞ nie jest liczbą rzeczywistą. Kalkulator nie oblicza granic.",
+                    index);
 
             var tokenType = character switch
             {
@@ -243,12 +312,17 @@ public sealed class ExpressionCalculator
                 {
                     if (right.Value == 0d)
                         throw new CalculationException(CalculationErrorCode.DivisionByZero, "Nie można dzielić przez zero.", operation.Position);
-                    value = EnsureFinite(value / right.Value, operation.Position);
+                    var quotient = value / right.Value;
+                    EnsureNoUnderflow(quotient, operation.Position, value);
+                    value = EnsureFinite(quotient, operation.Position);
                     repeatOperation = new RepeatOperation(RepeatOperator.Divide, right.Value);
                 }
                 else
                 {
-                    value = EnsureFinite(value * right.Value, operation?.Position ?? Current.Position);
+                    var position = operation?.Position ?? Current.Position;
+                    var product = value * right.Value;
+                    EnsureNoUnderflow(product, position, value, right.Value);
+                    value = EnsureFinite(product, position);
                     repeatOperation = new RepeatOperation(RepeatOperator.Multiply, right.Value);
                 }
             }
@@ -282,6 +356,7 @@ public sealed class ExpressionCalculator
             var result = Math.Pow(value, exponent.Value);
             if (double.IsNaN(result))
                 throw new CalculationException(CalculationErrorCode.UndefinedPower, "Ta potęga nie ma wyniku w zbiorze liczb rzeczywistych.", operation.Position);
+            EnsureNoUnderflow(result, operation.Position, value);
             return new Evaluation(
                 EnsureFinite(result, operation.Position),
                 new RepeatOperation(RepeatOperator.Power, exponent.Value));
@@ -366,6 +441,16 @@ public sealed class ExpressionCalculator
             if (!double.IsFinite(value))
                 throw new CalculationException(CalculationErrorCode.NonFiniteResult, "Wynik wykracza poza zakres obsługiwanych liczb.", position);
             return value;
+        }
+
+        private static void EnsureNoUnderflow(double result, int position, params double[] inputs)
+        {
+            if (result != 0d || inputs.Any(input => input == 0d)) return;
+
+            throw new CalculationException(
+                CalculationErrorCode.NonFiniteResult,
+                "Wynik pośredni jest zbyt mały, aby przedstawić go jako liczbę double.",
+                position);
         }
 
         private static bool StartsImplicitProduct(TokenType type) => type is

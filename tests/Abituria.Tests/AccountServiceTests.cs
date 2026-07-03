@@ -12,7 +12,7 @@ public sealed class AccountServiceTests : IAsyncLifetime
     private AccountService _accounts = null!;
     private AppDbContextFactory _factory = null!;
 
-    public async Task InitializeAsync()
+    public async ValueTask InitializeAsync()
     {
         Directory.CreateDirectory(_directory);
         _factory = new AppDbContextFactory(Path.Combine(_directory, "test.db"));
@@ -20,11 +20,11 @@ public sealed class AccountServiceTests : IAsyncLifetime
         await _accounts.InitializeAsync();
     }
 
-    public Task DisposeAsync()
+    public ValueTask DisposeAsync()
     {
         SqliteConnection.ClearAllPools();
         if (Directory.Exists(_directory)) Directory.Delete(_directory, true);
-        return Task.CompletedTask;
+        return ValueTask.CompletedTask;
     }
 
     [Fact]
@@ -52,7 +52,9 @@ public sealed class AccountServiceTests : IAsyncLifetime
         await _accounts.RegisterAsync("Pierwszy", password, password);
         await _accounts.RegisterAsync("Drugi", password, password);
         await using var context = _factory.CreateDbContext();
-        var profiles = await context.Profiles.Where(item => item.Kind == Models.ProfileKind.Password).ToListAsync();
+        var profiles = await context.Profiles
+            .Where(item => item.Kind == Models.ProfileKind.Password)
+            .ToListAsync(TestContext.Current.CancellationToken);
         Assert.Equal(2, profiles.Count);
         Assert.NotEqual(profiles[0].PasswordSalt, profiles[1].PasswordSalt);
         Assert.NotEqual(profiles[0].PasswordHash, profiles[1].PasswordHash);

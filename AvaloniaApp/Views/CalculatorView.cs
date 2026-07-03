@@ -1,4 +1,5 @@
 using System;
+using Abituria.Models;
 using Abituria.Services;
 using Abituria.Ui;
 using Avalonia;
@@ -10,12 +11,12 @@ namespace Abituria.Views;
 
 public sealed class CalculatorView : UserControl
 {
-    public CalculatorView(QuadraticSolver solver, Action openGeneralCalculator, Action<string> openPlannedCalculator)
+    public CalculatorView(QuadraticSolver solver, UiCopyCatalog copy, Action openGeneralCalculator, Action<string> openPlannedCalculator)
     {
         var root = new StackPanel { Spacing = 18 };
         root.Children.Add(UiFactory.PageTitle("Kalkulator funkcji kwadratowej", "Poznaj sposób obliczania delty, miejsc zerowych i postaci funkcji krok po kroku."));
-        root.Children.Add(UiFactory.InfoBand("Jak korzystać", "Kalkulator funkcji kwadratowej pozwala sprawdzić rozwiązanie i przejść przez analizę konkretnego przykładu krok po kroku. Gdy zatrzymasz się w zadaniu, zapomnisz wzoru albo chcesz poćwiczyć, podaj współczynniki funkcji. Otrzymasz jej postać ogólną, iloczynową i kanoniczną oraz najważniejsze własności."));
-        root.Children.Add(UiFactory.InfoBand("Funkcja kwadratowa", "Funkcja f(x) = ax² + bx + c jest kwadratowa, gdy a ≠ 0. Wyróżnik Δ = b² - 4ac określa liczbę rzeczywistych miejsc zerowych: dwa dla Δ > 0, jedno dla Δ = 0 i brak dla Δ < 0."));
+        root.Children.Add(UiFactory.InfoBand(copy.GetRequired("calculator.quadratic.usage")));
+        root.Children.Add(UiFactory.InfoBand(copy.GetRequired("calculator.quadratic.definition")));
         var form = new Grid { ColumnDefinitions = new ColumnDefinitions("*,*,*"), ColumnSpacing = 12 };
         var a = NumberBox("a", "1");
         var b = NumberBox("b", "-3");
@@ -68,7 +69,7 @@ public sealed class CalculatorView : UserControl
         AddPlannedTool(plannedTools, "Generator wykresów", "graph-generator", openPlannedCalculator);
         AddPlannedTool(plannedTools, "Funkcje trygonometryczne", "trigonometric-calculator", openPlannedCalculator);
         root.Children.Add(plannedTools);
-        root.Children.Add(UiFactory.InfoBand("Postacie funkcji", "Postać kanoniczna a(x - p)² + q pokazuje wierzchołek P = (p, q). Postać iloczynowa a(x - x₁)(x - x₂) istnieje nad liczbami rzeczywistymi, gdy Δ ≥ 0."));
+        root.Children.Add(UiFactory.InfoBand(copy.GetRequired("calculator.quadratic.forms")));
         root.Children.Add(UiFactory.InfoBand("Format liczb", "Możesz używać przecinka albo kropki jako separatora dziesiętnego."));
         Content = UiFactory.PageScroll(root);
     }

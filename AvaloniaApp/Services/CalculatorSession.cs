@@ -4,7 +4,11 @@ using System.Globalization;
 
 namespace Abituria.Services;
 
-public sealed record CalculationHistoryItem(string Expression, string Result, double Value);
+public sealed record CalculationHistoryItem(
+    string Expression,
+    string Result,
+    double Value,
+    double? AnsInput);
 
 public sealed class CalculatorSession
 {
@@ -26,13 +30,14 @@ public sealed class CalculatorSession
 
     public CalculationResult Calculate(string? expression)
     {
-        var evaluation = _calculator.EvaluateWithRepeat(expression, LastResult);
+        var ansInput = LastResult;
+        var evaluation = _calculator.EvaluateWithRepeat(expression, ansInput);
         var result = evaluation.Result;
         if (!result.Success || result.Value is null) return result;
 
         LastResult = result.Value.Value;
         _repeatOperation = evaluation.RepeatOperation;
-        AddHistory(expression!.Trim(), result);
+        AddHistory((result.NormalizedExpression ?? expression!).Trim(), result, ansInput);
         return result;
     }
 
@@ -49,7 +54,35 @@ public sealed class CalculatorSession
         if (!result.Success || result.Value is null) return result;
 
         LastResult = result.Value.Value;
-        AddHistory(expression, result);
+        AddHistory(expression, result, lastResult);
+        return result;
+    }
+
+    public CalculationResult RestoreHistory(CalculationHistoryItem? item)
+    {
+        if (item is null || !_history.Any(candidate => ReferenceEquals(candidate, item)))
+            return new CalculationResult(
+                false,
+                null,
+                string.Empty,
+                CalculationErrorCode.InvalidHistoryItem,
+                "Wybrany wpis nie jest już dostępny w historii sesji.",
+                0);
+
+        var evaluation = _calculator.EvaluateWithRepeat(item.Expression, item.AnsInput);
+        var result = evaluation.Result;
+        if (!result.Success || result.Value is null) return result;
+        if (!result.Value.Value.Equals(item.Value))
+            return new CalculationResult(
+                false,
+                null,
+                string.Empty,
+                CalculationErrorCode.InvalidHistoryItem,
+                "Nie można odtworzyć wpisu historii z pierwotnym wynikiem.",
+                0);
+
+        LastResult = item.Value;
+        _repeatOperation = evaluation.RepeatOperation;
         return result;
     }
 
@@ -60,9 +93,9 @@ public sealed class CalculatorSession
         _repeatOperation = null;
     }
 
-    private void AddHistory(string expression, CalculationResult result)
+    private void AddHistory(string expression, CalculationResult result, double? ansInput)
     {
-        _history.Insert(0, new CalculationHistoryItem(expression, result.DisplayValue, result.Value!.Value));
+        _history.Insert(0, new CalculationHistoryItem(expression, result.DisplayValue, result.Value!.Value, ansInput));
         if (_history.Count > HistoryLimit) _history.RemoveAt(_history.Count - 1);
     }
 

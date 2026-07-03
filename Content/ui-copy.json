@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "entries": {
+    "calculator.general.syntax": {
+      "title": "Składnia",
+      "body": "Możesz używać przecinka lub kropki, znaków × i ÷ albo *, / i :. Dostępne są sqrt(x), √x, ∛x, ∜x oraz root(stopień; liczba). Zapis 3√8 oznacza 3 × √8. Notacja naukowa jest obsługiwana, np. 1,8E-13. Symbol ∞ nie jest liczbą i kalkulator go odrzuca."
+    },
+    "calculator.quadratic.usage": {
+      "title": "Jak korzystać",
+      "body": "Kalkulator funkcji kwadratowej pozwala sprawdzić rozwiązanie i przejść przez analizę konkretnego przykładu krok po kroku. Gdy zatrzymasz się w zadaniu, zapomnisz wzoru albo chcesz poćwiczyć, podaj współczynniki funkcji. Otrzymasz jej postać ogólną, iloczynową i kanoniczną oraz najważniejsze własności."
+    },
+    "calculator.quadratic.definition": {
+      "title": "Funkcja kwadratowa",
+      "body": "Funkcja f(x) = ax² + bx + c jest kwadratowa, gdy a ≠ 0. Wyróżnik Δ = b² - 4ac określa liczbę rzeczywistych miejsc zerowych: dwa dla Δ > 0, jedno dla Δ = 0 i brak dla Δ < 0."
+    },
+    "calculator.quadratic.forms": {
+      "title": "Postacie funkcji",
+      "body": "Postać kanoniczna a(x - p)² + q pokazuje wierzchołek P = (p, q). Postać iloczynowa a(x - x₁)(x - x₂) istnieje nad liczbami rzeczywistymi, gdy Δ ≥ 0."
+    },
+    "home.work-mode": {
+      "title": "Tryb pracy",
+      "body": "Najpierw powtórz materiał, następnie rozwiązuj zadania. Poprawne odpowiedzi i ujawnione rozwiązania są zapisywane w profilu."
+    },
+    "exam.source": {
+      "title": "Źródło",
+      "body": "{0}, strona {1}. Treść i klucz odpowiedzi zweryfikowano {2}."
+    }
+  }
+}

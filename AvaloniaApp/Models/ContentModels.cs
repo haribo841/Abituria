@@ -1,8 +1,35 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text.Json.Serialization;
 
 namespace Abituria.Models;
+
+public sealed class UiCopyCatalog
+{
+    public int SchemaVersion { get; set; }
+    public Dictionary<string, UiCopyEntry> Entries { get; set; } = new(StringComparer.Ordinal);
+
+    public UiCopyEntry GetRequired(string key) => Entries.TryGetValue(key, out var entry)
+        ? entry
+        : throw new KeyNotFoundException($"Brak treści interfejsu: {key}.");
+
+    public UiCopyEntry FormatRequired(string key, params object[] arguments)
+    {
+        var entry = GetRequired(key);
+        return new UiCopyEntry
+        {
+            Title = entry.Title,
+            Body = string.Format(CultureInfo.GetCultureInfo("pl-PL"), entry.Body, arguments)
+        };
+    }
+}
+
+public sealed class UiCopyEntry
+{
+    public string Title { get; set; } = string.Empty;
+    public string Body { get; set; } = string.Empty;
+}
 
 public sealed class FormulaCatalog
 {

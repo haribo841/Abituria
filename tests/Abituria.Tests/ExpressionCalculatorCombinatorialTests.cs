@@ -81,6 +81,13 @@ public sealed class ExpressionCalculatorCombinatorialTests
                         continue;
                     }
 
+                    if (expected == 0d && left.Value != 0d && right.Value != 0d &&
+                        operation.Symbol is "*" or "×" or "/" or "÷" or "^")
+                    {
+                        AssertError(expression, result, CalculationErrorCode.NonFiniteResult);
+                        continue;
+                    }
+
                     AssertEquivalent(expression, expected, result);
                 }
     }

@@ -1,4 +1,5 @@
 using System;
+using Abituria.Models;
 using Abituria.Services;
 using Abituria.Ui;
 using Avalonia;
@@ -23,9 +24,10 @@ public sealed class GeneralCalculatorView : UserControl
     private readonly StackPanel _result = new() { Spacing = 6 };
     private readonly CalculatorInputState _inputState = new();
     private readonly CalculatorSession _session;
+    private bool _inputWasNormalized;
     private bool _repeatOnNextEquals;
 
-    public GeneralCalculatorView(CalculatorSession session, Action back)
+    public GeneralCalculatorView(CalculatorSession session, UiCopyCatalog copy, Action back)
     {
         _session = session;
         var root = new StackPanel { Spacing = 18 };
@@ -34,9 +36,7 @@ public sealed class GeneralCalculatorView : UserControl
         backButton.Click += (_, _) => back();
         root.Children.Add(backButton);
         root.Children.Add(UiFactory.PageTitle("Kalkulator ogólny", "Działania podstawowe, nawiasy, potęgi i pierwiastki w jednym wyrażeniu."));
-        root.Children.Add(UiFactory.InfoBand(
-            "Składnia",
-            "Możesz używać przecinka lub kropki, znaków × i ÷ albo *, / i :. Dostępne są sqrt(x), √x, ∛x, ∜x oraz root(stopień; liczba). Zapis 3√8 oznacza 3 × √8. Notacja naukowa jest obsługiwana, np. 1,8E-13."));
+        root.Children.Add(UiFactory.InfoBand(copy.GetRequired("calculator.general.syntax")));
 
         _expression.AddHandler(InputElement.TextInputEvent, OnTextInput, RoutingStrategies.Tunnel);
         _expression.KeyDown += OnExpressionKeyDown;
@@ -111,8 +111,23 @@ public sealed class GeneralCalculatorView : UserControl
         };
         generalRoot.Click += (_, _) => InsertValueTemplate("root(2; )", 5, 1);
         Grid.SetRow(generalRoot, 5);
-        Grid.SetColumnSpan(generalRoot, 5);
+        Grid.SetColumn(generalRoot, 2);
+        Grid.SetColumnSpan(generalRoot, 3);
         grid.Children.Add(generalRoot);
+
+        var square = new Button
+        {
+            Content = "x²",
+            MinHeight = 42,
+            FontSize = 17,
+            HorizontalAlignment = HorizontalAlignment.Stretch,
+            HorizontalContentAlignment = HorizontalAlignment.Center,
+            Classes = { "ghost" }
+        };
+        square.Click += (_, _) => CalculateSquare();
+        Grid.SetRow(square, 5);
+        Grid.SetColumnSpan(square, 2);
+        grid.Children.Add(square);
 
         return UiFactory.Card(grid, new Thickness(14));
     }
@@ -138,22 +153,35 @@ public sealed class GeneralCalculatorView : UserControl
 
     private void Calculate()
     {
+        var inputWasNormalized = _inputWasNormalized;
+        _inputWasNormalized = false;
         var repeating = _repeatOnNextEquals;
         _repeatOnNextEquals = false;
         var calculation = repeating
             ? _session.RepeatLast()
             : _session.Calculate(_expression.Text);
+        if (calculation.Success && inputWasNormalized && !calculation.WasNormalized)
+        {
+            calculation = calculation with
+            {
+                Message = ExpressionCalculator.LeadingZeroNormalizationMessage,
+                NormalizedExpression = _expression.Text,
+                WasNormalized = true
+            };
+        }
         ShowResult(calculation);
         if (calculation.Success && calculation.Value is double value)
         {
             if (repeating) SetExpression(calculation.DisplayValue, calculation.DisplayValue.Length);
+            else if (calculation.WasNormalized && calculation.NormalizedExpression is not null)
+                SetExpression(calculation.NormalizedExpression, calculation.NormalizedExpression.Length);
             _inputState.MarkResult(value);
             _repeatOnNextEquals = true;
             RenderHistory();
         }
         else
         {
-            _inputState.Reset();
+            _inputState.MarkError();
             if (calculation.ErrorPosition is not null)
             {
                 var position = Math.Clamp(calculation.ErrorPosition.Value, 0, (_expression.Text ?? string.Empty).Length);
@@ -183,13 +211,16 @@ public sealed class GeneralCalculatorView : UserControl
             FontSize = calculation.Success ? 25 : 16,
             TextWrapping = TextWrapping.Wrap
         });
-    }
-
-    private void ShowHistoricalResult(CalculationHistoryItem item)
-    {
-        _result.Children.Clear();
-        _result.Children.Add(new TextBlock { Text = "Wynik", FontSize = 17, FontWeight = FontWeight.SemiBold, Foreground = UiFactory.Brush("#19733B") });
-        _result.Children.Add(new TextBlock { Text = item.Result, FontSize = 25, TextWrapping = TextWrapping.Wrap });
+        if (calculation.Success && calculation.WasNormalized)
+        {
+            _result.Children.Add(new TextBlock
+            {
+                Text = calculation.Message,
+                FontSize = 14,
+                Foreground = UiFactory.Brush("#8A5A00"),
+                TextWrapping = TextWrapping.Wrap
+            });
+        }
     }
 
     private void RenderHistory()
@@ -215,12 +246,20 @@ public sealed class GeneralCalculatorView : UserControl
             };
             button.Click += (_, _) =>
             {
-                _expression.Text = item.Expression;
-                _expression.CaretIndex = item.Expression.Length;
-                _inputState.MarkResult(item.Value);
-                _repeatOnNextEquals = false;
-                ShowHistoricalResult(item);
-                _expression.Focus();
+                _inputWasNormalized = false;
+                SetExpression(item.Expression, item.Expression.Length);
+                var restored = _session.RestoreHistory(item);
+                ShowResult(restored);
+                if (restored.Success && restored.Value is double value)
+                {
+                    _inputState.MarkResult(value);
+                    _repeatOnNextEquals = true;
+                }
+                else
+                {
+                    _inputState.MarkError();
+                    _repeatOnNextEquals = false;
+                }
             };
             _historyItems.Children.Add(button);
         }
@@ -229,7 +268,7 @@ public sealed class GeneralCalculatorView : UserControl
     private void InsertValueText(string text)
     {
         PrepareForValueInput();
-        ReplaceSelection(text, text.Length, 0);
+        ApplyNormalizedInsertion(text);
     }
 
     private void InsertOperatorText(string text)
@@ -261,6 +300,20 @@ public sealed class GeneralCalculatorView : UserControl
     private void CalculateReciprocal()
     {
         var edit = _inputState.CreateReciprocal(
+            _expression.Text ?? string.Empty,
+            _expression.SelectionStart,
+            _expression.SelectionEnd);
+        ApplyEdit(edit);
+        if (edit.ShouldCalculate)
+        {
+            _repeatOnNextEquals = false;
+            Calculate();
+        }
+    }
+
+    private void CalculateSquare()
+    {
+        var edit = _inputState.CreateSquare(
             _expression.Text ?? string.Empty,
             _expression.SelectionStart,
             _expression.SelectionEnd);
@@ -305,6 +358,7 @@ public sealed class GeneralCalculatorView : UserControl
     private void ClearExpression()
     {
         _inputState.Reset();
+        _inputWasNormalized = false;
         _repeatOnNextEquals = false;
         _expression.Text = string.Empty;
         ResetResult();
@@ -336,14 +390,31 @@ public sealed class GeneralCalculatorView : UserControl
 
     private void OnTextInput(object? sender, TextInputEventArgs eventArgs)
     {
-        if (!_inputState.IsAfterResult || string.IsNullOrEmpty(eventArgs.Text)) return;
+        if (string.IsNullOrEmpty(eventArgs.Text)) return;
+        if (_inputState.IsAfterError)
+        {
+            _inputState.Reset();
+            _repeatOnNextEquals = false;
+        }
+        else if (_inputState.IsAfterResult)
+        {
+            if (IsBinaryOperator(eventArgs.Text)) PrepareForOperatorInput();
+            else PrepareForValueInput();
+        }
 
-        if (IsBinaryOperator(eventArgs.Text)) PrepareForOperatorInput();
-        else PrepareForValueInput();
+        _repeatOnNextEquals = false;
+        ApplyNormalizedInsertion(eventArgs.Text);
+        eventArgs.Handled = true;
     }
 
     private void PrepareForValueInput()
     {
+        if (_inputState.IsAfterError)
+        {
+            _inputState.Reset();
+            _repeatOnNextEquals = false;
+            return;
+        }
         if (!_inputState.IsAfterResult) return;
 
         _repeatOnNextEquals = false;
@@ -353,6 +424,12 @@ public sealed class GeneralCalculatorView : UserControl
 
     private void PrepareForOperatorInput()
     {
+        if (_inputState.IsAfterError)
+        {
+            _inputState.Reset();
+            _repeatOnNextEquals = false;
+            return;
+        }
         if (!_inputState.IsAfterResult) return;
 
         _repeatOnNextEquals = false;
@@ -362,6 +439,20 @@ public sealed class GeneralCalculatorView : UserControl
 
     private void ApplyEdit(CalculatorTextEdit edit) =>
         SetExpression(edit.Text, edit.SelectionStart, edit.SelectionLength);
+
+    private void ApplyNormalizedInsertion(string text)
+    {
+        var edit = _inputState.CreateNormalizedInsertion(
+            _expression.Text ?? string.Empty,
+            _expression.SelectionStart,
+            _expression.SelectionEnd,
+            text);
+        ApplyEdit(edit);
+        if (!edit.WasNormalized) return;
+
+        _inputWasNormalized = true;
+        ShowInputNormalization();
+    }
 
     private void SetExpression(string text, int selectionStart, int selectionLength = 0)
     {
@@ -380,5 +471,23 @@ public sealed class GeneralCalculatorView : UserControl
     {
         _result.Children.Clear();
         _result.Children.Add(new TextBlock { Text = "Wynik pojawi się tutaj.", Classes = { "muted" } });
+    }
+
+    private void ShowInputNormalization()
+    {
+        _result.Children.Clear();
+        _result.Children.Add(new TextBlock
+        {
+            Text = "Poprawiono zapis",
+            FontSize = 17,
+            FontWeight = FontWeight.SemiBold,
+            Foreground = UiFactory.Brush("#8A5A00")
+        });
+        _result.Children.Add(new TextBlock
+        {
+            Text = ExpressionCalculator.LeadingZeroNormalizationMessage,
+            FontSize = 15,
+            TextWrapping = TextWrapping.Wrap
+        });
     }
 }

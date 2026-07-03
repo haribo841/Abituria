@@ -1,4 +1,5 @@
 using System;
+using Abituria.Models;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Layout;
@@ -9,7 +10,7 @@ namespace Abituria.Views;
 
 public sealed class HomeView : UserControl
 {
-    public HomeView(string profileName, Action showFormulas, Action showExams, Action showCalculator, Action showChapters, Action showRoadmap)
+    public HomeView(string profileName, UiCopyCatalog copy, Action showFormulas, Action showExams, Action showCalculator, Action showChapters, Action showRoadmap)
     {
         var root = new StackPanel { Spacing = 20 };
         root.Children.Add(UiFactory.PageTitle("Start", $"Cześć, {profileName}. Wybierz obszar nauki."));
@@ -27,7 +28,7 @@ public sealed class HomeView : UserControl
         AddTile(grid, 1, 1, "Działy", "Wektory i zachowane materiały działowe", "img/dzialy.png", showChapters);
         AddTile(grid, 0, 2, "Plan rozwoju", "Przeniesione, zaplanowane i zastąpione elementy starych wersji", "img/abituria.png", showRoadmap, 2);
         root.Children.Add(grid);
-        root.Children.Add(UiFactory.InfoBand("Tryb pracy", "Najpierw powtórz materiał, następnie rozwiązuj zadania. Poprawne odpowiedzi i ujawnione rozwiązania są zapisywane w profilu."));
+        root.Children.Add(UiFactory.InfoBand(copy.GetRequired("home.work-mode")));
         Content = UiFactory.PageScroll(root);
     }
 
