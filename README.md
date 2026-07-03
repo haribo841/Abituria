@@ -13,7 +13,7 @@ Abituria to działająca offline aplikacja edukacyjna w AvaloniaUI i .NET 9. Pro
 - przeglądanie zadań według arkusza lub 17 tematów oraz sesyjny brudnopis,
 - automatyczne sprawdzanie odpowiedzi A–D w zadaniach 1–28,
 - prowadzenie przez podpowiedzi i ujawnienie odpowiedzi w zadaniach 29–35,
-- kalkulator ogólny z nawiasami, potęgami, pierwiastkami, Ans i historią sesji,
+- kalkulator ogólny z nawiasami, potęgami, pierwiastkami, notacją naukową, Ans i historią sesji,
 - kalkulator funkcji kwadratowej z postacią ogólną, kanoniczną i iloczynową,
 - zachowane ekrany informujące o materiałach, które w starym projekcie były tylko placeholderami,
 - plan rozwoju rozdzielający elementy przeniesione, zaplanowane i zastąpione.
@@ -33,6 +33,8 @@ Testy:
 ```powershell
 dotnet test Abituria.sln --no-restore
 ```
+
+Szczegółowe pokrycie regresji issues #1-#4 opisuje [macierz testów kalkulatora](docs/CALCULATOR_TEST_MATRIX.md).
 
 ## Dane lokalne
 

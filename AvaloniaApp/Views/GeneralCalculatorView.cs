@@ -4,6 +4,7 @@ using Abituria.Ui;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
+using Avalonia.Interactivity;
 using Avalonia.Layout;
 using Avalonia.Media;
 
@@ -20,7 +21,9 @@ public sealed class GeneralCalculatorView : UserControl
 
     private readonly StackPanel _historyItems = new() { Spacing = 8 };
     private readonly StackPanel _result = new() { Spacing = 6 };
+    private readonly CalculatorInputState _inputState = new();
     private readonly CalculatorSession _session;
+    private bool _repeatOnNextEquals;
 
     public GeneralCalculatorView(CalculatorSession session, Action back)
     {
@@ -33,21 +36,10 @@ public sealed class GeneralCalculatorView : UserControl
         root.Children.Add(UiFactory.PageTitle("Kalkulator ogólny", "Działania podstawowe, nawiasy, potęgi i pierwiastki w jednym wyrażeniu."));
         root.Children.Add(UiFactory.InfoBand(
             "Składnia",
-            "Możesz używać przecinka lub kropki, znaków × i ÷ albo * i /. Dostępne są sqrt(x), √x, ∛x, ∜x oraz root(stopień; liczba). Zapis 3√8 oznacza 3 × √8."));
+            "Możesz używać przecinka lub kropki, znaków × i ÷ albo *, / i :. Dostępne są sqrt(x), √x, ∛x, ∜x oraz root(stopień; liczba). Zapis 3√8 oznacza 3 × √8. Notacja naukowa jest obsługiwana, np. 1,8E-13."));
 
-        _expression.KeyDown += (_, eventArgs) =>
-        {
-            if (eventArgs.Key == Key.Enter)
-            {
-                Calculate();
-                eventArgs.Handled = true;
-            }
-            else if (eventArgs.Key == Key.Escape)
-            {
-                ClearExpression();
-                eventArgs.Handled = true;
-            }
-        };
+        _expression.AddHandler(InputElement.TextInputEvent, OnTextInput, RoutingStrategies.Tunnel);
+        _expression.KeyDown += OnExpressionKeyDown;
 
         var workArea = new Grid { ColumnDefinitions = new ColumnDefinitions("3*,2*"), ColumnSpacing = 18 };
         var calculator = new StackPanel { Spacing = 14 };
@@ -71,23 +63,23 @@ public sealed class GeneralCalculatorView : UserControl
         var grid = new Grid
         {
             ColumnDefinitions = new ColumnDefinitions("*,*,*,*,*"),
-            RowDefinitions = new RowDefinitions("Auto,Auto,Auto,Auto,Auto"),
+            RowDefinitions = new RowDefinitions("Auto,Auto,Auto,Auto,Auto,Auto"),
             ColumnSpacing = 6,
             RowSpacing = 6
         };
 
         var keys = new (string Label, Action Action, bool Primary)[]
         {
-            ("(", () => InsertText("("), false), (")", () => InsertText(")"), false),
-            ("Ans", () => InsertText("Ans"), false), ("⌫", Backspace, false), ("C", ClearExpression, false),
-            ("7", () => InsertText("7"), false), ("8", () => InsertText("8"), false),
-            ("9", () => InsertText("9"), false), ("÷", () => InsertText("÷"), false), ("^", () => InsertText("^"), false),
-            ("4", () => InsertText("4"), false), ("5", () => InsertText("5"), false),
-            ("6", () => InsertText("6"), false), ("×", () => InsertText("×"), false), ("√", () => InsertTemplate("√()", 2), false),
-            ("1", () => InsertText("1"), false), ("2", () => InsertText("2"), false),
-            ("3", () => InsertText("3"), false), ("-", () => InsertText("-"), false), ("∛", () => InsertTemplate("∛()", 2), false),
-            ("0", () => InsertText("0"), false), (",", () => InsertText(","), false),
-            ("ⁿ√", () => InsertTemplate("root(2; )", 5, 1), false), ("+", () => InsertText("+"), false), ("=", Calculate, true)
+            ("(", () => InsertValueText("("), false), (")", () => InsertValueText(")"), false),
+            ("Ans", () => InsertValueText("Ans"), false), ("⌫", Backspace, false), ("C", ClearExpression, false),
+            ("7", () => InsertValueText("7"), false), ("8", () => InsertValueText("8"), false),
+            ("9", () => InsertValueText("9"), false), ("÷", () => InsertOperatorText("÷"), false), ("^", () => InsertOperatorText("^"), false),
+            ("4", () => InsertValueText("4"), false), ("5", () => InsertValueText("5"), false),
+            ("6", () => InsertValueText("6"), false), ("×", () => InsertOperatorText("×"), false), ("√", () => InsertRoot(2, "√()", 2), false),
+            ("1", () => InsertValueText("1"), false), ("2", () => InsertValueText("2"), false),
+            ("3", () => InsertValueText("3"), false), ("-", () => InsertOperatorText("-"), false), ("∛", () => InsertRoot(3, "∛()", 2), false),
+            ("0", () => InsertValueText("0"), false), (",", () => InsertValueText(","), false),
+            ("1/x", CalculateReciprocal, false), ("+", () => InsertOperatorText("+"), false), ("=", Calculate, true)
         };
 
         for (var index = 0; index < keys.Length; index++)
@@ -108,6 +100,20 @@ public sealed class GeneralCalculatorView : UserControl
             grid.Children.Add(button);
         }
 
+        var generalRoot = new Button
+        {
+            Content = "ⁿ√  Pierwiastek n-tego stopnia",
+            MinHeight = 42,
+            FontSize = 16,
+            HorizontalAlignment = HorizontalAlignment.Stretch,
+            HorizontalContentAlignment = HorizontalAlignment.Center,
+            Classes = { "ghost" }
+        };
+        generalRoot.Click += (_, _) => InsertValueTemplate("root(2; )", 5, 1);
+        Grid.SetRow(generalRoot, 5);
+        Grid.SetColumnSpan(generalRoot, 5);
+        grid.Children.Add(generalRoot);
+
         return UiFactory.Card(grid, new Thickness(14));
     }
 
@@ -120,6 +126,7 @@ public sealed class GeneralCalculatorView : UserControl
         clear.Click += (_, _) =>
         {
             _session.ClearHistory();
+            _repeatOnNextEquals = false;
             RenderHistory();
         };
         Grid.SetColumn(clear, 1);
@@ -131,19 +138,30 @@ public sealed class GeneralCalculatorView : UserControl
 
     private void Calculate()
     {
-        var calculation = _session.Calculate(_expression.Text);
+        var repeating = _repeatOnNextEquals;
+        _repeatOnNextEquals = false;
+        var calculation = repeating
+            ? _session.RepeatLast()
+            : _session.Calculate(_expression.Text);
         ShowResult(calculation);
-        if (calculation.Success)
+        if (calculation.Success && calculation.Value is double value)
         {
+            if (repeating) SetExpression(calculation.DisplayValue, calculation.DisplayValue.Length);
+            _inputState.MarkResult(value);
+            _repeatOnNextEquals = true;
             RenderHistory();
         }
-        else if (calculation.ErrorPosition is not null)
+        else
         {
-            var position = Math.Clamp(calculation.ErrorPosition.Value, 0, (_expression.Text ?? string.Empty).Length);
-            _expression.CaretIndex = position;
-            _expression.SelectionStart = position;
-            _expression.SelectionEnd = position;
-            _expression.Focus();
+            _inputState.Reset();
+            if (calculation.ErrorPosition is not null)
+            {
+                var position = Math.Clamp(calculation.ErrorPosition.Value, 0, (_expression.Text ?? string.Empty).Length);
+                _expression.CaretIndex = position;
+                _expression.SelectionStart = position;
+                _expression.SelectionEnd = position;
+                _expression.Focus();
+            }
         }
     }
 
@@ -199,6 +217,8 @@ public sealed class GeneralCalculatorView : UserControl
             {
                 _expression.Text = item.Expression;
                 _expression.CaretIndex = item.Expression.Length;
+                _inputState.MarkResult(item.Value);
+                _repeatOnNextEquals = false;
                 ShowHistoricalResult(item);
                 _expression.Focus();
             };
@@ -206,10 +226,51 @@ public sealed class GeneralCalculatorView : UserControl
         }
     }
 
-    private void InsertText(string text) => ReplaceSelection(text, text.Length, 0);
+    private void InsertValueText(string text)
+    {
+        PrepareForValueInput();
+        ReplaceSelection(text, text.Length, 0);
+    }
 
-    private void InsertTemplate(string text, int caretOffset, int selectionLength = 0) =>
+    private void InsertOperatorText(string text)
+    {
+        PrepareForOperatorInput();
+        ReplaceSelection(text, text.Length, 0);
+    }
+
+    private void InsertValueTemplate(string text, int caretOffset, int selectionLength = 0)
+    {
+        PrepareForValueInput();
         ReplaceSelection(text, caretOffset, selectionLength);
+    }
+
+    private void InsertRoot(int degree, string template, int caretOffset)
+    {
+        var edit = _inputState.CreateRootFromResult(degree);
+        if (edit is null)
+        {
+            InsertValueTemplate(template, caretOffset);
+            return;
+        }
+
+        ApplyEdit(edit);
+        _repeatOnNextEquals = false;
+        Calculate();
+    }
+
+    private void CalculateReciprocal()
+    {
+        var edit = _inputState.CreateReciprocal(
+            _expression.Text ?? string.Empty,
+            _expression.SelectionStart,
+            _expression.SelectionEnd);
+        ApplyEdit(edit);
+        if (edit.ShouldCalculate)
+        {
+            _repeatOnNextEquals = false;
+            Calculate();
+        }
+    }
 
     private void ReplaceSelection(string text, int caretOffset, int selectionLength)
     {
@@ -226,6 +287,8 @@ public sealed class GeneralCalculatorView : UserControl
 
     private void Backspace()
     {
+        _inputState.Reset();
+        _repeatOnNextEquals = false;
         var source = _expression.Text ?? string.Empty;
         var start = Math.Clamp(Math.Min(_expression.SelectionStart, _expression.SelectionEnd), 0, source.Length);
         var end = Math.Clamp(Math.Max(_expression.SelectionStart, _expression.SelectionEnd), 0, source.Length);
@@ -241,10 +304,77 @@ public sealed class GeneralCalculatorView : UserControl
 
     private void ClearExpression()
     {
+        _inputState.Reset();
+        _repeatOnNextEquals = false;
         _expression.Text = string.Empty;
         ResetResult();
         _expression.Focus();
     }
+
+    private void OnExpressionKeyDown(object? sender, KeyEventArgs eventArgs)
+    {
+        if (eventArgs.Key == Key.Enter)
+        {
+            Calculate();
+            eventArgs.Handled = true;
+        }
+        else if (eventArgs.Key == Key.Escape)
+        {
+            ClearExpression();
+            eventArgs.Handled = true;
+        }
+        else if (eventArgs.Key is Key.Back or Key.Delete)
+        {
+            _inputState.Reset();
+            _repeatOnNextEquals = false;
+        }
+        else if (eventArgs.Key == Key.V && eventArgs.KeyModifiers.HasFlag(KeyModifiers.Control))
+        {
+            PrepareForValueInput();
+        }
+    }
+
+    private void OnTextInput(object? sender, TextInputEventArgs eventArgs)
+    {
+        if (!_inputState.IsAfterResult || string.IsNullOrEmpty(eventArgs.Text)) return;
+
+        if (IsBinaryOperator(eventArgs.Text)) PrepareForOperatorInput();
+        else PrepareForValueInput();
+    }
+
+    private void PrepareForValueInput()
+    {
+        if (!_inputState.IsAfterResult) return;
+
+        _repeatOnNextEquals = false;
+        var text = _inputState.BeginValue(_expression.Text ?? string.Empty);
+        SetExpression(text, text.Length);
+    }
+
+    private void PrepareForOperatorInput()
+    {
+        if (!_inputState.IsAfterResult) return;
+
+        _repeatOnNextEquals = false;
+        var text = _inputState.BeginOperator(_expression.Text ?? string.Empty);
+        SetExpression(text, text.Length);
+    }
+
+    private void ApplyEdit(CalculatorTextEdit edit) =>
+        SetExpression(edit.Text, edit.SelectionStart, edit.SelectionLength);
+
+    private void SetExpression(string text, int selectionStart, int selectionLength = 0)
+    {
+        var start = Math.Clamp(selectionStart, 0, text.Length);
+        var end = Math.Clamp(start + selectionLength, start, text.Length);
+        _expression.Text = text;
+        _expression.SelectionStart = start;
+        _expression.SelectionEnd = end;
+        _expression.CaretIndex = end;
+        _expression.Focus();
+    }
+
+    private static bool IsBinaryOperator(string text) => text is "+" or "-" or "*" or "/" or ":" or "^" or "×" or "÷";
 
     private void ResetResult()
     {

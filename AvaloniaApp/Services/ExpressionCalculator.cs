@@ -27,6 +27,19 @@ public sealed record CalculationResult(
     string Message,
     int? ErrorPosition);
 
+internal enum RepeatOperator
+{
+    Add,
+    Subtract,
+    Multiply,
+    Divide,
+    Power
+}
+
+internal sealed record RepeatOperation(RepeatOperator Operator, double Operand);
+
+internal sealed record CalculationEvaluation(CalculationResult Result, RepeatOperation? RepeatOperation);
+
 public sealed class ExpressionCalculator
 {
     public const int MaxExpressionLength = 512;
@@ -34,32 +47,40 @@ public sealed class ExpressionCalculator
 
     private static readonly CultureInfo PolishCulture = CultureInfo.GetCultureInfo("pl-PL");
 
-    public CalculationResult Evaluate(string? expression, double? ans = null)
+    public CalculationResult Evaluate(string? expression, double? ans = null) =>
+        EvaluateWithRepeat(expression, ans).Result;
+
+    internal CalculationEvaluation EvaluateWithRepeat(string? expression, double? ans = null)
     {
         var source = expression ?? string.Empty;
         if (string.IsNullOrWhiteSpace(source))
-            return Error(CalculationErrorCode.EmptyExpression, "Wpisz wyrażenie do obliczenia.", 0);
+            return EvaluationError(CalculationErrorCode.EmptyExpression, "Wpisz wyrażenie do obliczenia.", 0);
         if (source.Length > MaxExpressionLength)
-            return Error(CalculationErrorCode.ExpressionTooLong, $"Wyrażenie może mieć maksymalnie {MaxExpressionLength} znaków.", MaxExpressionLength);
+            return EvaluationError(CalculationErrorCode.ExpressionTooLong, $"Wyrażenie może mieć maksymalnie {MaxExpressionLength} znaków.", MaxExpressionLength);
 
         try
         {
             var tokens = Tokenize(source);
-            var value = new Parser(tokens, ans).Parse();
+            var evaluation = new Parser(tokens, ans).Parse();
+            var value = evaluation.Value;
             if (!double.IsFinite(value))
                 throw new CalculationException(CalculationErrorCode.NonFiniteResult, "Wynik wykracza poza zakres obsługiwanych liczb.", source.Length);
 
             if (value == 0d) value = 0d;
-            return new CalculationResult(true, value, value.ToString("G15", PolishCulture), null, "Wynik", null);
+            var result = new CalculationResult(true, value, value.ToString("G15", PolishCulture), null, "Wynik", null);
+            return new CalculationEvaluation(result, evaluation.RepeatOperation);
         }
         catch (CalculationException exception)
         {
-            return Error(exception.Code, exception.Message, exception.Position);
+            return EvaluationError(exception.Code, exception.Message, exception.Position);
         }
     }
 
     private static CalculationResult Error(CalculationErrorCode code, string message, int position) =>
         new(false, null, string.Empty, code, message, position);
+
+    private static CalculationEvaluation EvaluationError(CalculationErrorCode code, string message, int position) =>
+        new(Error(code, message, position), null);
 
     private static IReadOnlyList<Token> Tokenize(string source)
     {
@@ -91,9 +112,24 @@ public sealed class ExpressionCalculator
                 if (!hasDigit)
                     throw new CalculationException(CalculationErrorCode.InvalidToken, "Separator dziesiętny musi należeć do liczby.", start);
 
+                if (index < source.Length && source[index] is 'e' or 'E')
+                {
+                    var exponentPosition = index;
+                    index++;
+                    if (index < source.Length && source[index] is '+' or '-') index++;
+
+                    var exponentStart = index;
+                    while (index < source.Length && char.IsDigit(source[index])) index++;
+                    if (index == exponentStart)
+                        throw new CalculationException(
+                            CalculationErrorCode.InvalidToken,
+                            "Wykładnik notacji naukowej musi zawierać cyfry.",
+                            exponentPosition);
+                }
+
                 var text = source[start..index];
                 var normalized = text.Replace(',', '.');
-                if (!double.TryParse(normalized, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out var number) || !double.IsFinite(number))
+                if (!double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var number) || !double.IsFinite(number))
                     throw new CalculationException(CalculationErrorCode.NonFiniteResult, "Liczba wykracza poza obsługiwany zakres.", start);
                 tokens.Add(new Token(TokenType.Number, text, start, number));
                 continue;
@@ -120,7 +156,7 @@ public sealed class ExpressionCalculator
                 '+' => TokenType.Plus,
                 '-' => TokenType.Minus,
                 '*' or '×' => TokenType.Multiply,
-                '/' or '÷' => TokenType.Divide,
+                '/' or '÷' or ':' => TokenType.Divide,
                 '^' => TokenType.Power,
                 '(' => TokenType.LeftParenthesis,
                 ')' => TokenType.RightParenthesis,
@@ -160,6 +196,8 @@ public sealed class ExpressionCalculator
 
     private sealed record Token(TokenType Type, string Text, int Position, double Number = 0d);
 
+    private readonly record struct Evaluation(double Value, RepeatOperation? RepeatOperation = null);
+
     private sealed class Parser(IReadOnlyList<Token> tokens, double? ans)
     {
         private int _depth;
@@ -167,120 +205,132 @@ public sealed class ExpressionCalculator
 
         private Token Current => tokens[_index];
 
-        public double Parse()
+        public Evaluation Parse()
         {
-            var value = ParseAdditive();
+            var evaluation = ParseAdditive();
             if (Current.Type != TokenType.End)
                 throw new CalculationException(CalculationErrorCode.UnexpectedToken, $"Nieoczekiwany element: {Current.Text}.", Current.Position);
-            return value;
+            return evaluation;
         }
 
-        private double ParseAdditive()
+        private Evaluation ParseAdditive()
         {
-            var value = ParseMultiplicative();
+            var evaluation = ParseMultiplicative();
+            var value = evaluation.Value;
+            var repeatOperation = evaluation.RepeatOperation;
             while (Current.Type is TokenType.Plus or TokenType.Minus)
             {
                 var operation = Advance();
                 var right = ParseMultiplicative();
-                value = EnsureFinite(operation.Type == TokenType.Plus ? value + right : value - right, operation.Position);
+                value = EnsureFinite(operation.Type == TokenType.Plus ? value + right.Value : value - right.Value, operation.Position);
+                repeatOperation = new RepeatOperation(
+                    operation.Type == TokenType.Plus ? RepeatOperator.Add : RepeatOperator.Subtract,
+                    right.Value);
             }
-            return value;
+            return new Evaluation(value, repeatOperation);
         }
 
-        private double ParseMultiplicative()
+        private Evaluation ParseMultiplicative()
         {
-            var value = ParseUnary();
+            var evaluation = ParseUnary();
+            var value = evaluation.Value;
+            var repeatOperation = evaluation.RepeatOperation;
             while (Current.Type is TokenType.Multiply or TokenType.Divide || StartsImplicitProduct(Current.Type))
             {
                 var operation = Current.Type is TokenType.Multiply or TokenType.Divide ? Advance() : null;
                 var right = ParseUnary();
                 if (operation?.Type == TokenType.Divide)
                 {
-                    if (right == 0d)
+                    if (right.Value == 0d)
                         throw new CalculationException(CalculationErrorCode.DivisionByZero, "Nie można dzielić przez zero.", operation.Position);
-                    value = EnsureFinite(value / right, operation.Position);
+                    value = EnsureFinite(value / right.Value, operation.Position);
+                    repeatOperation = new RepeatOperation(RepeatOperator.Divide, right.Value);
                 }
                 else
                 {
-                    value = EnsureFinite(value * right, operation?.Position ?? Current.Position);
+                    value = EnsureFinite(value * right.Value, operation?.Position ?? Current.Position);
+                    repeatOperation = new RepeatOperation(RepeatOperator.Multiply, right.Value);
                 }
             }
-            return value;
+            return new Evaluation(value, repeatOperation);
         }
 
-        private double ParseUnary()
+        private Evaluation ParseUnary()
         {
             if (Current.Type is TokenType.Plus or TokenType.Minus)
             {
                 var operation = Advance();
                 var value = ParseNested(operation.Position, ParseUnary);
-                return operation.Type == TokenType.Minus ? -value : value;
+                return new Evaluation(operation.Type == TokenType.Minus ? -value.Value : value.Value);
             }
             return ParsePower();
         }
 
-        private double ParsePower()
+        private Evaluation ParsePower()
         {
-            var value = ParsePrimary();
-            if (Current.Type != TokenType.Power) return value;
+            var evaluation = ParsePrimary();
+            var value = evaluation.Value;
+            if (Current.Type != TokenType.Power) return evaluation;
 
             var operation = Advance();
             var exponent = ParseNested(operation.Position, ParseUnary);
-            if (value == 0d && exponent == 0d)
+            if (value == 0d && exponent.Value == 0d)
                 throw new CalculationException(CalculationErrorCode.UndefinedPower, "Wyrażenie 0^0 jest nieokreślone.", operation.Position);
-            if (value == 0d && exponent < 0d)
+            if (value == 0d && exponent.Value < 0d)
                 throw new CalculationException(CalculationErrorCode.DivisionByZero, "Zero nie może być podniesione do ujemnej potęgi.", operation.Position);
 
-            var result = Math.Pow(value, exponent);
+            var result = Math.Pow(value, exponent.Value);
             if (double.IsNaN(result))
                 throw new CalculationException(CalculationErrorCode.UndefinedPower, "Ta potęga nie ma wyniku w zbiorze liczb rzeczywistych.", operation.Position);
-            return EnsureFinite(result, operation.Position);
+            return new Evaluation(
+                EnsureFinite(result, operation.Position),
+                new RepeatOperation(RepeatOperator.Power, exponent.Value));
         }
 
-        private double ParsePrimary()
+        private Evaluation ParsePrimary()
         {
             var token = Advance();
             return token.Type switch
             {
-                TokenType.Number => token.Number,
-                TokenType.Ans => ans ?? throw new CalculationException(CalculationErrorCode.MissingAns, "Brak poprzedniego wyniku Ans.", token.Position),
+                TokenType.Number => new Evaluation(token.Number),
+                TokenType.Ans => new Evaluation(ans ?? throw new CalculationException(CalculationErrorCode.MissingAns, "Brak poprzedniego wyniku Ans.", token.Position)),
                 TokenType.LeftParenthesis => ParseParenthesized(token.Position),
                 TokenType.Sqrt => ParseFunctionRoot(token, 2),
                 TokenType.Root => ParseGeneralRoot(token),
-                TokenType.SquareRoot => ApplyRoot(2, ParseNested(token.Position, ParseUnary), token.Position),
-                TokenType.CubeRoot => ApplyRoot(3, ParseNested(token.Position, ParseUnary), token.Position),
-                TokenType.FourthRoot => ApplyRoot(4, ParseNested(token.Position, ParseUnary), token.Position),
+                TokenType.SquareRoot => new Evaluation(ApplyRoot(2, ParseNested(token.Position, ParseUnary).Value, token.Position)),
+                TokenType.CubeRoot => new Evaluation(ApplyRoot(3, ParseNested(token.Position, ParseUnary).Value, token.Position)),
+                TokenType.FourthRoot => new Evaluation(ApplyRoot(4, ParseNested(token.Position, ParseUnary).Value, token.Position)),
                 TokenType.End => throw new CalculationException(CalculationErrorCode.UnexpectedToken, "Wyrażenie jest niepełne.", token.Position),
                 _ => throw new CalculationException(CalculationErrorCode.UnexpectedToken, $"Nieoczekiwany element: {token.Text}.", token.Position)
             };
         }
 
-        private double ParseParenthesized(int position)
+        private Evaluation ParseParenthesized(int position)
         {
             var value = ParseNested(position, ParseAdditive);
             ExpectClosingParenthesis();
             return value;
         }
 
-        private double ParseFunctionRoot(Token function, int degree)
+        private Evaluation ParseFunctionRoot(Token function, int degree)
         {
             Expect(TokenType.LeftParenthesis, "Po nazwie sqrt musi wystąpić nawias otwierający.");
             var radicand = ParseNested(function.Position, ParseAdditive);
             ExpectClosingParenthesis();
-            return ApplyRoot(degree, radicand, function.Position);
+            return new Evaluation(ApplyRoot(degree, radicand.Value, function.Position));
         }
 
-        private double ParseGeneralRoot(Token function)
+        private Evaluation ParseGeneralRoot(Token function)
         {
             Expect(TokenType.LeftParenthesis, "Po nazwie root musi wystąpić nawias otwierający.");
             var degree = ParseNested(function.Position, ParseAdditive);
             Expect(TokenType.Semicolon, "Funkcja root wymaga separatora ';' między stopniem i liczbą.");
             var radicand = ParseNested(function.Position, ParseAdditive);
             ExpectClosingParenthesis();
-            return ApplyRoot(degree, radicand, function.Position);
+            return new Evaluation(ApplyRoot(degree.Value, radicand.Value, function.Position));
         }
 
-        private double ParseNested(int position, Func<double> parse)
+        private Evaluation ParseNested(int position, Func<Evaluation> parse)
         {
             if (_depth >= MaxNestingDepth)
                 throw new CalculationException(CalculationErrorCode.ExpressionTooDeep, $"Wyrażenie może mieć maksymalnie {MaxNestingDepth} poziomy zagnieżdżenia.", position);

@@ -14,6 +14,9 @@ public sealed class ExpressionCalculatorTests
     [InlineData("(-2)^2", 4d)]
     [InlineData("2^-2", 0.25d)]
     [InlineData("1,5+2.25", 3.75d)]
+    [InlineData("1.8E-13", 1.8E-13d)]
+    [InlineData("1,8e+3", 1800d)]
+    [InlineData("1/(1.80000000000018E-13)", 5555555555555d)]
     [InlineData("2(3+4)", 14d)]
     [InlineData("(2+3)(4-1)", 15d)]
     [InlineData("3√8", 8.48528137423857d)]
@@ -61,6 +64,9 @@ public sealed class ExpressionCalculatorTests
     [InlineData("2 3")]
     [InlineData("abc(2)")]
     [InlineData("root(3 8)")]
+    [InlineData("1E")]
+    [InlineData("1E+")]
+    [InlineData("1,2E-")]
     public void Rejects_malformed_expressions_without_throwing(string expression)
     {
         var exception = Record.Exception(() => _calculator.Evaluate(expression));
