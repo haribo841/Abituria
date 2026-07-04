@@ -17,19 +17,19 @@ public sealed class LoginView : UserControl
 {
     private readonly AccountService _accounts;
     private readonly Action<LocalProfile> _onLogin;
-    private readonly ComboBox _profiles = new();
-    private readonly TextBlock _status = new() { TextWrapping = TextWrapping.Wrap };
+    private readonly ComboBox _profiles = new() { Name = "ProfileSelector" };
+    private readonly TextBlock _status = new() { Name = "AccountStatusText", TextWrapping = TextWrapping.Wrap };
     private readonly TextBox _password = PasswordBox("Hasło");
 
-    public LoginView(AccountService accounts, Action<LocalProfile> onLogin)
+    public LoginView(AccountService accounts, UiCopyCatalog copy, Action<LocalProfile> onLogin)
     {
         _accounts = accounts;
         _onLogin = onLogin;
-        Content = Build();
+        Content = Build(copy);
         AttachedToVisualTree += async (_, _) => await ReloadProfilesAsync();
     }
 
-    private Control Build()
+    private Control Build(UiCopyCatalog copy)
     {
         var root = new Grid { ColumnDefinitions = new ColumnDefinitions("1.05*,0.95*"), ColumnSpacing = 24, Margin = new Thickness(30) };
         var intro = new StackPanel { Spacing = 18 };
@@ -51,19 +51,25 @@ public sealed class LoginView : UserControl
         _profiles.SelectionChanged += (_, _) => UpdateLoginMode();
         forms.Children.Add(_profiles);
         forms.Children.Add(_password);
-        var login = new Button { Content = "Zaloguj", Classes = { "primary" }, HorizontalAlignment = HorizontalAlignment.Stretch };
+        var login = new Button { Name = "LoginButton", Content = "Zaloguj", Classes = { "primary" }, HorizontalAlignment = HorizontalAlignment.Stretch };
         login.Click += async (_, _) => await LoginAsync();
         forms.Children.Add(login);
 
         forms.Children.Add(Separator());
         forms.Children.Add(new TextBlock { Text = "Nowe konto", Classes = { "h2" } });
-        var name = new TextBox { PlaceholderText = "Nazwa użytkownika", MaxLength = 30 };
+        forms.Children.Add(UiFactory.InfoBand(copy.GetRequired("account.registration.rules")));
+        var name = new TextBox
+        {
+            Name = "RegistrationNameBox",
+            PlaceholderText = "Nazwa użytkownika (1-30 znaków)",
+            MaxLength = AccountService.MaximumDisplayNameLength
+        };
         var newPassword = PasswordBox("Hasło (minimum 15 znaków)");
         var confirmation = PasswordBox("Powtórz hasło");
         forms.Children.Add(name);
         forms.Children.Add(newPassword);
         forms.Children.Add(confirmation);
-        var register = new Button { Content = "Utwórz konto", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Stretch };
+        var register = new Button { Name = "RegisterButton", Content = "Utwórz konto", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Stretch };
         register.Click += async (_, _) =>
         {
             var result = await _accounts.RegisterAsync(name.Text ?? string.Empty, newPassword.Text ?? string.Empty, confirmation.Text ?? string.Empty);
@@ -79,7 +85,7 @@ public sealed class LoginView : UserControl
 
         forms.Children.Add(Separator());
         forms.Children.Add(new TextBlock { Text = "Odzyskiwanie hasła", Classes = { "h2" } });
-        var recoveryName = new TextBox { PlaceholderText = "Nazwa konta", MaxLength = 30 };
+        var recoveryName = new TextBox { PlaceholderText = "Nazwa konta", MaxLength = AccountService.MaximumDisplayNameLength };
         var recoveryCode = new TextBox { PlaceholderText = "Kod odzyskiwania" };
         var recoveredPassword = PasswordBox("Nowe hasło");
         var recoveredConfirmation = PasswordBox("Powtórz nowe hasło");

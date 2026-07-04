@@ -73,7 +73,7 @@ public sealed class ExpressionCalculator
             if (!double.IsFinite(value))
                 throw new CalculationException(CalculationErrorCode.NonFiniteResult, "Wynik wykracza poza zakres obsługiwanych liczb.", source.Length);
 
-            if (value == 0d) value = 0d;
+            value = NormalizeZero(value);
             var normalizedExpression = NormalizeNumericLiterals(source);
             var wasNormalized = !string.Equals(source, normalizedExpression, StringComparison.Ordinal);
             var result = new CalculationResult(
@@ -109,34 +109,61 @@ public sealed class ExpressionCalculator
         var index = 0;
         while (index < source.Length)
         {
-            if (!char.IsDigit(source[index]) && source[index] is not ('.' or ','))
+            if (!StartsNumericLiteral(source[index]))
             {
                 normalized.Append(source[index]);
                 index++;
                 continue;
             }
 
-            var start = index;
-            while (index < source.Length && (char.IsDigit(source[index]) || source[index] is '.' or ',')) index++;
-            var mantissaEnd = index;
-
-            if (index < source.Length && source[index] is 'e' or 'E')
-            {
-                index++;
-                if (index < source.Length && source[index] is '+' or '-') index++;
-                while (index < source.Length && char.IsDigit(source[index])) index++;
-            }
-
-            var integerEnd = start;
-            while (integerEnd < mantissaEnd && char.IsDigit(source[integerEnd])) integerEnd++;
-            var firstKeptDigit = start;
-            while (firstKeptDigit + 1 < integerEnd && source[firstKeptDigit] == '0') firstKeptDigit++;
-
-            normalized.Append(source, firstKeptDigit, index - firstKeptDigit);
+            index = AppendNormalizedNumericLiteral(source, index, normalized);
         }
 
         return normalized.ToString();
     }
+
+    private static bool StartsNumericLiteral(char character) =>
+        char.IsDigit(character) || character is '.' or ',';
+
+    private static int AppendNormalizedNumericLiteral(string source, int start, StringBuilder normalized)
+    {
+        var mantissaEnd = FindMantissaEnd(source, start);
+        var literalEnd = FindExponentEnd(source, mantissaEnd);
+        var firstKeptDigit = FindFirstKeptIntegerDigit(source, start, mantissaEnd);
+        normalized.Append(source, firstKeptDigit, literalEnd - firstKeptDigit);
+        return literalEnd;
+    }
+
+    private static int FindMantissaEnd(string source, int start)
+    {
+        var index = start;
+        while (index < source.Length && StartsNumericLiteral(source[index])) index++;
+        return index;
+    }
+
+    private static int FindExponentEnd(string source, int mantissaEnd)
+    {
+        var index = mantissaEnd;
+        if (index >= source.Length || source[index] is not ('e' or 'E')) return index;
+
+        index++;
+        if (index < source.Length && source[index] is '+' or '-') index++;
+        while (index < source.Length && char.IsDigit(source[index])) index++;
+        return index;
+    }
+
+    private static int FindFirstKeptIntegerDigit(string source, int start, int mantissaEnd)
+    {
+        var integerEnd = start;
+        while (integerEnd < mantissaEnd && char.IsDigit(source[integerEnd])) integerEnd++;
+
+        var firstKeptDigit = start;
+        while (firstKeptDigit + 1 < integerEnd && source[firstKeptDigit] == '0') firstKeptDigit++;
+        return firstKeptDigit;
+    }
+
+    private static double NormalizeZero(double value) =>
+        Math.Abs(value) < double.Epsilon ? 0d : value;
 
     private static IReadOnlyList<Token> Tokenize(string source)
     {
@@ -479,7 +506,7 @@ public sealed class ExpressionCalculator
         }
     }
 
-    private sealed class CalculationException(CalculationErrorCode code, string message, int position) : Exception(message)
+    public sealed class CalculationException(CalculationErrorCode code, string message, int position) : Exception(message)
     {
         public CalculationErrorCode Code { get; } = code;
         public int Position { get; } = position;

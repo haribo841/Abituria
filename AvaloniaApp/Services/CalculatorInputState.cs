@@ -24,7 +24,7 @@ public sealed class CalculatorInputState
             throw new ArgumentOutOfRangeException(nameof(value), "Wynik musi być liczbą skończoną.");
 
         _isAfterError = false;
-        _resultValue = value == 0d ? 0d : value;
+        _resultValue = NormalizeZero(value);
     }
 
     public void MarkError()
@@ -169,4 +169,7 @@ public sealed class CalculatorInputState
     }
 
     private static string Format(double value) => value.ToString("R", CultureInfo.InvariantCulture);
+
+    private static double NormalizeZero(double value) =>
+        Math.Abs(value) < double.Epsilon ? 0d : value;
 }

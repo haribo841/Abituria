@@ -21,7 +21,6 @@ public partial class MainWindow : Window
     private readonly AppViewModel _viewModel;
     private readonly AccountService _accounts;
     private readonly ContentRepository _content;
-    private readonly QuadraticSolver _solver;
     private readonly CalculatorSession _calculatorSession;
     private Border _shellHost = null!;
 
@@ -29,17 +28,15 @@ public partial class MainWindow : Window
         App.Services.GetRequiredService<AppViewModel>(),
         App.Services.GetRequiredService<AccountService>(),
         App.Services.GetRequiredService<ContentRepository>(),
-        App.Services.GetRequiredService<QuadraticSolver>(),
         App.Services.GetRequiredService<CalculatorSession>())
     {
     }
 
-    public MainWindow(AppViewModel viewModel, AccountService accounts, ContentRepository content, QuadraticSolver solver, CalculatorSession calculatorSession)
+    public MainWindow(AppViewModel viewModel, AccountService accounts, ContentRepository content, CalculatorSession calculatorSession)
     {
         _viewModel = viewModel;
         _accounts = accounts;
         _content = content;
-        _solver = solver;
         _calculatorSession = calculatorSession;
         InitializeComponent();
         _shellHost = this.FindControl<Border>("ShellHost") ?? throw new InvalidOperationException("Nie znaleziono ShellHost.");
@@ -58,7 +55,7 @@ public partial class MainWindow : Window
     {
         if (_viewModel.ActiveProfile is null || _viewModel.CurrentPage == AppPage.Login)
         {
-            _shellHost.Child = new LoginView(_accounts, _viewModel.Login);
+            _shellHost.Child = new LoginView(_accounts, _content.UiCopy, _viewModel.Login);
             return;
         }
 
@@ -152,7 +149,7 @@ public partial class MainWindow : Window
             _viewModel.SelectedChapter.Title, _viewModel.SelectedChapter.Message ?? "Treść w przygotowaniu.",
             _viewModel.SelectedChapter.Blocks, () => _viewModel.Navigate(AppPage.Chapters),
             _viewModel.SelectedChapter.RoadmapId is null ? null : () => _viewModel.OpenRoadmap(_viewModel.SelectedChapter.RoadmapId)),
-        AppPage.Calculator => new CalculatorView(_solver, _content.UiCopy, _viewModel.OpenGeneralCalculator, OpenPlannedCalculator),
+        AppPage.Calculator => new CalculatorView(_content.UiCopy, _viewModel.OpenGeneralCalculator, OpenPlannedCalculator),
         AppPage.GeneralCalculator => new GeneralCalculatorView(
             _calculatorSession, _content.UiCopy, () => _viewModel.Navigate(AppPage.Calculator)),
         AppPage.Roadmap => new RoadmapView(_content.Roadmap, _viewModel.SelectedRoadmapId),

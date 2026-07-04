@@ -25,7 +25,7 @@ public sealed class PasswordHasher(int iterations = PasswordHasher.DefaultIterat
         return new PasswordCredential(hash, salt, Iterations);
     }
 
-    public bool VerifyPassword(string password, byte[] expectedHash, byte[] salt, int iterations)
+    public static bool VerifyPassword(string password, byte[] expectedHash, byte[] salt, int iterations)
     {
         if (password.Length > MaximumPasswordLength) return false;
         var actual = Derive(password, salt, iterations);

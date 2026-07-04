@@ -22,22 +22,22 @@ public sealed class HomeView : UserControl
             ColumnSpacing = 16,
             RowSpacing = 16
         };
-        AddTile(grid, 0, 0, "Wzory", "18 pełnych tablic matematycznych", "img/wzory.png", showFormulas);
-        AddTile(grid, 1, 0, "Zadania", "Matura poprawkowa 2021 i archiwalne zestawy", "img/zadania.png", showExams);
-        AddTile(grid, 0, 1, "Kalkulator", "Wyrażenia i pełna analiza funkcji kwadratowej", "img/kalkulator.png", showCalculator);
-        AddTile(grid, 1, 1, "Działy", "Wektory i zachowane materiały działowe", "img/dzialy.png", showChapters);
-        AddTile(grid, 0, 2, "Plan rozwoju", "Przeniesione, zaplanowane i zastąpione elementy starych wersji", "img/abituria.png", showRoadmap, 2);
+        AddTile(grid, 0, 0, new HomeTile("Wzory", "18 pełnych tablic matematycznych", "img/wzory.png", showFormulas));
+        AddTile(grid, 1, 0, new HomeTile("Zadania", "Matura poprawkowa 2021 i archiwalne zestawy", "img/zadania.png", showExams));
+        AddTile(grid, 0, 1, new HomeTile("Kalkulator", "Wyrażenia i pełna analiza funkcji kwadratowej", "img/kalkulator.png", showCalculator));
+        AddTile(grid, 1, 1, new HomeTile("Działy", "Wektory i zachowane materiały działowe", "img/dzialy.png", showChapters));
+        AddTile(grid, 0, 2, new HomeTile("Plan rozwoju", "Przeniesione, zaplanowane i zastąpione elementy starych wersji", "img/abituria.png", showRoadmap, 2));
         root.Children.Add(grid);
         root.Children.Add(UiFactory.InfoBand(copy.GetRequired("home.work-mode")));
         Content = UiFactory.PageScroll(root);
     }
 
-    private static void AddTile(Grid grid, int column, int row, string title, string description, string asset, Action action, int columnSpan = 1)
+    private static void AddTile(Grid grid, int column, int row, HomeTile tile)
     {
         var content = new StackPanel { Spacing = 10 };
-        content.Children.Add(UiFactory.AssetImage(asset, 52, 52));
-        content.Children.Add(new TextBlock { Text = title, Classes = { "h2" } });
-        content.Children.Add(new TextBlock { Text = description, Classes = { "muted" }, TextWrapping = TextWrapping.Wrap });
+        content.Children.Add(UiFactory.AssetImage(tile.Asset, 52, 52));
+        content.Children.Add(new TextBlock { Text = tile.Title, Classes = { "h2" } });
+        content.Children.Add(new TextBlock { Text = tile.Description, Classes = { "muted" }, TextWrapping = TextWrapping.Wrap });
         var button = new Button
         {
             Content = UiFactory.Card(content),
@@ -47,10 +47,12 @@ public sealed class HomeView : UserControl
             Background = Brushes.Transparent,
             BorderBrush = Brushes.Transparent
         };
-        button.Click += (_, _) => action();
+        button.Click += (_, _) => tile.Action();
         Grid.SetColumn(button, column);
         Grid.SetRow(button, row);
-        Grid.SetColumnSpan(button, columnSpan);
+        Grid.SetColumnSpan(button, tile.ColumnSpan);
         grid.Children.Add(button);
     }
+
+    private sealed record HomeTile(string Title, string Description, string Asset, Action Action, int ColumnSpan = 1);
 }

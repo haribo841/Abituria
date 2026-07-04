@@ -11,6 +11,11 @@ namespace Abituria.Services;
 
 public sealed class AccountService(AppDbContextFactory contextFactory, PasswordHasher passwordHasher)
 {
+    public const int MinimumDisplayNameLength = 1;
+    public const int MaximumDisplayNameLength = 30;
+    public const string DisplayNameValidationMessage =
+        "Nazwa użytkownika musi mieć od 1 do 30 znaków i nie może składać się wyłącznie ze spacji.";
+
     private const string LegacyImportKey = "legacy-users-imported-v1";
 
     public string DatabasePath => contextFactory.DatabasePath;
@@ -36,8 +41,8 @@ public sealed class AccountService(AppDbContextFactory contextFactory, PasswordH
     public async Task<RegistrationResult> RegisterAsync(string rawName, string password, string confirmation)
     {
         var name = rawName.Trim();
-        if (name.Length is < 1 or > 30)
-            return new RegistrationResult(false, "Nazwa użytkownika musi mieć od 1 do 30 znaków.");
+        if (name.Length is < MinimumDisplayNameLength or > MaximumDisplayNameLength)
+            return new RegistrationResult(false, DisplayNameValidationMessage);
         if (!string.Equals(password, confirmation, StringComparison.Ordinal))
             return new RegistrationResult(false, "Hasła nie są takie same.");
 
@@ -74,7 +79,7 @@ public sealed class AccountService(AppDbContextFactory contextFactory, PasswordH
         var entity = await context.Profiles.SingleOrDefaultAsync(profile => profile.Id == profileId);
         if (entity is null || entity.Kind != ProfileKind.Password || entity.PasswordHash is null ||
             entity.PasswordSalt is null || entity.PasswordIterations is null ||
-            !passwordHasher.VerifyPassword(password, entity.PasswordHash, entity.PasswordSalt, entity.PasswordIterations.Value))
+            !PasswordHasher.VerifyPassword(password, entity.PasswordHash, entity.PasswordSalt, entity.PasswordIterations.Value))
         {
             return new AuthenticationResult(false, "Nieprawidłowy profil lub hasło.");
         }
@@ -126,7 +131,7 @@ public sealed class AccountService(AppDbContextFactory contextFactory, PasswordH
         await using var context = contextFactory.CreateDbContext();
         var entity = await context.Profiles.SingleOrDefaultAsync(profile => profile.Id == profileId);
         if (entity is null || entity.Kind != ProfileKind.Password || entity.PasswordHash is null || entity.PasswordSalt is null ||
-            entity.PasswordIterations is null || !passwordHasher.VerifyPassword(currentPassword, entity.PasswordHash, entity.PasswordSalt, entity.PasswordIterations.Value))
+            entity.PasswordIterations is null || !PasswordHasher.VerifyPassword(currentPassword, entity.PasswordHash, entity.PasswordSalt, entity.PasswordIterations.Value))
         {
             return new PasswordUpdateResult(false, "Bieżące hasło jest nieprawidłowe.");
         }

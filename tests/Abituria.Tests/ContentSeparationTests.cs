@@ -19,7 +19,8 @@ public sealed partial class ContentSeparationTests
 
         Assert.NotNull(catalog);
         Assert.Equal(1, catalog.SchemaVersion);
-        Assert.Equal(6, catalog.Entries.Count);
+        Assert.Equal(7, catalog.Entries.Count);
+        Assert.Contains("account.registration.rules", catalog.Entries.Keys);
         Assert.All(catalog.Entries, entry =>
         {
             Assert.False(string.IsNullOrWhiteSpace(entry.Key));

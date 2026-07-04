@@ -23,7 +23,6 @@ public partial class App : Application
         collection.AddSingleton<ContentRepository>();
         collection.AddSingleton<ExpressionCalculator>();
         collection.AddSingleton<CalculatorSession>();
-        collection.AddSingleton<QuadraticSolver>();
         collection.AddSingleton<AppViewModel>();
         collection.AddSingleton<MainWindow>();
         Services = collection.BuildServiceProvider();

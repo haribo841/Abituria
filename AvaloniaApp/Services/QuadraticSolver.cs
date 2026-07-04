@@ -8,11 +8,11 @@ public sealed record QuadraticSolutionSection(string Title, IReadOnlyList<string
 
 public sealed record QuadraticSolution(bool Success, string Summary, IReadOnlyList<QuadraticSolutionSection> Sections);
 
-public sealed class QuadraticSolver
+public static class QuadraticSolver
 {
     private const double Epsilon = 0.0000001;
 
-    public QuadraticSolution Solve(string? aText, string? bText, string? cText)
+    public static QuadraticSolution Solve(string? aText, string? bText, string? cText)
     {
         if (!TryRead(aText, out var a) || !TryRead(bText, out var b) || !TryRead(cText, out var c))
         {
@@ -96,11 +96,17 @@ public sealed class QuadraticSolver
 
     private static string FormatTerm(double coefficient, string variable, bool first)
     {
-        var sign = coefficient < 0 ? "-" : first ? string.Empty : "+";
+        var sign = FormatSign(coefficient, first);
         var magnitude = Math.Abs(coefficient);
         var number = variable.Length > 0 && Math.Abs(magnitude - 1) < Epsilon ? string.Empty : Format(magnitude);
         if (first) return $"{sign}{number}{variable}";
         return $"{sign} {number}{variable}";
+    }
+
+    private static string FormatSign(double coefficient, bool first)
+    {
+        if (coefficient < 0) return "-";
+        return first ? string.Empty : "+";
     }
 
     private static string FormatFactor(double value)

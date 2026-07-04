@@ -13,6 +13,8 @@ namespace Abituria.Views;
 
 public sealed class GeneralCalculatorView : UserControl
 {
+    private const string GhostButtonClass = "ghost";
+
     private readonly TextBox _expression = new()
     {
         PlaceholderText = "Np. 2(3+4), sqrt(9) albo root(3; -8)",
@@ -32,7 +34,7 @@ public sealed class GeneralCalculatorView : UserControl
         _session = session;
         var root = new StackPanel { Spacing = 18 };
 
-        var backButton = new Button { Content = "Wróć do kalkulatorów", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Left };
+        var backButton = new Button { Content = "Wróć do kalkulatorów", Classes = { GhostButtonClass }, HorizontalAlignment = HorizontalAlignment.Left };
         backButton.Click += (_, _) => back();
         root.Children.Add(backButton);
         root.Children.Add(UiFactory.PageTitle("Kalkulator ogólny", "Działania podstawowe, nawiasy, potęgi i pierwiastki w jednym wyrażeniu."));
@@ -93,7 +95,7 @@ public sealed class GeneralCalculatorView : UserControl
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 HorizontalContentAlignment = HorizontalAlignment.Center
             };
-            button.Classes.Add(key.Primary ? "primary" : "ghost");
+            button.Classes.Add(key.Primary ? "primary" : GhostButtonClass);
             button.Click += (_, _) => key.Action();
             Grid.SetColumn(button, index % 5);
             Grid.SetRow(button, index / 5);
@@ -107,7 +109,7 @@ public sealed class GeneralCalculatorView : UserControl
             FontSize = 16,
             HorizontalAlignment = HorizontalAlignment.Stretch,
             HorizontalContentAlignment = HorizontalAlignment.Center,
-            Classes = { "ghost" }
+            Classes = { GhostButtonClass }
         };
         generalRoot.Click += (_, _) => InsertValueTemplate("root(2; )", 5, 1);
         Grid.SetRow(generalRoot, 5);
@@ -122,7 +124,7 @@ public sealed class GeneralCalculatorView : UserControl
             FontSize = 17,
             HorizontalAlignment = HorizontalAlignment.Stretch,
             HorizontalContentAlignment = HorizontalAlignment.Center,
-            Classes = { "ghost" }
+            Classes = { GhostButtonClass }
         };
         square.Click += (_, _) => CalculateSquare();
         Grid.SetRow(square, 5);
@@ -137,7 +139,7 @@ public sealed class GeneralCalculatorView : UserControl
         var panel = new StackPanel { Spacing = 12 };
         var header = new Grid { ColumnDefinitions = new ColumnDefinitions("*,Auto"), ColumnSpacing = 10 };
         header.Children.Add(new TextBlock { Text = "Historia sesji", Classes = { "h2" }, VerticalAlignment = VerticalAlignment.Center });
-        var clear = new Button { Content = "Wyczyść historię", Classes = { "ghost" } };
+        var clear = new Button { Content = "Wyczyść historię", Classes = { GhostButtonClass } };
         clear.Click += (_, _) =>
         {
             _session.ClearHistory();

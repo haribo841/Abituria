@@ -13,7 +13,10 @@ namespace Abituria.Ui;
 
 public sealed class RichContentView : UserControl
 {
-    private static readonly Regex InlineMath = new(@"\\\((.*?)\\\)", RegexOptions.Compiled);
+    private static readonly Regex InlineMath = new(
+        @"\\\((.*?)\\\)",
+        RegexOptions.Compiled,
+        TimeSpan.FromMilliseconds(250));
 
     public RichContentView(IEnumerable<ContentBlock> blocks)
     {

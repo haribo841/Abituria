@@ -1,6 +1,10 @@
 {
   "schemaVersion": 1,
   "entries": {
+    "account.registration.rules": {
+      "title": "Zasady tworzenia konta",
+      "body": "Nazwa użytkownika musi mieć od 1 do 30 znaków. Początkowe i końcowe spacje są usuwane, a nazwa nie może składać się wyłącznie ze spacji. Hasło musi mieć od 15 do 128 znaków, a oba pola hasła muszą być identyczne."
+    },
     "calculator.general.syntax": {
       "title": "Składnia",
       "body": "Możesz używać przecinka lub kropki, znaków × i ÷ albo *, / i :. Dostępne są sqrt(x), √x, ∛x, ∜x oraz root(stopień; liczba). Zapis 3√8 oznacza 3 × √8. Notacja naukowa jest obsługiwana, np. 1,8E-13. Symbol ∞ nie jest liczbą i kalkulator go odrzuca."

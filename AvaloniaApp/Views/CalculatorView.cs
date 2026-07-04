@@ -11,7 +11,7 @@ namespace Abituria.Views;
 
 public sealed class CalculatorView : UserControl
 {
-    public CalculatorView(QuadraticSolver solver, UiCopyCatalog copy, Action openGeneralCalculator, Action<string> openPlannedCalculator)
+    public CalculatorView(UiCopyCatalog copy, Action openGeneralCalculator, Action<string> openPlannedCalculator)
     {
         var root = new StackPanel { Spacing = 18 };
         root.Children.Add(UiFactory.PageTitle("Kalkulator funkcji kwadratowej", "Poznaj sposób obliczania delty, miejsc zerowych i postaci funkcji krok po kroku."));
@@ -31,7 +31,7 @@ public sealed class CalculatorView : UserControl
         var calculate = new Button { Content = "Oblicz", Classes = { "primary" }, MinWidth = 150 };
         calculate.Click += (_, _) =>
         {
-            var solution = solver.Solve(a.Text, b.Text, c.Text);
+            var solution = QuadraticSolver.Solve(a.Text, b.Text, c.Text);
             result.Children.Clear();
             result.Children.Add(new TextBlock
             {
