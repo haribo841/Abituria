@@ -8,6 +8,8 @@ namespace Abituria.Data;
 [Migration("202606270001_InitialLocalAccounts")]
 public sealed class InitialLocalAccounts : Migration
 {
+    private static readonly string[] ExerciseProgressIndexColumns = ["ProfileId", "ExerciseId"];
+
     protected override void Up(MigrationBuilder migrationBuilder)
     {
         migrationBuilder.CreateTable(
@@ -52,7 +54,7 @@ public sealed class InitialLocalAccounts : Migration
             });
 
         migrationBuilder.CreateIndex("IX_Profiles_NormalizedName", "Profiles", "NormalizedName", unique: true);
-        migrationBuilder.CreateIndex("IX_ExerciseProgress_ProfileId_ExerciseId", "ExerciseProgress", new[] { "ProfileId", "ExerciseId" }, unique: true);
+        migrationBuilder.CreateIndex("IX_ExerciseProgress_ProfileId_ExerciseId", "ExerciseProgress", ExerciseProgressIndexColumns, unique: true);
     }
 
     protected override void Down(MigrationBuilder migrationBuilder)

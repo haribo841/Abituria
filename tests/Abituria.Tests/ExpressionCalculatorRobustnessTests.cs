@@ -6,7 +6,7 @@ using Xunit.Sdk;
 
 namespace Abituria.Tests;
 
-public sealed class ExpressionCalculatorRobustnessTests
+public sealed partial class ExpressionCalculatorRobustnessTests
 {
     private static readonly string[] FuzzTokens =
     [
@@ -337,10 +337,12 @@ public sealed class ExpressionCalculatorRobustnessTests
 
     private static bool IsSafe(double value) => double.IsFinite(value) && Math.Abs(value) <= 1E100d;
 
-    private static bool ContainsNaNToken(string value) => Regex.IsMatch(
-        value,
+    private static bool ContainsNaNToken(string value) => NaNTokenRegex().IsMatch(value);
+
+    [GeneratedRegex(
         @"(?<![\p{L}\p{N}_])NaN(?![\p{L}\p{N}_])",
-        RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+        RegexOptions.IgnoreCase | RegexOptions.CultureInvariant)]
+    private static partial Regex NaNTokenRegex();
 
     private static string Printable(string? expression) => expression is null
         ? "<null>"

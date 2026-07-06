@@ -31,7 +31,7 @@ public sealed class CalculatorSession
     public CalculationResult Calculate(string? expression)
     {
         var ansInput = LastResult;
-        var evaluation = _calculator.EvaluateWithRepeat(expression, ansInput);
+        var evaluation = ExpressionCalculator.EvaluateWithRepeat(expression, ansInput);
         var result = evaluation.Result;
         if (!result.Success || result.Value is null) return result;
 
@@ -69,7 +69,7 @@ public sealed class CalculatorSession
                 "Wybrany wpis nie jest już dostępny w historii sesji.",
                 0);
 
-        var evaluation = _calculator.EvaluateWithRepeat(item.Expression, item.AnsInput);
+        var evaluation = ExpressionCalculator.EvaluateWithRepeat(item.Expression, item.AnsInput);
         var result = evaluation.Result;
         if (!result.Success || result.Value is null) return result;
         if (!result.Value.Value.Equals(item.Value))

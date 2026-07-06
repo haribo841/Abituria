@@ -53,11 +53,24 @@ public sealed class ExpressionCalculator
     public const string LeadingZeroNormalizationMessage = "Usunięto niedozwolone zera wiodące.";
 
     private static readonly CultureInfo PolishCulture = CultureInfo.GetCultureInfo("pl-PL");
+    private readonly CultureInfo _displayCulture;
+
+    public ExpressionCalculator() : this(PolishCulture)
+    {
+    }
+
+    internal ExpressionCalculator(CultureInfo displayCulture)
+    {
+        _displayCulture = displayCulture;
+    }
 
     public CalculationResult Evaluate(string? expression, double? ans = null) =>
-        EvaluateWithRepeat(expression, ans).Result;
+        EvaluateCore(expression, ans, _displayCulture).Result;
 
-    internal CalculationEvaluation EvaluateWithRepeat(string? expression, double? ans = null)
+    internal static CalculationEvaluation EvaluateWithRepeat(string? expression, double? ans = null) =>
+        EvaluateCore(expression, ans, PolishCulture);
+
+    private static CalculationEvaluation EvaluateCore(string? expression, double? ans, CultureInfo displayCulture)
     {
         var source = expression ?? string.Empty;
         if (string.IsNullOrWhiteSpace(source))
@@ -79,7 +92,7 @@ public sealed class ExpressionCalculator
             var result = new CalculationResult(
                 true,
                 value,
-                value.ToString("G15", PolishCulture),
+                value.ToString("G15", displayCulture),
                 null,
                 wasNormalized ? LeadingZeroNormalizationMessage : "Wynik",
                 null)
@@ -162,10 +175,11 @@ public sealed class ExpressionCalculator
         return firstKeptDigit;
     }
 
-    private static double NormalizeZero(double value) =>
-        Math.Abs(value) < double.Epsilon ? 0d : value;
+    private static double NormalizeZero(double value) => IsZero(value) ? 0d : value;
 
-    private static IReadOnlyList<Token> Tokenize(string source)
+    private static bool IsZero(double value) => Math.Abs(value) < double.Epsilon;
+
+    private static List<Token> Tokenize(string source)
     {
         var tokens = new List<Token>();
         var index = 0;
@@ -178,96 +192,109 @@ public sealed class ExpressionCalculator
                 continue;
             }
 
-            if (char.IsDigit(character) || character is '.' or ',')
-            {
-                var start = index;
-                var hasDigit = false;
-                var hasSeparator = false;
-                while (index < source.Length && (char.IsDigit(source[index]) || source[index] is '.' or ','))
-                {
-                    if (char.IsDigit(source[index])) hasDigit = true;
-                    else if (hasSeparator)
-                        throw new CalculationException(CalculationErrorCode.InvalidToken, "Liczba zawiera więcej niż jeden separator dziesiętny.", index);
-                    else hasSeparator = true;
-                    index++;
-                }
-
-                if (!hasDigit)
-                    throw new CalculationException(CalculationErrorCode.InvalidToken, "Separator dziesiętny musi należeć do liczby.", start);
-
-                if (index < source.Length && source[index] is 'e' or 'E')
-                {
-                    var exponentPosition = index;
-                    index++;
-                    if (index < source.Length && source[index] is '+' or '-') index++;
-
-                    var exponentStart = index;
-                    while (index < source.Length && char.IsDigit(source[index])) index++;
-                    if (index == exponentStart)
-                        throw new CalculationException(
-                            CalculationErrorCode.InvalidToken,
-                            "Wykładnik notacji naukowej musi zawierać cyfry.",
-                            exponentPosition);
-                }
-
-                var text = source[start..index];
-                var normalized = text.Replace(',', '.');
-                if (!double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var number) || !double.IsFinite(number))
-                    throw new CalculationException(CalculationErrorCode.NonFiniteResult, "Liczba wykracza poza obsługiwany zakres.", start);
-                tokens.Add(new Token(TokenType.Number, text, start, number));
-                continue;
-            }
-
-            if (char.IsLetter(character))
-            {
-                var start = index;
-                while (index < source.Length && char.IsLetter(source[index])) index++;
-                var identifier = source[start..index];
-                var normalizedIdentifier = identifier.ToLowerInvariant();
-                if (normalizedIdentifier is "inf" or "infinity")
-                    throw new CalculationException(
-                        CalculationErrorCode.NonFiniteResult,
-                        "Nieskończoność nie jest obsługiwaną liczbą rzeczywistą.",
-                        start);
-
-                var type = normalizedIdentifier switch
-                {
-                    "sqrt" => TokenType.Sqrt,
-                    "root" => TokenType.Root,
-                    "ans" => TokenType.Ans,
-                    _ => throw new CalculationException(CalculationErrorCode.InvalidToken, $"Nieznana nazwa: {identifier}.", start)
-                };
-                tokens.Add(new Token(type, identifier, start));
-                continue;
-            }
-
-            if (character == '∞')
-                throw new CalculationException(
-                    CalculationErrorCode.NonFiniteResult,
-                    "Symbol ∞ nie jest liczbą rzeczywistą. Kalkulator nie oblicza granic.",
-                    index);
-
-            var tokenType = character switch
-            {
-                '+' => TokenType.Plus,
-                '-' => TokenType.Minus,
-                '*' or '×' => TokenType.Multiply,
-                '/' or '÷' or ':' => TokenType.Divide,
-                '^' => TokenType.Power,
-                '(' => TokenType.LeftParenthesis,
-                ')' => TokenType.RightParenthesis,
-                ';' => TokenType.Semicolon,
-                '√' => TokenType.SquareRoot,
-                '∛' => TokenType.CubeRoot,
-                '∜' => TokenType.FourthRoot,
-                _ => throw new CalculationException(CalculationErrorCode.InvalidToken, $"Nieobsługiwany znak: {character}.", index)
-            };
-            tokens.Add(new Token(tokenType, character.ToString(), index));
-            index++;
+            tokens.Add(ReadToken(source, ref index));
         }
 
         tokens.Add(new Token(TokenType.End, string.Empty, source.Length));
         return tokens;
+    }
+
+    private static Token ReadToken(string source, ref int index)
+    {
+        var character = source[index];
+        if (StartsNumericLiteral(character)) return ReadNumberToken(source, ref index);
+        if (char.IsLetter(character)) return ReadIdentifierToken(source, ref index);
+        return ReadSymbolToken(character, index++);
+    }
+
+    private static Token ReadNumberToken(string source, ref int index)
+    {
+        var start = index;
+        ReadMantissa(source, ref index, start);
+        ReadExponent(source, ref index);
+
+        var text = source[start..index];
+        var normalized = text.Replace(',', '.');
+        if (!double.TryParse(normalized, NumberStyles.Float, CultureInfo.InvariantCulture, out var number) || !double.IsFinite(number))
+            throw new CalculationException(CalculationErrorCode.NonFiniteResult, "Liczba wykracza poza obsługiwany zakres.", start);
+        return new Token(TokenType.Number, text, start, number);
+    }
+
+    private static void ReadMantissa(string source, ref int index, int start)
+    {
+        var hasDigit = false;
+        var hasSeparator = false;
+        while (index < source.Length && StartsNumericLiteral(source[index]))
+        {
+            if (char.IsDigit(source[index])) hasDigit = true;
+            else if (hasSeparator)
+                throw new CalculationException(CalculationErrorCode.InvalidToken, "Liczba zawiera więcej niż jeden separator dziesiętny.", index);
+            else hasSeparator = true;
+            index++;
+        }
+
+        if (!hasDigit)
+            throw new CalculationException(CalculationErrorCode.InvalidToken, "Separator dziesiętny musi należeć do liczby.", start);
+    }
+
+    private static void ReadExponent(string source, ref int index)
+    {
+        if (index >= source.Length || source[index] is not ('e' or 'E')) return;
+
+        var exponentPosition = index++;
+        if (index < source.Length && source[index] is '+' or '-') index++;
+        var exponentStart = index;
+        while (index < source.Length && char.IsDigit(source[index])) index++;
+        if (index == exponentStart)
+            throw new CalculationException(
+                CalculationErrorCode.InvalidToken,
+                "Wykładnik notacji naukowej musi zawierać cyfry.",
+                exponentPosition);
+    }
+
+    private static Token ReadIdentifierToken(string source, ref int index)
+    {
+        var start = index;
+        while (index < source.Length && char.IsLetter(source[index])) index++;
+        var identifier = source[start..index];
+        var type = identifier.ToLowerInvariant() switch
+        {
+            "sqrt" => TokenType.Sqrt,
+            "root" => TokenType.Root,
+            "ans" => TokenType.Ans,
+            "inf" or "infinity" => throw new CalculationException(
+                CalculationErrorCode.NonFiniteResult,
+                "Nieskończoność nie jest obsługiwaną liczbą rzeczywistą.",
+                start),
+            _ => throw new CalculationException(CalculationErrorCode.InvalidToken, $"Nieznana nazwa: {identifier}.", start)
+        };
+        return new Token(type, identifier, start);
+    }
+
+    private static Token ReadSymbolToken(char character, int position)
+    {
+        if (character == '∞')
+            throw new CalculationException(
+                CalculationErrorCode.NonFiniteResult,
+                "Symbol ∞ nie jest liczbą rzeczywistą. Kalkulator nie oblicza granic.",
+                position);
+
+        var tokenType = character switch
+        {
+            '+' => TokenType.Plus,
+            '-' => TokenType.Minus,
+            '*' or '×' => TokenType.Multiply,
+            '/' or '÷' or ':' => TokenType.Divide,
+            '^' => TokenType.Power,
+            '(' => TokenType.LeftParenthesis,
+            ')' => TokenType.RightParenthesis,
+            ';' => TokenType.Semicolon,
+            '√' => TokenType.SquareRoot,
+            '∛' => TokenType.CubeRoot,
+            '∜' => TokenType.FourthRoot,
+            _ => throw new CalculationException(CalculationErrorCode.InvalidToken, $"Nieobsługiwany znak: {character}.", position)
+        };
+        return new Token(tokenType, character.ToString(), position);
     }
 
     private enum TokenType
@@ -337,7 +364,7 @@ public sealed class ExpressionCalculator
                 var right = ParseUnary();
                 if (operation?.Type == TokenType.Divide)
                 {
-                    if (right.Value == 0d)
+                    if (IsZero(right.Value))
                         throw new CalculationException(CalculationErrorCode.DivisionByZero, "Nie można dzielić przez zero.", operation.Position);
                     var quotient = value / right.Value;
                     EnsureNoUnderflow(quotient, operation.Position, value);
@@ -375,9 +402,9 @@ public sealed class ExpressionCalculator
 
             var operation = Advance();
             var exponent = ParseNested(operation.Position, ParseUnary);
-            if (value == 0d && exponent.Value == 0d)
+            if (IsZero(value) && IsZero(exponent.Value))
                 throw new CalculationException(CalculationErrorCode.UndefinedPower, "Wyrażenie 0^0 jest nieokreślone.", operation.Position);
-            if (value == 0d && exponent.Value < 0d)
+            if (IsZero(value) && exponent.Value < 0d)
                 throw new CalculationException(CalculationErrorCode.DivisionByZero, "Zero nie może być podniesione do ujemnej potęgi.", operation.Position);
 
             var result = Math.Pow(value, exponent.Value);
@@ -472,7 +499,7 @@ public sealed class ExpressionCalculator
 
         private static void EnsureNoUnderflow(double result, int position, params double[] inputs)
         {
-            if (result != 0d || inputs.Any(input => input == 0d)) return;
+            if (!IsZero(result) || inputs.Any(IsZero)) return;
 
             throw new CalculationException(
                 CalculationErrorCode.NonFiniteResult,

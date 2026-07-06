@@ -3,6 +3,7 @@ using System.Text.RegularExpressions;
 using Abituria.Services;
 using Abituria.Ui;
 using Abituria.Views;
+using Avalonia.Controls;
 
 namespace Abituria.Tests;
 
@@ -63,5 +64,28 @@ public sealed class SonarRegressionTests
 
         Assert.NotEqual(Regex.InfiniteMatchTimeout, regex.MatchTimeout);
         Assert.InRange(regex.MatchTimeout, TimeSpan.FromMilliseconds(1), TimeSpan.FromSeconds(1));
+    }
+
+    [Fact]
+    public void Scanner_requested_static_members_and_concrete_return_types_are_preserved()
+    {
+        const BindingFlags privateInstance = BindingFlags.NonPublic | BindingFlags.Instance;
+        const BindingFlags privateStatic = BindingFlags.NonPublic | BindingFlags.Static;
+        var normalizedInsertion = typeof(CalculatorInputState).GetMethod(nameof(CalculatorInputState.CreateNormalizedInsertion));
+        var evaluateWithRepeat = typeof(ExpressionCalculator).GetMethod("EvaluateWithRepeat", privateStatic);
+        var tokenize = typeof(ExpressionCalculator).GetMethod("Tokenize", privateStatic);
+
+        Assert.NotNull(normalizedInsertion);
+        Assert.True(normalizedInsertion.IsStatic);
+        Assert.NotNull(evaluateWithRepeat);
+        Assert.True(evaluateWithRepeat.IsStatic);
+        Assert.NotNull(tokenize);
+        Assert.Equal(typeof(List<>), tokenize.ReturnType.GetGenericTypeDefinition());
+        Assert.All(typeof(ExerciseView).GetConstructors(), constructor =>
+            Assert.InRange(constructor.GetParameters().Length, 0, 7));
+        Assert.Equal(typeof(Border), typeof(GeneralCalculatorView).GetMethod("BuildKeypad", privateInstance)?.ReturnType);
+        Assert.Equal(typeof(Border), typeof(GeneralCalculatorView).GetMethod("BuildHistoryPanel", privateInstance)?.ReturnType);
+        Assert.Equal(typeof(Border), typeof(MainWindow).GetMethod("BuildTopBar", privateInstance)?.ReturnType);
+        Assert.Equal(typeof(Grid), typeof(LoginView).GetMethod("Build", privateInstance)?.ReturnType);
     }
 }

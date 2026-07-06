@@ -7,6 +7,7 @@ namespace Abituria.Tests;
 public sealed partial class ContentSeparationTests
 {
     private const int MaximumInlineLiteralLength = 120;
+    private static readonly JsonSerializerOptions JsonOptions = new() { PropertyNameCaseInsensitive = true };
 
     [Fact]
     public void Ui_copy_file_contains_every_externalized_long_description()
@@ -15,7 +16,7 @@ public sealed partial class ContentSeparationTests
         var path = Path.Combine(root, "Content", "ui-copy.json");
         var catalog = JsonSerializer.Deserialize<UiCopyCatalog>(
             File.ReadAllText(path),
-            new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            JsonOptions);
 
         Assert.NotNull(catalog);
         Assert.Equal(1, catalog.SchemaVersion);

@@ -4,6 +4,8 @@ namespace Abituria.Tests;
 
 public sealed class CalculatorSessionTests
 {
+    private static readonly string[] InitialHistoryExpressions = ["Ans*2", "2+3"];
+
     private readonly CalculatorSession _session = new(new ExpressionCalculator());
 
     [Fact]
@@ -15,7 +17,7 @@ public sealed class CalculatorSessionTests
         Assert.True(result.Success);
         Assert.Equal(10d, result.Value);
         Assert.Equal(10d, _session.LastResult);
-        Assert.Equal(new[] { "Ans*2", "2+3" }, _session.History.Select(item => item.Expression));
+        Assert.Equal(InitialHistoryExpressions, _session.History.Select(item => item.Expression));
     }
 
     [Fact]

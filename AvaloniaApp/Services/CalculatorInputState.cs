@@ -147,7 +147,7 @@ public sealed class CalculatorInputState
         return new CalculatorTextEdit(text, caret, 0, true);
     }
 
-    public CalculatorTextEdit CreateNormalizedInsertion(
+    public static CalculatorTextEdit CreateNormalizedInsertion(
         string currentText,
         int selectionStart,
         int selectionEnd,

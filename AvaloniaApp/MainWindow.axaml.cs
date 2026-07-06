@@ -67,7 +67,7 @@ public partial class MainWindow : Window
         _shellHost.Child = root;
     }
 
-    private Control BuildTopBar()
+    private Border BuildTopBar()
     {
         var header = new Border
         {
@@ -139,8 +139,7 @@ public partial class MainWindow : Window
         AppPage.Exams => new ExamOverviewView(_content.Exam, _content.Placeholders.Items, _viewModel.OpenExam, _viewModel.OpenTopic, _viewModel.OpenPlaceholder),
         AppPage.ExerciseList => new ExerciseListView(_content.Exam, _viewModel.SelectedTopicId, _viewModel.ActiveProfile!, _accounts, _viewModel.OpenExercise, () => _viewModel.Navigate(AppPage.Exams)),
         AppPage.Exercise when _viewModel.SelectedExercise is not null => new ExerciseView(
-            _viewModel.SelectedExercise, CurrentExerciseContext(), _content.Exam.Source, _content.UiCopy, _viewModel.ActiveProfile!, _accounts,
-            () => _viewModel.Navigate(AppPage.ExerciseList), _viewModel.OpenExercise),
+            _viewModel.SelectedExercise, CreateExerciseViewContext()),
         AppPage.Chapters => new ChapterListView(_content.Chapters, OpenChapter),
         AppPage.ChapterDetail when _viewModel.SelectedChapter is { IsAvailable: true } => new ArticleView(
             _viewModel.SelectedChapter.Title, "Materiał działowy", _viewModel.SelectedChapter.Blocks,
@@ -164,9 +163,18 @@ public partial class MainWindow : Window
 
     private void OpenChapter(ChapterArticle chapter) => _viewModel.OpenChapter(chapter);
 
-    private IReadOnlyList<ExerciseDefinition> CurrentExerciseContext() => _viewModel.SelectedTopicId is null
+    private List<ExerciseDefinition> CurrentExerciseContext() => _viewModel.SelectedTopicId is null
         ? _content.Exam.Exercises.OrderBy(item => item.Number).ToList()
         : _content.Exam.Exercises.Where(item => item.TopicId == _viewModel.SelectedTopicId).OrderBy(item => item.Number).ToList();
+
+    private ExerciseViewContext CreateExerciseViewContext() => new(
+        CurrentExerciseContext(),
+        _content.Exam.Source,
+        _content.UiCopy,
+        _viewModel.ActiveProfile!,
+        _accounts,
+        () => _viewModel.Navigate(AppPage.ExerciseList),
+        _viewModel.OpenExercise);
 
     private void OpenPlannedCalculator(string id)
     {

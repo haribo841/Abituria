@@ -29,7 +29,7 @@ public sealed class LoginView : UserControl
         AttachedToVisualTree += async (_, _) => await ReloadProfilesAsync();
     }
 
-    private Control Build(UiCopyCatalog copy)
+    private Grid Build(UiCopyCatalog copy)
     {
         var root = new Grid { ColumnDefinitions = new ColumnDefinitions("1.05*,0.95*"), ColumnSpacing = 24, Margin = new Thickness(30) };
         var intro = new StackPanel { Spacing = 18 };

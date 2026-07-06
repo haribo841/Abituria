@@ -83,13 +83,12 @@ public sealed class Issue9LeadingZeroRegressionTests
     [Fact]
     public void Screen_keypad_cannot_build_the_issue_9_leading_zero_sequence()
     {
-        var state = new CalculatorInputState();
         var text = string.Empty;
         var normalizedCount = 0;
 
         foreach (var character in "0:00000,000001")
         {
-            var edit = state.CreateNormalizedInsertion(text, text.Length, text.Length, character.ToString());
+            var edit = CalculatorInputState.CreateNormalizedInsertion(text, text.Length, text.Length, character.ToString());
             text = edit.Text;
             if (edit.WasNormalized) normalizedCount++;
             Assert.DoesNotContain(":00", text, StringComparison.Ordinal);
@@ -110,9 +109,7 @@ public sealed class Issue9LeadingZeroRegressionTests
         string pasted,
         string expected)
     {
-        var state = new CalculatorInputState();
-
-        var edit = state.CreateNormalizedInsertion(string.Empty, 0, 0, pasted);
+        var edit = CalculatorInputState.CreateNormalizedInsertion(string.Empty, 0, 0, pasted);
 
         Assert.Equal(expected, edit.Text);
         Assert.True(edit.WasNormalized);

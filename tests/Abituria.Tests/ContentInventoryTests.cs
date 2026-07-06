@@ -5,10 +5,16 @@ using CSharpMath.Avalonia;
 
 namespace Abituria.Tests;
 
-public sealed class ContentInventoryTests
+public sealed partial class ContentInventoryTests
 {
     private static readonly JsonSerializerOptions JsonOptions = new() { PropertyNameCaseInsensitive = true };
     private static readonly string RepositoryRoot = FindRepositoryRoot();
+    private static readonly string[] ExpectedPlaceholderIds =
+        ["exercise-set-e", "graph-generator", "matura-2019", "matura-2020", "matura-2021", "trigonometric-calculator"];
+    private static readonly string[] ExpectedUnavailableChapterTitles =
+        ["Ciągi liczbowe", "Funkcja kwadratowa", "Liczby pierwsze", "Logarytmy", "Rachunek zbiorów i logika", "Równania i nierówności"];
+    private static readonly string[] ExpectedTask7Options =
+        ["\\(g(x)=-2x+2\\)", "\\(g(x)=-2x\\)", "\\(g(x)=-2x+6\\)", "\\(g(x)=-2x+8\\)"];
 
     [Fact]
     public void Migrated_content_has_expected_inventory()
@@ -31,10 +37,10 @@ public sealed class ContentInventoryTests
         Assert.Equal(8, availableChapter.Blocks.Count(block => block.Type == "image"));
         Assert.Equal(6, placeholders.Items.Count);
         Assert.Equal(
-            new[] { "exercise-set-e", "graph-generator", "matura-2019", "matura-2020", "matura-2021", "trigonometric-calculator" },
+            ExpectedPlaceholderIds,
             placeholders.Items.Select(item => item.Id).Order());
         Assert.Equal(
-            new[] { "Ciągi liczbowe", "Funkcja kwadratowa", "Liczby pierwsze", "Logarytmy", "Rachunek zbiorów i logika", "Równania i nierówności" },
+            ExpectedUnavailableChapterTitles,
             chapters.Chapters.Where(item => !item.IsAvailable).Select(item => item.Title).Order());
         Assert.Equal(17, exam.Topics.Count);
         Assert.NotEmpty(exam.Introduction);
@@ -88,7 +94,7 @@ public sealed class ContentInventoryTests
         });
 
         var task7 = exam.Exercises.Single(item => item.Number == 7);
-        Assert.Equal(new[] { "\\(g(x)=-2x+2\\)", "\\(g(x)=-2x\\)", "\\(g(x)=-2x+6\\)", "\\(g(x)=-2x+8\\)" }, task7.Options);
+        Assert.Equal(ExpectedTask7Options, task7.Options);
         var task17 = exam.Exercises.Single(item => item.Number == 17);
         Assert.Contains("BSC", task17.Prompt);
         Assert.Equal("\\(40^{\\circ}\\)", task17.Options[3]);
@@ -184,13 +190,16 @@ public sealed class ContentInventoryTests
     [Fact]
     public void Every_math_expression_is_supported_by_renderer()
     {
-        foreach (var expression in ReadRichTexts().SelectMany(text => Regex.Matches(text, @"\\\((.*?)\\\)", RegexOptions.Singleline)
+        foreach (var expression in ReadRichTexts().SelectMany(text => InlineMathRegex().Matches(text)
                      .Select(match => match.Groups[1].Value)))
         {
             var painter = new MathPainter { LaTeX = expression };
             Assert.True(string.IsNullOrWhiteSpace(painter.ErrorMessage), $"{expression}: {painter.ErrorMessage}");
         }
     }
+
+    [GeneratedRegex(@"\\\((.*?)\\\)", RegexOptions.Singleline)]
+    private static partial Regex InlineMathRegex();
 
     private static IEnumerable<string> ReadRichTexts()
     {

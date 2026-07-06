@@ -60,7 +60,7 @@ public sealed class GeneralCalculatorView : UserControl
         Content = UiFactory.PageScroll(root);
     }
 
-    private Control BuildKeypad()
+    private Border BuildKeypad()
     {
         var grid = new Grid
         {
@@ -134,7 +134,7 @@ public sealed class GeneralCalculatorView : UserControl
         return UiFactory.Card(grid, new Thickness(14));
     }
 
-    private Control BuildHistoryPanel()
+    private Border BuildHistoryPanel()
     {
         var panel = new StackPanel { Spacing = 12 };
         var header = new Grid { ColumnDefinitions = new ColumnDefinitions("*,Auto"), ColumnSpacing = 10 };
@@ -444,7 +444,7 @@ public sealed class GeneralCalculatorView : UserControl
 
     private void ApplyNormalizedInsertion(string text)
     {
-        var edit = _inputState.CreateNormalizedInsertion(
+        var edit = CalculatorInputState.CreateNormalizedInsertion(
             _expression.Text ?? string.Empty,
             _expression.SelectionStart,
             _expression.SelectionEnd,

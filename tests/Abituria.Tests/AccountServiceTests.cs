@@ -9,6 +9,7 @@ namespace Abituria.Tests;
 public sealed class AccountServiceTests : IAsyncLifetime
 {
     private const string ValidPassword = "bardzo-dlugie-haslo-1";
+    private static readonly string[] CompletedExerciseIds = ["mp21-z1"];
 
     private readonly string _directory = Path.Combine(Path.GetTempPath(), "Abituria.Tests", Guid.NewGuid().ToString("N"));
     private AccountService _accounts = null!;
@@ -69,7 +70,7 @@ public sealed class AccountServiceTests : IAsyncLifetime
         var profile = (await _accounts.RegisterAsync("Postęp", password, password)).Profile!;
         await _accounts.MarkExerciseCompletedAsync(profile.Id, "mp21-z1");
         await _accounts.MarkExerciseCompletedAsync(profile.Id, "mp21-z1");
-        Assert.Equal(new[] { "mp21-z1" }, await _accounts.GetCompletedExerciseIdsAsync(profile.Id));
+        Assert.Equal(CompletedExerciseIds, await _accounts.GetCompletedExerciseIdsAsync(profile.Id));
     }
 
     [Theory]

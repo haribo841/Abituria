@@ -130,6 +130,15 @@ public sealed class ExerciseListView : UserControl
     }
 }
 
+public sealed record ExerciseViewContext(
+    IReadOnlyList<ExerciseDefinition> Exercises,
+    SourceDocument Source,
+    UiCopyCatalog Copy,
+    LocalProfile Profile,
+    AccountService Accounts,
+    Action Back,
+    Action<ExerciseDefinition> OpenExercise);
+
 public sealed class ExerciseView : UserControl
 {
     private readonly TextBlock _status = new() { TextWrapping = TextWrapping.Wrap };
@@ -137,23 +146,54 @@ public sealed class ExerciseView : UserControl
     private int _hintIndex;
     private int? _selectedOption;
 
-    public ExerciseView(ExerciseDefinition exercise, IReadOnlyList<ExerciseDefinition> exerciseContext, SourceDocument source, UiCopyCatalog copy, LocalProfile profile, AccountService accounts, Action back, Action<ExerciseDefinition> openExercise)
+    public ExerciseView(ExerciseDefinition exercise, ExerciseViewContext context)
     {
         var root = new StackPanel { Spacing = 16 };
+        root.Children.Add(BuildNavigation(exercise, context));
+        AddPrompt(root, exercise);
+        AddScratchpad(root);
+        AddAnswerControls(root, exercise, context);
+        AddHintControls(root, exercise);
+        root.Children.Add(UiFactory.InfoBand(context.Copy.FormatRequired(
+            "exam.source",
+            exercise.VerificationSource,
+            exercise.SourcePage,
+            FormatVerifiedOn(context.Source.VerifiedOn))));
+        root.Children.Add(_status);
+        Content = UiFactory.PageScroll(root);
+    }
+
+    private static StackPanel BuildNavigation(ExerciseDefinition exercise, ExerciseViewContext context)
+    {
         var topButtons = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8 };
         var backButton = new Button { Content = "← Lista zadań", Classes = { "ghost" } };
-        backButton.Click += (_, _) => back();
+        backButton.Click += (_, _) => context.Back();
         topButtons.Children.Add(backButton);
-        var currentIndex = exerciseContext.ToList().FindIndex(item => item.Id == exercise.Id);
-        var previous = currentIndex > 0 ? exerciseContext[currentIndex - 1] : null;
-        var next = currentIndex >= 0 && currentIndex < exerciseContext.Count - 1 ? exerciseContext[currentIndex + 1] : null;
-        if (previous is not null) topButtons.Children.Add(NavigationButton("←", previous));
-        if (next is not null) topButtons.Children.Add(NavigationButton("→", next));
-        root.Children.Add(topButtons);
+        var currentIndex = context.Exercises.ToList().FindIndex(item => item.Id == exercise.Id);
+        var previous = currentIndex > 0 ? context.Exercises[currentIndex - 1] : null;
+        var next = currentIndex >= 0 && currentIndex < context.Exercises.Count - 1 ? context.Exercises[currentIndex + 1] : null;
+        if (previous is not null) topButtons.Children.Add(NavigationButton("←", previous, context.OpenExercise));
+        if (next is not null) topButtons.Children.Add(NavigationButton("→", next, context.OpenExercise));
+        return topButtons;
+    }
+
+    private static Button NavigationButton(string label, ExerciseDefinition target, Action<ExerciseDefinition> openExercise)
+    {
+        var button = new Button { Content = label, Classes = { "ghost" } };
+        ToolTip.SetTip(button, target.Title);
+        button.Click += (_, _) => openExercise(target);
+        return button;
+    }
+
+    private static void AddPrompt(StackPanel root, ExerciseDefinition exercise)
+    {
         root.Children.Add(UiFactory.PageTitle(exercise.Title, exercise.IsMultipleChoice ? "Wybierz jedną odpowiedź." : "Rozwiązuj samodzielnie i odsłaniaj kolejne wskazówki."));
         root.Children.Add(UiFactory.Card(new RichContentView([new ContentBlock { Type = "richText", Text = exercise.Prompt }])));
         foreach (var asset in exercise.Assets) root.Children.Add(UiFactory.Card(UiFactory.AssetImage(asset, 820, 470)));
+    }
 
+    private static void AddScratchpad(StackPanel root)
+    {
         var scratchpad = new TextBox
         {
             AcceptsReturn = true,
@@ -165,47 +205,60 @@ public sealed class ExerciseView : UserControl
         scratchPanel.Children.Add(new TextBlock { Text = "Brudnopis", FontSize = 18, FontWeight = FontWeight.SemiBold });
         scratchPanel.Children.Add(scratchpad);
         root.Children.Add(UiFactory.Card(scratchPanel));
+    }
 
+    private void AddAnswerControls(StackPanel root, ExerciseDefinition exercise, ExerciseViewContext context)
+    {
         if (exercise.IsMultipleChoice)
-        {
-            var options = new StackPanel { Spacing = 8 };
-            for (var index = 0; index < exercise.Options.Count; index++)
-            {
-                var optionNumber = index + 1;
-                var radio = new RadioButton
-                {
-                    GroupName = "exercise-answer",
-                    Content = RichContentView.CreateText($"{(char)('A' + index)}. {exercise.Options[index]}")
-                };
-                radio.IsCheckedChanged += (_, _) => { if (radio.IsChecked == true) _selectedOption = optionNumber; };
-                options.Children.Add(radio);
-            }
-            root.Children.Add(UiFactory.Card(options));
-            var check = new Button { Content = "Sprawdź odpowiedź", Classes = { "primary" }, HorizontalAlignment = HorizontalAlignment.Left };
-            check.Click += async (_, _) =>
-            {
-                if (_selectedOption is null) { ShowStatus("Najpierw wybierz odpowiedź.", false); return; }
-                if (_selectedOption == exercise.CorrectOption)
-                {
-                    await accounts.MarkExerciseCompletedAsync(profile.Id, exercise.Id);
-                    ShowStatus("Poprawna odpowiedź. Zadanie zapisano jako ukończone.", true);
-                }
-                else ShowStatus("To nie jest poprawna odpowiedź. Skorzystaj z podpowiedzi i spróbuj ponownie.", false);
-            };
-            root.Children.Add(check);
-        }
+            AddMultipleChoiceControls(root, exercise, context);
         else
-        {
-            var reveal = new Button { Content = "Pokaż odpowiedź", Classes = { "primary" }, HorizontalAlignment = HorizontalAlignment.Left };
-            reveal.Click += async (_, _) =>
-            {
-                _hintHost.Child = RichContentView.CreateText(exercise.RevealedAnswer ?? "Brak zapisanej odpowiedzi.");
-                await accounts.MarkExerciseCompletedAsync(profile.Id, exercise.Id);
-                ShowStatus("Odpowiedź została ujawniona. Zadanie zapisano jako ukończone.", true);
-            };
-            root.Children.Add(reveal);
-        }
+            AddRevealControl(root, exercise, context);
+    }
 
+    private void AddMultipleChoiceControls(StackPanel root, ExerciseDefinition exercise, ExerciseViewContext context)
+    {
+        var options = new StackPanel { Spacing = 8 };
+        for (var index = 0; index < exercise.Options.Count; index++)
+        {
+            var optionNumber = index + 1;
+            var radio = new RadioButton
+            {
+                GroupName = "exercise-answer",
+                Content = RichContentView.CreateText($"{(char)('A' + index)}. {exercise.Options[index]}")
+            };
+            radio.IsCheckedChanged += (_, _) => { if (radio.IsChecked == true) _selectedOption = optionNumber; };
+            options.Children.Add(radio);
+        }
+        root.Children.Add(UiFactory.Card(options));
+
+        var check = new Button { Content = "Sprawdź odpowiedź", Classes = { "primary" }, HorizontalAlignment = HorizontalAlignment.Left };
+        check.Click += async (_, _) =>
+        {
+            if (_selectedOption is null) { ShowStatus("Najpierw wybierz odpowiedź.", false); return; }
+            if (_selectedOption == exercise.CorrectOption)
+            {
+                await context.Accounts.MarkExerciseCompletedAsync(context.Profile.Id, exercise.Id);
+                ShowStatus("Poprawna odpowiedź. Zadanie zapisano jako ukończone.", true);
+            }
+            else ShowStatus("To nie jest poprawna odpowiedź. Skorzystaj z podpowiedzi i spróbuj ponownie.", false);
+        };
+        root.Children.Add(check);
+    }
+
+    private void AddRevealControl(StackPanel root, ExerciseDefinition exercise, ExerciseViewContext context)
+    {
+        var reveal = new Button { Content = "Pokaż odpowiedź", Classes = { "primary" }, HorizontalAlignment = HorizontalAlignment.Left };
+        reveal.Click += async (_, _) =>
+        {
+            _hintHost.Child = RichContentView.CreateText(exercise.RevealedAnswer ?? "Brak zapisanej odpowiedzi.");
+            await context.Accounts.MarkExerciseCompletedAsync(context.Profile.Id, exercise.Id);
+            ShowStatus("Odpowiedź została ujawniona. Zadanie zapisano jako ukończone.", true);
+        };
+        root.Children.Add(reveal);
+    }
+
+    private void AddHintControls(StackPanel root, ExerciseDefinition exercise)
+    {
         var hint = new Button { Content = "Następna podpowiedź", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Left };
         hint.Click += (_, _) =>
         {
@@ -214,21 +267,6 @@ public sealed class ExerciseView : UserControl
         };
         root.Children.Add(hint);
         root.Children.Add(_hintHost);
-        root.Children.Add(UiFactory.InfoBand(copy.FormatRequired(
-            "exam.source",
-            exercise.VerificationSource,
-            exercise.SourcePage,
-            FormatVerifiedOn(source.VerifiedOn))));
-        root.Children.Add(_status);
-        Content = UiFactory.PageScroll(root);
-
-        Button NavigationButton(string label, ExerciseDefinition target)
-        {
-            var button = new Button { Content = label, Classes = { "ghost" } };
-            ToolTip.SetTip(button, target.Title);
-            button.Click += (_, _) => openExercise(target);
-            return button;
-        }
     }
 
     private void ShowStatus(string message, bool success)

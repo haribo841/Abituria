@@ -224,8 +224,8 @@ function Get-Hints([string]$Code) {
     $arrayMatch = [regex]::Match($Code, 'string\[\]\s+hintsArray\s*=\s*\{(?<body>.*?)\};', [System.Text.RegularExpressions.RegexOptions]::Singleline)
     if (-not $arrayMatch.Success) { return @() }
     $hints = [System.Collections.Generic.List[string]]::new()
-    $matches = [regex]::Matches($arrayMatch.Groups['body'].Value, '@"(?<value>(?:""|[^"])*)"', [System.Text.RegularExpressions.RegexOptions]::Singleline)
-    foreach ($match in $matches) {
+    $hintMatches = [regex]::Matches($arrayMatch.Groups['body'].Value, '@"(?<value>(?:""|[^"])*)"', [System.Text.RegularExpressions.RegexOptions]::Singleline)
+    foreach ($match in $hintMatches) {
         $value = $match.Groups['value'].Value.Replace('""', '"')
         $hints.Add("\($(Repair-LegacyLatex $value)\)")
     }
@@ -246,6 +246,42 @@ function Get-RevealedAnswer([string]$Code) {
     return $null
 }
 
+function Add-ExerciseOption([object]$OptionTokens, [object]$Options) {
+    $optionText = Convert-TokensToText $OptionTokens.ToArray()
+    $Options.Add(([regex]::Replace($optionText, '^\s*[A-D]\.\s*', '')).Trim())
+    $OptionTokens.Clear()
+}
+
+function Get-ExerciseTokenParts([object[]]$Tokens) {
+    $promptTokens = [System.Collections.Generic.List[object]]::new()
+    $optionTokens = [System.Collections.Generic.List[object]]::new()
+    $options = [System.Collections.Generic.List[string]]::new()
+    $assets = [System.Collections.Generic.List[string]]::new()
+    $insideOption = $false
+
+    foreach ($token in $Tokens) {
+        switch ($token.Kind) {
+            'Image' {
+                if (-not $assets.Contains($token.Value)) { $assets.Add($token.Value) }
+            }
+            'Option' {
+                if ($insideOption) { Add-ExerciseOption $optionTokens $options }
+                $insideOption = $true
+            }
+            default {
+                if ($insideOption) { $optionTokens.Add($token) } else { $promptTokens.Add($token) }
+            }
+        }
+    }
+    if ($insideOption) { Add-ExerciseOption $optionTokens $options }
+
+    return [pscustomobject]@{
+        PromptTokens = $promptTokens.ToArray()
+        Options = $options.ToArray()
+        Assets = $assets.ToArray()
+    }
+}
+
 function Get-Exercises {
     $exercises = [System.Collections.Generic.List[object]]::new()
     for ($number = 1; $number -le 35; $number++) {
@@ -257,31 +293,7 @@ function Get-Exercises {
 
         $tokens = [System.Collections.Generic.List[object]]::new()
         Add-XamlTokens $root $tokens
-        $promptTokens = [System.Collections.Generic.List[object]]::new()
-        $optionTokens = [System.Collections.Generic.List[object]]::new()
-        $options = [System.Collections.Generic.List[string]]::new()
-        $assets = [System.Collections.Generic.List[string]]::new()
-        $insideOption = $false
-        foreach ($token in $tokens) {
-            if ($token.Kind -eq 'Image') {
-                if (-not $assets.Contains($token.Value)) { $assets.Add($token.Value) }
-                continue
-            }
-            if ($token.Kind -eq 'Option') {
-                if ($insideOption) {
-                    $optionText = Convert-TokensToText $optionTokens.ToArray()
-                    $options.Add(([regex]::Replace($optionText, '^\s*[A-D]\.\s*', '')).Trim())
-                    $optionTokens.Clear()
-                }
-                $insideOption = $true
-                continue
-            }
-            if ($insideOption) { $optionTokens.Add($token) } else { $promptTokens.Add($token) }
-        }
-        if ($insideOption) {
-            $optionText = Convert-TokensToText $optionTokens.ToArray()
-            $options.Add(([regex]::Replace($optionText, '^\s*[A-D]\.\s*', '')).Trim())
-        }
+        $parts = Get-ExerciseTokenParts $tokens.ToArray()
 
         $answer = if ($number -le 28) { $answerKey[$number - 1] } else { $null }
         $exercise = [ordered]@{
@@ -289,9 +301,9 @@ function Get-Exercises {
             title = "Zadanie $number"; topicId = $topicByNumber[$number]
             sourcePage = $sourcePageByNumber[$number]; verificationSource = $verificationSource
             mode = $(if ($number -le 28) { 'multipleChoice' } else { 'revealOnly' })
-            prompt = Convert-TokensToText $promptTokens.ToArray(); options = $options.ToArray()
+            prompt = Convert-TokensToText $parts.PromptTokens; options = $parts.Options
             correctOption = $answer; hints = @(Get-Hints $code)
-            revealedAnswer = Get-RevealedAnswer $code; assets = $assets.ToArray()
+            revealedAnswer = Get-RevealedAnswer $code; assets = $parts.Assets
         }
 
         # The legacy XAML contains copied answers and hints; keep verified CKE corrections deterministic.
