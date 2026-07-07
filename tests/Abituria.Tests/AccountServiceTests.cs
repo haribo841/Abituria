@@ -48,6 +48,23 @@ public sealed class AccountServiceTests : IAsyncLifetime
     }
 
     [Fact]
+    public async Task Change_password_rejects_invalid_current_password()
+    {
+        var registration = await _accounts.RegisterAsync("ZmianaHasla", ValidPassword, ValidPassword);
+
+        var result = await _accounts.ChangePasswordAsync(
+            registration.Profile!.Id,
+            "niepoprawne-biezace-haslo",
+            "nowe-bardzo-dlugie-haslo",
+            "nowe-bardzo-dlugie-haslo");
+
+        Assert.False(result.Success);
+        Assert.Equal("Bieżące hasło jest nieprawidłowe.", result.Message);
+        Assert.Null(result.RecoveryCode);
+        Assert.True((await _accounts.AuthenticateAsync(registration.Profile.Id, ValidPassword)).Success);
+    }
+
+    [Fact]
     public async Task Passwords_use_unique_salts_and_are_not_stored_as_plain_text()
     {
         const string password = "jednakowe-bardzo-dlugie-haslo";
