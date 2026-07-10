@@ -73,6 +73,8 @@ Opcjonalna analiza SonarQube Cloud jest przygotowana w osobnym workflow. Aktywac
 
 ## Architektura
 
+Formalny opis aktualnej architektury i diagram komponentów są w [dokumentacji architektury](docs/ARCHITECTURE.md).
+
 - `AvaloniaApp/Models` - kontrakty treści i profili,
 - `AvaloniaApp/Data` - SQLite i migracje EF Core,
 - `AvaloniaApp/Services` - konta, bezpieczeństwo, treści i obliczenia,

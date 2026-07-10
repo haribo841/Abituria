@@ -93,6 +93,32 @@ public sealed class NavigationArchitectureTests
         }
     }
 
+    [Fact]
+    public void Production_code_does_not_open_unbounded_non_modal_windows()
+    {
+        var root = FindRepositoryRoot();
+        var files = Directory.EnumerateFiles(Path.Combine(root, "AvaloniaApp"), "*.cs", SearchOption.AllDirectories)
+            .ToArray();
+        var modalDialogFiles = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+        {
+            Path.Combine(root, "AvaloniaApp", "Views", "LoginView.cs"),
+            Path.Combine(root, "AvaloniaApp", "Views", "ProfileView.cs")
+        };
+
+        foreach (var file in files)
+        {
+            var source = File.ReadAllText(file);
+            Assert.DoesNotContain(".Show(", source, StringComparison.Ordinal);
+            if (modalDialogFiles.Contains(file))
+            {
+                Assert.Contains("ShowDialog(owner)", source, StringComparison.Ordinal);
+                continue;
+            }
+
+            Assert.DoesNotContain("new Window", source, StringComparison.Ordinal);
+        }
+    }
+
     private static string FindRepositoryRoot()
     {
         var directory = new DirectoryInfo(AppContext.BaseDirectory);
