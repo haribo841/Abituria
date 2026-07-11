@@ -105,9 +105,9 @@
                   },
                   {
                       "id":  "chapters-expansion",
-                      "title":  "Rozbudowa działów matematyki",
+                      "title":  "Pozostałe działy matematyki",
                       "status":  "planned",
-                      "summary":  "Rachunek zbiorów i logika, równania i nierówności, ciągi, liczby pierwsze, funkcja kwadratowa i logarytmy.",
+                      "summary":  "Uzupełnienie materiałów o ciągach liczbowych i liczbach pierwszych.",
                       "context":  "chapters",
                       "sourceRefs":  [
                                          "DzialyPage.xaml",
@@ -117,21 +117,67 @@
                   {
                       "id":  "natural-numbers",
                       "title":  "Liczby naturalne i indukcja",
-                      "status":  "planned",
-                      "summary":  "Aksjomatyka, przykłady indukcji oraz działania na liczbach naturalnych.",
+                      "status":  "migrated",
+                      "summary":  "Aksjomatyka, dowód indukcyjny, zadania ze wskazówkami oraz działania na liczbach naturalnych.",
                       "context":  "chapters",
                       "sourceRefs":  [
-                                         "Uzupełnić Treść działów matematyki.txt"
+                                         "Uzupełnić Treść działów matematyki.txt",
+                                         "Projekt-Inzynierski issue #35"
                                      ]
                   },
                   {
                       "id":  "greek-alphabet",
                       "title":  "Alfabet grecki",
-                      "status":  "planned",
-                      "summary":  "Tabela symboli i ich zastosowań w zapisie matematycznym.",
+                      "status":  "migrated",
+                      "summary":  "Tabela 24 liter, polskie nazwy oraz przykłady zastosowań symboli matematycznych.",
                       "context":  "chapters",
                       "sourceRefs":  [
-                                         "Uzupełnić Treść działów matematyki.txt"
+                                         "Uzupełnić Treść działów matematyki.txt",
+                                         "Projekt-Inzynierski issue #35"
+                                     ]
+                  },
+                  {
+                      "id":  "sets-and-logic-content",
+                      "title":  "Liczby rzeczywiste, zbiory i logika",
+                      "status":  "migrated",
+                      "summary":  "Zbiory liczbowe, działania na zbiorach, przedziały i podstawowe spójniki logiczne.",
+                      "context":  "chapters",
+                      "sourceRefs":  [
+                                         "Uzupełnić Treść działów matematyki.txt",
+                                         "Projekt-Inzynierski issue #35"
+                                     ]
+                  },
+                  {
+                      "id":  "algebra-equations-content",
+                      "title":  "Algebra, równania i nierówności",
+                      "status":  "migrated",
+                      "summary":  "Ułamki, przybliżenia, wzory, potęgi, pierwiastki, procenty oraz zadania algebraiczne.",
+                      "context":  "chapters",
+                      "sourceRefs":  [
+                                         "Uzupełnić Treść działów matematyki.txt",
+                                         "Projekt-Inzynierski issue #35"
+                                     ]
+                  },
+                  {
+                      "id":  "quadratic-function-content",
+                      "title":  "Funkcja i równanie kwadratowe",
+                      "status":  "migrated",
+                      "summary":  "Wyróżnik, wszystkie przypadki liczby rozwiązań rzeczywistych, postacie funkcji i zadania.",
+                      "context":  "chapters",
+                      "sourceRefs":  [
+                                         "Uzupełnić Treść działów matematyki.txt",
+                                         "Projekt-Inzynierski issue #35"
+                                     ]
+                  },
+                  {
+                      "id":  "logarithms-content",
+                      "title":  "Logarytmy",
+                      "status":  "migrated",
+                      "summary":  "Definicja, warunki istnienia, prawa działań, przykłady i zadania maturalne.",
+                      "context":  "chapters",
+                      "sourceRefs":  [
+                                         "Uzupełnić Treść działów matematyki.txt",
+                                         "Projekt-Inzynierski issue #35"
                                      ]
                   },
                   {

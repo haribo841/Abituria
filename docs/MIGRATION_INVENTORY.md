@@ -30,7 +30,8 @@
 | Zadania 29–35 | `ShowAnsBtn`/`ConfirmBtn` | Tryb `revealOnly`; zapis po ujawnieniu odpowiedzi |
 | Matury 2019/2020/2021 | pojedyncze ekrany informacyjne | Zachowane jako placeholdery z kontekstem historycznym i linkiem do roadmapy |
 | Planowane kalkulatory | ekrany z `TODO` | Generator wykresów i kalkulator funkcji trygonometrycznych zachowane jako placeholdery |
-| Planowane działy | dwie linie starych ekranów | Sześć nazwanych placeholderów: zbiory i logika, równania i nierówności, ciągi, liczby pierwsze, funkcja kwadratowa i logarytmy |
+| Działy issue #35 | `Uzupełnić Treść działów matematyki.txt` i niezależny seed `tools/seeds/issue-35-content.json` | Aksjomatyka i indukcja, alfabet grecki, liczby rzeczywiste i zbiory, algebra, równania i nierówności, wszystkie przypadki delty, ułamki, przybliżenia, potęgi i pierwiastki, przedziały, procenty, logarytmy oraz zadania |
+| Pozostałe planowane działy | puste ekrany starych wersji | Dwa nazwane placeholdery: ciągi liczbowe i liczby pierwsze |
 | E1–E35 | puste szablony widoków | Jedna jawna pozycja „Zestaw E1–E35” zamiast 35 kopii pustego ekranu |
 | `Window1` / WPF-Math | niepodłączone okno demonstracyjne z eksportem SVG/PNG | Jawna pozycja `superseded` w roadmapie; renderowanie wzorów zastąpił CSharpMath, a nieosiągalnego eksportu nie przeniesiono |
 | Dokumenty projektowe | pięć plików `.txt` z katalogu starych wersji | Dokładne kopie w `docs/legacy/originals`, streszczenia w `docs/legacy` i pozycje roadmapy |
@@ -56,7 +57,7 @@ Po porównaniu z arkuszem i zasadami oceniania CKE naprawiono również odziedzi
 
 Testy automatyczne wymagają:
 
-- dokładnie 18 tablic, 7 pozycji działowych, 17 tematów i 7 grup placeholderów,
+- dokładnie 18 tablic, 9 pozycji działowych, w tym 7 dostępnych i 2 placeholdery, 17 tematów oraz 6 grup placeholderów poza działami,
 - dokładnie 35 kolejnych zadań: 28 zamkniętych i 7 otwartych,
 - czterech niepustych opcji i klucza 1–4 dla każdego zadania zamkniętego,
 - niepustej odpowiedzi ujawnianej dla każdego zadania otwartego,
@@ -65,7 +66,7 @@ Testy automatyczne wymagają:
 - braku znanych uszkodzonych komend LaTeX,
 - poprawnego parsowania każdego wyrażenia matematycznego przez renderer CSharpMath.
 
-Testy wymagają także 92 plików zasobów, pełnego klucza CKE dla zadań 1–28 oraz jednoznacznego przypisania wszystkich zadań do tematów.
+Bezpośrednia regresja issue #35 wymaga wszystkich wskazanych sekcji, 24 liter alfabetu greckiego, przykładów, wskazówek i odpowiedzi, poprawnego przypadku `\(\Delta{}<0\)` oraz statusów roadmapy. Testy wymagają także 92 plików zasobów, pełnego klucza CKE dla zadań 1-28 oraz jednoznacznego przypisania wszystkich zadań do tematów.
 
 Drugi audyt przed usunięciem snapshotów potwierdził `276/276` zgodnych wystąpień zasobów bez braków i różnic. Ujawnił dwa brakujące placeholdery kalkulatorów oraz brak dokładnych kopii dokumentów planistycznych; oba problemy zostały usunięte.
 

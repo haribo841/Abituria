@@ -8,6 +8,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - konta SQLite, profile gościa i postęp,
 - 18 tablic matematycznych,
 - dział Wektory z ośmioma ilustracjami,
+- materiały issue #35: liczby naturalne i indukcja, alfabet grecki, liczby rzeczywiste i zbiory, algebra, równania i nierówności, funkcja kwadratowa oraz logarytmy,
 - 35 zadań matury poprawkowej 2021 zweryfikowanych z materiałami CKE,
 - kalkulator ogólny z parserem wyrażeń, notacją naukową, Ans i historią sesji,
 - kalkulator funkcji kwadratowej.
@@ -15,7 +16,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 ## Zaplanowane
 
 - generator wykresów i kalkulator funkcji trygonometrycznych,
-- rozbudowa sześciu zachowanych działów oraz materiały o liczbach naturalnych i alfabecie greckim,
+- uzupełnienie działów Ciągi liczbowe i Liczby pierwsze,
 - arkusze 2019, 2020 i matura podstawowa 2021,
 - losowanie zadań, materiały wideo i wyszukiwanie zapisu matematycznego,
 - dystrybucja aplikacji i dokumentacja wydania.

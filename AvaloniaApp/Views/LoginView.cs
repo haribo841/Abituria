@@ -41,7 +41,7 @@ public sealed class LoginView : UserControl
             Classes = { "muted" },
             TextWrapping = TextWrapping.Wrap
         });
-        intro.Children.Add(UiFactory.InfoBand("Materiały", "18 tablic, dział Wektory i 35 zadań z matury poprawkowej 2021."));
+        intro.Children.Add(UiFactory.InfoBand("Materiały", "18 tablic, 7 działów i 35 zadań z matury poprawkowej 2021."));
         intro.Children.Add(UiFactory.InfoBand("Prywatność", "Aplikacja działa offline i nie wysyła danych konta poza komputer."));
         root.Children.Add(UiFactory.Card(intro, new Thickness(30)));
 

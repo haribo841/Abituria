@@ -1,15 +1,20 @@
 ﻿param(
-    [Parameter(Mandatory = $true)]
-    [string]$SourceRoot,
-    [string]$OutputRoot = (Join-Path $PSScriptRoot '..\Content')
+    [string]$SourceRoot = '',
+    [string]$OutputRoot = (Join-Path $PSScriptRoot '..\Content'),
+    [switch]$CuratedChaptersOnly,
+    [string]$VectorChapterPath = ''
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
-if (-not (Test-Path -LiteralPath $SourceRoot -PathType Container)) {
+if (-not $CuratedChaptersOnly -and
+    ([string]::IsNullOrWhiteSpace($SourceRoot) -or -not (Test-Path -LiteralPath $SourceRoot -PathType Container))) {
     throw "Nie znaleziono katalogu źródłowego: $SourceRoot"
 }
+
+$issue35SeedPath = Join-Path $PSScriptRoot 'seeds\issue-35-content.json'
+$issue35Seed = Get-Content -Raw -Encoding UTF8 $issue35SeedPath | ConvertFrom-Json
 
 $formulaTitles = @(
     'Wartość bezwzględna liczby', 'Potęgi i pierwiastki', 'Logarytmy',
@@ -390,15 +395,40 @@ function Write-Json([string]$Name, [object]$Value) {
 }
 
 New-Item -ItemType Directory -Path $OutputRoot -Force | Out-Null
+if ($CuratedChaptersOnly) {
+    $directorySeparators = [char[]]"\/"
+    $defaultOutputRoot = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\Content')).TrimEnd($directorySeparators)
+    $requestedOutputRoot = [System.IO.Path]::GetFullPath($OutputRoot).TrimEnd($directorySeparators)
+    if ([string]::Equals($requestedOutputRoot, $defaultOutputRoot, [StringComparison]::OrdinalIgnoreCase)) {
+        throw 'Tryb CuratedChaptersOnly wymaga jawnego katalogu OutputRoot poza aktywnym katalogiem Content.'
+    }
+    if ([string]::IsNullOrWhiteSpace($VectorChapterPath) -or
+        -not (Test-Path -LiteralPath $VectorChapterPath -PathType Leaf)) {
+        throw 'Tryb CuratedChaptersOnly wymaga pliku VectorChapterPath z rozdziałem Wektory.'
+    }
+
+    $vectorChapter = Get-Content -Raw -Encoding UTF8 $VectorChapterPath | ConvertFrom-Json
+    if ($vectorChapter.id -ne 'vectors' -or $vectorChapter.status -ne 'available') {
+        throw 'Plik VectorChapterPath nie zawiera dostępnego rozdziału vectors.'
+    }
+    Write-Json 'chapters.json' ([ordered]@{
+            schemaVersion = 2
+            introduction = @($issue35Seed.chapterIntroduction)
+            chapters = @($vectorChapter) + @($issue35Seed.chapters)
+        })
+    Write-Json 'roadmap.json' ([ordered]@{
+            schemaVersion = 1
+            introduction = @($issue35Seed.roadmapIntroduction)
+            items = @($issue35Seed.roadmapItems)
+        })
+    Write-Host "Wygenerowano niezależny katalog 9 działów, w tym treści issue #35."
+    return
+}
+
 $formulas = @(Get-FormulaArticles)
 $chapters = @(
     Get-VectorChapter
-    [ordered]@{ id = 'sets-and-logic'; title = 'Rachunek zbiorów i logika'; status = 'placeholder'; message = 'Dział zaplanowany w starszej wersji projektu.'; roadmapId = 'chapters-expansion'; blocks = @() }
-    [ordered]@{ id = 'equations-and-inequalities'; title = 'Równania i nierówności'; status = 'placeholder'; message = 'Dział zaplanowany w starszej wersji projektu.'; roadmapId = 'chapters-expansion'; blocks = @() }
-    [ordered]@{ id = 'number-sequences'; title = 'Ciągi liczbowe'; status = 'placeholder'; message = 'Dział zaplanowany w starszej wersji projektu.'; roadmapId = 'chapters-expansion'; blocks = @() }
-    [ordered]@{ id = 'prime-numbers'; title = 'Liczby pierwsze'; status = 'placeholder'; message = 'W tej wersji legacy istniał wyłącznie pusty ekran działu.'; roadmapId = 'chapters-expansion'; blocks = @() }
-    [ordered]@{ id = 'quadratic-function'; title = 'Funkcja kwadratowa'; status = 'placeholder'; message = 'W tej wersji legacy istniał wyłącznie pusty ekran działu.'; roadmapId = 'chapters-expansion'; blocks = @() }
-    [ordered]@{ id = 'logarithms'; title = 'Logarytmy'; status = 'placeholder'; message = 'W tej wersji legacy istniał wyłącznie pusty ekran działu.'; roadmapId = 'chapters-expansion'; blocks = @() }
+    @($issue35Seed.chapters)
 )
 $exam = [ordered]@{
     id = 'matura-poprawkowa-2021'; title = 'Matura poprawkowa 2021'; year = 2021
@@ -429,40 +459,13 @@ $placeholders = @(
     [ordered]@{ id = 'exercise-set-e'; title = 'Zestaw E1-E35'; category = 'exercise'; message = 'Ekrany E1-E35 w starej wersji były pustymi szablonami i zostały zastąpione wspólnym planem rozwoju zadań.'; roadmapId = 'legacy-empty-exercises'; blocks = @() }
 )
 
-$roadmap = @(
-    [ordered]@{ id = 'avalonia-shell'; title = 'Aplikacja AvaloniaUI'; status = 'migrated'; summary = 'Przenośny shell .NET 9 zastępujący nawigację WPF.'; context = 'platform'; sourceRefs = @('Abituria-Core', 'Abituria-main') }
-    [ordered]@{ id = 'accounts-progress'; title = 'Konta lokalne i postęp'; status = 'migrated'; summary = 'SQLite, logowanie, odzyskiwanie hasła, profile gościa i ukończone zadania.'; context = 'accounts'; sourceRefs = @('users.txt', 'datamodels/CompletedExercise.cs') }
-    [ordered]@{ id = 'formula-catalog'; title = 'Tablice matematyczne'; status = 'migrated'; summary = 'Osiemnaście tablic wraz z ilustracjami i renderowaniem wzorów.'; context = 'formulas'; sourceRefs = @('pages/equations') }
-    [ordered]@{ id = 'vectors-chapter'; title = 'Dział Wektory'; status = 'migrated'; summary = 'Pełny materiał tekstowy wraz z ośmioma ilustracjami.'; context = 'chapters'; sourceRefs = @('pages/chapters/WektoryPage.xaml') }
-    [ordered]@{ id = 'correction-exam-2021'; title = 'Matura poprawkowa 2021'; status = 'migrated'; summary = '35 zadań, podpowiedzi, postęp oraz treść zweryfikowana z arkuszem i kluczem CKE.'; context = 'exams'; sourceRefs = @('pages/finalexams/Z', 'CKE EMAP-P0-100-2108') }
-    [ordered]@{ id = 'quadratic-calculator'; title = 'Kalkulator funkcji kwadratowej'; status = 'migrated'; summary = 'Delta, miejsca zerowe, wierzchołek i trzy postacie funkcji krok po kroku.'; context = 'calculator'; sourceRefs = @('CalcQuadraticFunc', 'QuadraticPage') }
-    [ordered]@{ id = 'general-calculator'; title = 'Kalkulator ogólny'; status = 'migrated'; summary = 'Parser działań, nawiasów, potęg i pierwiastków z Ans oraz historią sesji.'; context = 'calculator'; sourceRefs = @('Opis struktury systemu.txt', 'Projekt-Inzynierski issue #1', 'Projekt-Inzynierski issue #3') }
-    [ordered]@{ id = 'graph-generator'; title = 'Generator wykresów'; status = 'planned'; summary = 'Rysowanie wykresów funkcji na podstawie wprowadzonego wzoru.'; context = 'calculator'; sourceRefs = @('pages/KalkulatorPage.xaml') }
-    [ordered]@{ id = 'trigonometric-calculator'; title = 'Kalkulator funkcji trygonometrycznych'; status = 'planned'; summary = 'Analiza i obliczenia dla funkcji trygonometrycznych.'; context = 'calculator'; sourceRefs = @('pages/KalkulatorPage.xaml') }
-    [ordered]@{ id = 'chapters-expansion'; title = 'Rozbudowa działów matematyki'; status = 'planned'; summary = 'Rachunek zbiorów i logika, równania i nierówności, ciągi, liczby pierwsze, funkcja kwadratowa i logarytmy.'; context = 'chapters'; sourceRefs = @('DzialyPage.xaml', 'PageChapters.xaml') }
-    [ordered]@{ id = 'natural-numbers'; title = 'Liczby naturalne i indukcja'; status = 'planned'; summary = 'Aksjomatyka, przykłady indukcji oraz działania na liczbach naturalnych.'; context = 'chapters'; sourceRefs = @('Uzupełnić Treść działów matematyki.txt') }
-    [ordered]@{ id = 'greek-alphabet'; title = 'Alfabet grecki'; status = 'planned'; summary = 'Tabela symboli i ich zastosowań w zapisie matematycznym.'; context = 'chapters'; sourceRefs = @('Uzupełnić Treść działów matematyki.txt') }
-    [ordered]@{ id = 'exam-archive'; title = 'Archiwum arkuszy maturalnych'; status = 'planned'; summary = 'Uzupełnienie arkuszy 2019, 2020 i podstawowego arkusza 2021.'; context = 'exams'; sourceRefs = @('MaturaPage.xaml') }
-    [ordered]@{ id = 'random-exercises'; title = 'Losowanie zadań'; status = 'planned'; summary = 'Losowanie z puli zadań maturalnych i działowych.'; context = 'exercises'; sourceRefs = @('Opis struktury systemu.txt') }
-    [ordered]@{ id = 'educational-video'; title = 'Materiały wideo'; status = 'planned'; summary = 'Opcjonalne wykłady z wykorzystaniem zewnętrznego hostingu.'; context = 'content'; sourceRefs = @('Opis struktury systemu.txt') }
-    [ordered]@{ id = 'math-search'; title = 'Wyszukiwanie zapisu matematycznego'; status = 'planned'; summary = 'Wyszukiwanie wyrażeń, równań i formuł w notacji naukowej.'; context = 'content'; sourceRefs = @('Definicja projektu.txt') }
-    [ordered]@{ id = 'distribution'; title = 'Dystrybucja i dokumentacja wydania'; status = 'planned'; summary = 'Paczki, strona pobierania, instalacja, autorzy i historia wersji.'; context = 'delivery'; sourceRefs = @('Implementacja.txt') }
-    [ordered]@{ id = 'wpf-shell'; title = 'Nawigacja i obramowanie WPF'; status = 'superseded'; summary = 'Zastąpione natywnym oknem i nawigacją AvaloniaUI.'; context = 'platform'; sourceRefs = @('WindowResizer.cs', 'NavigationWindow') }
-    [ordered]@{ id = 'sql-server-prototype'; title = 'Prototyp SQL Server LocalDB'; status = 'superseded'; summary = 'Zastąpiony lokalnym SQLite i bezpiecznym przechowywaniem haseł.'; context = 'accounts'; sourceRefs = @('GenericDataService', 'datamodels/User.cs') }
-    [ordered]@{ id = 'legacy-empty-exercises'; title = 'Osobne puste ekrany E1-E35'; status = 'superseded'; summary = 'Zastąpione generycznym modelem zadań i wspólnym widokiem.'; context = 'exercises'; sourceRefs = @('pages/finalexams/E') }
-    [ordered]@{ id = 'legacy-profile-limits'; title = 'Limity 10 profili i 15 znaków'; status = 'superseded'; summary = 'Nie przywrócono arbitralnych limitów starego pliku users.txt.'; context = 'accounts'; sourceRefs = @('ProfileStore') }
-    [ordered]@{ id = 'formula-editor-prototype'; title = 'Prototyp edytora i eksportu wzorów'; status = 'superseded'; summary = 'Niepodłączone okno demonstracyjne WPF-Math renderowało przykładowe wzory i eksportowało SVG lub PNG. Renderowanie zastąpił CSharpMath; eksport nie należał do osiągalnego interfejsu aplikacji.'; context = 'content'; sourceRefs = @('Window1.xaml', 'Window1.xaml.cs') }
-)
+$roadmap = @($issue35Seed.roadmapItems)
 
 Write-Json 'formulas.json' ([ordered]@{ schemaVersion = 2; introduction = @(
     [ordered]@{ type = 'richText'; text = 'W czasie matury z matematyki na obu poziomach możesz korzystać z tablic matematycznych przygotowanych przez CKE. Znajdziesz w nich wiele wzorów i informacji pomocnych podczas egzaminu. Przejrzyj wcześniej całe tablice, aby wiedzieć, gdzie szukać potrzebnych treści i ograniczyć stres. Jeżeli zdajesz tylko poziom podstawowy, pamiętaj, że część tablic dotyczy poziomu rozszerzonego; warto rozpoznawać te strony i pomijać je podczas egzaminu.' }
 ); articles = $formulas })
-Write-Json 'chapters.json' ([ordered]@{ schemaVersion = 2; introduction = @(
-    [ordered]@{ type = 'richText'; text = 'Działy łączą teorię, przykłady i zadania. Wektory są dostępne w całości, a pozostałe tematy zachowano jako jawne pozycje planu rozwoju.' }
-); chapters = $chapters })
+Write-Json 'chapters.json' ([ordered]@{ schemaVersion = 2; introduction = @($issue35Seed.chapterIntroduction); chapters = $chapters })
 Write-Json 'exam-2021-correction.json' ([ordered]@{ schemaVersion = 2; exam = $exam })
 Write-Json 'placeholders.json' ([ordered]@{ schemaVersion = 2; items = $placeholders })
-Write-Json 'roadmap.json' ([ordered]@{ schemaVersion = 1; introduction = @(
-    [ordered]@{ type = 'richText'; text = 'Plan rozwoju porządkuje elementy znalezione we wszystkich starych wersjach. Rozróżnia funkcje przeniesione, zaplanowane oraz świadomie zastąpione nowszym rozwiązaniem.' }
-); items = $roadmap })
-Write-Host "Wygenerowano: $($formulas.Count) tablic, $($chapters.Count) działy i $($exam.exercises.Count) zadań."
+Write-Json 'roadmap.json' ([ordered]@{ schemaVersion = 1; introduction = @($issue35Seed.roadmapIntroduction); items = $roadmap })
+Write-Host "Wygenerowano: $($formulas.Count) tablic, $($chapters.Count) działów i $($exam.exercises.Count) zadań."

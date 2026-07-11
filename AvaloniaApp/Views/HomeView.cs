@@ -25,7 +25,7 @@ public sealed class HomeView : UserControl
         AddTile(grid, 0, 0, new HomeTile("Wzory", "18 pełnych tablic matematycznych", "img/wzory.png", showFormulas));
         AddTile(grid, 1, 0, new HomeTile("Zadania", "Matura poprawkowa 2021 i archiwalne zestawy", "img/zadania.png", showExams));
         AddTile(grid, 0, 1, new HomeTile("Kalkulator", "Wyrażenia i pełna analiza funkcji kwadratowej", "img/kalkulator.png", showCalculator));
-        AddTile(grid, 1, 1, new HomeTile("Działy", "Wektory i zachowane materiały działowe", "img/dzialy.png", showChapters));
+        AddTile(grid, 1, 1, new HomeTile("Działy", "7 działów: teoria, przykłady i zadania", "img/dzialy.png", showChapters));
         AddTile(grid, 0, 2, new HomeTile("Plan rozwoju", "Przeniesione, zaplanowane i zastąpione elementy starych wersji", "img/abituria.png", showRoadmap, 2));
         root.Children.Add(grid);
         root.Children.Add(UiFactory.InfoBand(copy.GetRequired("home.work-mode")));

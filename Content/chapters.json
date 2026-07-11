@@ -3,7 +3,7 @@
     "introduction":  [
                          {
                              "type":  "richText",
-                             "text":  "Działy łączą teorię, przykłady i zadania. Wektory są dostępne w całości, a pozostałe tematy zachowano jako jawne pozycje planu rozwoju."
+                             "text":  "Działy łączą teorię, przykłady, wskazówki i zadania. Dostępne są materiały o wektorach, liczbach naturalnych, alfabecie greckim, zbiorach, algebrze, funkcji kwadratowej i logarytmach. Ciągi liczbowe oraz liczby pierwsze pozostają jawnymi pozycjami planu rozwoju."
                          }
                      ],
     "chapters":  [
@@ -83,23 +83,99 @@
                                     ]
                      },
                      {
-                         "id":  "sets-and-logic",
-                         "title":  "Rachunek zbiorów i logika",
-                         "status":  "placeholder",
-                         "message":  "Dział zaplanowany w starszej wersji projektu.",
-                         "roadmapId":  "chapters-expansion",
+                         "id":  "natural-numbers",
+                         "title":  "Liczby naturalne i indukcja",
+                         "status":  "available",
+                         "roadmapId":  "natural-numbers",
                          "blocks":  [
-
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Aksjomatyka liczb naturalnych\n\nW tym dziale przyjmujemy, że zero jest liczbą naturalną. Aksjomaty Peana opisują liczby naturalne za pomocą zera i następnika \\(S(n)\\):\n\n\\(-\\) \\(0\\) jest liczbą naturalną.\n\\(-\\) Każda liczba naturalna \\(n\\) ma następnik \\(S(n)\\).\n\\(-\\) Zero nie jest następnikiem żadnej liczby naturalnej.\n\\(-\\) Jeśli \\(S(a)=S(b)\\), to \\(a=b\\).\n\\(-\\) Jeżeli zdanie jest prawdziwe dla zera i z jego prawdziwości dla \\(n\\) wynika prawdziwość dla \\(S(n)\\), to jest prawdziwe dla wszystkich liczb naturalnych. Ostatni punkt jest aksjomatem indukcji."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Indukcja matematyczna krok po kroku\n\nDowód indukcyjny ma trzy części: bazę indukcji, założenie indukcyjne i krok indukcyjny.\n\nPrzykład. Udowodnij, że \\(1+2+\\ldots+n=\\frac{n(n+1)}{2}\\) dla każdego \\(n\\geq1\\).\n\nBaza: dla \\(n=1\\) obie strony są równe \\(1\\).\nZałożenie: przyjmijmy, że suma do \\(k\\) jest równa \\(\\frac{k(k+1)}{2}\\).\nKrok: po dodaniu \\(k+1\\) otrzymujemy \\(\\frac{k(k+1)}{2}+k+1=\\frac{(k+1)(k+2)}{2}\\), czyli wzór dla następnej liczby.\n\nZadanie. Udowodnij indukcyjnie, że \\(1+3+5+\\ldots+(2n-1)=n^2\\).\nWskazówka. W kroku indukcyjnym dodaj kolejny składnik \\(2(k+1)-1\\).\nOdpowiedź. \\(k^2+2k+1=(k+1)^2\\), więc teza zachodzi dla każdego \\(n\\geq1\\)."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Działania na liczbach naturalnych\n\nDodawanie i mnożenie można określić rekurencyjnie:\n\n\\(-\\) \\(n+0=n\\) oraz \\(n+S(m)=S(n+m)\\).\n\\(-\\) \\(n\\cdot0=0\\) oraz \\(n\\cdot S(m)=n\\cdot m+n\\).\n\nDodawanie i mnożenie są łączne i przemienne, a mnożenie jest rozdzielne względem dodawania. Odejmowanie i dzielenie nie zawsze dają wynik naturalny, na przykład \\(3-5\\) oraz \\(1:2\\) nie należą do zbioru liczb naturalnych.\n\nZadanie. Oblicz iloraz i resztę z dzielenia \\(157\\) przez \\(12\\).\nWskazówka. Znajdź największą wielokrotność \\(12\\), która nie przekracza \\(157\\).\nOdpowiedź. \\(157=12\\cdot13+1\\), więc iloraz wynosi \\(13\\), a reszta \\(1\\)."
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "greek-alphabet",
+                         "title":  "Alfabet grecki",
+                         "status":  "available",
+                         "roadmapId":  "greek-alphabet",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Tabela alfabetu greckiego\n\nWielka | Mała | Nazwa polska\n--- | --- | ---\nΑ | α | alfa\nΒ | β | beta\nΓ | γ | gamma\nΔ | δ | delta\nΕ | ε | epsilon\nΖ | ζ | dzeta\nΗ | η | eta\nΘ | θ | theta\nΙ | ι | jota\nΚ | κ | kappa\nΛ | λ | lambda\nΜ | μ | mi\nΝ | ν | ni\nΞ | ξ | ksi\nΟ | ο | omikron\nΠ | π | pi\nΡ | ρ | ro\nΣ | σ, ς | sigma\nΤ | τ | tau\nΥ | υ | ypsilon\nΦ | φ | fi\nΧ | χ | chi\nΨ | ψ | psi\nΩ | ω | omega"
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Najczęstsze zastosowania symboli\n\n\\(-\\) \\(\\alpha,\\beta,\\gamma\\) oznaczają kąty lub parametry.\n\\(-\\) \\(\\Delta\\) oznacza wyróżnik równania kwadratowego albo zmianę wielkości.\n\\(-\\) \\(\\pi\\) jest stałą równą w przybliżeniu \\(3{,}14159\\).\n\\(-\\) \\(\\Sigma\\) jest symbolem sumowania, a mała litera \\(\\sigma\\) bywa używana dla odchylenia standardowego.\n\\(-\\) \\(\\lambda\\) może oznaczać długość fali, a \\(\\omega\\) częstość kątową.\n\nZadanie. Wskaż grecką literę używaną we wzorze na wyróżnik równania kwadratowego.\nOdpowiedź. Jest to wielka delta: \\(\\Delta\\)."
+                                        }
+                                    ]
+                     },
+                     {
+                         "id":  "sets-and-logic",
+                         "title":  "Liczby rzeczywiste, zbiory i logika",
+                         "status":  "available",
+                         "roadmapId":  "sets-and-logic-content",
+                         "blocks":  [
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Zbiory liczbowe\n\nNajważniejsze zbiory to liczby naturalne \\(N\\), całkowite \\(Z\\), wymierne \\(Q\\) i rzeczywiste \\(R\\). Zachodzi zawieranie \\(N\\subset Z\\subset Q\\subset R\\). Liczby niewymierne, na przykład \\(\\sqrt{2}\\) i \\(\\pi\\), należą do \\(R\\), ale nie do \\(Q\\).\n\nZapis \\(x\\in A\\) oznacza, że \\(x\\) jest elementem zbioru \\(A\\), a \\(x\\notin A\\), że nim nie jest. Zbiór pusty oznaczamy przez \\(\\varnothing\\)."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Działania na zbiorach\n\nSuma \\(A\\cup B\\) zawiera elementy należące do co najmniej jednego ze zbiorów. Iloczyn \\(A\\cap B\\) zawiera elementy wspólne. Różnica \\(A\\setminus B\\) zawiera elementy zbioru \\(A\\), które nie należą do \\(B\\).\n\nPrzykład. Dla \\(A=\\{1,2,3\\}\\) i \\(B=\\{3,4\\}\\) mamy \\(A\\cup B=\\{1,2,3,4\\}\\), \\(A\\cap B=\\{3\\}\\) oraz \\(A\\setminus B=\\{1,2\\}\\)."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Przedziały liczbowe\n\nNawias okrągły oznacza, że koniec nie należy do przedziału, a nawias domknięty, że należy. Przykładowo \\(x\\in(-2,5]\\) jest równoważne warunkowi \\(-2<x\\leq5\\). Przy nieskończoności zawsze stosujemy nawias okrągły.\n\nZadanie. Zapisz jako przedział rozwiązanie nierówności \\(x\\geq-3\\).\nOdpowiedź. \\(x\\in[-3,+\\infty)\\)."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Podstawy logiki\n\nNegacja zmienia wartość logiczną zdania. Koniunkcja \\(p\\land q\\) jest prawdziwa tylko wtedy, gdy oba zdania są prawdziwe. Alternatywa \\(p\\lor q\\) jest prawdziwa, gdy prawdziwe jest co najmniej jedno zdanie. Implikacja \\(p\\Rightarrow q\\) jest fałszywa tylko dla prawdziwego \\(p\\) i fałszywego \\(q\\).\n\nPrzykład. Negacją warunku \\(x>2\\) jest \\(x\\leq2\\), a nie tylko \\(x<2\\)."
+                                        }
                                     ]
                      },
                      {
                          "id":  "equations-and-inequalities",
-                         "title":  "Równania i nierówności",
-                         "status":  "placeholder",
-                         "message":  "Dział zaplanowany w starszej wersji projektu.",
-                         "roadmapId":  "chapters-expansion",
+                         "title":  "Wyrażenia algebraiczne, równania i nierówności",
+                         "status":  "available",
+                         "roadmapId":  "algebra-equations-content",
                          "blocks":  [
-
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Wyrażenia algebraiczne - część teoretyczna\n\nWyrażenie algebraiczne jest zbudowane z liczb, zmiennych, działań i nawiasów. Wyrazy podobne mają tę samą część literową, dlatego można je redukować, na przykład \\(3x-2x+5=x+5\\). Dziedzina wyrażenia wyklucza wartości powodujące dzielenie przez zero lub niedozwolony pierwiastek parzystego stopnia.\n\nPrzykład. Wyrażenie \\(\\frac{x+1}{x-2}\\) jest określone dla \\(x\\neq2\\)."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Obliczenia liczbowe, ułamki i przybliżenia\n\nW działaniach na ułamkach najpierw sprowadzamy składniki do wspólnego mianownika. Dzielenie przez ułamek zastępujemy mnożeniem przez jego odwrotność.\n\nPrzykład. \\(\\frac{3}{4}-\\frac{2}{3}:\\frac{8}{9}=\\frac{3}{4}-\\frac{2}{3}\\cdot\\frac{9}{8}=0\\).\n\nJeśli wartość dokładna to \\(x\\), a przybliżona to \\(a\\), błąd bezwzględny wynosi \\(|x-a|\\), a błąd względny \\(\\frac{|x-a|}{|x|}\\) dla \\(x\\neq0\\). Przykładowo przybliżenie \\(\\pi\\approx3{,}14\\) ma błąd bezwzględny mniejszy niż \\(0{,}002\\)."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Wzory skróconego mnożenia\n\n\\((a+b)^2=a^2+2ab+b^2\\)\n\\((a-b)^2=a^2-2ab+b^2\\)\n\\((a-b)(a+b)=a^2-b^2\\)\n\\((a+b)^3=a^3+3a^2b+3ab^2+b^3\\)\n\\((a-b)^3=a^3-3a^2b+3ab^2-b^3\\)\n\\(a^3+b^3=(a+b)(a^2-ab+b^2)\\)\n\\(a^3-b^3=(a-b)(a^2+ab+b^2)\\)\n\nPrzykład. \\(99^2=(100-1)^2=10000-200+1=9801\\)."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Działania na potęgach i pierwiastkach\n\nDla dopuszczalnych wartości zachodzą reguły \\(a^m\\cdot a^n=a^{m+n}\\), \\(\\frac{a^m}{a^n}=a^{m-n}\\) dla \\(a\\neq0\\), \\((a^m)^n=a^{mn}\\) oraz \\(\\sqrt{a^2}=|a|\\). Nie wolno zastępować \\(\\sqrt{a+b}\\) przez \\(\\sqrt a+\\sqrt b\\).\n\nPrzykład. \\(\\sqrt{72}=\\sqrt{36\\cdot2}=6\\sqrt2\\), a \\(\\sqrt[3]{-8}=-2\\)."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Obliczenia procentowe\n\n\\(p\\%\\) liczby \\(a\\) to \\(\\frac{p}{100}a\\). Zwiększenie o \\(p\\%\\) oznacza mnożenie przez \\(1+\\frac{p}{100}\\), a zmniejszenie przez \\(1-\\frac{p}{100}\\). Kolejne zmiany procentowe wykonuje się mnożąc odpowiednie współczynniki, a nie dodając procenty.\n\nPrzykład. Cena \\(200\\) zł po podwyżce o \\(10\\%\\) i obniżce o \\(10\\%\\) wynosi \\(200\\cdot1{,}1\\cdot0{,}9=198\\) zł."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Równania i nierówności algebraiczne\n\nRozwiązując równanie wykonujemy równoważne operacje po obu stronach. Przy mnożeniu lub dzieleniu nierówności przez liczbę ujemną zmieniamy zwrot znaku. Zawsze uwzględniamy dziedzinę.\n\nPrzykład. \\(3(2x-1)=5x+4\\) daje \\(6x-3=5x+4\\), zatem \\(x=7\\).\nPrzykład. \\(-2x+6>10\\) daje \\(-2x>4\\), więc \\(x<-2\\)."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Wymagania przed zadaniami wprowadzającymi\n\nPrzed rozpoczęciem zadań należy znać kolejność działań, działania na ułamkach, wzory skróconego mnożenia oraz zasady wyznaczania dziedziny wyrażenia.\n\nZadanie wprowadzające\n\nUprość \\((2x-3)^2-(2x-3)(2x+3)\\).\nWskazówka. Wyłącz wspólny czynnik \\(2x-3\\).\nOdpowiedź. \\((2x-3)(-6)=-12x+18\\).\n\nZadanie maturalne\n\nWyznacz wszystkie liczby rzeczywiste spełniające \\(\\frac{x+2}{x-1}=3\\).\nWskazówka. Najpierw zapisz warunek \\(x\\neq1\\), a następnie pomnóż równanie przez \\(x-1\\).\nOdpowiedź. \\(x=\\frac{5}{2}\\), co spełnia warunek dziedziny."
+                                        }
                                     ]
                      },
                      {
@@ -124,22 +200,42 @@
                      },
                      {
                          "id":  "quadratic-function",
-                         "title":  "Funkcja kwadratowa",
-                         "status":  "placeholder",
-                         "message":  "W tej wersji legacy istniał wyłącznie pusty ekran działu.",
-                         "roadmapId":  "chapters-expansion",
+                         "title":  "Funkcja kwadratowa i równanie kwadratowe",
+                         "status":  "available",
+                         "roadmapId":  "quadratic-function-content",
                          "blocks":  [
-
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Funkcja i równanie kwadratowe\n\nFunkcja kwadratowa ma postać \\(f(x)=ax^2+bx+c\\), gdzie \\(a\\neq0\\). Równanie \\(ax^2+bx+c=0\\) rozwiązujemy za pomocą wyróżnika \\(\\Delta{}=b^2-4ac\\).\n\n\\(-\\) Jeśli \\(\\Delta{}>0\\), są dwa różne pierwiastki: \\(x_1=\\frac{-b-\\sqrt{\\Delta}}{2a}\\) i \\(x_2=\\frac{-b+\\sqrt{\\Delta}}{2a}\\).\n\\(-\\) Jeśli \\(\\Delta{}=0\\), jest jeden pierwiastek podwójny: \\(x_0=\\frac{-b}{2a}\\).\n\\(-\\) Jeśli \\(\\Delta{}<0\\), równanie nie ma rozwiązań w zbiorze liczb rzeczywistych. Rozwiązania zespolone pozostają poza zakresem aplikacji."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Postacie funkcji kwadratowej\n\nPostać kanoniczna to \\(f(x)=a(x-p)^2+q\\), gdzie wierzchołek paraboli ma współrzędne \\((p,q)\\), \\(p=\\frac{-b}{2a}\\) i \\(q=\\frac{-\\Delta}{4a}\\). Gdy istnieją miejsca zerowe, postać iloczynowa ma postać \\(f(x)=a(x-x_1)(x-x_2)\\).\n\nPrzykład. Dla \\(x^2-5x+6=0\\) mamy \\(\\Delta{}=1\\), więc \\(x_1=2\\) i \\(x_2=3\\)."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Zadanie maturalne\n\nWyznacz najmniejszą wartość funkcji \\(f(x)=2x^2-8x+5\\).\nWskazówka. Oblicz pierwszą współrzędną wierzchołka \\(p=\\frac{-b}{2a}\\).\nOdpowiedź. \\(p=2\\), a \\(f(2)=-3\\). Najmniejsza wartość funkcji wynosi \\(-3\\).\n\nZadanie. Rozwiąż w liczbach rzeczywistych równanie \\(x^2+2x+5=0\\).\nOdpowiedź. \\(\\Delta{}=-16<0\\), więc równanie nie ma rozwiązań rzeczywistych."
+                                        }
                                     ]
                      },
                      {
                          "id":  "logarithms",
                          "title":  "Logarytmy",
-                         "status":  "placeholder",
-                         "message":  "W tej wersji legacy istniał wyłącznie pusty ekran działu.",
-                         "roadmapId":  "chapters-expansion",
+                         "status":  "available",
+                         "roadmapId":  "logarithms-content",
                          "blocks":  [
-
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Pojęcie logarytmu\n\nDla \\(a>0\\), \\(a\\neq1\\) i \\(b>0\\) zapis \\(\\log_a b=c\\) oznacza dokładnie, że \\(a^c=b\\). Liczba \\(a\\) jest podstawą, a \\(b\\) liczbą logarytmowaną.\n\nPrzykłady. \\(\\log_2 8=3\\), ponieważ \\(2^3=8\\), oraz \\(\\log_{10}0{,}01=-2\\), ponieważ \\(10^{-2}=0{,}01\\)."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Prawa działań na logarytmach\n\nDla dodatnich \\(x\\) i \\(y\\) oraz podstaw \\(a\\) i \\(b\\) spełniających \\(a>0\\), \\(a\\neq1\\), \\(b>0\\) i \\(b\\neq1\\):\n\n\\(\\log_a(xy)=\\log_a x+\\log_a y\\)\n\\(\\log_a\\frac{x}{y}=\\log_a x-\\log_a y\\)\n\\(\\log_a(x^r)=r\\log_a x\\)\n\\(\\log_a x=\\frac{\\log_b x}{\\log_b a}\\)\n\nWarunki dziedziny sprawdzamy przed przekształceniami. Nie istnieje logarytm rzeczywisty z zera ani liczby ujemnej."
+                                        },
+                                        {
+                                            "type":  "richText",
+                                            "text":  "Obliczenia logarytmiczne\n\nPrzykład. \\(\\log_3 27-\\log_3 3=3-1=2\\).\n\nZadanie wprowadzające. Oblicz \\(\\log_2 4+\\log_2 8\\).\nWskazówka. Możesz obliczyć oba logarytmy osobno albo użyć logarytmu iloczynu.\nOdpowiedź. \\(2+3=5\\).\n\nZadanie maturalne. Rozwiąż równanie \\(\\log_2(x-1)=3\\).\nWskazówka. Warunek dziedziny to \\(x>1\\).\nOdpowiedź. \\(x-1=8\\), więc \\(x=9\\); wynik spełnia warunek dziedziny."
+                                        }
                                     ]
                      }
                  ]

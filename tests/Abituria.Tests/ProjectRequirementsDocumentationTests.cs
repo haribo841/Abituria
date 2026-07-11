@@ -23,13 +23,20 @@ public sealed class ProjectRequirementsDocumentationTests
             "## 10. Ograniczenia technologiczne",
             "## 11. Kryteria akceptacji projektu",
             "## Macierz zgodności wymagań z implementacją",
-            "## Status issue #34"
+            "## Status issue #34",
+            "## Status issue #35"
         };
 
         Assert.All(requiredHeadings, heading => Assert.Contains(heading, text, StringComparison.Ordinal));
         Assert.Contains("F-01", text, StringComparison.Ordinal);
+        Assert.Contains("F-19", text, StringComparison.Ordinal);
         Assert.Contains("NF-01", text, StringComparison.Ordinal);
         Assert.Contains("UC-01", text, StringComparison.Ordinal);
+        Assert.Contains("UC-11", text, StringComparison.Ordinal);
+        Assert.Contains("9 pozycji działowych, w tym 7 dostępnych i 2 placeholdery", text, StringComparison.Ordinal);
+        Assert.Contains("Issue35MathChaptersRegressionTests", text, StringComparison.Ordinal);
+        Assert.Contains("tools/seeds/issue-35-content.json", text, StringComparison.Ordinal);
+        Assert.Contains("1280x820", text, StringComparison.Ordinal);
         Assert.Contains("dotnet test Abituria.sln --configuration Release --no-build", text, StringComparison.Ordinal);
         Assert.Contains("SonarQube Cloud nie raportuje otwartych problemów", text, StringComparison.Ordinal);
     }

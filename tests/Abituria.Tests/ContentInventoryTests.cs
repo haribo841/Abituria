@@ -11,8 +11,12 @@ public sealed partial class ContentInventoryTests
     private static readonly string RepositoryRoot = FindRepositoryRoot();
     private static readonly string[] ExpectedPlaceholderIds =
         ["exercise-set-e", "graph-generator", "matura-2019", "matura-2020", "matura-2021", "trigonometric-calculator"];
+    private static readonly string[] ExpectedAvailableChapterIds =
+        ["equations-and-inequalities", "greek-alphabet", "logarithms", "natural-numbers", "quadratic-function", "sets-and-logic", "vectors"];
+    private static readonly string[] ExpectedChapterStatuses = ["available", "placeholder"];
+    private static readonly string[] ExpectedContentBlockTypes = ["richText", "image"];
     private static readonly string[] ExpectedUnavailableChapterTitles =
-        ["Ciągi liczbowe", "Funkcja kwadratowa", "Liczby pierwsze", "Logarytmy", "Rachunek zbiorów i logika", "Równania i nierówności"];
+        ["Ciągi liczbowe", "Liczby pierwsze"];
     private static readonly string[] ExpectedTask7Options =
         ["\\(g(x)=-2x+2\\)", "\\(g(x)=-2x\\)", "\\(g(x)=-2x+6\\)", "\\(g(x)=-2x+8\\)"];
 
@@ -29,12 +33,19 @@ public sealed partial class ContentInventoryTests
         Assert.NotEmpty(formulas.Introduction);
         Assert.Equal(Enumerable.Range(1, 18), formulas.Articles.Select(item => item.Order));
         Assert.All(formulas.Articles, item => Assert.NotEmpty(item.Blocks));
-        Assert.Equal(7, chapters.Chapters.Count);
+        Assert.Equal(9, chapters.Chapters.Count);
         Assert.NotEmpty(chapters.Introduction);
-        var availableChapter = Assert.Single(chapters.Chapters, item => item.IsAvailable);
-        Assert.Equal("vectors", availableChapter.Id);
-        Assert.NotEmpty(availableChapter.Blocks);
-        Assert.Equal(8, availableChapter.Blocks.Count(block => block.Type == "image"));
+        Assert.Equal(
+            ExpectedAvailableChapterIds,
+            chapters.Chapters.Where(item => item.IsAvailable).Select(item => item.Id).Order());
+        Assert.All(chapters.Chapters.Where(item => item.IsAvailable), item => Assert.NotEmpty(item.Blocks));
+        var vectorChapter = chapters.Chapters.Single(item => item.Id == "vectors");
+        Assert.Equal(8, vectorChapter.Blocks.Count(block => block.Type == "image"));
+        Assert.Equal(chapters.Chapters.Count, chapters.Chapters.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
+        Assert.All(chapters.Chapters, item => Assert.Contains(item.Status, ExpectedChapterStatuses));
+        Assert.All(
+            chapters.Chapters.SelectMany(item => item.Blocks),
+            block => Assert.Contains(block.Type, ExpectedContentBlockTypes));
         Assert.Equal(6, placeholders.Items.Count);
         Assert.Equal(
             ExpectedPlaceholderIds,
@@ -42,6 +53,10 @@ public sealed partial class ContentInventoryTests
         Assert.Equal(
             ExpectedUnavailableChapterTitles,
             chapters.Chapters.Where(item => !item.IsAvailable).Select(item => item.Title).Order());
+        var roadmapIds = roadmap.Items.Select(item => item.Id).ToHashSet(StringComparer.Ordinal);
+        Assert.All(
+            chapters.Chapters.Where(item => item.RoadmapId is not null),
+            chapter => Assert.Contains(chapter.RoadmapId!, roadmapIds));
         Assert.Equal(17, exam.Topics.Count);
         Assert.NotEmpty(exam.Introduction);
         Assert.NotEmpty(exam.TopicIntroduction);
@@ -56,6 +71,9 @@ public sealed partial class ContentInventoryTests
         Assert.Contains(roadmap.Items, item => item.Id == "graph-generator" && item.Status == RoadmapStatus.Planned);
         Assert.Contains(roadmap.Items, item => item.Id == "trigonometric-calculator" && item.Status == RoadmapStatus.Planned);
         Assert.Contains(roadmap.Items, item => item.Id == "formula-editor-prototype" && item.Status == RoadmapStatus.Superseded);
+        Assert.Contains(roadmap.Items, item => item.Id == "natural-numbers" && item.Status == RoadmapStatus.Migrated);
+        Assert.Contains(roadmap.Items, item => item.Id == "greek-alphabet" && item.Status == RoadmapStatus.Migrated);
+        Assert.Contains(roadmap.Items, item => item.Id == "chapters-expansion" && item.Status == RoadmapStatus.Planned);
         Assert.Contains(placeholders.Items.Single(item => item.Id == "matura-2021").Blocks,
             block => block.Text is not null && block.Text.Contains("79%", StringComparison.Ordinal) && block.Text.Contains("56%", StringComparison.Ordinal));
 
@@ -198,6 +216,26 @@ public sealed partial class ContentInventoryTests
         }
     }
 
+    [Fact]
+    public void Every_chapter_rich_text_line_uses_balanced_single_line_math_delimiters()
+    {
+        var chapters = Read<ChapterCatalog>("Content/chapters.json");
+        var chapterTexts = chapters.Introduction
+            .Concat(chapters.Chapters.SelectMany(chapter => chapter.Blocks))
+            .Select(block => block.Text)
+            .Where(text => !string.IsNullOrWhiteSpace(text))
+            .Select(text => text!);
+
+        foreach (var line in chapterTexts.SelectMany(text =>
+                     text.Replace("\r\n", "\n", StringComparison.Ordinal).Split('\n')))
+        {
+            Assert.Equal(CountOccurrences(line, "\\("), CountOccurrences(line, "\\)"));
+            Assert.DoesNotContain('$', line);
+            Assert.DoesNotContain("\\[", line, StringComparison.Ordinal);
+            Assert.DoesNotContain("\\]", line, StringComparison.Ordinal);
+        }
+    }
+
     [GeneratedRegex(@"\\\((.*?)\\\)", RegexOptions.Singleline)]
     private static partial Regex InlineMathRegex();
 
@@ -223,6 +261,19 @@ public sealed partial class ContentInventoryTests
 
     private static T Read<T>(string relativePath) => JsonSerializer.Deserialize<T>(
         File.ReadAllText(Path.Combine(RepositoryRoot, relativePath.Replace('/', Path.DirectorySeparatorChar))), JsonOptions)!;
+
+    private static int CountOccurrences(string value, string marker)
+    {
+        var count = 0;
+        var offset = 0;
+        while ((offset = value.IndexOf(marker, offset, StringComparison.Ordinal)) >= 0)
+        {
+            count++;
+            offset += marker.Length;
+        }
+
+        return count;
+    }
 
     private static string FindRepositoryRoot()
     {
