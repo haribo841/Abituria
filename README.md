@@ -74,6 +74,7 @@ Opcjonalna analiza SonarQube Cloud jest przygotowana w osobnym workflow. Aktywac
 ## Architektura
 
 Formalny opis aktualnej architektury i diagram komponentów są w [dokumentacji architektury](docs/ARCHITECTURE.md).
+Aktywny dokument wymagań projektowych jest w [dokumencie wymagań](docs/REQUIREMENTS.md).
 
 - `AvaloniaApp/Models` - kontrakty treści i profili,
 - `AvaloniaApp/Data` - SQLite i migracje EF Core,

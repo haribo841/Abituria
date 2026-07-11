@@ -162,6 +162,7 @@ Historyczne issue #33 opisywało plan oparty o WPF i częściowo nieprecyzyjne r
 ## Powiązane dokumenty
 
 - `README.md` - uruchomienie, funkcje i skrócona struktura,
+- `docs/REQUIREMENTS.md` - aktywny dokument wymagań projektowych,
 - `docs/MIGRATION_INVENTORY.md` - mapowanie starych wersji WPF na aktualny kod Avalonia,
 - `docs/CONTENT_AUTHORING.md` - zasady edycji treści i podglądu materiałów,
 - `docs/CALCULATOR_TEST_MATRIX.md` - macierz regresji kalkulatora,
