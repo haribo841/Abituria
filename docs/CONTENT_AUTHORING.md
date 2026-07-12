@@ -5,6 +5,8 @@ Kod C# odpowiada za wczytanie, walidację i wyświetlenie treści. Długie opisy
 - `Content/formulas.json` - tablice wzorów,
 - `Content/chapters.json` - materiały działowe,
 - `Content/exam-2021-correction.json` - zadania, odpowiedzi i podpowiedzi,
+- `Content/placeholders.json` - treść ekranów zaplanowanych lub zastąpionych,
+- `Content/roadmap.json` - opis planu rozwoju,
 - `Content/ui-copy.json` - dłuższe statyczne objaśnienia interfejsu.
 
 Kanoniczne źródło treści i statusów wprowadzonych dla issue #35 znajduje się w `tools/seeds/issue-35-content.json`. Po jego edycji należy odtworzyć aktywne `Content/chapters.json` i `Content/roadmap.json`:
@@ -15,7 +17,9 @@ powershell -ExecutionPolicy Bypass -File tools/Sync-Issue35Content.ps1
 
 Test end-to-end uruchamia importer do pustego katalogu i wymaga semantycznej zgodności wyniku z aktywnymi katalogami, więc rozbieżność seeda, importera i aplikacji blokuje testy.
 
-Tekst matematyczny używa ograniczników `\(` oraz `\)`. Każdy logiczny wiersz jest renderowany jako jeden przepływ inline. Historyczny znacznik listy `\(-\)` jest wyświetlany jako zwykły znak `-`, a pozostałe fragmenty matematyczne używają `MathView` na wspólnej linii bazowej.
+Tekst matematyczny używa ograniczników `\(` oraz `\)`. Każdy fizyczny wiersz musi zawierać kompletne, niezagnieżdżone i niepuste pary ograniczników. Nie wolno otwierać wzoru w jednym wierszu lub bloku i zamykać go w następnym. `TextView` oraz jego `TextPainter` renderują cały poprawny wiersz jako jeden przepływ tekstu i matematyki. Historyczny znacznik listy `\(-\)` jest wcześniej normalizowany do zwykłego znaku `-`.
+
+Niepoprawny wiersz jest wyświetlany w całości jako zwykły tekst i nie trafia nawet częściowo do CSharpMath. Test inwentarza sprawdza ten kontrakt dla wszystkich treści faktycznie kierowanych do `RichContentView`. Importer usuwa fizyczne końce wiersza występujące wewnątrz historycznych wzorów, zachowując polecenia LaTeX `\\` odpowiedzialne za zamierzone łamanie wzoru.
 
 Tabele w bloku `richText` używają składni z pionowymi kreskami i obowiązkowym wierszem separatora. Renderer tworzy z niej prawdziwy układ kolumnowy, a treść pozostaje czytelna bez kompilacji:
 

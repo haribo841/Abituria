@@ -115,6 +115,11 @@ function Repair-LegacyLatex([string]$Value) {
     return $value.Trim()
 }
 
+function ConvertTo-SingleLineMath([string]$Value) {
+    $singleLine = [regex]::Replace($Value, '[ \t]*(?:\r\n|\r|\n)[ \t]*', ' ')
+    return "\($singleLine\)"
+}
+
 function Add-XamlTokens([System.Xml.XmlNode]$Node, [System.Collections.Generic.List[object]]$Tokens) {
     if ($Node.NodeType -in @([System.Xml.XmlNodeType]::Text, [System.Xml.XmlNodeType]::CDATA)) {
         $value = [regex]::Replace($Node.Value, '\s+', ' ')
@@ -232,7 +237,7 @@ function Get-Hints([string]$Code) {
     $hintMatches = [regex]::Matches($arrayMatch.Groups['body'].Value, '@"(?<value>(?:""|[^"])*)"', [System.Text.RegularExpressions.RegexOptions]::Singleline)
     foreach ($match in $hintMatches) {
         $value = $match.Groups['value'].Value.Replace('""', '"')
-        $hints.Add("\($(Repair-LegacyLatex $value)\)")
+        $hints.Add((ConvertTo-SingleLineMath (Repair-LegacyLatex $value)))
     }
     return $hints.ToArray()
 }
@@ -244,7 +249,7 @@ function Get-RevealedAnswer([string]$Code) {
         if ([string]::IsNullOrWhiteSpace($value)) { continue }
         $value = Repair-LegacyLatex $value
         if ($value.Contains('\')) {
-            return "\($value\)"
+            return ConvertTo-SingleLineMath $value
         }
         return $value
     }

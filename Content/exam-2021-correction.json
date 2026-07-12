@@ -476,7 +476,7 @@
                                        "correctOption":  4,
                                        "hints":  [
                                                      "\\(\\text{Sporządź rysunek pomocniczy i odczytaj z niego zbiór wartości funkcji.}\\)",
-                                                     "\\(\\text{Wykresem będzie parabola. Należy przekształcić  wykres funkcji kwadratowej} \\\\ f(x)=x^2 \\; \\text{poprzez odwrócenie paraboli wobec osi } \\; OX, \\; \\text{o czym informuje minus przed } \\; x^2.\n                \\\\ \\text{Parabolę trzeba narysować o 4 jednostki wyżej, o czym informuje +4 zawarte we wzorze.}\\)",
+                                                     "\\(\\text{Wykresem będzie parabola. Należy przekształcić  wykres funkcji kwadratowej} \\\\ f(x)=x^2 \\; \\text{poprzez odwrócenie paraboli wobec osi } \\; OX, \\; \\text{o czym informuje minus przed } \\; x^2. \\\\ \\text{Parabolę trzeba narysować o 4 jednostki wyżej, o czym informuje +4 zawarte we wzorze.}\\)",
                                                      "\\(\\text{Wartości funkcji należy odczytać z osi } \\; OY. \\; \\text{Funkcja przyjmuje wartości od} \\;-\\infty \\; \\text{do 4, więc zbiorem jej wartości jest przedział} \\;  (- \\infty , 4\u003e.\\)"
                                                  ],
                                        "revealedAnswer":  null,
@@ -588,7 +588,7 @@
                                                    ],
                                        "correctOption":  3,
                                        "hints":  [
-                                                     "\\(\\text{Wyliczenie wartości } \\; x \\; \\text{będzie łatwe, gdy przypomnisz sobie własności ciągów geometrycznych.}\n\\\\ \\text{Wynika z nich, iż dla trzech kolejnych wyrazów ciągu geometrycznego zachodzi:} \\\\ a_2^2=a_1 \\cdot a_3\\)",
+                                                     "\\(\\text{Wyliczenie wartości } \\; x \\; \\text{będzie łatwe, gdy przypomnisz sobie własności ciągów geometrycznych.} \\\\ \\text{Wynika z nich, iż dla trzech kolejnych wyrazów ciągu geometrycznego zachodzi:} \\\\ a_2^2=a_1 \\cdot a_3\\)",
                                                      "\\(\\text{Podstaw dane:} \\\\ x^2 = 2 \\cdot 18 \\\\ x^2 = 36 \\\\ x=6 \\; \\bigvee \\; x=-6\\)",
                                                      "\\(\\text{Otrzymano dwie wartości, ale tylko jedna jest poprawna. Dla } \\; x=-6 \\\\ \\text{ciąg będzie niemonotoniczny, a nie rosnący. Właściwe rozwiązanie to} \\; x=6.\\)"
                                                  ],
@@ -674,9 +674,9 @@
                                        "hints":  [
                                                      "\\(\\text{Przeanalizuj sytuację i oblicz miary kątów} \\; OBC \\; \\text{i} \\; OCB.\\)",
                                                      "\\(\\text{Trójkąt} \\; COB \\; \\text{jest równoramienny, wobec czego kąty przy podstawie} \\; BC \\; \\text{mają jednakową miarę.}\\)",
-                                                     "\\(\\text{Miara jednego z kątów } \\; COB \\; \\text{jest znana i wynosi } \\; 100^\\circ . \\\\\n\\text{Suma miar kątów w trójkącie wynosi } \\; 180^ \\circ , \\; \\text{co oznacza, że na kąty } \\\\\nOBC \\; \\text{i} \\; OCB  \\; \\text{pozostało łącznie } \\; 80^\\circ .\\)",
+                                                     "\\(\\text{Miara jednego z kątów } \\; COB \\; \\text{jest znana i wynosi } \\; 100^\\circ . \\\\ \\text{Suma miar kątów w trójkącie wynosi } \\; 180^ \\circ , \\; \\text{co oznacza, że na kąty } \\\\ OBC \\; \\text{i} \\; OCB  \\; \\text{pozostało łącznie } \\; 80^\\circ .\\)",
                                                      "\\(80^\\circ : 2=40^\\circ , \\; \\text{więc każdy z tych kątów ma miarę } \\; 40^\\circ .\\)",
-                                                     "\\(\\text{W kolejnym kroku należy obliczyć miary kąta BAC. } \\\\ \\text{Odcinki} \\; OB \\; \\text{oraz} \\; OC \\;\n\\text{są dwusiecznymi kątów } ABC \\; \\text{i} \\; ACB \\\\\n\\text{oraz muszą mieć po } \\; 80^\\circ , \\; \\text{skoro kąty } \\; OBC \\; \\text{oraz} \\; OCB \\; \\text{mają po } \\; 40^\\circ .\\)",
+                                                     "\\(\\text{W kolejnym kroku należy obliczyć miary kąta BAC. } \\\\ \\text{Odcinki} \\; OB \\; \\text{oraz} \\; OC \\; \\text{są dwusiecznymi kątów } ABC \\; \\text{i} \\; ACB \\\\ \\text{oraz muszą mieć po } \\; 80^\\circ , \\; \\text{skoro kąty } \\; OBC \\; \\text{oraz} \\; OCB \\; \\text{mają po } \\; 40^\\circ .\\)",
                                                      "\\(|BAC|=180^ \\circ -80^ \\circ -80^ \\circ =20^ \\circ\\)"
                                                  ],
                                        "revealedAnswer":  null,
@@ -703,7 +703,7 @@
                                        "correctOption":  4,
                                        "hints":  [
                                                      "\\(\\text{Przeanalizuj sytuację i oblicz miary kąta } \\; CEB \\; \\text{który jest kątem przyległym do kąta } \\; AEB.\\)",
-                                                     "\\(\\text{Suma kątów przyległych wynosi zawsze } \\; 180^ \\circ , \\; \\text{z danymi daje to:}\n\\\\ |CEB|= 180^ \\circ - 140 ^ \\circ  = 40^ \\circ\\)",
+                                                     "\\(\\text{Suma kątów przyległych wynosi zawsze } \\; 180^ \\circ , \\; \\text{z danymi daje to:} \\\\ |CEB|= 180^ \\circ - 140 ^ \\circ  = 40^ \\circ\\)",
                                                      "\\(\\text{Teraz należy obliczyć brakującą miarę kąta EBC:} \\\\ |EBC| = 180^ \\circ - 55^ \\circ  - |CEB| = 85^ \\circ\\)",
                                                      "\\(|DAC|=|EBC|=85^ \\circ\\)"
                                                  ],
@@ -732,12 +732,12 @@
                                        "hints":  [
                                                      "\\(\\text{Figury w zadaniu są prostokątami podobnymi. Spróbuj znaleźć stosunek długości ich boków.}\\)",
                                                      "\\(\\text{Mniejszy prostokąt, AEFG, ma wymiary 40 x 30, co oznacza, że stosunek długości jego boków wynosi 40:30, po skróceniu 4:3.}\\)",
-                                                     "\\(\\text{Prostokąt ABCD i AEFG są podobne, wobec czego stosunek długości jego boków również wynosi 4:3:}\n\\\\ AB = 4x \\text{oraz} BC = 3x\\)",
-                                                     "\\(\\text{Przekątna prostokąta ABCD ma długość równą 70. Wraz z bokami AB i BC tworzy ona trójkąt prostokątny, } \n\\\\ \\text{którego właściwości umożliwiają wyliczenie długości tych boków. Wystarczy zastosować Twierdzenie Pitagorasa mając na uwadze, że przyprostokątne trójkąta ABC mają długość 3x oraz 4x, a przeciwprostokątna równą 70:}\\)",
-                                                     "\\((3x)^2+(4x)^2=70^2\n\\\\ 9x^2+16x^2=4900 \\\\ 25x^2=4900 \\\\ x^2=196 \\\\ x=14 \\; \\bigvee \\; x=-14\\)",
-                                                     "\\(\\text{Akceptujemy tylko wartość nieujemną, czyli } \\; x=14. \\\\ \n\\text{Po jej podstawieniu otrzymasz wartości długości boków prostokąta ABCD:}\\)",
+                                                     "\\(\\text{Prostokąt ABCD i AEFG są podobne, wobec czego stosunek długości jego boków również wynosi 4:3:} \\\\ AB = 4x \\text{oraz} BC = 3x\\)",
+                                                     "\\(\\text{Przekątna prostokąta ABCD ma długość równą 70. Wraz z bokami AB i BC tworzy ona trójkąt prostokątny, } \\\\ \\text{którego właściwości umożliwiają wyliczenie długości tych boków. Wystarczy zastosować Twierdzenie Pitagorasa mając na uwadze, że przyprostokątne trójkąta ABC mają długość 3x oraz 4x, a przeciwprostokątna równą 70:}\\)",
+                                                     "\\((3x)^2+(4x)^2=70^2 \\\\ 9x^2+16x^2=4900 \\\\ 25x^2=4900 \\\\ x^2=196 \\\\ x=14 \\; \\bigvee \\; x=-14\\)",
+                                                     "\\(\\text{Akceptujemy tylko wartość nieujemną, czyli } \\; x=14. \\\\ \\text{Po jej podstawieniu otrzymasz wartości długości boków prostokąta ABCD:}\\)",
                                                      "\\(|AB| = 4x = 4 \\cdot 14 = 56 \\\\ |BC| = 3x = 3 \\cdot 14 = 42\\)",
-                                                     "\\(\\text{Wymiary prostokąta ABCD to 56 x 42 jednostek. Z tą wiedzą możesz obliczyć jego obwód:}\n\\\\ Obw = 2 \\cdot 56 + 2 \\cdot 42 = 112 + 84 = 196\\)"
+                                                     "\\(\\text{Wymiary prostokąta ABCD to 56 x 42 jednostek. Z tą wiedzą możesz obliczyć jego obwód:} \\\\ Obw = 2 \\cdot 56 + 2 \\cdot 42 = 112 + 84 = 196\\)"
                                                  ],
                                        "revealedAnswer":  null,
                                        "assets":  [
@@ -789,7 +789,7 @@
                                                    ],
                                        "correctOption":  1,
                                        "hints":  [
-                                                     "\\(\\text{Proste są prostopadłe względem siebie, jeżeli ich współczynniki kierunkowe spełniają zależność:} \\\\ \na_1 \\cdot a_2=-1\\)",
+                                                     "\\(\\text{Proste są prostopadłe względem siebie, jeżeli ich współczynniki kierunkowe spełniają zależność:} \\\\ a_1 \\cdot a_2=-1\\)",
                                                      "\\(- \\frac{4}{7} \\cdot a_k = -1\\)",
                                                      "\\(- \\frac{4}{7} \\cdot \\frac{7}{4} = -1\\)",
                                                      "\\(\\text{Współczynnik prostej prostopadłej do } k \\text{ jest zatem równy } \\frac{7}{4}.\\)"
@@ -821,7 +821,7 @@
                                                      "\\(|AC| = \\sqrt{(x_C-x_A)^2+(y_C-y_A)^2}\\)",
                                                      "\\(|AC| = \\sqrt{(-4-3)^2+(6-7)^2} = \\sqrt{(-7)^2+(-1)^2} = \\sqrt{49+1} = \\sqrt{50} = \\sqrt{25 \\cdot 2}\\)",
                                                      "\\(|AC| = 5\\sqrt{2}\\)",
-                                                     "\\(\\text{Oblicz długość promienia okręgu pamiętając, że promień okręgu opisanego na kwadracie jest równy długości połowy przekątnej,} \\\\  \\text{której długość przed chwilą obliczono, więc:}\n\\\\ r=\\frac{5\\sqrt{2}}{2}\\)"
+                                                     "\\(\\text{Oblicz długość promienia okręgu pamiętając, że promień okręgu opisanego na kwadracie jest równy długości połowy przekątnej,} \\\\  \\text{której długość przed chwilą obliczono, więc:} \\\\ r=\\frac{5\\sqrt{2}}{2}\\)"
                                                  ],
                                        "revealedAnswer":  null,
                                        "assets":  [
@@ -846,7 +846,7 @@
                                                    ],
                                        "correctOption":  3,
                                        "hints":  [
-                                                     "\\(\\text{Oblicz pole powierzchni sześciokąta znajdującego się w dolnej i górnej podstawie bryły. } \\\\ \\text{Jego pole jest równe polu sześciu mniejszych trójkątów równobocznych o boku długości 2:}\n\\\\ P_p = 6 \\cdot \\frac{a^2 \\sqrt{3}}{4} = 6 \\cdot \\frac{2^2 \\sqrt{3}}{4} = 6 \\cdot \\frac{4 \\sqrt{3}}{4}\n\\\\ P_p = 6 \\sqrt{3}\\)",
+                                                     "\\(\\text{Oblicz pole powierzchni sześciokąta znajdującego się w dolnej i górnej podstawie bryły. } \\\\ \\text{Jego pole jest równe polu sześciu mniejszych trójkątów równobocznych o boku długości 2:} \\\\ P_p = 6 \\cdot \\frac{a^2 \\sqrt{3}}{4} = 6 \\cdot \\frac{2^2 \\sqrt{3}}{4} = 6 \\cdot \\frac{4 \\sqrt{3}}{4} \\\\ P_p = 6 \\sqrt{3}\\)",
                                                      "\\(\\text{Następnie oblicz pole całkowite: dwie podstawy oraz sześć kwadratowych ścian bocznych.} \\\\ P_c=2\\cdot6\\sqrt{3}+6\\cdot2\\cdot2=12\\sqrt{3}+24\\)"
                                                  ],
                                        "revealedAnswer":  null,
@@ -872,10 +872,10 @@
                                                    ],
                                        "correctOption":  1,
                                        "hints":  [
-                                                     "\\(\\text{Oblicz długość krawędzi sześcianu używając wzoru na przekątną sześcianu:}\n\\\\ d = a \\sqrt{3}\\)",
-                                                     "\\(\\text{Przekątna ma długość 6, a zatem po podstawieniu:} \n\\\\ a \\sqrt{3} = 6 \\\\ a = \\frac{6}{\\sqrt{3}} = \\frac{6 \\cdot \\sqrt{3}}{\\sqrt{3} \\cdot \\sqrt{3}} = \\frac{6\\sqrt{3}}{3}\n\\\\ a = 2\\sqrt{3}\\)",
-                                                     "\\(\\text{Oblicz objętość sześcianu używając wzoru:} \n\\\\ V = a^3\\)",
-                                                     "\\(V = (2 \\sqrt{3})^3 = 8 \\cdot 3 \\sqrt{3}\n\\\\ V = 24\\sqrt{3}\\)"
+                                                     "\\(\\text{Oblicz długość krawędzi sześcianu używając wzoru na przekątną sześcianu:} \\\\ d = a \\sqrt{3}\\)",
+                                                     "\\(\\text{Przekątna ma długość 6, a zatem po podstawieniu:} \\\\ a \\sqrt{3} = 6 \\\\ a = \\frac{6}{\\sqrt{3}} = \\frac{6 \\cdot \\sqrt{3}}{\\sqrt{3} \\cdot \\sqrt{3}} = \\frac{6\\sqrt{3}}{3} \\\\ a = 2\\sqrt{3}\\)",
+                                                     "\\(\\text{Oblicz objętość sześcianu używając wzoru:} \\\\ V = a^3\\)",
+                                                     "\\(V = (2 \\sqrt{3})^3 = 8 \\cdot 3 \\sqrt{3} \\\\ V = 24\\sqrt{3}\\)"
                                                  ],
                                        "revealedAnswer":  null,
                                        "assets":  [
@@ -901,10 +901,10 @@
                                        "correctOption":  2,
                                        "hints":  [
                                                      "\\(\\text{Przypomnij sobie reguły mnożenia i na tej podstawie przeanalizuj możliwości uzupełnienia cyfr.}\\)",
-                                                     "\\(\\text{Pierwsza cyfra - żadna liczba nie może zaczynać się od zera, dlatego dostępne są cyfry od 1 do 9,}\n\\\\ \\text{ wobec czego rozważane jest 9 możliwości,}\\)",
+                                                     "\\(\\text{Pierwsza cyfra - żadna liczba nie może zaczynać się od zera, dlatego dostępne są cyfry od 1 do 9,} \\\\ \\text{ wobec czego rozważane jest 9 możliwości,}\\)",
                                                      "\\(\\text{Na drugiej, trzeciej i czwartej pozycji można użyć każdej cyfry od 0 do 9, czyli po 10 możliwości.}\\)",
-                                                     "\\(\\text{Piąta cyfra - liczba będzie parzysta, gdy będzie kończyła się cyfrą parzystą,}\n\\\\ \\text{ więc dla piątego miejsca dostępne są cyfry 2, 4, 6, 8 oraz 0, co daje łącznie 5 możliwości.}\\)",
-                                                     "\\(\\text{Reguła mnożenia mówi, że wszystkich liczb pięciocyfrowych parzystych jest:}\n\\\\ 9 \\cdot 10 \\cdot 10 \\cdot 10 \\cdot 5\\)",
+                                                     "\\(\\text{Piąta cyfra - liczba będzie parzysta, gdy będzie kończyła się cyfrą parzystą,} \\\\ \\text{ więc dla piątego miejsca dostępne są cyfry 2, 4, 6, 8 oraz 0, co daje łącznie 5 możliwości.}\\)",
+                                                     "\\(\\text{Reguła mnożenia mówi, że wszystkich liczb pięciocyfrowych parzystych jest:} \\\\ 9 \\cdot 10 \\cdot 10 \\cdot 10 \\cdot 5\\)",
                                                      "\\(10 \\cdot 10 \\cdot 10 = 10^3, więc odpowiedzią jest 9 \\cdot 5 \\cdot 10^3\\)"
                                                  ],
                                        "revealedAnswer":  null,
@@ -930,8 +930,8 @@
                                                    ],
                                        "correctOption":  3,
                                        "hints":  [
-                                                     "\\(\\text{Stosunek kul białych do czerwonych (3:4) można zapisać jako:}\n\\\\ 3x - \\text{liczba kul białych} \\\\ 4x - \\text{liczba kul czerwonych}\n\\\\ 3x + 4x = 7x -  \\text{liczba kul łącznie}\n\\\\ A - \\; \\text{- zdarzenie wylosowania kuli białej}\\)",
-                                                     "\\(\\text{Prawdopodobieństwo oblicza się ze wzoru:}\n\\\\ P(A) = \\frac{|A|}{| \\Omega |} \\; \\text{gdzie} \\\\\n|A| - \\text{to liczba zdarzeń sprzyjających} \\\\\n| \\Omega | - \\text{to liczba wszystkich możliwych zdarzeń}\\)",
+                                                     "\\(\\text{Stosunek kul białych do czerwonych (3:4) można zapisać jako:} \\\\ 3x - \\text{liczba kul białych} \\\\ 4x - \\text{liczba kul czerwonych} \\\\ 3x + 4x = 7x -  \\text{liczba kul łącznie} \\\\ A - \\; \\text{- zdarzenie wylosowania kuli białej}\\)",
+                                                     "\\(\\text{Prawdopodobieństwo oblicza się ze wzoru:} \\\\ P(A) = \\frac{|A|}{| \\Omega |} \\; \\text{gdzie} \\\\ |A| - \\text{to liczba zdarzeń sprzyjających} \\\\ | \\Omega | - \\text{to liczba wszystkich możliwych zdarzeń}\\)",
                                                      "\\(P(A) = \\frac{3x}{7x} = \\frac{3}{7}\\)"
                                                  ],
                                        "revealedAnswer":  null,
@@ -984,8 +984,8 @@
                                        "hints":  [
                                                      "\\(\\text{Doprowadź nierówność do postaci ogólnej przenosząc wyrazy na lewą stronę.}\\)",
                                                      "\\(x^2 - 5 \\geq 4x \\\\ x^2 - 4x - 5 \\geq 0\\)",
-                                                     "\\(\\\\ \\text{Znajdź miejsca zerowe:} \\\\\n\\Delta = b^2 -4ac = (-4)^2 - 4 \\cdot 1 \\cdot (-5)=16-(-20)=16+20=36 \\\\ \\sqrt{\\Delta} = \\sqrt{36} = 6\\)",
-                                                     "\\(x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a} = \\frac{-(-4)-6}{2 \\cdot 1} = \\frac{4-6}{2} = \\frac{-2}{2} = -1 \\\\\nx_2 = \\frac{-b + \\sqrt{\\Delta}}{2a} = \\frac{-(-4)+6}{2 \\cdot 1} = \\frac{4+6}{2} = \\frac{10}{2} = 5\\)",
+                                                     "\\(\\\\ \\text{Znajdź miejsca zerowe:} \\\\ \\Delta = b^2 -4ac = (-4)^2 - 4 \\cdot 1 \\cdot (-5)=16-(-20)=16+20=36 \\\\ \\sqrt{\\Delta} = \\sqrt{36} = 6\\)",
+                                                     "\\(x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a} = \\frac{-(-4)-6}{2 \\cdot 1} = \\frac{4-6}{2} = \\frac{-2}{2} = -1 \\\\ x_2 = \\frac{-b + \\sqrt{\\Delta}}{2a} = \\frac{-(-4)+6}{2 \\cdot 1} = \\frac{4+6}{2} = \\frac{10}{2} = 5\\)",
                                                      "\\(\\text{Ponieważ współczynnik wiodący } a=1\u003e0, \\text{ ramiona paraboli są skierowane w górę. Zaznacz miejsca zerowe } -1 \\text{ i } 5.\\)",
                                                      "\\(\\text{Nierówność jest spełniona na osi i nad osią } Ox, \\text{ więc } x\\in(-\\infty,-1]\\cup[5,+\\infty).\\)"
                                                  ],
@@ -1009,11 +1009,11 @@
                                                    ],
                                        "correctOption":  null,
                                        "hints":  [
-                                                     "\\(\\text{Upewnij się, że nie wystąpi dzielenie przez 0 (mianownik), zapisując założenie:}\n\\\\ x-7 \\neq 0 \\\\ x \\neq 7\\)",
-                                                     "\\(\\text{Przemnóż obie strony równania przez wyrażenie} \\; x-7\n\\\\ \\frac{x+8}{x-7} = 2x \\; \\; / \\cdot (x-7)\n\\\\ x+8=2x^2 - 14 x\n\\\\ -2x^2 + 15x+8 = 0\\)",
-                                                     "\\(\\text{Korzystając z metody delty rozwiąż równanie kwadratowe:}\n\\\\ \\Delta = b^2 -4ac = 15^2 - 4 \\cdot (-2) \\cdot 8=225-(-64)=225+64=289 \\\\ \\sqrt{\\Delta} = \\sqrt{289} = 17\\)",
-                                                     "\\(x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a} = \\frac{-15-17}{2 \\cdot (-2)} = \\frac{-32}{-4} = 8 \\\\\nx_2 = \\frac{-b + \\sqrt{\\Delta}}{2a} = \\frac{-15+17}{2 \\cdot (-2)} = \\frac{2}{-4} = -\\frac{1}{2}\\)",
-                                                     "\\(\\text{Założenia nie wykluczają żadnego z rozwiązań, więc oba są poprawne:} \\\\\nx=-\\frac{1}{2} \\; \\; \\bigvee \\; \\; x=8\\)"
+                                                     "\\(\\text{Upewnij się, że nie wystąpi dzielenie przez 0 (mianownik), zapisując założenie:} \\\\ x-7 \\neq 0 \\\\ x \\neq 7\\)",
+                                                     "\\(\\text{Przemnóż obie strony równania przez wyrażenie} \\; x-7 \\\\ \\frac{x+8}{x-7} = 2x \\; \\; / \\cdot (x-7) \\\\ x+8=2x^2 - 14 x \\\\ -2x^2 + 15x+8 = 0\\)",
+                                                     "\\(\\text{Korzystając z metody delty rozwiąż równanie kwadratowe:} \\\\ \\Delta = b^2 -4ac = 15^2 - 4 \\cdot (-2) \\cdot 8=225-(-64)=225+64=289 \\\\ \\sqrt{\\Delta} = \\sqrt{289} = 17\\)",
+                                                     "\\(x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a} = \\frac{-15-17}{2 \\cdot (-2)} = \\frac{-32}{-4} = 8 \\\\ x_2 = \\frac{-b + \\sqrt{\\Delta}}{2a} = \\frac{-15+17}{2 \\cdot (-2)} = \\frac{2}{-4} = -\\frac{1}{2}\\)",
+                                                     "\\(\\text{Założenia nie wykluczają żadnego z rozwiązań, więc oba są poprawne:} \\\\ x=-\\frac{1}{2} \\; \\; \\bigvee \\; \\; x=8\\)"
                                                  ],
                                        "revealedAnswer":  "\\(\\text{Odpowiedź:} \\; x=-\\frac{1}{2} \\; \\bigvee \\; x=8\\)",
                                        "assets":  [
@@ -1035,10 +1035,10 @@
                                                    ],
                                        "correctOption":  null,
                                        "hints":  [
-                                                     "\\(\\text{Spróbuj wymnożyć} \\; b \\; \\text{przez wartości w nawiasach i uporządkować całe wyrażenie, co daje:} \\\\\n5b^2 - 4ab+a^2 \\geq 0 \\\\ a^2 - 4ab+5b^2 \\geq 0\\)",
-                                                     "\\(\\text{Otrzymany zapis przypomina nieco to, co przedstawiają wzory skróconego mnożenia, ale przeszkodą jest wartość} \\\\\n5b^2. \\; \\text{Należy rozpisać tę liczbę jako} \\\\\n4b^2+b^2 \\; \\text{co da:} \\\\ a^2 - 4ab + 4b^2 + b^2 \\geq 0\\)",
+                                                     "\\(\\text{Spróbuj wymnożyć} \\; b \\; \\text{przez wartości w nawiasach i uporządkować całe wyrażenie, co daje:} \\\\ 5b^2 - 4ab+a^2 \\geq 0 \\\\ a^2 - 4ab+5b^2 \\geq 0\\)",
+                                                     "\\(\\text{Otrzymany zapis przypomina nieco to, co przedstawiają wzory skróconego mnożenia, ale przeszkodą jest wartość} \\\\ 5b^2. \\; \\text{Należy rozpisać tę liczbę jako} \\\\ 4b^2+b^2 \\; \\text{co da:} \\\\ a^2 - 4ab + 4b^2 + b^2 \\geq 0\\)",
                                                      "\\(a^2-4ab+4b^2+b^2=(a-2b)^2+b^2\\)",
-                                                     "\\((a-2b)^2 \\; \\text{jest większa od zera lub równa zero,ponieważ jakakolwiek liczba podniesiona do kwadratu da wynik nieujemny. \\\\ \nPodobnie wartość} \\; b^2 \\; \\text{jest większa lub równa zero. To oznacza, że suma tych dwóch nieujemnych liczb na pewno będzie większa lub równa zero, co kończy dowodzenie.}\\)"
+                                                     "\\((a-2b)^2 \\; \\text{jest większa od zera lub równa zero,ponieważ jakakolwiek liczba podniesiona do kwadratu da wynik nieujemny. \\\\ Podobnie wartość} \\; b^2 \\; \\text{jest większa lub równa zero. To oznacza, że suma tych dwóch nieujemnych liczb na pewno będzie większa lub równa zero, co kończy dowodzenie.}\\)"
                                                  ],
                                        "revealedAnswer":  "\\(b(5b-4a)+a^2=(a-2b)^2+b^2\\geq0\\), ponieważ suma kwadratów liczb rzeczywistych jest nieujemna.",
                                        "assets":  [
@@ -1087,7 +1087,7 @@
                                        "hints":  [
                                                      "\\(\\text{Jedną z własności trapezów jest to, że przekątne trapezu dzielą go na trójkąty podobne ABS oraz CDS}\\)",
                                                      "\\(\\frac{AS}{SC} = \\frac{3}{2} \\; \\text{więc skala podobieństwa trójkątów jest równa } \\; k=\\frac{3}{2} \\; \\text{więc boki trójkąta ABS są o tyle razy większe}\\)",
-                                                     "\\(\\text{Oblicz pole powierzchni trójkąta CDS.} \\\\ \n\\text{z własności trójkątów podobnych wynika, że trójkąt podobny w skali k będzie miał} \\; k^2 \\; \\text{razy większe pole:}\\)",
+                                                     "\\(\\text{Oblicz pole powierzchni trójkąta CDS.} \\\\ \\text{z własności trójkątów podobnych wynika, że trójkąt podobny w skali k będzie miał} \\; k^2 \\; \\text{razy większe pole:}\\)",
                                                      "\\(P_{ABS} = k^2 \\cdot P_{CDS}\\)",
                                                      "\\(12 = (\\frac{3}{2} )^2 \\cdot P_{CDS}\\)",
                                                      "\\(12 = \\frac{9}{4} \\cdot P_{CDS}\\)",
@@ -1114,10 +1114,10 @@
                                        "correctOption":  null,
                                        "hints":  [
                                                      "\\(\\text{Wypisz wszystkie możliwe zdarzenia elementarne. }\\)",
-                                                     "\\(\\text{Wykonujemy niezależne rzuty dwoma kostkami. Na każdej kostce może wypaść wynik 1-6. Liczba zdarzeń elementarnych wynosi:}\n\\\\ |\\Omega | = 6 \\cdot 6 = 36\\)",
+                                                     "\\(\\text{Wykonujemy niezależne rzuty dwoma kostkami. Na każdej kostce może wypaść wynik 1-6. Liczba zdarzeń elementarnych wynosi:} \\\\ |\\Omega | = 6 \\cdot 6 = 36\\)",
                                                      "\\(\\text{Zdarzenie A polega na wyrzuceniu w dwóch rzutach takiej liczby oczek, że ich iloczyn równy jest 12.}\\)",
-                                                     "\\(\\text{Istnieją 4 możliwe kombinacje zdarzeń sprzyjających:}\n\\\\ (2,6), \\; (3,4), \\; (4, 3), \\; (6,2) \\\\ \\text{więc} \\; \\; |A|=4\\)",
-                                                     "\\(\\text{Oblicz prawdopodobieństwo korzystając ze wzoru:} \\\\\nP(A) = \\frac{|A|}{|\\Omega |} \\\\\nP(A)=\\frac{4}{36} = \\frac{1}{9}\\)"
+                                                     "\\(\\text{Istnieją 4 możliwe kombinacje zdarzeń sprzyjających:} \\\\ (2,6), \\; (3,4), \\; (4, 3), \\; (6,2) \\\\ \\text{więc} \\; \\; |A|=4\\)",
+                                                     "\\(\\text{Oblicz prawdopodobieństwo korzystając ze wzoru:} \\\\ P(A) = \\frac{|A|}{|\\Omega |} \\\\ P(A)=\\frac{4}{36} = \\frac{1}{9}\\)"
                                                  ],
                                        "revealedAnswer":  "\\(\\text{Odpowiedź:} \\; \\; P(A) = \\frac{1}{9}\\)",
                                        "assets":  [
@@ -1140,17 +1140,17 @@
                                        "correctOption":  null,
                                        "hints":  [
                                                      "\\(\\text{Oblicz wartość } \\; \\; a_4 \\; \\; \\text{oraz} \\; \\; a_11.\\)",
-                                                     "\\(\\text{Ciąg} \\; a_n \\; \\text{określony jest wzorem} \\; \\frac{5-3n}{7}\n\\\\ \\text{Czwarty i jedenasty wyraz tego ciągu znajdują się też w innym, trójwyrazowym ciągu geometrycznym, w którym należy szukać wartości niewiadomej} \\; x.\\)",
-                                                     "\\(\\text{Aby obliczyć wartość} \\; a_4 \\; \\text{do wzoru ciągu należy podstawić} \\; n=4:\n\\\\ a_4 = \\frac{5-3 \\cdot 4}{7} = \\frac{5-12}{7} = \\frac{-7}{7} = -1\\)",
-                                                     "\\(\\text{Aby obliczyć wartość} \\; a_11 \\; \\text{do wzoru ciągu należy podstawić} \\; n=11:\n\\\\ a_11 = \\frac{5-3 \\cdot 11}{7} = \\frac{5-33}{7} = \\frac{-28}{7} = -4\\)",
-                                                     "\\(\\text{Z własności ciągów geometrycznych wynika, że dla trzech kolejnych wyrazów ciągu geometrycznego zachodzi równość:}\n\\\\ a_2^2 = a_1 \\cdot a_3\\)",
-                                                     "\\(\\text{Aby obliczyć wartość} \\; x \\; \\text{znajdującą się w środkowym wyrazie ciągu geometrycznego, podstaw znane wartości:}\n\\\\ (x^2 +2)^2 = (-1) \\cdot (-4) \\\\ x^4 + 4x^2 +4 = 4 \\\\ x^4 + 4x^2 = 0\\)",
-                                                     "\\(\\text{Powstałe równanie jest czwartego stopnia, więc w celu jego rozwiązania wyłącz wartość } \\; x^2:\n\\\\ x^2(x^2 + 4) = 0\\)",
-                                                     "\\(\\text{Tak jak w przypadku postępowania z postacią iloczynową, przyrównaj wartości do zera:} \n\\\\ x^2 = 0 \\; \\; \\bigvee \\; \\; x^2+4=0 \\\\ x=0 \\; \\; \\bigvee \\; \\; x^2 = -4\\)",
+                                                     "\\(\\text{Ciąg} \\; a_n \\; \\text{określony jest wzorem} \\; \\frac{5-3n}{7} \\\\ \\text{Czwarty i jedenasty wyraz tego ciągu znajdują się też w innym, trójwyrazowym ciągu geometrycznym, w którym należy szukać wartości niewiadomej} \\; x.\\)",
+                                                     "\\(\\text{Aby obliczyć wartość} \\; a_4 \\; \\text{do wzoru ciągu należy podstawić} \\; n=4: \\\\ a_4 = \\frac{5-3 \\cdot 4}{7} = \\frac{5-12}{7} = \\frac{-7}{7} = -1\\)",
+                                                     "\\(\\text{Aby obliczyć wartość} \\; a_11 \\; \\text{do wzoru ciągu należy podstawić} \\; n=11: \\\\ a_11 = \\frac{5-3 \\cdot 11}{7} = \\frac{5-33}{7} = \\frac{-28}{7} = -4\\)",
+                                                     "\\(\\text{Z własności ciągów geometrycznych wynika, że dla trzech kolejnych wyrazów ciągu geometrycznego zachodzi równość:} \\\\ a_2^2 = a_1 \\cdot a_3\\)",
+                                                     "\\(\\text{Aby obliczyć wartość} \\; x \\; \\text{znajdującą się w środkowym wyrazie ciągu geometrycznego, podstaw znane wartości:} \\\\ (x^2 +2)^2 = (-1) \\cdot (-4) \\\\ x^4 + 4x^2 +4 = 4 \\\\ x^4 + 4x^2 = 0\\)",
+                                                     "\\(\\text{Powstałe równanie jest czwartego stopnia, więc w celu jego rozwiązania wyłącz wartość } \\; x^2: \\\\ x^2(x^2 + 4) = 0\\)",
+                                                     "\\(\\text{Tak jak w przypadku postępowania z postacią iloczynową, przyrównaj wartości do zera:} \\\\ x^2 = 0 \\; \\; \\bigvee \\; \\; x^2+4=0 \\\\ x=0 \\; \\; \\bigvee \\; \\; x^2 = -4\\)",
                                                      "\\(\\text{Nie istnieje taka liczba rzeczywista, która podniesiona do kwadratu da wartość -4, dlatego rozwiązanie to} \\; x=0.\\)",
-                                                     "\\(\\text{Drugi wyraz ciągu geometrycznego to } \\; x^2+2. \\; \\text{Oblicz jego wartość:}\n\\\\ a_2=0^2+2 \\\\ a_2 = 0 + 2 \\\\ a_2 = 2\\)",
+                                                     "\\(\\text{Drugi wyraz ciągu geometrycznego to } \\; x^2+2. \\; \\text{Oblicz jego wartość:} \\\\ a_2=0^2+2 \\\\ a_2 = 0 + 2 \\\\ a_2 = 2\\)",
                                                      "\\(\\text{Ciąg geometryczny przyjmuje postać:} \\; \\; -1, 2, -4\\)",
-                                                     "\\(\\text{Oblicz wartość ilorazu} \\; q=\\frac{a_2}{a_1}:\n\\\\ q=\\frac{2}{-1} \\\\ q=-2\\)"
+                                                     "\\(\\text{Oblicz wartość ilorazu} \\; q=\\frac{a_2}{a_1}: \\\\ q=\\frac{2}{-1} \\\\ q=-2\\)"
                                                  ],
                                        "revealedAnswer":  "\\(\\text{Odpowiedź:} \\; x=0, \\; q =-2\\)",
                                        "assets":  [

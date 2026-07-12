@@ -2,11 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using Abituria.Models;
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Controls.Documents;
 using Avalonia.Layout;
 using Avalonia.Media;
 using CSharpMath.Avalonia;
@@ -15,10 +13,8 @@ namespace Abituria.Ui;
 
 public sealed class RichContentView : UserControl
 {
-    private static readonly Regex InlineMath = new(
-        @"\\\((.*?)\\\)",
-        RegexOptions.Compiled,
-        TimeSpan.FromMilliseconds(250));
+    private const string InlineMathOpeningDelimiter = @"\(";
+    private const string InlineMathClosingDelimiter = @"\)";
 
     public RichContentView(IEnumerable<ContentBlock> blocks)
     {
@@ -41,7 +37,9 @@ public sealed class RichContentView : UserControl
     public static Control CreateText(string text)
     {
         var content = new StackPanel { Spacing = 8, HorizontalAlignment = HorizontalAlignment.Stretch };
-        var lines = text.Replace("\r\n", "\n", StringComparison.Ordinal).Split('\n');
+        var lines = text.Replace("\r\n", "\n", StringComparison.Ordinal)
+            .Replace('\r', '\n')
+            .Split('\n');
         for (var index = 0; index < lines.Length;)
         {
             if (TryCreateTable(lines, ref index, out var table))
@@ -62,45 +60,104 @@ public sealed class RichContentView : UserControl
         return content;
     }
 
-    public static TextBlock CreateInlineLine(string line)
+    public static Control CreateInlineLine(string line)
     {
-        var textBlock = new TextBlock
-        {
-            FontSize = 17,
-            TextWrapping = TextWrapping.Wrap,
-            HorizontalAlignment = HorizontalAlignment.Stretch,
-            ClipToBounds = false
-        };
+        ArgumentNullException.ThrowIfNull(line);
 
-        var offset = 0;
-        foreach (Match match in InlineMath.Matches(line))
+        if (!TryPrepareInlineMathLine(line, out var rendererInput) ||
+            !rendererInput.Contains(InlineMathOpeningDelimiter, StringComparison.Ordinal))
         {
-            AddPlainText(textBlock, line[offset..match.Index]);
-            var latex = match.Groups[1].Value;
-            if (IsListMarker(latex))
-            {
-                textBlock.Inlines!.Add(new Run("-"));
-            }
-            else
-            {
-                textBlock.Inlines!.Add(new InlineUIContainer(new MathView
-                {
-                    LaTeX = latex,
-                    FontSize = 17,
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    VerticalAlignment = VerticalAlignment.Center,
-                    ClipToBounds = false
-                })
-                {
-                    BaselineAlignment = BaselineAlignment.Baseline
-                });
-            }
-            offset = match.Index + match.Length;
+            return CreatePlainTextLine(line);
         }
 
-        AddPlainText(textBlock, line[offset..]);
-        return textBlock;
+        return new TextView
+        {
+            LaTeX = rendererInput,
+            FontSize = 17,
+            HorizontalAlignment = HorizontalAlignment.Stretch,
+            VerticalAlignment = VerticalAlignment.Center,
+            ClipToBounds = false
+        };
     }
+
+    public static bool HasBalancedInlineMathDelimiters(string line)
+    {
+        ArgumentNullException.ThrowIfNull(line);
+        return TryPrepareInlineMathLine(line, out _);
+    }
+
+    private static bool TryPrepareInlineMathLine(string line, out string rendererInput)
+    {
+        var prepared = new StringBuilder(line.Length);
+        var offset = 0;
+        while (offset < line.Length)
+        {
+            var opening = line.IndexOf(InlineMathOpeningDelimiter, offset, StringComparison.Ordinal);
+            var unexpectedClosing = line.IndexOf(InlineMathClosingDelimiter, offset, StringComparison.Ordinal);
+            if (unexpectedClosing >= 0 && (opening < 0 || unexpectedClosing < opening))
+            {
+                rendererInput = line;
+                return false;
+            }
+
+            if (opening < 0)
+            {
+                prepared.Append(line, offset, line.Length - offset);
+                rendererInput = prepared.ToString();
+                return true;
+            }
+
+            prepared.Append(line, offset, opening - offset);
+            if (!TryAppendInlineFormula(line, opening, prepared, out offset))
+            {
+                rendererInput = line;
+                return false;
+            }
+        }
+
+        rendererInput = prepared.ToString();
+        return true;
+    }
+
+    private static bool TryAppendInlineFormula(
+        string line,
+        int opening,
+        StringBuilder prepared,
+        out int nextOffset)
+    {
+        var formulaStart = opening + InlineMathOpeningDelimiter.Length;
+        var closing = line.IndexOf(InlineMathClosingDelimiter, formulaStart, StringComparison.Ordinal);
+        var nestedOpening = line.IndexOf(InlineMathOpeningDelimiter, formulaStart, StringComparison.Ordinal);
+        if (closing < 0 || (nestedOpening >= 0 && nestedOpening < closing))
+        {
+            nextOffset = opening;
+            return false;
+        }
+
+        var latex = line[formulaStart..closing];
+        if (string.IsNullOrWhiteSpace(latex))
+        {
+            nextOffset = opening;
+            return false;
+        }
+
+        if (IsListMarker(latex))
+            prepared.Append('-');
+        else
+            prepared.Append(InlineMathOpeningDelimiter).Append(latex).Append(InlineMathClosingDelimiter);
+
+        nextOffset = closing + InlineMathClosingDelimiter.Length;
+        return true;
+    }
+
+    private static TextBlock CreatePlainTextLine(string line) => new()
+    {
+        Text = line,
+        FontSize = 17,
+        TextWrapping = TextWrapping.Wrap,
+        HorizontalAlignment = HorizontalAlignment.Stretch,
+        ClipToBounds = false
+    };
 
     private static bool TryCreateTable(string[] lines, ref int index, out Control table)
     {
@@ -136,7 +193,7 @@ public sealed class RichContentView : UserControl
             for (var column = 0; column < rows[row].Length; column++)
             {
                 var text = CreateInlineLine(rows[row][column]);
-                if (row == 0) text.FontWeight = FontWeight.SemiBold;
+                if (row == 0 && text is TextBlock header) header.FontWeight = FontWeight.SemiBold;
                 var cell = new Border
                 {
                     Child = text,
@@ -209,11 +266,6 @@ public sealed class RichContentView : UserControl
 
         cells.Add(current.ToString().Trim());
         return cells.ToArray();
-    }
-
-    private static void AddPlainText(TextBlock content, string text)
-    {
-        if (text.Length > 0) content.Inlines!.Add(new Run(text));
     }
 
     private static bool IsListMarker(string latex) =>

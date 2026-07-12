@@ -1,5 +1,4 @@
 using System.Reflection;
-using System.Text.RegularExpressions;
 using Abituria.Services;
 using Abituria.Ui;
 using Abituria.Views;
@@ -56,14 +55,15 @@ public sealed class SonarRegressionTests
         Assert.True(typeof(ExpressionCalculator.CalculationException).IsNestedPublic);
     }
 
-    [Fact]
-    public void Inline_math_regex_has_a_finite_timeout()
+    [Theory]
+    [InlineData(@"\(x")]
+    [InlineData(@"x\)")]
+    [InlineData(@"\)x\(")]
+    [InlineData(@"\(outer \(nested\)\)")]
+    [InlineData(@"\(   \)")]
+    public void Inline_math_validator_rejects_malformed_lines(string line)
     {
-        var field = typeof(RichContentView).GetField("InlineMath", BindingFlags.NonPublic | BindingFlags.Static);
-        var regex = Assert.IsType<Regex>(field?.GetValue(null));
-
-        Assert.NotEqual(Regex.InfiniteMatchTimeout, regex.MatchTimeout);
-        Assert.InRange(regex.MatchTimeout, TimeSpan.FromMilliseconds(1), TimeSpan.FromSeconds(1));
+        Assert.False(RichContentView.HasBalancedInlineMathDelimiters(line));
     }
 
     [Fact]

@@ -4,7 +4,6 @@ using Abituria.Ui;
 using Abituria.Views;
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Controls.Documents;
 using Avalonia.Headless;
 using Avalonia.Headless.XUnit;
 using Avalonia.Media;
@@ -22,22 +21,16 @@ public sealed class Discussion10VisualRegressionTests
     {
         var sourceLines = ReadMathematicalListLines();
         var content = Assert.IsType<StackPanel>(RichContentView.CreateText(string.Join('\n', sourceLines)));
-        var renderedLines = content.Children.Cast<TextBlock>().ToArray();
+        var renderedLines = content.Children.Cast<Control>().ToArray();
 
         Assert.Equal(sourceLines.Length, renderedLines.Length);
         foreach (var line in renderedLines)
         {
-            var inlines = line.Inlines!.ToArray();
-            var formulaContainers = inlines.OfType<InlineUIContainer>().ToArray();
-
-            Assert.NotEmpty(formulaContainers);
-            Assert.StartsWith("-", Assert.IsType<Run>(inlines[0]).Text);
-            Assert.All(formulaContainers, container =>
-            {
-                Assert.Equal(BaselineAlignment.Baseline, container.BaselineAlignment);
-                Assert.IsType<MathView>(container.Child);
-            });
-            Assert.Contains(inlines, inline => inline is Run run && !string.IsNullOrWhiteSpace(run.Text));
+            var textView = Assert.IsType<TextView>(line);
+            Assert.StartsWith("-", textView.LaTeX);
+            Assert.DoesNotContain("\\(-\\)", textView.LaTeX, StringComparison.Ordinal);
+            Assert.Contains("\\(", textView.LaTeX, StringComparison.Ordinal);
+            Assert.True(string.IsNullOrWhiteSpace(textView.ErrorMessage), textView.ErrorMessage);
         }
     }
 
@@ -45,25 +38,17 @@ public sealed class Discussion10VisualRegressionTests
     public void Inline_formulas_are_arranged_inside_their_text_line_and_wrap_at_narrow_width()
     {
         var content = RichContentView.CreateText(string.Join('\n', ReadMathematicalListLines()));
-        var window = ShowInWindow(content, 480, 420);
+        var window = ShowInWindow(content, 320, 420);
         try
         {
-            var renderedLines = content.GetVisualDescendants().OfType<TextBlock>().ToArray();
+            var renderedLines = content.GetVisualDescendants().OfType<TextView>().ToArray();
 
             Assert.NotEmpty(renderedLines);
             Assert.Contains(renderedLines, line => line.Bounds.Height > 30d);
             foreach (var line in renderedLines)
             {
                 Assert.InRange(line.Bounds.Width, 1d, content.Bounds.Width + 0.1d);
-                var formulas = line.GetVisualDescendants().OfType<MathView>().ToArray();
-                Assert.NotEmpty(formulas);
-                foreach (var formula in formulas)
-                {
-                    var position = formula.TranslatePoint(default, line);
-                    Assert.NotNull(position);
-                    Assert.InRange(position.Value.Y, -1d, line.Bounds.Height + 1d);
-                    Assert.InRange(position.Value.Y + formula.Bounds.Height, 0d, line.Bounds.Height + 1d);
-                }
+                Assert.True(string.IsNullOrWhiteSpace(line.ErrorMessage), line.ErrorMessage);
             }
         }
         finally

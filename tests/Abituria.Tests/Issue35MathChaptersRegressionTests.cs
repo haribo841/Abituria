@@ -5,7 +5,6 @@ using Abituria.Ui;
 using Abituria.Views;
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Controls.Documents;
 using Avalonia.Headless.XUnit;
 using Avalonia.Interactivity;
 using Avalonia.LogicalTree;
@@ -289,7 +288,13 @@ public sealed class Issue35MathChaptersRegressionTests
                 grid => grid.RowDefinitions.Count == 3 && grid.ColumnDefinitions.Count == 2);
 
             Assert.Equal(6, validGrid.Children.Count);
-            Assert.Contains(validGrid.GetLogicalDescendants().OfType<MathView>(), math => math.LaTeX == "|x|");
+            var mathCell = validGrid.Children.OfType<Border>().Single(
+                cell => Grid.GetRow(cell) == 1 && Grid.GetColumn(cell) == 0);
+            var mathText = Assert.IsType<TextView>(mathCell.Child);
+            Assert.NotNull(mathText.LaTeX);
+            Assert.Contains('|', mathText.LaTeX);
+            Assert.Contains('x', mathText.LaTeX);
+            Assert.True(string.IsNullOrWhiteSpace(mathText.ErrorMessage), mathText.ErrorMessage);
             Assert.Equal("lewa | prawa", TableCellText(validGrid, 2, 0));
 
             window.Content = RichContentView.CreateText(invalidTable);
@@ -374,7 +379,7 @@ public sealed class Issue35MathChaptersRegressionTests
             Assert.True(
                 scroll.Extent.Width <= scroll.Viewport.Width + 1,
                 $"{id} przy {size.Width}x{size.Height}: szerokość treści {scroll.Extent.Width}, viewport {scroll.Viewport.Width}.");
-            Assert.NotEmpty(article.GetLogicalDescendants().OfType<MathView>());
+            Assert.NotEmpty(article.GetLogicalDescendants().OfType<TextView>());
 
             if (id == "greek-alphabet") AssertGreekTable(article, scroll);
         }
@@ -410,7 +415,7 @@ public sealed class Issue35MathChaptersRegressionTests
         var border = table.Children.OfType<Border>().Single(cell =>
             Grid.GetRow(cell) == row && Grid.GetColumn(cell) == column);
         var text = Assert.IsType<TextBlock>(border.Child);
-        return string.Concat(text.Inlines!.OfType<Run>().Select(run => run.Text));
+        return text.Text ?? string.Empty;
     }
 
     private static async Task<PowerShellResult> RunPowerShellAsync(

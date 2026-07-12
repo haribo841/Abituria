@@ -1,11 +1,11 @@
 using System.Text.Json;
-using System.Text.RegularExpressions;
 using Abituria.Models;
+using Abituria.Ui;
 using CSharpMath.Avalonia;
 
 namespace Abituria.Tests;
 
-public sealed partial class ContentInventoryTests
+public sealed class ContentInventoryTests
 {
     private static readonly JsonSerializerOptions JsonOptions = new() { PropertyNameCaseInsensitive = true };
     private static readonly string RepositoryRoot = FindRepositoryRoot();
@@ -206,48 +206,40 @@ public sealed partial class ContentInventoryTests
     }
 
     [Fact]
-    public void Every_math_expression_is_supported_by_renderer()
+    public void Every_rendered_rich_text_line_is_supported_by_text_renderer()
     {
-        foreach (var expression in ReadRichTexts().SelectMany(text => InlineMathRegex().Matches(text)
-                     .Select(match => match.Groups[1].Value)))
+        foreach (var line in ReadRichTextLines().Where(line => !string.IsNullOrWhiteSpace(line)))
         {
-            var painter = new MathPainter { LaTeX = expression };
-            Assert.True(string.IsNullOrWhiteSpace(painter.ErrorMessage), $"{expression}: {painter.ErrorMessage}");
+            var painter = new TextPainter { LaTeX = line };
+            Assert.True(string.IsNullOrWhiteSpace(painter.ErrorMessage), $"{line}: {painter.ErrorMessage}");
         }
     }
 
     [Fact]
-    public void Every_chapter_rich_text_line_uses_balanced_single_line_math_delimiters()
+    public void Every_rendered_rich_text_line_uses_balanced_single_line_math_delimiters()
     {
-        var chapters = Read<ChapterCatalog>("Content/chapters.json");
-        var chapterTexts = chapters.Introduction
-            .Concat(chapters.Chapters.SelectMany(chapter => chapter.Blocks))
-            .Select(block => block.Text)
-            .Where(text => !string.IsNullOrWhiteSpace(text))
-            .Select(text => text!);
-
-        foreach (var line in chapterTexts.SelectMany(text =>
-                     text.Replace("\r\n", "\n", StringComparison.Ordinal).Split('\n')))
+        foreach (var line in ReadRichTextLines())
         {
-            Assert.Equal(CountOccurrences(line, "\\("), CountOccurrences(line, "\\)"));
+            Assert.True(RichContentView.HasBalancedInlineMathDelimiters(line), line);
             Assert.DoesNotContain('$', line);
             Assert.DoesNotContain("\\[", line, StringComparison.Ordinal);
             Assert.DoesNotContain("\\]", line, StringComparison.Ordinal);
         }
     }
 
-    [GeneratedRegex(@"\\\((.*?)\\\)", RegexOptions.Singleline)]
-    private static partial Regex InlineMathRegex();
-
     private static IEnumerable<string> ReadRichTexts()
     {
         var formulas = Read<FormulaCatalog>("Content/formulas.json");
         var chapters = Read<ChapterCatalog>("Content/chapters.json");
         var exam = Read<ExamCatalog>("Content/exam-2021-correction.json").Exam;
+        var placeholders = Read<PlaceholderCatalog>("Content/placeholders.json");
+        var roadmap = Read<RoadmapCatalog>("Content/roadmap.json");
         var exercises = exam.Exercises;
         foreach (var text in formulas.Introduction.Concat(formulas.Articles.SelectMany(item => item.Blocks))
                      .Concat(chapters.Introduction).Concat(chapters.Chapters.SelectMany(item => item.Blocks))
                      .Concat(exam.Introduction).Concat(exam.TopicIntroduction)
+                     .Concat(placeholders.Items.SelectMany(item => item.Blocks))
+                     .Concat(roadmap.Introduction)
                      .Select(block => block.Text).Where(text => !string.IsNullOrWhiteSpace(text)))
             yield return text!;
         foreach (var exercise in exercises)
@@ -259,21 +251,13 @@ public sealed partial class ContentInventoryTests
         }
     }
 
+    private static IEnumerable<string> ReadRichTextLines() => ReadRichTexts().SelectMany(text =>
+        text.Replace("\r\n", "\n", StringComparison.Ordinal)
+            .Replace('\r', '\n')
+            .Split('\n'));
+
     private static T Read<T>(string relativePath) => JsonSerializer.Deserialize<T>(
         File.ReadAllText(Path.Combine(RepositoryRoot, relativePath.Replace('/', Path.DirectorySeparatorChar))), JsonOptions)!;
-
-    private static int CountOccurrences(string value, string marker)
-    {
-        var count = 0;
-        var offset = 0;
-        while ((offset = value.IndexOf(marker, offset, StringComparison.Ordinal)) >= 0)
-        {
-            count++;
-            offset += marker.Length;
-        }
-
-        return count;
-    }
 
     private static string FindRepositoryRoot()
     {
