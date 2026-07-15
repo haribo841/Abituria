@@ -1,0 +1,12 @@
+- name: Strona główna
+  href: index.md
+- name: Dokumentacja
+  href: docs/
+- name: Historia zmian
+  href: CHANGELOG.md
+- name: Autor
+  href: AUTHORS.md
+- name: Licencje zależności
+  href: THIRD-PARTY-NOTICES.md
+- name: Repozytorium
+  href: https://github.com/haribo841/Abituria

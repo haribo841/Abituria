@@ -11,7 +11,7 @@
                       "id":  "avalonia-shell",
                       "title":  "Aplikacja AvaloniaUI",
                       "status":  "migrated",
-                      "summary":  "Przenośny shell .NET 9 zastępujący nawigację WPF.",
+                      "summary":  "Przenośny shell .NET 10 LTS i AvaloniaUI 12 zastępujący nawigację WPF.",
                       "context":  "platform",
                       "sourceRefs":  [
                                          "Abituria-Core",
@@ -222,12 +222,13 @@
                   },
                   {
                       "id":  "distribution",
-                      "title":  "Dystrybucja i dokumentacja wydania",
-                      "status":  "planned",
-                      "summary":  "Paczki, strona pobierania, instalacja, autorzy i historia wersji.",
+                      "title":  "Przenośna dystrybucja i dokumentacja wydania",
+                      "status":  "migrated",
+                      "summary":  "Automaty dla samowystarczalnych paczek x64, strony pobierania, instrukcji, autorstwa, historii wersji, sum, SBOM i atestacji. Publiczna publikacja wymaga zatwierdzonego pochodzenia wszystkich zasobów.",
                       "context":  "delivery",
                       "sourceRefs":  [
-                                         "Implementacja.txt"
+                                         "Implementacja.txt",
+                                         "Projekt-Inzynierski issue #36"
                                      ]
                   },
                   {

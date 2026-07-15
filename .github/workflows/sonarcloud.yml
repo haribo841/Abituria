@@ -9,59 +9,78 @@ on:
 permissions:
   contents: read
 
+env:
+  DOTNET_CLI_TELEMETRY_OPTOUT: 1
+  DOTNET_NOLOGO: true
+  SONAR_PROJECT_KEY: ${{ vars.SONAR_PROJECT_KEY }}
+  SONAR_ORGANIZATION: ${{ vars.SONAR_ORGANIZATION }}
+  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
 jobs:
   analyze:
-    if: ${{ vars.SONAR_PROJECT_KEY != '' && vars.SONAR_ORGANIZATION != '' }}
-    runs-on: windows-latest
-    env:
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    runs-on: windows-2025
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-dotnet@v4
+      - name: Install .NET SDK from global.json
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 9.0.x
-      - name: Explain missing token
-        if: ${{ env.SONAR_TOKEN == '' }}
+          global-json-file: global.json
+          cache: true
+          cache-dependency-path: |
+            packages.lock.json
+            tests/Abituria.Tests/packages.lock.json
+      - name: Require SonarQube Cloud configuration on main
+        if: ${{ github.event_name == 'push' }}
         shell: pwsh
-        run: Write-Host "Skan pominięty - sekret SONAR_TOKEN nie jest dostępny, np. w pull requeście z forka."
-      - name: Cache SonarScanner
-        if: ${{ env.SONAR_TOKEN != '' }}
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:SONAR_PROJECT_KEY) -or
+              [string]::IsNullOrWhiteSpace($env:SONAR_ORGANIZATION) -or
+              [string]::IsNullOrWhiteSpace($env:SONAR_TOKEN)) {
+            throw "Push do main wymaga SONAR_PROJECT_KEY, SONAR_ORGANIZATION i SONAR_TOKEN."
+          }
+      - name: Explain unavailable fork credentials
+        if: ${{ github.event_name == 'pull_request' && env.SONAR_TOKEN == '' }}
+        shell: pwsh
+        run: Write-Host "Skan SonarQube pominięto, ponieważ sekret nie jest dostępny dla pull requestu z forka."
+      - name: Cache SonarScanner 11.2.1
+        if: ${{ env.SONAR_TOKEN != '' && env.SONAR_PROJECT_KEY != '' && env.SONAR_ORGANIZATION != '' }}
         uses: actions/cache@v4
         with:
           path: .\.sonar\scanner
-          key: ${{ runner.os }}-sonarscanner
-      - name: Install SonarScanner for .NET
-        if: ${{ env.SONAR_TOKEN != '' }}
+          key: ${{ runner.os }}-sonarscanner-11.2.1
+      - name: Install SonarScanner for .NET 11.2.1
+        if: ${{ env.SONAR_TOKEN != '' && env.SONAR_PROJECT_KEY != '' && env.SONAR_ORGANIZATION != '' }}
         shell: pwsh
         run: |
           if (-not (Test-Path .\.sonar\scanner\dotnet-sonarscanner.exe)) {
-            dotnet tool install dotnet-sonarscanner --tool-path .\.sonar\scanner
+            dotnet tool install dotnet-sonarscanner --tool-path .\.sonar\scanner --version 11.2.1
           }
       - name: Begin analysis
-        if: ${{ env.SONAR_TOKEN != '' }}
+        if: ${{ env.SONAR_TOKEN != '' && env.SONAR_PROJECT_KEY != '' && env.SONAR_ORGANIZATION != '' }}
         shell: pwsh
         run: |
           $ErrorActionPreference = "Stop"
           $PSNativeCommandUseErrorActionPreference = $true
           .\.sonar\scanner\dotnet-sonarscanner begin `
-            /k:"${{ vars.SONAR_PROJECT_KEY }}" `
-            /o:"${{ vars.SONAR_ORGANIZATION }}" `
+            /k:"$env:SONAR_PROJECT_KEY" `
+            /o:"$env:SONAR_ORGANIZATION" `
             /d:sonar.token="$env:SONAR_TOKEN" `
+            /d:sonar.projectBaseDir="$env:GITHUB_WORKSPACE" `
             /d:sonar.qualitygate.wait=true `
             /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
-      - name: Restore
-        if: ${{ env.SONAR_TOKEN != '' }}
-        run: dotnet restore Abituria.sln --configfile NuGet.Config
+      - name: Restore in locked mode
+        if: ${{ env.SONAR_TOKEN != '' && env.SONAR_PROJECT_KEY != '' && env.SONAR_ORGANIZATION != '' }}
+        run: dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
       - name: Build
-        if: ${{ env.SONAR_TOKEN != '' }}
+        if: ${{ env.SONAR_TOKEN != '' && env.SONAR_PROJECT_KEY != '' && env.SONAR_ORGANIZATION != '' }}
         run: dotnet build Abituria.sln --configuration Release --no-restore --no-incremental
       - name: Test with coverage
-        if: ${{ env.SONAR_TOKEN != '' }}
-        run: dotnet test Abituria.sln --configuration Release --no-build --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
-      - name: End analysis
-        if: ${{ env.SONAR_TOKEN != '' }}
+        if: ${{ env.SONAR_TOKEN != '' && env.SONAR_PROJECT_KEY != '' && env.SONAR_ORGANIZATION != '' }}
+        run: dotnet test Abituria.sln --configuration Release --no-build --no-restore --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+      - name: End analysis and wait for quality gate
+        if: ${{ env.SONAR_TOKEN != '' && env.SONAR_PROJECT_KEY != '' && env.SONAR_ORGANIZATION != '' }}
         shell: pwsh
         run: |
           $ErrorActionPreference = "Stop"

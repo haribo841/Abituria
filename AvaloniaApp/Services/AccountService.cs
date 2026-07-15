@@ -20,11 +20,11 @@ public sealed class AccountService(AppDbContextFactory contextFactory, PasswordH
 
     public string DatabasePath => contextFactory.DatabasePath;
 
-    public async Task InitializeAsync()
+    public async Task InitializeAsync(bool importLegacyProfiles = true)
     {
         await using var context = contextFactory.CreateDbContext();
         await context.Database.MigrateAsync();
-        await ImportLegacyProfilesAsync(context);
+        if (importLegacyProfiles) await ImportLegacyProfilesAsync(context);
         await EnsureDefaultGuestAsync(context);
     }
 

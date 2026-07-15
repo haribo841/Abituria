@@ -1,0 +1,30 @@
+- name: Instalacja i aktualizacja
+  href: INSTALLATION.md
+- name: Podręcznik użytkownika
+  href: USER_GUIDE.md
+- name: Architektura
+  href: ARCHITECTURE.md
+- name: Wymagania projektowe
+  href: REQUIREMENTS.md
+- name: Proces wydania
+  href: RELEASE_PROCESS.md
+- name: Zależności
+  href: DEPENDENCIES.md
+- name: Znane ograniczenia
+  href: KNOWN_LIMITATIONS.md
+- name: Wsparcie
+  href: ../SUPPORT.md
+- name: Bezpieczeństwo
+  href: ../SECURITY.md
+- name: Pochodzenie treści i zasobów
+  href: CONTENT_PROVENANCE.md
+- name: Tworzenie treści
+  href: CONTENT_AUTHORING.md
+- name: Macierz regresji kalkulatora
+  href: CALCULATOR_TEST_MATRIX.md
+- name: Inwentarz migracji
+  href: MIGRATION_INVENTORY.md
+- name: Roadmapa
+  href: ROADMAP.md
+- name: SonarQube
+  href: SONARQUBE.md

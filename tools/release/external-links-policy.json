@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "retryCount": 3,
+  "timeoutSeconds": 15,
+  "localRepositoryBlobPrefix": "https://github.com/haribo841/Abituria/blob/main/",
+  "allowedHosts": [
+    "cli.github.com",
+    "github.com",
+    "haribo841.github.io",
+    "www.contributor-covenant.org",
+    "www.nuget.org"
+  ],
+  "onlineCheckExclusions": [
+    {
+      "urlPrefix": "https://haribo841.github.io/Abituria/",
+      "reason": "The Pages site cannot probe its new deployment before deploy-pages completes."
+    },
+    {
+      "urlPrefix": "https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1",
+      "reason": "The gated prerelease remains a non-public draft until the final checklist is approved."
+    }
+  ]
+}

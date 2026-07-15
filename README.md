@@ -1,93 +1,114 @@
 # Abituria
 
-Abituria to działająca offline aplikacja edukacyjna w AvaloniaUI i .NET 9. Projekt konsoliduje funkcje oraz treści ze starszych wersji WPF w jednym, przenośnym kodzie.
+Abituria to działająca offline aplikacja desktopowa wspierająca naukę matematyki na poziomie szkoły średniej. Aktualna implementacja używa C#, .NET 10 LTS i AvaloniaUI 12. Dane profili oraz postęp są przechowywane lokalnie w SQLite.
+
+Wersja przygotowywana do pierwszej publicznej publikacji: `0.9.0-beta.1`.
+
+> [!IMPORTANT]
+> Publiczne wydanie jest obecnie zablokowane do czasu uzyskania kompletnego, pozytywnego wyniku inwentarza pochodzenia zasobów. Dotyczy to w szczególności materiałów CKE i odziedziczonych grafik bez jednoznacznie udokumentowanej podstawy dystrybucji. Sam build techniczny nie znosi tej blokady.
+
+## Pobieranie
+
+Po zamknięciu checklisty wydawniczej paczki pojawią się w [GitHub Releases](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1):
+
+| System | Paczka | Deklarowane środowisko beta |
+| --- | --- | --- |
+| Windows | `Abituria-v0.9.0-beta.1-win-x64.zip` | Windows 11 24H2 x64 |
+| Ubuntu | `Abituria-v0.9.0-beta.1-linux-x64.tar.gz` | Ubuntu 24.04 x64 |
+| macOS | `Abituria-v0.9.0-beta.1-osx-x64.zip` | macOS 15 na komputerze Intel |
+
+Paczki są samowystarczalne i nie wymagają instalacji środowiska .NET. Są to wydania portable, bez instalatora, automatycznej aktualizacji, podpisu kodu, AOT i trybu single-file. Przed uruchomieniem należy sprawdzić sumę SHA-256 oraz attestation artefaktu.
+
+- [Instrukcja instalacji, aktualizacji i odinstalowania](docs/INSTALLATION.md)
+- [Dokumentacja online](https://haribo841.github.io/Abituria/)
+- [Znane ograniczenia](docs/KNOWN_LIMITATIONS.md)
 
 ## Funkcje
 
-- lokalne konta chronione hasłem oraz profile gościa importowane ze starego `users.txt`,
-- jednorazowe kody odzyskiwania i postęp zapisywany osobno dla każdego profilu,
-- 18 pełnych tablic matematycznych,
-- 7 dostępnych działów: Wektory, Liczby naturalne i indukcja, Alfabet grecki, Liczby rzeczywiste, zbiory i logika, Wyrażenia algebraiczne, równania i nierówności, Funkcja kwadratowa i równanie kwadratowe oraz Logarytmy,
-- 35 zadań z matury poprawkowej 2021,
-- zgodność arkusza i klucza odpowiedzi z dokumentami CKE `EMAP-P0-100-2108`,
-- przeglądanie zadań według arkusza lub 17 tematów oraz sesyjny brudnopis,
-- automatyczne sprawdzanie odpowiedzi A–D w zadaniach 1–28,
-- prowadzenie przez podpowiedzi i ujawnienie odpowiedzi w zadaniach 29–35,
-- kalkulator ogólny z nawiasami, potęgami, pierwiastkami, notacją naukową, Ans i historią sesji,
-- kalkulator funkcji kwadratowej z postacią ogólną, kanoniczną i iloczynową,
-- jawne placeholdery dla dwóch nieukończonych działów: Ciągi liczbowe i Liczby pierwsze,
-- zachowane ekrany informujące o pozostałych materiałach, które w starym projekcie były tylko placeholderami,
-- plan rozwoju rozdzielający elementy przeniesione, zaplanowane i zastąpione.
+- lokalne konta chronione hasłem oraz profile gościa;
+- jednorazowe kody odzyskiwania i postęp zapisywany osobno dla każdego profilu;
+- 18 tablic matematycznych;
+- 7 dostępnych działów matematycznych i 2 jawnie oznaczone działy w przygotowaniu;
+- 35 zadań z matury poprawkowej 2021, dostępnych według arkusza lub 17 tematów;
+- sprawdzanie odpowiedzi A-D, podpowiedzi, ujawnianie odpowiedzi i sesyjny brudnopis;
+- kalkulator ogólny z nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią i powtarzaniem `=`;
+- kalkulator funkcji kwadratowej z postacią ogólną, kanoniczną i iloczynową;
+- jedno okno aplikacji z nawigacją między materiałami, zadaniami, kalkulatorami, profilem i planem rozwoju;
+- ekran „O programie” z wersją, identyfikatorem commita, licencją, autorem i adresem repozytorium.
 
-## Uruchomienie
+Szczegółową instrukcję korzystania z tych funkcji zawiera [podręcznik użytkownika](docs/USER_GUIDE.md).
 
-Wymagany jest .NET SDK 9.
+## Szybki start z paczki
 
-```powershell
-dotnet restore Abituria.sln --configfile NuGet.Config
-dotnet build Abituria.sln --no-restore
-dotnet run --project Abituria.csproj
-```
+1. Pobierz paczkę przeznaczoną dla swojego systemu oraz `SHA256SUMS.txt` z tego samego wydania.
+2. Zweryfikuj sumę i attestation zgodnie z [instrukcją instalacji](docs/INSTALLATION.md#sprawdzenie-integralności-i-pochodzenia).
+3. Rozpakuj aplikację do nowego katalogu.
+4. Uruchom `Abituria.exe`, `Abituria` albo `Abituria.app`, zależnie od systemu.
+5. Wybierz profil gościa lub utwórz lokalne konto.
 
-Testy:
-
-```powershell
-dotnet test Abituria.sln --no-restore
-```
-
-Szczegółowe pokrycie regresji kalkulatora opisuje [macierz testów kalkulatora](docs/CALCULATOR_TEST_MATRIX.md). Testy Avalonia Headless sprawdzają również przewijanie, przepływ inline, linię bazową i obrazy wzorcowe list matematycznych.
+Wydanie beta jest niepodpisane. SmartScreen lub Gatekeeper może wyświetlić ostrzeżenie. Dokumentacja opisuje bezpieczną obsługę komunikatu dla konkretnej, zweryfikowanej paczki i nie zaleca globalnego wyłączania zabezpieczeń systemu.
 
 ## Dane lokalne
 
-Baza SQLite jest tworzona w katalogu zwracanym przez `Environment.SpecialFolder.LocalApplicationData`:
+Baza `abituria.db` znajduje się poza katalogiem programu, w systemowym katalogu danych lokalnych użytkownika, w podkatalogu `Abituria`. Dzięki temu zastąpienie katalogu aplikacji nowszą wersją nie usuwa kont ani postępu. Przed aktualizacją zalecane jest wykonanie kopii bazy.
 
-```text
-Abituria/abituria.db
-```
+Hasła nie są przechowywane jawnie. Aplikacja używa PBKDF2-HMAC-SHA256, osobnej soli dla każdego konta i wersjonowanej liczby iteracji. Kod odzyskiwania jest wyświetlany tylko raz, a w bazie pozostaje jego skrót.
 
-Hasła nie są przechowywane w postaci jawnej. Aplikacja używa PBKDF2-HMAC-SHA256, osobnej soli dla każdego konta i wersjonowanej liczby iteracji. Kod odzyskiwania jest wyświetlany tylko raz, a w bazie pozostaje jego skrót.
+Przy pierwszym uruchomieniu aplikacja może zaimportować istniejące nazwy z pliku `Abituria/users.txt` w systemowym katalogu danych aplikacji jako profile gościa. Plik źródłowy nie jest usuwany, a import jest idempotentny. Jeżeli nie istnieje żaden profil, tworzony jest gość `Maturzysta`.
 
-Przy pierwszym uruchomieniu aplikacja odczytuje istniejący plik:
+## Uruchomienie ze źródeł
 
-```text
-%APPDATA%/Abituria/users.txt
-```
-
-Nazwy są importowane jako profile gościa. Plik źródłowy nie jest usuwany, a import jest idempotentny. Gdy po imporcie baza nie zawiera żadnego profilu, aplikacja tworzy domyślnego gościa `Maturzysta`.
-
-## Treści
-
-Treści edukacyjne i dłuższe statyczne opisy interfejsu są wersjonowane w katalogu `Content` jako JSON. `Content/chapters.json` jest aktywnym źródłem siedmiu ukończonych działów, w tym materiałów przeniesionych w ramach issue #35. Treści są renderowane przez generyczne widoki Avalonia, a wzory przez `Sylinko.CSharpMath.Avalonia`. Kod produkcyjny nie zawiera długich opisów ani wzorów. Zasady edycji i podglądu opisuje [dokumentacja treści](docs/CONTENT_AUTHORING.md).
-
-Importer `tools/Import-LegacyContent.ps1` pozwala ponownie wygenerować zasoby z jawnie wskazanego archiwalnego snapshotu. Snapshot nie jest częścią aktywnego repozytorium:
+Wymagany jest .NET SDK `10.0.302`, przypięty w `global.json`.
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File tools/Import-LegacyContent.ps1 `
-  -SourceRoot "C:\ścieżka\do\Projekt-Inzynierski-master"
+dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
+dotnet build Abituria.sln --configuration Release --no-restore
+dotnet test Abituria.sln --configuration Release --no-build
+dotnet run --project Abituria.csproj
 ```
 
-Importer poprawia wyłącznie rozpoznane literówki i składnię blokującą renderowanie LaTeX. Ponownie importuje Wektory ze snapshotu, a pozostałe działy i roadmapę odtwarza z niezależnego źródła `tools/seeds/issue-35-content.json`. Nie zależy od istniejących plików wynikowych i potrafi zbudować katalog w pustym `OutputRoot`. Wynik jest sprawdzany testem end-to-end.
-
-Po zmianie treści issue #35 aktywne katalogi synchronizuje polecenie:
+Pełne bramy jakości:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File tools/Sync-Issue35Content.ps1
+dotnet list Abituria.sln package --vulnerable --include-transitive
+dotnet format whitespace Abituria.sln --verify-no-changes --no-restore
+git diff --check
 ```
 
-Końcowy audyt migracji i kryteria pozwalające usunąć stare snapshoty WPF są zapisane w [inwentarzu migracji](docs/MIGRATION_INVENTORY.md).
+Diagnostyka opublikowanego artefaktu działa bez otwierania UI i bez używania prawdziwych danych:
 
-Opcjonalna analiza SonarQube Cloud jest przygotowana w osobnym workflow. Aktywacja wymaga utworzenia rzeczywistego projektu oraz ustawienia zmiennych i sekretu zgodnie z [instrukcją SonarQube](docs/SONARQUBE.md).
+```powershell
+Abituria.exe --release-smoke-test --data-directory C:\Temp\abituria-smoke
+```
 
-## Architektura
+Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalnego wewnątrz `Abituria.app`.
 
-Formalny opis aktualnej architektury i diagram komponentów są w [dokumentacji architektury](docs/ARCHITECTURE.md).
-Aktywny dokument wymagań projektowych jest w [dokumencie wymagań](docs/REQUIREMENTS.md).
+## Dokumentacja
 
-- `AvaloniaApp/Models` - kontrakty treści i profili,
-- `AvaloniaApp/Data` - SQLite i migracje EF Core,
-- `AvaloniaApp/Services` - konta, bezpieczeństwo, treści i obliczenia,
-- `AvaloniaApp/ViewModels` - sesja i nawigacja,
-- `AvaloniaApp/Views` - oddzielne ekrany Avalonia,
-- `tests/Abituria.Tests` - testy inwentarza, kont i kalkulatora.
+| Dokument | Zakres |
+| --- | --- |
+| [Instalacja](docs/INSTALLATION.md) | wymagania systemowe, integralność, instalacja, aktualizacja i odinstalowanie |
+| [Podręcznik użytkownika](docs/USER_GUIDE.md) | profile, materiały, zadania i kalkulatory |
+| [Wymagania](docs/REQUIREMENTS.md) | wymagania funkcjonalne, niefunkcjonalne i kryteria akceptacji |
+| [Architektura](docs/ARCHITECTURE.md) | komponenty, dane i odpowiedzialności modułów |
+| [Proces wydania](docs/RELEASE_PROCESS.md) | bramy, pakowanie, smoke test, Pages i publikacja |
+| [Zależności](docs/DEPENDENCIES.md) | dokładnie rozwiązane pakiety produkcyjne i testowe |
+| [Pochodzenie treści](docs/CONTENT_PROVENANCE.md) | zasady dopuszczania treści, fontów i obrazów do paczek |
+| [Znane ograniczenia](docs/KNOWN_LIMITATIONS.md) | jawny zakres wersji beta |
+| [Historia zmian](CHANGELOG.md) | pierwsze rzeczywiste wydanie i dalsze zmiany |
+| [Wsparcie](SUPPORT.md) | zgłaszanie błędów i wymagane dane diagnostyczne |
+| [Bezpieczeństwo](SECURITY.md) | prywatne zgłoszenia podatności i wspierane wersje |
 
-Szczegóły konsolidacji starszych wersji opisuje [inwentarz migracji](docs/MIGRATION_INVENTORY.md), a dalsze pozycje [plan rozwoju](docs/ROADMAP.md). Oryginalne dokumenty planistyczne oraz historyczna licencja zostały zachowane bajt w bajt w [archiwum legacy](docs/legacy/README.md).
+Kompletność sześciu materiałów uzupełnionych w ramach historycznego `issue #35`, ich kanoniczny seed oraz regresje opisuje [inwentarz migracji](docs/MIGRATION_INVENTORY.md).
+
+## Autor i licencje
+
+Autorem i opiekunem aktualnej implementacji jest [Adam Kubiś](AUTHORS.md).
+
+Kod projektu jest udostępniany na licencji [MIT](https://github.com/haribo841/Abituria/blob/main/LICENSE). Licencje zależności i dodatkowe informacje dystrybucyjne zawiera [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). Licencja kodu nie oznacza automatycznie prawa do redystrybucji każdego materiału edukacyjnego lub obrazu. O tym, czy zasób może wejść do publicznej paczki, rozstrzyga inwentarz pochodzenia.
+
+## Zgłoszenia
+
+- zwykły błąd lub propozycja: [GitHub Issues](https://github.com/haribo841/Abituria/issues/new);
+- pytanie o użycie: [SUPPORT.md](SUPPORT.md);
+- podatność lub dane wrażliwe: [SECURITY.md](SECURITY.md).

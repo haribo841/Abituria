@@ -1,6 +1,4 @@
-using Abituria.Data;
 using Abituria.Services;
-using Abituria.ViewModels;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
@@ -10,27 +8,28 @@ namespace Abituria;
 
 public partial class App : Application
 {
+    private static AppRuntimeOptions _runtimeOptions = AppRuntimeOptions.Desktop;
+
     public static ServiceProvider Services { get; private set; } = null!;
+
+    internal static void ConfigureRuntime(AppRuntimeOptions options) =>
+        _runtimeOptions = options ?? throw new ArgumentNullException(nameof(options));
 
     public override void Initialize() => AvaloniaXamlLoader.Load(this);
 
     public override void OnFrameworkInitializationCompleted()
     {
-        var collection = new ServiceCollection();
-        collection.AddSingleton<AppDbContextFactory>();
-        collection.AddSingleton<PasswordHasher>();
-        collection.AddSingleton<AccountService>();
-        collection.AddSingleton<ContentRepository>();
-        collection.AddSingleton<ExpressionCalculator>();
-        collection.AddSingleton<CalculatorSession>();
-        collection.AddSingleton<AppViewModel>();
-        collection.AddSingleton<MainWindow>();
-        Services = collection.BuildServiceProvider();
+        Services = new ServiceCollection()
+            .AddAbituriaServices(_runtimeOptions)
+            .BuildServiceProvider();
 
-        var accounts = Services.GetRequiredService<AccountService>();
-        Task.Run(accounts.InitializeAsync).GetAwaiter().GetResult();
-        if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+        Task.Run(Services.InitializeAbituriaAsync).GetAwaiter().GetResult();
+        if (_runtimeOptions.ShowMainWindow &&
+            ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+        {
             desktop.MainWindow = Services.GetRequiredService<MainWindow>();
+        }
+
         base.OnFrameworkInitializationCompleted();
     }
 }

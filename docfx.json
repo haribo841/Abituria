@@ -1,0 +1,48 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "build": {
+    "content": [
+      {
+        "files": [
+          "*.md",
+          "toc.yml"
+        ],
+        "exclude": [
+          "README.md"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "toc.yml"
+        ],
+        "src": "docs",
+        "dest": "docs",
+        "exclude": [
+          "legacy/**"
+        ]
+      }
+    ],
+    "output": "artifacts/site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "Abituria",
+      "_appTitle": "Abituria - dokumentacja",
+      "_appFooter": "Abituria - Adam Kubiś",
+      "_enableSearch": true,
+      "_disableContribution": false,
+      "_gitContribute": {
+        "repo": "https://github.com/haribo841/Abituria",
+        "branch": "main"
+      }
+    },
+    "sitemap": {
+      "baseUrl": "https://haribo841.github.io/Abituria/",
+      "changefreq": "weekly",
+      "priority": 0.5
+    }
+  }
+}

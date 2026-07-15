@@ -4,7 +4,7 @@ Ten dokument opisuje aktualną architekturę aplikacji Abituria po migracji z WP
 
 ## Podsumowanie techniczne
 
-Abituria jest lokalną aplikacją desktopową `.NET 9` z interfejsem AvaloniaUI. Aplikacja działa offline, przechowuje dane kont i postęp w SQLite, a treści edukacyjne oraz dłuższe opisy interfejsu wczytuje z plików JSON umieszczonych w katalogu `Content`.
+Abituria jest lokalną aplikacją desktopową `.NET 10 LTS` z interfejsem AvaloniaUI 12. Aplikacja działa offline, przechowuje dane kont i postęp w SQLite, a treści edukacyjne oraz dłuższe opisy interfejsu wczytuje z plików JSON umieszczonych w katalogu `Content`.
 
 Najważniejsze decyzje architektoniczne:
 
@@ -23,12 +23,14 @@ flowchart TB
     User["Użytkownik"] --> Window["MainWindow<br/>Avalonia shell"]
 
     App["App.axaml.cs<br/>start i DI"] --> Services["Kontener usług"]
+    Cli["Program.Main<br/>release smoke CLI"] --> App
     Services --> Window
     Services --> ViewModel["AppViewModel<br/>stan sesji i nawigacji"]
     Services --> Accounts["AccountService"]
     Services --> Content["ContentRepository"]
     Services --> CalculatorSession["CalculatorSession"]
     Services --> ExpressionCalculator["ExpressionCalculator"]
+    Services --> BuildInfo["AppBuildInfo"]
 
     Window --> ViewModel
     Window --> Views["Widoki Avalonia<br/>Home, Login, Profile, Content, Exam, Calculator"]
@@ -41,6 +43,7 @@ flowchart TB
     CalculatorSession --> CalculatorHistory["Historia sesji i Ans"]
 
     Content --> Json["Content/*.json"]
+    Json --> Provenance["provenance.json<br/>brama redystrybucji"]
     Ui --> Math["Sylinko.CSharpMath.Avalonia"]
     Ui --> Assets["img i fonts"]
 
@@ -62,17 +65,19 @@ flowchart TB
 | `AvaloniaApp` | Kod aplikacji desktopowej | `App.axaml.cs`, `MainWindow.axaml.cs`, `Program.cs` |
 | `AvaloniaApp/Models` | Kontrakty danych i modeli treści | `UiCopyCatalog`, `ExamDefinition`, `LocalProfile` |
 | `AvaloniaApp/Data` | SQLite, encje EF Core i migracje | `AppDbContext`, `AppDbContextFactory`, `InitialLocalAccounts` |
-| `AvaloniaApp/Services` | Logika aplikacyjna i domenowa | konta, hasła, repozytorium treści, kalkulatory |
+| `AvaloniaApp/Services` | Logika aplikacyjna, domenowa i uruchomieniowa | konta, hasła, repozytorium treści, kalkulatory, informacje o buildzie, smoke test |
 | `AvaloniaApp/ViewModels` | Stan sesji i wybór strony | `AppViewModel`, `AppPage` |
 | `AvaloniaApp/Views` | Ekrany Avalonia | logowanie, profil, zadania, treści, kalkulatory |
 | `AvaloniaApp/Ui` | Wspólne budowanie UI i rich content | `UiFactory`, `RichContentView` |
-| `Content` | Dane edukacyjne i teksty interfejsu | wzory, działy, zadania, roadmapa, komunikaty |
+| `Content` | Dane edukacyjne, teksty interfejsu i inwentarz pochodzenia | wzory, działy, zadania, roadmapa, komunikaty, `provenance.json` |
 | `docs` | Dokumentacja aktywna i archiwum legacy | architektura, migracja, SonarQube, treści |
 | `tests/Abituria.Tests` | Regresje jednostkowe, integracyjne i headless UI | parser, konta, routing, wizualne listy matematyczne |
 
 ## Uruchomienie i kompozycja aplikacji
 
-`Program.Main` tworzy `AppBuilder` dla Avalonia i uruchamia klasyczny cykl życia desktopowego. `App.OnFrameworkInitializationCompleted` rejestruje usługi w kontenerze DI:
+`Program.Main` rozdziela dwa jawne tryby. Bez parametrów tworzy `AppBuilder` i uruchamia klasyczny cykl życia desktopowego. Parametry `--release-smoke-test --data-directory <katalog>` uruchamiają diagnostykę wydania bez głównego okna. Oba tryby korzystają z tej samej rejestracji `AddAbituriaServices`, więc testuje się rzeczywisty graf usług aplikacji.
+
+`App.OnFrameworkInitializationCompleted` buduje kontener DI z następującymi usługami:
 
 - `AppDbContextFactory`,
 - `PasswordHasher`,
@@ -80,10 +85,11 @@ flowchart TB
 - `ContentRepository`,
 - `ExpressionCalculator`,
 - `CalculatorSession`,
+- `AppBuildInfo`,
 - `AppViewModel`,
 - `MainWindow`.
 
-Po utworzeniu kontenera aplikacja inicjalizuje konta i ustawia `MainWindow` jako jedyne główne okno desktopowe.
+Po utworzeniu kontenera aplikacja inicjalizuje konta i w trybie desktopowym ustawia `MainWindow` jako jedyne główne okno. Tryb diagnostyczny kieruje bazę do jawnie przekazanego katalogu tymczasowego, wyłącza import `%APPDATA%/Abituria/users.txt`, nie tworzy okna i sprawdza zasoby, SQLite, profil gościa, kalkulator oraz informacje o buildzie.
 
 ## Nawigacja i shell UI
 
@@ -123,8 +129,11 @@ Dane trwałe są zapisywane w SQLite w katalogu `LocalApplicationData/Abituria/a
 - `placeholders.json` - jawne placeholdery funkcji,
 - `roadmap.json` - plan rozwoju,
 - `ui-copy.json` - dłuższe statyczne teksty interfejsu.
+- `provenance.json` - autor, źródło, licencja i status redystrybucji każdego paczkowanego zasobu.
 
 Kod produkcyjny odpowiada za wczytanie i wyświetlenie treści, a nie za przechowywanie długich materiałów edukacyjnych. Renderowanie treści miesza zwykłe `TextBlock`, obrazy z zasobów oraz `MathView` z `Sylinko.CSharpMath.Avalonia`.
+
+Manifest pochodzenia jest porównywany z zasobami zadeklarowanymi w `Abituria.csproj`. Testy wymagają dokładnie jednego wpisu dla każdego pliku, kompletnego autora, źródła, licencji lub podstawy dystrybucji i istniejących dowodów. Status `blocked` nie psuje lokalnej kompilacji, ale `Test-ContentProvenance.ps1 -RequireReleaseEligible` bezwarunkowo blokuje publiczne wydanie.
 
 ## Kalkulatory
 
@@ -146,8 +155,10 @@ Projekt ma testy dla głównych warstw:
 - `NavigationArchitectureTests` - brak powrotu do WPF i niekontrolowanego otwierania okien,
 - `ExerciseAndRoutingCoverageTests` - headless UI dla routingu i zadań,
 - `Discussion10VisualRegressionTests` - układ inline, listy matematyczne i regresje wizualne.
+- `ReleaseRuntimeTests`, `AboutViewTests` - izolowany smoke test, metadane builda i ekran "O programie",
+- `ContentProvenanceTests` - kompletność i jednoznaczność pochodzenia paczkowanych zasobów.
 
-CI używa workflow `build` do restore, build i testów. Dodatkowy workflow `sonarcloud` uruchamia SonarScanner for .NET, testy z pokryciem OpenCover i czeka na quality gate.
+CI używa workflow `build` do restore, build i testów. Dodatkowy workflow `sonarcloud` uruchamia SonarScanner for .NET, testy z pokryciem OpenCover i czeka na quality gate. Workflow wydania działa na natywnych runnerach Windows, Ubuntu i macOS: odtwarza lockfile, audytuje NuGet, publikuje self-contained, wykonuje smoke test, sprawdza architekturę i zawartość archiwów oraz generuje sumy SHA-256, SBOM i atestacje. GitHub Pages powstaje z tych samych plików Markdown przez DocFX.
 
 ## Różnice względem historycznego opisu systemu
 

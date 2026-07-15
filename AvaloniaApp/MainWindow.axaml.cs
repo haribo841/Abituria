@@ -22,22 +22,35 @@ public partial class MainWindow : Window
     private readonly AccountService _accounts;
     private readonly ContentRepository _content;
     private readonly CalculatorSession _calculatorSession;
+    private readonly AppBuildInfo _buildInfo;
     private Border _shellHost = null!;
 
     public MainWindow() : this(
         App.Services.GetRequiredService<AppViewModel>(),
         App.Services.GetRequiredService<AccountService>(),
         App.Services.GetRequiredService<ContentRepository>(),
-        App.Services.GetRequiredService<CalculatorSession>())
+        App.Services.GetRequiredService<CalculatorSession>(),
+        App.Services.GetRequiredService<AppBuildInfo>())
     {
     }
 
     public MainWindow(AppViewModel viewModel, AccountService accounts, ContentRepository content, CalculatorSession calculatorSession)
+        : this(viewModel, accounts, content, calculatorSession, AppBuildInfo.Current)
+    {
+    }
+
+    public MainWindow(
+        AppViewModel viewModel,
+        AccountService accounts,
+        ContentRepository content,
+        CalculatorSession calculatorSession,
+        AppBuildInfo buildInfo)
     {
         _viewModel = viewModel;
         _accounts = accounts;
         _content = content;
         _calculatorSession = calculatorSession;
+        _buildInfo = buildInfo;
         InitializeComponent();
         _shellHost = this.FindControl<Border>("ShellHost") ?? throw new InvalidOperationException("Nie znaleziono ShellHost.");
         _viewModel.PropertyChanged += ViewModelOnPropertyChanged;
@@ -90,6 +103,7 @@ public partial class MainWindow : Window
         AddNav(nav, "Kalkulator", AppPage.Calculator);
         AddNav(nav, "Plan rozwoju", AppPage.Roadmap);
         AddNav(nav, "Profil", AppPage.Profile);
+        AddNav(nav, "O programie", AppPage.About);
         Grid.SetColumn(nav, 1);
         grid.Children.Add(nav);
 
@@ -152,6 +166,7 @@ public partial class MainWindow : Window
         AppPage.GeneralCalculator => new GeneralCalculatorView(
             _calculatorSession, _content.UiCopy, () => _viewModel.Navigate(AppPage.Calculator)),
         AppPage.Roadmap => new RoadmapView(_content.Roadmap, _viewModel.SelectedRoadmapId),
+        AppPage.About => new AboutView(_buildInfo),
         AppPage.Profile => new ProfileView(_viewModel.ActiveProfile!, _accounts, _viewModel.Logout),
         AppPage.Placeholder when _viewModel.SelectedPlaceholder is not null => new PlaceholderView(
             _viewModel.SelectedPlaceholder.Title, _viewModel.SelectedPlaceholder.Message,

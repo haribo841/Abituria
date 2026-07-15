@@ -1,0 +1,104 @@
+name: documentation-pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "*.md"
+      - "docs/**"
+      - "toc.yml"
+      - "docfx.json"
+      - ".config/dotnet-tools.json"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build DocFX site
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install .NET SDK from global.json
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - name: Restore pinned local tools
+        run: dotnet tool restore
+      - name: Build documentation with warnings as errors
+        run: dotnet tool run docfx -- docfx.json --warningsAsErrors
+      - name: Verify Pages entry point
+        shell: pwsh
+        run: |
+          if (-not (Test-Path artifacts/site/index.html -PathType Leaf)) {
+            throw "DocFX nie utworzył artifacts/site/index.html."
+          }
+      - name: Verify generated local and external links and resources
+        shell: pwsh
+        run: >-
+          ./tools/release/Test-DocumentationSite.ps1
+          -SiteDirectory artifacts/site
+          -CheckExternalLinks
+          -ExternalLinkFailureAction Fail
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: artifacts/site
+
+  deploy:
+    name: Deploy GitHub Pages
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Verify the deployed Pages entry point
+        shell: pwsh
+        env:
+          DEPLOYED_PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          $ErrorActionPreference = "Stop"
+          if (-not $env:DEPLOYED_PAGE_URL.StartsWith("https://haribo841.github.io/Abituria/")) {
+            throw "Unexpected deployed Pages URL: '$env:DEPLOYED_PAGE_URL'."
+          }
+          $lastError = "no response"
+          foreach ($attempt in 1..6) {
+            try {
+              $response = Invoke-WebRequest `
+                -Uri $env:DEPLOYED_PAGE_URL `
+                -MaximumRedirection 5 `
+                -TimeoutSec 20
+              if ($response.StatusCode -eq 200 -and $response.Content -match 'Abituria') {
+                Write-Host "Deployed Pages entry point is reachable and contains the product name."
+                exit 0
+              }
+              $lastError = "HTTP $($response.StatusCode) or missing product name"
+            }
+            catch {
+              $lastError = $_.Exception.GetBaseException().Message
+            }
+            if ($attempt -lt 6) { Start-Sleep -Seconds 10 }
+          }
+          throw "Deployed Pages entry point failed after 6 attempts: $lastError"

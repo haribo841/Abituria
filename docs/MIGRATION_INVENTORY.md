@@ -72,7 +72,7 @@ Drugi audyt przed usunięciem snapshotów potwierdził `276/276` zgodnych wystą
 
 Końcowy audyt z 30 czerwca 2026 r. porównał wizualnie wszystkie 35 zadań, dziewięć ilustracji zadaniowych, pełny klucz 1-28 oraz odpowiedzi 29-35 z arkuszem i zasadami oceniania CKE. Ujawnił i usunął pozostałe błędy terminologiczne w podpowiedziach do zadań 6, 22 i 29, niejednoznaczny zapis kątów w zadaniach 18-19 oraz niepoprawny zapis przedziału w odpowiedzi do zadania 29. Data weryfikacji jest teraz pobierana z metadanych egzaminu.
 
-Ten sam audyt sklasyfikował niepodłączony prototyp `Window1` / WPF-Math jako `superseded`, poprawił odmianę liczby zadań w nawigacji i potwierdził działanie interfejsu przy `1280x820` oraz minimalnym `960x640`. Lokalne odpowiedniki kroków CI (`restore`, `build Release`, `test Release`) zakończyły się powodzeniem; zdalne CI może ruszyć dopiero po wykonaniu przez właściciela commita i pusha.
+Ten sam audyt sklasyfikował niepodłączony prototyp `Window1` / WPF-Math jako `superseded`, poprawił odmianę liczby zadań w nawigacji i potwierdził działanie interfejsu przy `1280x820` oraz minimalnym `960x640`. Lokalne i zdalne bramy repozytorium wykonują `restore`, `build Release`, pełne testy, format, audyt zależności oraz analizę SonarQube. Proces tagu rozszerza je o natywne pakowanie i smoke test na trzech deklarowanych systemach.
 
 ## Celowo nieprzeniesione
 

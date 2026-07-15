@@ -17,6 +17,7 @@ public enum AppPage
     Calculator,
     GeneralCalculator,
     Roadmap,
+    About,
     Profile,
     Placeholder
 }

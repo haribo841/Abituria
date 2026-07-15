@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Abituria.Models;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 
 namespace Abituria.Data;
@@ -80,13 +81,17 @@ public sealed class AppDbContextFactory
 
     public AppDbContextFactory(string? databasePath = null)
     {
-        DatabasePath = databasePath ?? Path.Combine(
+        DatabasePath = Path.GetFullPath(databasePath ?? Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
             "Abituria",
-            "abituria.db");
+            "abituria.db"));
         Directory.CreateDirectory(Path.GetDirectoryName(DatabasePath)!);
+        var connectionString = new SqliteConnectionStringBuilder
+        {
+            DataSource = DatabasePath
+        }.ToString();
         _options = new DbContextOptionsBuilder<AppDbContext>()
-            .UseSqlite($"Data Source={DatabasePath}")
+            .UseSqlite(connectionString)
             .Options;
     }
 

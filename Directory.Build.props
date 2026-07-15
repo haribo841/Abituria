@@ -1,0 +1,26 @@
+<Project>
+  <PropertyGroup>
+    <Version>0.9.0-beta.1</Version>
+    <VersionPrefix>0.9.0</VersionPrefix>
+    <VersionSuffix>beta.1</VersionSuffix>
+    <AssemblyVersion>0.9.0.0</AssemblyVersion>
+    <FileVersion>0.9.0.0</FileVersion>
+    <RuntimeFrameworkVersion>10.0.10</RuntimeFrameworkVersion>
+    <Product>Abituria</Product>
+    <Authors>Adam Kubiś</Authors>
+    <Copyright>Copyright © 2023-2026 Adam Kubiś</Copyright>
+    <Description>Offline desktop application supporting secondary-school mathematics study.</Description>
+    <RepositoryUrl>https://github.com/haribo841/Abituria</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</RestoreLockedMode>
+    <NuGetAudit>true</NuGetAudit>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+    <WarningsAsErrors>$(WarningsAsErrors);NU1901;NU1902;NU1903;NU1904</WarningsAsErrors>
+  </PropertyGroup>
+</Project>

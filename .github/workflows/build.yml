@@ -6,17 +6,47 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+
+env:
+  DOTNET_CLI_TELEMETRY_OPTOUT: 1
+  DOTNET_NOLOGO: true
+
 jobs:
   build-and-test:
-    runs-on: windows-latest
+    runs-on: windows-2025
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
+      - name: Install .NET SDK from global.json
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 9.0.x
-      - name: Restore
-        run: dotnet restore Abituria.sln --configfile NuGet.Config
+          global-json-file: global.json
+          cache: true
+          cache-dependency-path: |
+            packages.lock.json
+            tests/Abituria.Tests/packages.lock.json
+      - name: Restore in locked mode
+        run: dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
       - name: Build
         run: dotnet build Abituria.sln --configuration Release --no-restore
       - name: Test
-        run: dotnet test Abituria.sln --configuration Release --no-build
+        run: dotnet test Abituria.sln --configuration Release --no-build --no-restore
+      - name: Verify whitespace formatting
+        run: dotnet format Abituria.sln whitespace --verify-no-changes --no-restore
+      - name: Audit direct and transitive NuGet packages
+        shell: pwsh
+        run: ./tools/release/Test-NuGetVulnerabilities.ps1 -ReportPath artifacts/audit/nuget.json
+      - name: Verify generated dependency documentation
+        shell: pwsh
+        run: ./tools/Generate-DependencyDocumentation.ps1 -Verify
+      - name: Verify packaged-resource provenance coverage
+        shell: pwsh
+        run: ./tools/Test-ContentProvenance.ps1
+      - name: Check patch whitespace
+        run: git diff --check
+      - name: Ensure generated and locked files are unchanged
+        shell: pwsh
+        run: |
+          $changes = git status --porcelain -- packages.lock.json tests/Abituria.Tests/packages.lock.json docs/DEPENDENCIES.md THIRD-PARTY-NOTICES.md
+          if ($changes) { throw "Weryfikacja zmieniła pliki kontrolowane:`n$changes" }

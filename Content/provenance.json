@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "releaseEligible": false,
+  "policy": {
+    "approvedStatus": "approved",
+    "blockingStatus": "blocked",
+    "description": "Publiczne wydanie jest dozwolone tylko wtedy, gdy każdy paczkowany zasób ma status approved."
+  },
+  "assets": [
+    {
+      "id": "current-content-and-inventory",
+      "paths": [
+        "Content/placeholders.json",
+        "Content/roadmap.json",
+        "Content/ui-copy.json",
+        "Content/provenance.json"
+      ],
+      "author": "Adam Kubiś",
+      "source": "Repozytorium haribo841/Abituria",
+      "license": "MIT",
+      "distributionStatus": "approved",
+      "evidence": [
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "migrated-mathematics-content",
+      "paths": [
+        "Content/chapters.json",
+        "Content/formulas.json"
+      ],
+      "author": "Historyczni autorzy projektu Ich Troje, migracja i korekty: Adam Kubiś",
+      "source": "Historyczne repozytorium Projekt-Inzynierski oraz bieżąca migracja treści",
+      "license": "MIT",
+      "distributionStatus": "approved",
+      "evidence": [
+        "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",
+        "docs/MIGRATION_INVENTORY.md"
+      ]
+    },
+    {
+      "id": "cke-2021-correction-exam",
+      "paths": [
+        "Content/exam-2021-correction.json",
+        "img/mp21z*.png"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, adaptacja i weryfikacja: Adam Kubiś",
+      "source": "Arkusz i zasady oceniania CKE EMAP-P0-100-2108",
+      "license": "Nieustalona podstawa redystrybucji",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak udokumentowanej zgody lub licencji pozwalającej redystrybuować treść arkusza i ilustracje CKE w paczce aplikacji.",
+      "evidence": [
+        "docs/MIGRATION_INVENTORY.md"
+      ]
+    },
+    {
+      "id": "inherited-mathematics-images",
+      "paths": [
+        "img/?.png",
+        "img/w*.png"
+      ],
+      "author": "Autorzy nieustaleni, zasoby odziedziczone z historycznego projektu",
+      "source": "Historyczne snapshoty Projekt-Inzynierski",
+      "license": "Wymaga potwierdzenia dla każdego pliku",
+      "distributionStatus": "blocked",
+      "blockedReason": "Licencja historycznego repozytorium została zachowana, ale nie potwierdzono autorstwa ani źródła wszystkich odziedziczonych grafik.",
+      "evidence": [
+        "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",
+        "docs/MIGRATION_INVENTORY.md"
+      ]
+    },
+    {
+      "id": "inherited-application-images",
+      "paths": [
+        "img/abituria.png",
+        "img/dzialy.png",
+        "img/icon.ico",
+        "img/icon.png",
+        "img/kalkulator.png",
+        "img/zadania.png"
+      ],
+      "author": "Autorzy nieustaleni, zasoby odziedziczone z historycznego projektu",
+      "source": "Historyczne snapshoty Projekt-Inzynierski",
+      "license": "Wymaga potwierdzenia dla każdego pliku",
+      "distributionStatus": "blocked",
+      "blockedReason": "Nie potwierdzono autorstwa i źródła ikon oraz grafik interfejsu, w tym ikony używanej w paczkach Windows i macOS.",
+      "evidence": [
+        "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",
+        "docs/MIGRATION_INVENTORY.md"
+      ]
+    },
+    {
+      "id": "mulish-fonts",
+      "paths": [
+        "fonts/*.ttf"
+      ],
+      "author": "The Mulish Project Authors",
+      "source": "Mulish font distribution included in the historical project",
+      "license": "SIL Open Font License 1.1",
+      "distributionStatus": "approved",
+      "evidence": [
+        "fonts/OFL.txt",
+        "fonts/README.txt"
+      ]
+    }
+  ]
+}

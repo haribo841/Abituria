@@ -1,0 +1,309 @@
+name: release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Istniejący tag wydania, np. v0.9.0-beta.1
+        required: true
+        type: string
+
+env:
+  DOTNET_CLI_TELEMETRY_OPTOUT: 1
+  DOTNET_NOLOGO: true
+  RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    name: Validate release contract
+    runs-on: ubuntu-24.04
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - name: Checkout the release tag
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ env.RELEASE_TAG }}
+      - name: Validate tag, version, changelog and tools
+        id: version
+        shell: pwsh
+        run: ./tools/release/Test-ReleaseVersion.ps1 -Tag $env:RELEASE_TAG -WriteGitHubOutput
+      - name: Install pinned .NET SDK for documentation validation
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - name: Restore pinned documentation tool
+        run: dotnet tool restore
+      - name: Build documentation with warnings as errors
+        run: dotnet tool run docfx -- docfx.json --warningsAsErrors
+      - name: Validate local and external documentation links
+        shell: pwsh
+        run: >-
+          ./tools/release/Test-DocumentationSite.ps1
+          -SiteDirectory artifacts/site
+          -CheckExternalLinks
+          -ExternalLinkFailureAction Fail
+      - name: Block release when packaged content lacks distribution rights
+        shell: pwsh
+        run: ./tools/Test-ContentProvenance.ps1 -RequireReleaseEligible
+
+  package:
+    name: Test and package ${{ matrix.rid }}
+    needs: preflight
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - rid: win-x64
+            runner: windows-2025
+          - rid: linux-x64
+            runner: ubuntu-24.04
+          - rid: osx-x64
+            runner: macos-15-intel
+    runs-on: ${{ matrix.runner }}
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Checkout the release tag
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ env.RELEASE_TAG }}
+      - name: Install .NET 8 tool runtime and pinned .NET 10 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.302
+          cache: true
+          cache-dependency-path: |
+            packages.lock.json
+            tests/Abituria.Tests/packages.lock.json
+      - name: Install Linux desktop smoke-test dependencies
+        if: matrix.rid == 'linux-x64'
+        run: sudo apt-get update && sudo apt-get install --yes xvfb libx11-6 libice6 libsm6 libfontconfig1 file
+      - name: Restore pinned local tools
+        run: dotnet tool restore
+      - name: Restore solution in locked mode
+        run: dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
+      - name: Build
+        run: dotnet build Abituria.sln --configuration Release --no-restore
+      - name: Test on Windows or macOS
+        if: matrix.rid != 'linux-x64'
+        run: dotnet test Abituria.sln --configuration Release --no-build --no-restore
+      - name: Test under Xvfb on Linux
+        if: matrix.rid == 'linux-x64'
+        run: xvfb-run -a dotnet test Abituria.sln --configuration Release --no-build --no-restore
+      - name: Verify whitespace formatting
+        run: dotnet format Abituria.sln whitespace --verify-no-changes --no-restore
+      - name: Audit all direct and transitive NuGet packages
+        run: ./tools/release/Test-NuGetVulnerabilities.ps1 -ReportPath artifacts/audit/${{ matrix.rid }}.json
+      - name: Check patch whitespace
+        run: git diff --check
+      - name: Ensure locked restore did not change lock files
+        run: |
+          $changes = git status --porcelain -- packages.lock.json tests/Abituria.Tests/packages.lock.json
+          if ($changes) { throw "Locked restore changed package lock files:`n$changes" }
+      - name: Publish, generate SBOM and package
+        run: >-
+          ./tools/release/Publish-ReleaseArtifact.ps1
+          -RuntimeIdentifier ${{ matrix.rid }}
+          -Version ${{ needs.preflight.outputs.version }}
+      - name: Smoke-test final archive after extraction
+        run: |
+          $version = "${{ needs.preflight.outputs.version }}"
+          $extension = if ("${{ matrix.rid }}" -eq "linux-x64") { "tar.gz" } else { "zip" }
+          $archivePath = "artifacts/release/${{ matrix.rid }}/Abituria-v$version-${{ matrix.rid }}.$extension"
+          ./tools/release/Invoke-ReleaseSmokeTest.ps1 `
+            -ArchivePath $archivePath `
+            -RuntimeIdentifier "${{ matrix.rid }}" `
+            -Version $version
+      - name: Upload release payload
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-${{ matrix.rid }}
+          path: artifacts/release/${{ matrix.rid }}/*
+          if-no-files-found: error
+          retention-days: 14
+
+  sonar:
+    name: SonarQube quality gate
+    needs: preflight
+    runs-on: windows-2025
+    env:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      SONAR_PROJECT_KEY: ${{ vars.SONAR_PROJECT_KEY }}
+      SONAR_ORGANIZATION: ${{ vars.SONAR_ORGANIZATION }}
+    steps:
+      - name: Require SonarQube release configuration
+        shell: pwsh
+        run: |
+          if (-not $env:SONAR_TOKEN) { throw "SONAR_TOKEN is required for a release." }
+          if (-not $env:SONAR_PROJECT_KEY) { throw "SONAR_PROJECT_KEY is required for a release." }
+          if (-not $env:SONAR_ORGANIZATION) { throw "SONAR_ORGANIZATION is required for a release." }
+      - name: Checkout the release tag
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ env.RELEASE_TAG }}
+      - name: Install .NET 8 tool runtime and pinned .NET 10 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.302
+          cache: true
+          cache-dependency-path: |
+            packages.lock.json
+            tests/Abituria.Tests/packages.lock.json
+      - name: Install pinned SonarScanner for .NET
+        shell: pwsh
+        run: dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner --version 11.2.1
+      - name: Begin SonarQube analysis
+        shell: pwsh
+        run: |
+          ./.sonar/scanner/dotnet-sonarscanner.exe begin `
+            /k:"$env:SONAR_PROJECT_KEY" `
+            /o:"$env:SONAR_ORGANIZATION" `
+            /v:"${{ needs.preflight.outputs.version }}" `
+            /d:sonar.token="$env:SONAR_TOKEN" `
+            /d:sonar.projectBaseDir="$env:GITHUB_WORKSPACE" `
+            /d:sonar.qualitygate.wait=true `
+            /d:sonar.qualitygate.timeout=300 `
+            /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
+          if ($LASTEXITCODE -ne 0) { throw "SonarScanner begin failed." }
+      - name: Restore in locked mode
+        run: dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
+      - name: Build for analysis
+        run: dotnet build Abituria.sln --configuration Release --no-restore --no-incremental
+      - name: Test with OpenCover report
+        run: >-
+          dotnet test Abituria.sln
+          --configuration Release
+          --no-build
+          --no-restore
+          --collect:"XPlat Code Coverage"
+          --
+          DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+      - name: Complete analysis and wait for quality gate
+        shell: pwsh
+        run: |
+          ./.sonar/scanner/dotnet-sonarscanner.exe end /d:sonar.token="$env:SONAR_TOKEN"
+          if ($LASTEXITCODE -ne 0) { throw "SonarQube quality gate failed." }
+
+  draft-release:
+    name: Validate, attest and create draft prerelease
+    needs:
+      - preflight
+      - package
+      - sonar
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+      artifact-metadata: write
+    steps:
+      - name: Checkout the release tag
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ env.RELEASE_TAG }}
+      - name: Download native release payloads
+        uses: actions/download-artifact@v4
+        with:
+          pattern: release-*
+          path: artifacts/release
+          merge-multiple: true
+      - name: Generate SHA-256 checksums
+        shell: pwsh
+        run: ./tools/release/New-ReleaseChecksums.ps1 -ArtifactsDirectory artifacts/release
+      - name: Validate archives, SBOMs, versions and checksums
+        shell: pwsh
+        run: >-
+          ./tools/release/Test-ReleaseAssets.ps1
+          -ArtifactsDirectory artifacts/release
+          -Version ${{ needs.preflight.outputs.version }}
+          -Tag $env:RELEASE_TAG
+      - name: Attest Windows archive with its SBOM
+        uses: actions/attest@v4
+        with:
+          subject-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-win-x64.zip
+          sbom-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-win-x64.spdx.json
+      - name: Attest Linux archive with its SBOM
+        uses: actions/attest@v4
+        with:
+          subject-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-linux-x64.tar.gz
+          sbom-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-linux-x64.spdx.json
+      - name: Attest macOS archive with its SBOM
+        uses: actions/attest@v4
+        with:
+          subject-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-osx-x64.zip
+          sbom-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-osx-x64.spdx.json
+      - name: Attest Windows archive build provenance
+        uses: actions/attest@v4
+        with:
+          subject-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-win-x64.zip
+      - name: Attest Linux archive build provenance
+        uses: actions/attest@v4
+        with:
+          subject-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-linux-x64.tar.gz
+      - name: Attest macOS archive build provenance
+        uses: actions/attest@v4
+        with:
+          subject-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-osx-x64.zip
+      - name: Attest checksum manifest
+        uses: actions/attest@v4
+        with:
+          subject-path: artifacts/release/SHA256SUMS.txt
+      - name: Create or refresh draft prerelease
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = "Stop"
+          $notesPath = Join-Path $env:RUNNER_TEMP "release-notes.md"
+          ./tools/release/Get-ReleaseNotes.ps1 `
+            -Version "${{ needs.preflight.outputs.version }}" `
+            -OutputPath $notesPath
+          $assets = @(
+            Get-ChildItem artifacts/release -File |
+              Sort-Object Name |
+              ForEach-Object FullName
+          )
+          $releaseJson = & gh release view $env:RELEASE_TAG `
+            --json isDraft,isPrerelease,tagName `
+            --repo $env:GITHUB_REPOSITORY 2>$null
+          $releaseExists = $LASTEXITCODE -eq 0
+          if ($releaseExists) {
+            $existingRelease = ($releaseJson -join "`n") | ConvertFrom-Json
+            if (-not $existingRelease.isDraft) {
+              throw "Istniejące opublikowane wydanie nie może zostać nadpisane ani cofnięte do draftu. Przygotuj nową wersję."
+            }
+            & gh release upload $env:RELEASE_TAG @assets --clobber --repo $env:GITHUB_REPOSITORY
+            if ($LASTEXITCODE -ne 0) { throw "Nie udało się odświeżyć artefaktów wydania." }
+            & gh release edit $env:RELEASE_TAG `
+              --draft `
+              --prerelease `
+              --title "Abituria v${{ needs.preflight.outputs.version }}" `
+              --notes-file $notesPath `
+              --repo $env:GITHUB_REPOSITORY
+          }
+          else {
+            & gh release create $env:RELEASE_TAG @assets `
+              --verify-tag `
+              --draft `
+              --prerelease `
+              --title "Abituria v${{ needs.preflight.outputs.version }}" `
+              --notes-file $notesPath `
+              --repo $env:GITHUB_REPOSITORY
+          }
+          if ($LASTEXITCODE -ne 0) { throw "Nie udało się utworzyć draftu prerelease." }

@@ -1,25 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
+    <RuntimeIdentifiers>linux-x64;osx-x64;win-x64</RuntimeIdentifiers>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Abituria</RootNamespace>
     <AssemblyName>Abituria</AssemblyName>
     <EnableDefaultItems>false</EnableDefaultItems>
     <AvaloniaUseCompiledBindingsByDefault>false</AvaloniaUseCompiledBindingsByDefault>
-    <NuGetAudit>false</NuGetAudit>
+    <ApplicationIcon Condition="$([MSBuild]::IsOSPlatform('Windows'))">img\icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="12.0.4" />
-    <PackageReference Include="Avalonia.BuildServices" Version="11.3.2" ExcludeAssets="build;buildTransitive;analyzers" PrivateAssets="all" />
     <PackageReference Include="Avalonia.Desktop" Version="12.0.4" />
     <PackageReference Include="Avalonia.Themes.Fluent" Version="12.0.4" />
     <PackageReference Include="Avalonia.Fonts.Inter" Version="12.0.4" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.17" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.10" />
+    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.12" />
     <PackageReference Include="Sylinko.CSharpMath.Avalonia" Version="12.0.0" />
   </ItemGroup>
 
@@ -27,7 +28,10 @@
     <Compile Include="AvaloniaApp\**\*.cs" />
     <AvaloniaXaml Include="AvaloniaApp\**\*.axaml" />
     <AvaloniaResource Include="Content\**\*.json" />
-    <AvaloniaResource Include="img\**\*.*" />
+    <AvaloniaResource Include="img\?.png" />
+    <AvaloniaResource Include="img\mp21z*.png" />
+    <AvaloniaResource Include="img\w*.png" />
+    <AvaloniaResource Include="img\abituria.png;img\dzialy.png;img\icon.png;img\kalkulator.png;img\zadania.png" />
     <AvaloniaResource Include="fonts\**\*.ttf" />
   </ItemGroup>
 
