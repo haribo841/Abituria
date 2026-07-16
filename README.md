@@ -58,7 +58,7 @@ Przy pierwszym uruchomieniu aplikacja może zaimportować istniejące nazwy z pl
 
 ## Uruchomienie ze źródeł
 
-Wymagany jest .NET SDK `10.0.302`, przypięty w `global.json`.
+Wymagany jest .NET SDK `10.0.302`, przypięty w `global.json`. Testy integracyjne skryptów wydawniczych wymagają również PowerShell 7 (`pwsh`) dostępnego w `PATH`.
 
 ```powershell
 dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
