@@ -1,6 +1,6 @@
 # Zależności Abiturii
 
-Ten dokument jest generowany przez `tools/Generate-DependencyDocumentation.ps1` z przypiętych plików `packages.lock.json`. Nie należy edytować tabel ręcznie.
+Ten dokument jest generowany przez `tools/Generate-DependencyDocumentation.ps1` z przypiętych plików `packages.lock.json`, manifestu narzędzi i workflow. Nie należy edytować tabel ręcznie.
 
 ## Zależności bezpośrednie
 
@@ -21,9 +21,21 @@ Ten dokument jest generowany przez `tools/Generate-DependencyDocumentation.ps1` 
 | `xunit.runner.visualstudio` | `3.1.5` | testowa | Adapter testów dla dotnet test i Visual Studio. | Apache-2.0 |
 | `xunit.v3` | `3.2.2` | testowa | Framework testów automatycznych. | Apache-2.0 |
 
+## Narzędzia kompilacji, analizy i publikacji
+
+Narzędzia w tej tabeli nie są częścią grafu runtime ani paczek aplikacji. Są przypiętymi pakietami .NET używanymi do tworzenia dokumentacji, SBOM i analizy jakości.
+
+| Pakiet | Wersja | Zastosowanie | Licencja | Źródło wersji |
+| --- | --- | --- | --- | --- |
+| `docfx` | `2.78.5` | Budowanie kanonicznej strony dokumentacji i kontrola ostrzeżeń. | MIT | `.config/dotnet-tools.json` |
+| `Microsoft.Sbom.DotNetTool` | `4.1.5` | Generowanie osobnego manifestu SPDX dla każdej paczki. | MIT | `.config/dotnet-tools.json` |
+| `dotnet-sonarscanner` | `11.2.1` | Analiza C# i oczekiwanie na wynik SonarQube Quality Gate. | LGPL-3.0 | workflow SonarQube i wydania |
+
 ## Pełne rozwiązanie zależności
 
 Tabela obejmuje również zależności przechodnie. Dokładne grafy dla każdego targetu pozostają w lockfile, a każde wydanie otrzymuje osobny SBOM SPDX.
+
+`Avalonia.BuildServices 11.3.2` nie jest bezpośrednią zależnością Abiturii. Pozostaje wyłącznie przechodnim narzędziem czasu kompilacji wymaganym przez metapakiet `Avalonia 12.0.4` i nie należy do grafu runtime publikowanej aplikacji.
 
 | Pakiet | Wersja | Zakres | Typ | Licencja |
 | --- | --- | --- | --- | --- |
@@ -111,5 +123,5 @@ Każda paczka produkcyjna zawiera `Microsoft.NETCore.App.Runtime.<rid>` oraz kod
 ```powershell
 dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
 dotnet list Abituria.sln package --vulnerable --include-transitive
-powershell -File tools/Generate-DependencyDocumentation.ps1 -Verify
+pwsh -NoProfile -File tools/Generate-DependencyDocumentation.ps1 -Verify
 ```

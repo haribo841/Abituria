@@ -49,26 +49,21 @@ Reset-Directory -Path $workDirectory
 New-Item -ItemType Directory -Path $publishedDirectory, $packageDirectory -Force | Out-Null
 Reset-Directory -Path $OutputDirectory
 
-$commit = "unknown"
-if (Get-Command git -ErrorAction SilentlyContinue) {
-    Push-Location $repositoryRoot
-    try {
-        $candidateCommit = (& git rev-parse HEAD).Trim()
-        if ($LASTEXITCODE -eq 0 -and $candidateCommit) {
-            $commit = $candidateCommit
-        }
+if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
+    throw "Git is required to bind a release artifact to its source commit."
+}
+Push-Location $repositoryRoot
+try {
+    $commit = (& git rev-parse HEAD).Trim()
+    if ($LASTEXITCODE -ne 0 -or $commit -notmatch '^[0-9a-f]{40}$') {
+        throw "Could not resolve an exact 40-character source commit."
     }
-    finally {
-        Pop-Location
-    }
+}
+finally {
+    Pop-Location
 }
 
-$sourceRevisionArgument = if ($commit -eq "unknown") {
-    "-p:SourceRevisionId="
-}
-else {
-    "-p:SourceRevisionId=$commit"
-}
+$sourceRevisionArgument = "-p:SourceRevisionId=$commit"
 
 Push-Location $repositoryRoot
 try {
@@ -158,6 +153,13 @@ foreach ($runtimeNotice in @(
         -LiteralPath $sourcePath `
         -Destination (Join-Path $licensesDirectory $runtimeNotice.Destination)
 }
+
+$nugetLicenseDirectory = Join-Path $licensesDirectory "nuget"
+& (Join-Path $PSScriptRoot "New-NuGetLicenseBundle.ps1") `
+    -PublishedDirectory $publishedDirectory `
+    -RuntimeIdentifier $RuntimeIdentifier `
+    -OutputDirectory $nugetLicenseDirectory `
+    -PackageRoot $nugetPackageRoot
 
 $releaseMetadata = [ordered]@{
     product = "Abituria"
@@ -260,7 +262,7 @@ switch ($RuntimeIdentifier) {
             throw "The osx-x64 package must be archived on macOS."
         }
         Invoke-ExternalCommand -FilePath "ditto" -ArgumentList @(
-            "-c", "-k", "--sequesterRsrc", "--keepParent",
+            "-c", "-k", "--keepParent",
             $packageDirectory,
             $archivePath
         )

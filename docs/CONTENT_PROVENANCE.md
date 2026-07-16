@@ -44,13 +44,13 @@ Skrypt [`tools/Test-ContentProvenance.ps1`](https://github.com/haribo841/Abituri
 Walidacja kompletności podczas pracy nad repozytorium:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File tools/Test-ContentProvenance.ps1
+pwsh -NoProfile -File tools/Test-ContentProvenance.ps1
 ```
 
 Brama publicznego wydania:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File tools/Test-ContentProvenance.ps1 `
+pwsh -NoProfile -File tools/Test-ContentProvenance.ps1 `
   -RequireReleaseEligible
 ```
 

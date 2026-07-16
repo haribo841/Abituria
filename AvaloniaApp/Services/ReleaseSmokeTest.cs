@@ -16,6 +16,7 @@ public sealed record ReleaseSmokeTestArguments(string DataDirectory);
 public sealed record ReleaseSmokeTestReport(
     string DatabasePath,
     string Version,
+    string Commit,
     int FormulaCount,
     int ChapterCount,
     int ExerciseCount,
@@ -84,6 +85,7 @@ public static class ReleaseSmokeTestCommand
             App.ConfigureRuntime(runtimeOptions);
             Program.BuildAvaloniaApp().SetupWithClassicDesktopLifetime(args);
             var report = await ReleaseSmokeTestRunner.VerifyAsync(App.Services);
+            Console.WriteLine($"ABITURIA_RELEASE_SMOKE version={report.Version} commit={report.Commit}");
             Console.WriteLine(
                 $"Abituria {report.Version}: smoke test zakończony powodzeniem " +
                 $"({report.FormulaCount} wzorów, {report.ChapterCount} działów, {report.ExerciseCount} zadań).");
@@ -109,14 +111,16 @@ public static class ReleaseSmokeTestRunner
         var accounts = services.GetRequiredService<AccountService>();
         var content = services.GetRequiredService<ContentRepository>();
         var calculator = services.GetRequiredService<ExpressionCalculator>();
+        var passwordHasher = services.GetRequiredService<PasswordHasher>();
         _ = services.GetRequiredService<CalculatorSession>();
         var buildInfo = services.GetRequiredService<AppBuildInfo>();
 
         EnsureContentIsAvailable(content);
-        EnsureApplicationAssetIsAvailable();
+        EnsureApplicationAssetsAreAvailable();
         EnsureCalculatorIsOperational(calculator);
         var quadraticSummary = EnsureQuadraticCalculatorIsOperational();
         await EnsureGuestProfileIsAvailableAsync(accounts);
+        await EnsureAccountLifecycleIsOperationalAsync(accounts, passwordHasher);
 
         if (!File.Exists(accounts.DatabasePath))
             throw new InvalidOperationException("Testowa baza danych nie została utworzona.");
@@ -124,6 +128,7 @@ public static class ReleaseSmokeTestRunner
         return new ReleaseSmokeTestReport(
             accounts.DatabasePath,
             buildInfo.Version,
+            buildInfo.Commit,
             content.Formulas.Articles.Count,
             content.Chapters.Chapters.Count,
             content.Exam.Exercises.Count,
@@ -163,12 +168,21 @@ public static class ReleaseSmokeTestRunner
         {
             throw new InvalidDataException("Nie załadowano kompletu podstawowych treści aplikacji.");
         }
+
+        if (!content.Formulas.Articles.Any(article => article.Id == "formula-2") ||
+            !content.Exam.Exercises.Any(exercise => exercise.Id == "mp21-z9"))
+        {
+            throw new InvalidDataException("Nie załadowano reprezentatywnych materiałów wydania.");
+        }
     }
 
-    private static void EnsureApplicationAssetIsAvailable()
+    private static void EnsureApplicationAssetsAreAvailable()
     {
-        using var stream = AssetLoader.Open(new Uri("avares://Abituria/img/icon.png"));
-        if (stream.Length == 0) throw new InvalidDataException("Ikona aplikacji jest pusta.");
+        foreach (var asset in new[] { "img/icon.png", "img/w9a.png", "img/mp21z9.png" })
+        {
+            using var stream = AssetLoader.Open(new Uri($"avares://Abituria/{asset}"));
+            if (stream.Length == 0) throw new InvalidDataException($"Zasób aplikacji jest pusty: {asset}.");
+        }
     }
 
     private static void EnsureCalculatorIsOperational(ExpressionCalculator calculator)
@@ -196,5 +210,29 @@ public static class ReleaseSmokeTestRunner
         var profiles = await accounts.GetProfilesAsync();
         if (!profiles.Any(profile => profile.Kind == ProfileKind.Guest))
             throw new InvalidOperationException("Nie utworzono lokalnego profilu gościa.");
+    }
+
+    private static async Task EnsureAccountLifecycleIsOperationalAsync(
+        AccountService accounts,
+        PasswordHasher passwordHasher)
+    {
+        var password = PasswordHasher.GenerateRecoveryCode();
+        var registration = await accounts.RegisterAsync("Release smoke profile", password, password);
+        if (!registration.Success || registration.Profile is null || string.IsNullOrWhiteSpace(registration.RecoveryCode))
+            throw new InvalidOperationException("Rejestracja konta w smoke teście nie powiodła się.");
+
+        if (!(await accounts.AuthenticateAsync(registration.Profile.Id, password)).Success)
+            throw new InvalidOperationException("Logowanie konta w smoke teście nie powiodło się.");
+
+        const string exerciseId = "mp21-z9";
+        await accounts.MarkExerciseCompletedAsync(registration.Profile.Id, exerciseId);
+
+        var restarted = new AccountService(new Abituria.Data.AppDbContextFactory(accounts.DatabasePath), passwordHasher);
+        await restarted.InitializeAsync(importLegacyProfiles: false);
+        if (!(await restarted.AuthenticateAsync(registration.Profile.Id, password)).Success ||
+            !(await restarted.GetCompletedExerciseIdsAsync(registration.Profile.Id)).Contains(exerciseId))
+        {
+            throw new InvalidOperationException("Konto lub postęp nie przetrwały ponownego otwarcia bazy.");
+        }
     }
 }

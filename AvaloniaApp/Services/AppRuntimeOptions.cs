@@ -24,7 +24,7 @@ public sealed record AppRuntimeOptions(
         var productionDataPath = Path.GetFullPath(Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
             "Abituria"));
-        var comparison = OperatingSystem.IsWindows()
+        var comparison = OperatingSystem.IsWindows() || OperatingSystem.IsMacOS()
             ? StringComparison.OrdinalIgnoreCase
             : StringComparison.Ordinal;
         var canonicalPath = ResolveDirectoryLinks(fullPath);

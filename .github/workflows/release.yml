@@ -19,6 +19,10 @@ env:
 permissions:
   contents: read
 
+concurrency:
+  group: release-${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+
 jobs:
   preflight:
     name: Validate release contract
@@ -31,6 +35,8 @@ jobs:
         with:
           fetch-depth: 0
           ref: ${{ env.RELEASE_TAG }}
+      - name: Fetch the verified main branch
+        run: git fetch --no-tags origin +refs/heads/main:refs/remotes/origin/main
       - name: Validate tag, version, changelog and tools
         id: version
         shell: pwsh
@@ -39,8 +45,17 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           global-json-file: global.json
+          cache: true
+          cache-dependency-path: |
+            packages.lock.json
+            tests/Abituria.Tests/packages.lock.json
+      - name: Restore solution in locked mode for dependency documentation
+        run: dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
       - name: Restore pinned documentation tool
         run: dotnet tool restore
+      - name: Verify generated dependency and license documentation
+        shell: pwsh
+        run: ./tools/Generate-DependencyDocumentation.ps1 -Verify
       - name: Build documentation with warnings as errors
         run: dotnet tool run docfx -- docfx.json --warningsAsErrors
       - name: Validate local and external documentation links

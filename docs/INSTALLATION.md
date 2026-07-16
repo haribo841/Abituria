@@ -67,8 +67,8 @@ gh attestation verify Abituria-v0.9.0-beta.1-osx-x64.zip --repo haribo841/Abitur
 
 1. Zweryfikuj pobrany plik.
 2. Utwórz nowy katalog, na przykład `%LOCALAPPDATA%\Programs\Abituria-0.9.0-beta.1`.
-3. Rozpakuj ZIP do tego katalogu. Nie uruchamiaj programu bezpośrednio z archiwum.
-4. Uruchom `Abituria.exe`.
+3. Rozpakuj ZIP do tego katalogu. Archiwum utworzy podkatalog `Abituria-v0.9.0-beta.1-win-x64`. Nie uruchamiaj programu bezpośrednio z archiwum.
+4. Wejdź do utworzonego podkatalogu i uruchom `Abituria.exe`.
 
 Wydanie beta nie ma podpisu kodu. SmartScreen może zgłosić nierozpoznanego wydawcę. Po sprawdzeniu sumy i attestation konkretnej paczki można użyć opcji systemu pokazującej więcej informacji i zezwalającej na jednorazowe uruchomienie tego pliku. Nie wyłączaj globalnie SmartScreen ani programu antywirusowego.
 
@@ -76,9 +76,19 @@ Smoke test bez otwierania okna i bez używania prawdziwej bazy:
 
 ```powershell
 $data = Join-Path $env:TEMP "abituria-smoke-$([Guid]::NewGuid())"
-.\Abituria.exe --release-smoke-test --data-directory $data
-if ($LASTEXITCODE -ne 0) { throw "Smoke test nie powiódł się." }
-Remove-Item -Recurse -LiteralPath $data
+$app = Join-Path $env:LOCALAPPDATA "Programs\Abituria-0.9.0-beta.1\Abituria-v0.9.0-beta.1-win-x64\Abituria.exe"
+try {
+    $process = Start-Process `
+        -FilePath $app `
+        -ArgumentList "--release-smoke-test --data-directory `"$data`"" `
+        -WindowStyle Hidden `
+        -Wait `
+        -PassThru
+    if ($process.ExitCode -ne 0) { throw "Smoke test nie powiódł się z kodem $($process.ExitCode)." }
+}
+finally {
+    if (Test-Path -LiteralPath $data) { Remove-Item -Recurse -LiteralPath $data }
+}
 ```
 
 ## Ubuntu
@@ -97,7 +107,7 @@ Remove-Item -Recurse -LiteralPath $data
    mkdir -p "$HOME/.local/opt/abituria-0.9.0-beta.1"
    tar -xzf Abituria-v0.9.0-beta.1-linux-x64.tar.gz \
      -C "$HOME/.local/opt/abituria-0.9.0-beta.1"
-   cd "$HOME/.local/opt/abituria-0.9.0-beta.1"
+   cd "$HOME/.local/opt/abituria-0.9.0-beta.1/Abituria-v0.9.0-beta.1-linux-x64"
    chmod u+x ./Abituria
    ./Abituria
    ```
@@ -115,8 +125,8 @@ exit "$status"
 ## macOS Intel
 
 1. Zweryfikuj pobrany plik.
-2. Rozpakuj ZIP. W archiwum znajduje się kompletne `Abituria.app`.
-3. Przenieś `Abituria.app` do katalogu `/Applications` albo uruchamiaj je z katalogu użytkownika.
+2. Rozpakuj ZIP. Archiwum utworzy katalog `Abituria-v0.9.0-beta.1-osx-x64`, wewnątrz którego znajduje się kompletne `Abituria.app`.
+3. Przenieś aplikację `Abituria-v0.9.0-beta.1-osx-x64/Abituria.app` do katalogu `/Applications` albo uruchamiaj ją z rozpakowanego katalogu użytkownika.
 4. Otwórz aplikację.
 
 Wydanie beta nie jest podpisane ani notaryzowane. Gatekeeper może zablokować pierwsze uruchomienie. Po zweryfikowaniu sumy i attestation użyj systemowej, jednorazowej procedury otwarcia konkretnej aplikacji, na przykład Control-click, „Open”, a następnie potwierdzenie, lub opcji „Open Anyway” dla Abiturii w ustawieniach Privacy & Security. Nie wyłączaj Gatekeepera globalnie.
@@ -125,7 +135,10 @@ Smoke test:
 
 ```bash
 data="$(mktemp -d)"
-./Abituria.app/Contents/MacOS/Abituria \
+app="/Applications/Abituria.app"
+# Jeśli aplikacja pozostała w rozpakowanym katalogu, ustaw zamiast tego:
+# app="$PWD/Abituria-v0.9.0-beta.1-osx-x64/Abituria.app"
+"$app/Contents/MacOS/Abituria" \
   --release-smoke-test --data-directory "$data"
 status=$?
 rm -rf -- "$data"

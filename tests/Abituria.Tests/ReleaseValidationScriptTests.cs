@@ -108,6 +108,68 @@ public sealed class ReleaseValidationScriptTests
         Assert.Equal(0, result.ExitCode);
     }
 
+    [Fact]
+    public void Documentation_validator_accepts_existing_same_page_and_cross_page_fragments()
+    {
+        using var directory = new TemporaryDirectory();
+        File.WriteAllText(
+            Path.Combine(directory.Path, "guide.html"),
+            "<html><body><h2 ID=\"details\">Details</h2></body></html>",
+            Encoding.UTF8);
+        File.WriteAllText(
+            Path.Combine(directory.Path, "index.html"),
+            "<html><body><h2 id=\"overview\">Overview</h2>" +
+            "<a href=\"#overview\">overview</a><a href=\"guide.html#details\">details</a></body></html>",
+            Encoding.UTF8);
+
+        var result = RunPowerShell(
+            "try { & $env:ABITURIA_LINK_SCRIPT -SiteDirectory $env:ABITURIA_FIXTURE; exit 0 } " +
+            "catch { [Console]::Error.WriteLine($_.Exception.Message); exit 17 }",
+            directory.Path);
+
+        Assert.Equal(0, result.ExitCode);
+    }
+
+    [Theory]
+    [InlineData("<h2 data-id=\"target\">Target</h2>", "#target")]
+    [InlineData("<h2 id=\"target\">Target</h2>", "#TARGET")]
+    public void Documentation_validator_requires_an_exact_case_sensitive_id_or_name_attribute(
+        string targetHtml,
+        string link)
+    {
+        using var directory = new TemporaryDirectory();
+        File.WriteAllText(Path.Combine(directory.Path, "index.html"), targetHtml + $"<a href=\"{link}\">link</a>", Encoding.UTF8);
+
+        var result = RunPowerShell(
+            "try { & $env:ABITURIA_LINK_SCRIPT -SiteDirectory $env:ABITURIA_FIXTURE; exit 0 } " +
+            "catch { [Console]::Error.WriteLine($_.Exception.Message); exit 17 }",
+            directory.Path);
+
+        Assert.Equal(17, result.ExitCode);
+        Assert.Contains("missing fragment", result.StandardError, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Theory]
+    [InlineData("#missing")]
+    [InlineData("guide.html#missing")]
+    public void Documentation_validator_rejects_missing_local_fragments(string link)
+    {
+        using var directory = new TemporaryDirectory();
+        File.WriteAllText(Path.Combine(directory.Path, "guide.html"), "<h2 id=\"present\">Guide</h2>", Encoding.UTF8);
+        File.WriteAllText(
+            Path.Combine(directory.Path, "index.html"),
+            $"<html><body><a href=\"{link}\">broken</a></body></html>",
+            Encoding.UTF8);
+
+        var result = RunPowerShell(
+            "try { & $env:ABITURIA_LINK_SCRIPT -SiteDirectory $env:ABITURIA_FIXTURE; exit 0 } " +
+            "catch { [Console]::Error.WriteLine($_.Exception.Message); exit 17 }",
+            directory.Path);
+
+        Assert.Equal(17, result.ExitCode);
+        Assert.Contains("missing fragment", result.StandardError, StringComparison.OrdinalIgnoreCase);
+    }
+
     private static byte[] CrossChunkBoundary(byte[] secret)
     {
         var prefix = Enumerable.Repeat((byte)'x', (1024 * 1024) - 8).ToArray();

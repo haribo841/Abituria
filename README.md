@@ -42,7 +42,7 @@ Szczegółową instrukcję korzystania z tych funkcji zawiera [podręcznik użyt
 
 1. Pobierz paczkę przeznaczoną dla swojego systemu oraz `SHA256SUMS.txt` z tego samego wydania.
 2. Zweryfikuj sumę i attestation zgodnie z [instrukcją instalacji](docs/INSTALLATION.md#sprawdzenie-integralności-i-pochodzenia).
-3. Rozpakuj aplikację do nowego katalogu.
+3. Rozpakuj aplikację do nowego katalogu i wejdź do utworzonego podkatalogu `Abituria-v0.9.0-beta.1-<rid>`.
 4. Uruchom `Abituria.exe`, `Abituria` albo `Abituria.app`, zależnie od systemu.
 5. Wybierz profil gościa lub utwórz lokalne konto.
 
@@ -67,7 +67,7 @@ dotnet test Abituria.sln --configuration Release --no-build
 dotnet run --project Abituria.csproj
 ```
 
-Pełne bramy jakości:
+Podstawowe kontrole developerskie:
 
 ```powershell
 dotnet list Abituria.sln package --vulnerable --include-transitive
@@ -75,10 +75,15 @@ dotnet format whitespace Abituria.sln --verify-no-changes --no-restore
 git diff --check
 ```
 
+Pełny zestaw bram, obejmujący wymuszony audyt podatności, pochodzenie zasobów, aktualność dokumentacji zależności, DocFX i odnośniki, opisuje [proces wydania](docs/RELEASE_PROCESS.md#2-bramy-lokalne).
+
 Diagnostyka opublikowanego artefaktu działa bez otwierania UI i bez używania prawdziwych danych:
 
 ```powershell
-Abituria.exe --release-smoke-test --data-directory C:\Temp\abituria-smoke
+$process = Start-Process -FilePath .\Abituria.exe `
+  -ArgumentList '--release-smoke-test --data-directory "C:\Temp\abituria-smoke"' `
+  -WindowStyle Hidden -Wait -PassThru
+if ($process.ExitCode -ne 0) { throw "Smoke test nie powiódł się." }
 ```
 
 Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalnego wewnątrz `Abituria.app`.

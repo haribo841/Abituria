@@ -11,7 +11,8 @@ public sealed class ReleaseContractTests
     public void Canonical_version_is_consistent_across_assembly_and_release_documents()
     {
         var properties = XDocument.Load(Absolute("Directory.Build.props"));
-        var version = properties.Descendants("Version").Single().Value;
+        var versionElement = properties.Descendants("Version").Single();
+        var version = versionElement.Value;
         var expectedTag = "v" + version;
         var requiredDocuments = new[]
         {
@@ -24,11 +25,17 @@ public sealed class ReleaseContractTests
         };
 
         Assert.Equal("0.9.0-beta.1", version);
+        Assert.Empty(properties.Descendants("VersionPrefix"));
+        Assert.Empty(properties.Descendants("VersionSuffix"));
         Assert.Equal(version, Services.AppBuildInfo.Current.Version);
         Assert.All(requiredDocuments, path =>
             Assert.Contains(version, File.ReadAllText(Absolute(path)), StringComparison.Ordinal));
         Assert.Contains(expectedTag, File.ReadAllText(Absolute("README.md")), StringComparison.Ordinal);
         Assert.Contains(expectedTag, File.ReadAllText(Absolute(".github/workflows/release.yml")), StringComparison.Ordinal);
+        Assert.Contains(
+            $"Abituria-v{version}-<rid>",
+            File.ReadAllText(Absolute("README.md")),
+            StringComparison.Ordinal);
     }
 
     [Fact]
@@ -39,6 +46,7 @@ public sealed class ReleaseContractTests
         var project = XDocument.Load(Absolute("Abituria.csproj"));
         var testProject = XDocument.Load(Absolute("tests/Abituria.Tests/Abituria.Tests.csproj"));
         var properties = XDocument.Load(Absolute("Directory.Build.props"));
+        var dependencyDocumentation = File.ReadAllText(Absolute("docs/DEPENDENCIES.md"));
         var packages = project.Descendants("PackageReference")
             .ToDictionary(
                 node => node.Attribute("Include")!.Value,
@@ -46,6 +54,7 @@ public sealed class ReleaseContractTests
                 StringComparer.Ordinal);
 
         Assert.Equal("10.0.302", globalJson.RootElement.GetProperty("sdk").GetProperty("version").GetString());
+        Assert.Equal("disable", globalJson.RootElement.GetProperty("sdk").GetProperty("rollForward").GetString());
         Assert.Equal("net10.0", project.Descendants("TargetFramework").Single().Value);
         Assert.Equal("net10.0", testProject.Descendants("TargetFramework").Single().Value);
         Assert.Equal("10.0.10", properties.Descendants("RuntimeFrameworkVersion").Single().Value);
@@ -64,6 +73,10 @@ public sealed class ReleaseContractTests
         Assert.Equal(
             "4.1.5",
             tools.RootElement.GetProperty("tools").GetProperty("microsoft.sbom.dotnettool").GetProperty("version").GetString());
+        Assert.Contains("| `docfx` | `2.78.5` |", dependencyDocumentation, StringComparison.Ordinal);
+        Assert.Contains("| `Microsoft.Sbom.DotNetTool` | `4.1.5` |", dependencyDocumentation, StringComparison.Ordinal);
+        Assert.Contains("| `dotnet-sonarscanner` | `11.2.1` |", dependencyDocumentation, StringComparison.Ordinal);
+        Assert.Contains("| LGPL-3.0 |", dependencyDocumentation, StringComparison.Ordinal);
         Assert.True(File.Exists(Absolute("packages.lock.json")));
         Assert.True(File.Exists(Absolute("tests/Abituria.Tests/packages.lock.json")));
     }
@@ -81,14 +94,26 @@ public sealed class ReleaseContractTests
             "--locked-mode",
             "Test-NuGetVulnerabilities.ps1",
             "Test-ContentProvenance.ps1 -RequireReleaseEligible",
+            "Generate-DependencyDocumentation.ps1 -Verify",
             "dotnet format",
             "git diff --check",
             "actions/attest@v4",
+            "concurrency:",
+            "cancel-in-progress: false",
+            "refs/remotes/origin/main",
+            "Restore solution in locked mode for dependency documentation",
             "--draft",
             "--prerelease"
         };
 
         Assert.All(requiredFragments, fragment => Assert.Contains(fragment, workflow, StringComparison.Ordinal));
+        Assert.True(
+            workflow.IndexOf(
+                "Restore solution in locked mode for dependency documentation",
+                StringComparison.Ordinal) <
+            workflow.IndexOf(
+                "Verify generated dependency and license documentation",
+                StringComparison.Ordinal));
         Assert.Contains("sonar.qualitygate.wait=true", workflow, StringComparison.Ordinal);
         Assert.Contains(
             "xvfb-run -a dotnet test Abituria.sln --configuration Release --no-build --no-restore",
@@ -133,15 +158,27 @@ public sealed class ReleaseContractTests
     {
         var guide = File.ReadAllText(Absolute("tools/release/RELEASE-README.md"));
         var packagingScript = File.ReadAllText(Absolute("tools/release/Publish-ReleaseArtifact.ps1"));
+        var installation = File.ReadAllText(Absolute("docs/INSTALLATION.md"));
+        var readme = File.ReadAllText(Absolute("README.md"));
 
         Assert.InRange(guide.Length, 500, 4_000);
         Assert.Contains("Windows 11 x64", guide, StringComparison.Ordinal);
         Assert.Contains("Ubuntu 24.04 x64", guide, StringComparison.Ordinal);
         Assert.Contains("macOS 15 Intel x64", guide, StringComparison.Ordinal);
         Assert.Contains("SHA-256", guide, StringComparison.Ordinal);
+        Assert.Contains("Abituria-v0.9.0-beta.1-win-x64", guide, StringComparison.Ordinal);
+        Assert.Contains("Abituria-v0.9.0-beta.1-linux-x64", guide, StringComparison.Ordinal);
+        Assert.Contains("Abituria-v0.9.0-beta.1-osx-x64", guide, StringComparison.Ordinal);
         Assert.Contains("tools/release/RELEASE-README.md", packagingScript, StringComparison.Ordinal);
         Assert.Contains("dotnet-runtime-LICENSE.txt", packagingScript, StringComparison.Ordinal);
         Assert.Contains("dotnet-runtime-THIRD-PARTY-NOTICES.txt", packagingScript, StringComparison.Ordinal);
+        Assert.Contains("New-NuGetLicenseBundle.ps1", packagingScript, StringComparison.Ordinal);
+        Assert.Contains("licenses/nuget", guide, StringComparison.Ordinal);
+        Assert.Contains("Start-Process", installation, StringComparison.Ordinal);
+        Assert.Contains("-Wait", installation, StringComparison.Ordinal);
+        Assert.Contains("$process.ExitCode", installation, StringComparison.Ordinal);
+        Assert.Contains("Start-Process", readme, StringComparison.Ordinal);
+        Assert.Contains("-Wait -PassThru", readme, StringComparison.Ordinal);
         Assert.DoesNotContain("docs/INSTALLATION.md", packagingScript, StringComparison.Ordinal);
     }
 
@@ -157,6 +194,31 @@ public sealed class ReleaseContractTests
         Assert.Contains("Abituria.app/Contents/MacOS/Abituria", smokeScript, StringComparison.Ordinal);
         Assert.Contains("Abituria-v$Version-$RuntimeIdentifier", smokeScript, StringComparison.Ordinal);
         Assert.Contains("Assert-SafeArchiveEntry", smokeScript, StringComparison.Ordinal);
+        Assert.Contains("TimeoutSeconds = 120", smokeScript, StringComparison.Ordinal);
+        Assert.Contains("$process.Kill($true)", smokeScript, StringComparison.Ordinal);
+        Assert.Contains("ABITURIA_RELEASE_SMOKE", smokeScript, StringComparison.Ordinal);
+        Assert.Contains("exactly one top-level directory", smokeScript, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void Release_identity_is_bound_to_main_tag_and_never_allows_unknown_commit()
+    {
+        var versionValidator = File.ReadAllText(Absolute("tools/release/Test-ReleaseVersion.ps1"));
+        var publisher = File.ReadAllText(Absolute("tools/release/Publish-ReleaseArtifact.ps1"));
+        var assetValidator = File.ReadAllText(Absolute("tools/release/Test-ReleaseAssets.ps1"));
+
+        Assert.Contains("refs/remotes/origin/main", versionValidator, StringComparison.Ordinal);
+        Assert.Contains("TryParseExact", versionValidator, StringComparison.Ordinal);
+        Assert.Contains("taggerdate:unix", versionValidator, StringComparison.Ordinal);
+        Assert.Contains("FromUnixTimeSeconds", versionValidator, StringComparison.Ordinal);
+        Assert.Contains("musi być adnotowany", versionValidator, StringComparison.Ordinal);
+        Assert.Contains("przedwydaniowy komunikat", versionValidator, StringComparison.Ordinal);
+        Assert.Contains("^[0-9a-f]{40}$", publisher, StringComparison.Ordinal);
+        Assert.DoesNotContain("commit = \"unknown\"", publisher, StringComparison.Ordinal);
+        Assert.DoesNotContain("|unknown", assetValidator, StringComparison.Ordinal);
+        Assert.Contains("$releaseMetadata.commit -cne $expectedCommit", assetValidator, StringComparison.Ordinal);
+        Assert.Contains("exactly one top-level directory", assetValidator, StringComparison.Ordinal);
+        Assert.DoesNotContain("--sequesterRsrc", publisher, StringComparison.Ordinal);
     }
 
     [Fact]
@@ -189,6 +251,11 @@ public sealed class ReleaseContractTests
         Assert.Contains("Deployed Pages entry point failed after 6 attempts", pages, StringComparison.Ordinal);
         Assert.Contains("Start-Sleep", script, StringComparison.Ordinal);
         Assert.Contains("External link must use HTTPS", script, StringComparison.Ordinal);
+        Assert.Contains("RequirePublishedReleaseLinks", script, StringComparison.Ordinal);
+        Assert.Contains(
+            "-RequirePublishedReleaseLinks",
+            File.ReadAllText(Absolute("docs/RELEASE_PROCESS.md")),
+            StringComparison.Ordinal);
     }
 
     [Fact]

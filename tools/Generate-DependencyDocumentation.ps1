@@ -13,6 +13,31 @@ $runtimeFrameworkVersion = [string]$buildProperties.Project.PropertyGroup.Runtim
 if ([string]::IsNullOrWhiteSpace($runtimeFrameworkVersion)) {
     throw "Directory.Build.props nie zawiera wersji środowiska uruchomieniowego."
 }
+$toolManifest = Get-Content -Raw -Encoding UTF8 (Join-Path $root ".config/dotnet-tools.json") |
+    ConvertFrom-Json
+$docfxVersion = [string]$toolManifest.tools.docfx.version
+$sbomToolVersion = [string]$toolManifest.tools.PSObject.Properties["microsoft.sbom.dotnettool"].Value.version
+$sonarVersions = @(
+    @(
+        foreach ($workflowPath in @(
+            ".github/workflows/sonarcloud.yml",
+            ".github/workflows/release.yml"
+        )) {
+            $workflow = Get-Content -Raw -Encoding UTF8 (Join-Path $root $workflowPath)
+            foreach ($match in [regex]::Matches(
+                $workflow,
+                'dotnet tool install dotnet-sonarscanner[^\r\n]*--version\s+(?<version>\d+\.\d+\.\d+)'
+            )) {
+                $match.Groups["version"].Value
+            }
+        }
+    ) | Sort-Object -Unique
+)
+if ([string]::IsNullOrWhiteSpace($docfxVersion) -or
+    [string]::IsNullOrWhiteSpace($sbomToolVersion) -or
+    $sonarVersions.Count -ne 1) {
+    throw "Nie można jednoznacznie odczytać wersji przypiętych narzędzi DocFX, SBOM i SonarScanner."
+}
 
 $purposes = @{
     "Avalonia" = "Podstawowy framework interfejsu desktopowego."
@@ -110,7 +135,7 @@ $production = @($packages | Where-Object { $_.Scope -ne "testowa" } | Sort-Objec
 $dependencyLines = [System.Collections.Generic.List[string]]::new()
 $dependencyLines.Add("# Zależności Abiturii")
 $dependencyLines.Add("")
-$dependencyLines.Add("Ten dokument jest generowany przez ``tools/Generate-DependencyDocumentation.ps1`` z przypiętych plików ``packages.lock.json``. Nie należy edytować tabel ręcznie.")
+$dependencyLines.Add("Ten dokument jest generowany przez ``tools/Generate-DependencyDocumentation.ps1`` z przypiętych plików ``packages.lock.json``, manifestu narzędzi i workflow. Nie należy edytować tabel ręcznie.")
 $dependencyLines.Add("")
 $dependencyLines.Add("## Zależności bezpośrednie")
 $dependencyLines.Add("")
@@ -121,9 +146,29 @@ foreach ($package in $direct) {
     $dependencyLines.Add("| ``$(Escape-Markdown $package.Id)`` | ``$(Escape-Markdown $package.Version)`` | $(Escape-Markdown $package.Scope) | $(Escape-Markdown $purpose) | $(Escape-Markdown $package.License) |")
 }
 $dependencyLines.Add("")
+$dependencyLines.Add("## Narzędzia kompilacji, analizy i publikacji")
+$dependencyLines.Add("")
+$dependencyLines.Add("Narzędzia w tej tabeli nie są częścią grafu runtime ani paczek aplikacji. Są przypiętymi pakietami .NET używanymi do tworzenia dokumentacji, SBOM i analizy jakości.")
+$dependencyLines.Add("")
+$dependencyLines.Add("| Pakiet | Wersja | Zastosowanie | Licencja | Źródło wersji |")
+$dependencyLines.Add("| --- | --- | --- | --- | --- |")
+$dependencyLines.Add("| ``docfx`` | ``$docfxVersion`` | Budowanie kanonicznej strony dokumentacji i kontrola ostrzeżeń. | MIT | ``.config/dotnet-tools.json`` |")
+$dependencyLines.Add("| ``Microsoft.Sbom.DotNetTool`` | ``$sbomToolVersion`` | Generowanie osobnego manifestu SPDX dla każdej paczki. | MIT | ``.config/dotnet-tools.json`` |")
+$dependencyLines.Add("| ``dotnet-sonarscanner`` | ``$($sonarVersions[0])`` | Analiza C# i oczekiwanie na wynik SonarQube Quality Gate. | LGPL-3.0 | workflow SonarQube i wydania |")
+$dependencyLines.Add("")
 $dependencyLines.Add("## Pełne rozwiązanie zależności")
 $dependencyLines.Add("")
 $dependencyLines.Add("Tabela obejmuje również zależności przechodnie. Dokładne grafy dla każdego targetu pozostają w lockfile, a każde wydanie otrzymuje osobny SBOM SPDX.")
+$avaloniaBuildServices = @($resolved | Where-Object Id -eq "Avalonia.BuildServices")
+if ($avaloniaBuildServices.Count -ne 1 -or $avaloniaBuildServices[0].Direct) {
+    throw "Avalonia.BuildServices ma pozostać wyłącznie pojedynczą zależnością przechodnią Avalonia."
+}
+$avalonia = @($resolved | Where-Object Id -eq "Avalonia")
+if ($avalonia.Count -ne 1 -or -not $avalonia[0].Direct) {
+    throw "Avalonia ma pozostać pojedynczą zależnością bezpośrednią."
+}
+$dependencyLines.Add("")
+$dependencyLines.Add("``Avalonia.BuildServices $($avaloniaBuildServices[0].Version)`` nie jest bezpośrednią zależnością Abiturii. Pozostaje wyłącznie przechodnim narzędziem czasu kompilacji wymaganym przez metapakiet ``Avalonia $($avalonia[0].Version)`` i nie należy do grafu runtime publikowanej aplikacji.")
 $dependencyLines.Add("")
 $dependencyLines.Add("| Pakiet | Wersja | Zakres | Typ | Licencja |")
 $dependencyLines.Add("| --- | --- | --- | --- | --- |")
@@ -140,7 +185,7 @@ $dependencyLines.Add("")
 $dependencyLines.Add('```powershell')
 $dependencyLines.Add("dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode")
 $dependencyLines.Add("dotnet list Abituria.sln package --vulnerable --include-transitive")
-$dependencyLines.Add("powershell -File tools/Generate-DependencyDocumentation.ps1 -Verify")
+$dependencyLines.Add("pwsh -NoProfile -File tools/Generate-DependencyDocumentation.ps1 -Verify")
 $dependencyLines.Add('```')
 $dependencyText = ($dependencyLines -join "`n") + "`n"
 
@@ -152,6 +197,8 @@ $noticeLines.Add("")
 $noticeLines.Add("## Rozwiązane zależności produkcyjne")
 $noticeLines.Add("")
 $noticeLines.Add("Tabela jest konserwatywnym, wieloplatformowym grafem produkcyjnego lockfile. Obejmuje również narzędzia czasu kompilacji i alternatywne pakiety natywne dla wszystkich zadeklarowanych RID, więc nie oznacza, że każdy wiersz fizycznie występuje w każdej paczce. Dokładny zbiór komponentów konkretnego archiwum jest generowany z jego ``Abituria.deps.json`` i zapisany w osobnym SBOM SPDX.")
+$noticeLines.Add("")
+$noticeLines.Add("Każda paczka zawiera także ``licenses/nuget/manifest.json``, nuspec oraz dostępne pliki LICENSE, COPYING, NOTICE i THIRD-PARTY dostarczone przez dokładnie rozwiązane pakiety obecne w danym artefakcie. Manifest zapisuje identyfikatory, wersje, deklaracje licencji, prawa autorskie i SHA-256 każdego zachowanego dowodu. Gdy pakiet deklaruje wyłącznie wyrażenie SPDX albo adres licencji, źródłem deklaracji pozostaje zachowany nuspec. Pakiety .NET Runtime i Host są obsługiwane osobno przez pełne pliki runtime wymienione niżej.")
 $noticeLines.Add("")
 $noticeLines.Add("| Pakiet | Wersja | Licencja | Źródło |")
 $noticeLines.Add("| --- | --- | --- | --- |")

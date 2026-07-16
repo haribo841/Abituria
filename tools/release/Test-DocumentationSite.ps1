@@ -9,12 +9,15 @@ param(
 
     [switch]$CheckExternalLinks,
 
+    [switch]$RequirePublishedReleaseLinks,
+
     [ValidateSet("Warn", "Fail")]
     [string]$ExternalLinkFailureAction = "Warn"
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
+if ($RequirePublishedReleaseLinks) { $CheckExternalLinks = $true }
 
 $siteRoot = (Resolve-Path -LiteralPath $SiteDirectory).Path
 $sitePrefix = $siteRoot.TrimEnd([IO.Path]::DirectorySeparatorChar, [IO.Path]::AltDirectorySeparatorChar) +
@@ -72,11 +75,48 @@ $attributePattern = [regex]::new(
     [Text.RegularExpressions.RegexOptions]::IgnoreCase
 )
 
+function Assert-GeneratedHtmlFragment {
+    param(
+        [Parameter(Mandatory)]
+        [string]$TargetPath,
+
+        [Parameter(Mandatory)]
+        [string]$Fragment,
+
+        [Parameter(Mandatory)]
+        [string]$Reference,
+
+        [Parameter(Mandatory)]
+        [string]$SourcePath
+    )
+
+    $decodedFragment = [Uri]::UnescapeDataString($Fragment.TrimStart('#'))
+    if (-not $decodedFragment) { return }
+    $targetHtml = Get-Content -LiteralPath $TargetPath -Raw -Encoding UTF8
+    $escapedFragment = [regex]::Escape($decodedFragment)
+    $anchorPattern = '(?<![A-Za-z0-9_:-])(?i:id|name)\s*=\s*["'']{0}["'']' -f $escapedFragment
+    if ($targetHtml -cnotmatch $anchorPattern) {
+        $relativeSource = $SourcePath.Substring($sitePrefix.Length)
+        $missingTargets.Add("$relativeSource -> $Reference (missing fragment '$decodedFragment')")
+    }
+}
+
 foreach ($htmlFile in Get-ChildItem -LiteralPath $siteRoot -Filter "*.html" -File -Recurse) {
     $html = Get-Content -LiteralPath $htmlFile.FullName -Raw -Encoding UTF8
     foreach ($match in $attributePattern.Matches($html)) {
         $reference = [Net.WebUtility]::HtmlDecode($match.Groups[1].Value.Trim())
-        if (-not $reference -or $reference.StartsWith('#')) {
+        if (-not $reference) {
+            continue
+        }
+
+        $fragmentIndex = $reference.IndexOf('#')
+        $fragment = if ($fragmentIndex -ge 0) { $reference.Substring($fragmentIndex) } else { "" }
+        if ($reference.StartsWith('#')) {
+            Assert-GeneratedHtmlFragment `
+                -TargetPath $htmlFile.FullName `
+                -Fragment $fragment `
+                -Reference $reference `
+                -SourcePath $htmlFile.FullName
             continue
         }
 
@@ -154,6 +194,13 @@ foreach ($htmlFile in Get-ChildItem -LiteralPath $siteRoot -Filter "*.html" -Fil
             $relativeHtml = $htmlFile.FullName.Substring($sitePrefix.Length)
             $missingTargets.Add("$relativeHtml -> $reference")
         }
+        elseif ($fragment -and [IO.Path]::GetExtension($candidateFullPath) -ieq ".html") {
+            Assert-GeneratedHtmlFragment `
+                -TargetPath $candidateFullPath `
+                -Fragment $fragment `
+                -Reference $reference `
+                -SourcePath $htmlFile.FullName
+        }
     }
 }
 
@@ -184,7 +231,12 @@ try {
     foreach ($uri in @($externalReferences.Keys | Sort-Object)) {
         $excluded = $false
         foreach ($exclusion in $onlineCheckExclusions) {
-            if ($uri.StartsWith([string]$exclusion.urlPrefix, [StringComparison]::Ordinal)) {
+            $isPublishedReleaseLink = $uri.StartsWith(
+                "https://github.com/haribo841/Abituria/releases/tag/",
+                [StringComparison]::Ordinal
+            )
+            if ($uri.StartsWith([string]$exclusion.urlPrefix, [StringComparison]::Ordinal) -and
+                -not ($RequirePublishedReleaseLinks -and $isPublishedReleaseLink)) {
                 Write-Host "Skipping online probe for '$uri': $($exclusion.reason)"
                 $excluded = $true
                 break

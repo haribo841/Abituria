@@ -8,7 +8,10 @@ param(
     [string]$RuntimeIdentifier,
 
     [Parameter(Mandatory)]
-    [string]$Version
+    [string]$Version,
+
+    [ValidateRange(10, 600)]
+    [int]$TimeoutSeconds = 120
 )
 
 Set-StrictMode -Version Latest
@@ -97,6 +100,11 @@ try {
 
     $packageName = "Abituria-v$Version-$RuntimeIdentifier"
     $packageDirectory = Join-Path $extractionDirectory $packageName
+    $topLevelEntries = @(Get-ChildItem -LiteralPath $extractionDirectory -Force)
+    if ($topLevelEntries.Count -ne 1 -or -not $topLevelEntries[0].PSIsContainer -or
+        $topLevelEntries[0].Name -cne $packageName) {
+        throw "Release archive must contain exactly one top-level directory named '$packageName'."
+    }
     if (-not (Test-Path -LiteralPath $packageDirectory -PathType Container)) {
         throw "Release archive does not contain expected root directory '$packageName'."
     }
@@ -111,29 +119,65 @@ try {
         throw "Release package $RuntimeIdentifier does not contain '$executableRelativePath'."
     }
 
-    if ($RuntimeIdentifier -eq "win-x64") {
-        $process = Start-Process `
-            -FilePath $executablePath `
-            -ArgumentList @("--release-smoke-test", "--data-directory", $dataDirectory) `
-            -WindowStyle Hidden `
-            -Wait `
-            -PassThru
-        $exitCode = $process.ExitCode
+    $releaseMetadataPath = Join-Path $packageDirectory "release.json"
+    if (-not (Test-Path -LiteralPath $releaseMetadataPath -PathType Leaf)) {
+        throw "Release package does not contain release.json."
     }
-    elseif ($RuntimeIdentifier -eq "linux-x64") {
+    $releaseMetadata = Get-Content -LiteralPath $releaseMetadataPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    if ($releaseMetadata.version -cne $Version -or
+        $releaseMetadata.runtimeIdentifier -cne $RuntimeIdentifier -or
+        $releaseMetadata.commit -notmatch '^[0-9a-f]{40}$') {
+        throw "Release metadata does not match the final archive smoke-test contract."
+    }
+
+    $processFile = $executablePath
+    $processArguments = @("--release-smoke-test", "--data-directory", $dataDirectory)
+    if ($RuntimeIdentifier -eq "linux-x64") {
         if (-not (Get-Command xvfb-run -ErrorAction SilentlyContinue)) {
             throw "xvfb-run is required for the Linux release smoke test."
         }
-        & xvfb-run -a $executablePath --release-smoke-test --data-directory $dataDirectory
-        $exitCode = $LASTEXITCODE
+        $processFile = (Get-Command xvfb-run).Source
+        $processArguments = @("-a", $executablePath) + $processArguments
     }
-    else {
-        & $executablePath --release-smoke-test --data-directory $dataDirectory
-        $exitCode = $LASTEXITCODE
+
+    $startInfo = [Diagnostics.ProcessStartInfo]::new()
+    $startInfo.FileName = $processFile
+    $startInfo.UseShellExecute = $false
+    $startInfo.CreateNoWindow = $true
+    $startInfo.RedirectStandardOutput = $true
+    $startInfo.RedirectStandardError = $true
+    foreach ($argument in $processArguments) {
+        $startInfo.ArgumentList.Add($argument)
+    }
+
+    $process = [Diagnostics.Process]::new()
+    $process.StartInfo = $startInfo
+    try {
+        if (-not $process.Start()) {
+            throw "Could not start the final archive smoke test."
+        }
+        $standardOutputTask = $process.StandardOutput.ReadToEndAsync()
+        $standardErrorTask = $process.StandardError.ReadToEndAsync()
+        if (-not $process.WaitForExit($TimeoutSeconds * 1000)) {
+            try { $process.Kill($true) } catch { Write-Warning $_.Exception.Message }
+            throw "Release smoke test for $RuntimeIdentifier exceeded $TimeoutSeconds seconds."
+        }
+        $standardOutput = $standardOutputTask.GetAwaiter().GetResult()
+        $standardError = $standardErrorTask.GetAwaiter().GetResult()
+        $exitCode = $process.ExitCode
+    }
+    finally {
+        $process.Dispose()
     }
     if ($exitCode -ne 0) {
-        throw "Release smoke test for $RuntimeIdentifier failed with exit code $exitCode."
+        throw "Release smoke test for $RuntimeIdentifier failed with exit code $exitCode.`n$standardError"
     }
+
+    $identityPattern = "(?m)^ABITURIA_RELEASE_SMOKE version=$([regex]::Escape($Version)) commit=$([regex]::Escape([string]$releaseMetadata.commit))\r?$"
+    if ($standardOutput -notmatch $identityPattern) {
+        throw "The final application did not report the expected assembly version and source commit."
+    }
+    Write-Host $standardOutput.Trim()
 
     $databasePath = Join-Path $dataDirectory "abituria-release-smoke.db"
     if (-not (Test-Path -LiteralPath $databasePath -PathType Leaf)) {

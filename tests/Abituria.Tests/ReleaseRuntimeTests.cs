@@ -109,6 +109,45 @@ public sealed class ReleaseRuntimeTests
     }
 
     [Fact]
+    public void Release_smoke_options_reject_case_variant_of_production_data_on_case_insensitive_systems()
+    {
+        if (!OperatingSystem.IsWindows() && !OperatingSystem.IsMacOS()) return;
+
+        var productionDataDirectory = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            "Abituria");
+        var caseVariant = Path.Combine(
+            Path.GetDirectoryName(productionDataDirectory)!,
+            "aBITURIA");
+
+        var error = Assert.Throws<ArgumentException>(() => AppRuntimeOptions.ReleaseSmokeTest(caseVariant));
+        Assert.Contains("produkcyjnym katalogiem danych", error.Message, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void Release_smoke_options_reject_symlink_alias_of_production_data_parent()
+    {
+        if (OperatingSystem.IsWindows()) return;
+
+        var directory = NewTemporaryDirectory();
+        var alias = Path.Combine(directory, "local-data-alias");
+        var localData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        Directory.CreateSymbolicLink(alias, localData);
+
+        try
+        {
+            var candidate = Path.Combine(alias, "Abituria", "release-smoke");
+            var error = Assert.Throws<ArgumentException>(() => AppRuntimeOptions.ReleaseSmokeTest(candidate));
+            Assert.Contains("produkcyjnym katalogiem danych", error.Message, StringComparison.Ordinal);
+        }
+        finally
+        {
+            Directory.Delete(alias);
+            DisposeSqliteAndDirectory(directory);
+        }
+    }
+
+    [Fact]
     public async Task Release_smoke_entrypoint_rejects_production_subdirectory_without_creating_it()
     {
         var productionDataDirectory = Path.Combine(
@@ -169,15 +208,18 @@ public sealed class ReleaseRuntimeTests
                 report.DatabasePath);
             Assert.True(File.Exists(report.DatabasePath));
             Assert.Equal("0.9.0-beta.1", report.Version);
+            Assert.Equal(AppBuildInfo.Current.Commit, report.Commit);
             Assert.True(report.FormulaCount > 0);
             Assert.True(report.ChapterCount > 0);
             Assert.True(report.ExerciseCount > 0);
             Assert.Equal("Dwa miejsca zerowe: x₁ = 1, x₂ = 2", report.QuadraticSummary);
 
             var profiles = await services.GetRequiredService<AccountService>().GetProfilesAsync();
-            var profile = Assert.Single(profiles);
-            Assert.Equal("Maturzysta", profile.DisplayName);
-            Assert.Equal(ProfileKind.Guest, profile.Kind);
+            Assert.Equal(2, profiles.Count);
+            Assert.Contains(profiles, profile => profile.DisplayName == "Maturzysta" && profile.Kind == ProfileKind.Guest);
+            Assert.Contains(
+                profiles,
+                profile => profile.DisplayName == "Release smoke profile" && profile.Kind == ProfileKind.Password);
         }
         finally
         {
@@ -217,6 +259,7 @@ public sealed class ReleaseRuntimeTests
                 process.ExitCode == ReleaseSmokeTestCommand.SuccessExitCode,
                 $"Kod procesu: {process.ExitCode}. Standard output: {output}. Standard error: {error}");
             Assert.Contains("smoke test zakończony powodzeniem", output, StringComparison.Ordinal);
+            Assert.Contains("ABITURIA_RELEASE_SMOKE version=0.9.0-beta.1 commit=", output, StringComparison.Ordinal);
             Assert.Empty(error);
 
             var databasePath = Path.Combine(directory, AppRuntimeOptions.ReleaseSmokeDatabaseFileName);
@@ -225,9 +268,11 @@ public sealed class ReleaseRuntimeTests
             var profiles = await context.Profiles
                 .AsNoTracking()
                 .ToListAsync(TestContext.Current.CancellationToken);
-            var profile = Assert.Single(profiles);
-            Assert.Equal("Maturzysta", profile.DisplayName);
-            Assert.Equal(ProfileKind.Guest, profile.Kind);
+            Assert.Equal(2, profiles.Count);
+            Assert.Contains(profiles, profile => profile.DisplayName == "Maturzysta" && profile.Kind == ProfileKind.Guest);
+            Assert.Contains(
+                profiles,
+                profile => profile.DisplayName == "Release smoke profile" && profile.Kind == ProfileKind.Password);
         }
         finally
         {

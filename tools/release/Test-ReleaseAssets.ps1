@@ -1,13 +1,23 @@
-[CmdletBinding()]
+[CmdletBinding(DefaultParameterSetName = "Release")]
 param(
-    [Parameter(Mandatory)]
+    [Parameter(Mandatory, ParameterSetName = "Release")]
     [string]$ArtifactsDirectory,
 
-    [Parameter(Mandatory)]
+    [Parameter(Mandatory, ParameterSetName = "Release")]
     [string]$Version,
 
-    [Parameter(Mandatory)]
-    [string]$Tag
+    [Parameter(Mandatory, ParameterSetName = "Release")]
+    [string]$Tag,
+
+    [Parameter(Mandatory, ParameterSetName = "LicenseBundle")]
+    [string]$LicensePackageDirectory,
+
+    [Parameter(Mandatory, ParameterSetName = "LicenseBundle")]
+    [string]$LicensePublishedPayloadDirectory,
+
+    [Parameter(Mandatory, ParameterSetName = "LicenseBundle")]
+    [ValidateSet("win-x64", "linux-x64", "osx-x64")]
+    [string]$LicenseRuntimeIdentifier
 )
 
 Set-StrictMode -Version Latest
@@ -16,10 +26,168 @@ $ErrorActionPreference = "Stop"
 Import-Module (Join-Path $PSScriptRoot "Release.Common.psm1") -Force
 Import-Module (Join-Path $PSScriptRoot "PackageSecurity.psm1") -Force
 
+function Assert-SafeArchiveEntries {
+    param(
+        [Parameter(Mandatory)]
+        [string]$ArchivePath
+    )
+
+    $entries = if ($ArchivePath.EndsWith(".tar.gz", [StringComparison]::Ordinal)) {
+        $listed = @(& tar -tzf $ArchivePath)
+        if ($LASTEXITCODE -ne 0) { throw "Could not inspect archive '$ArchivePath'." }
+        $listed
+    }
+    else {
+        Add-Type -AssemblyName System.IO.Compression.FileSystem
+        $zip = [IO.Compression.ZipFile]::OpenRead($ArchivePath)
+        try { @($zip.Entries | ForEach-Object FullName) }
+        finally { $zip.Dispose() }
+    }
+
+    $seen = @{}
+    foreach ($entry in $entries) {
+        $normalized = ([string]$entry).Replace('\', '/')
+        if (-not $normalized -or $normalized.StartsWith('/', [StringComparison]::Ordinal) -or
+            $normalized -match '^[A-Za-z]:' -or
+            @($normalized.Split('/') | Where-Object { $_ -eq '..' }).Count -ne 0) {
+            throw "Release archive contains an unsafe entry: '$entry'."
+        }
+        $identity = $normalized.TrimEnd('/').ToLowerInvariant()
+        if ($identity -and $seen.ContainsKey($identity)) {
+            throw "Release archive contains a duplicate entry: '$entry'."
+        }
+        if ($identity) { $seen[$identity] = $true }
+    }
+}
+
+function Assert-NuGetLicenseBundle {
+    param(
+        [Parameter(Mandatory)]
+        [string]$PackageDirectory,
+
+        [Parameter(Mandatory)]
+        [string]$PublishedPayloadDirectory,
+
+        [Parameter(Mandatory)]
+        [string]$RuntimeIdentifier
+    )
+
+    $bundleRoot = Join-Path $PackageDirectory "licenses/nuget"
+    $manifestPath = Join-Path $bundleRoot "manifest.json"
+    if (-not (Test-Path -LiteralPath $manifestPath -PathType Leaf)) {
+        throw "NuGet license evidence manifest is missing for '$RuntimeIdentifier'."
+    }
+    $manifest = Get-Content -LiteralPath $manifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    $components = @($manifest.components)
+    if ($manifest.schemaVersion -ne 1 -or $manifest.generatedFrom -cne "published-deps" -or
+        $manifest.runtimeIdentifier -cne $RuntimeIdentifier -or
+        $manifest.componentCount -ne $components.Count) {
+        throw "NuGet license evidence manifest has an invalid contract for '$RuntimeIdentifier'."
+    }
+
+    $expectedKeys = @(
+        Get-PublishedNuGetComponents `
+            -PublishedDirectory $PublishedPayloadDirectory `
+            -RuntimeIdentifier $RuntimeIdentifier |
+            ForEach-Object { "$($_.Id.ToLowerInvariant())|$($_.Version.ToLowerInvariant())" } |
+            Sort-Object
+    )
+    $actualKeys = @(
+        $components |
+            ForEach-Object {
+                "$(([string]$_.id).ToLowerInvariant())|$(([string]$_.version).ToLowerInvariant())"
+            } |
+            Sort-Object
+    )
+    if (($expectedKeys -join "`n") -cne ($actualKeys -join "`n")) {
+        throw "NuGet license evidence components differ from the published dependency graph for '$RuntimeIdentifier'."
+    }
+
+    $bundlePrefix = [IO.Path]::GetFullPath($bundleRoot).TrimEnd(
+        [IO.Path]::DirectorySeparatorChar,
+        [IO.Path]::AltDirectorySeparatorChar
+    ) + [IO.Path]::DirectorySeparatorChar
+    $listedFiles = [Collections.Generic.HashSet[string]]::new([StringComparer]::Ordinal)
+    $null = $listedFiles.Add("manifest.json")
+    foreach ($component in $components) {
+        $externalPattern = "^Microsoft[.]NETCore[.]App[.](?:Runtime|Host)[.]$([regex]::Escape($RuntimeIdentifier))$"
+        if ($component.externallyHandled) {
+            if ([string]$component.id -notmatch $externalPattern -or
+                $component.externalHandler -cne "dotnet-runtime-host-notices") {
+                throw "Component '$($component.id)' uses an invalid external license handler."
+            }
+        }
+        elseif (-not $component.declaredLicense -and @($component.evidence).Count -eq 0) {
+            throw "Component '$($component.id)' has no license declaration or preserved evidence."
+        }
+
+        $componentFiles = @($component.evidence)
+        if ($null -ne $component.nuspec) {
+            $componentFiles = @($component.nuspec) + $componentFiles
+        }
+        elseif (-not $component.externallyHandled) {
+            throw "Component '$($component.id)' has no preserved nuspec."
+        }
+
+        foreach ($fileEntry in $componentFiles) {
+            $bundlePath = [string]$fileEntry.bundlePath
+            if (-not $bundlePath -or [IO.Path]::IsPathRooted($bundlePath) -or
+                @($bundlePath.Replace('\', '/').Split('/') | Where-Object { $_ -eq '..' }).Count -ne 0) {
+                throw "NuGet license manifest contains an unsafe path '$bundlePath'."
+            }
+            if (-not $listedFiles.Add($bundlePath.Replace('\', '/'))) {
+                throw "NuGet license manifest contains a duplicate path '$bundlePath'."
+            }
+            $fullPath = [IO.Path]::GetFullPath((Join-Path $bundleRoot $bundlePath))
+            if (-not $fullPath.StartsWith($bundlePrefix, [StringComparison]::OrdinalIgnoreCase) -or
+                -not (Test-Path -LiteralPath $fullPath -PathType Leaf)) {
+                throw "NuGet license evidence file is missing or outside the bundle: '$bundlePath'."
+            }
+            $file = Get-Item -LiteralPath $fullPath
+            $hash = (Get-FileHash -LiteralPath $fullPath -Algorithm SHA256).Hash.ToLowerInvariant()
+            if ($file.Length -ne [long]$fileEntry.length -or $hash -cne [string]$fileEntry.sha256) {
+                throw "NuGet license evidence hash or length differs for '$bundlePath'."
+            }
+        }
+    }
+
+    $actualFiles = @(
+        Get-ChildItem -LiteralPath $bundleRoot -File -Recurse |
+            ForEach-Object { $_.FullName.Substring($bundlePrefix.Length).Replace('\', '/') } |
+            Sort-Object
+    )
+    $expectedFiles = @($listedFiles | Sort-Object)
+    if (($actualFiles -join "`n") -cne ($expectedFiles -join "`n")) {
+        throw "NuGet license bundle contains unlisted or missing files for '$RuntimeIdentifier'."
+    }
+}
+
+if ($PSCmdlet.ParameterSetName -eq "LicenseBundle") {
+    Assert-NuGetLicenseBundle `
+        -PackageDirectory $LicensePackageDirectory `
+        -PublishedPayloadDirectory $LicensePublishedPayloadDirectory `
+        -RuntimeIdentifier $LicenseRuntimeIdentifier
+    Write-Host "NuGet license bundle is complete and matches the published dependency graph."
+    return
+}
+
 $repositoryRoot = Get-RepositoryRoot
 $canonicalVersion = Assert-ReleaseTag -Tag $Tag -RepositoryRoot $repositoryRoot
 if ($Version -cne $canonicalVersion) {
     throw "Walidowana wersja '$Version' nie odpowiada wersji '$canonicalVersion'."
+}
+if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
+    throw "Git is required to validate release source identity."
+}
+Push-Location $repositoryRoot
+try {
+    $expectedCommit = (& git rev-parse --verify "refs/tags/$Tag^{commit}" 2>$null).Trim()
+    if ($LASTEXITCODE -ne 0 -or $expectedCommit -notmatch '^[0-9a-f]{40}$') {
+        throw "Could not resolve the source commit for tag '$Tag'."
+    }
+}
+finally {
+    Pop-Location
 }
 
 $artifactsDirectory = (Resolve-Path -LiteralPath $ArtifactsDirectory).Path
@@ -72,6 +240,7 @@ try {
         $archivePath = Join-Path $artifactsDirectory $archiveName
         $extractionDirectory = Join-Path $temporaryRoot $runtimeIdentifier
         New-Item -ItemType Directory -Path $extractionDirectory -Force | Out-Null
+        Assert-SafeArchiveEntries -ArchivePath $archivePath
 
         if ($archiveName.EndsWith(".tar.gz", [StringComparison]::Ordinal)) {
             Invoke-ExternalCommand -FilePath "tar" -ArgumentList @("-xzf", $archivePath, "-C", $extractionDirectory)
@@ -85,6 +254,11 @@ try {
 
         $packageName = "Abituria-v$Version-$runtimeIdentifier"
         $packageDirectory = Join-Path $extractionDirectory $packageName
+        $topLevelEntries = @(Get-ChildItem -LiteralPath $extractionDirectory -Force)
+        if ($topLevelEntries.Count -ne 1 -or -not $topLevelEntries[0].PSIsContainer -or
+            $topLevelEntries[0].Name -cne $packageName) {
+            throw "Archive '$archiveName' must contain exactly one top-level directory named '$packageName'."
+        }
         if (-not (Test-Path -LiteralPath $packageDirectory -PathType Container)) {
             throw "Archive '$archiveName' does not contain root directory '$packageName'."
         }
@@ -97,7 +271,8 @@ try {
             "licenses/Mulish-OFL.txt",
             "licenses/LICENSE-2022-Ich-Troje.txt",
             "licenses/dotnet-runtime-LICENSE.txt",
-            "licenses/dotnet-runtime-THIRD-PARTY-NOTICES.txt"
+            "licenses/dotnet-runtime-THIRD-PARTY-NOTICES.txt",
+            "licenses/nuget/manifest.json"
         )) {
             $requiredPath = Join-Path $packageDirectory $requiredFile
             if (-not (Test-Path -LiteralPath $requiredPath -PathType Leaf) -or (Get-Item $requiredPath).Length -eq 0) {
@@ -110,8 +285,8 @@ try {
         if ($releaseMetadata.version -cne $Version -or $releaseMetadata.runtimeIdentifier -cne $runtimeIdentifier) {
             throw "Metadata in '$archiveName' does not match the version or RID."
         }
-        if ($releaseMetadata.commit -notmatch '^(?:[0-9a-f]{40}|unknown)$') {
-            throw "Metadata in '$archiveName' contains an invalid commit."
+        if ($releaseMetadata.commit -cne $expectedCommit) {
+            throw "Metadata in '$archiveName' is not bound to tag commit '$expectedCommit'."
         }
         if (-not $releaseMetadata.selfContained -or $releaseMetadata.trimmed -or
             $releaseMetadata.aot -or $releaseMetadata.readyToRun -or $releaseMetadata.singleFile) {
@@ -156,6 +331,10 @@ try {
         else {
             $packageDirectory
         }
+        Assert-NuGetLicenseBundle `
+            -PackageDirectory $packageDirectory `
+            -PublishedPayloadDirectory $publishedPayloadDirectory `
+            -RuntimeIdentifier $runtimeIdentifier
         Assert-ReleaseSbomScope `
             -SbomPath $externalSbomPath `
             -PublishedDirectory $publishedPayloadDirectory `

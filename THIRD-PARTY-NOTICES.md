@@ -6,6 +6,8 @@ Abituria jest udostępniana na licencji MIT. Poniższe komponenty zachowują wł
 
 Tabela jest konserwatywnym, wieloplatformowym grafem produkcyjnego lockfile. Obejmuje również narzędzia czasu kompilacji i alternatywne pakiety natywne dla wszystkich zadeklarowanych RID, więc nie oznacza, że każdy wiersz fizycznie występuje w każdej paczce. Dokładny zbiór komponentów konkretnego archiwum jest generowany z jego `Abituria.deps.json` i zapisany w osobnym SBOM SPDX.
 
+Każda paczka zawiera także `licenses/nuget/manifest.json`, nuspec oraz dostępne pliki LICENSE, COPYING, NOTICE i THIRD-PARTY dostarczone przez dokładnie rozwiązane pakiety obecne w danym artefakcie. Manifest zapisuje identyfikatory, wersje, deklaracje licencji, prawa autorskie i SHA-256 każdego zachowanego dowodu. Gdy pakiet deklaruje wyłącznie wyrażenie SPDX albo adres licencji, źródłem deklaracji pozostaje zachowany nuspec. Pakiety .NET Runtime i Host są obsługiwane osobno przez pełne pliki runtime wymienione niżej.
+
 | Pakiet | Wersja | Licencja | Źródło |
 | --- | --- | --- | --- |
 | `Avalonia` | `12.0.4` | MIT | [NuGet](https://www.nuget.org/packages/Avalonia/12.0.4) |

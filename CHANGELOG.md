@@ -17,6 +17,7 @@ Pierwsza wersja przygotowana do publicznego wydania. Planowana data zostanie wpi
 - bezinterfejsowe polecenie `--release-smoke-test --data-directory` korzystające z izolowanej bazy;
 - ekran „O programie” pokazujący wersję, commit, licencję, autora i repozytorium;
 - generowane sumy SHA-256, osobne SBOM SPDX i attestation pochodzenia artefaktów;
+- pakietowy manifest dowodów licencyjnych NuGet z zachowanymi nuspec i dostępnymi plikami notices;
 - dokumentację użytkownika i techniczną budowaną przez DocFX oraz publikowaną przez GitHub Pages;
 - maszynowy inwentarz pochodzenia paczkowanych treści, fontów i obrazów.
 
@@ -34,6 +35,9 @@ Pierwsza wersja przygotowana do publicznego wydania. Planowana data zostanie wpi
 - włączono audyt wszystkich zależności NuGet od poziomu `low`, a `NU1901`-`NU1904` są błędami;
 - dodano lockfile projektu i testów oraz restore w trybie `--locked-mode`;
 - paczki są kontrolowane pod kątem PDB, sekretów i starych snapshotów;
+- tag musi wskazywać dokładny commit `origin/main`, a finalny smoke test potwierdza wersję i commit rzeczywistego pliku wykonywalnego;
+- walidator odrzuca dodatkowe korzenie archiwum, niebezpieczne ścieżki i niespójne dowody licencyjne;
+- zgodność danych jest sprawdzana na niezmiennej bazie utworzonej przez rzeczywisty kod .NET 9 i EF Core 9;
 - publiczna publikacja pozostaje zablokowana, dopóki każdy paczkowany zasób nie ma pozytywnego wpisu pochodzenia i podstawy dystrybucji.
 
 [0.9.0-beta.1]: https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1

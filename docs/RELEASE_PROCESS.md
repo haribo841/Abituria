@@ -14,6 +14,7 @@ Aktualny inwentarz ma `releaseEligible=false`. Nierozstrzygnięte prawa do mater
 - tag ma postać dokładnie `v<Version>`;
 - assembly, ekran „O programie”, `release.json`, nazwy paczek, changelog i dokumentacja muszą zawierać tę samą wersję;
 - SDK pochodzi z `global.json` i dla tego wydania ma wersję `10.0.302`;
+- lokalne skrypty wydawnicze są uruchamiane przez PowerShell 7 (`pwsh`), tak samo jak w GitHub Actions;
 - restore używa lockfile i `--locked-mode`;
 - publikacja jest self-contained, nietrimowana, bez AOT, ReadyToRun, single-file i PDB;
 - wszystkie trzy paczki są tworzone i testowane na natywnych runnerach;
@@ -30,7 +31,7 @@ Aktualny inwentarz ma `releaseEligible=false`. Nierozstrzygnięte prawa do mater
 | `.config/dotnet-tools.json` | DocFX `2.78.5` i Microsoft SBOM Tool `4.1.5` |
 | `Content/provenance.json` | prawo do dystrybucji paczkowanych zasobów |
 | `CHANGELOG.md` | notatki rzeczywistego wydania |
-| `tools/release` | wersja, audyt, publikacja, architektura, smoke test, pakowanie i walidacja |
+| `tools/release` | wersja, audyt, publikacja, architektura, smoke test, pakowanie, dowody licencji NuGet i walidacja |
 | `.github/workflows/release.yml` | macierz trzech platform i draft prerelease |
 | `.github/workflows/pages.yml` | build i wdrożenie DocFX bez gałęzi `gh-pages` |
 
@@ -43,8 +44,8 @@ Aktualny inwentarz ma `releaseEligible=false`. Nierozstrzygnięte prawa do mater
 5. Wygeneruj dokumenty zależności z dokładnie rozwiązanych lockfile:
 
    ```powershell
-   powershell -ExecutionPolicy Bypass -File tools/Generate-DependencyDocumentation.ps1
-   powershell -ExecutionPolicy Bypass -File tools/Generate-DependencyDocumentation.ps1 -Verify
+   pwsh -NoProfile -File tools/Generate-DependencyDocumentation.ps1
+   pwsh -NoProfile -File tools/Generate-DependencyDocumentation.ps1 -Verify
    ```
 
 6. Sprawdź, że w changelogu nie ma fikcyjnych historycznych wydań.
@@ -61,13 +62,13 @@ dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
 dotnet build Abituria.sln --configuration Release --no-restore
 dotnet test Abituria.sln --configuration Release --no-build --no-restore
 dotnet format Abituria.sln whitespace --verify-no-changes --no-restore
-powershell -ExecutionPolicy Bypass -File tools/release/Test-NuGetVulnerabilities.ps1 `
+pwsh -NoProfile -File tools/release/Test-NuGetVulnerabilities.ps1 `
   -ReportPath artifacts/audit/local.json
-powershell -ExecutionPolicy Bypass -File tools/Generate-DependencyDocumentation.ps1 -Verify
-powershell -ExecutionPolicy Bypass -File tools/Test-ContentProvenance.ps1 `
+pwsh -NoProfile -File tools/Generate-DependencyDocumentation.ps1 -Verify
+pwsh -NoProfile -File tools/Test-ContentProvenance.ps1 `
   -RequireReleaseEligible
 dotnet tool run docfx -- docfx.json --warningsAsErrors
-powershell -ExecutionPolicy Bypass -File tools/release/Test-DocumentationSite.ps1 `
+pwsh -NoProfile -File tools/release/Test-DocumentationSite.ps1 `
   -SiteDirectory artifacts/site -CheckExternalLinks -ExternalLinkFailureAction Fail
 git diff --check
 ```
@@ -89,14 +90,14 @@ Po `deploy-pages` workflow sześć razy próbuje pobrać rzeczywisty URL wdroże
 
 ## 4. Tag
 
-Tag musi wskazywać dokładnie zweryfikowany commit `main`:
+Tag musi wskazywać dokładnie zweryfikowany commit `main`. Data changelogu jest datą przygotowania adnotowanego tagu w UTC i pozostaje stabilna podczas późniejszych ponowień workflow oraz kontroli draftu. Publiczna data GitHub Release może być późniejsza i jest zachowana przez GitHub niezależnie od changelogu.
 
 ```powershell
 git switch main
 git pull --ff-only
 git status --short
 git tag -a v0.9.0-beta.1 -m "Abituria v0.9.0-beta.1"
-powershell -ExecutionPolicy Bypass -File tools/release/Test-ReleaseVersion.ps1 `
+pwsh -NoProfile -File tools/release/Test-ReleaseVersion.ps1 `
   -Tag v0.9.0-beta.1
 git push origin v0.9.0-beta.1
 ```
@@ -118,12 +119,12 @@ Workflow `release` wykonuje:
 
 3. Na każdym runnerze - restore narzędzi, locked restore rozwiązania i RID, build, pełne testy, format, audyt zależności, `git diff --check`, publikacja, kontrola architektury, utworzenie archiwum, ponowne rozpakowanie archiwum i smoke test pliku rzeczywiście przeznaczonego dla użytkownika. Dla macOS uruchamiany jest `Abituria.app/Contents/MacOS/Abituria`, a nie pośredni katalog `publish`.
 4. Dla macOS - utworzenie `Abituria.app` z `Info.plist`, identyfikatorem `io.github.haribo841.abituria`, wersją i ikoną `.icns`.
-5. Dla każdej platformy - zewnętrzny i dołączony do paczki SBOM SPDX 2.2.
-6. Po połączeniu artefaktów - `SHA256SUMS.txt`, walidacja kompletności archiwów, wersji, architektury, PDB, sekretów, snapshotów, sum i SBOM. Skan sekretów obejmuje strumieniowo również pliki binarne oraz wzorce kluczy prywatnych, tokenów GitHub/AWS/JWT/usług i poświadczeń w connection stringach.
+5. Dla każdej platformy - zewnętrzny i dołączony do paczki SBOM SPDX 2.2 oraz `licenses/nuget/manifest.json` z nuspec i dowodami licencyjnymi dokładnego grafu opublikowanej aplikacji.
+6. Po połączeniu artefaktów - `SHA256SUMS.txt`, walidacja kompletności archiwów, wersji, architektury, PDB, sekretów, snapshotów, sum, SBOM oraz zgodności manifestu licencji z `Abituria.deps.json`. Skan sekretów obejmuje strumieniowo również pliki binarne oraz wzorce kluczy prywatnych, tokenów GitHub/AWS/JWT/usług i poświadczeń w connection stringach.
 7. Dwie atestacje dla każdego z trzech archiwów: domyślna SLSA build provenance oraz osobna atestacja odpowiadającego SBOM. Plik sum otrzymuje własną atestację pochodzenia.
 8. Utworzenie lub odświeżenie prywatnego draftu GitHub Release oznaczonego jako prerelease.
 
-Każde archiwum zawiera katalog główny nazwany jak paczka, aplikację, `LICENSE`, `RELEASE-README.md`, `THIRD-PARTY-NOTICES.md`, `release.json` i wewnętrzny SBOM. Obok archiwów wydawane są:
+Każde archiwum zawiera katalog główny nazwany jak paczka, aplikację, `LICENSE`, `RELEASE-README.md`, `THIRD-PARTY-NOTICES.md`, `release.json`, wewnętrzny SBOM oraz katalog `licenses/nuget`. Manifest zapisuje wersję i sposób obsługi każdego komponentu; dla pakietów obecnych w cache zapisuje także deklarację licencji, SHA-256 nuspec i zachowanych plików LICENSE, COPYING, NOTICE lub THIRD-PARTY. Pakiety .NET Runtime i Host są powiązane z pełnymi notices środowiska uruchomieniowego dołączonymi w `licenses`, również gdy apphost pochodzi bezpośrednio z przypiętego SDK i nie ma osobnego nuspec w cache. Obok archiwów wydawane są:
 
 - `Abituria-v0.9.0-beta.1-win-x64.spdx.json`;
 - `Abituria-v0.9.0-beta.1-linux-x64.spdx.json`;
@@ -141,7 +142,7 @@ Draft pozostaje prywatny. Pobierz wszystkie artefakty bez ich modyfikowania i od
 - `releaseEligible=true` i pozytywny log walidatora;
 - poprawną nazwę, rozmiar i architekturę każdej paczki;
 - brak PDB, sekretów i snapshotów;
-- obecność `LICENSE`, instrukcji i notices;
+- obecność `LICENSE`, instrukcji, notices oraz kompletnego `licenses/nuget/manifest.json` zgodnego z opublikowanym grafem;
 - poprawne `release.json`, assembly version, ekran „O programie” i commit;
 - zgodność sum SHA-256;
 - prawidłowy SBOM SPDX dla każdej paczki;
@@ -182,10 +183,11 @@ gh release edit v0.9.0-beta.1 `
 Po publikacji:
 
 1. Otwórz publiczny release w sesji niezalogowanej.
-2. Pobierz po jednej paczce i ponownie sprawdź sumę oraz attestation.
-3. Sprawdź, czy Pages prowadzą do właściwego release.
-4. Dodaj do issue #36 komentarz z linkami do release, workflow, Pages i kompletnej checklisty.
-5. Zamknij issue dopiero po wykonaniu wszystkich poprzednich punktów.
+2. Zbuduj świeżą kopię strony poleceniem `dotnet tool run docfx -- docfx.json --warningsAsErrors`, a następnie uruchom `pwsh -NoProfile -File tools/release/Test-DocumentationSite.ps1 -SiteDirectory artifacts/site -RequirePublishedReleaseLinks -ExternalLinkFailureAction Fail`, aby wymusić rzeczywistą sondę URL wydania mimo wyjątku potrzebnego przed publikacją.
+3. Pobierz po jednej paczce i ponownie sprawdź sumę oraz attestation.
+4. Sprawdź, czy Pages prowadzą do właściwego release.
+5. Dodaj do issue #36 komentarz z linkami do release, workflow, Pages i kompletnej checklisty.
+6. Zamknij issue dopiero po wykonaniu wszystkich poprzednich punktów.
 
 ## 8. Reakcja na błąd po wydaniu
 
