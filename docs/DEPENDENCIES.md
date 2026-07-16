@@ -28,7 +28,7 @@ Tabela obejmuje również zależności przechodnie. Dokładne grafy dla każdego
 | Pakiet | Wersja | Zakres | Typ | Licencja |
 | --- | --- | --- | --- | --- |
 | `Avalonia` | `12.0.4` | produkcyjna i testowa | bezpośrednia | MIT |
-| `Avalonia.Angle.Windows.Natives` | `2.1.27548.20260419` | produkcyjna i testowa | przechodnia | LICENSE (plik pakietu) |
+| `Avalonia.Angle.Windows.Natives` | `2.1.27548.20260419` | produkcyjna i testowa | przechodnia | BSD-3-Clause (LICENSE w pakiecie) |
 | `Avalonia.BuildServices` | `11.3.2` | produkcyjna i testowa | przechodnia | MIT |
 | `Avalonia.Desktop` | `12.0.4` | produkcyjna i testowa | bezpośrednia | MIT |
 | `Avalonia.Fonts.Inter` | `12.0.4` | produkcyjna i testowa | bezpośrednia | MIT |

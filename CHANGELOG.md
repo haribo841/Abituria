@@ -4,7 +4,7 @@ W tym pliku są opisywane wyłącznie rzeczywiste wydania repozytorium `haribo84
 
 ## [0.9.0-beta.1] - oczekuje na publikację
 
-Pierwsza wersja przygotowana do publicznego wydania. Data zostanie wpisana dopiero po zaliczeniu kompletnej checklisty, opublikowaniu prerelease i uruchomieniu dokumentacji GitHub Pages.
+Pierwsza wersja przygotowana do publicznego wydania. Planowana data zostanie wpisana bezpośrednio przed utworzeniem tagu, po zaliczeniu poprzedzającej go części checklisty wydania.
 
 ### Dodano
 

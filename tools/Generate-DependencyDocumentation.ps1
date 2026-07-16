@@ -31,6 +31,10 @@ $purposes = @{
     "xunit.runner.visualstudio" = "Adapter testów dla dotnet test i Visual Studio."
 }
 
+$fileLicenseOverrides = @{
+    "Avalonia.Angle.Windows.Natives/2.1.27548.20260419" = "BSD-3-Clause"
+}
+
 function Read-LockPackages([string]$path, [string]$scope) {
     $document = Get-Content -Raw -Encoding UTF8 $path | ConvertFrom-Json
     foreach ($target in $document.dependencies.PSObject.Properties) {
@@ -65,7 +69,11 @@ function Get-License([string]$id, [string]$version) {
             if (-not (Test-Path -LiteralPath $licensePath -PathType Leaf)) {
                 throw "Pakiet $id $version wskazuje brakujący plik licencji $value."
             }
-            return "$value (plik pakietu)"
+            $overrideKey = "$id/$version"
+            if (-not $fileLicenseOverrides.ContainsKey($overrideKey)) {
+                throw "Pakiet $id $version używa pliku licencji $value. Dodaj zweryfikowany identyfikator licencji do fileLicenseOverrides."
+            }
+            return "$($fileLicenseOverrides[$overrideKey]) ($value w pakiecie)"
         }
         return $value
     }
@@ -141,7 +149,9 @@ $noticeLines.Add("# Informacje o komponentach zewnętrznych")
 $noticeLines.Add("")
 $noticeLines.Add("Abituria jest udostępniana na licencji MIT. Poniższe komponenty zachowują własne licencje i prawa autorskie. Dokładne wersje odpowiadają ``packages.lock.json`` dla wydania ``$releaseVersion``.")
 $noticeLines.Add("")
-$noticeLines.Add("## Pakiety dołączane do aplikacji")
+$noticeLines.Add("## Rozwiązane zależności produkcyjne")
+$noticeLines.Add("")
+$noticeLines.Add("Tabela jest konserwatywnym, wieloplatformowym grafem produkcyjnego lockfile. Obejmuje również narzędzia czasu kompilacji i alternatywne pakiety natywne dla wszystkich zadeklarowanych RID, więc nie oznacza, że każdy wiersz fizycznie występuje w każdej paczce. Dokładny zbiór komponentów konkretnego archiwum jest generowany z jego ``Abituria.deps.json`` i zapisany w osobnym SBOM SPDX.")
 $noticeLines.Add("")
 $noticeLines.Add("| Pakiet | Wersja | Licencja | Źródło |")
 $noticeLines.Add("| --- | --- | --- | --- |")

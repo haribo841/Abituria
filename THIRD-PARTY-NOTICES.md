@@ -2,12 +2,14 @@
 
 Abituria jest udostępniana na licencji MIT. Poniższe komponenty zachowują własne licencje i prawa autorskie. Dokładne wersje odpowiadają `packages.lock.json` dla wydania `0.9.0-beta.1`.
 
-## Pakiety dołączane do aplikacji
+## Rozwiązane zależności produkcyjne
+
+Tabela jest konserwatywnym, wieloplatformowym grafem produkcyjnego lockfile. Obejmuje również narzędzia czasu kompilacji i alternatywne pakiety natywne dla wszystkich zadeklarowanych RID, więc nie oznacza, że każdy wiersz fizycznie występuje w każdej paczce. Dokładny zbiór komponentów konkretnego archiwum jest generowany z jego `Abituria.deps.json` i zapisany w osobnym SBOM SPDX.
 
 | Pakiet | Wersja | Licencja | Źródło |
 | --- | --- | --- | --- |
 | `Avalonia` | `12.0.4` | MIT | [NuGet](https://www.nuget.org/packages/Avalonia/12.0.4) |
-| `Avalonia.Angle.Windows.Natives` | `2.1.27548.20260419` | LICENSE (plik pakietu) | [NuGet](https://www.nuget.org/packages/Avalonia.Angle.Windows.Natives/2.1.27548.20260419) |
+| `Avalonia.Angle.Windows.Natives` | `2.1.27548.20260419` | BSD-3-Clause (LICENSE w pakiecie) | [NuGet](https://www.nuget.org/packages/Avalonia.Angle.Windows.Natives/2.1.27548.20260419) |
 | `Avalonia.BuildServices` | `11.3.2` | MIT | [NuGet](https://www.nuget.org/packages/Avalonia.BuildServices/11.3.2) |
 | `Avalonia.Desktop` | `12.0.4` | MIT | [NuGet](https://www.nuget.org/packages/Avalonia.Desktop/12.0.4) |
 | `Avalonia.Fonts.Inter` | `12.0.4` | MIT | [NuGet](https://www.nuget.org/packages/Avalonia.Fonts.Inter/12.0.4) |
