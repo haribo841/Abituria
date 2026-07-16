@@ -7,6 +7,7 @@ namespace Abituria.Tests;
 
 public sealed class NuGetLicenseBundleTests
 {
+    private const string PowerShellExecutable = "pwsh";
     private static readonly string RepositoryRoot = FindRepositoryRoot();
 
     [Fact]
@@ -252,7 +253,7 @@ public sealed class NuGetLicenseBundleTests
 
         var startInfo = new ProcessStartInfo
         {
-            FileName = "powershell.exe",
+            FileName = PowerShellExecutable,
             RedirectStandardOutput = true,
             RedirectStandardError = true,
             UseShellExecute = false,
@@ -319,7 +320,7 @@ public sealed class NuGetLicenseBundleTests
     {
         var startInfo = new ProcessStartInfo
         {
-            FileName = OperatingSystem.IsWindows() ? "powershell.exe" : "pwsh",
+            FileName = PowerShellExecutable,
             RedirectStandardOutput = true,
             RedirectStandardError = true,
             UseShellExecute = false,
