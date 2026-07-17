@@ -1,6 +1,6 @@
 # Plan rozwoju Abiturii
 
-Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument jest technicznym odpowiednikiem strony „Plan rozwoju” w aplikacji.
+Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument jest technicznym odpowiednikiem strony „Plan rozwoju” w aplikacji. Uzasadnienie produktu, interesariusze, ryzyka i etapy opisuje [analiza biznesowa](BUSINESS_ANALYSIS.md); roadmapa pozostaje źródłem technicznego statusu funkcji.
 
 ## Przeniesione
 

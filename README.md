@@ -94,6 +94,7 @@ Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalneg
 | --- | --- |
 | [Instalacja](docs/INSTALLATION.md) | wymagania systemowe, integralność, instalacja, aktualizacja i odinstalowanie |
 | [Podręcznik użytkownika](docs/USER_GUIDE.md) | profile, materiały, zadania i kalkulatory |
+| [Analiza biznesowa](docs/BUSINESS_ANALYSIS.md) | uzasadnienie produktu, interesariusze, wartość, model udostępniania, ryzyka i kamienie milowe |
 | [Wymagania](docs/REQUIREMENTS.md) | wymagania funkcjonalne, niefunkcjonalne i kryteria akceptacji |
 | [Architektura](docs/ARCHITECTURE.md) | komponenty, dane i odpowiedzialności modułów |
 | [Proces wydania](docs/RELEASE_PROCESS.md) | bramy, pakowanie, smoke test, Pages i publikacja |

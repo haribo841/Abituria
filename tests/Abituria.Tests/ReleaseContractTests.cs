@@ -21,6 +21,7 @@ public sealed class ReleaseContractTests
             "docs/INSTALLATION.md",
             "docs/RELEASE_PROCESS.md",
             "docs/KNOWN_LIMITATIONS.md",
+            "docs/BUSINESS_ANALYSIS.md",
             "docs/REQUIREMENTS.md"
         };
 

@@ -2,6 +2,8 @@
   href: INSTALLATION.md
 - name: Podręcznik użytkownika
   href: USER_GUIDE.md
+- name: Analiza biznesowa
+  href: BUSINESS_ANALYSIS.md
 - name: Architektura
   href: ARCHITECTURE.md
 - name: Wymagania projektowe
