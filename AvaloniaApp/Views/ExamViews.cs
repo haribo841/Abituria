@@ -20,8 +20,11 @@ public sealed class ExamOverviewView : UserControl
         IEnumerable<PlaceholderItem> placeholders,
         Action openExam,
         Action<string> openTopic,
-        Action<PlaceholderItem> openPlaceholder)
+        Action<PlaceholderItem> openPlaceholder,
+        Action<ExerciseDefinition, string?> openExercise,
+        ExerciseRandomizer? randomizer = null)
     {
+        var exerciseRandomizer = randomizer ?? new ExerciseRandomizer();
         var root = new StackPanel { Spacing = 14 };
         root.Children.Add(UiFactory.PageTitle("Zadania", "Pracuj z całym arkuszem albo wybierz zadania według tematu."));
 
@@ -41,6 +44,7 @@ public sealed class ExamOverviewView : UserControl
             var panel = new StackPanel { Spacing = 10 };
             if (exam.Introduction.Count > 0) panel.Children.Add(UiFactory.Card(new RichContentView(exam.Introduction)));
             panel.Children.Add(ListButton($"{exam.Title} - {ExerciseCountLabel(exam.Exercises.Count)}", openExam));
+            panel.Children.Add(RandomExerciseButton("Losuj zadanie z tego arkusza", exam.Exercises, null, exerciseRandomizer, openExercise));
             foreach (var placeholder in placeholders.Where(item => item.Category is "exam" or "exercise"))
                 panel.Children.Add(ListButton($"{placeholder.Title} - treść w przygotowaniu", () => openPlaceholder(placeholder)));
             content.Content = panel;
@@ -53,7 +57,11 @@ public sealed class ExamOverviewView : UserControl
             var panel = new StackPanel { Spacing = 10 };
             if (exam.TopicIntroduction.Count > 0) panel.Children.Add(UiFactory.Card(new RichContentView(exam.TopicIntroduction)));
             foreach (var topic in exam.Topics)
+            {
+                var topicExercises = exam.Exercises.Where(item => item.TopicId == topic.Id).ToArray();
+                panel.Children.Add(RandomExerciseButton($"Losuj zadanie z tematu: {topic.Title}", topicExercises, topic.Id, exerciseRandomizer, openExercise));
                 panel.Children.Add(ListButton($"{topic.Title} - {ExerciseCountLabel(topic.ExerciseNumbers.Count)}", () => openTopic(topic.Id)));
+            }
             content.Content = panel;
         }
 
@@ -73,6 +81,28 @@ public sealed class ExamOverviewView : UserControl
     {
         var button = new Button { Content = text, Classes = { "list" }, HorizontalAlignment = HorizontalAlignment.Stretch, HorizontalContentAlignment = HorizontalAlignment.Left };
         button.Click += (_, _) => action();
+        return button;
+    }
+
+    private static Button RandomExerciseButton(
+        string text,
+        IReadOnlyList<ExerciseDefinition> exercises,
+        string? topicId,
+        ExerciseRandomizer randomizer,
+        Action<ExerciseDefinition, string?> openExercise)
+    {
+        var button = new Button
+        {
+            Content = text,
+            Classes = { "primary" },
+            HorizontalAlignment = HorizontalAlignment.Left,
+            IsEnabled = exercises.Count > 0
+        };
+        button.Click += (_, _) =>
+        {
+            var exercise = randomizer.Select(exercises);
+            if (exercise is not null) openExercise(exercise, topicId);
+        };
         return button;
     }
 

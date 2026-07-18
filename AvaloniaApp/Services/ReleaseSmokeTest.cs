@@ -71,7 +71,7 @@ public static class ReleaseSmokeTestCommand
         Console.OutputEncoding = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false);
         if (!TryParse(args, out var commandArguments, out var error))
         {
-            Console.Error.WriteLine(error);
+            await Console.Error.WriteLineAsync(error);
             return UsageErrorExitCode;
         }
 
@@ -85,15 +85,15 @@ public static class ReleaseSmokeTestCommand
             App.ConfigureRuntime(runtimeOptions);
             Program.BuildAvaloniaApp().SetupWithClassicDesktopLifetime(args);
             var report = await ReleaseSmokeTestRunner.VerifyAsync(App.Services);
-            Console.WriteLine($"ABITURIA_RELEASE_SMOKE version={report.Version} commit={report.Commit}");
-            Console.WriteLine(
+            await Console.Out.WriteLineAsync($"ABITURIA_RELEASE_SMOKE version={report.Version} commit={report.Commit}");
+            await Console.Out.WriteLineAsync(
                 $"Abituria {report.Version}: smoke test zakończony powodzeniem " +
                 $"({report.FormulaCount} wzorów, {report.ChapterCount} działów, {report.ExerciseCount} zadań).");
             return SuccessExitCode;
         }
         catch (Exception exception)
         {
-            Console.Error.WriteLine($"Release smoke test nie powiódł się: {exception.Message}");
+            await Console.Error.WriteLineAsync($"Release smoke test nie powiódł się: {exception.Message}");
             return FailureExitCode;
         }
     }

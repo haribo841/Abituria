@@ -7,6 +7,11 @@ namespace Abituria.Tests;
 public sealed class ContentProvenanceTests
 {
     private static readonly string RepositoryRoot = FindRepositoryRoot();
+    private static readonly string[] DistributionStatuses = ["approved", "blocked"];
+    private static readonly JsonSerializerOptions ManifestJsonOptions = new()
+    {
+        PropertyNameCaseInsensitive = true
+    };
 
     [Fact]
     public void Every_packaged_content_font_and_image_has_exactly_one_provenance_record()
@@ -27,7 +32,7 @@ public sealed class ContentProvenanceTests
             Assert.False(string.IsNullOrWhiteSpace(group.Author));
             Assert.False(string.IsNullOrWhiteSpace(group.Source));
             Assert.False(string.IsNullOrWhiteSpace(group.License));
-            Assert.Contains(group.DistributionStatus, new[] { "approved", "blocked" });
+            Assert.Contains(group.DistributionStatus, DistributionStatuses);
             Assert.NotEmpty(group.Evidence);
             Assert.All(group.Evidence, evidence =>
                 Assert.True(File.Exists(Absolute(evidence)), $"Brak dowodu dla {group.Id}: {evidence}"));
@@ -60,7 +65,7 @@ public sealed class ContentProvenanceTests
 
     private static ProvenanceManifest ReadManifest() => JsonSerializer.Deserialize<ProvenanceManifest>(
         File.ReadAllText(Absolute("Content/provenance.json")),
-        new JsonSerializerOptions { PropertyNameCaseInsensitive = true })
+        ManifestJsonOptions)
         ?? throw new InvalidDataException("Nie można odczytać manifestu pochodzenia.");
 
     private static IEnumerable<string> ReadPackagedResourcePatterns()

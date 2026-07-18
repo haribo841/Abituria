@@ -60,6 +60,204 @@ function Assert-SafeArchiveEntries {
     }
 }
 
+function Get-NuGetLicenseBundleManifest {
+    param(
+        [Parameter(Mandatory)]
+        [string]$ManifestPath,
+
+        [Parameter(Mandatory)]
+        [string]$RuntimeIdentifier
+    )
+
+    if (-not (Test-Path -LiteralPath $ManifestPath -PathType Leaf)) {
+        throw "NuGet license evidence manifest is missing for '$RuntimeIdentifier'."
+    }
+
+    return Get-Content -LiteralPath $ManifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
+}
+
+function Assert-NuGetLicenseManifestContract {
+    param(
+        [Parameter(Mandatory)]
+        [object]$Manifest,
+
+        [Parameter(Mandatory)]
+        [object[]]$Components,
+
+        [Parameter(Mandatory)]
+        [string]$RuntimeIdentifier
+    )
+
+    if ($Manifest.schemaVersion -ne 1 -or $Manifest.generatedFrom -cne "published-deps" -or
+        $Manifest.runtimeIdentifier -cne $RuntimeIdentifier -or
+        $Manifest.componentCount -ne $Components.Count) {
+        throw "NuGet license evidence manifest has an invalid contract for '$RuntimeIdentifier'."
+    }
+}
+
+function Assert-NuGetLicenseComponentsMatchPublishedGraph {
+    param(
+        [Parameter(Mandatory)]
+        [object[]]$Components,
+
+        [Parameter(Mandatory)]
+        [string]$PublishedPayloadDirectory,
+
+        [Parameter(Mandatory)]
+        [string]$RuntimeIdentifier
+    )
+
+    $expectedKeys = @(
+        Get-PublishedNuGetComponents `
+            -PublishedDirectory $PublishedPayloadDirectory `
+            -RuntimeIdentifier $RuntimeIdentifier |
+            ForEach-Object { "$($_.Id.ToLowerInvariant())|$($_.Version.ToLowerInvariant())" } |
+            Sort-Object
+    )
+    $actualKeys = @(
+        $Components |
+            ForEach-Object {
+                "$(([string]$_.id).ToLowerInvariant())|$(([string]$_.version).ToLowerInvariant())"
+            } |
+            Sort-Object
+    )
+    if (($expectedKeys -join "`n") -cne ($actualKeys -join "`n")) {
+        throw "NuGet license evidence components differ from the published dependency graph for '$RuntimeIdentifier'."
+    }
+}
+
+function Assert-NuGetLicenseComponentContract {
+    param(
+        [Parameter(Mandatory)]
+        [object]$Component,
+
+        [Parameter(Mandatory)]
+        [string]$RuntimeIdentifier
+    )
+
+    $externalPattern = "^Microsoft[.]NETCore[.]App[.](?:Runtime|Host)[.]$([regex]::Escape($RuntimeIdentifier))$"
+    if ($Component.externallyHandled) {
+        if ([string]$Component.id -notmatch $externalPattern -or
+            $Component.externalHandler -cne "dotnet-runtime-host-notices") {
+            throw "Component '$($Component.id)' uses an invalid external license handler."
+        }
+    }
+    elseif (-not $Component.declaredLicense -and @($Component.evidence).Count -eq 0) {
+        throw "Component '$($Component.id)' has no license declaration or preserved evidence."
+    }
+}
+
+function Get-NuGetLicenseComponentFiles {
+    param(
+        [Parameter(Mandatory)]
+        [object]$Component
+    )
+
+    $componentFiles = @($Component.evidence)
+    if ($null -ne $Component.nuspec) {
+        $componentFiles = @($Component.nuspec) + $componentFiles
+    }
+    elseif (-not $Component.externallyHandled) {
+        throw "Component '$($Component.id)' has no preserved nuspec."
+    }
+
+    return $componentFiles
+}
+
+function Assert-NuGetLicenseEvidenceFiles {
+    param(
+        [Parameter(Mandatory)]
+        [AllowEmptyCollection()]
+        [object[]]$FileEntries,
+
+        [Parameter(Mandatory)]
+        [string]$BundleRoot,
+
+        [Parameter(Mandatory)]
+        [string]$BundlePrefix,
+
+        [Parameter(Mandatory)]
+        [Collections.Generic.HashSet[string]]$ListedFiles
+    )
+
+    foreach ($fileEntry in $FileEntries) {
+        $bundlePath = [string]$fileEntry.bundlePath
+        if (-not $bundlePath -or [IO.Path]::IsPathRooted($bundlePath) -or
+            @($bundlePath.Replace('\', '/').Split('/') | Where-Object { $_ -eq '..' }).Count -ne 0) {
+            throw "NuGet license manifest contains an unsafe path '$bundlePath'."
+        }
+        $normalizedBundlePath = $bundlePath.Replace('\', '/')
+        if (-not $ListedFiles.Add($normalizedBundlePath)) {
+            throw "NuGet license manifest contains a duplicate path '$bundlePath'."
+        }
+        $fullPath = [IO.Path]::GetFullPath((Join-Path $BundleRoot $bundlePath))
+        if (-not $fullPath.StartsWith($BundlePrefix, [StringComparison]::OrdinalIgnoreCase) -or
+            -not (Test-Path -LiteralPath $fullPath -PathType Leaf)) {
+            throw "NuGet license evidence file is missing or outside the bundle: '$bundlePath'."
+        }
+        $file = Get-Item -LiteralPath $fullPath
+        $hash = (Get-FileHash -LiteralPath $fullPath -Algorithm SHA256).Hash.ToLowerInvariant()
+        if ($file.Length -ne [long]$fileEntry.length -or $hash -cne [string]$fileEntry.sha256) {
+            throw "NuGet license evidence hash or length differs for '$bundlePath'."
+        }
+    }
+}
+
+function Assert-NuGetLicenseComponentEvidence {
+    param(
+        [Parameter(Mandatory)]
+        [object[]]$Components,
+
+        [Parameter(Mandatory)]
+        [string]$RuntimeIdentifier,
+
+        [Parameter(Mandatory)]
+        [string]$BundleRoot,
+
+        [Parameter(Mandatory)]
+        [string]$BundlePrefix,
+
+        [Parameter(Mandatory)]
+        [Collections.Generic.HashSet[string]]$ListedFiles
+    )
+
+    foreach ($component in $Components) {
+        Assert-NuGetLicenseComponentContract -Component $component -RuntimeIdentifier $RuntimeIdentifier
+        $componentFiles = @(Get-NuGetLicenseComponentFiles -Component $component)
+        Assert-NuGetLicenseEvidenceFiles `
+            -FileEntries $componentFiles `
+            -BundleRoot $BundleRoot `
+            -BundlePrefix $BundlePrefix `
+            -ListedFiles $ListedFiles
+    }
+}
+
+function Assert-NuGetLicenseBundleFileList {
+    param(
+        [Parameter(Mandatory)]
+        [string]$BundleRoot,
+
+        [Parameter(Mandatory)]
+        [string]$BundlePrefix,
+
+        [Parameter(Mandatory)]
+        [Collections.Generic.HashSet[string]]$ListedFiles,
+
+        [Parameter(Mandatory)]
+        [string]$RuntimeIdentifier
+    )
+
+    $actualFiles = @(
+        Get-ChildItem -LiteralPath $BundleRoot -File -Recurse |
+            ForEach-Object { $_.FullName.Substring($BundlePrefix.Length).Replace('\', '/') } |
+            Sort-Object
+    )
+    $expectedFiles = @($ListedFiles | Sort-Object)
+    if (($actualFiles -join "`n") -cne ($expectedFiles -join "`n")) {
+        throw "NuGet license bundle contains unlisted or missing files for '$RuntimeIdentifier'."
+    }
+}
+
 function Assert-NuGetLicenseBundle {
     param(
         [Parameter(Mandatory)]
@@ -74,34 +272,13 @@ function Assert-NuGetLicenseBundle {
 
     $bundleRoot = Join-Path $PackageDirectory "licenses/nuget"
     $manifestPath = Join-Path $bundleRoot "manifest.json"
-    if (-not (Test-Path -LiteralPath $manifestPath -PathType Leaf)) {
-        throw "NuGet license evidence manifest is missing for '$RuntimeIdentifier'."
-    }
-    $manifest = Get-Content -LiteralPath $manifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    $manifest = Get-NuGetLicenseBundleManifest -ManifestPath $manifestPath -RuntimeIdentifier $RuntimeIdentifier
     $components = @($manifest.components)
-    if ($manifest.schemaVersion -ne 1 -or $manifest.generatedFrom -cne "published-deps" -or
-        $manifest.runtimeIdentifier -cne $RuntimeIdentifier -or
-        $manifest.componentCount -ne $components.Count) {
-        throw "NuGet license evidence manifest has an invalid contract for '$RuntimeIdentifier'."
-    }
-
-    $expectedKeys = @(
-        Get-PublishedNuGetComponents `
-            -PublishedDirectory $PublishedPayloadDirectory `
-            -RuntimeIdentifier $RuntimeIdentifier |
-            ForEach-Object { "$($_.Id.ToLowerInvariant())|$($_.Version.ToLowerInvariant())" } |
-            Sort-Object
-    )
-    $actualKeys = @(
-        $components |
-            ForEach-Object {
-                "$(([string]$_.id).ToLowerInvariant())|$(([string]$_.version).ToLowerInvariant())"
-            } |
-            Sort-Object
-    )
-    if (($expectedKeys -join "`n") -cne ($actualKeys -join "`n")) {
-        throw "NuGet license evidence components differ from the published dependency graph for '$RuntimeIdentifier'."
-    }
+    Assert-NuGetLicenseManifestContract -Manifest $manifest -Components $components -RuntimeIdentifier $RuntimeIdentifier
+    Assert-NuGetLicenseComponentsMatchPublishedGraph `
+        -Components $components `
+        -PublishedPayloadDirectory $PublishedPayloadDirectory `
+        -RuntimeIdentifier $RuntimeIdentifier
 
     $bundlePrefix = [IO.Path]::GetFullPath($bundleRoot).TrimEnd(
         [IO.Path]::DirectorySeparatorChar,
@@ -109,57 +286,17 @@ function Assert-NuGetLicenseBundle {
     ) + [IO.Path]::DirectorySeparatorChar
     $listedFiles = [Collections.Generic.HashSet[string]]::new([StringComparer]::Ordinal)
     $null = $listedFiles.Add("manifest.json")
-    foreach ($component in $components) {
-        $externalPattern = "^Microsoft[.]NETCore[.]App[.](?:Runtime|Host)[.]$([regex]::Escape($RuntimeIdentifier))$"
-        if ($component.externallyHandled) {
-            if ([string]$component.id -notmatch $externalPattern -or
-                $component.externalHandler -cne "dotnet-runtime-host-notices") {
-                throw "Component '$($component.id)' uses an invalid external license handler."
-            }
-        }
-        elseif (-not $component.declaredLicense -and @($component.evidence).Count -eq 0) {
-            throw "Component '$($component.id)' has no license declaration or preserved evidence."
-        }
-
-        $componentFiles = @($component.evidence)
-        if ($null -ne $component.nuspec) {
-            $componentFiles = @($component.nuspec) + $componentFiles
-        }
-        elseif (-not $component.externallyHandled) {
-            throw "Component '$($component.id)' has no preserved nuspec."
-        }
-
-        foreach ($fileEntry in $componentFiles) {
-            $bundlePath = [string]$fileEntry.bundlePath
-            if (-not $bundlePath -or [IO.Path]::IsPathRooted($bundlePath) -or
-                @($bundlePath.Replace('\', '/').Split('/') | Where-Object { $_ -eq '..' }).Count -ne 0) {
-                throw "NuGet license manifest contains an unsafe path '$bundlePath'."
-            }
-            if (-not $listedFiles.Add($bundlePath.Replace('\', '/'))) {
-                throw "NuGet license manifest contains a duplicate path '$bundlePath'."
-            }
-            $fullPath = [IO.Path]::GetFullPath((Join-Path $bundleRoot $bundlePath))
-            if (-not $fullPath.StartsWith($bundlePrefix, [StringComparison]::OrdinalIgnoreCase) -or
-                -not (Test-Path -LiteralPath $fullPath -PathType Leaf)) {
-                throw "NuGet license evidence file is missing or outside the bundle: '$bundlePath'."
-            }
-            $file = Get-Item -LiteralPath $fullPath
-            $hash = (Get-FileHash -LiteralPath $fullPath -Algorithm SHA256).Hash.ToLowerInvariant()
-            if ($file.Length -ne [long]$fileEntry.length -or $hash -cne [string]$fileEntry.sha256) {
-                throw "NuGet license evidence hash or length differs for '$bundlePath'."
-            }
-        }
-    }
-
-    $actualFiles = @(
-        Get-ChildItem -LiteralPath $bundleRoot -File -Recurse |
-            ForEach-Object { $_.FullName.Substring($bundlePrefix.Length).Replace('\', '/') } |
-            Sort-Object
-    )
-    $expectedFiles = @($listedFiles | Sort-Object)
-    if (($actualFiles -join "`n") -cne ($expectedFiles -join "`n")) {
-        throw "NuGet license bundle contains unlisted or missing files for '$RuntimeIdentifier'."
-    }
+    Assert-NuGetLicenseComponentEvidence `
+        -Components $components `
+        -RuntimeIdentifier $RuntimeIdentifier `
+        -BundleRoot $bundleRoot `
+        -BundlePrefix $bundlePrefix `
+        -ListedFiles $listedFiles
+    Assert-NuGetLicenseBundleFileList `
+        -BundleRoot $bundleRoot `
+        -BundlePrefix $bundlePrefix `
+        -ListedFiles $listedFiles `
+        -RuntimeIdentifier $RuntimeIdentifier
 }
 
 if ($PSCmdlet.ParameterSetName -eq "LicenseBundle") {

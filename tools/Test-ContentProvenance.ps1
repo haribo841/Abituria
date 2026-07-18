@@ -77,11 +77,11 @@ foreach ($asset in $manifest.assets) {
     }
     if (-not $asset.paths) { throw "Grupa $($asset.id) nie zawiera wzorców plików." }
     foreach ($pattern in $asset.paths) {
-        $matches = @(Expand-Glob ([string]$pattern))
-        if ($matches.Count -eq 0) { throw "Wzorzec $pattern z grupy $($asset.id) nie pasuje do żadnego pliku." }
-        foreach ($match in $matches) {
-            if ($declaredResources.Contains($match)) { throw "Zasób $match jest zadeklarowany więcej niż raz." }
-            $declaredResources.Add($match)
+        $matchedPaths = @(Expand-Glob ([string]$pattern))
+        if ($matchedPaths.Count -eq 0) { throw "Wzorzec $pattern z grupy $($asset.id) nie pasuje do żadnego pliku." }
+        foreach ($matchedPath in $matchedPaths) {
+            if ($declaredResources.Contains($matchedPath)) { throw "Zasób $matchedPath jest zadeklarowany więcej niż raz." }
+            $declaredResources.Add($matchedPath)
         }
     }
 }

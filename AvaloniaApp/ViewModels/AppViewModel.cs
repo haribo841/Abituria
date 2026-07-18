@@ -68,6 +68,11 @@ public sealed class AppViewModel : ObservableObject
     public void OpenFormula(FormulaArticle article) { SelectedFormula = article; CurrentPage = AppPage.FormulaDetail; }
     public void OpenChapter(ChapterArticle chapter) { SelectedChapter = chapter; CurrentPage = AppPage.ChapterDetail; }
     public void OpenExercise(ExerciseDefinition exercise) { SelectedExercise = exercise; CurrentPage = AppPage.Exercise; }
+    public void OpenRandomExercise(ExerciseDefinition exercise, string? topicId)
+    {
+        SelectedTopicId = topicId;
+        OpenExercise(exercise);
+    }
     public void OpenExam() { SelectedTopicId = null; CurrentPage = AppPage.ExerciseList; }
     public void OpenTopic(string topicId) { SelectedTopicId = topicId; CurrentPage = AppPage.ExerciseList; }
     public void OpenGeneralCalculator() => CurrentPage = AppPage.GeneralCalculator;

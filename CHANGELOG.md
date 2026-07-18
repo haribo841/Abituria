@@ -14,12 +14,14 @@ Pierwsza wersja przygotowana do publicznego wydania. Planowana data zostanie wpi
 - 18 tablic matematycznych, 7 dostępnych działów i 35 zadań matury poprawkowej 2021;
 - kalkulator ogólny z parserem złożonych wyrażeń, historią, `Ans`, potęgami, pierwiastkami, notacją naukową i powtarzanym `=`;
 - kalkulator funkcji kwadratowej;
+- losowanie zadań z całego arkusza albo z wybranego tematu, z zachowaniem kontekstu nawigacji;
 - bezinterfejsowe polecenie `--release-smoke-test --data-directory` korzystające z izolowanej bazy;
 - ekran „O programie” pokazujący wersję, commit, licencję, autora i repozytorium;
 - generowane sumy SHA-256, osobne SBOM SPDX i attestation pochodzenia artefaktów;
 - pakietowy manifest dowodów licencyjnych NuGet z zachowanymi nuspec i dostępnymi plikami notices;
 - dokumentację użytkownika i techniczną budowaną przez DocFX oraz publikowaną przez GitHub Pages;
 - maszynowy inwentarz pochodzenia paczkowanych treści, fontów i obrazów.
+- formalne testy wydajności, pamięci i obciążenia oraz protokoły użyteczności, instalacji niezależnej i odbioru końcowego.
 
 ### Zmieniono
 

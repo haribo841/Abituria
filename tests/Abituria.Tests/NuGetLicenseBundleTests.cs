@@ -7,7 +7,11 @@ namespace Abituria.Tests;
 
 public sealed class NuGetLicenseBundleTests
 {
-    private const string PowerShellExecutable = "pwsh";
+    // Windows includes PowerShell 5.1 even when PowerShell 7 has not been installed.
+    // The release scripts intentionally remain compatible with both hosts, so the
+    // test suite must not require a separate development-machine installation.
+    private static readonly string PowerShellExecutable =
+        OperatingSystem.IsWindows() ? "powershell.exe" : "pwsh";
     private static readonly string RepositoryRoot = FindRepositoryRoot();
 
     [Fact]

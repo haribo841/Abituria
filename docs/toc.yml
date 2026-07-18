@@ -8,6 +8,14 @@
   href: ARCHITECTURE.md
 - name: Wymagania projektowe
   href: REQUIREMENTS.md
+- name: Testy końcowe
+  href: TESTING.md
+- name: Testy użyteczności
+  href: USABILITY_TEST_PROTOCOL.md
+- name: Protokół odbioru
+  href: ACCEPTANCE_PROTOCOL.md
+- name: Pakiet dla komisji
+  href: COMMISSION_PACKAGE.md
 - name: Proces wydania
   href: RELEASE_PROCESS.md
 - name: Zależności

@@ -12,6 +12,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - 35 zadań matury poprawkowej 2021 zweryfikowanych z materiałami CKE,
 - kalkulator ogólny z parserem wyrażeń, notacją naukową, Ans i historią sesji,
 - kalkulator funkcji kwadratowej,
+- losowanie zadań z całego arkusza i w obrębie wybranego tematu,
 - automatyczne, samowystarczalne paczki portable x64 dla Windows, Ubuntu i macOS,
 - dokumentacja wydania, GitHub Pages, sumy SHA-256, SBOM i atestacje pochodzenia.
 
@@ -20,7 +21,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - generator wykresów i kalkulator funkcji trygonometrycznych,
 - uzupełnienie działów Ciągi liczbowe i Liczby pierwsze,
 - arkusze 2019, 2020 i matura podstawowa 2021,
-- losowanie zadań, materiały wideo i wyszukiwanie zapisu matematycznego.
+- materiały wideo i wyszukiwanie zapisu matematycznego.
 
 ## Poza zakresem wersji beta
 

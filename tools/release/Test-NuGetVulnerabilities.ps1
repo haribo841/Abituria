@@ -8,6 +8,43 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
+function Write-Vulnerabilities {
+    param([object]$Vulnerabilities)
+
+    foreach ($vulnerability in @($Vulnerabilities)) {
+        if ($null -ne $vulnerability) {
+            $vulnerability
+        }
+    }
+}
+
+function Find-VulnerabilitiesInDictionary {
+    param([Collections.IDictionary]$Dictionary)
+
+    foreach ($key in $Dictionary.Keys) {
+        $value = $Dictionary[$key]
+        if ($key -eq "vulnerabilities") {
+            Write-Vulnerabilities -Vulnerabilities $value
+            continue
+        }
+
+        Find-Vulnerabilities -Node $value
+    }
+}
+
+function Find-VulnerabilitiesInObject {
+    param([PSCustomObject]$Object)
+
+    foreach ($property in $Object.PSObject.Properties) {
+        if ($property.Name -eq "vulnerabilities") {
+            Write-Vulnerabilities -Vulnerabilities $property.Value
+            continue
+        }
+
+        Find-Vulnerabilities -Node $property.Value
+    }
+}
+
 function Find-Vulnerabilities {
     param([object]$Node)
 
@@ -16,18 +53,7 @@ function Find-Vulnerabilities {
     }
 
     if ($Node -is [Collections.IDictionary]) {
-        foreach ($key in $Node.Keys) {
-            if ($key -eq "vulnerabilities") {
-                foreach ($vulnerability in @($Node[$key])) {
-                    if ($null -ne $vulnerability) {
-                        $vulnerability
-                    }
-                }
-            }
-            else {
-                Find-Vulnerabilities -Node $Node[$key]
-            }
-        }
+        Find-VulnerabilitiesInDictionary -Dictionary $Node
         return
     }
 
@@ -38,21 +64,8 @@ function Find-Vulnerabilities {
         return
     }
 
-    if ($Node -isnot [PSCustomObject]) {
-        return
-    }
-
-    foreach ($property in $Node.PSObject.Properties) {
-        if ($property.Name -eq "vulnerabilities") {
-            foreach ($vulnerability in @($property.Value)) {
-                if ($null -ne $vulnerability) {
-                    $vulnerability
-                }
-            }
-        }
-        else {
-            Find-Vulnerabilities -Node $property.Value
-        }
+    if ($Node -is [PSCustomObject]) {
+        Find-VulnerabilitiesInObject -Object $Node
     }
 }
 

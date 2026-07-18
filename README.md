@@ -58,7 +58,7 @@ Przy pierwszym uruchomieniu aplikacja może zaimportować istniejące nazwy z pl
 
 ## Uruchomienie ze źródeł
 
-Wymagany jest .NET SDK `10.0.302`, przypięty w `global.json`. Testy integracyjne skryptów wydawniczych wymagają również PowerShell 7 (`pwsh`) dostępnego w `PATH`.
+Wymagany jest .NET SDK `10.0.302`, przypięty w `global.json`. Na Windows testy integracyjne skryptów wydawniczych działają z wbudowanym PowerShell 5.1 lub PowerShell 7 (`pwsh`); na macOS i Linux wymagany jest `pwsh` w `PATH`.
 
 ```powershell
 dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
@@ -98,6 +98,8 @@ Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalneg
 | [Wymagania](docs/REQUIREMENTS.md) | wymagania funkcjonalne, niefunkcjonalne i kryteria akceptacji |
 | [Architektura](docs/ARCHITECTURE.md) | komponenty, dane i odpowiedzialności modułów |
 | [Proces wydania](docs/RELEASE_PROCESS.md) | bramy, pakowanie, smoke test, Pages i publikacja |
+| [Testy końcowe](docs/TESTING.md) | zakres testów funkcjonalnych, regresyjnych, wydajnościowych i pamięciowych |
+| [Pakiet dla komisji](docs/COMMISSION_PACKAGE.md) | indeks dokumentacji technicznej, PDF i protokół odbioru |
 | [Zależności](docs/DEPENDENCIES.md) | dokładnie rozwiązane pakiety produkcyjne i testowe |
 | [Pochodzenie treści](docs/CONTENT_PROVENANCE.md) | zasady dopuszczania treści, fontów i obrazów do paczek |
 | [Znane ograniczenia](docs/KNOWN_LIMITATIONS.md) | jawny zakres wersji beta |

@@ -237,54 +237,188 @@ function Get-OptionalXmlText([Xml.XmlNode]$Parent, [string]$LocalName) {
     return [string]$node.InnerText
 }
 
+function Get-LicenseNodeType([Xml.XmlNode]$LicenseNode) {
+    $licenseTypeAttribute = $LicenseNode.Attributes["type"]
+    if (-not $licenseTypeAttribute) {
+        return ""
+    }
+    return [string]$licenseTypeAttribute.Value
+}
+
+function New-FileLicenseDeclaration([string]$LicenseValue, [string]$PackageDirectory) {
+    if ([IO.Path]::IsPathRooted($LicenseValue)) {
+        throw "Nuspec license file path must be relative."
+    }
+
+    $licenseFile = Join-Path $PackageDirectory $LicenseValue
+    $licenseFile = Assert-PathInside `
+        -Path $licenseFile `
+        -Root $PackageDirectory `
+        -Description "Nuspec license file"
+    if (-not (Test-Path -LiteralPath $licenseFile -PathType Leaf)) {
+        throw "Nuspec refers to a missing license file '$LicenseValue'."
+    }
+
+    return [pscustomobject]@{
+        Kind = "file"
+        Value = $LicenseValue.Replace('\', '/')
+        FilePath = $licenseFile
+    }
+}
+
+function Get-DeclaredLicenseFromNode(
+    [Xml.XmlNode]$LicenseNode,
+    [string]$PackageDirectory
+) {
+    $licenseType = Get-LicenseNodeType -LicenseNode $LicenseNode
+    $licenseValue = ([string]$LicenseNode.InnerText).Trim()
+    if ([string]::IsNullOrWhiteSpace($licenseValue) -or
+        $licenseType -notin @("expression", "file")) {
+        throw "Nuspec contains an invalid license declaration."
+    }
+
+    if ($licenseType -eq "file") {
+        return New-FileLicenseDeclaration `
+            -LicenseValue $licenseValue `
+            -PackageDirectory $PackageDirectory
+    }
+
+    return [pscustomobject]@{
+        Kind = "expression"
+        Value = $licenseValue
+        FilePath = $null
+    }
+}
+
+function Get-LegacyLicenseUrlDeclaration([Xml.XmlNode]$Metadata) {
+    $licenseUrl = (Get-OptionalXmlText -Parent $Metadata -LocalName "licenseUrl").Trim()
+    if ([string]::IsNullOrWhiteSpace($licenseUrl)) {
+        return $null
+    }
+
+    $uri = $null
+    if (-not [Uri]::TryCreate($licenseUrl, [UriKind]::Absolute, [ref]$uri) -or
+        $uri.Scheme -ne [Uri]::UriSchemeHttps) {
+        throw "Nuspec licenseUrl must be an absolute HTTPS URL."
+    }
+
+    return [pscustomobject]@{ Kind = "url"; Value = $licenseUrl; FilePath = $null }
+}
+
 function Get-DeclaredLicense([xml]$Nuspec, [string]$PackageDirectory) {
     $metadata = Get-NuspecMetadata -Nuspec $Nuspec
     $licenseNode = $metadata.SelectSingleNode('*[local-name()="license"]')
     if ($licenseNode) {
-        $licenseTypeAttribute = $licenseNode.Attributes["type"]
-        $licenseType = if ($licenseTypeAttribute) {
-            [string]$licenseTypeAttribute.Value
-        }
-        else {
-            ""
-        }
-        $licenseValue = ([string]$licenseNode.InnerText).Trim()
-        if ([string]::IsNullOrWhiteSpace($licenseValue) -or
-            $licenseType -notin @("expression", "file")) {
-            throw "Nuspec contains an invalid license declaration."
-        }
-        if ($licenseType -eq "file") {
-            if ([IO.Path]::IsPathRooted($licenseValue)) {
-                throw "Nuspec license file path must be relative."
-            }
-            $licenseFile = Join-Path $PackageDirectory $licenseValue
-            $licenseFile = Assert-PathInside `
-                -Path $licenseFile `
-                -Root $PackageDirectory `
-                -Description "Nuspec license file"
-            if (-not (Test-Path -LiteralPath $licenseFile -PathType Leaf)) {
-                throw "Nuspec refers to a missing license file '$licenseValue'."
-            }
-            return [pscustomobject]@{
-                Kind = "file"
-                Value = $licenseValue.Replace('\', '/')
-                FilePath = $licenseFile
-            }
-        }
-        return [pscustomobject]@{ Kind = "expression"; Value = $licenseValue; FilePath = $null }
+        return Get-DeclaredLicenseFromNode `
+            -LicenseNode $licenseNode `
+            -PackageDirectory $PackageDirectory
     }
 
-    $licenseUrl = (Get-OptionalXmlText -Parent $metadata -LocalName "licenseUrl").Trim()
-    if (-not [string]::IsNullOrWhiteSpace($licenseUrl)) {
-        $uri = $null
-        if (-not [Uri]::TryCreate($licenseUrl, [UriKind]::Absolute, [ref]$uri) -or
-            $uri.Scheme -ne [Uri]::UriSchemeHttps) {
-            throw "Nuspec licenseUrl must be an absolute HTTPS URL."
-        }
-        return [pscustomobject]@{ Kind = "url"; Value = $licenseUrl; FilePath = $null }
+    return Get-LegacyLicenseUrlDeclaration -Metadata $metadata
+}
+
+function New-ExternallyHandledComponentEntry([object]$Component) {
+    return [ordered]@{
+        id = [string]$Component.Id
+        version = [string]$Component.Version
+        externallyHandled = $true
+        externalHandler = "dotnet-runtime-host-notices"
+        declaredLicense = $null
+        copyright = ""
+        nuspec = $null
+        evidence = @()
+    }
+}
+
+function Get-ValidatedComponentNuspec([object]$Component, [string]$PackageDirectory) {
+    $nuspecFiles = @(Get-ChildItem -LiteralPath $PackageDirectory -Filter "*.nuspec" -File -Force)
+    if ($nuspecFiles.Count -ne 1) {
+        throw "NuGet package '$($Component.Id)' '$($Component.Version)' must contain exactly one root nuspec."
     }
 
-    return $null
+    $nuspecPath = Assert-EvidenceFile -File $nuspecFiles[0] -PackageDirectory $PackageDirectory
+    [xml]$nuspec = Read-Nuspec -Path $nuspecPath
+    $metadata = Get-NuspecMetadata -Nuspec $nuspec
+    $metadataId = Get-OptionalXmlText -Parent $metadata -LocalName "id"
+    $metadataVersion = Get-OptionalXmlText -Parent $metadata -LocalName "version"
+    if (-not [StringComparer]::OrdinalIgnoreCase.Equals($metadataId, [string]$Component.Id) -or
+        -not [StringComparer]::OrdinalIgnoreCase.Equals($metadataVersion, [string]$Component.Version)) {
+        throw "Nuspec identity '$metadataId' '$metadataVersion' differs from component '$($Component.Id)' '$($Component.Version)'."
+    }
+
+    return [pscustomobject]@{
+        Path = $nuspecPath
+        Document = $nuspec
+        Metadata = $metadata
+    }
+}
+
+function Get-ComponentEvidenceFiles(
+    [object]$DeclaredLicense,
+    [string]$PackageDirectory,
+    [object]$Component
+) {
+    $evidenceFiles = [Collections.Generic.Dictionary[string, IO.FileInfo]]::new(
+        [StringComparer]::Ordinal
+    )
+    foreach ($file in Get-PackageFiles -PackageDirectory $PackageDirectory) {
+        $evidenceFiles[$file.FullName] = $file
+    }
+
+    if ($DeclaredLicense -and $DeclaredLicense.FilePath) {
+        $licenseFile = Get-Item -LiteralPath $DeclaredLicense.FilePath -Force
+        if (($licenseFile.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0) {
+            throw "Nuspec license file uses an unsupported reparse point."
+        }
+        $evidenceFiles[$licenseFile.FullName] = $licenseFile
+    }
+
+    if ($evidenceFiles.Count -gt $maximumEvidenceFileCount) {
+        throw "NuGet package '$($Component.Id)' '$($Component.Version)' exceeds the limit of $maximumEvidenceFileCount license evidence files."
+    }
+
+    return ,$evidenceFiles
+}
+
+function Copy-ComponentEvidence(
+    [Collections.Generic.Dictionary[string, IO.FileInfo]]$EvidenceFiles,
+    [string]$PackageDirectory,
+    [string]$BundleRoot,
+    [string]$ComponentDirectoryName
+) {
+    $evidenceByRelativePath = [Collections.Generic.Dictionary[string, string]]::new(
+        [StringComparer]::Ordinal
+    )
+    foreach ($file in $EvidenceFiles.Values) {
+        $validatedPath = Assert-EvidenceFile -File $file -PackageDirectory $PackageDirectory
+        $relativePath = Get-RelativePackagePath $validatedPath $PackageDirectory
+        $evidenceByRelativePath[$relativePath] = $validatedPath
+    }
+
+    $relativePaths = [string[]]@($evidenceByRelativePath.Keys)
+    [Array]::Sort($relativePaths, [StringComparer]::Ordinal)
+    return @(
+        for ($index = 0; $index -lt $relativePaths.Count; $index++) {
+            $relativePath = $relativePaths[$index]
+            $safeName = Get-SafeEvidenceName -Name ([IO.Path]::GetFileName($relativePath))
+            $bundlePath = "components/$ComponentDirectoryName/evidence/{0:D4}-$safeName" -f ($index + 1)
+            Copy-BundleFile `
+                -SourcePath $evidenceByRelativePath[$relativePath] `
+                -DestinationPath (Join-Path $BundleRoot $bundlePath) `
+                -SourceRelativePath $relativePath `
+                -BundleRelativePath $bundlePath
+        }
+    )
+}
+
+function Get-ComponentLicenseEntry([object]$DeclaredLicense, [bool]$ExternallyHandled) {
+    if ($DeclaredLicense) {
+        return [ordered]@{ kind = $DeclaredLicense.Kind; value = $DeclaredLicense.Value }
+    }
+    if ($ExternallyHandled) {
+        return $null
+    }
+    return [ordered]@{ kind = "discovered-files"; value = $null }
 }
 
 function New-ComponentBundle(
@@ -299,50 +433,19 @@ function New-ComponentBundle(
         -Root $NuGetRoot `
         -AllowMissing:$externallyHandled
     if (-not $packageDirectory) {
-        return [ordered]@{
-            id = [string]$Component.Id
-            version = [string]$Component.Version
-            externallyHandled = $true
-            externalHandler = "dotnet-runtime-host-notices"
-            declaredLicense = $null
-            copyright = ""
-            nuspec = $null
-            evidence = @()
-        }
-    }
-    $nuspecFiles = @(Get-ChildItem -LiteralPath $packageDirectory -Filter "*.nuspec" -File -Force)
-    if ($nuspecFiles.Count -ne 1) {
-        throw "NuGet package '$($Component.Id)' '$($Component.Version)' must contain exactly one root nuspec."
+        return New-ExternallyHandledComponentEntry -Component $Component
     }
 
-    $nuspecFile = $nuspecFiles[0]
-    $nuspecPath = Assert-EvidenceFile -File $nuspecFile -PackageDirectory $packageDirectory
-    [xml]$nuspec = Read-Nuspec -Path $nuspecPath
-    $metadata = Get-NuspecMetadata -Nuspec $nuspec
-    $metadataId = Get-OptionalXmlText -Parent $metadata -LocalName "id"
-    $metadataVersion = Get-OptionalXmlText -Parent $metadata -LocalName "version"
-    if (-not [StringComparer]::OrdinalIgnoreCase.Equals($metadataId, [string]$Component.Id) -or
-        -not [StringComparer]::OrdinalIgnoreCase.Equals($metadataVersion, [string]$Component.Version)) {
-        throw "Nuspec identity '$metadataId' '$metadataVersion' differs from component '$($Component.Id)' '$($Component.Version)'."
-    }
-
-    $declaredLicense = Get-DeclaredLicense -Nuspec $nuspec -PackageDirectory $packageDirectory
-    $evidenceFiles = [Collections.Generic.Dictionary[string, IO.FileInfo]]::new(
-        [StringComparer]::Ordinal
-    )
-    foreach ($file in Get-PackageFiles -PackageDirectory $packageDirectory) {
-        $evidenceFiles[$file.FullName] = $file
-    }
-    if ($declaredLicense -and $declaredLicense.FilePath) {
-        $licenseFile = Get-Item -LiteralPath $declaredLicense.FilePath -Force
-        if (($licenseFile.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0) {
-            throw "Nuspec license file uses an unsupported reparse point."
-        }
-        $evidenceFiles[$licenseFile.FullName] = $licenseFile
-    }
-    if ($evidenceFiles.Count -gt $maximumEvidenceFileCount) {
-        throw "NuGet package '$($Component.Id)' '$($Component.Version)' exceeds the limit of $maximumEvidenceFileCount license evidence files."
-    }
+    $packageNuspec = Get-ValidatedComponentNuspec `
+        -Component $Component `
+        -PackageDirectory $packageDirectory
+    $declaredLicense = Get-DeclaredLicense `
+        -Nuspec $packageNuspec.Document `
+        -PackageDirectory $packageDirectory
+    $evidenceFiles = Get-ComponentEvidenceFiles `
+        -DeclaredLicense $declaredLicense `
+        -PackageDirectory $packageDirectory `
+        -Component $Component
 
     if (-not $externallyHandled -and -not $declaredLicense -and $evidenceFiles.Count -eq 0) {
         throw "NuGet package '$($Component.Id)' '$($Component.Version)' does not provide license evidence."
@@ -352,44 +455,22 @@ function New-ComponentBundle(
     $componentOutput = Join-Path $BundleRoot "components/$componentDirectoryName"
     $nuspecBundlePath = "components/$componentDirectoryName/package.nuspec"
     $nuspecEntry = Copy-BundleFile `
-        -SourcePath $nuspecPath `
+        -SourcePath $packageNuspec.Path `
         -DestinationPath (Join-Path $BundleRoot $nuspecBundlePath) `
-        -SourceRelativePath (Get-RelativePackagePath $nuspecPath $packageDirectory) `
+        -SourceRelativePath (Get-RelativePackagePath $packageNuspec.Path $packageDirectory) `
         -BundleRelativePath $nuspecBundlePath
 
-    $evidenceByRelativePath = [Collections.Generic.Dictionary[string, string]]::new(
-        [StringComparer]::Ordinal
-    )
-    foreach ($file in $evidenceFiles.Values) {
-        $validatedPath = Assert-EvidenceFile -File $file -PackageDirectory $packageDirectory
-        $relativePath = Get-RelativePackagePath $validatedPath $packageDirectory
-        $evidenceByRelativePath[$relativePath] = $validatedPath
-    }
-    $relativePaths = [string[]]@($evidenceByRelativePath.Keys)
-    [Array]::Sort($relativePaths, [StringComparer]::Ordinal)
-
     $evidenceEntries = @(
-        for ($index = 0; $index -lt $relativePaths.Count; $index++) {
-            $relativePath = $relativePaths[$index]
-            $safeName = Get-SafeEvidenceName -Name ([IO.Path]::GetFileName($relativePath))
-            $bundlePath = "components/$componentDirectoryName/evidence/{0:D4}-$safeName" -f ($index + 1)
-            Copy-BundleFile `
-                -SourcePath $evidenceByRelativePath[$relativePath] `
-                -DestinationPath (Join-Path $BundleRoot $bundlePath) `
-                -SourceRelativePath $relativePath `
-                -BundleRelativePath $bundlePath
-        }
+        Copy-ComponentEvidence `
+            -EvidenceFiles $evidenceFiles `
+            -PackageDirectory $packageDirectory `
+            -BundleRoot $BundleRoot `
+            -ComponentDirectoryName $componentDirectoryName
     )
 
-    $licenseEntry = if ($declaredLicense) {
-        [ordered]@{ kind = $declaredLicense.Kind; value = $declaredLicense.Value }
-    }
-    elseif ($externallyHandled) {
-        $null
-    }
-    else {
-        [ordered]@{ kind = "discovered-files"; value = $null }
-    }
+    $licenseEntry = Get-ComponentLicenseEntry `
+        -DeclaredLicense $declaredLicense `
+        -ExternallyHandled $externallyHandled
 
     return [ordered]@{
         id = [string]$Component.Id
@@ -397,7 +478,7 @@ function New-ComponentBundle(
         externallyHandled = $externallyHandled
         externalHandler = if ($externallyHandled) { "dotnet-runtime-host-notices" } else { $null }
         declaredLicense = $licenseEntry
-        copyright = Get-OptionalXmlText -Parent $metadata -LocalName "copyright"
+        copyright = Get-OptionalXmlText -Parent $packageNuspec.Metadata -LocalName "copyright"
         nuspec = $nuspecEntry
         evidence = $evidenceEntries
     }

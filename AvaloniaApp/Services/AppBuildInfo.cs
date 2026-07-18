@@ -14,8 +14,14 @@ public sealed record AppBuildInfo(
 {
     public const string ProjectLicense = "MIT";
     public const string ProjectAuthor = "Adam Kubiś";
-    public const string ProjectRepositoryUrl = "https://github.com/haribo841/Abituria";
+    private const string ProjectRepositoryHost = "github.com";
+    private const string ProjectRepositoryPath = "haribo841/Abituria";
     public const string UnknownCommit = "nieznany";
+
+    public static string ProjectRepositoryUrl => new UriBuilder(Uri.UriSchemeHttps, ProjectRepositoryHost)
+    {
+        Path = ProjectRepositoryPath
+    }.Uri.AbsoluteUri.TrimEnd('/');
 
     public static AppBuildInfo Current { get; } = FromAssembly(typeof(AppBuildInfo).Assembly);
 
@@ -55,7 +61,7 @@ public sealed record AppBuildInfo(
         return assemblyVersion?.ToString(3) ?? "0.0.0";
     }
 
-    private static string? Metadata(IReadOnlyDictionary<string, string?> metadata, string key) =>
+    private static string? Metadata(Dictionary<string, string?> metadata, string key) =>
         metadata.TryGetValue(key, out var value) ? value : null;
 
     private static string? ExtractCommit(string? informationalVersion)

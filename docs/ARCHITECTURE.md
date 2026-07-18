@@ -84,6 +84,7 @@ flowchart TB
 - `AccountService`,
 - `ContentRepository`,
 - `ExpressionCalculator`,
+- `ExerciseRandomizer`,
 - `CalculatorSession`,
 - `AppBuildInfo`,
 - `AppViewModel`,
@@ -100,6 +101,7 @@ Stan nawigacji jest scentralizowany w `AppViewModel`:
 - `Login` ustawia aktywny profil i przechodzi do strony startowej,
 - `Navigate` blokuje dostęp do stron, gdy nie ma aktywnego profilu,
 - `OpenFormula`, `OpenChapter`, `OpenExercise`, `OpenTopic`, `OpenRoadmap` i `OpenPlaceholder` zapisują kontekst wybranej strony,
+- `OpenRandomExercise` zapisuje wylosowane zadanie i zachowuje kontekst całego arkusza albo wybranego tematu,
 - `OpenGeneralCalculator` przełącza z huba kalkulatorów na kalkulator ogólny.
 
 Widoki są zwykłymi kontrolkami Avalonia `UserControl`. Produkcyjny kod nie używa WPF `Page`, `Frame` ani `NavigationWindow`. Regresja `NavigationArchitectureTests` pilnuje też, żeby kod produkcyjny nie wrócił do niemodalnego otwierania wielu okien.
@@ -142,6 +144,8 @@ Kalkulator funkcji kwadratowej korzysta z `QuadraticSolver`. Kalkulator ogólny 
 - `ExpressionCalculator` - tokenizer, parser i ewaluator wyrażeń,
 - `CalculatorSession` - historia, `Ans` i powtarzanie operacji,
 - `CalculatorInputState` - semantyka wejścia po wyniku, błędzie, `=`, `1/x`, pierwiastku i `x²`.
+
+`ExerciseRandomizer` wybiera jedno zadanie z przekazanej, niezmienianej puli. Widok listy przekazuje kontekst całego arkusza albo konkretnego tematu do `AppViewModel`, dzięki czemu przyciski poprzedniego i następnego zadania nie opuszczają wylosowanej puli.
 
 Logika obliczeń nie zależy od Avalonia. Widoki tylko zbierają wejście użytkownika, wywołują usługi i prezentują wynik albo błąd.
 

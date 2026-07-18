@@ -193,8 +193,8 @@
                   {
                       "id":  "random-exercises",
                       "title":  "Losowanie zadań",
-                      "status":  "planned",
-                      "summary":  "Losowanie z puli zadań maturalnych i działowych.",
+                      "status":  "migrated",
+                      "summary":  "Losowanie z całego arkusza albo z puli wybranego tematu z zachowaniem kontekstu nawigacji.",
                       "context":  "exercises",
                       "sourceRefs":  [
                                          "Opis struktury systemu.txt"

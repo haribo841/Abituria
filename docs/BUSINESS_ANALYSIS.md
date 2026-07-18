@@ -85,6 +85,7 @@ Zakres bieżącej implementacji jest zdefiniowany normatywnie w [REQUIREMENTS.md
 - sprawdzanie odpowiedzi zamkniętych, ujawnianie odpowiedzi otwartych oraz podpowiedzi;
 - kalkulator funkcji kwadratowej;
 - kalkulator ogólny z parserem wyrażeń, nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią i powtarzanym `=`;
+- losowanie zadań z całego arkusza albo wybranego tematu;
 - dokumentację, bramy jakości, diagnostyczny smoke test artefaktu i automatyzację przygotowania paczek.
 
 Zakres treści jest mniejszy niż lista tematów z historycznych planów. Aktualnie dostępnych jest siedem działów, a „Ciągi liczbowe” i „Liczby pierwsze” są jawnymi placeholderami. Dostępny katalog obejmuje 35 zadań matury poprawkowej 2021, jednak prawa do części treści i ilustracji nadal blokują ich publiczną dystrybucję w paczce.
@@ -93,7 +94,7 @@ Zakres treści jest mniejszy niż lista tematów z historycznych planów. Aktual
 
 Poza zakresem bieżącej bety pozostają między innymi:
 
-- losowanie zadań, materiały wideo, generator wykresów i pełny kalkulator trygonometryczny;
+- materiały wideo, generator wykresów i pełny kalkulator trygonometryczny;
 - synchronizacja między urządzeniami, konto internetowe, chmura i integracja z systemami szkolnymi;
 - wersja webowa, mobilna i pakiet dla Apple Silicon;
 - natywne instalatory, automatyczne aktualizacje oraz podpisywanie kodu;
@@ -166,7 +167,7 @@ Zmiana zakresu wymaga następującego procesu:
 | --- | --- |
 | Must have | nawigacja, dostępne materiały, zadania, sprawdzanie odpowiedzi, podpowiedzi, kalkulatory, kontrola błędów i dokumentacja |
 | Should have | lokalne konto, zapis postępu, historia kalkulatora, ekran „O programie” i diagnostyka wydania |
-| Could have | losowanie zadań, dodatkowe arkusze, materiały wideo, wyszukiwanie zapisu matematycznego |
+| Could have | dodatkowe arkusze, materiały wideo, wyszukiwanie zapisu matematycznego |
 | Won't have w becie | mobilny i webowy klient, płatności, rozbudowany backend, synchronizacja urządzeń i automatyczne aktualizacje |
 
 ## 10. Architektura i ograniczenia technologiczne

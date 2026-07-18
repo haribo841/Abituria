@@ -69,7 +69,7 @@ Dostępnych jest 7 materiałów:
 
 ## Zadania
 
-Strona „Zadania” pozwala przejść do całego arkusza matury poprawkowej 2021 albo wybrać jeden z 17 tematów. Lista oznacza ukończone zadania znakiem wyboru.
+Strona „Zadania” pozwala przejść do całego arkusza matury poprawkowej 2021 albo wybrać jeden z 17 tematów. Lista oznacza ukończone zadania znakiem wyboru. Przycisk „Losuj zadanie z tego arkusza” wybiera jedno zadanie z całej puli, a przycisk pod wybranym tematem losuje wyłącznie z tego tematu. Po losowaniu strzałki poprzedniego i następnego zadania pozostają w odpowiedniej puli.
 
 ### Zadania 1-28
 

@@ -150,7 +150,13 @@ public partial class MainWindow : Window
         AppPage.FormulaDetail when _viewModel.SelectedFormula is not null => new ArticleView(
             _viewModel.SelectedFormula.Title, "Tablica matematyczna", _viewModel.SelectedFormula.Blocks,
             () => _viewModel.Navigate(AppPage.Formulas)),
-        AppPage.Exams => new ExamOverviewView(_content.Exam, _content.Placeholders.Items, _viewModel.OpenExam, _viewModel.OpenTopic, _viewModel.OpenPlaceholder),
+        AppPage.Exams => new ExamOverviewView(
+            _content.Exam,
+            _content.Placeholders.Items,
+            _viewModel.OpenExam,
+            _viewModel.OpenTopic,
+            _viewModel.OpenPlaceholder,
+            _viewModel.OpenRandomExercise),
         AppPage.ExerciseList => new ExerciseListView(_content.Exam, _viewModel.SelectedTopicId, _viewModel.ActiveProfile!, _accounts, _viewModel.OpenExercise, () => _viewModel.Navigate(AppPage.Exams)),
         AppPage.Exercise when _viewModel.SelectedExercise is not null => new ExerciseView(
             _viewModel.SelectedExercise, CreateExerciseViewContext()),
