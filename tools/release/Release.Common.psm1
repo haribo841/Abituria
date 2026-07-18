@@ -68,6 +68,28 @@ function Invoke-ExternalCommand {
     }
 }
 
+function Get-Sha256 {
+    param(
+        [Parameter(Mandatory)]
+        [string]$Path
+    )
+
+    if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) {
+        throw "Cannot calculate SHA-256 for missing file '$Path'."
+    }
+
+    $stream = [IO.File]::Open($Path, [IO.FileMode]::Open, [IO.FileAccess]::Read, [IO.FileShare]::Read)
+    $algorithm = [Security.Cryptography.SHA256]::Create()
+    try {
+        $bytes = $algorithm.ComputeHash($stream)
+        return [BitConverter]::ToString($bytes).Replace("-", "").ToLowerInvariant()
+    }
+    finally {
+        $algorithm.Dispose()
+        $stream.Dispose()
+    }
+}
+
 function Reset-Directory {
     param(
         [Parameter(Mandatory)]
@@ -387,6 +409,7 @@ Export-ModuleMember -Function @(
     "Get-AbituriaVersion",
     "Assert-ReleaseTag",
     "Invoke-ExternalCommand",
+    "Get-Sha256",
     "Reset-Directory",
     "Remove-TemporaryDirectory",
     "Get-ReleaseArchiveName",

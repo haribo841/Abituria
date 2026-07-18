@@ -198,7 +198,7 @@ function Copy-BundleFile(
     return [ordered]@{
         sourceRelativePath = $SourceRelativePath
         bundlePath = $BundleRelativePath.Replace('\', '/')
-        sha256 = (Get-FileHash -LiteralPath $DestinationPath -Algorithm SHA256).Hash.ToLowerInvariant()
+        sha256 = Get-Sha256 -Path $DestinationPath
         length = [long]$destination.Length
     }
 }

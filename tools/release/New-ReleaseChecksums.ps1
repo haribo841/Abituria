@@ -7,6 +7,8 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
+Import-Module (Join-Path $PSScriptRoot "Release.Common.psm1") -Force
+
 $artifactsDirectory = (Resolve-Path -LiteralPath $ArtifactsDirectory).Path
 $payloadFiles = @(
     Get-ChildItem -LiteralPath $artifactsDirectory -File |
@@ -19,7 +21,7 @@ if ($payloadFiles.Count -eq 0) {
 }
 
 $lines = foreach ($file in $payloadFiles) {
-    $hash = (Get-FileHash -LiteralPath $file.FullName -Algorithm SHA256).Hash.ToLowerInvariant()
+    $hash = Get-Sha256 -Path $file.FullName
     "$hash  $($file.Name)"
 }
 

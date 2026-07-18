@@ -95,12 +95,24 @@ jobs:
             throw "Brak pliku wykonywalnego po niezależnym rozpakowaniu: $executable"
           }
 
-          if ("${{ matrix.rid }}" -eq "linux-x64") {
+          $exitCode = 0
+          if ("${{ matrix.rid }}" -eq "win-x64") {
+            $process = Start-Process `
+              -FilePath $executable `
+              -ArgumentList @("--release-smoke-test", "--data-directory", $dataDirectory) `
+              -Wait `
+              -PassThru `
+              -NoNewWindow
+            $exitCode = $process.ExitCode
+          }
+          elseif ("${{ matrix.rid }}" -eq "linux-x64") {
             & xvfb-run -a $executable --release-smoke-test --data-directory $dataDirectory
+            $exitCode = $LASTEXITCODE
           }
           else {
             & $executable --release-smoke-test --data-directory $dataDirectory
+            $exitCode = $LASTEXITCODE
           }
-          if ($LASTEXITCODE -ne 0) {
-            throw "Smoke test zainstalowanej paczki zakończył się kodem $LASTEXITCODE."
+          if ($exitCode -ne 0) {
+            throw "Smoke test zainstalowanej paczki zakończył się kodem $exitCode."
           }

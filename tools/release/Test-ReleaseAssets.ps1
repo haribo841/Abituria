@@ -196,7 +196,7 @@ function Assert-NuGetLicenseEvidenceFiles {
             throw "NuGet license evidence file is missing or outside the bundle: '$bundlePath'."
         }
         $file = Get-Item -LiteralPath $fullPath
-        $hash = (Get-FileHash -LiteralPath $fullPath -Algorithm SHA256).Hash.ToLowerInvariant()
+        $hash = Get-Sha256 -Path $fullPath
         if ($file.Length -ne [long]$fileEntry.length -or $hash -cne [string]$fileEntry.sha256) {
             throw "NuGet license evidence hash or length differs for '$bundlePath'."
         }
@@ -362,7 +362,7 @@ foreach ($name in $expectedPayloadNames) {
     if (-not $checksumEntries.ContainsKey($name)) {
         throw "SHA256SUMS.txt nie zawiera pliku '$name'."
     }
-    $actualHash = (Get-FileHash -LiteralPath (Join-Path $artifactsDirectory $name) -Algorithm SHA256).Hash.ToLowerInvariant()
+    $actualHash = Get-Sha256 -Path (Join-Path $artifactsDirectory $name)
     if ($checksumEntries[$name] -cne $actualHash) {
         throw "Suma SHA-256 pliku '$name' jest niepoprawna."
     }
@@ -450,8 +450,8 @@ try {
         if (-not (Test-Path -LiteralPath $internalSbomPath -PathType Leaf)) {
             throw "Archiwum '$archiveName' nie zawiera SBOM SPDX 2.2."
         }
-        if ((Get-FileHash $internalSbomPath -Algorithm SHA256).Hash -cne
-            (Get-FileHash $externalSbomPath -Algorithm SHA256).Hash) {
+        if ((Get-Sha256 -Path $internalSbomPath) -cne
+            (Get-Sha256 -Path $externalSbomPath)) {
             throw "Internal and external SBOM differ for '$runtimeIdentifier'."
         }
 
