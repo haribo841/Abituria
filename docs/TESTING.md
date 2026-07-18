@@ -19,8 +19,8 @@ Celem testów końcowych jest potwierdzenie, że Abituria spełnia aktualny zakr
 | Funkcjonalne i nawigacyjne | Avalonia Headless: logowanie, routing, zadania, podpowiedzi, odpowiedzi i postęp | wykonywane w `dotnet test` |
 | Regresyjne i wizualne | klasy `*RegressionTests`, dwa obrazy wzorcowe dla `960x640` i `1280x820` | wykonywane w `dotnet test` |
 | Wydajnościowe, pamięciowe i obciążeniowe | `PerformanceMemoryAndLoadTests` | wykonane lokalnie w konfiguracji Release |
-| Systemowe wydania | smoke test wyodrębnionej paczki na natywnych runnerach Windows, Ubuntu i macOS | gotowe w workflow, wymaga legalnej bramy wydania |
-| Instalacyjne na niezależnych komputerach | procedura i arkusz w `ACCEPTANCE_PROTOCOL.md` | wymaga niezależnych wykonawców |
+| Systemowe wydania | smoke test wyodrębnionej paczki na natywnych runnerach Windows, Ubuntu i macOS | PASS - [`platform-installation-smoke` dla `4fdecd2`](https://github.com/haribo841/Abituria/actions/runs/29646454681); publiczne wydanie nadal wymaga bramy prawnej |
+| Instalacyjne na niezależnych komputerach | procedura i arkusz w `ACCEPTANCE_PROTOCOL.md` | PASS automatyczny na trzech niezależnych runnerach; ręczny odbiór przez niezależną osobę pozostaje wymagany |
 | Użyteczności i dostępności | automatyczne scenariusze UI oraz protokół ręczny | automatyczna część wykonana, badanie z użytkownikami oczekuje na wykonanie |
 | Akceptacyjne | śledzenie kryteriów w `REQUIREMENTS.md` i protokół końcowego odbioru | techniczne dowody wykonane; podpis i publikacja mają osobne bramy |
 
@@ -76,6 +76,8 @@ Na Windows testy skryptów wydawniczych mogą działać z wbudowanym `powershell
 Workflow `release` buduje paczki self-contained na trzech natywnych runnerach: Windows 11 x64, Ubuntu 24.04 x64 i macOS 15 Intel x64. Każda paczka jest rozpakowywana do katalogu tymczasowego, a następnie jej rzeczywisty plik wykonywalny uruchamia `--release-smoke-test --data-directory <katalog-tymczasowy>`. Test potwierdza wersję, commit, zasoby, bazę SQLite, profil gościa i kalkulator bez otwierania normalnego okna oraz bez użycia danych użytkownika.
 
 Niezależnie od publikacji workflow `platform-installation-smoke` może zostać uruchomiony ręcznie dla aktualnego commita. Na trzech świeżych, natywnych runnerach buduje samowystarczalną aplikację, archiwizuje ją, rozpakowuje do nowego katalogu instalacyjnego i uruchamia smoke test z tego katalogu. Jest to techniczny test instalacyjny na niezależnych komputerach CI, ale nie zastępuje ręcznego testu przez osobę spoza środowiska budowania.
+
+Przebieg [`29646454681`](https://github.com/haribo841/Abituria/actions/runs/29646454681) z 18 lipca 2026 r. dla commitu `4fdecd29111c1896f9bf48fd2bb4d1d9e26771fc` zakończył się powodzeniem na `windows-2025`, `ubuntu-24.04` i `macos-15-intel`. Każdy job zbudował aplikację self-contained, skopiował ją przez archiwum do nowego katalogu i uruchomił izolowany smoke test.
 
 To jest automatyczny dowód zgodności platformowej, ale nie zastępuje ręcznego uruchomienia przez osobę na komputerze niezależnym od środowiska budowania. Formularze, kryteria i miejsca na wyniki takiego testu znajdują się w `ACCEPTANCE_PROTOCOL.md`.
 

@@ -404,8 +404,8 @@ def build_pdf() -> None:
             table(
                 [
                     ["Brama", "Stan", "Znaczenie"],
-                    ["Build, testy, format i audyt", "automatyczna", "Musi przejść na dokładnym commicie wydania."],
-                    ["Instalacja niezależna i użyteczność", "ręczna", "Wymaga wpisów w protokołach oraz decyzji odpowiedzialnej osoby."],
+                    ["Build, testy, format i audyt", "PASS: 4fdecd2", "Build i SonarCloud zaliczone 18 lipca 2026 r."],
+                    ["Instalacja niezależna i użyteczność", "CI PASS / ręczna pending", "Natywne runnery Windows, Ubuntu i macOS zaliczone; wymagane wpisy i decyzja osoby."],
                     ["Pochodzenie zasobów", "zablokowana", "Manifest wskazuje materiały CKE oraz odziedziczone grafiki bez potwierdzonej podstawy redystrybucji."],
                     ["GitHub Release", "nieuruchomiona", "Może powstać dopiero po pozytywnym wyniku pochodzenia, tagu i pełnym workflow."],
                 ],
@@ -421,7 +421,7 @@ def build_pdf() -> None:
             PageBreak(),
             p("7. Materiały przekazywane komisji", st["Heading"]),
             p(
-                "Kompletny indeks źródeł znajduje się w COMMISSION_PACKAGE.md. Obejmuje wymagania, architekturę, "
+                "Indeks dokumentów źródłowych znajduje się w COMMISSION_PACKAGE.md. Obejmuje wymagania, architekturę, "
                 "instrukcję instalacji, podręcznik użytkownika, zależności, raport testów, protokoły użyteczności "
                 "i odbioru, ograniczenia, licencję, autorstwo oraz historię zmian.",
                 st["Body"],

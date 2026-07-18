@@ -17,9 +17,10 @@ Data przygotowania: 18 lipca 2026 r.
 | Przyrost 1 | start, logowanie, nawigacja, kalkulator, dział, zadanie i obsługa błędu działają | testy kont, `NavigationArchitectureTests`, `ExerciseAndRoutingCoverageTests`, testy kalkulatora | PASS - pełny lokalny przebieg 406/406 18 lipca 2026 r. |
 | Przyrost 2 | podpowiedzi krokowe, zadania otwarte, postęp, kolejne działy i losowanie zadań są zintegrowane | `ExerciseAndRoutingCoverageTests`, `ExerciseRandomizerTests`, `Issue35MathChaptersRegressionTests` | PASS - pełny lokalny przebieg 406/406 18 lipca 2026 r. |
 | Wydajność i pamięć | reprezentatywne obciążenie mieści się w budżetach | `PerformanceMemoryAndLoadTests`, `TESTING.md` | PASS lokalnie 18 lipca 2026 r. |
-| Jakość | build, testy, format, audyt zależności i SonarQube są zielone dla commita wydania | workflow `build`, `sonarcloud`, `SONARQUBE.md` | PENDING dla commita po tych zmianach |
+| Jakość | build, testy, format, audyt zależności i SonarQube są zielone dla commita wydania | [`build` 29646446887](https://github.com/haribo841/Abituria/actions/runs/29646446887), [`sonarcloud` 29646446881](https://github.com/haribo841/Abituria/actions/runs/29646446881), `SONARQUBE.md` | PASS - commit `4fdecd2`, 18 lipca 2026 r. |
 | Instalacja lokalna | samowystarczalna publikacja uruchamia izolowany smoke test w nowym katalogu | `dotnet publish --self-contained true` oraz `Abituria.exe --release-smoke-test` | PASS - Windows 11 x64, 18 lipca 2026 r. |
-| Instalacja niezależna | każda deklarowana platforma ma udokumentowany test na innym komputerze | tabela poniżej, `platform-installation-smoke.yml` oraz natywny workflow `release` | PENDING - workflow niezależnych runnerów jest gotowy do uruchomienia |
+| Instalacja niezależna automatyczna | każda deklarowana platforma buduje, pakuje, rozpakowuje i uruchamia aplikację na innym, natywnym runnerze | [`platform-installation-smoke` 29646454681](https://github.com/haribo841/Abituria/actions/runs/29646454681) | PASS - Windows, Ubuntu i macOS dla `4fdecd2`, 18 lipca 2026 r. |
+| Instalacja niezależna ręczna | osoba spoza środowiska budowania instaluje paczkę wydania i zapisuje wynik | tabela ręczna poniżej | PENDING - wymaga publicznej paczki po odblokowaniu praw oraz rzeczywistego wykonawcy |
 | Publiczne wydanie | tag, paczki, sumy, SBOM, atestacje, draft i publikacja w GitHub Releases | `RELEASE_PROCESS.md`, workflow `release` | BLOCKED przez proweniencję zasobów |
 
 ## Odbiór zakresu Issue #42
@@ -30,13 +31,23 @@ Data przygotowania: 18 lipca 2026 r.
 | technologie, zależności i wymagania systemowe | `DEPENDENCIES.md`, `INSTALLATION.md`, `THIRD-PARTY-NOTICES.md` | PASS |
 | instrukcja użytkownika i uruchomienia | `USER_GUIDE.md`, `INSTALLATION.md` | PASS |
 | testy funkcjonalne, regresyjne, wydajnościowe i pamięciowe | `TESTING.md`, testy projektu | PASS po pełnej bramie automatycznej |
-| użyteczność, instalacja niezależna i końcowy odbiór | `USABILITY_TEST_PROTOCOL.md`, ten dokument | PENDING - formularze gotowe, brak rzeczywistych podpisów i niezależnych wykonawców |
+| użyteczność, instalacja niezależna i końcowy odbiór | `USABILITY_TEST_PROTOCOL.md`, ten dokument | PENDING - automatyczny test niezależnej instalacji jest zaliczony, ale brak rzeczywistych podpisów, badania z użytkownikami i decyzji odbiorowej |
 | ograniczenia i status prawny zasobów | `KNOWN_LIMITATIONS.md`, `CONTENT_PROVENANCE.md` | PASS jako rzetelny opis blokady |
 | autor, licencja i historia zmian | `AUTHORS.md`, `LICENSE`, `CHANGELOG.md` | PASS |
 | PDF dla komisji | `output/pdf/Abituria-Technical-Documentation-0.9.0-beta.1.pdf` | PASS po wygenerowaniu i kontroli wizualnej |
 | zatwierdzenie i przekazanie komisji | podpisy i potwierdzenie przekazania poniżej | PENDING |
 
-## Test instalacji na niezależnych komputerach
+## Automatyczny test instalacji na niezależnych komputerach
+
+Workflow [`platform-installation-smoke` 29646454681](https://github.com/haribo841/Abituria/actions/runs/29646454681) wykonał 18 lipca 2026 r. poniższe testy dla commitu `4fdecd29111c1896f9bf48fd2bb4d1d9e26771fc`. To mierzalny dowód techniczny na świeżych komputerach CI, a nie podpis niezależnego testera.
+
+| System i architektura | Komputer wykonujący | Publikacja, archiwizacja i rozpakowanie | Izolowany smoke test | Wynik |
+| --- | --- | --- | --- | --- |
+| Windows 2025 x64 | GitHub Actions - natywny runner | PASS | PASS | PASS |
+| Ubuntu 24.04 x64 | GitHub Actions - natywny runner | PASS | PASS | PASS |
+| macOS 15 Intel x64 | GitHub Actions - natywny runner | PASS | PASS | PASS |
+
+## Ręczny test instalacji na niezależnych komputerach
 
 Przed wypełnieniem tabeli należy pobrać paczkę z tego samego wydania co `SHA256SUMS.txt`, porównać pełną sumę SHA-256, rozpakować aplikację do nowego katalogu i wykonać smoke test zgodnie z `INSTALLATION.md`.
 

@@ -11,7 +11,7 @@ public sealed class FinalDocumentationTests
         {
             ["docs/TESTING.md"] = ["## Cel i zakres", "## Wyniki wydajności, pamięci i obciążenia"],
             ["docs/USABILITY_TEST_PROTOCOL.md"] = ["## Scenariusze", "## Arkusz wyników"],
-            ["docs/ACCEPTANCE_PROTOCOL.md"] = ["## Test instalacji na niezależnych komputerach", "## Decyzja odbiorowa"],
+            ["docs/ACCEPTANCE_PROTOCOL.md"] = ["## Automatyczny test instalacji na niezależnych komputerach", "## Ręczny test instalacji na niezależnych komputerach", "## Decyzja odbiorowa"],
             ["docs/COMMISSION_PACKAGE.md"] = ["## Zawartość techniczna", "## PDF"]
         };
 
