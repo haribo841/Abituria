@@ -3,6 +3,7 @@ using Abituria.Models;
 using Abituria.Services;
 using Abituria.Ui;
 using Avalonia;
+using Avalonia.Automation;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
@@ -32,6 +33,9 @@ public sealed class GeneralCalculatorView : UserControl
     public GeneralCalculatorView(CalculatorSession session, UiCopyCatalog copy, Action back)
     {
         _session = session;
+        AutomationProperties.SetName(_expression, "Wyrażenie matematyczne");
+        AutomationProperties.SetLiveSetting(_result, AutomationLiveSetting.Polite);
+        AutomationProperties.SetName(_result, "Wynik kalkulatora");
         var root = new StackPanel { Spacing = 18 };
 
         var backButton = new Button { Content = "Wróć do kalkulatorów", Classes = { GhostButtonClass }, HorizontalAlignment = HorizontalAlignment.Left };
@@ -95,6 +99,7 @@ public sealed class GeneralCalculatorView : UserControl
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 HorizontalContentAlignment = HorizontalAlignment.Center
             };
+            AutomationProperties.SetName(button, AccessibleKeyName(key.Label));
             button.Classes.Add(key.Primary ? "primary" : GhostButtonClass);
             button.Click += (_, _) => key.Action();
             Grid.SetColumn(button, index % 5);
@@ -111,6 +116,7 @@ public sealed class GeneralCalculatorView : UserControl
             HorizontalContentAlignment = HorizontalAlignment.Center,
             Classes = { GhostButtonClass }
         };
+        AutomationProperties.SetName(generalRoot, "Pierwiastek n-tego stopnia");
         generalRoot.Click += (_, _) => InsertValueTemplate("root(2; )", 5, 1);
         Grid.SetRow(generalRoot, 5);
         Grid.SetColumn(generalRoot, 2);
@@ -126,6 +132,7 @@ public sealed class GeneralCalculatorView : UserControl
             HorizontalContentAlignment = HorizontalAlignment.Center,
             Classes = { GhostButtonClass }
         };
+        AutomationProperties.SetName(square, "Podnieś wynik do kwadratu");
         square.Click += (_, _) => CalculateSquare();
         Grid.SetRow(square, 5);
         Grid.SetColumnSpan(square, 2);
@@ -133,6 +140,26 @@ public sealed class GeneralCalculatorView : UserControl
 
         return UiFactory.Card(grid, new Thickness(14));
     }
+
+    private static string AccessibleKeyName(string label) => label switch
+    {
+        "(" => "Lewy nawias",
+        ")" => "Prawy nawias",
+        "Ans" => "Poprzedni wynik Ans",
+        "⌫" => "Usuń ostatni znak",
+        "C" => "Wyczyść wyrażenie",
+        "÷" => "Dzielenie",
+        "^" => "Potęgowanie",
+        "×" => "Mnożenie",
+        "√" => "Pierwiastek kwadratowy",
+        "-" => "Odejmowanie",
+        "∛" => "Pierwiastek sześcienny",
+        "," => "Przecinek dziesiętny",
+        "1/x" => "Odwrotność liczby",
+        "+" => "Dodawanie",
+        "=" => "Oblicz wynik",
+        _ => $"Cyfra {label}"
+    };
 
     private Border BuildHistoryPanel()
     {

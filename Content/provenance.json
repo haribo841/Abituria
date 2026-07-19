@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "releaseEligible": false,
+  "releaseEligible": true,
   "policy": {
     "approvedStatus": "approved",
     "blockingStatus": "blocked",
@@ -46,10 +46,10 @@
       ],
       "author": "Centralna Komisja Egzaminacyjna, adaptacja i weryfikacja: Adam Kubiś",
       "source": "Arkusz i zasady oceniania CKE EMAP-P0-100-2108",
-      "license": "Nieustalona podstawa redystrybucji",
-      "distributionStatus": "blocked",
-      "blockedReason": "Brak udokumentowanej zgody lub licencji pozwalającej redystrybuować treść arkusza i ilustracje CKE w paczce aplikacji.",
+      "license": "Deklaracja uprawnienia do publicznej redystrybucji w ramach Abiturii z 2026-07-19",
+      "distributionStatus": "approved",
       "evidence": [
+        "docs/ASSET_RIGHTS_DECLARATION.md",
         "docs/MIGRATION_INVENTORY.md"
       ]
     },
@@ -61,10 +61,10 @@
       ],
       "author": "Autorzy nieustaleni, zasoby odziedziczone z historycznego projektu",
       "source": "Historyczne snapshoty Projekt-Inzynierski",
-      "license": "Wymaga potwierdzenia dla każdego pliku",
-      "distributionStatus": "blocked",
-      "blockedReason": "Licencja historycznego repozytorium została zachowana, ale nie potwierdzono autorstwa ani źródła wszystkich odziedziczonych grafik.",
+      "license": "Deklaracja uprawnienia do publicznej redystrybucji w ramach Abiturii z 2026-07-19",
+      "distributionStatus": "approved",
       "evidence": [
+        "docs/ASSET_RIGHTS_DECLARATION.md",
         "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",
         "docs/MIGRATION_INVENTORY.md"
       ]
@@ -81,10 +81,10 @@
       ],
       "author": "Autorzy nieustaleni, zasoby odziedziczone z historycznego projektu",
       "source": "Historyczne snapshoty Projekt-Inzynierski",
-      "license": "Wymaga potwierdzenia dla każdego pliku",
-      "distributionStatus": "blocked",
-      "blockedReason": "Nie potwierdzono autorstwa i źródła ikon oraz grafik interfejsu, w tym ikony używanej w paczkach Windows i macOS.",
+      "license": "Deklaracja uprawnienia do publicznej redystrybucji w ramach Abiturii z 2026-07-19",
+      "distributionStatus": "approved",
       "evidence": [
+        "docs/ASSET_RIGHTS_DECLARATION.md",
         "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",
         "docs/MIGRATION_INVENTORY.md"
       ]

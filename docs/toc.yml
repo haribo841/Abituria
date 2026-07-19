@@ -12,8 +12,28 @@
   href: TESTING.md
 - name: Testy użyteczności
   href: USABILITY_TEST_PROTOCOL.md
+- name: Wyniki użyteczności i poprawki
+  href: USABILITY_TEST_RESULTS.md
 - name: Protokół odbioru
   href: ACCEPTANCE_PROTOCOL.md
+- name: Odbiór przyrostów - Issue #43
+  items:
+  - name: Rejestr i checklista
+    href: acceptance/README.md
+  - name: Protokół I
+    href: acceptance/INCREMENT_1_PROTOCOL.md
+  - name: Protokół II
+    href: acceptance/INCREMENT_2_PROTOCOL.md
+  - name: Protokół III
+    href: acceptance/INCREMENT_3_PROTOCOL.md
+  - name: Protokół IV
+    href: acceptance/INCREMENT_4_PROTOCOL.md
+- name: Legalne wydanie lub przekazanie
+  href: DELIVERY_PROTOCOL.md
+- name: Publiczna obrona - Issue #44
+  href: DEFENSE_PROTOCOL.md
+- name: Kryteria akceptacji i oceny - Issue #45
+  href: EVALUATION_PROTOCOL.md
 - name: Pakiet dla komisji
   href: COMMISSION_PACKAGE.md
 - name: Proces wydania
@@ -28,6 +48,8 @@
   href: ../SECURITY.md
 - name: Pochodzenie treści i zasobów
   href: CONTENT_PROVENANCE.md
+- name: Oświadczenie o prawach do zasobów
+  href: ASSET_RIGHTS_DECLARATION.md
 - name: Tworzenie treści
   href: CONTENT_AUTHORING.md
 - name: Macierz regresji kalkulatora

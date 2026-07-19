@@ -58,25 +58,19 @@ Nie wolno usuwać parametru bramy, ręcznie zmieniać `releaseEligible` ani wył
 
 ## Aktualny stan
 
-`releaseEligible` ma wartość `false`. Publiczne wydanie `0.9.0-beta.1` jest zablokowane przez trzy grupy:
+`releaseEligible` ma wartość `true`. Wszystkie zasoby paczkowane przez projekt mają status `approved`. Podstawę dla trzech grup, które wcześniej były zablokowane, stanowi [deklaracja praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 19 lipca 2026 r.
 
 ### Materiały CKE
 
-Grupa `cke-2021-correction-exam` obejmuje `Content/exam-2021-correction.json` i `img/mp21z*.png`. Zidentyfikowano arkusz oraz zasady oceniania CKE `EMAP-P0-100-2108`, ale nie ma udokumentowanej zgody lub licencji pozwalającej redystrybuować treść i ilustracje w paczce aplikacji.
-
-Do odblokowania potrzebny jest jednoznaczny dokument CKE obejmujący tę formę redystrybucji albo pisemna zgoda. Sam publiczny dostęp do arkusza nie jest wystarczającym dowodem.
+Grupa `cke-2021-correction-exam` obejmuje `Content/exam-2021-correction.json` i `img/mp21z*.png`. Autorem źródłowego arkusza i zasad oceniania `EMAP-P0-100-2108` pozostaje Centralna Komisja Egzaminacyjna, a adaptację i weryfikację wykonał Adam Kubiś. Status `approved` wynika z deklaracji posiadania praw lub skutecznego upoważnienia do publicznej redystrybucji tych zasobów jako części Abiturii. Deklaracja nie przenosi autorstwa i nie udziela samodzielnej licencji na te materiały poza Abiturią.
 
 ### Odziedziczone grafiki matematyczne
 
-Grupa `inherited-mathematics-images` obejmuje `img/?.png` i `img/w*.png`. Pliki pochodzą z historycznych snapshotów, ale autorstwo i źródło każdego obrazu nie zostały potwierdzone. Zachowana licencja repozytorium historycznego nie dowodzi jeszcze, że wszystkie dołączone grafiki zostały przez jego autorów stworzone lub legalnie sublicencjonowane.
-
-Każdy plik należy przypisać do źródła i licencji albo zastąpić nowym, własnym zasobem z udokumentowanym procesem utworzenia.
+Grupa `inherited-mathematics-images` obejmuje `img/?.png` i `img/w*.png`. Autorzy pozostają nieustaleni, a źródłem są historyczne snapshoty projektu. Status `approved` wynika z deklaracji posiadania praw lub skutecznego upoważnienia do publicznej redystrybucji tych grafik jako części Abiturii. Nie jest to przypisanie autorstwa ani samodzielna licencja na grafiki.
 
 ### Grafiki i ikony aplikacji
 
-Grupa `inherited-application-images` obejmuje grafiki nawigacji, `img/icon.png` oraz `img/icon.ico`, z którego wyprowadzane są metadane graficzne paczek Windows i macOS. Autorzy i dokładne źródła nie są potwierdzeni.
-
-Najbezpieczniejszą ścieżką jest zastąpienie ich nowym zestawem zaprojektowanym dla aktualnej implementacji i zapisanie autora, plików źródłowych oraz licencji w repozytorium.
+Grupa `inherited-application-images` obejmuje grafiki nawigacji, `img/icon.png` oraz `img/icon.ico`, z którego wyprowadzane są metadane graficzne paczek Windows i macOS. Autorzy pozostają nieustaleni, a źródłem są historyczne snapshoty projektu. Status `approved` wynika z deklaracji posiadania praw lub skutecznego upoważnienia do publicznej redystrybucji tych grafik jako części Abiturii. Nie jest to przypisanie autorstwa ani samodzielna licencja na grafiki.
 
 ## Grupy zatwierdzone
 
@@ -84,6 +78,7 @@ Manifest oznacza obecnie jako `approved`:
 
 - aktualne treści techniczne i inwentarz autorstwa Adama Kubisia na licencji MIT;
 - zmigrowane treści matematyczne, dla których dowodem jest zachowana historyczna licencja MIT i inwentarz migracji;
+- materiały CKE oraz odziedziczone grafiki objęte deklaracją praw lub upoważnienia do publicznej redystrybucji wyłącznie jako części Abiturii;
 - font Mulish na licencji SIL Open Font License 1.1, potwierdzonej przez `fonts/OFL.txt` i `fonts/README.txt`.
 
 Status zatwierdzony należy ponownie ocenić po każdej zmianie źródła, zakresu plików albo sposobu pakowania.

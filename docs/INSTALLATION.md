@@ -3,7 +3,7 @@
 Ta instrukcja dotyczy wersji `0.9.0-beta.1`. Abituria jest publikowana jako samowystarczalna aplikacja portable. Nie wymaga osobnej instalacji .NET, ale nie zawiera natywnego instalatora ani automatycznej aktualizacji.
 
 > [!IMPORTANT]
-> Paczki nie są jeszcze przeznaczone do publicznego pobierania, dopóki inwentarz pochodzenia treści, fontów i obrazów nie otrzyma wyniku pozytywnego. Nie należy publikować artefaktów utworzonych lokalnie z pominięciem tej kontroli.
+> Inwentarz pochodzenia treści, fontów i obrazów ma wynik pozytywny. Paczki staną się przeznaczone do publicznego pobierania dopiero po wykonaniu kompletnej checklisty, utworzeniu tagu i opublikowaniu zweryfikowanego GitHub Release. Nie należy udostępniać artefaktów utworzonych lokalnie z pominięciem tej kontroli.
 
 ## Obsługiwane środowiska beta
 

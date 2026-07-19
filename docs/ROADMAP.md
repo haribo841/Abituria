@@ -30,7 +30,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - podpisywanie kodu i paczek,
 - paczka macOS dla Apple Silicon.
 
-Publiczna publikacja paczek portable pozostaje blokowana, dopóki manifest `Content/provenance.json` zawiera zasoby o statusie `blocked`. Implementacja procesu wydawniczego nie oznacza obejścia tej bramy prawnej.
+Manifest `Content/provenance.json` nie zawiera już zasobów o statusie `blocked`, ale publiczne paczki portable pozostają nieopublikowane do czasu wykonania kompletnej checklisty, utworzenia tagu i pomyślnego zakończenia workflow wydania.
 
 ## Zastąpione
 

@@ -22,6 +22,11 @@ Pierwsza wersja przygotowana do publicznego wydania. Planowana data zostanie wpi
 - dokumentację użytkownika i techniczną budowaną przez DocFX oraz publikowaną przez GitHub Pages;
 - maszynowy inwentarz pochodzenia paczkowanych treści, fontów i obrazów.
 - formalne testy wydajności, pamięci i obciążenia oraz protokoły użyteczności, instalacji niezależnej i odbioru końcowego.
+- osobne protokoły odbioru przyrostów I-IV, rejestr dwóch rund użyteczności i protokół legalnej formy przekazania dla Issue #43;
+- generator nieuruchamialnego pakietu dokumentacyjnego dla komisji z własnym manifestem i SHA-256.
+- oświadczenie właściciela projektu potwierdzające prawo do publicznej redystrybucji ewidencjonowanych zasobów jako części Abiturii.
+- protokół publicznej obrony z 17 stycznia 2022 r. z pełnym składem komisji, wynikiem bardzo dobrym i odnośnikiem do zachowanego nagrania dla Issue #44.
+- protokół kryteriów akceptacji i oceny dla Issue #45 z pełną macierzą, ograniczeniami dowodowymi oraz gotowym komentarzem zamykającym.
 
 ### Zmieniono
 
@@ -30,6 +35,7 @@ Pierwsza wersja przygotowana do publicznego wydania. Planowana data zostanie wpi
 - wersje Entity Framework Core i Microsoft Dependency Injection na `10.0.10`;
 - wersjonowanie tak, aby assembly, paczki, tag, changelog, ekran „O programie” i strona używały `0.9.0-beta.1`;
 - przechowywanie bazy poza katalogiem programu, aby aktualizacja portable nie usuwała danych użytkownika.
+- nazwy automatyzacji symbolicznych przycisków i pól oraz dynamiczne regiony wyników dla technologii asystujących.
 
 ### Bezpieczeństwo łańcucha dostaw
 
@@ -40,6 +46,6 @@ Pierwsza wersja przygotowana do publicznego wydania. Planowana data zostanie wpi
 - tag musi wskazywać dokładny commit `origin/main`, a finalny smoke test potwierdza wersję i commit rzeczywistego pliku wykonywalnego;
 - walidator odrzuca dodatkowe korzenie archiwum, niebezpieczne ścieżki i niespójne dowody licencyjne;
 - zgodność danych jest sprawdzana na niezmiennej bazie utworzonej przez rzeczywisty kod .NET 9 i EF Core 9;
-- publiczna publikacja pozostaje zablokowana, dopóki każdy paczkowany zasób nie ma pozytywnego wpisu pochodzenia i podstawy dystrybucji.
+- każdy paczkowany zasób ma pozytywny wpis pochodzenia i podstawę dystrybucji, a twarda brama `releaseEligible` jest gotowa do kontroli przed tagiem; samo publiczne wydanie pozostaje nieopublikowane.
 
 [0.9.0-beta.1]: https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1

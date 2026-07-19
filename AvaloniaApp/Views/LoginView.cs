@@ -6,6 +6,7 @@ using Abituria.Models;
 using Abituria.Services;
 using Abituria.Ui;
 using Avalonia;
+using Avalonia.Automation;
 using Avalonia.Controls;
 using Avalonia.Input.Platform;
 using Avalonia.Layout;
@@ -25,6 +26,9 @@ public sealed class LoginView : UserControl
     {
         _accounts = accounts;
         _onLogin = onLogin;
+        AutomationProperties.SetName(_profiles, "Profil użytkownika");
+        AutomationProperties.SetLiveSetting(_status, AutomationLiveSetting.Polite);
+        AutomationProperties.SetName(_status, "Status konta");
         Content = Build(copy);
         AttachedToVisualTree += async (_, _) => await ReloadProfilesAsync();
     }
@@ -64,6 +68,7 @@ public sealed class LoginView : UserControl
             PlaceholderText = "Nazwa użytkownika (1-30 znaków)",
             MaxLength = AccountService.MaximumDisplayNameLength
         };
+        AutomationProperties.SetName(name, "Nazwa nowego konta");
         var newPassword = PasswordBox("Hasło (minimum 15 znaków)");
         var confirmation = PasswordBox("Powtórz hasło");
         forms.Children.Add(name);
@@ -87,6 +92,8 @@ public sealed class LoginView : UserControl
         forms.Children.Add(new TextBlock { Text = "Odzyskiwanie hasła", Classes = { "h2" } });
         var recoveryName = new TextBox { PlaceholderText = "Nazwa konta", MaxLength = AccountService.MaximumDisplayNameLength };
         var recoveryCode = new TextBox { PlaceholderText = "Kod odzyskiwania" };
+        AutomationProperties.SetName(recoveryName, "Nazwa odzyskiwanego konta");
+        AutomationProperties.SetName(recoveryCode, "Kod odzyskiwania konta");
         var recoveredPassword = PasswordBox("Nowe hasło");
         var recoveredConfirmation = PasswordBox("Powtórz nowe hasło");
         forms.Children.Add(recoveryName);
@@ -145,6 +152,7 @@ public sealed class LoginView : UserControl
     private async Task ShowRecoveryCodeAsync(string code)
     {
         var box = new TextBox { Text = code, IsReadOnly = true, HorizontalAlignment = HorizontalAlignment.Stretch };
+        AutomationProperties.SetName(box, "Nowy kod odzyskiwania");
         var copy = new Button { Content = "Kopiuj kod", Classes = { "primary" } };
         var dialog = new Window { Title = "Kod odzyskiwania", Width = 520, Height = 230, CanResize = false };
         var panel = new StackPanel { Spacing = 14, Margin = new Thickness(24) };
@@ -170,7 +178,17 @@ public sealed class LoginView : UserControl
         _status.Foreground = UiFactory.Brush(success ? "#19733B" : "#B42318");
     }
 
-    private static TextBox PasswordBox(string placeholder) => new() { PlaceholderText = placeholder, PasswordChar = '●', MaxLength = PasswordHasher.MaximumPasswordLength };
+    private static TextBox PasswordBox(string placeholder)
+    {
+        var box = new TextBox
+        {
+            PlaceholderText = placeholder,
+            PasswordChar = '●',
+            MaxLength = PasswordHasher.MaximumPasswordLength
+        };
+        AutomationProperties.SetName(box, placeholder);
+        return box;
+    }
     private static void ClearSecrets(params TextBox[] boxes) { foreach (var box in boxes) box.Text = string.Empty; }
     private static Border Separator() => new() { Height = 1, Background = UiFactory.Brush("#D8DEE4"), Margin = new Thickness(0, 8) };
     private sealed record ProfileChoice(LocalProfile Profile)

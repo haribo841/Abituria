@@ -4,8 +4,8 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 
 ## Status publikacji
 
-- Publiczna publikacja jest zablokowana, dopóki maszynowy inwentarz pochodzenia nie potwierdzi prawa do dystrybucji każdego paczkowanego zasobu.
-- Nierozstrzygnięte pozostają co najmniej materiały CKE i część odziedziczonych grafik wymagających dokładnego przypisania źródła lub licencji.
+- Maszynowy inwentarz pochodzenia potwierdza dopuszczenie paczkowanych zasobów do publicznej redystrybucji jako części Abiturii. Publiczny GitHub Release nie został jeszcze utworzony i nadal wymaga pełnej checklisty wydawniczej.
+- Podstawa redystrybucji materiałów CKE i odziedziczonych grafik wynika z oświadczenia właściciela zapisanego w `ASSET_RIGHTS_DECLARATION.md`; rzeczywiste autorstwo i źródła pozostają przypisane w `Content/provenance.json`. Przed tagiem należy ponowić twardą walidację dla dokładnego commita wydania.
 - Lokalnie zbudowany artefakt nie jest oficjalnym wydaniem, nawet jeśli przechodzi testy techniczne.
 
 ## Platformy i dystrybucja

@@ -76,4 +76,4 @@ Fragmenty historycznego projektu zostały udostępnione na licencji MIT jako Cop
 
 ## Treści edukacyjne i grafiki
 
-Pochodzenie oraz status redystrybucji treści, fontów i grafik określa `Content/provenance.json`. Zasób ze statusem `blocked` nie może trafić do publicznego wydania.
+Pochodzenie oraz status redystrybucji treści, fontów i grafik określa `Content/provenance.json`. Podstawę dopuszczenia grup historycznych do publicznej redystrybucji jako części Abiturii dokumentuje także `docs/ASSET_RIGHTS_DECLARATION.md`. Zachowane przypisanie autorstwa i źródła nie jest zmieniane przez to oświadczenie.

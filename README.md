@@ -2,14 +2,14 @@
 
 Abituria to działająca offline aplikacja desktopowa wspierająca naukę matematyki na poziomie szkoły średniej. Aktualna implementacja używa C#, .NET 10 LTS i AvaloniaUI 12. Dane profili oraz postęp są przechowywane lokalnie w SQLite.
 
-Wersja przygotowywana do pierwszej publicznej publikacji: `0.9.0-beta.1`.
+Planowane pierwsze publiczne wydanie: `0.9.0-beta.1`.
 
 > [!IMPORTANT]
-> Publiczne wydanie jest obecnie zablokowane do czasu uzyskania kompletnego, pozytywnego wyniku inwentarza pochodzenia zasobów. Dotyczy to w szczególności materiałów CKE i odziedziczonych grafik bez jednoznacznie udokumentowanej podstawy dystrybucji. Sam build techniczny nie znosi tej blokady.
+> Inwentarz pochodzenia ma `releaseEligible=true` na podstawie oświadczenia właściciela projektu z 19 lipca 2026 r. o prawie do publicznej redystrybucji zasobów jako części Abiturii. Nie oznacza to jeszcze, że GitHub Release został opublikowany - nadal wymagane są commit, tag i pełny workflow wydawniczy.
 
 ## Pobieranie
 
-Po zamknięciu checklisty wydawniczej paczki pojawią się w [GitHub Releases](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1):
+Po pomyślnym wykonaniu checklisty wydawniczej paczki będą dostępne w [GitHub Releases](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1):
 
 | System | Paczka | Deklarowane środowisko beta |
 | --- | --- | --- |
@@ -100,8 +100,13 @@ Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalneg
 | [Proces wydania](docs/RELEASE_PROCESS.md) | bramy, pakowanie, smoke test, Pages i publikacja |
 | [Testy końcowe](docs/TESTING.md) | zakres testów funkcjonalnych, regresyjnych, wydajnościowych i pamięciowych |
 | [Pakiet dla komisji](docs/COMMISSION_PACKAGE.md) | indeks dokumentacji technicznej, PDF i protokół odbioru |
+| [Odbiór Issue #43](docs/acceptance/README.md) | osobne protokoły przyrostów I-IV, decyzje i bramy zamknięcia |
+| [Publiczna obrona Issue #44](docs/DEFENSE_PROTOCOL.md) | data, komisja, przebieg, nagranie, wynik i potwierdzenie kamienia milowego M7 |
+| [Kryteria oceny Issue #45](docs/EVALUATION_PROTOCOL.md) | macierz siedmiu obszarów, warunki akceptacji, wynik bardzo dobry i gotowy komentarz zamykający |
+| [Testy użyteczności](docs/USABILITY_TEST_RESULTS.md) | dwie wymagane rundy, techniczny przegląd, problemy, poprawki i retesty |
+| [Przekazanie](docs/DELIVERY_PROTOCOL.md) | publiczne wydanie albo ograniczona, prawnie dopuszczalna forma przekazania |
 | [Zależności](docs/DEPENDENCIES.md) | dokładnie rozwiązane pakiety produkcyjne i testowe |
-| [Pochodzenie treści](docs/CONTENT_PROVENANCE.md) | zasady dopuszczania treści, fontów i obrazów do paczek |
+| [Pochodzenie treści](docs/CONTENT_PROVENANCE.md) | zasady dopuszczania treści, fontów i obrazów do paczek oraz oświadczenie o prawach |
 | [Znane ograniczenia](docs/KNOWN_LIMITATIONS.md) | jawny zakres wersji beta |
 | [Historia zmian](CHANGELOG.md) | pierwsze rzeczywiste wydanie i dalsze zmiany |
 | [Wsparcie](SUPPORT.md) | zgłaszanie błędów i wymagane dane diagnostyczne |
@@ -113,7 +118,7 @@ Kompletność sześciu materiałów uzupełnionych w ramach historycznego `issue
 
 Autorem i opiekunem aktualnej implementacji jest [Adam Kubiś](AUTHORS.md).
 
-Kod projektu jest udostępniany na licencji [MIT](https://github.com/haribo841/Abituria/blob/main/LICENSE). Licencje zależności i dodatkowe informacje dystrybucyjne zawiera [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). Licencja kodu nie oznacza automatycznie prawa do redystrybucji każdego materiału edukacyjnego lub obrazu. O tym, czy zasób może wejść do publicznej paczki, rozstrzyga inwentarz pochodzenia.
+Kod projektu jest udostępniany na licencji [MIT](https://github.com/haribo841/Abituria/blob/main/LICENSE). Licencje zależności i dodatkowe informacje dystrybucyjne zawiera [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). Licencja kodu nie oznacza automatycznie prawa do redystrybucji każdego materiału edukacyjnego lub obrazu. O dopuszczeniu zasobu do paczki rozstrzygają [inwentarz pochodzenia](docs/CONTENT_PROVENANCE.md) i powiązane dowody, w tym [oświadczenie właściciela projektu](docs/ASSET_RIGHTS_DECLARATION.md).
 
 ## Zgłoszenia
 

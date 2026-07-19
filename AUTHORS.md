@@ -17,4 +17,4 @@ Zakres odpowiedzialności:
 
 Repozytorium: [github.com/haribo841/Abituria](https://github.com/haribo841/Abituria)
 
-Pochodzenie i podstawy dystrybucji treści, fontów oraz obrazów są ewidencjonowane osobno w [inwentarzu pochodzenia](docs/CONTENT_PROVENANCE.md). Włączenie historycznego materiału do repozytorium nie oznacza autorstwa aktualnej implementacji ani automatycznego prawa do umieszczenia go w publicznej paczce.
+Pochodzenie i podstawy dystrybucji treści, fontów oraz obrazów są ewidencjonowane osobno w [inwentarzu pochodzenia](docs/CONTENT_PROVENANCE.md). Prawo do publicznej redystrybucji wskazanych grup jako części Abiturii dokumentuje [oświadczenie właściciela projektu](docs/ASSET_RIGHTS_DECLARATION.md). Włączenie historycznego materiału do repozytorium nie zmienia autorstwa aktualnej implementacji ani autorstwa materiału źródłowego.

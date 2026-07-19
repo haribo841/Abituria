@@ -223,7 +223,7 @@ $noticeLines.Add("Fragmenty historycznego projektu zostały udostępnione na lic
 $noticeLines.Add("")
 $noticeLines.Add("## Treści edukacyjne i grafiki")
 $noticeLines.Add("")
-$noticeLines.Add("Pochodzenie oraz status redystrybucji treści, fontów i grafik określa ``Content/provenance.json``. Zasób ze statusem ``blocked`` nie może trafić do publicznego wydania.")
+$noticeLines.Add("Pochodzenie oraz status redystrybucji treści, fontów i grafik określa ``Content/provenance.json``. Podstawę dopuszczenia grup historycznych do publicznej redystrybucji jako części Abiturii dokumentuje także ``docs/ASSET_RIGHTS_DECLARATION.md``. Zachowane przypisanie autorstwa i źródła nie jest zmieniane przez to oświadczenie.")
 $noticeText = ($noticeLines -join "`n") + "`n"
 
 function Write-Or-Verify([string]$relativePath, [string]$content) {

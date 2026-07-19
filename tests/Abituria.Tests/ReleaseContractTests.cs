@@ -239,6 +239,9 @@ public sealed class ReleaseContractTests
         Assert.Contains(
             root.GetProperty("allowedHosts").EnumerateArray(),
             item => item.GetString() == "github.com");
+        Assert.Contains(
+            root.GetProperty("allowedHosts").EnumerateArray(),
+            item => item.GetString() == "www.youtube.com");
         Assert.All(
             root.GetProperty("onlineCheckExclusions").EnumerateArray(),
             item =>

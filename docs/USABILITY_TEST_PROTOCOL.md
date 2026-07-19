@@ -6,9 +6,13 @@ Wersja: `0.9.0-beta.1`.
 
 Protokół sprawdza, czy uczeń może rozpocząć naukę, odnaleźć materiał, rozwiązać zadanie, skorzystać z podpowiedzi oraz wykonać obliczenie bez instrukcji programistycznej. Uzupełnia automatyczne testy UI, ale ich nie zastępuje.
 
-Nie przeprowadzono jeszcze badania z niezależnymi użytkownikami. Ten dokument nie przedstawia hipotetycznych odpowiedzi ankietowych jako wyników.
+Właściciel projektu poświadczył 19 lipca 2026 r., że historyczne testy użyteczności z uczestnikami zakończyły się powodzeniem, a prowadzący zaakceptował projekt na początku lutego 2022 r. Dokładne daty sesji, liczba i dane uczestników, komentarze oraz karty wyników nie zostały zachowane w aktualnym repozytorium i nie są odtwarzane przez domysł.
+
+Retrospektywny zapis wyniku, techniczny przegląd heurystyczny, ograniczenia dowodu oraz zasady ewentualnego powtórzenia badania znajdują się w [USABILITY_TEST_RESULTS.md](USABILITY_TEST_RESULTS.md). Scenariusze poniżej są powtarzalnym protokołem dla bieżącej wersji. Nie są przedstawiane jako dokładny formularz użyty w historycznych sesjach.
 
 ## Uczestnicy i środowisko
+
+Poniższe wymagania obowiązują przy ponownym, szczegółowo dokumentowanym badaniu bieżącej wersji. Nie należy na ich podstawie rekonstruować liczby ani charakterystyki historycznych uczestników.
 
 - minimum trzech osób, z których co najmniej dwie nie budowały aplikacji;
 - co najmniej jedna osoba korzystająca z klawiatury jako głównego sposobu obsługi;
@@ -39,12 +43,24 @@ Błąd krytyczny to zamknięcie aplikacji, utrata danych, brak możliwości kont
 
 ## Arkusz wyników
 
+Tabela jest szablonem dla ewentualnego powtórzenia badania `0.9.0-beta.1`. Puste pola nie podważają poświadczonego historycznego wyniku, ale nie mogą być używane jako dowód nowej sesji.
+
 | Data | Wersja i suma SHA-256 | Uczestnik | System i rozdzielczość | U-01 | U-02 | U-03 | U-04 | U-05 | U-06 | U-07 | U-08 | Uwagi / zgłoszenie |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | do wypełnienia | do wypełnienia | do wypełnienia | do wypełnienia |  |  |  |  |  |  |  |  |  |
 | do wypełnienia | do wypełnienia | do wypełnienia | do wypełnienia |  |  |  |  |  |  |  |  |  |
 | do wypełnienia | do wypełnienia | do wypełnienia | do wypełnienia |  |  |  |  |  |  |  |  |  |
 
+## Powiązanie z odbiorami III i IV
+
+- historyczne testy uczestników mają zbiorczy wynik `PASS` na podstawie poświadczenia właściciela;
+- brak zachowanych kart nie pozwala wiarygodnie przypisać konkretnych sesji, problemów i retestów do osobnych rund przed III i IV odbiorem;
+- końcowa akceptacja prowadzącego na początku lutego 2022 r. jest poświadczoną decyzją formalną zamykającą historyczny cykl odbioru;
+- techniczny przegląd heurystyczny i testy Avalonia Headless z 2026 r. są późniejszym dowodem regresyjnym i nie są przedstawiane jako badanie uczestników;
+- ograniczenie archiwalne oraz wynik zbiorczy są przenoszone do osobnych protokołów III i IV w `acceptance/`.
+
 ## Wniosek
 
-Po wykonaniu wszystkich scenariuszy prowadzący dopisuje datę, liczbę wyników `PASS`, listę uwag oraz decyzję. Dopiero wtedy można twierdzić, że przeprowadzono ręczny test użyteczności. Pełny audyt WCAG i test z czytnikiem ekranu pozostają osobnym, przyszłym zakresem opisanym w `KNOWN_LIMITATIONS.md`.
+Dla historycznego Issue #43 przeprowadzenie i pozytywny wynik testów z uczestnikami są zapisane jako poświadczenie retrospektywne, a nie jako odtworzone karty sesji. Projekt został zaakceptowany przez prowadzącego na początku lutego 2022 r., przy czym dokładny dzień nie został zachowany.
+
+Przy ponownym badaniu bieżącej wersji prowadzący sesję powinien zapisać datę, uczestników, wyniki, uwagi, poprawki i retesty. Pełny audyt WCAG i test z czytnikiem ekranu pozostają osobnym, przyszłym zakresem opisanym w `KNOWN_LIMITATIONS.md`.

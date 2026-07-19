@@ -7,6 +7,7 @@ using Abituria.Models;
 using Abituria.Services;
 using Abituria.Ui;
 using Avalonia;
+using Avalonia.Automation;
 using Avalonia.Controls;
 using Avalonia.Layout;
 using Avalonia.Media;
@@ -178,6 +179,10 @@ public sealed class ExerciseView : UserControl
 
     public ExerciseView(ExerciseDefinition exercise, ExerciseViewContext context)
     {
+        AutomationProperties.SetLiveSetting(_status, AutomationLiveSetting.Polite);
+        AutomationProperties.SetName(_status, "Wynik sprawdzania zadania");
+        AutomationProperties.SetLiveSetting(_hintHost, AutomationLiveSetting.Polite);
+        AutomationProperties.SetName(_hintHost, "Aktualna podpowiedź lub odpowiedź");
         var root = new StackPanel { Spacing = 16 };
         root.Children.Add(BuildNavigation(exercise, context));
         AddPrompt(root, exercise);
@@ -202,15 +207,23 @@ public sealed class ExerciseView : UserControl
         var currentIndex = context.Exercises.ToList().FindIndex(item => item.Id == exercise.Id);
         var previous = currentIndex > 0 ? context.Exercises[currentIndex - 1] : null;
         var next = currentIndex >= 0 && currentIndex < context.Exercises.Count - 1 ? context.Exercises[currentIndex + 1] : null;
-        if (previous is not null) topButtons.Children.Add(NavigationButton("←", previous, context.OpenExercise));
-        if (next is not null) topButtons.Children.Add(NavigationButton("→", next, context.OpenExercise));
+        if (previous is not null)
+            topButtons.Children.Add(NavigationButton("←", "Poprzednie zadanie", previous, context.OpenExercise));
+        if (next is not null)
+            topButtons.Children.Add(NavigationButton("→", "Następne zadanie", next, context.OpenExercise));
         return topButtons;
     }
 
-    private static Button NavigationButton(string label, ExerciseDefinition target, Action<ExerciseDefinition> openExercise)
+    private static Button NavigationButton(
+        string label,
+        string actionName,
+        ExerciseDefinition target,
+        Action<ExerciseDefinition> openExercise)
     {
         var button = new Button { Content = label, Classes = { "ghost" } };
         ToolTip.SetTip(button, target.Title);
+        AutomationProperties.SetName(button, $"{actionName}: {target.Title}");
+        AutomationProperties.SetHelpText(button, target.Title);
         button.Click += (_, _) => openExercise(target);
         return button;
     }
@@ -231,6 +244,7 @@ public sealed class ExerciseView : UserControl
             MinHeight = 130,
             PlaceholderText = "Zapisz tutaj własne obliczenia. Brudnopis nie jest zapisywany po opuszczeniu zadania."
         };
+        AutomationProperties.SetName(scratchpad, "Brudnopis do zadania");
         var scratchPanel = new StackPanel { Spacing = 8 };
         scratchPanel.Children.Add(new TextBlock { Text = "Brudnopis", FontSize = 18, FontWeight = FontWeight.SemiBold });
         scratchPanel.Children.Add(scratchpad);

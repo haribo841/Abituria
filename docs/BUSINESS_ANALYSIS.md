@@ -1,6 +1,6 @@
 # Analiza biznesowa projektu Abituria
 
-Status: aktywny dokument biznesowy dla bieżącej implementacji. Stan na 17 lipca 2026 r.
+Status: aktywny dokument biznesowy dla bieżącej implementacji. Stan na 19 lipca 2026 r.
 
 Ten dokument zastępuje historyczną checklistę `docs/legacy/analiza-biznesowa.md` jako podstawa oceny uzasadnienia, zakresu, ryzyk i warunków wydania. Nie zastępuje [wymagań projektowych](REQUIREMENTS.md), [architektury](ARCHITECTURE.md), [roadmapy](ROADMAP.md) ani [procesu wydania](RELEASE_PROCESS.md), lecz łączy ich perspektywę produktową.
 
@@ -70,7 +70,7 @@ Użytkownik otrzymuje bezpłatny dostęp do lokalnej aplikacji, połączenie mat
 
 ### 4.3. Stan dystrybucji
 
-Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, ale publiczne prerelease `v0.9.0-beta.1` nie zostało jeszcze opublikowane. Brama `releaseEligible` w `Content/provenance.json` blokuje wydanie do czasu udokumentowania praw do trzech grup zasobów. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md) i [inwentarz pochodzenia](CONTENT_PROVENANCE.md).
+Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, ale publiczne prerelease `v0.9.0-beta.1` nie zostało jeszcze opublikowane. Po oświadczeniu właściciela projektu z 19 lipca 2026 r. brama `releaseEligible` w `Content/provenance.json` potwierdza prawo do redystrybucji ewidencjonowanych zasobów jako części Abiturii. Pozostałe kroki to zatwierdzenie commita, tag i pełny workflow. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md) i [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
 
 Koszty bieżącego wariantu obejmują przede wszystkim czas przygotowania treści, implementacji, testów, dokumentacji i utrzymania repozytorium. Aplikacja działa lokalnie, dlatego nie wymaga serwera aplikacyjnego ani przechowywania danych użytkowników przez zewnętrznego operatora.
 
@@ -88,7 +88,7 @@ Zakres bieżącej implementacji jest zdefiniowany normatywnie w [REQUIREMENTS.md
 - losowanie zadań z całego arkusza albo wybranego tematu;
 - dokumentację, bramy jakości, diagnostyczny smoke test artefaktu i automatyzację przygotowania paczek.
 
-Zakres treści jest mniejszy niż lista tematów z historycznych planów. Aktualnie dostępnych jest siedem działów, a „Ciągi liczbowe” i „Liczby pierwsze” są jawnymi placeholderami. Dostępny katalog obejmuje 35 zadań matury poprawkowej 2021, jednak prawa do części treści i ilustracji nadal blokują ich publiczną dystrybucję w paczce.
+Zakres treści jest mniejszy niż lista tematów z historycznych planów. Aktualnie dostępnych jest siedem działów, a „Ciągi liczbowe” i „Liczby pierwsze” są jawnymi placeholderami. Dostępny katalog obejmuje 35 zadań matury poprawkowej 2021. Prawo do redystrybucji treści i ilustracji jako części Abiturii zostało potwierdzone oświadczeniem właściciela, przy zachowaniu ich rzeczywistego autorstwa i źródła.
 
 ### 5.2. Poza zakresem beta
 
@@ -104,7 +104,9 @@ Pełne rozróżnienie między funkcjami przeniesionymi, planowanymi i zastąpion
 
 ## 6. Harmonogram i kamienie milowe
 
-Historyczne daty realizacji nie są kompletne, dlatego dokument nie przedstawia ich jako faktów. Poniższy harmonogram jest referencyjnym planem 14-tygodniowym przekazanym dla projektu, zestawionym z aktualnym stanem. Kalendarz wydania nie jest deklarowany przed rozwiązaniem blokady prawnej.
+Historyczne daty realizacji nie są kompletne. Poniższy harmonogram jest referencyjnym planem 14-tygodniowym przekazanym dla projektu, zestawionym z aktualnym stanem. Publiczna obrona odbyła się 17 stycznia 2022 r. i zakończyła pozytywną decyzją komisji oraz wynikiem bardzo dobrym. Odrębny zapis retrospektywny potwierdza późniejsze zatwierdzenie projektu przez prowadzącego na początku lutego 2022 r., bez zachowanego dokładnego dnia.
+
+Rzeczywiste daty najwcześniejszych weryfikowalnych stanów technicznych I-IV bieżącej migracji zostały odtworzone z Git w [rejestrze odbioru Issue #43](acceptance/README.md). Są to daty kamieni technicznych z 2026 r., odrębne od historycznego zatwierdzenia projektu przez prowadzącego na początku lutego 2022 r.
 
 | Okres referencyjny | Kamień milowy | Odpowiedzialność | Aktualny stan i dowód |
 | --- | --- | --- | --- |
@@ -115,9 +117,12 @@ Historyczne daty realizacji nie są kompletne, dlatego dokument nie przedstawia 
 | Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | częściowo zrealizowane: siedem działów, 35 zadań, dwa placeholdery |
 | Tydzień 12 | M5a - testy i regresje | autor implementacji | zrealizowane ciągle: testy jednostkowe, integracyjne, UI i CI |
 | Tydzień 13 | M5b - dokumentacja i pakowanie | autor implementacji | technicznie zrealizowane: dokumentacja, workflow, paczki portable i smoke test |
-| Tydzień 14 | M6 - publiczne prerelease | autor implementacji | zablokowane: wymaga `releaseEligible=true`, natywnych workflow wydania i publikacji GitHub Release |
+| Tydzień 14 | M6 - publiczne prerelease | autor implementacji | prawnie odblokowane i technicznie przygotowane; wymaga jeszcze zatwierdzonego commita, tagu, natywnych workflow i publikacji GitHub Release |
+| 17 stycznia 2022 r. | M7 - publiczna obrona projektu historycznego | Adam Kubiś i komisja | osiągnięte: pokaz działającej aplikacji, pytania i odpowiedzi, decyzja pozytywna, wynik bardzo dobry; dowód w `DEFENSE_PROTOCOL.md` |
 
-Przed ustaleniem daty M6 należy przypisać termin i potwierdzić zależności: prawa do materiałów CKE, odziedziczonych grafik matematycznych oraz grafik aplikacji. Bez tego data wydania byłaby nieuzasadnioną deklaracją.
+M6 w tej tabeli dotyczy przyszłego prerelease bieżącej migracji `0.9.0-beta.1`, natomiast M7 dokumentuje rzeczywistą obronę historycznej wersji projektu w 2022 r. Osiągnięcie M7 nie jest dowodem opublikowania obecnej migracji.
+
+Przed ustaleniem daty M6 należy potwierdzić wynik wszystkich bram dla dokładnego commita. Prawa do materiałów CKE, odziedziczonych grafik matematycznych oraz grafik aplikacji zostały odnotowane na podstawie oświadczenia właściciela z 19 lipca 2026 r.; nie zastępuje ono technicznego workflow publikacji.
 
 ## 7. Kryteria akceptacji
 
@@ -132,8 +137,11 @@ Kryteria dzielą się na odbiór produktu i odbiór publicznego wydania:
 | Artefakt | paczka przechodzi archiwizację i diagnostyczny smoke test na natywnych runnerach | kryteria 15-18 w `REQUIREMENTS.md` |
 | Prawo do publikacji | każdy paczkowany zasób ma udokumentowane prawo do redystrybucji | kryterium 19 w `REQUIREMENTS.md` |
 | Publiczne wydanie | istnieją tag, prerelease, działająca strona Pages i kontrola po publikacji | `RELEASE_PROCESS.md` |
+| Historyczna ocena projektu | siedem obszarów oceny i dziesięć warunków akceptacji jest odwzorowanych bez mieszania wersji WPF z migracją AvaloniaUI | `EVALUATION_PROTOCOL.md` |
 
-Spełnienie kryteriów technicznych nie zastępuje kryterium prawa do publicznej dystrybucji. Dopóki pozostaje choć jeden zasób `blocked`, publiczne wydanie nie jest zaakceptowane.
+Spełnienie kryteriów technicznych nie zastępuje kryterium prawa do publicznej dystrybucji. Aktualny manifest nie zawiera zasobów `blocked`, lecz publiczne wydanie jest zaakceptowane dopiero po utworzeniu i zweryfikowaniu rzeczywistego GitHub Release.
+
+Historyczny projekt został zaakceptowany i uzyskał wynik bardzo dobry. Zakres oraz ograniczenia tego dowodu opisuje `EVALUATION_PROTOCOL.md`. Wynik z 2022 r. nie jest oceną bieżącej migracji i nie zastępuje jej przyszłego procesu wydawniczego.
 
 ## 8. Model licencyjny, dane i prywatność
 
@@ -180,7 +188,7 @@ Szczegóły odpowiedzialności warstw, modułów, danych i automatyzacji zawiera
 
 | Ryzyko | Skutek | Działanie ograniczające |
 | --- | --- | --- |
-| Nieudokumentowane prawa do zasobów | brak legalnej publikacji paczki | inwentarz pochodzenia blokuje wydanie do czasu zastąpienia zasobów lub uzyskania podstawy dystrybucji |
+| Utrata lub nieaktualność dowodu praw do zasobów | ryzyko zakwestionowania dystrybucji | wersjonowane oświadczenie właściciela, niezmieniane przypisanie źródeł i obowiązkowa brama inwentarza przed wydaniem |
 | Zbyt szeroki zakres treści | opóźnienie albo niepełna jakość | jawne placeholdery i roadmapa zamiast deklarowania nieistniejących funkcji |
 | Błąd merytoryczny | utrata wartości edukacyjnej | treści, przykłady i zadania są objęte inwentarzem oraz regresjami |
 | Regresja kalkulatora lub nawigacji | błędne wyniki albo trudność użycia | parser niezależny od UI, testy regresyjne i architektura jednego okna |

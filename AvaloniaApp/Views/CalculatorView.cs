@@ -3,6 +3,7 @@ using Abituria.Models;
 using Abituria.Services;
 using Abituria.Ui;
 using Avalonia;
+using Avalonia.Automation;
 using Avalonia.Controls;
 using Avalonia.Layout;
 using Avalonia.Media;
@@ -27,6 +28,8 @@ public sealed class CalculatorView : UserControl
         root.Children.Add(UiFactory.Card(form));
 
         var result = new StackPanel { Spacing = 9 };
+        AutomationProperties.SetLiveSetting(result, AutomationLiveSetting.Polite);
+        AutomationProperties.SetName(result, "Wynik kalkulatora funkcji kwadratowej");
         result.Children.Add(new TextBlock { Text = "Wynik pojawi się tutaj.", Classes = { "muted" } });
         var calculate = new Button { Content = "Oblicz", Classes = { "primary" }, MinWidth = 150 };
         calculate.Click += (_, _) =>
@@ -74,13 +77,18 @@ public sealed class CalculatorView : UserControl
         Content = UiFactory.PageScroll(root);
     }
 
-    private static TextBox NumberBox(string label, string value) => new()
+    private static TextBox NumberBox(string label, string value)
     {
-        PlaceholderText = label,
-        Text = value,
-        FontSize = 18,
-        HorizontalAlignment = HorizontalAlignment.Stretch
-    };
+        var box = new TextBox
+        {
+            PlaceholderText = label,
+            Text = value,
+            FontSize = 18,
+            HorizontalAlignment = HorizontalAlignment.Stretch
+        };
+        AutomationProperties.SetName(box, $"Współczynnik {label}");
+        return box;
+    }
 
     private static void AddPlannedTool(Panel panel, string label, string id, Action<string> open)
         => AddTool(panel, label, () => open(id));
