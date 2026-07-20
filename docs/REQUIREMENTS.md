@@ -107,7 +107,7 @@ Poza bieżącym zakresem pozostają:
 | --- | --- | --- | --- | --- |
 | NF-01 | Aplikacja działa offline. | Wysoki | Zaimplementowane | lokalne JSON, SQLite, brak wymaganych usług sieciowych |
 | NF-02 | Aplikacja używa przenośnego UI Avalonia zamiast WPF. | Wysoki | Zaimplementowane | `Abituria.csproj`, `NavigationArchitectureTests` |
-| NF-03 | Minimalny obsługiwany rozmiar okna to `960x640`. | Średni | Zaimplementowane | `MainWindow.axaml`, testy wizualne |
+| NF-03 | Minimalny obsługiwany rozmiar głównego okna to `720x520`, a kluczowe widoki przechodzą do układu jednokolumnowego przed utratą czytelności. | Wysoki | Zaimplementowane | `MainWindow.axaml`, `AdaptiveLayout`, testy breakpointów |
 | NF-04 | Długie treści edukacyjne i wzory nie są zapisane bezpośrednio w C#. | Wysoki | Zaimplementowane | `ContentSeparationTests`, katalog `Content` |
 | NF-05 | Hasła nie są przechowywane jawnie. | Wysoki | Zaimplementowane | `PasswordHasher`, `AccountServiceTests` |
 | NF-06 | Błędy kalkulatora są kontrolowane i nie powodują awarii aplikacji. | Wysoki | Zaimplementowane | `ExpressionCalculatorRobustnessTests`, regresje issues #1-#9 |
@@ -119,6 +119,13 @@ Poza bieżącym zakresem pozostają:
 | NF-12 | Każdy paczkowany zasób treści, obrazu lub fontu ma maszynowo sprawdzane pochodzenie i status redystrybucji. | Wysoki | Zaimplementowane | `Content/provenance.json`, `ContentProvenanceTests`, `Test-ContentProvenance.ps1` |
 | NF-13 | Paczki portable nie zawierają PDB, sekretów ani snapshotów, otrzymują sumy SHA-256, SBOM, atestację pochodzenia oraz manifest nuspec i dostępnych dowodów licencyjnych dokładnego grafu NuGet. | Wysoki | Zaimplementowane w automatyzacji | workflow wydania, `New-NuGetLicenseBundle.ps1`, `Test-ReleaseAssets.ps1` |
 | NF-14 | Reprezentatywne obciążenie kalkulatora, katalogu treści i zapisu postępu mieści się w przenośnych budżetach czasu oraz pamięci. | Wysoki | Zaimplementowane i mierzone | `PerformanceMemoryAndLoadTests`, `docs/TESTING.md` |
+| NF-15 | Interfejs używa paczkowanego kroju Mulish, a zależność od Avalonia Fonts Inter nie jest częścią grafu produkcyjnego. | Średni | Zaimplementowane | `AppStyles.axaml`, `Abituria.csproj`, test zależności i fontu |
+| NF-16 | Aplikacja udostępnia ustawienie systemowe oraz motyw jasny, ciemny i wysokiego kontrastu, bez wymuszania wariantu jasnego. | Wysoki | Zaimplementowane | `AppThemeManager`, `AppStyles.axaml`, testy renderowania motywów |
+| NF-17 | Interaktywne kontrolki mają rozróżnialne stany najechania, naciśnięcia, fokusu i fokusu klawiaturowego. | Wysoki | Zaimplementowane | selektory `:pointerover`, `:pressed`, `:focus`, `:focus-visible`, test widocznego fokusu |
+| NF-18 | Własny pasek tytułu zapewnia minimalizację, maksymalizację, przywrócenie, zamknięcie, przeciąganie oraz zmianę rozmiaru z każdej krawędzi i narożnika. | Wysoki | Zaimplementowane | `MainWindow.axaml`, `MainWindow.axaml.cs`, test kontraktu chrome |
+| NF-19 | Login, Start i kalkulator ogólny zmieniają strukturę układu odpowiednio przy szerokościach `860`, `780` i `900`, bez utraty logicznej kolejności kontrolek. | Wysoki | Zaimplementowane | `AdaptiveLayout`, testy breakpointów Avalonia Headless |
+| NF-20 | Dialogi aplikacji są skalowalne, mają bezpieczne granice wymiarów i przewijanie dla treści wykraczającej poza obszar klienta. | Wysoki | Zaimplementowane | `AdaptiveLayout.CreateDialog`, test właściwości dialogu |
+| NF-21 | Wszystkie kryteria WCAG 2.2 A/AA są przeglądane i śledzone, z jawnym rozdzieleniem dowodów automatycznych, kontroli manualnych i kryteriów nieodpowiednich dla aplikacji desktopowej. | Wysoki | Audyt wykonany, kontrole manualne pozostają jawne | `docs/ACCESSIBILITY_WCAG_AUDIT.md`, `AccessibilityRegressionTests`, `Discussion49StyleRegressionTests` |
 
 ## 6. Opis użytkowników systemu
 
@@ -164,8 +171,15 @@ System nie zakłada kont administratora, ról sieciowych ani synchronizacji wiel
 
 ## 9. Wymagania dotyczące interfejsu użytkownika
 
-- Interfejs musi działać przy minimalnym rozmiarze `960x640`.
+- Interfejs musi działać przy minimalnym rozmiarze `720x520`.
 - Nawigacja musi być dostępna z jednego głównego okna.
+- Login, Start i kalkulator ogólny muszą przechodzić do układu kompaktowego odpowiednio poniżej `860`, `780` i `900` pikseli.
+- Użytkownik musi móc wybrać motyw systemowy, jasny, ciemny lub wysokiego kontrastu.
+- Zmiana motywu musi aktualizować otwarte widoki bez ponownego uruchamiania aplikacji.
+- Przyciski, pola tekstowe i pola wyboru muszą mieć widoczne stany najechania, naciśnięcia, fokusu i `focus-visible`.
+- Własne przyciski paska tytułu muszą być dostępne z klawiatury, mieć opisowe nazwy automatyzacji i zachowywać funkcje natywnego okna.
+- Okno musi dać się przenosić za pasek tytułu, maksymalizować dwuklikiem oraz skalować z czterech krawędzi i czterech narożników.
+- Dialogi kodów odzyskiwania muszą pozwalać na zmianę rozmiaru i przewijać zawartość zamiast ją ucinać.
 - Strona "Kalkulator" musi pozostawać aktywna także na ekranie kalkulatora ogólnego.
 - Widoki treści muszą obsługiwać przewijanie pionowe.
 - Długie teksty muszą zawijać się bez wychodzenia poza obszar widoku.
@@ -208,7 +222,7 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 9. Każde zadanie ma kompletną umowę odpowiedzi: opcje i klucz dla zadań zamkniętych albo odpowiedź ujawnianą dla zadań otwartych.
 10. Kalkulator ogólny przechodzi regresje dla issues #1-#9 oraz powiązanych dyskusji.
 11. Widoki architektury nie używają WPF `Page`, `Frame`, `NavigationWindow` ani nie otwierają nieograniczonych niemodalnych okien.
-12. Dokumenty `README.md`, `docs/BUSINESS_ANALYSIS.md`, `docs/ARCHITECTURE.md`, `docs/REQUIREMENTS.md`, `docs/MIGRATION_INVENTORY.md`, `docs/ROADMAP.md` i `docs/SONARQUBE.md` są dostępne z repozytorium.
+12. Dokumenty `README.md`, `docs/BUSINESS_ANALYSIS.md`, `docs/ARCHITECTURE.md`, `docs/REQUIREMENTS.md`, `docs/ACCESSIBILITY_WCAG_AUDIT.md`, `docs/MIGRATION_INVENTORY.md`, `docs/ROADMAP.md` i `docs/SONARQUBE.md` są dostępne z repozytorium.
 13. Bezpośrednia regresja issue #35 potwierdza wymagane sekcje sześciu nowych materiałów, wszystkie 24 litery alfabetu greckiego, przypadek `\(\Delta{}<0\)`, zadania ze wskazówkami i odpowiedziami, statusy roadmapy oraz renderowanie każdego artykułu przy `960x640` i `1280x820`.
 14. Importer odtwarza katalog issue #35 z niezależnego seeda do pustego `OutputRoot`, bez odczytywania aktywnych plików wynikowych, a test end-to-end potwierdza zgodność wszystkich działów i pozycji roadmapy.
 15. Testy wydania przechodzą na natywnych runnerach Windows, Ubuntu i macOS, a opublikowany artefakt przechodzi diagnostyczny smoke test w katalogu tymczasowym.
@@ -223,6 +237,10 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 24. Protokoły I-IV rozdzielają daty technicznej rekonstrukcji od poświadczonej końcowej decyzji prowadzącego z początku lutego 2022 r. Historyczna, uzgodniona forma przekazania i odrębny status nieistniejącego jeszcze publicznego GitHub Release są zapisane w `acceptance/README.md` i `DELIVERY_PROTOCOL.md`.
 25. `DEFENSE_PROTOCOL.md` zapisuje rzeczywistą datę publicznej obrony, role i nazwiska członków komisji, demonstrację aplikacji, pytania i odpowiedzi, wynik oraz publiczny odnośnik do nagrania, bez utożsamiania historycznej wersji z bieżącą migracją.
 26. `EVALUATION_PROTOCOL.md` odwzorowuje wszystkie obszary i warunki Issue #45, rozdziela bezpośrednie dowody od poświadczeń retrospektywnych, nie przypisuje historycznej oceny bieżącej migracji i zawiera decyzję oraz komentarz zamykający.
+27. Testy dyskusji #49 potwierdzają własny chrome, pełny zestaw stanów interakcji, widoczny fokus, przełączenie czterech ustawień motywu i różne obrazy palet.
+28. Testy breakpointów potwierdzają zmianę Login przy `860`, Start przy `780` i kalkulatora ogólnego przy `900`, a główne okno zachowuje minimum `720x520`.
+29. Test wpływu stylowania na renderowanie i nawigację mieści się w zapisanym budżecie czasu i pamięci oraz przechodzi dla wariantu jasnego, ciemnego i wysokiego kontrastu.
+30. `ACCESSIBILITY_WCAG_AUDIT.md` zawiera wszystkie 55 obowiązujących kryteriów A/AA WCAG 2.2, nie przedstawia testów headless jako certyfikatu i jawnie wskazuje kontrole wymagające technologii asystującej lub użytkownika.
 
 ## Macierz zgodności wymagań z implementacją
 
@@ -231,7 +249,7 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 | Konta i bezpieczeństwo | F-01 - F-05, NF-05 | `AccountService`, `PasswordHasher`, `LoginView`, `ProfileView` | `AccountServiceTests`, `Issue14RegistrationRegressionTests` |
 | Treści edukacyjne | F-06 - F-13, F-19, F-22, NF-04, NF-08 | `Content/*.json`, `ContentRepository`, `RichContentView`, `ExamViews`, `ExerciseRandomizer` | `ContentInventoryTests`, `ContentSeparationTests`, `Discussion10VisualRegressionTests`, `Issue35MathChaptersRegressionTests`, `ExerciseRandomizerTests` |
 | Kalkulatory | F-14 - F-16, NF-06 | `QuadraticSolver`, `ExpressionCalculator`, `CalculatorSession`, `CalculatorInputState` | `QuadraticSolverTests`, `ExpressionCalculator*Tests`, `CalculatorSessionTests` |
-| Nawigacja i UI | F-17, NF-02, NF-03, NF-07 | `MainWindow`, `AppViewModel`, `Views` | `NavigationArchitectureTests`, `ExerciseAndRoutingCoverageTests`, `AccessibilityRegressionTests` |
+| Nawigacja, styl i dostępność UI | F-17, NF-02, NF-03, NF-07, NF-15 - NF-21 | `MainWindow`, `AppThemeManager`, `AdaptiveLayout`, `AppStyles.axaml`, `Views` | `NavigationArchitectureTests`, `ExerciseAndRoutingCoverageTests`, `AccessibilityRegressionTests`, `Discussion49StyleRegressionTests`, `docs/ACCESSIBILITY_WCAG_AUDIT.md` |
 | Migracja i dokumentacja | F-18, NF-09, NF-10 | `docs`, `.github/workflows`, `docs/legacy/originals` | `docs/MIGRATION_INVENTORY.md`, `docs/ARCHITECTURE.md`, `docs/DEFENSE_PROTOCOL.md`, `docs/EVALUATION_PROTOCOL.md`, ten dokument |
 | Wydanie i łańcuch dostaw | F-20 - F-21, NF-11 - NF-14 | `Directory.Build.props`, `global.json`, lockfile, `tools/release`, workflow wydania | `ReleaseRuntimeTests`, `ContentProvenanceTests`, `PerformanceMemoryAndLoadTests`, `docs/RELEASE_PROCESS.md` |
 

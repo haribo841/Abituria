@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Headless;
 using Avalonia.Headless.XUnit;
+using Avalonia.Markup.Xaml.Styling;
 using Avalonia.Themes.Fluent;
 
 [assembly: AvaloniaTestApplication(typeof(Abituria.Tests.TestAppBuilder))]
@@ -11,8 +12,12 @@ public sealed class TestApplication : Application
 {
     public override void Initialize()
     {
-        RequestedThemeVariant = Avalonia.Styling.ThemeVariant.Light;
+        RequestedThemeVariant = Avalonia.Styling.ThemeVariant.Default;
         Styles.Add(new FluentTheme());
+        Styles.Add(new StyleInclude(new Uri("avares://Abituria.Tests/"))
+        {
+            Source = new Uri("avares://Abituria/AvaloniaApp/Styles/AppStyles.axaml")
+        });
     }
 }
 

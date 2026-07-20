@@ -47,17 +47,37 @@ public sealed class GeneralCalculatorView : UserControl
         _expression.AddHandler(InputElement.TextInputEvent, OnTextInput, RoutingStrategies.Tunnel);
         _expression.KeyDown += OnExpressionKeyDown;
 
-        var workArea = new Grid { ColumnDefinitions = new ColumnDefinitions("3*,2*"), ColumnSpacing = 18 };
+        var workArea = new Grid
+        {
+            Name = "CalculatorLayoutRoot",
+            ColumnDefinitions = new ColumnDefinitions("3*,2*"),
+            RowDefinitions = new RowDefinitions("Auto"),
+            ColumnSpacing = 18
+        };
         var calculator = new StackPanel { Spacing = 14 };
         calculator.Children.Add(UiFactory.Card(_expression, new Thickness(16)));
         calculator.Children.Add(BuildKeypad());
         ResetResult();
-        calculator.Children.Add(UiFactory.Card(_result, new Thickness(18), "#F7FAFC"));
+        calculator.Children.Add(UiFactory.Card(_result, new Thickness(18), "SurfaceAltBrush"));
         workArea.Children.Add(calculator);
 
         var history = BuildHistoryPanel();
         Grid.SetColumn(history, 1);
         workArea.Children.Add(history);
+
+        AdaptiveLayout.ObserveWidth(this, 900, isCompact =>
+        {
+            workArea.ColumnDefinitions = new ColumnDefinitions(isCompact ? "*" : "3*,2*");
+            workArea.RowDefinitions = new RowDefinitions(isCompact ? "Auto,Auto" : "Auto");
+            workArea.ColumnSpacing = isCompact ? 0 : 18;
+            workArea.RowSpacing = isCompact ? 18 : 0;
+
+            Grid.SetColumn(calculator, 0);
+            Grid.SetRow(calculator, 0);
+            Grid.SetColumn(history, isCompact ? 0 : 1);
+            Grid.SetRow(history, isCompact ? 1 : 0);
+        });
+
         root.Children.Add(workArea);
 
         RenderHistory();
@@ -225,13 +245,14 @@ public sealed class GeneralCalculatorView : UserControl
     private void ShowResult(CalculationResult calculation)
     {
         _result.Children.Clear();
-        _result.Children.Add(new TextBlock
+        var heading = new TextBlock
         {
             Text = calculation.Success ? "Wynik" : "Nie można obliczyć",
             FontSize = 17,
-            FontWeight = FontWeight.SemiBold,
-            Foreground = UiFactory.Brush(calculation.Success ? "#19733B" : "#B42318")
-        });
+            FontWeight = FontWeight.SemiBold
+        };
+        UiFactory.UseResource(heading, TextBlock.ForegroundProperty, calculation.Success ? "SuccessBrush" : "ErrorBrush");
+        _result.Children.Add(heading);
         _result.Children.Add(new TextBlock
         {
             Text = calculation.Success
@@ -242,13 +263,14 @@ public sealed class GeneralCalculatorView : UserControl
         });
         if (calculation.Success && calculation.WasNormalized)
         {
-            _result.Children.Add(new TextBlock
+            var normalization = new TextBlock
             {
                 Text = calculation.Message,
                 FontSize = 14,
-                Foreground = UiFactory.Brush("#8A5A00"),
                 TextWrapping = TextWrapping.Wrap
-            });
+            };
+            UiFactory.UseResource(normalization, TextBlock.ForegroundProperty, "WarningBrush");
+            _result.Children.Add(normalization);
         }
     }
 
@@ -505,13 +527,14 @@ public sealed class GeneralCalculatorView : UserControl
     private void ShowInputNormalization()
     {
         _result.Children.Clear();
-        _result.Children.Add(new TextBlock
+        var heading = new TextBlock
         {
             Text = "Poprawiono zapis",
             FontSize = 17,
-            FontWeight = FontWeight.SemiBold,
-            Foreground = UiFactory.Brush("#8A5A00")
-        });
+            FontWeight = FontWeight.SemiBold
+        };
+        UiFactory.UseResource(heading, TextBlock.ForegroundProperty, "WarningBrush");
+        _result.Children.Add(heading);
         _result.Children.Add(new TextBlock
         {
             Text = ExpressionCalculator.LeadingZeroNormalizationMessage,

@@ -34,6 +34,8 @@ Paczki są samowystarczalne i nie wymagają instalacji środowiska .NET. Są to 
 - kalkulator ogólny z nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią i powtarzaniem `=`;
 - kalkulator funkcji kwadratowej z postacią ogólną, kanoniczną i iloczynową;
 - jedno okno aplikacji z nawigacją między materiałami, zadaniami, kalkulatorami, profilem i planem rozwoju;
+- własny pasek tytułu z pełnym sterowaniem oknem oraz skalowalne układy dla szerokości od `720` pikseli;
+- motyw systemowy, jasny, ciemny i wysokiego kontrastu, widoczny fokus oraz jawne stany interakcji kontrolek;
 - ekran „O programie” z wersją, identyfikatorem commita, licencją, autorem i adresem repozytorium.
 
 Szczegółową instrukcję korzystania z tych funkcji zawiera [podręcznik użytkownika](docs/USER_GUIDE.md).
@@ -99,6 +101,7 @@ Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalneg
 | [Architektura](docs/ARCHITECTURE.md) | komponenty, dane i odpowiedzialności modułów |
 | [Proces wydania](docs/RELEASE_PROCESS.md) | bramy, pakowanie, smoke test, Pages i publikacja |
 | [Testy końcowe](docs/TESTING.md) | zakres testów funkcjonalnych, regresyjnych, wydajnościowych i pamięciowych |
+| [Audyt dostępności WCAG 2.2 A/AA](docs/ACCESSIBILITY_WCAG_AUDIT.md) | pełna macierz kryteriów, dowody techniczne i jawna lista kontroli manualnych |
 | [Pakiet dla komisji](docs/COMMISSION_PACKAGE.md) | indeks dokumentacji technicznej, PDF i protokół odbioru |
 | [Odbiór Issue #43](docs/acceptance/README.md) | osobne protokoły przyrostów I-IV, decyzje i bramy zamknięcia |
 | [Publiczna obrona Issue #44](docs/DEFENSE_PROTOCOL.md) | data, komisja, przebieg, nagranie, wynik i potwierdzenie kamienia milowego M7 |

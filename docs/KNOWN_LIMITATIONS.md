@@ -19,7 +19,11 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 
 ## Stan beta
 
-- Interfejs jest projektowany dla minimalnego rozmiaru `960x640`, ale pełny audyt dostępności, obsługi czytników ekranu i zgodności WCAG nie został zakończony.
+- Minimalny obsługiwany rozmiar głównego okna to `720x520`. Breakpointy poprawiają Login, Start i kalkulator ogólny, ale bardzo duże skalowanie systemowe może nadal wymagać przewijania.
+- Przegląd obejmuje wszystkie kryteria WCAG 2.2 A/AA, ale WCAG jest standardem treści internetowych, a repozytorium nie składa formalnej deklaracji zgodności aplikacji desktopowej. Szczegóły zawiera [ACCESSIBILITY_WCAG_AUDIT.md](ACCESSIBILITY_WCAG_AUDIT.md).
+- Nie wykonano udokumentowanej weryfikacji bieżącej wersji z czytnikami ekranu, monitorem brajlowskim, sterowaniem głosowym, przełącznikami ani menedżerami haseł na wszystkich wspieranych systemach.
+- Własny pasek tytułu i uchwyty rozmiaru używają natywnych operacji Avalonia, ale ich integracja z każdym menedżerem okien i technologią asystującą wymaga kontroli na rzeczywistych platformach.
+- Motyw wysokiego kontrastu jest wariantem aplikacji i reaguje na systemową preferencję kontrastu. Nie zastępuje testu z każdym systemowym trybem wymuszonych kolorów i powiększenia.
 - Nie ma synchronizacji między urządzeniami, konta internetowego, chmury ani współdzielenia postępu.
 - Nie ma automatycznej kopii zapasowej. Użytkownik odpowiada za kopię lokalnej bazy.
 - Cała baza SQLite nie jest szyfrowana. Hasła i kody odzyskiwania są przechowywane wyłącznie jako skróty, ale nazwy profili oraz postęp pozostają czytelne dla osoby mającej dostęp do pliku.

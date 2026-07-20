@@ -36,14 +36,15 @@ public sealed class CalculatorView : UserControl
         {
             var solution = QuadraticSolver.Solve(a.Text, b.Text, c.Text);
             result.Children.Clear();
-            result.Children.Add(new TextBlock
+            var summary = new TextBlock
             {
                 Text = solution.Summary,
                 FontSize = 20,
                 FontWeight = Avalonia.Media.FontWeight.SemiBold,
-                Foreground = UiFactory.Brush(solution.Success ? "#19733B" : "#B42318"),
                 TextWrapping = TextWrapping.Wrap
-            });
+            };
+            UiFactory.UseResource(summary, TextBlock.ForegroundProperty, solution.Success ? "SuccessBrush" : "ErrorBrush");
+            result.Children.Add(summary);
             foreach (var section in solution.Sections)
             {
                 result.Children.Add(new TextBlock { Text = section.Title, FontSize = 17, FontWeight = Avalonia.Media.FontWeight.SemiBold, Margin = new Thickness(0, 6, 0, 0) });
@@ -65,7 +66,7 @@ public sealed class CalculatorView : UserControl
         actions.Children.Add(calculate);
         actions.Children.Add(clear);
         root.Children.Add(actions);
-        root.Children.Add(UiFactory.Card(result, new Thickness(20), "#F7FAFC"));
+        root.Children.Add(UiFactory.Card(result, new Thickness(20), "SurfaceAltBrush"));
         root.Children.Add(new TextBlock { Text = "Pozostałe narzędzia", Classes = { "h2" } });
         var plannedTools = new WrapPanel { Orientation = Orientation.Horizontal };
         AddTool(plannedTools, "Kalkulator ogólny", openGeneralCalculator);

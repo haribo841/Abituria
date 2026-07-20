@@ -4,9 +4,124 @@
         Title="Abituria"
         Width="1280"
         Height="820"
-        MinWidth="960"
-        MinHeight="640"
+        MinWidth="720"
+        MinHeight="520"
         WindowStartupLocation="CenterScreen"
-        Background="#F3F5F7">
-  <Border x:Name="ShellHost" />
+        WindowDecorations="None"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaTitleBarHeightHint="46">
+  <Grid>
+    <Border Classes="window-frame">
+      <Grid RowDefinitions="46,*">
+        <Border x:Name="TitleBar"
+                Grid.Row="0"
+                Classes="title-bar">
+          <Grid ColumnDefinitions="*,Auto">
+            <Border x:Name="TitleBarDragArea"
+                    Grid.Column="0"
+                    Background="Transparent"
+                    PointerPressed="TitleBarOnPointerPressed">
+              <StackPanel Margin="14,0,8,0"
+                          Orientation="Horizontal"
+                          Spacing="10"
+                          VerticalAlignment="Center">
+                <Image Width="28"
+                       Height="28"
+                       Source="avares://Abituria/img/icon.png"
+                       AutomationProperties.Name="Logo Abituria"
+                       IsHitTestVisible="False" />
+                <TextBlock Classes="title-bar-text"
+                           Text="Abituria"
+                           VerticalAlignment="Center"
+                           IsHitTestVisible="False" />
+              </StackPanel>
+            </Border>
+
+            <StackPanel Grid.Column="1"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Stretch">
+              <Button x:Name="ThemeButton"
+                      Classes="window-control theme"
+                      MinWidth="132"
+                      Content="Motyw: Systemowy"
+                      Click="ThemeButtonOnClick"
+                      ToolTip.Tip="Zmień motyw: systemowy, jasny, ciemny lub wysoki kontrast" />
+              <Button x:Name="MinimizeButton"
+                      Classes="window-control"
+                      Content="_"
+                      Click="MinimizeButtonOnClick"
+                      ToolTip.Tip="Minimalizuj" />
+              <Button x:Name="MaximizeButton"
+                      Classes="window-control"
+                      Content="□"
+                      Click="MaximizeButtonOnClick"
+                      ToolTip.Tip="Maksymalizuj" />
+              <Button x:Name="CloseButton"
+                      Classes="window-control close"
+                      Content="×"
+                      Click="CloseButtonOnClick"
+                      ToolTip.Tip="Zamknij" />
+            </StackPanel>
+          </Grid>
+        </Border>
+
+        <Border x:Name="ShellHost"
+                Grid.Row="1"
+                Background="{DynamicResource AppBackgroundBrush}" />
+      </Grid>
+    </Border>
+
+    <Grid x:Name="ResizeGrips"
+          Panel.ZIndex="100"
+          IsVisible="True">
+      <Border Height="6"
+              VerticalAlignment="Top"
+              Background="Transparent"
+              Cursor="SizeNorthSouth"
+              PointerPressed="ResizeNorthOnPointerPressed" />
+      <Border Height="6"
+              VerticalAlignment="Bottom"
+              Background="Transparent"
+              Cursor="SizeNorthSouth"
+              PointerPressed="ResizeSouthOnPointerPressed" />
+      <Border Width="6"
+              HorizontalAlignment="Left"
+              Background="Transparent"
+              Cursor="SizeWestEast"
+              PointerPressed="ResizeWestOnPointerPressed" />
+      <Border Width="6"
+              HorizontalAlignment="Right"
+              Background="Transparent"
+              Cursor="SizeWestEast"
+              PointerPressed="ResizeEastOnPointerPressed" />
+      <Border Width="12"
+              Height="12"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Top"
+              Background="Transparent"
+              Cursor="TopLeftCorner"
+              PointerPressed="ResizeNorthWestOnPointerPressed" />
+      <Border Width="12"
+              Height="12"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Top"
+              Background="Transparent"
+              Cursor="TopRightCorner"
+              PointerPressed="ResizeNorthEastOnPointerPressed" />
+      <Border Width="12"
+              Height="12"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Bottom"
+              Background="Transparent"
+              Cursor="BottomLeftCorner"
+              PointerPressed="ResizeSouthWestOnPointerPressed" />
+      <Border Width="12"
+              Height="12"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Bottom"
+              Background="Transparent"
+              Cursor="BottomRightCorner"
+              PointerPressed="ResizeSouthEastOnPointerPressed" />
+    </Grid>
+  </Grid>
 </Window>

@@ -33,8 +33,8 @@ public sealed class NavigationArchitectureTests
         XNamespace x = "http://schemas.microsoft.com/winfx/2006/xaml";
 
         Assert.Equal("Window", window.Name.LocalName);
-        Assert.Equal("960", window.Attribute("MinWidth")?.Value);
-        Assert.Equal("640", window.Attribute("MinHeight")?.Value);
+        Assert.Equal("720", window.Attribute("MinWidth")?.Value);
+        Assert.Equal("520", window.Attribute("MinHeight")?.Value);
         var shellHosts = window.Descendants()
             .Where(element => element.Name.LocalName == "Border" && element.Attribute(x + "Name")?.Value == "ShellHost")
             .ToArray();
@@ -104,6 +104,7 @@ public sealed class NavigationArchitectureTests
             Path.Combine(root, "AvaloniaApp", "Views", "LoginView.cs"),
             Path.Combine(root, "AvaloniaApp", "Views", "ProfileView.cs")
         };
+        var dialogFactoryFile = Path.Combine(root, "AvaloniaApp", "Ui", "AdaptiveLayout.cs");
 
         foreach (var file in files)
         {
@@ -112,6 +113,13 @@ public sealed class NavigationArchitectureTests
             if (modalDialogFiles.Contains(file))
             {
                 Assert.Contains("ShowDialog(owner)", source, StringComparison.Ordinal);
+                continue;
+            }
+
+            if (string.Equals(file, dialogFactoryFile, StringComparison.OrdinalIgnoreCase))
+            {
+                Assert.Contains("new Window", source, StringComparison.Ordinal);
+                Assert.Contains("CanResize = true", source, StringComparison.Ordinal);
                 continue;
             }
 

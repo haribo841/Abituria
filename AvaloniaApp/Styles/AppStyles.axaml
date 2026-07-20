@@ -1,0 +1,314 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Styles.Resources>
+    <ResourceDictionary>
+      <FontFamily x:Key="AppFontFamily">avares://Abituria/fonts#Mulish</FontFamily>
+      <x:Double x:Key="TextControlPlaceholderOpacity">1</x:Double>
+
+      <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Light">
+          <SolidColorBrush x:Key="AppBackgroundBrush" Color="#F3F5F7" />
+          <SolidColorBrush x:Key="SurfaceBrush" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="SurfaceAltBrush" Color="#E8EEF2" />
+          <SolidColorBrush x:Key="BrandImageSurfaceBrush" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="TextPrimaryBrush" Color="#18212B" />
+          <SolidColorBrush x:Key="TextMutedBrush" Color="#52606D" />
+          <SolidColorBrush x:Key="BorderBrush" Color="#667685" />
+          <SolidColorBrush x:Key="AccentBrush" Color="#126782" />
+          <SolidColorBrush x:Key="AccentHoverBrush" Color="#0E566E" />
+          <SolidColorBrush x:Key="AccentPressedBrush" Color="#093F50" />
+          <SolidColorBrush x:Key="AccentTextBrush" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="GhostHoverBrush" Color="#D7E2E8" />
+          <SolidColorBrush x:Key="GhostPressedBrush" Color="#C6D5DD" />
+          <SolidColorBrush x:Key="FocusBrush" Color="#000000" />
+          <SolidColorBrush x:Key="DangerBrush" Color="#B42318" />
+          <SolidColorBrush x:Key="DangerTextBrush" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="DangerHoverBrush" Color="#971B12" />
+          <SolidColorBrush x:Key="DangerPressedBrush" Color="#73120C" />
+          <SolidColorBrush x:Key="SuccessBrush" Color="#116B3A" />
+          <SolidColorBrush x:Key="ErrorBrush" Color="#B42318" />
+          <SolidColorBrush x:Key="WarningBrush" Color="#744B00" />
+          <SolidColorBrush x:Key="WarningSurfaceBrush" Color="#FFF2C2" />
+        </ResourceDictionary>
+
+        <ResourceDictionary x:Key="Dark">
+          <SolidColorBrush x:Key="AppBackgroundBrush" Color="#10171E" />
+          <SolidColorBrush x:Key="SurfaceBrush" Color="#1B2630" />
+          <SolidColorBrush x:Key="SurfaceAltBrush" Color="#263540" />
+          <SolidColorBrush x:Key="BrandImageSurfaceBrush" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="TextPrimaryBrush" Color="#F5F7FA" />
+          <SolidColorBrush x:Key="TextMutedBrush" Color="#B9C4CE" />
+          <SolidColorBrush x:Key="BorderBrush" Color="#91A0AD" />
+          <SolidColorBrush x:Key="AccentBrush" Color="#5FC3DE" />
+          <SolidColorBrush x:Key="AccentHoverBrush" Color="#82D1E6" />
+          <SolidColorBrush x:Key="AccentPressedBrush" Color="#3DA6C2" />
+          <SolidColorBrush x:Key="AccentTextBrush" Color="#071318" />
+          <SolidColorBrush x:Key="GhostHoverBrush" Color="#344653" />
+          <SolidColorBrush x:Key="GhostPressedBrush" Color="#405564" />
+          <SolidColorBrush x:Key="FocusBrush" Color="#FFD166" />
+          <SolidColorBrush x:Key="DangerBrush" Color="#F1707A" />
+          <SolidColorBrush x:Key="DangerTextBrush" Color="#000000" />
+          <SolidColorBrush x:Key="DangerHoverBrush" Color="#FF9299" />
+          <SolidColorBrush x:Key="DangerPressedBrush" Color="#D8525E" />
+          <SolidColorBrush x:Key="SuccessBrush" Color="#6FD39B" />
+          <SolidColorBrush x:Key="ErrorBrush" Color="#FF8A93" />
+          <SolidColorBrush x:Key="WarningBrush" Color="#FFD166" />
+          <SolidColorBrush x:Key="WarningSurfaceBrush" Color="#3D3000" />
+        </ResourceDictionary>
+      </ResourceDictionary.ThemeDictionaries>
+
+      <!-- These named resources are activated by AppThemeManager for both the
+           explicit HighContrast mode and the operating system preference. -->
+      <SolidColorBrush x:Key="HighContrast.AppBackgroundBrush" Color="#000000" />
+      <SolidColorBrush x:Key="HighContrast.SurfaceBrush" Color="#000000" />
+      <SolidColorBrush x:Key="HighContrast.SurfaceAltBrush" Color="#000000" />
+      <SolidColorBrush x:Key="HighContrast.BrandImageSurfaceBrush" Color="#FFFFFF" />
+      <SolidColorBrush x:Key="HighContrast.TextPrimaryBrush" Color="#FFFFFF" />
+      <SolidColorBrush x:Key="HighContrast.TextMutedBrush" Color="#FFFFFF" />
+      <SolidColorBrush x:Key="HighContrast.BorderBrush" Color="#FFFFFF" />
+      <SolidColorBrush x:Key="HighContrast.AccentBrush" Color="#00FFFF" />
+      <SolidColorBrush x:Key="HighContrast.AccentHoverBrush" Color="#FFFF00" />
+      <SolidColorBrush x:Key="HighContrast.AccentPressedBrush" Color="#FFFFFF" />
+      <SolidColorBrush x:Key="HighContrast.AccentTextBrush" Color="#000000" />
+      <SolidColorBrush x:Key="HighContrast.GhostHoverBrush" Color="#1A1A1A" />
+      <SolidColorBrush x:Key="HighContrast.GhostPressedBrush" Color="#333333" />
+      <SolidColorBrush x:Key="HighContrast.FocusBrush" Color="#FFFF00" />
+      <SolidColorBrush x:Key="HighContrast.DangerBrush" Color="#FF00FF" />
+      <SolidColorBrush x:Key="HighContrast.DangerTextBrush" Color="#000000" />
+      <SolidColorBrush x:Key="HighContrast.DangerHoverBrush" Color="#FFFF00" />
+      <SolidColorBrush x:Key="HighContrast.DangerPressedBrush" Color="#FFFFFF" />
+      <SolidColorBrush x:Key="HighContrast.SuccessBrush" Color="#00FF00" />
+      <SolidColorBrush x:Key="HighContrast.ErrorBrush" Color="#FF00FF" />
+      <SolidColorBrush x:Key="HighContrast.WarningBrush" Color="#FFFF00" />
+      <SolidColorBrush x:Key="HighContrast.WarningSurfaceBrush" Color="#000000" />
+    </ResourceDictionary>
+  </Styles.Resources>
+
+  <Style Selector="TemplatedControl">
+    <Setter Property="FontFamily" Value="{DynamicResource AppFontFamily}" />
+  </Style>
+  <Style Selector="TextBlock">
+    <Setter Property="FontFamily" Value="{DynamicResource AppFontFamily}" />
+  </Style>
+  <Style Selector="Window">
+    <Setter Property="Background" Value="{DynamicResource AppBackgroundBrush}" />
+  </Style>
+  <Style Selector="Grid.app-shell">
+    <Setter Property="Background" Value="{DynamicResource AppBackgroundBrush}" />
+  </Style>
+  <Style Selector="Border.app-header">
+    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+    <Setter Property="BorderThickness" Value="0,0,0,1" />
+  </Style>
+  <Style Selector="Border.window-frame">
+    <Setter Property="Background" Value="{DynamicResource AppBackgroundBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+  </Style>
+  <Style Selector="Border.title-bar">
+    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+    <Setter Property="BorderThickness" Value="0,0,0,1" />
+  </Style>
+  <Style Selector="Border.brand-logo-surface">
+    <Setter Property="Background" Value="{DynamicResource BrandImageSurfaceBrush}" />
+    <Setter Property="CornerRadius" Value="6" />
+    <Setter Property="Padding" Value="10" />
+  </Style>
+  <Style Selector="TextBlock.title-bar-text">
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+    <Setter Property="FontSize" Value="15" />
+    <Setter Property="FontWeight" Value="Bold" />
+  </Style>
+  <Style Selector="TextBlock.brand-text">
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+    <Setter Property="FontSize" Value="25" />
+    <Setter Property="FontWeight" Value="Bold" />
+  </Style>
+  <Style Selector="TextBlock.h1">
+    <Setter Property="FontSize" Value="34" />
+    <Setter Property="FontWeight" Value="Bold" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+  </Style>
+  <Style Selector="TextBlock.h2">
+    <Setter Property="FontSize" Value="22" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+  </Style>
+  <Style Selector="TextBlock.muted">
+    <Setter Property="Foreground" Value="{DynamicResource TextMutedBrush}" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="TextWrapping" Value="Wrap" />
+  </Style>
+
+  <Style Selector="Button">
+    <Setter Property="CornerRadius" Value="5" />
+    <Setter Property="Padding" Value="12,8" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="Background" Value="{DynamicResource SurfaceAltBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+    <Setter Property="BorderThickness" Value="2" />
+  </Style>
+  <Style Selector="Button:pointerover">
+    <Setter Property="Background" Value="{DynamicResource GhostHoverBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}" />
+  </Style>
+  <Style Selector="Button:pressed">
+    <Setter Property="Background" Value="{DynamicResource GhostPressedBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource AccentPressedBrush}" />
+  </Style>
+  <Style Selector="Button:focus">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+  </Style>
+  <Style Selector="Button:focus-visible">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+    <Setter Property="BorderThickness" Value="3" />
+  </Style>
+
+  <Style Selector="Button.primary">
+    <Setter Property="Background" Value="{DynamicResource AccentBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource AccentTextBrush}" />
+  </Style>
+  <Style Selector="Button.primary:pointerover">
+    <Setter Property="Background" Value="{DynamicResource AccentHoverBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource AccentHoverBrush}" />
+  </Style>
+  <Style Selector="Button.primary:pressed">
+    <Setter Property="Background" Value="{DynamicResource AccentPressedBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource AccentPressedBrush}" />
+  </Style>
+  <Style Selector="Button.primary:focus">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+  </Style>
+  <Style Selector="Button.primary:focus-visible">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+    <Setter Property="BorderThickness" Value="3" />
+  </Style>
+
+  <Style Selector="Button.ghost">
+    <Setter Property="Background" Value="{DynamicResource SurfaceAltBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+  </Style>
+  <Style Selector="Button.ghost:pointerover">
+    <Setter Property="Background" Value="{DynamicResource GhostHoverBrush}" />
+  </Style>
+  <Style Selector="Button.ghost:pressed">
+    <Setter Property="Background" Value="{DynamicResource GhostPressedBrush}" />
+  </Style>
+  <Style Selector="Button.ghost:focus">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+  </Style>
+  <Style Selector="Button.ghost:focus-visible">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+    <Setter Property="BorderThickness" Value="3" />
+  </Style>
+
+  <Style Selector="Button.list">
+    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+    <Setter Property="Padding" Value="16,12" />
+  </Style>
+  <Style Selector="Button.list:pointerover">
+    <Setter Property="Background" Value="{DynamicResource SurfaceAltBrush}" />
+  </Style>
+  <Style Selector="Button.list:pressed">
+    <Setter Property="Background" Value="{DynamicResource GhostPressedBrush}" />
+  </Style>
+  <Style Selector="Button.list:focus">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+  </Style>
+  <Style Selector="Button.list:focus-visible">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+    <Setter Property="BorderThickness" Value="3" />
+  </Style>
+
+  <Style Selector="Button.home-tile">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderBrush" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="2" />
+  </Style>
+  <Style Selector="Button.home-tile:pointerover">
+    <Setter Property="Background" Value="{DynamicResource SurfaceAltBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}" />
+  </Style>
+  <Style Selector="Button.home-tile:pressed">
+    <Setter Property="Background" Value="{DynamicResource GhostPressedBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource AccentPressedBrush}" />
+  </Style>
+  <Style Selector="Button.home-tile:focus">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+  </Style>
+  <Style Selector="Button.home-tile:focus-visible">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+    <Setter Property="BorderThickness" Value="3" />
+  </Style>
+
+  <Style Selector="Button.window-control">
+    <Setter Property="MinWidth" Value="48" />
+    <Setter Property="Height" Value="45" />
+    <Setter Property="Padding" Value="10,6" />
+    <Setter Property="CornerRadius" Value="0" />
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderBrush" Value="Transparent" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+  </Style>
+  <Style Selector="Button.window-control:pointerover">
+    <Setter Property="Background" Value="{DynamicResource GhostHoverBrush}" />
+  </Style>
+  <Style Selector="Button.window-control:pressed">
+    <Setter Property="Background" Value="{DynamicResource GhostPressedBrush}" />
+  </Style>
+  <Style Selector="Button.window-control:focus">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+  </Style>
+  <Style Selector="Button.window-control:focus-visible">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+    <Setter Property="BorderThickness" Value="3" />
+  </Style>
+  <Style Selector="Button.window-control.close:pointerover">
+    <Setter Property="Background" Value="{DynamicResource DangerBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource DangerTextBrush}" />
+  </Style>
+  <Style Selector="Button.window-control.close:pressed">
+    <Setter Property="Background" Value="{DynamicResource DangerPressedBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource DangerTextBrush}" />
+  </Style>
+  <Style Selector="Button.window-control.close:focus">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+  </Style>
+  <Style Selector="Button.window-control.close:focus-visible">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+    <Setter Property="BorderThickness" Value="3" />
+  </Style>
+
+  <Style Selector="TextBox, ComboBox">
+    <Setter Property="CornerRadius" Value="5" />
+    <Setter Property="Padding" Value="10,8" />
+    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+    <Setter Property="BorderThickness" Value="2" />
+  </Style>
+  <Style Selector="TextBox">
+    <Setter Property="PlaceholderForeground" Value="{DynamicResource TextMutedBrush}" />
+  </Style>
+  <Style Selector="TextBox:pointerover, ComboBox:pointerover">
+    <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}" />
+  </Style>
+  <Style Selector="TextBox:pressed, ComboBox:pressed">
+    <Setter Property="Background" Value="{DynamicResource SurfaceAltBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource AccentPressedBrush}" />
+  </Style>
+  <Style Selector="TextBox:focus, ComboBox:focus">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+  </Style>
+  <Style Selector="TextBox:focus-visible, ComboBox:focus-visible">
+    <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+    <Setter Property="BorderThickness" Value="3" />
+  </Style>
+</Styles>

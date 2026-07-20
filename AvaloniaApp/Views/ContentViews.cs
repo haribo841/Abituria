@@ -103,13 +103,13 @@ public sealed class RoadmapView : UserControl
         if (catalog.Introduction.Count > 0)
             root.Children.Add(UiFactory.Card(new RichContentView(catalog.Introduction)));
 
-        AddGroup(root, catalog, RoadmapStatus.Migrated, "Przeniesione", "#19733B", focusedItemId);
-        AddGroup(root, catalog, RoadmapStatus.Planned, "Zaplanowane", "#8A5A00", focusedItemId);
-        AddGroup(root, catalog, RoadmapStatus.Superseded, "Zastąpione", "#5D6975", focusedItemId);
+        AddGroup(root, catalog, RoadmapStatus.Migrated, "Przeniesione", "SuccessBrush", focusedItemId);
+        AddGroup(root, catalog, RoadmapStatus.Planned, "Zaplanowane", "WarningBrush", focusedItemId);
+        AddGroup(root, catalog, RoadmapStatus.Superseded, "Zastąpione", "TextMutedBrush", focusedItemId);
         Content = UiFactory.PageScroll(root);
     }
 
-    private static void AddGroup(StackPanel root, RoadmapCatalog catalog, RoadmapStatus status, string title, string color, string? focusedItemId)
+    private static void AddGroup(StackPanel root, RoadmapCatalog catalog, RoadmapStatus status, string title, string colorResource, string? focusedItemId)
     {
         root.Children.Add(new TextBlock { Text = title, Classes = { "h2" }, Margin = new Thickness(0, 8, 0, 0) });
         var items = catalog.Items.Where(item => item.Status == status)
@@ -120,10 +120,17 @@ public sealed class RoadmapView : UserControl
             var panel = new StackPanel { Spacing = 5 };
             panel.Children.Add(new TextBlock { Text = item.Title, FontSize = 18, FontWeight = Avalonia.Media.FontWeight.SemiBold, TextWrapping = TextWrapping.Wrap });
             panel.Children.Add(new TextBlock { Text = item.Summary, Classes = { "muted" } });
-            panel.Children.Add(new TextBlock { Text = $"Obszar: {item.Context} · Źródła: {string.Join(", ", item.SourceRefs)}", FontSize = 12, Foreground = UiFactory.Brush("#5D6975"), TextWrapping = TextWrapping.Wrap });
+            var source = new TextBlock
+            {
+                Text = $"Obszar: {item.Context} · Źródła: {string.Join(", ", item.SourceRefs)}",
+                FontSize = 12,
+                TextWrapping = TextWrapping.Wrap
+            };
+            UiFactory.UseResource(source, TextBlock.ForegroundProperty, "TextMutedBrush");
+            panel.Children.Add(source);
             var focused = string.Equals(item.Id, focusedItemId, StringComparison.Ordinal);
-            var card = UiFactory.Card(panel, new Thickness(16), focused ? "#FFF8E8" : "#FFFFFF");
-            card.BorderBrush = UiFactory.Brush(focused ? color : "#D8DEE4");
+            var card = UiFactory.Card(panel, new Thickness(16), focused ? "WarningSurfaceBrush" : "SurfaceBrush");
+            UiFactory.UseResource(card, Border.BorderBrushProperty, focused ? colorResource : "BorderBrush");
             card.BorderThickness = new Thickness(focused ? 2 : 1);
             root.Children.Add(card);
         }

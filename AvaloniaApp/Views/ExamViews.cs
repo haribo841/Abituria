@@ -173,7 +173,7 @@ public sealed record ExerciseViewContext(
 public sealed class ExerciseView : UserControl
 {
     private readonly TextBlock _status = new() { TextWrapping = TextWrapping.Wrap };
-    private readonly Border _hintHost = UiFactory.Card(new TextBlock { Text = "Podpowiedź pojawi się tutaj.", Classes = { "muted" } }, new Thickness(16), "#F7FAFC");
+    private readonly Border _hintHost = UiFactory.Card(new TextBlock { Text = "Podpowiedź pojawi się tutaj.", Classes = { "muted" } }, new Thickness(16), "SurfaceAltBrush");
     private int _hintIndex;
     private int? _selectedOption;
 
@@ -232,7 +232,8 @@ public sealed class ExerciseView : UserControl
     {
         root.Children.Add(UiFactory.PageTitle(exercise.Title, exercise.IsMultipleChoice ? "Wybierz jedną odpowiedź." : "Rozwiązuj samodzielnie i odsłaniaj kolejne wskazówki."));
         root.Children.Add(UiFactory.Card(new RichContentView([new ContentBlock { Type = "richText", Text = exercise.Prompt }])));
-        foreach (var asset in exercise.Assets) root.Children.Add(UiFactory.Card(UiFactory.AssetImage(asset, 820, 470)));
+        foreach (var asset in exercise.Assets)
+            root.Children.Add(UiFactory.Card(UiFactory.AssetImage(asset, 820, 470, $"Ilustracja do zadania {exercise.Number}")));
     }
 
     private static void AddScratchpad(StackPanel root)
@@ -276,6 +277,9 @@ public sealed class ExerciseView : UserControl
         root.Children.Add(UiFactory.Card(options));
 
         var check = new Button { Content = "Sprawdź odpowiedź", Classes = { "primary" }, HorizontalAlignment = HorizontalAlignment.Left };
+        AutomationProperties.SetHelpText(
+            check,
+            "Poprawna odpowiedź zostanie zapisana w lokalnym profilu jako ukończone zadanie.");
         check.Click += async (_, _) =>
         {
             if (_selectedOption is null) { ShowStatus("Najpierw wybierz odpowiedź.", false); return; }
@@ -291,7 +295,15 @@ public sealed class ExerciseView : UserControl
 
     private void AddRevealControl(StackPanel root, ExerciseDefinition exercise, ExerciseViewContext context)
     {
-        var reveal = new Button { Content = "Pokaż odpowiedź", Classes = { "primary" }, HorizontalAlignment = HorizontalAlignment.Left };
+        var reveal = new Button
+        {
+            Content = "Pokaż odpowiedź i oznacz jako ukończone",
+            Classes = { "primary" },
+            HorizontalAlignment = HorizontalAlignment.Left
+        };
+        AutomationProperties.SetHelpText(
+            reveal,
+            "Akcja ujawni odpowiedź i zapisze zadanie w lokalnym profilu jako ukończone.");
         reveal.Click += async (_, _) =>
         {
             _hintHost.Child = RichContentView.CreateText(exercise.RevealedAnswer ?? "Brak zapisanej odpowiedzi.");
@@ -316,7 +328,7 @@ public sealed class ExerciseView : UserControl
     private void ShowStatus(string message, bool success)
     {
         _status.Text = message;
-        _status.Foreground = UiFactory.Brush(success ? "#19733B" : "#B42318");
+        UiFactory.UseResource(_status, TextBlock.ForegroundProperty, success ? "SuccessBrush" : "ErrorBrush");
     }
 
     private static string FormatVerifiedOn(string value) =>

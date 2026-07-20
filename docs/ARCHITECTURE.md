@@ -14,7 +14,9 @@ Najważniejsze decyzje architektoniczne:
 - usługi aplikacyjne rejestrowane w prostym kontenerze DI z `Microsoft.Extensions.DependencyInjection`,
 - lokalna baza SQLite przez Entity Framework Core,
 - kalkulatory jako logika domenowa niezależna od UI,
-- treści statyczne poza kodem produkcyjnym.
+- treści statyczne poza kodem produkcyjnym,
+- zasoby motywu i stany interakcji współdzielone przez wszystkie widoki,
+- adaptacyjne układy oparte na szerokości rzeczywistego widoku, a nie na wykrywaniu systemu operacyjnego.
 
 ## Diagram komponentów
 
@@ -106,6 +108,38 @@ Stan nawigacji jest scentralizowany w `AppViewModel`:
 
 Widoki są zwykłymi kontrolkami Avalonia `UserControl`. Produkcyjny kod nie używa WPF `Page`, `Frame` ani `NavigationWindow`. Regresja `NavigationArchitectureTests` pilnuje też, żeby kod produkcyjny nie wrócił do niemodalnego otwierania wielu okien.
 
+### Własny chrome okna
+
+`MainWindow` wyłącza dekoracje systemowe przez `WindowDecorations="None"`, czyli aktualny mechanizm Avalonia 12 zastępujący starsze `SystemDecorations`, i rozszerza obszar klienta na pasek tytułu. Własny chrome składa się z:
+
+- obszaru przeciągania wywołującego `BeginMoveDrag`;
+- dwukliku przełączającego `WindowState` między `Normal` i `Maximized`;
+- przycisków motywu, minimalizacji, maksymalizacji lub przywrócenia i zamknięcia;
+- ośmiu przezroczystych uchwytów wywołujących `BeginResizeDrag` dla czterech krawędzi i czterech narożników;
+- aktualizacji nazwy automatyzacji i symbolu przycisku maksymalizacji po zmianie stanu okna.
+
+Uchwyty są aktywne tylko dla zwykłego, skalowalnego okna. Każdy widoczny przycisk chrome ma tooltip, `AutomationId`, opisową nazwę i jawny stan `focus-visible`.
+
+### Motywy i zasoby wizualne
+
+`AppStyles.axaml` zawiera font Mulish, wspólne style oraz słowniki wariantu jasnego i ciemnego. `AppThemeManager` przełącza ustawienie systemowe, jasne, ciemne i wysokiego kontrastu oraz reaguje na zmianę preferencji kontrastu platformy. Tryb wysokiego kontrastu podstawia dynamiczne zasoby palety bez przebudowania widoku.
+
+Kolory w widokach są wiązane przez `DynamicResource`. `UiFactory` przypisuje semantyczne klucze, takie jak `SurfaceBrush`, `TextPrimaryBrush`, `SuccessBrush` i `ErrorBrush`; aktywne widoki nie utrzymują własnych literałów kolorów. Dzięki temu komunikaty i karty zmieniają kolor razem z motywem.
+
+Style przycisków, pól tekstowych i pól wyboru definiują osobno `:pointerover`, `:pressed`, `:focus` oraz `:focus-visible`. Stan klawiaturowego fokusu używa kontrastowej ramki. Palety i zasady ich weryfikacji opisuje `ACCESSIBILITY_WCAG_AUDIT.md`.
+
+### Układy adaptacyjne i dialogi
+
+`AdaptiveLayout.ObserveWidth` obserwuje rzeczywistą szerokość kontrolki i przełącza ten sam logiczny zestaw dzieci między wariantem szerokim i kompaktowym:
+
+- `LoginView` przechodzi z dwóch kolumn do dwóch wierszy poniżej `860`;
+- `HomeView` przechodzi z dwóch kolumn kafli do jednej poniżej `780`;
+- `GeneralCalculatorView` przenosi historię pod kalkulator poniżej `900`.
+
+Zmiana `Grid.Row` i `Grid.Column` nie zmienia kolejności dzieci w drzewie logicznym, dlatego reflow nie powinien zmieniać kolejności klawiaturowej ani automatyzacji.
+
+`AdaptiveLayout.CreateDialog` tworzy wspólny, modalny dialog kodu odzyskiwania z `CanResize=true`, zakresem `340x220` do `720x640`, wymiarem początkowym zależnym od właściciela i pionowym przewijaniem. Login i Profil używają tej samej fabryki zamiast stałych, nieskalowalnych okien.
+
 ## Konta, bezpieczeństwo i dane lokalne
 
 `AccountService` obsługuje:
@@ -158,7 +192,8 @@ Projekt ma testy dla głównych warstw:
 - `CalculatorSessionTests`, `HistorySemanticsTests`, `RepeatedEqualsTests` - historia, `Ans` i powtarzanie `=`,
 - `NavigationArchitectureTests` - brak powrotu do WPF i niekontrolowanego otwierania okien,
 - `ExerciseAndRoutingCoverageTests` - headless UI dla routingu i zadań,
-- `Discussion10VisualRegressionTests` - układ inline, listy matematyczne i regresje wizualne.
+- `Discussion10VisualRegressionTests` - układ inline, listy matematyczne i regresje wizualne,
+- `Discussion49StyleRegressionTests` - font, własny chrome, stany interakcji, widoczny fokus, motywy, breakpointy, dialogi i koszt renderowania,
 - `ReleaseRuntimeTests`, `AboutViewTests` - izolowany smoke test, metadane builda i ekran "O programie",
 - `ContentProvenanceTests` - kompletność i jednoznaczność pochodzenia paczkowanych zasobów.
 
@@ -179,6 +214,7 @@ Historyczne issue #33 opisywało plan oparty o WPF i częściowo nieprecyzyjne r
 - `README.md` - uruchomienie, funkcje i skrócona struktura,
 - `docs/BUSINESS_ANALYSIS.md` - uzasadnienie produktu, interesariusze, model udostępniania, ryzyka i kamienie milowe,
 - `docs/REQUIREMENTS.md` - aktywny dokument wymagań projektowych,
+- `docs/ACCESSIBILITY_WCAG_AUDIT.md` - pełna macierz WCAG 2.2 A/AA i ograniczenia dowodów,
 - `docs/MIGRATION_INVENTORY.md` - mapowanie starych wersji WPF na aktualny kod Avalonia,
 - `docs/CONTENT_AUTHORING.md` - zasady edycji treści i podglądu materiałów,
 - `docs/CALCULATOR_TEST_MATRIX.md` - macierz regresji kalkulatora,

@@ -8,7 +8,6 @@ Ten dokument jest generowany przez `tools/Generate-DependencyDocumentation.ps1` 
 | --- | --- | --- | --- | --- |
 | `Avalonia` | `12.0.4` | produkcyjna i testowa | Podstawowy framework interfejsu desktopowego. | MIT |
 | `Avalonia.Desktop` | `12.0.4` | produkcyjna i testowa | Klasyczny cykl życia aplikacji desktopowej i backendy systemowe. | MIT |
-| `Avalonia.Fonts.Inter` | `12.0.4` | produkcyjna i testowa | Domyślna czcionka interfejsu Avalonia. | MIT |
 | `Avalonia.Headless.XUnit` | `12.0.4` | testowa | Testy interfejsu bez ekranu. | MIT |
 | `Avalonia.Themes.Fluent` | `12.0.4` | produkcyjna i testowa | Motyw i kontrolki Fluent. | MIT |
 | `CommunityToolkit.Mvvm` | `8.4.2` | produkcyjna i testowa | Elementy modelu MVVM. | MIT |
@@ -37,13 +36,15 @@ Tabela obejmuje również zależności przechodnie. Dokładne grafy dla każdego
 
 `Avalonia.BuildServices 11.3.2` nie jest bezpośrednią zależnością Abiturii. Pozostaje wyłącznie przechodnim narzędziem czasu kompilacji wymaganym przez metapakiet `Avalonia 12.0.4` i nie należy do grafu runtime publikowanej aplikacji.
 
+`Avalonia.Fonts.Inter 12.0.4` występuje wyłącznie jako przechodnia zależność `Avalonia.Headless` w projekcie testowym. Nie jest bezpośrednią zależnością, nie należy do grafu produkcyjnego i nie jest fontem interfejsu Abiturii; aplikacja używa paczkowanego fontu Mulish.
+
 | Pakiet | Wersja | Zakres | Typ | Licencja |
 | --- | --- | --- | --- | --- |
 | `Avalonia` | `12.0.4` | produkcyjna i testowa | bezpośrednia | MIT |
 | `Avalonia.Angle.Windows.Natives` | `2.1.27548.20260419` | produkcyjna i testowa | przechodnia | BSD-3-Clause (LICENSE w pakiecie) |
 | `Avalonia.BuildServices` | `11.3.2` | produkcyjna i testowa | przechodnia | MIT |
 | `Avalonia.Desktop` | `12.0.4` | produkcyjna i testowa | bezpośrednia | MIT |
-| `Avalonia.Fonts.Inter` | `12.0.4` | produkcyjna i testowa | bezpośrednia | MIT |
+| `Avalonia.Fonts.Inter` | `12.0.4` | testowa | przechodnia | MIT |
 | `Avalonia.FreeDesktop` | `12.0.4` | produkcyjna i testowa | przechodnia | MIT |
 | `Avalonia.FreeDesktop.AtSpi` | `12.0.4` | produkcyjna i testowa | przechodnia | MIT |
 | `Avalonia.HarfBuzz` | `12.0.4` | produkcyjna i testowa | przechodnia | MIT |

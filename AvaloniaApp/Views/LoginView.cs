@@ -35,9 +35,21 @@ public sealed class LoginView : UserControl
 
     private Grid Build(UiCopyCatalog copy)
     {
-        var root = new Grid { ColumnDefinitions = new ColumnDefinitions("1.05*,0.95*"), ColumnSpacing = 24, Margin = new Thickness(30) };
+        var root = new Grid
+        {
+            Name = "LoginLayoutRoot",
+            ColumnDefinitions = new ColumnDefinitions("1.05*,0.95*"),
+            ColumnSpacing = 24,
+            Margin = new Thickness(30)
+        };
         var intro = new StackPanel { Spacing = 18 };
-        intro.Children.Add(UiFactory.AssetImage("img/abituria.png", 230, 92));
+        intro.Children.Add(new Border
+        {
+            Name = "LoginBrandLogoSurface",
+            Classes = { "brand-logo-surface" },
+            HorizontalAlignment = HorizontalAlignment.Left,
+            Child = UiFactory.AssetImage("img/abituria.png", 230, 92, "Logo Abituria")
+        });
         intro.Children.Add(new TextBlock { Text = "Twój matematyczny korepetytor", Classes = { "h1" }, TextWrapping = TextWrapping.Wrap });
         intro.Children.Add(new TextBlock
         {
@@ -47,7 +59,8 @@ public sealed class LoginView : UserControl
         });
         intro.Children.Add(UiFactory.InfoBand("Materiały", "18 tablic, 7 działów i 35 zadań z matury poprawkowej 2021."));
         intro.Children.Add(UiFactory.InfoBand("Prywatność", "Aplikacja działa offline i nie wysyła danych konta poza komputer."));
-        root.Children.Add(UiFactory.Card(intro, new Thickness(30)));
+        var introCard = UiFactory.Card(intro, new Thickness(30));
+        root.Children.Add(introCard);
 
         var forms = new StackPanel { Spacing = 12 };
         forms.Children.Add(new TextBlock { Text = "Logowanie", Classes = { "h2" } });
@@ -113,9 +126,24 @@ public sealed class LoginView : UserControl
         forms.Children.Add(_status);
 
         var scroll = new ScrollViewer { Content = forms, VerticalScrollBarVisibility = Avalonia.Controls.Primitives.ScrollBarVisibility.Auto };
-        var panel = UiFactory.Card(scroll, new Thickness(26), "#FAFCFD");
+        var panel = UiFactory.Card(scroll, new Thickness(26));
         Grid.SetColumn(panel, 1);
         root.Children.Add(panel);
+
+        AdaptiveLayout.ObserveWidth(this, 860, isCompact =>
+        {
+            root.ColumnDefinitions = new ColumnDefinitions(isCompact ? "*" : "1.05*,0.95*");
+            root.RowDefinitions = new RowDefinitions(isCompact ? "Auto,*" : "*");
+            root.ColumnSpacing = isCompact ? 0 : 24;
+            root.RowSpacing = isCompact ? 16 : 0;
+            root.Margin = new Thickness(isCompact ? 16 : 30);
+
+            Grid.SetColumn(introCard, 0);
+            Grid.SetRow(introCard, 0);
+            Grid.SetColumn(panel, isCompact ? 0 : 1);
+            Grid.SetRow(panel, isCompact ? 1 : 0);
+        });
+
         return root;
     }
 
@@ -151,31 +179,34 @@ public sealed class LoginView : UserControl
 
     private async Task ShowRecoveryCodeAsync(string code)
     {
+        if (TopLevel.GetTopLevel(this) is not Window owner) return;
+
         var box = new TextBox { Text = code, IsReadOnly = true, HorizontalAlignment = HorizontalAlignment.Stretch };
         AutomationProperties.SetName(box, "Nowy kod odzyskiwania");
         var copy = new Button { Content = "Kopiuj kod", Classes = { "primary" } };
-        var dialog = new Window { Title = "Kod odzyskiwania", Width = 520, Height = 230, CanResize = false };
-        var panel = new StackPanel { Spacing = 14, Margin = new Thickness(24) };
+        var panel = new StackPanel { Spacing = 14 };
         panel.Children.Add(new TextBlock { Text = "Zapisz ten kod. Po zamknięciu okna aplikacja nie pokaże go ponownie.", TextWrapping = TextWrapping.Wrap });
         panel.Children.Add(box);
+        var dialog = AdaptiveLayout.CreateDialog(owner, "Kod odzyskiwania", panel, preferredWidth: 560, preferredHeight: 300);
         copy.Click += async (_, _) =>
         {
             if (dialog.Clipboard is not null) await dialog.Clipboard.SetTextAsync(code);
         };
         var close = new Button { Content = "Zamknij", Classes = { "ghost" } };
         close.Click += (_, _) => dialog.Close();
-        var buttons = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 10 };
+        var buttons = new WrapPanel { Orientation = Orientation.Horizontal };
+        copy.Margin = new Thickness(0, 0, 10, 8);
+        close.Margin = new Thickness(0, 0, 0, 8);
         buttons.Children.Add(copy);
         buttons.Children.Add(close);
         panel.Children.Add(buttons);
-        dialog.Content = panel;
-        if (TopLevel.GetTopLevel(this) is Window owner) await dialog.ShowDialog(owner);
+        await dialog.ShowDialog(owner);
     }
 
     private void ShowResult(string message, bool success)
     {
         _status.Text = message;
-        _status.Foreground = UiFactory.Brush(success ? "#19733B" : "#B42318");
+        UiFactory.UseResource(_status, TextBlock.ForegroundProperty, success ? "SuccessBrush" : "ErrorBrush");
     }
 
     private static TextBox PasswordBox(string placeholder)
@@ -190,7 +221,11 @@ public sealed class LoginView : UserControl
         return box;
     }
     private static void ClearSecrets(params TextBox[] boxes) { foreach (var box in boxes) box.Text = string.Empty; }
-    private static Border Separator() => new() { Height = 1, Background = UiFactory.Brush("#D8DEE4"), Margin = new Thickness(0, 8) };
+    private static Border Separator()
+    {
+        var separator = new Border { Height = 1, Margin = new Thickness(0, 8) };
+        return UiFactory.UseResource(separator, Border.BackgroundProperty, "BorderBrush");
+    }
     private sealed record ProfileChoice(LocalProfile Profile)
     {
         public override string ToString() => Profile.Kind == ProfileKind.Guest ? $"{Profile.DisplayName} (gość)" : Profile.DisplayName;

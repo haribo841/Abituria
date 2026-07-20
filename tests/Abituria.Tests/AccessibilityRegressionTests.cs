@@ -76,6 +76,53 @@ public sealed class AccessibilityRegressionTests
         Assert.Contains(controls, control => AutomationProperties.GetName(control) == "Brudnopis do zadania");
         var status = Assert.Single(controls, control => AutomationProperties.GetName(control) == "Wynik sprawdzania zadania");
         Assert.Equal(AutomationLiveSetting.Polite, AutomationProperties.GetLiveSetting(status));
+        var check = Assert.Single(
+            controls.OfType<Button>(),
+            button => string.Equals(button.Content as string, "Sprawdź odpowiedź", StringComparison.Ordinal));
+        Assert.Contains("zapisana", AutomationProperties.GetHelpText(check), StringComparison.OrdinalIgnoreCase);
+
+        var openExercise = new ExerciseDefinition
+        {
+            Id = "open",
+            Number = 4,
+            Title = "Zadanie otwarte",
+            Mode = "open",
+            Prompt = "Treść testowa.",
+            RevealedAnswer = "Odpowiedź testowa.",
+            VerificationSource = "test",
+            SourcePage = 4
+        };
+        var openView = new ExerciseView(openExercise, context);
+        var reveal = Assert.Single(
+            openView.GetLogicalDescendants().OfType<Button>(),
+            button => string.Equals(
+                button.Content as string,
+                "Pokaż odpowiedź i oznacz jako ukończone",
+                StringComparison.Ordinal));
+        Assert.Contains("zapisze", AutomationProperties.GetHelpText(reveal), StringComparison.OrdinalIgnoreCase);
+    }
+
+    [AvaloniaFact]
+    public void Profile_password_fields_progress_and_status_expose_accessibility_metadata()
+    {
+        var accounts = new AccountService(
+            new AppDbContextFactory(Path.Combine(Path.GetTempPath(), "Abituria.Tests", "accessibility-profile.db")),
+            new PasswordHasher(1_000));
+        var profile = new LocalProfile(Guid.NewGuid(), "Tester", ProfileKind.Password);
+        var view = new ProfileView(profile, accounts, () => { });
+        var controls = view.GetLogicalDescendants().OfType<Control>().ToArray();
+
+        foreach (var name in new[] { "Bieżące hasło", "Nowe hasło", "Powtórz nowe hasło" })
+            Assert.Contains(controls, control => AutomationProperties.GetName(control) == name);
+
+        var progress = Assert.Single(controls, control => AutomationProperties.GetName(control) == "Postęp w zadaniach");
+        Assert.Equal(AutomationLiveSetting.Polite, AutomationProperties.GetLiveSetting(progress));
+        var status = Assert.Single(controls, control => AutomationProperties.GetName(control) == "Status profilu");
+        Assert.Equal(AutomationLiveSetting.Polite, AutomationProperties.GetLiveSetting(status));
+
+        var profileSource = File.ReadAllText(
+            Path.Combine(FindRepositoryRoot(), "AvaloniaApp", "Views", "ProfileView.cs"));
+        Assert.Contains("Nowy kod odzyskiwania", profileSource, StringComparison.Ordinal);
     }
 
     private static ExerciseDefinition Exercise(string id, int number, string title) => new()
@@ -90,4 +137,16 @@ public sealed class AccessibilityRegressionTests
         VerificationSource = "test",
         SourcePage = number
     };
+
+    private static string FindRepositoryRoot()
+    {
+        var directory = new DirectoryInfo(AppContext.BaseDirectory);
+        while (directory is not null)
+        {
+            if (File.Exists(Path.Combine(directory.FullName, "Abituria.sln"))) return directory.FullName;
+            directory = directory.Parent;
+        }
+
+        throw new DirectoryNotFoundException("Nie znaleziono katalogu repozytorium Abituria.");
+    }
 }

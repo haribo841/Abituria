@@ -19,6 +19,36 @@ Górna nawigacja po zalogowaniu zawiera:
 - **Profil** - postęp i zmiana hasła;
 - **O programie** - wersja, commit, licencja, autor i repozytorium.
 
+## Okno, motywy i dostępność
+
+Abituria używa własnego paska tytułu. Jego prawa część zawiera kolejno:
+
+- przycisk motywu;
+- minimalizację;
+- maksymalizację albo przywrócenie;
+- zamknięcie aplikacji.
+
+Przeciągnięcie pustego obszaru paska przenosi okno, a dwuklik maksymalizuje je lub przywraca. Rozmiar zwykłego okna można zmieniać z każdej krawędzi i narożnika. Minimalny obsługiwany rozmiar to `720x520`.
+
+Przycisk motywu przełącza cyklicznie ustawienia:
+
+1. Systemowy.
+2. Jasny.
+3. Ciemny.
+4. Wysoki kontrast.
+
+Ustawienie systemowe śledzi jasny lub ciemny wariant systemu, a po wykryciu systemowej preferencji wysokiego kontrastu włącza kontrastową paletę aplikacji. Zmiana działa od razu, bez zamykania widoku.
+
+Interfejs używa kroju Mulish. Teksty, karty i komunikaty korzystają ze wspólnych zasobów kolorów, a elementy interaktywne mają osobne stany najechania, naciśnięcia i fokusu. Przy obsłudze klawiaturą aktywna kontrolka ma wyraźną kontrastową ramkę.
+
+Układ dostosowuje się do szerokości:
+
+- formularz logowania układa sekcje pionowo poniżej `860`;
+- kafle Start przechodzą do jednej kolumny poniżej `780`;
+- historia kalkulatora ogólnego przechodzi pod klawiaturę poniżej `900`.
+
+Dialogi kodu odzyskiwania można skalować. Jeżeli treść nie mieści się w oknie, pojawia się pionowe przewijanie. Szczegółowy zakres automatycznych i manualnych kontroli zawiera [audyt WCAG 2.2 A/AA](ACCESSIBILITY_WCAG_AUDIT.md).
+
 ## Profile i konta
 
 ### Profil gościa

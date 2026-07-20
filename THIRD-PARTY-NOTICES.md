@@ -14,7 +14,6 @@ Każda paczka zawiera także `licenses/nuget/manifest.json`, nuspec oraz dostęp
 | `Avalonia.Angle.Windows.Natives` | `2.1.27548.20260419` | BSD-3-Clause (LICENSE w pakiecie) | [NuGet](https://www.nuget.org/packages/Avalonia.Angle.Windows.Natives/2.1.27548.20260419) |
 | `Avalonia.BuildServices` | `11.3.2` | MIT | [NuGet](https://www.nuget.org/packages/Avalonia.BuildServices/11.3.2) |
 | `Avalonia.Desktop` | `12.0.4` | MIT | [NuGet](https://www.nuget.org/packages/Avalonia.Desktop/12.0.4) |
-| `Avalonia.Fonts.Inter` | `12.0.4` | MIT | [NuGet](https://www.nuget.org/packages/Avalonia.Fonts.Inter/12.0.4) |
 | `Avalonia.FreeDesktop` | `12.0.4` | MIT | [NuGet](https://www.nuget.org/packages/Avalonia.FreeDesktop/12.0.4) |
 | `Avalonia.FreeDesktop.AtSpi` | `12.0.4` | MIT | [NuGet](https://www.nuget.org/packages/Avalonia.FreeDesktop.AtSpi/12.0.4) |
 | `Avalonia.HarfBuzz` | `12.0.4` | MIT | [NuGet](https://www.nuget.org/packages/Avalonia.HarfBuzz/12.0.4) |

@@ -8,10 +8,13 @@ using Abituria.Ui;
 using Abituria.ViewModels;
 using Abituria.Views;
 using Avalonia;
+using Avalonia.Automation;
 using Avalonia.Controls;
+using Avalonia.Input;
+using Avalonia.Interactivity;
 using Avalonia.Layout;
 using Avalonia.Markup.Xaml;
-using Avalonia.Media;
+using Avalonia.Platform;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Abituria;
@@ -23,7 +26,11 @@ public partial class MainWindow : Window
     private readonly ContentRepository _content;
     private readonly CalculatorSession _calculatorSession;
     private readonly AppBuildInfo _buildInfo;
+    private readonly AppThemeManager _themeManager;
     private Border _shellHost = null!;
+    private Button? _themeButton;
+    private Button? _maximizeButton;
+    private Grid? _resizeGrips;
 
     public MainWindow() : this(
         App.Services.GetRequiredService<AppViewModel>(),
@@ -53,6 +60,16 @@ public partial class MainWindow : Window
         _buildInfo = buildInfo;
         InitializeComponent();
         _shellHost = this.FindControl<Border>("ShellHost") ?? throw new InvalidOperationException("Nie znaleziono ShellHost.");
+        _themeButton = this.FindControl<Button>("ThemeButton") ?? throw new InvalidOperationException("Nie znaleziono ThemeButton.");
+        _maximizeButton = this.FindControl<Button>("MaximizeButton") ?? throw new InvalidOperationException("Nie znaleziono MaximizeButton.");
+        _resizeGrips = this.FindControl<Grid>("ResizeGrips") ?? throw new InvalidOperationException("Nie znaleziono ResizeGrips.");
+        _themeManager = new AppThemeManager(Application.Current ?? throw new InvalidOperationException("Aplikacja nie została zainicjalizowana."));
+        _themeManager.ModeChanged += ThemeManagerOnModeChanged;
+        Opened += MainWindowOnOpened;
+        Closed += MainWindowOnClosed;
+        ConfigureWindowControlAccessibility();
+        UpdateThemeButton();
+        UpdateWindowChromeState();
         _viewModel.PropertyChanged += ViewModelOnPropertyChanged;
         Render();
     }
@@ -72,7 +89,7 @@ public partial class MainWindow : Window
             return;
         }
 
-        var root = new Grid { RowDefinitions = new RowDefinitions("Auto,*"), Background = UiFactory.Brush("#F3F5F7") };
+        var root = new Grid { RowDefinitions = new RowDefinitions("Auto,*"), Classes = { "app-shell" } };
         root.Children.Add(BuildTopBar());
         var body = BuildPage();
         Grid.SetRow(body, 1);
@@ -84,15 +101,13 @@ public partial class MainWindow : Window
     {
         var header = new Border
         {
-            Background = UiFactory.Brush("#FFFFFF"),
-            BorderBrush = UiFactory.Brush("#D8DEE4"),
-            BorderThickness = new Thickness(0, 0, 0, 1),
             Padding = new Thickness(22, 11)
         };
+        header.Classes.Add("app-header");
         var grid = new Grid { ColumnDefinitions = new ColumnDefinitions("Auto,*,Auto"), ColumnSpacing = 18 };
         var brand = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 10, VerticalAlignment = VerticalAlignment.Center };
-        brand.Children.Add(UiFactory.AssetImage("img/icon.png", 34, 34));
-        brand.Children.Add(new TextBlock { Text = "Abituria", FontSize = 25, FontWeight = FontWeight.Bold, VerticalAlignment = VerticalAlignment.Center });
+        brand.Children.Add(UiFactory.AssetImage("img/icon.png", 34, 34, "Logo Abituria"));
+        brand.Children.Add(new TextBlock { Text = "Abituria", Classes = { "brand-text" }, VerticalAlignment = VerticalAlignment.Center });
         grid.Children.Add(brand);
 
         var nav = new WrapPanel { HorizontalAlignment = HorizontalAlignment.Center, VerticalAlignment = VerticalAlignment.Center };
@@ -201,5 +216,114 @@ public partial class MainWindow : Window
     {
         var placeholder = _content.Placeholders.Items.Single(item => item.Id == id);
         _viewModel.OpenPlaceholder(placeholder);
+    }
+
+    private void MainWindowOnOpened(object? sender, EventArgs e) =>
+        _themeManager.AttachPlatformSettings(Application.Current?.TryGetFeature(typeof(IPlatformSettings)) as IPlatformSettings);
+
+    private void MainWindowOnClosed(object? sender, EventArgs e)
+    {
+        _viewModel.PropertyChanged -= ViewModelOnPropertyChanged;
+        _themeManager.ModeChanged -= ThemeManagerOnModeChanged;
+        _themeManager.Dispose();
+    }
+
+    private void ConfigureWindowControlAccessibility()
+    {
+        var themeButton = _themeButton ?? throw new InvalidOperationException("Nie znaleziono ThemeButton.");
+        var maximizeButton = _maximizeButton ?? throw new InvalidOperationException("Nie znaleziono MaximizeButton.");
+        var minimizeButton = this.FindControl<Button>("MinimizeButton") ?? throw new InvalidOperationException("Nie znaleziono MinimizeButton.");
+        var closeButton = this.FindControl<Button>("CloseButton") ?? throw new InvalidOperationException("Nie znaleziono CloseButton.");
+
+        AutomationProperties.SetName(themeButton, "Zmień motyw aplikacji");
+        AutomationProperties.SetAutomationId(themeButton, "ThemeButton");
+        AutomationProperties.SetName(minimizeButton, "Minimalizuj okno");
+        AutomationProperties.SetAutomationId(minimizeButton, "MinimizeButton");
+        AutomationProperties.SetAutomationId(maximizeButton, "MaximizeButton");
+        AutomationProperties.SetName(closeButton, "Zamknij okno");
+        AutomationProperties.SetAutomationId(closeButton, "CloseButton");
+    }
+
+    private void ThemeManagerOnModeChanged(object? sender, EventArgs e) => UpdateThemeButton();
+
+    private void ThemeButtonOnClick(object? sender, RoutedEventArgs e) => _themeManager.Cycle();
+
+    private void UpdateThemeButton()
+    {
+        if (_themeButton is null)
+            return;
+
+        _themeButton.Content = $"Motyw: {_themeManager.DisplayName}";
+        AutomationProperties.SetHelpText(_themeButton, $"Aktualny motyw: {_themeManager.DisplayName}. Aktywuj, aby wybrać następny motyw.");
+    }
+
+    private void MinimizeButtonOnClick(object? sender, RoutedEventArgs e) => WindowState = WindowState.Minimized;
+
+    private void MaximizeButtonOnClick(object? sender, RoutedEventArgs e) => ToggleMaximize();
+
+    private void CloseButtonOnClick(object? sender, RoutedEventArgs e) => Close();
+
+    private void TitleBarOnPointerPressed(object? sender, PointerPressedEventArgs e)
+    {
+        if (!e.GetCurrentPoint(this).Properties.IsLeftButtonPressed)
+            return;
+
+        if (e.ClickCount == 2)
+        {
+            ToggleMaximize();
+            e.Handled = true;
+            return;
+        }
+
+        BeginMoveDrag(e);
+        e.Handled = true;
+    }
+
+    private void ToggleMaximize() =>
+        WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
+
+    private void ResizeNorthOnPointerPressed(object? sender, PointerPressedEventArgs e) => BeginResize(WindowEdge.North, e);
+
+    private void ResizeSouthOnPointerPressed(object? sender, PointerPressedEventArgs e) => BeginResize(WindowEdge.South, e);
+
+    private void ResizeWestOnPointerPressed(object? sender, PointerPressedEventArgs e) => BeginResize(WindowEdge.West, e);
+
+    private void ResizeEastOnPointerPressed(object? sender, PointerPressedEventArgs e) => BeginResize(WindowEdge.East, e);
+
+    private void ResizeNorthWestOnPointerPressed(object? sender, PointerPressedEventArgs e) => BeginResize(WindowEdge.NorthWest, e);
+
+    private void ResizeNorthEastOnPointerPressed(object? sender, PointerPressedEventArgs e) => BeginResize(WindowEdge.NorthEast, e);
+
+    private void ResizeSouthWestOnPointerPressed(object? sender, PointerPressedEventArgs e) => BeginResize(WindowEdge.SouthWest, e);
+
+    private void ResizeSouthEastOnPointerPressed(object? sender, PointerPressedEventArgs e) => BeginResize(WindowEdge.SouthEast, e);
+
+    private void BeginResize(WindowEdge edge, PointerPressedEventArgs e)
+    {
+        if (!CanResize || WindowState != WindowState.Normal || !e.GetCurrentPoint(this).Properties.IsLeftButtonPressed)
+            return;
+
+        BeginResizeDrag(edge, e);
+        e.Handled = true;
+    }
+
+    protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
+    {
+        base.OnPropertyChanged(change);
+
+        if (change.Property == WindowStateProperty)
+            UpdateWindowChromeState();
+    }
+
+    private void UpdateWindowChromeState()
+    {
+        if (_maximizeButton is null || _resizeGrips is null)
+            return;
+
+        var isMaximized = WindowState == WindowState.Maximized;
+        _resizeGrips.IsVisible = WindowState == WindowState.Normal;
+        _maximizeButton.Content = isMaximized ? "❐" : "□";
+        ToolTip.SetTip(_maximizeButton, isMaximized ? "Przywróć" : "Maksymalizuj");
+        AutomationProperties.SetName(_maximizeButton, isMaximized ? "Przywróć okno" : "Maksymalizuj okno");
     }
 }

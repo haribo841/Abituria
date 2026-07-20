@@ -42,7 +42,7 @@ if ([string]::IsNullOrWhiteSpace($docfxVersion) -or
 $purposes = @{
     "Avalonia" = "Podstawowy framework interfejsu desktopowego."
     "Avalonia.Desktop" = "Klasyczny cykl życia aplikacji desktopowej i backendy systemowe."
-    "Avalonia.Fonts.Inter" = "Domyślna czcionka interfejsu Avalonia."
+    "Avalonia.Fonts.Inter" = "Przechodnia zależność testowego hosta Avalonia Headless; interfejs produkcyjny używa fontu Mulish."
     "Avalonia.Themes.Fluent" = "Motyw i kontrolki Fluent."
     "CommunityToolkit.Mvvm" = "Elementy modelu MVVM."
     "Microsoft.EntityFrameworkCore.Sqlite" = "Trwałe profile i postęp w lokalnej bazie SQLite."
@@ -167,8 +167,15 @@ $avalonia = @($resolved | Where-Object Id -eq "Avalonia")
 if ($avalonia.Count -ne 1 -or -not $avalonia[0].Direct) {
     throw "Avalonia ma pozostać pojedynczą zależnością bezpośrednią."
 }
+$inter = @($resolved | Where-Object Id -eq "Avalonia.Fonts.Inter")
+if ($inter.Count -ne 1 -or $inter[0].Direct -or $inter[0].Scope -ne "testowa" -or
+    @($production | Where-Object Id -eq "Avalonia.Fonts.Inter").Count -ne 0) {
+    throw "Avalonia.Fonts.Inter może pozostać wyłącznie przechodnią zależnością testowego hosta headless."
+}
 $dependencyLines.Add("")
 $dependencyLines.Add("``Avalonia.BuildServices $($avaloniaBuildServices[0].Version)`` nie jest bezpośrednią zależnością Abiturii. Pozostaje wyłącznie przechodnim narzędziem czasu kompilacji wymaganym przez metapakiet ``Avalonia $($avalonia[0].Version)`` i nie należy do grafu runtime publikowanej aplikacji.")
+$dependencyLines.Add("")
+$dependencyLines.Add("``Avalonia.Fonts.Inter $($inter[0].Version)`` występuje wyłącznie jako przechodnia zależność ``Avalonia.Headless`` w projekcie testowym. Nie jest bezpośrednią zależnością, nie należy do grafu produkcyjnego i nie jest fontem interfejsu Abiturii; aplikacja używa paczkowanego fontu Mulish.")
 $dependencyLines.Add("")
 $dependencyLines.Add("| Pakiet | Wersja | Zakres | Typ | Licencja |")
 $dependencyLines.Add("| --- | --- | --- | --- | --- |")

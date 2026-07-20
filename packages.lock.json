@@ -27,15 +27,6 @@
           "Avalonia.X11": "12.0.4"
         }
       },
-      "Avalonia.Fonts.Inter": {
-        "type": "Direct",
-        "requested": "[12.0.4, )",
-        "resolved": "12.0.4",
-        "contentHash": "wXyoxswY4hD6Ly9iB9sojD4rZ104trm2Z1HWLgjHo/eZcBpwT6/T0CDOVp2PeN2wSd72bKlE0n3pFj9t/z7Ipw==",
-        "dependencies": {
-          "Avalonia": "12.0.4"
-        }
-      },
       "Avalonia.Themes.Fluent": {
         "type": "Direct",
         "requested": "[12.0.4, )",

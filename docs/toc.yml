@@ -10,6 +10,8 @@
   href: REQUIREMENTS.md
 - name: Testy końcowe
   href: TESTING.md
+- name: Audyt dostępności WCAG 2.2
+  href: ACCESSIBILITY_WCAG_AUDIT.md
 - name: Testy użyteczności
   href: USABILITY_TEST_PROTOCOL.md
 - name: Wyniki użyteczności i poprawki

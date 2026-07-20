@@ -27,7 +27,7 @@ public sealed class RichContentView : UserControl
                     stack.Children.Add(CreateText(block.Text));
                     break;
                 case "image" when !string.IsNullOrWhiteSpace(block.Asset):
-                    stack.Children.Add(UiFactory.AssetImage(block.Asset, 920, 560));
+                    stack.Children.Add(UiFactory.AssetImage(block.Asset, 920, 560, "Ilustracja matematyczna"));
                     break;
             }
         }
@@ -198,10 +198,10 @@ public sealed class RichContentView : UserControl
                 {
                     Child = text,
                     Padding = new Thickness(8, 6),
-                    Background = row == 0 ? UiFactory.Brush("#F1F5F9") : Brushes.White,
-                    BorderBrush = UiFactory.Brush("#D8DEE4"),
                     BorderThickness = new Thickness(0, 0, 1, 1)
                 };
+                UiFactory.UseResource(cell, Border.BackgroundProperty, row == 0 ? "SurfaceAltBrush" : "SurfaceBrush");
+                UiFactory.UseResource(cell, Border.BorderBrushProperty, "BorderBrush");
                 Grid.SetColumn(cell, column);
                 Grid.SetRow(cell, row);
                 grid.Children.Add(cell);

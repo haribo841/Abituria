@@ -4,6 +4,7 @@ using Abituria.Models;
 using Abituria.Services;
 using Abituria.Ui;
 using Avalonia;
+using Avalonia.Automation;
 using Avalonia.Controls;
 using Avalonia.Layout;
 using Avalonia.Media;
@@ -17,6 +18,11 @@ public sealed class ProfileView : UserControl
 
     public ProfileView(LocalProfile profile, AccountService accounts, Action logout)
     {
+        AutomationProperties.SetName(_progress, "Postęp w zadaniach");
+        AutomationProperties.SetLiveSetting(_progress, AutomationLiveSetting.Polite);
+        AutomationProperties.SetName(_status, "Status profilu");
+        AutomationProperties.SetLiveSetting(_status, AutomationLiveSetting.Polite);
+
         var root = new StackPanel { Spacing = 16 };
         root.Children.Add(UiFactory.PageTitle("Profil", "Konto i postęp zapisane lokalnie na tym urządzeniu."));
         root.Children.Add(UiFactory.InfoBand("Użytkownik", profile.DisplayName));
@@ -62,27 +68,35 @@ public sealed class ProfileView : UserControl
 
     private async Task ShowRecoveryCodeAsync(string code)
     {
-        var dialog = new Window { Title = "Nowy kod odzyskiwania", Width = 520, Height = 220, CanResize = false };
-        var panel = new StackPanel { Spacing = 12, Margin = new Thickness(24) };
+        if (TopLevel.GetTopLevel(this) is not Window owner) return;
+
+        var panel = new StackPanel { Spacing = 12 };
         panel.Children.Add(new TextBlock { Text = "Poprzedni kod utracił ważność. Zapisz nowy kod:", TextWrapping = TextWrapping.Wrap });
-        panel.Children.Add(new TextBox { Text = code, IsReadOnly = true });
+        var codeBox = new TextBox { Text = code, IsReadOnly = true, HorizontalAlignment = HorizontalAlignment.Stretch };
+        AutomationProperties.SetName(codeBox, "Nowy kod odzyskiwania");
+        panel.Children.Add(codeBox);
+        var dialog = AdaptiveLayout.CreateDialog(owner, "Nowy kod odzyskiwania", panel, preferredWidth: 560, preferredHeight: 280);
         var close = new Button { Content = "Zamknij", Classes = { "primary" }, HorizontalAlignment = HorizontalAlignment.Left };
         close.Click += (_, _) => dialog.Close();
         panel.Children.Add(close);
-        dialog.Content = panel;
-        if (TopLevel.GetTopLevel(this) is Window owner) await dialog.ShowDialog(owner);
+        await dialog.ShowDialog(owner);
     }
 
     private void ShowStatus(string message, bool success)
     {
         _status.Text = message;
-        _status.Foreground = UiFactory.Brush(success ? "#19733B" : "#B42318");
+        UiFactory.UseResource(_status, TextBlock.ForegroundProperty, success ? "SuccessBrush" : "ErrorBrush");
     }
 
-    private static TextBox PasswordBox(string placeholder) => new()
+    private static TextBox PasswordBox(string placeholder)
     {
-        PlaceholderText = placeholder,
-        PasswordChar = '●',
-        MaxLength = PasswordHasher.MaximumPasswordLength
-    };
+        var box = new TextBox
+        {
+            PlaceholderText = placeholder,
+            PasswordChar = '●',
+            MaxLength = PasswordHasher.MaximumPasswordLength
+        };
+        AutomationProperties.SetName(box, placeholder);
+        return box;
+    }
 }

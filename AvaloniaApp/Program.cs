@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using Abituria.Services;
 using Avalonia;
 
@@ -9,6 +10,10 @@ internal static class Program
     [STAThread]
     public static int Main(string[] args)
     {
+        var userInterfaceCulture = CultureInfo.GetCultureInfo("pl-PL");
+        CultureInfo.DefaultThreadCurrentUICulture = userInterfaceCulture;
+        CultureInfo.CurrentUICulture = userInterfaceCulture;
+
         if (ReleaseSmokeTestCommand.IsRequested(args))
             return ReleaseSmokeTestCommand.ExecuteAsync(args).GetAwaiter().GetResult();
 
@@ -19,7 +24,6 @@ internal static class Program
     {
         return AppBuilder.Configure<App>()
             .UsePlatformDetect()
-            .WithInterFont()
             .LogToTrace();
     }
 }
