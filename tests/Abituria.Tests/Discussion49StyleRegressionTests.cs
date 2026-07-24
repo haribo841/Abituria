@@ -179,7 +179,7 @@ public sealed class Discussion49StyleRegressionTests
 
             Assert.True(focused.IsKeyboardFocusWithin);
             Assert.Equal(new Thickness(3), focused.BorderThickness);
-            var actualFocus = Assert.IsAssignableFrom<ISolidColorBrush>(focused.BorderBrush).Color;
+            var actualFocus = Assert.IsType<ISolidColorBrush>(focused.BorderBrush, exactMatch: false).Color;
             Assert.Equal(CurrentColor(application, "FocusBrush", ThemeVariant.Light), actualFocus);
             Assert.NotEqual(HashBitmap(before), HashBitmap(after));
         }
@@ -282,11 +282,11 @@ public sealed class Discussion49StyleRegressionTests
                 var variant = ThemeVariant.Dark;
                 Assert.Equal(
                     CurrentColor(application, "TextMutedBrush", variant),
-                    Assert.IsAssignableFrom<ISolidColorBrush>(nameBox.PlaceholderForeground).Color);
+                    Assert.IsType<ISolidColorBrush>(nameBox.PlaceholderForeground, exactMatch: false).Color);
                 Assert.Equal(
                     CurrentColor(application, "BrandImageSurfaceBrush", variant),
-                    Assert.IsAssignableFrom<ISolidColorBrush>(logoSurface.Background).Color);
-                Assert.Equal(Colors.White, Assert.IsAssignableFrom<ISolidColorBrush>(logoSurface.Background).Color);
+                    Assert.IsType<ISolidColorBrush>(logoSurface.Background, exactMatch: false).Color);
+                Assert.Equal(Colors.White, Assert.IsType<ISolidColorBrush>(logoSurface.Background, exactMatch: false).Color);
                 Assert.Equal(1d, placeholder.Opacity);
             }
         }
@@ -481,7 +481,7 @@ public sealed class Discussion49StyleRegressionTests
         return window;
     }
 
-    private static IReadOnlyDictionary<string, IReadOnlyDictionary<string, Color>> ReadPalettes()
+    private static Dictionary<string, IReadOnlyDictionary<string, Color>> ReadPalettes()
     {
         var document = XDocument.Load(Path.Combine(FindRepositoryRoot(), "AvaloniaApp", "Styles", "AppStyles.axaml"));
         XNamespace avalonia = "https://github.com/avaloniaui";
@@ -545,7 +545,7 @@ public sealed class Discussion49StyleRegressionTests
     private static Color CurrentColor(Application application, string resourceKey, ThemeVariant variant)
     {
         Assert.True(application.TryGetResource(resourceKey, variant, out var value), $"Brak zasobu {resourceKey}.");
-        return Assert.IsAssignableFrom<ISolidColorBrush>(value).Color;
+        return Assert.IsType<ISolidColorBrush>(value, exactMatch: false).Color;
     }
 
     private static string HashBitmap(Bitmap bitmap)

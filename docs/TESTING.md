@@ -2,9 +2,9 @@
 
 Wersja dokumentu: `0.9.0-beta.1`.
 
-Data ostatniego lokalnego wykonania: 20 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, konfiguracja `Release`.
+Data ostatniego lokalnego wykonania: 24 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, konfiguracja `Release`.
 
-Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `424/424 PASS` w czasie `10,4610 s`. Zestaw obejmuje testy stylu, motywów, widocznego fokusu, breakpointów, własnego chrome, dialogów i kosztu renderowania dyskusji #49.
+Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `427/427 PASS` w czasie `6 s`. Zestaw obejmuje testy stylu, motywów, widocznego fokusu, breakpointów, własnego chrome, dialogów i kosztu renderowania dyskusji #49.
 
 Dokument rozróżnia wyniki automatyczne, retrospektywne poświadczenie historycznych testów uczestników oraz czynności bieżącego procesu wydawniczego. Brak szczegółowej karty sesji nie jest uzupełniany przez domysł, a poświadczenie historyczne nie jest przedstawiane jako test bieżącej paczki.
 

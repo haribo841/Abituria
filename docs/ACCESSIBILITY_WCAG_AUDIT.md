@@ -2,7 +2,7 @@
 
 Wersja aplikacji: `0.9.0-beta.1`.
 
-Data przeglądu: 20 lipca 2026 r.
+Data przeglądu: 24 lipca 2026 r.
 
 Zakres: bieżąca aplikacja desktopowa Abituria w AvaloniaUI 12, jej główne widoki, własny pasek tytułu, dialogi, warianty motywu i zachowanie układu przy zmianie rozmiaru okna.
 

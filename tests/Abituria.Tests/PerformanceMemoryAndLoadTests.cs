@@ -246,7 +246,7 @@ public sealed class PerformanceMemoryAndLoadTests
         return profileId;
     }
 
-    private static IReadOnlySet<string> ReadProgress(AppDbContextFactory factory, Guid profileId)
+    private static HashSet<string> ReadProgress(AppDbContextFactory factory, Guid profileId)
     {
         using var context = factory.CreateDbContext();
         return context.ExerciseProgress

@@ -33,6 +33,8 @@ OUTPUT = ROOT / "output" / "pdf" / "Abituria-Technical-Documentation-0.9.0-beta.
 SCREENSHOT = ROOT / "tests" / "Abituria.Tests" / "VisualBaselines" / "discussion-10-math-list-1280x820.png"
 FONT_REGULAR = Path(r"C:\Windows\Fonts\arial.ttf")
 FONT_BOLD = Path(r"C:\Windows\Fonts\arialbd.ttf")
+BULK_APPROVAL = "ZAAKCEPTOWANO zbiorczo"
+EARLY_FEBRUARY_2022 = "początek lutego 2022"
 
 
 def register_fonts() -> None:
@@ -426,10 +428,10 @@ def build_pdf() -> None:
             table(
                 [
                     ["Przyrost", "Rzeczywisty kamień techniczny", "Decyzja techniczna", "Prowadzący"],
-                    ["I", "28 czerwca 2026; a510ac6", "PASS", "ZAAKCEPTOWANO zbiorczo"],
-                    ["II", "7 lipca 2026; 95c0e8f", "PASS", "ZAAKCEPTOWANO zbiorczo"],
-                    ["III", "18 lipca 2026; 4fdecd2", "PASS", "ZAAKCEPTOWANO zbiorczo"],
-                    ["IV", "18 lipca 2026; e0afeea", "PASS dla Issue #43", "ZAAKCEPTOWANO zbiorczo"],
+                    ["I", "28 czerwca 2026; a510ac6", "PASS", BULK_APPROVAL],
+                    ["II", "7 lipca 2026; 95c0e8f", "PASS", BULK_APPROVAL],
+                    ["III", "18 lipca 2026; 4fdecd2", "PASS", BULK_APPROVAL],
+                    ["IV", "18 lipca 2026; e0afeea", "PASS dla Issue #43", BULK_APPROVAL],
                 ],
                 [1.6 * cm, 5.1 * cm, 6.5 * cm, 4.0 * cm],
                 st,
@@ -496,10 +498,10 @@ def build_pdf() -> None:
             table(
                 [
                     ["Rola lub decyzja", "Imię i nazwisko", "Data", "Podpis lub identyfikator zatwierdzenia"],
-                    ["Przekazujący dokumentację", "Adam Kubiś", "początek lutego 2022", "kanał pierwotnego przekazania nie zachował się"],
-                    ["Osoba odpowiedzialna za odbiór", "Prowadzący projektu - nazwisko niepodane", "początek lutego 2022", "identyfikator nie zachował się"],
-                    ["Decyzja prowadzącego", "ZAAKCEPTOWANO", "początek lutego 2022", "oświadczenie właściciela z 19 lipca 2026"],
-                    ["Wybrany wariant", "uzgodnione przekazanie", "początek lutego 2022", "historycznie wykonane; publiczny Release osobno"],
+                    ["Przekazujący dokumentację", "Adam Kubiś", EARLY_FEBRUARY_2022, "kanał pierwotnego przekazania nie zachował się"],
+                    ["Osoba odpowiedzialna za odbiór", "Prowadzący projektu - nazwisko niepodane", EARLY_FEBRUARY_2022, "identyfikator nie zachował się"],
+                    ["Decyzja prowadzącego", "ZAAKCEPTOWANO", EARLY_FEBRUARY_2022, "oświadczenie właściciela z 19 lipca 2026"],
+                    ["Wybrany wariant", "uzgodnione przekazanie", EARLY_FEBRUARY_2022, "historycznie wykonane; publiczny Release osobno"],
                 ],
                 [4.1 * cm, 4.1 * cm, 3.0 * cm, 6.0 * cm],
                 st,

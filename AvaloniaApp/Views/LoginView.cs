@@ -42,6 +42,19 @@ public sealed class LoginView : UserControl
             ColumnSpacing = 24,
             Margin = new Thickness(30)
         };
+
+        var introCard = BuildIntroCard();
+        var panel = BuildFormPanel(copy);
+        root.Children.Add(introCard);
+        Grid.SetColumn(panel, 1);
+        root.Children.Add(panel);
+
+        AdaptiveLayout.ObserveWidth(this, 860, isCompact => ApplyResponsiveLayout(root, introCard, panel, isCompact));
+        return root;
+    }
+
+    private static Border BuildIntroCard()
+    {
         var intro = new StackPanel { Spacing = 18 };
         intro.Children.Add(new Border
         {
@@ -59,10 +72,23 @@ public sealed class LoginView : UserControl
         });
         intro.Children.Add(UiFactory.InfoBand("Materiały", "18 tablic, 7 działów i 35 zadań z matury poprawkowej 2021."));
         intro.Children.Add(UiFactory.InfoBand("Prywatność", "Aplikacja działa offline i nie wysyła danych konta poza komputer."));
-        var introCard = UiFactory.Card(intro, new Thickness(30));
-        root.Children.Add(introCard);
+        return UiFactory.Card(intro, new Thickness(30));
+    }
 
+    private Border BuildFormPanel(UiCopyCatalog copy)
+    {
         var forms = new StackPanel { Spacing = 12 };
+        AddLoginControls(forms);
+        AddRegistrationControls(forms, copy);
+        AddRecoveryControls(forms);
+        forms.Children.Add(_status);
+
+        var scroll = new ScrollViewer { Content = forms, VerticalScrollBarVisibility = Avalonia.Controls.Primitives.ScrollBarVisibility.Auto };
+        return UiFactory.Card(scroll, new Thickness(26));
+    }
+
+    private void AddLoginControls(StackPanel forms)
+    {
         forms.Children.Add(new TextBlock { Text = "Logowanie", Classes = { "h2" } });
         _profiles.HorizontalAlignment = HorizontalAlignment.Stretch;
         _profiles.SelectionChanged += (_, _) => UpdateLoginMode();
@@ -71,7 +97,10 @@ public sealed class LoginView : UserControl
         var login = new Button { Name = "LoginButton", Content = "Zaloguj", Classes = { "primary" }, HorizontalAlignment = HorizontalAlignment.Stretch };
         login.Click += async (_, _) => await LoginAsync();
         forms.Children.Add(login);
+    }
 
+    private void AddRegistrationControls(StackPanel forms, UiCopyCatalog copy)
+    {
         forms.Children.Add(Separator());
         forms.Children.Add(new TextBlock { Text = "Nowe konto", Classes = { "h2" } });
         forms.Children.Add(UiFactory.InfoBand(copy.GetRequired("account.registration.rules")));
@@ -88,19 +117,12 @@ public sealed class LoginView : UserControl
         forms.Children.Add(newPassword);
         forms.Children.Add(confirmation);
         var register = new Button { Name = "RegisterButton", Content = "Utwórz konto", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Stretch };
-        register.Click += async (_, _) =>
-        {
-            var result = await _accounts.RegisterAsync(name.Text ?? string.Empty, newPassword.Text ?? string.Empty, confirmation.Text ?? string.Empty);
-            ShowResult(result.Message, result.Success);
-            ClearSecrets(newPassword, confirmation);
-            if (result.Success)
-            {
-                await ReloadProfilesAsync(result.Profile?.Id);
-                await ShowRecoveryCodeAsync(result.RecoveryCode!);
-            }
-        };
+        register.Click += async (_, _) => await RegisterAsync(name, newPassword, confirmation);
         forms.Children.Add(register);
+    }
 
+    private void AddRecoveryControls(StackPanel forms)
+    {
         forms.Children.Add(Separator());
         forms.Children.Add(new TextBlock { Text = "Odzyskiwanie hasła", Classes = { "h2" } });
         var recoveryName = new TextBox { PlaceholderText = "Nazwa konta", MaxLength = AccountService.MaximumDisplayNameLength };
@@ -114,37 +136,42 @@ public sealed class LoginView : UserControl
         forms.Children.Add(recoveredPassword);
         forms.Children.Add(recoveredConfirmation);
         var recover = new Button { Content = "Ustaw nowe hasło", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Stretch };
-        recover.Click += async (_, _) =>
-        {
-            var result = await _accounts.RecoverPasswordAsync(recoveryName.Text ?? string.Empty, recoveryCode.Text ?? string.Empty, recoveredPassword.Text ?? string.Empty, recoveredConfirmation.Text ?? string.Empty);
-            ShowResult(result.Message, result.Success);
-            recoveryCode.Text = string.Empty;
-            ClearSecrets(recoveredPassword, recoveredConfirmation);
-            if (result.Success) await ShowRecoveryCodeAsync(result.RecoveryCode!);
-        };
+        recover.Click += async (_, _) => await RecoverPasswordAsync(recoveryName, recoveryCode, recoveredPassword, recoveredConfirmation);
         forms.Children.Add(recover);
-        forms.Children.Add(_status);
+    }
 
-        var scroll = new ScrollViewer { Content = forms, VerticalScrollBarVisibility = Avalonia.Controls.Primitives.ScrollBarVisibility.Auto };
-        var panel = UiFactory.Card(scroll, new Thickness(26));
-        Grid.SetColumn(panel, 1);
-        root.Children.Add(panel);
+    private async Task RegisterAsync(TextBox name, TextBox newPassword, TextBox confirmation)
+    {
+        var result = await _accounts.RegisterAsync(name.Text ?? string.Empty, newPassword.Text ?? string.Empty, confirmation.Text ?? string.Empty);
+        ShowResult(result.Message, result.Success);
+        ClearSecrets(newPassword, confirmation);
+        if (!result.Success) return;
 
-        AdaptiveLayout.ObserveWidth(this, 860, isCompact =>
-        {
-            root.ColumnDefinitions = new ColumnDefinitions(isCompact ? "*" : "1.05*,0.95*");
-            root.RowDefinitions = new RowDefinitions(isCompact ? "Auto,*" : "*");
-            root.ColumnSpacing = isCompact ? 0 : 24;
-            root.RowSpacing = isCompact ? 16 : 0;
-            root.Margin = new Thickness(isCompact ? 16 : 30);
+        await ReloadProfilesAsync(result.Profile?.Id);
+        await ShowRecoveryCodeAsync(result.RecoveryCode!);
+    }
 
-            Grid.SetColumn(introCard, 0);
-            Grid.SetRow(introCard, 0);
-            Grid.SetColumn(panel, isCompact ? 0 : 1);
-            Grid.SetRow(panel, isCompact ? 1 : 0);
-        });
+    private async Task RecoverPasswordAsync(TextBox recoveryName, TextBox recoveryCode, TextBox recoveredPassword, TextBox recoveredConfirmation)
+    {
+        var result = await _accounts.RecoverPasswordAsync(recoveryName.Text ?? string.Empty, recoveryCode.Text ?? string.Empty, recoveredPassword.Text ?? string.Empty, recoveredConfirmation.Text ?? string.Empty);
+        ShowResult(result.Message, result.Success);
+        recoveryCode.Text = string.Empty;
+        ClearSecrets(recoveredPassword, recoveredConfirmation);
+        if (result.Success) await ShowRecoveryCodeAsync(result.RecoveryCode!);
+    }
 
-        return root;
+    private static void ApplyResponsiveLayout(Grid root, Control introCard, Control panel, bool isCompact)
+    {
+        root.ColumnDefinitions = new ColumnDefinitions(isCompact ? "*" : "1.05*,0.95*");
+        root.RowDefinitions = new RowDefinitions(isCompact ? "Auto,*" : "*");
+        root.ColumnSpacing = isCompact ? 0 : 24;
+        root.RowSpacing = isCompact ? 16 : 0;
+        root.Margin = new Thickness(isCompact ? 16 : 30);
+
+        Grid.SetColumn(introCard, 0);
+        Grid.SetRow(introCard, 0);
+        Grid.SetColumn(panel, isCompact ? 0 : 1);
+        Grid.SetRow(panel, isCompact ? 1 : 0);
     }
 
     private async Task ReloadProfilesAsync(Guid? selectedId = null)
