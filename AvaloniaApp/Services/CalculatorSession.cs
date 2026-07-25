@@ -72,7 +72,7 @@ public sealed class CalculatorSession
         var evaluation = ExpressionCalculator.EvaluateWithRepeat(item.Expression, item.AnsInput);
         var result = evaluation.Result;
         if (!result.Success || result.Value is null) return result;
-        if (!result.Value.Value.Equals(item.Value))
+        if (BitConverter.DoubleToInt64Bits(result.Value.Value) != BitConverter.DoubleToInt64Bits(item.Value))
             return new CalculationResult(
                 false,
                 null,

@@ -45,6 +45,7 @@ public sealed class SonarRegressionTests
         var verifyPassword = typeof(PasswordHasher).GetMethod(nameof(PasswordHasher.VerifyPassword));
         var solve = typeof(QuadraticSolver).GetMethod(nameof(QuadraticSolver.Solve));
         var addTile = typeof(HomeView).GetMethod("AddTile", BindingFlags.NonPublic | BindingFlags.Static);
+        var applyTileLayout = typeof(HomeView).GetMethod("ApplyTileLayout", BindingFlags.NonPublic | BindingFlags.Static);
 
         Assert.NotNull(verifyPassword);
         Assert.True(verifyPassword.IsStatic);
@@ -52,7 +53,26 @@ public sealed class SonarRegressionTests
         Assert.True(solve.IsStatic);
         Assert.NotNull(addTile);
         Assert.InRange(addTile.GetParameters().Length, 0, 7);
+        Assert.NotNull(applyTileLayout);
+        Assert.Equal(typeof(Button[]), applyTileLayout.GetParameters()[1].ParameterType);
         Assert.True(typeof(ExpressionCalculator.CalculationException).IsNestedPublic);
+    }
+
+    [Fact]
+    public void Calculator_history_restore_preserves_a_subnormal_value_bit_for_bit()
+    {
+        var session = new CalculatorSession(new ExpressionCalculator());
+        var calculated = session.Calculate("5E-324");
+        Assert.True(calculated.Success, calculated.Message);
+        var historyItem = session.History[0];
+        Assert.True(session.Calculate("1").Success);
+
+        var restored = session.RestoreHistory(historyItem);
+
+        Assert.True(restored.Success, restored.Message);
+        Assert.Equal(
+            BitConverter.DoubleToInt64Bits(historyItem.Value),
+            BitConverter.DoubleToInt64Bits(restored.Value!.Value));
     }
 
     [Theory]

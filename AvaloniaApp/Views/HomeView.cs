@@ -61,14 +61,14 @@ public sealed class HomeView : UserControl
         return button;
     }
 
-    private static void ApplyTileLayout(Grid grid, IReadOnlyList<Control> tiles, bool isCompact)
+    private static void ApplyTileLayout(Grid grid, Button[] tiles, bool isCompact)
     {
         if (isCompact)
         {
             grid.ColumnDefinitions = new ColumnDefinitions("*");
             grid.RowDefinitions = new RowDefinitions("Auto,Auto,Auto,Auto,Auto");
             grid.ColumnSpacing = 0;
-            for (var index = 0; index < tiles.Count; index++)
+            for (var index = 0; index < tiles.Length; index++)
                 Position(tiles[index], 0, index);
             return;
         }
