@@ -1,0 +1,118 @@
+name: Zgłoszenie błędu
+description: Zgłoś odtwarzalny problem w bieżącej wersji Abiturii.
+title: "[Błąd] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Dziękujemy za zgłoszenie. Nie umieszczaj tutaj haseł, kodów odzyskiwania, baz użytkowników ani innych danych prywatnych.
+
+        Podatność bezpieczeństwa zgłoś prywatnie przez [GitHub Security Advisory](https://github.com/haribo841/Abituria/security/advisories/new), a nie w publicznym issue.
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: Wersja aplikacji
+      description: Wybierz wersję widoczną na ekranie O programie albo sposób uruchomienia.
+      options:
+        - 0.9.0-beta.1
+        - Build z gałęzi main
+        - Inna wersja lub historyczny build
+    validations:
+      required: true
+
+  - type: input
+    id: commit
+    attributes:
+      label: Commit
+      description: Podaj pełny lub skrócony SHA z ekranu O programie, jeśli jest dostępny.
+      placeholder: 4178b44
+
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: System operacyjny
+      options:
+        - Windows 11 x64
+        - Ubuntu 24.04 x64
+        - macOS 15 Intel x64
+        - Inny system lub architektura
+    validations:
+      required: true
+
+  - type: input
+    id: package
+    attributes:
+      label: Paczka lub sposób uruchomienia
+      description: Podaj nazwę archiwum albo informację, że aplikacja została uruchomiona ze źródeł.
+      placeholder: Abituria-v0.9.0-beta.1-win-x64.zip
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Kroki odtworzenia
+      description: Podaj minimalną, numerowaną sekwencję czynności prowadzących do błędu.
+      placeholder: |
+        1. Uruchom aplikację...
+        2. Przejdź do...
+        3. Wybierz...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Oczekiwany rezultat
+      description: Opisz, co powinno się wydarzyć.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Rzeczywisty rezultat
+      description: Opisz rzeczywiste zachowanie oraz pełny komunikat błędu.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: clean-data-directory
+    attributes:
+      label: Izolowany katalog danych
+      description: Czy problem występuje również z nowym, pustym katalogiem przekazanym przez --data-directory?
+      options:
+        - Tak
+        - Nie
+        - Nie sprawdzono
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logi i kod wyjścia
+      description: Wklej wyłącznie dane diagnostyczne pozbawione sekretów i danych osobowych.
+      render: shell
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Zrzuty ekranu
+      description: Przeciągnij pliki tutaj, jeśli pomagają odtworzyć problem i nie zawierają danych prywatnych.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Potwierdzenia
+      options:
+        - label: Sprawdziłem istniejące issues i znane ograniczenia, aby nie tworzyć duplikatu.
+          required: true
+        - label: Zgłoszenie nie zawiera haseł, kodów odzyskiwania, prywatnej bazy ani danych osobowych.
+          required: true
+        - label: Problem nie jest nieujawnioną podatnością bezpieczeństwa.
+          required: true
+

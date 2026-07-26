@@ -45,6 +45,8 @@ Warunki wydania wymagają:
 - audytu wszystkich bezpośrednich i przechodnich pakietów NuGet od poziomu `low`;
 - traktowania `NU1901`-`NU1904` jako błędów;
 - zera znanych podatności w audycie przed publikacją;
+- skanu CodeQL dla kodu C# przy pushu, pull requeście i w cotygodniowym harmonogramie;
+- braku nowych, nierozstrzygniętych alertów GitHub code scanning;
 - osobnego SBOM SPDX dla każdej paczki;
 - `SHA256SUMS.txt` i attestation pochodzenia artefaktów;
 - kontroli paczek pod kątem PDB, sekretów oraz snapshotów;

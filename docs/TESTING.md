@@ -2,9 +2,9 @@
 
 Wersja dokumentu: `0.9.0-beta.1`.
 
-Data ostatniego lokalnego wykonania: 24 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, konfiguracja `Release`.
+Data ostatniego lokalnego wykonania: 25 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, konfiguracja `Release`.
 
-Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `427/427 PASS` w czasie `6 s`. Zestaw obejmuje testy stylu, motywów, widocznego fokusu, breakpointów, własnego chrome, dialogów i kosztu renderowania dyskusji #49.
+Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` z kolektorem XPlat Code Coverage i raportem OpenCover zakończył się wynikiem `430/430 PASS` w czasie `6 s`. Zestaw obejmuje testy stylu, motywów, widocznego fokusu, breakpointów, własnego chrome, dialogów i kosztu renderowania dyskusji #49.
 
 Dokument rozróżnia wyniki automatyczne, retrospektywne poświadczenie historycznych testów uczestników oraz czynności bieżącego procesu wydawniczego. Brak szczegółowej karty sesji nie jest uzupełniany przez domysł, a poświadczenie historyczne nie jest przedstawiane jako test bieżącej paczki.
 
@@ -37,7 +37,7 @@ Celem testów końcowych jest potwierdzenie, że Abituria spełnia aktualny zakr
 | Styl, motywy i własny chrome | `Discussion49StyleRegressionTests` | Mulish, brak wymuszonego Light i Inter, cztery ustawienia motywu, stany interakcji, fokus, breakpointy, dialogi, sterowanie i skalowanie okna |
 | Koszt renderowania UI | `Discussion49StyleRegressionTests` | rozgrzany render reprezentatywnego widoku w motywie jasnym, ciemnym i wysokiego kontrastu oraz budżet czasu i pamięci |
 | Wydanie | `ReleaseRuntimeTests`, `ReleaseContractTests`, `ReleaseValidationScriptTests`, `NuGetLicenseBundleTests` | izolowany smoke test, wersjonowanie, zawartość paczek i dowody licencji |
-| Jakość | `dotnet format`, audyt NuGet, test pochodzenia zasobów, SonarQube Cloud | formatowanie, podatności, kompletność manifestu i analiza statyczna |
+| Jakość | `dotnet format`, audyt NuGet, test pochodzenia zasobów, SonarQube Cloud, CodeQL | formatowanie, podatności, kompletność manifestu, jakość kodu i code scanning |
 
 ## Regresje stylu i dostępności dyskusji #49
 

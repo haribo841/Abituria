@@ -44,6 +44,8 @@
   href: DEPENDENCIES.md
 - name: Znane ograniczenia
   href: KNOWN_LIMITATIONS.md
+- name: Współtworzenie
+  href: ../CONTRIBUTING.md
 - name: Wsparcie
   href: ../SUPPORT.md
 - name: Bezpieczeństwo

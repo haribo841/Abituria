@@ -1,0 +1,92 @@
+name: Propozycja funkcji
+description: Opisz problem użytkownika i oczekiwany efekt nowej funkcji.
+title: "[Funkcja] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Zanim zaproponujesz funkcję, sprawdź istniejące issues, [roadmapę](https://github.com/haribo841/Abituria/blob/main/docs/ROADMAP.md) oraz [znane ograniczenia](https://github.com/haribo841/Abituria/blob/main/docs/KNOWN_LIMITATIONS.md).
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem użytkownika
+      description: Jaki konkretny problem ma zostać rozwiązany i kogo dotyczy?
+      placeholder: Jako maturzysta chcę..., ponieważ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Oczekiwany efekt
+      description: Opisz rezultat z perspektywy użytkownika, bez narzucania implementacji.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Przykładowy scenariusz
+      description: Podaj kroki typowego użycia oraz kryteria pozwalające stwierdzić, że funkcja działa.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proponowane rozwiązanie
+      description: Jeśli masz pomysł techniczny lub interfejsowy, opisz go tutaj.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Rozważone alternatywy
+      description: Opisz obecne obejścia albo inne rozważone rozwiązania.
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Obszar projektu
+      multiple: true
+      options:
+        - Interfejs i dostępność
+        - Konta, dane lokalne i SQLite
+        - Materiały edukacyjne i zadania
+        - Kalkulator ogólny
+        - Kalkulator funkcji kwadratowej
+        - Instalacja, pakowanie lub aktualizacja
+        - Dokumentacja
+        - Bezpieczeństwo lub łańcuch dostaw
+        - Inny obszar
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Wpływ i ryzyka
+      description: Opisz wpływ na zgodność wsteczną, dostępność, dane, wydajność, bezpieczeństwo, licencje i pochodzenie zasobów.
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Dodatkowy kontekst
+      description: Dodaj makiety, przykłady lub odnośniki potrzebne do oceny propozycji.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Potwierdzenia
+      options:
+        - label: Sprawdziłem istniejące issues i roadmapę, aby nie tworzyć duplikatu.
+          required: true
+        - label: Opisałem problem i mierzalny rezultat, a nie wyłącznie nazwę rozwiązania.
+          required: true
+        - label: Propozycja nie ujawnia podatności, sekretu ani danych użytkownika.
+          required: true
+

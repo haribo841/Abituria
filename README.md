@@ -112,6 +112,7 @@ Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalneg
 | [Pochodzenie treści](docs/CONTENT_PROVENANCE.md) | zasady dopuszczania treści, fontów i obrazów do paczek oraz oświadczenie o prawach |
 | [Znane ograniczenia](docs/KNOWN_LIMITATIONS.md) | jawny zakres wersji beta |
 | [Historia zmian](CHANGELOG.md) | pierwsze rzeczywiste wydanie i dalsze zmiany |
+| [Współtworzenie](CONTRIBUTING.md) | przygotowanie zmian, testy, SonarQube Cloud i wymagania pull requestu |
 | [Wsparcie](SUPPORT.md) | zgłaszanie błędów i wymagane dane diagnostyczne |
 | [Bezpieczeństwo](SECURITY.md) | prywatne zgłoszenia podatności i wspierane wersje |
 
@@ -126,5 +127,6 @@ Kod projektu jest udostępniany na licencji [MIT](https://github.com/haribo841/A
 ## Zgłoszenia
 
 - zwykły błąd lub propozycja: [GitHub Issues](https://github.com/haribo841/Abituria/issues/new);
+- propozycja zmiany w kodzie lub dokumentacji: [CONTRIBUTING.md](CONTRIBUTING.md);
 - pytanie o użycie: [SUPPORT.md](SUPPORT.md);
 - podatność lub dane wrażliwe: [SECURITY.md](SECURITY.md).

@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Pytania i pomoc
+    url: https://github.com/haribo841/Abituria/blob/main/SUPPORT.md
+    about: Sprawdź kanały wsparcia i dane potrzebne do diagnozy.
+  - name: Prywatne zgłoszenie bezpieczeństwa
+    url: https://github.com/haribo841/Abituria/security/advisories/new
+    about: Zgłoś podatność lub ekspozycję danych bez publikowania szczegółów.
+

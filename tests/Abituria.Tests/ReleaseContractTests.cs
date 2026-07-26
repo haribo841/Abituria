@@ -266,6 +266,112 @@ public sealed class ReleaseContractTests
     }
 
     [Fact]
+    public void Contribution_contract_is_discoverable_and_requires_quality_gates()
+    {
+        const string contributionGuidePath = "CONTRIBUTING.md";
+        const string pullRequestTemplatePath = ".github/PULL_REQUEST_TEMPLATE.md";
+        var contributionGuide = File.ReadAllText(Absolute(contributionGuidePath));
+        var pullRequestTemplate = File.ReadAllText(Absolute(pullRequestTemplatePath));
+        var readme = File.ReadAllText(Absolute("README.md"));
+        var documentationToc = File.ReadAllText(Absolute("docs/toc.yml"));
+        var requiredContributionFragments = new[]
+        {
+            "CODE_OF_CONDUCT.md",
+            "SECURITY.md",
+            "dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode",
+            "dotnet build Abituria.sln --configuration Release --no-restore --no-incremental",
+            "--collect:\"XPlat Code Coverage\"",
+            "dotnet format Abituria.sln analyzers --verify-no-changes --no-restore --severity info",
+            "Test-NuGetVulnerabilities.ps1",
+            "Generate-DependencyDocumentation.ps1 -Verify",
+            "Test-ContentProvenance.ps1",
+            "docfx.json --warningsAsErrors",
+            "Test-DocumentationSite.ps1",
+            "SonarQube Cloud",
+            "docs/ACCESSIBILITY_WCAG_AUDIT.md",
+            "docs/CONTENT_PROVENANCE.md"
+        };
+        var requiredTemplateFragments = new[]
+        {
+            "Powiązane issue:",
+            "### Testy i pokrycie",
+            "### SonarQube Cloud",
+            "UI, motywy i dostępność",
+            "Treści, zasoby, licencje i proweniencja",
+            "Nie dotyczy - <uzasadnienie>",
+            "quality gate przechodzi i zmiana nie pozostawia nowych issues"
+        };
+
+        Assert.All(requiredContributionFragments, fragment =>
+            Assert.Contains(fragment, contributionGuide, StringComparison.Ordinal));
+        Assert.All(requiredTemplateFragments, fragment =>
+            Assert.Contains(fragment, pullRequestTemplate, StringComparison.Ordinal));
+        Assert.Contains($"[Współtworzenie]({contributionGuidePath})", readme, StringComparison.Ordinal);
+        Assert.Contains("href: ../CONTRIBUTING.md", documentationToc, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void GitHub_issue_forms_and_code_scanning_use_the_current_repository_contract()
+    {
+        var bugForm = File.ReadAllText(Absolute(".github/ISSUE_TEMPLATE/bug_report.yml"));
+        var featureForm = File.ReadAllText(Absolute(".github/ISSUE_TEMPLATE/feature_request.yml"));
+        var issueConfiguration = File.ReadAllText(Absolute(".github/ISSUE_TEMPLATE/config.yml"));
+        var codeQlWorkflow = File.ReadAllText(Absolute(".github/workflows/codeql.yml"));
+        var securityPolicy = File.ReadAllText(Absolute("SECURITY.md"));
+        var pullRequestTemplate = File.ReadAllText(Absolute(".github/PULL_REQUEST_TEMPLATE.md"));
+        var requiredBugFormFragments = new[]
+        {
+            "name: Zgłoszenie błędu",
+            "title: \"[Błąd] \"",
+            "  - bug",
+            "id: steps",
+            "id: expected",
+            "id: actual",
+            "security/advisories/new",
+            "Zgłoszenie nie zawiera haseł"
+        };
+        var requiredFeatureFormFragments = new[]
+        {
+            "name: Propozycja funkcji",
+            "title: \"[Funkcja] \"",
+            "  - enhancement",
+            "id: problem",
+            "id: outcome",
+            "id: scenario",
+            "id: impact"
+        };
+        var requiredCodeQlFragments = new[]
+        {
+            "branches: [main]",
+            "schedule:",
+            "workflow_dispatch:",
+            "security-events: write",
+            "actions/checkout@v4",
+            "actions/setup-dotnet@v4",
+            "github/codeql-action/init@v4",
+            "build-mode: manual",
+            "dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode",
+            "dotnet build Abituria.sln --configuration Release --no-restore --no-incremental",
+            "github/codeql-action/analyze@v4"
+        };
+
+        Assert.All(requiredBugFormFragments, fragment =>
+            Assert.Contains(fragment, bugForm, StringComparison.Ordinal));
+        Assert.All(requiredFeatureFormFragments, fragment =>
+            Assert.Contains(fragment, featureForm, StringComparison.Ordinal));
+        Assert.Contains("blank_issues_enabled: false", issueConfiguration, StringComparison.Ordinal);
+        Assert.Contains("SUPPORT.md", issueConfiguration, StringComparison.Ordinal);
+        Assert.Contains("security/advisories/new", issueConfiguration, StringComparison.Ordinal);
+        Assert.All(requiredCodeQlFragments, fragment =>
+            Assert.Contains(fragment, codeQlWorkflow, StringComparison.Ordinal));
+        Assert.DoesNotContain("branches: [master]", codeQlWorkflow, StringComparison.Ordinal);
+        Assert.DoesNotContain("github/codeql-action/autobuild", codeQlWorkflow, StringComparison.Ordinal);
+        Assert.DoesNotContain("make ", codeQlWorkflow, StringComparison.Ordinal);
+        Assert.Contains("braku nowych, nierozstrzygniętych alertów", securityPolicy, StringComparison.Ordinal);
+        Assert.Contains("### CodeQL", pullRequestTemplate, StringComparison.Ordinal);
+    }
+
+    [Fact]
     public void Release_asset_validation_scans_secrets_in_every_file_type()
     {
         var validator = File.ReadAllText(Absolute("tools/release/Test-ReleaseAssets.ps1"));
