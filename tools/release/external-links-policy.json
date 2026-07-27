@@ -4,6 +4,7 @@
   "timeoutSeconds": 15,
   "localRepositoryBlobPrefix": "https://github.com/haribo841/Abituria/blob/main/",
   "allowedHosts": [
+    "bip.cke.gov.pl",
     "cli.github.com",
     "github.com",
     "haribo841.github.io",
@@ -16,6 +17,18 @@
     {
       "urlPrefix": "https://haribo841.github.io/Abituria/",
       "reason": "The Pages site cannot probe its new deployment before deploy-pages completes."
+    },
+    {
+      "urlPrefix": "https://bip.cke.gov.pl/attachments/download/9944",
+      "reason": "The exact CKE source document is pinned by SHA-256 in the content catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
+    },
+    {
+      "urlPrefix": "https://www.contributor-covenant.org/",
+      "reason": "Contributor Covenant attribution is a stable governance reference whose host intermittently times out from GitHub-hosted runners."
+    },
+    {
+      "urlPrefix": "https://www.nuget.org/packages/",
+      "reason": "NuGet package identities and versions are verified from locked restore data; probing every package page from CI triggers rate limits and is not a package-integrity check."
     },
     {
       "urlPrefix": "https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1",

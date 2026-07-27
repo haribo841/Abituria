@@ -29,15 +29,23 @@ Przed wysłaniem pull requestu uruchom pełny zestaw kompilacji, testów z pokry
 ```powershell
 dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
 dotnet build Abituria.sln --configuration Release --no-restore --no-incremental
+python -m pip install --requirement tools/requirements-test.txt
 dotnet test Abituria.sln --configuration Release --no-build --no-restore `
+  --results-directory artifacts/coverage/csharp `
   --collect:"XPlat Code Coverage" `
   -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+python -m coverage run --branch --source=tools -m unittest discover -s tests/python -p "test_*.py"
+python -m coverage xml -o artifacts/coverage/python-coverage.xml
+$openCoverReport = Get-ChildItem artifacts/coverage/csharp -Recurse -Filter coverage.opencover.xml
+pwsh -NoProfile -File tools/release/Test-CoverageThreshold.ps1 `
+  -OpenCoverReport $openCoverReport.FullName `
+  -PythonCoverageReport artifacts/coverage/python-coverage.xml
 dotnet format Abituria.sln whitespace --verify-no-changes --no-restore
 dotnet format Abituria.sln analyzers --verify-no-changes --no-restore --severity info
 git diff --check
 ```
 
-Nowy i zmieniony kod produkcyjny musi mieć adekwatne testy, a pokrycie nie może spaść bez jawnego, uzasadnionego wyjątku zaakceptowanego podczas przeglądu. Pełny opis kategorii testów znajduje się w [docs/TESTING.md](docs/TESTING.md).
+Nowy i zmieniony kod produkcyjny musi mieć adekwatne testy. Łączne pokrycie C# i Pythona musi wynosić co najmniej `90%`, a pokrycie gałęzi co najmniej `85%`. Bramka liczy wykonane linie i wyniki warunków z raportów OpenCover oraz Cobertura i nie używa wyłączeń pokrycia. Pełny opis kategorii testów znajduje się w [docs/TESTING.md](docs/TESTING.md).
 
 Na Windows bez PowerShell 7 zastąp `pwsh` poleceniem `powershell.exe` w poniższych wywołaniach skryptów. Skrypty repozytorium wspierają oba hosty.
 
@@ -69,7 +77,7 @@ Nowy host zewnętrzny wymaga świadomej aktualizacji `tools/release/external-lin
 
 ## SonarQube Cloud
 
-Workflow `.github/workflows/sonarcloud.yml` buduje rozwiązanie, uruchamia pełne testy z raportem OpenCover i czeka na quality gate. Pull request nie jest gotowy do scalenia, jeśli wprowadza nowe issue SonarQube Cloud albo brama jakości nie przechodzi.
+Workflow `.github/workflows/sonarcloud.yml` buduje rozwiązanie, uruchamia pełne testy C# i Pythona z raportami OpenCover oraz Cobertura, egzekwuje progi `90%`/`85%` i czeka na quality gate. Pull request nie jest gotowy do scalenia, jeśli wprowadza nowe issue SonarQube Cloud albo którakolwiek brama jakości nie przechodzi.
 
 - Napraw przyczynę issue. Nie wyciszaj reguły i nie oznaczaj problemu jako fałszywie dodatniego bez udokumentowanego uzasadnienia zaakceptowanego w przeglądzie.
 - Sprawdź analizatory lokalnie przed wysłaniem zmiany.

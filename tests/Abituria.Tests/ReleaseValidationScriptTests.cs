@@ -109,6 +109,59 @@ public sealed class ReleaseValidationScriptTests
     }
 
     [Fact]
+    public void Documentation_validator_does_not_probe_contributor_covenant_from_ci()
+    {
+        var excludedLinks = new[]
+        {
+            "https://www.contributor-covenant.org/",
+            "https://www.contributor-covenant.org/pl/version/1/4/code-of-conduct.html",
+            "https://www.contributor-covenant.org/version/1/4/code-of-conduct.html"
+        };
+
+        AssertLinksAreExcludedFromOnlineProbe(excludedLinks);
+    }
+
+    [Fact]
+    public void Documentation_validator_does_not_probe_nuget_package_pages_from_ci()
+    {
+        var excludedLinks = new[]
+        {
+            "https://www.nuget.org/packages/Avalonia/12.0.4",
+            "https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/10.0.10",
+            "https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlite3/2.1.12"
+        };
+
+        AssertLinksAreExcludedFromOnlineProbe(excludedLinks);
+    }
+
+    [Fact]
+    public void Documentation_validator_uses_pinned_hash_instead_of_probing_cke_pdf()
+    {
+        AssertLinksAreExcludedFromOnlineProbe(
+            ["https://bip.cke.gov.pl/attachments/download/9944"]);
+    }
+
+    private static void AssertLinksAreExcludedFromOnlineProbe(string[] excludedLinks)
+    {
+        using var directory = new TemporaryDirectory();
+        File.WriteAllText(
+            Path.Combine(directory.Path, "index.html"),
+            string.Concat(excludedLinks.Select(link => $"<a href=\"{link}\">attribution</a>")),
+            Encoding.UTF8);
+
+        var result = RunPowerShell(
+            "try { & $env:ABITURIA_LINK_SCRIPT -SiteDirectory $env:ABITURIA_FIXTURE " +
+            "-CheckExternalLinks -ExternalLinkFailureAction Fail; exit 0 } " +
+            "catch { [Console]::Error.WriteLine($_.Exception.Message); exit 17 }",
+            directory.Path);
+
+        Assert.Equal(0, result.ExitCode);
+        Assert.All(excludedLinks, link =>
+            Assert.Contains($"Skipping online probe for '{link}'", result.StandardOutput, StringComparison.Ordinal));
+        Assert.DoesNotContain("External links were unavailable", result.StandardError, StringComparison.Ordinal);
+    }
+
+    [Fact]
     public void Documentation_validator_accepts_existing_same_page_and_cross_page_fragments()
     {
         using var directory = new TemporaryDirectory();
@@ -128,6 +181,41 @@ public sealed class ReleaseValidationScriptTests
             directory.Path);
 
         Assert.Equal(0, result.ExitCode);
+    }
+
+    [Fact]
+    public void Coverage_gate_accepts_combined_csharp_and_python_reports_above_thresholds()
+    {
+        using var directory = new TemporaryDirectory();
+        WriteCoverageFixtures(directory.Path, covered: true);
+
+        var result = RunPowerShell(
+            "try { & $env:ABITURIA_COVERAGE_SCRIPT " +
+            "-OpenCoverReport (Join-Path $env:ABITURIA_FIXTURE 'csharp.xml') " +
+            "-PythonCoverageReport (Join-Path $env:ABITURIA_FIXTURE 'python.xml'); exit 0 } " +
+            "catch { [Console]::Error.WriteLine($_.Exception.Message); exit 17 }",
+            directory.Path);
+
+        Assert.Equal(0, result.ExitCode);
+        Assert.Contains("Coverage gate passed", result.StandardOutput, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void Coverage_gate_rejects_reports_below_overall_and_branch_thresholds()
+    {
+        using var directory = new TemporaryDirectory();
+        WriteCoverageFixtures(directory.Path, covered: false);
+
+        var result = RunPowerShell(
+            "try { & $env:ABITURIA_COVERAGE_SCRIPT " +
+            "-OpenCoverReport (Join-Path $env:ABITURIA_FIXTURE 'csharp.xml') " +
+            "-PythonCoverageReport (Join-Path $env:ABITURIA_FIXTURE 'python.xml'); exit 0 } " +
+            "catch { [Console]::Error.WriteLine($_.Exception.Message); exit 17 }",
+            directory.Path);
+
+        Assert.Equal(17, result.ExitCode);
+        Assert.Contains("overall coverage", result.StandardError, StringComparison.Ordinal);
+        Assert.Contains("branch coverage", result.StandardError, StringComparison.Ordinal);
     }
 
     [Theory]
@@ -210,6 +298,33 @@ public sealed class ReleaseValidationScriptTests
     private static string CredentialNameFixture() =>
         new(['P', 'a', 's', 's', 'w', 'o', 'r', 'd']);
 
+    private static void WriteCoverageFixtures(string directory, bool covered)
+    {
+        var sequenceVisitCount = covered ? 1 : 0;
+        var coveredLineCount = covered ? 2 : 1;
+        var coveredBranchCount = covered ? 2 : 0;
+        File.WriteAllText(
+            Path.Combine(directory, "csharp.xml"),
+            $"""
+            <CoverageSession>
+              <Summary numBranchPoints="2" visitedBranchPoints="{coveredBranchCount}" />
+              <Modules><Module>
+                <Files><File uid="1" fullPath="Calculator.cs" /></Files>
+                <Classes><Class><Methods><Method><SequencePoints>
+                  <SequencePoint vc="1" fileid="1" sl="10" />
+                  <SequencePoint vc="{sequenceVisitCount}" fileid="1" sl="11" />
+                </SequencePoints></Method></Methods></Class></Classes>
+              </Module></Modules>
+            </CoverageSession>
+            """,
+            Encoding.UTF8);
+        File.WriteAllText(
+            Path.Combine(directory, "python.xml"),
+            $"<coverage lines-valid=\"2\" lines-covered=\"{coveredLineCount}\" " +
+            $"branches-valid=\"2\" branches-covered=\"{coveredBranchCount}\" />",
+            Encoding.UTF8);
+    }
+
     private static ProcessResult RunPowerShell(string command, string fixturePath)
     {
         var startInfo = new ProcessStartInfo
@@ -232,6 +347,7 @@ public sealed class ReleaseValidationScriptTests
         startInfo.Environment["ABITURIA_FIXTURE"] = fixturePath;
         startInfo.Environment["ABITURIA_MODULE"] = Absolute("tools/release/PackageSecurity.psm1");
         startInfo.Environment["ABITURIA_LINK_SCRIPT"] = Absolute("tools/release/Test-DocumentationSite.ps1");
+        startInfo.Environment["ABITURIA_COVERAGE_SCRIPT"] = Absolute("tools/release/Test-CoverageThreshold.ps1");
 
         using var process = Process.Start(startInfo) ?? throw new InvalidOperationException("PowerShell did not start.");
         var standardOutput = process.StandardOutput.ReadToEnd();

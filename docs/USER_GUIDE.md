@@ -79,7 +79,9 @@ Zalogowany użytkownik konta chronionego hasłem może zmienić hasło na stroni
 
 ## Wzory
 
-Strona „Wzory” zawiera 18 tablic. Wybierz pozycję z listy, aby otworzyć artykuł z tekstem, wzorami inline i ilustracjami. Wróć do listy przyciskiem widoku lub górną nawigacją.
+Strona „Wzory” zawiera 18 działów obejmujących kompletny zakres oficjalnych tablic CKE dla Formuły 2023. Historyczny układ 18 pozycji został zachowany, dlatego sekcja CKE „Ciągi” jest rozdzielona między działy „Ciągi” i „Granica ciągu”. Wybierz pozycję z listy, aby otworzyć artykuł z tekstem, wzorami inline, dostępnymi tabelami i ilustracjami. Wróć do listy przyciskiem widoku lub górną nawigacją.
+
+Źródło, data weryfikacji i suma SHA-256 dokumentu CKE są zapisane w danych aplikacji oraz w [macierzy pokrycia tablic](FORMULA_2023_COVERAGE.md).
 
 Wzory są renderowane przez CSharpMath. Jeżeli konkretna formuła jest nieczytelna, zgłoś tytuł tablicy, treść wzoru i rozmiar okna zgodnie z [instrukcją wsparcia](../SUPPORT.md).
 

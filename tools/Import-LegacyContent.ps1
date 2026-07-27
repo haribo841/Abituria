@@ -2,7 +2,8 @@
     [string]$SourceRoot = '',
     [string]$OutputRoot = (Join-Path $PSScriptRoot '..\Content'),
     [switch]$CuratedChaptersOnly,
-    [string]$VectorChapterPath = ''
+    [string]$VectorChapterPath = '',
+    [string]$FormulaCatalogPath = (Join-Path $PSScriptRoot '..\Content\formulas.json')
 )
 
 Set-StrictMode -Version Latest
@@ -16,15 +17,17 @@ if (-not $CuratedChaptersOnly -and
 $issue35SeedPath = Join-Path $PSScriptRoot 'seeds\issue-35-content.json'
 $issue35Seed = Get-Content -Raw -Encoding UTF8 $issue35SeedPath | ConvertFrom-Json
 
-$formulaTitles = @(
-    'Wartość bezwzględna liczby', 'Potęgi i pierwiastki', 'Logarytmy',
-    'Silnia i współczynnik dwumianowy', 'Wzór dwumianowy Newtona',
-    'Wzory skróconego mnożenia', 'Ciągi', 'Funkcja kwadratowa',
-    'Geometria analityczna', 'Planimetria', 'Stereometria', 'Trygonometria',
-    'Kombinatoryka', 'Rachunek prawdopodobieństwa',
-    'Parametry danych statystycznych', 'Granica ciągu', 'Pochodna funkcji',
-    'Tablica wartości funkcji trygonometrycznych'
-)
+$formulaCatalog = $null
+if (-not $CuratedChaptersOnly) {
+    if (-not (Test-Path -LiteralPath $FormulaCatalogPath -PathType Leaf)) {
+        throw "Nie znaleziono kuratorowanego katalogu tablic: $FormulaCatalogPath"
+    }
+
+    $formulaCatalog = Get-Content -Raw -Encoding UTF8 $FormulaCatalogPath | ConvertFrom-Json
+    if ($formulaCatalog.schemaVersion -ne 3 -or @($formulaCatalog.articles).Count -ne 18) {
+        throw 'Katalog FormulaCatalogPath musi mieć schemaVersion 3 i dokładnie 18 działów.'
+    }
+}
 
 $questionPaperUrl = 'https://arkusze.pl/maturalne/matematyka-2021-sierpien-poprawkowa-podstawowa.pdf'
 $answerKeyUrl = 'https://arkusze.pl/maturalne/matematyka-2021-sierpien-poprawkowa-podstawowa-odpowiedzi.pdf'
@@ -196,24 +199,6 @@ function Convert-TokensToBlocks([object[]]$Tokens) {
         $blocks.Add([ordered]@{ type = 'richText'; text = $remaining })
     }
     return $blocks.ToArray()
-}
-
-function Get-FormulaArticles {
-    $articles = [System.Collections.Generic.List[object]]::new()
-    for ($index = 1; $index -le 18; $index++) {
-        $fileName = if ($index -eq 1) { 'WPage.xaml' } else { "W${index}Page.xaml" }
-        $path = Join-Path $SourceRoot "pages\equations\$fileName"
-        $document = Read-XamlDocument $path
-        $roots = $document.SelectNodes("//*[local-name()='Border' and @Grid.Column='2' and @Grid.Row='1']")
-        if ($roots.Count -eq 0) { throw "Nie znaleziono treści tablicy w $path" }
-        $tokens = [System.Collections.Generic.List[object]]::new()
-        Add-XamlTokens $roots[$roots.Count - 1] $tokens
-        $articles.Add([ordered]@{
-            id = "formula-$index"; order = $index; title = $formulaTitles[$index - 1]
-            blocks = @(Convert-TokensToBlocks $tokens.ToArray())
-        })
-    }
-    return $articles.ToArray()
 }
 
 function Get-VectorChapter {
@@ -430,7 +415,7 @@ if ($CuratedChaptersOnly) {
     return
 }
 
-$formulas = @(Get-FormulaArticles)
+$formulas = @($formulaCatalog.articles)
 $chapters = @(
     Get-VectorChapter
     @($issue35Seed.chapters)
@@ -466,9 +451,7 @@ $placeholders = @(
 
 $roadmap = @($issue35Seed.roadmapItems)
 
-Write-Json 'formulas.json' ([ordered]@{ schemaVersion = 2; introduction = @(
-    [ordered]@{ type = 'richText'; text = 'W czasie matury z matematyki na obu poziomach możesz korzystać z tablic matematycznych przygotowanych przez CKE. Znajdziesz w nich wiele wzorów i informacji pomocnych podczas egzaminu. Przejrzyj wcześniej całe tablice, aby wiedzieć, gdzie szukać potrzebnych treści i ograniczyć stres. Jeżeli zdajesz tylko poziom podstawowy, pamiętaj, że część tablic dotyczy poziomu rozszerzonego; warto rozpoznawać te strony i pomijać je podczas egzaminu.' }
-); articles = $formulas })
+Write-Json 'formulas.json' $formulaCatalog
 Write-Json 'chapters.json' ([ordered]@{ schemaVersion = 2; introduction = @($issue35Seed.chapterIntroduction); chapters = $chapters })
 Write-Json 'exam-2021-correction.json' ([ordered]@{ schemaVersion = 2; exam = $exam })
 Write-Json 'placeholders.json' ([ordered]@{ schemaVersion = 2; items = $placeholders })

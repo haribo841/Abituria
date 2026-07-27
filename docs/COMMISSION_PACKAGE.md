@@ -34,12 +34,16 @@ Generator `tools/New-CommissionPdf.py` tworzy PDF z diagramem komponentów, aktu
 
 ```powershell
 & "C:\Users\Adam\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" `
+  -m pip install --requirement tools/requirements-test.txt
+& "C:\Users\Adam\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe" `
   tools/New-CommissionPdf.py
 ```
 
+Te same przypięte zależności są instalowane w CI, a generator ma osobny zestaw testów w `tests/python/test_new_commission_pdf.py`.
+
 Po wygenerowaniu PDF musi zostać wyrenderowany do obrazów i sprawdzony wizualnie. Potwierdzenie tej kontroli jest częścią bieżącego zestawu dowodów.
 
-Ostatnia kontrola: 19 lipca 2026 r., 9 stron A4 wyrenderowanych przez Poppler przy 130 DPI. Sprawdzono wszystkie strony, w tym sekcję publicznej obrony M7 i nową macierz Issue #45; nie stwierdzono obcięć, nakładania tekstu, uszkodzonych znaków ani nieczytelnych tabel.
+Ostatnia kontrola: 27 lipca 2026 r., 9 stron A4 wyrenderowanych przez Poppler przy 130 DPI. Sprawdzono wszystkie strony, w tym aktualny wynik `449/449`, sekcję publicznej obrony M7 i macierz Issue #45; nie stwierdzono obcięć, nakładania tekstu, uszkodzonych znaków ani nieczytelnych tabel.
 
 ## Zasady przekazania
 

@@ -35,11 +35,21 @@ FONT_REGULAR = Path(r"C:\Windows\Fonts\arial.ttf")
 FONT_BOLD = Path(r"C:\Windows\Fonts\arialbd.ttf")
 BULK_APPROVAL = "ZAAKCEPTOWANO zbiorczo"
 EARLY_FEBRUARY_2022 = "początek lutego 2022"
+REQUIRED_SECTIONS = (
+    "Odbiór czterech przyrostów",
+    "Runda przed III odbiorem",
+    "Kandydat dokumentacyjny",
+    "Decyzja prowadzącego",
+    "Publiczna obrona projektu - M7",
+    "Jerzy Szymański",
+    "Kryteria akceptacji i oceny - Issue #45",
+    "HISTORICAL CRITERIA SATISFIED",
+)
 
 
-def register_fonts() -> None:
-    pdfmetrics.registerFont(TTFont("Abituria", str(FONT_REGULAR)))
-    pdfmetrics.registerFont(TTFont("Abituria-Bold", str(FONT_BOLD)))
+def register_fonts(font_regular: Path, font_bold: Path) -> None:
+    pdfmetrics.registerFont(TTFont("Abituria", str(font_regular)))
+    pdfmetrics.registerFont(TTFont("Abituria-Bold", str(font_bold)))
 
 
 def styles() -> dict[str, ParagraphStyle]:
@@ -218,17 +228,23 @@ def footer(canvas, doc) -> None:
     canvas.restoreState()
 
 
-def build_pdf() -> None:
-    if not FONT_REGULAR.exists() or not FONT_BOLD.exists():
+def build_pdf(
+    output_path: Path = OUTPUT,
+    screenshot_path: Path = SCREENSHOT,
+    font_regular: Path = FONT_REGULAR,
+    font_bold: Path = FONT_BOLD,
+    generated_on: date | None = None,
+) -> Path:
+    if not font_regular.exists() or not font_bold.exists():
         raise FileNotFoundError("Nie znaleziono wymaganych czcionek Arial w katalogu Windows Fonts.")
-    if not SCREENSHOT.exists():
-        raise FileNotFoundError(f"Nie znaleziono zrzutu testu wizualnego: {SCREENSHOT}")
+    if not screenshot_path.exists():
+        raise FileNotFoundError(f"Nie znaleziono zrzutu testu wizualnego: {screenshot_path}")
 
-    register_fonts()
+    register_fonts(font_regular, font_bold)
     st = styles()
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     document = SimpleDocTemplate(
-        str(OUTPUT),
+        str(output_path),
         pagesize=A4,
         leftMargin=1.6 * cm,
         rightMargin=1.6 * cm,
@@ -249,7 +265,7 @@ def build_pdf() -> None:
             HRFlowable(width="65%", color=colors.HexColor("#2563EB"), thickness=1.2),
             Spacer(1, 0.6 * cm),
             p("Wersja: <b>0.9.0-beta.1</b>", st["Subtitle"]),
-            p(f"Data wygenerowania: <b>{date.today().isoformat()}</b>", st["Subtitle"]),
+            p(f"Data wygenerowania: <b>{(generated_on or date.today()).isoformat()}</b>", st["Subtitle"]),
             p("Commit technicznej bazy: <b>e0afeeaee30ed700fa5b8dc873409c23081106d4</b>", st["Subtitle"]),
             p("Kod źródłowy: <b>github.com/haribo841/Abituria</b>", st["Subtitle"]),
             Spacer(1, 2.0 * cm),
@@ -360,7 +376,7 @@ def build_pdf() -> None:
                 "Zestaw xUnit obejmuje testy jednostkowe, integracyjne, regresyjne, wizualne, headless UI, "
                 "systemowe i kontraktowe wydania. Automatyczna brama wykonuje restore z lockfile, build Release, "
                 "testy, formatowanie, audyt NuGet, walidację pochodzenia treści oraz analizę SonarQube. "
-                "Pełny lokalny przebieg 19 lipca 2026 r. zakończył się wynikiem 415/415.",
+                "Pełny lokalny przebieg 27 lipca 2026 r. zakończył się wynikiem 449/449.",
                 st["Body"],
             ),
             table(
@@ -391,7 +407,7 @@ def build_pdf() -> None:
             p("Zrzut z aktualnego testu wizualnego", st["Subheading"]),
         ]
     )
-    screenshot = Image(str(SCREENSHOT), width=16.2 * cm, height=10.37 * cm)
+    screenshot = Image(str(screenshot_path), width=16.2 * cm, height=10.37 * cm)
     story.append(screenshot)
     story.append(p("Rysunek 2. Renderowana lista matematyczna używana jako obraz wzorcowy w teście wizualnym 1280x820.", st["Caption"]))
     story.append(PageBreak())
@@ -566,7 +582,7 @@ def build_pdf() -> None:
                     ["1. Prezentacja", "PASS: prezentacja, demonstracja i Q&A na nagraniu", "NOT APPLICABLE"],
                     ["2. Produkt", "PASS RETROSPEKTYWNY", "PASS techniczny"],
                     ["3. Dokumentacja", "PARTIAL: ograniczony materiał archiwalny", "PASS lokalny"],
-                    ["4. Testowanie", "PASS RETROSPEKTYWNY", "PASS: 415/415"],
+                    ["4. Testowanie", "PASS RETROSPEKTYWNY", "PASS: 449/449"],
                     ["5. Wdrożenie", "PASS: dwie publiczne paczki; niezależna instalacja retrospektywna", "PENDING publicznego Release"],
                     ["6. Praca zespołu", "PARTIAL: brak osobnej pisemnej opinii", "PASS dla pracy jednoosobowej"],
                     ["7. Wkład", "PARTIAL: brak ocen indywidualnych", "Adam Kubiś - autor bieżącej implementacji"],
@@ -601,27 +617,23 @@ def build_pdf() -> None:
     )
 
     document.build(story, onFirstPage=footer, onLaterPages=footer)
-    reader = PdfReader(str(OUTPUT))
+    page_count = validate_pdf(output_path)
+    print(f"Wygenerowano {output_path} ({page_count} stron).")
+    return output_path
+
+
+def validate_pdf(output_path: Path) -> int:
+    reader = PdfReader(str(output_path))
     if len(reader.pages) < 9:
         raise RuntimeError("Wygenerowany PDF ma zbyt mało stron, aby zawierać wymagany pakiet.")
     first_page = reader.pages[0].extract_text() or ""
     if "Abituria" not in first_page:
         raise RuntimeError("Wygenerowany PDF nie zawiera oczekiwanego tytułu.")
     all_text = "\n".join((page.extract_text() or "") for page in reader.pages)
-    required_sections = (
-        "Odbiór czterech przyrostów",
-        "Runda przed III odbiorem",
-        "Kandydat dokumentacyjny",
-        "Decyzja prowadzącego",
-        "Publiczna obrona projektu - M7",
-        "Jerzy Szymański",
-        "Kryteria akceptacji i oceny - Issue #45",
-        "HISTORICAL CRITERIA SATISFIED",
-    )
-    missing_sections = [section for section in required_sections if section not in all_text]
+    missing_sections = [section for section in REQUIRED_SECTIONS if section not in all_text]
     if missing_sections:
         raise RuntimeError(f"Wygenerowany PDF nie zawiera sekcji: {', '.join(missing_sections)}")
-    print(f"Wygenerowano {OUTPUT} ({len(reader.pages)} stron).")
+    return len(reader.pages)
 
 
 if __name__ == "__main__":

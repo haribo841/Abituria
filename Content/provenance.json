@@ -26,8 +26,7 @@
     {
       "id": "migrated-mathematics-content",
       "paths": [
-        "Content/chapters.json",
-        "Content/formulas.json"
+        "Content/chapters.json"
       ],
       "author": "Historyczni autorzy projektu Ich Troje, migracja i korekty: Adam Kubiś",
       "source": "Historyczne repozytorium Projekt-Inzynierski oraz bieżąca migracja treści",
@@ -36,6 +35,20 @@
       "evidence": [
         "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",
         "docs/MIGRATION_INVENTORY.md"
+      ]
+    },
+    {
+      "id": "cke-formula-2023-transcription",
+      "paths": [
+        "Content/formulas.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja i weryfikacja: Adam Kubiś",
+      "source": "Wybrane wzory matematyczne na egzamin maturalny z matematyki, CKE, https://bip.cke.gov.pl/attachments/download/9944, SHA-256 57CFF1265A7E38C13ECB6A00F566A37CDFDA667ABF2D550BA65E19E166CC0D45",
+      "license": "Deklaracja uprawnienia do publicznej redystrybucji w ramach Abiturii rozszerzona 2026-07-27",
+      "distributionStatus": "approved",
+      "evidence": [
+        "docs/ASSET_RIGHTS_DECLARATION.md",
+        "docs/FORMULA_2023_COVERAGE.md"
       ]
     },
     {

@@ -197,7 +197,7 @@ Projekt ma testy dla głównych warstw:
 - `ReleaseRuntimeTests`, `AboutViewTests` - izolowany smoke test, metadane builda i ekran "O programie",
 - `ContentProvenanceTests` - kompletność i jednoznaczność pochodzenia paczkowanych zasobów.
 
-CI używa workflow `build` do restore, build i testów. Dodatkowy workflow `sonarcloud` uruchamia SonarScanner for .NET, testy z pokryciem OpenCover i czeka na quality gate. Workflow wydania działa na natywnych runnerach Windows, Ubuntu i macOS: odtwarza lockfile, audytuje NuGet, publikuje self-contained, wykonuje smoke test, sprawdza architekturę i zawartość archiwów oraz generuje sumy SHA-256, SBOM i atestacje. GitHub Pages powstaje z tych samych plików Markdown przez DocFX.
+CI używa workflow `build` do restore, build oraz testów C# i Pythona. Raporty OpenCover i Cobertura trafiają do wspólnej bramki wymagającej `90%` łącznego pokrycia i `85%` pokrycia gałęzi. Dodatkowy workflow `sonarcloud` uruchamia wielojęzyczny SonarScanner for .NET, przekazuje oba raporty i czeka na quality gate. Workflow wydania działa na natywnych runnerach Windows, Ubuntu i macOS: odtwarza lockfile, audytuje NuGet, publikuje self-contained, wykonuje smoke test, sprawdza architekturę i zawartość archiwów oraz generuje sumy SHA-256, SBOM i atestacje. GitHub Pages powstaje z tych samych plików Markdown przez DocFX.
 
 ## Różnice względem historycznego opisu systemu
 

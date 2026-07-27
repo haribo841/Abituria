@@ -26,12 +26,32 @@ jobs:
           cache-dependency-path: |
             packages.lock.json
             tests/Abituria.Tests/packages.lock.json
+      - name: Install Python 3.12
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: tools/requirements-test.txt
+      - name: Install Python test dependencies
+        run: python -m pip install --requirement tools/requirements-test.txt
       - name: Restore in locked mode
         run: dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
       - name: Build
         run: dotnet build Abituria.sln --configuration Release --no-restore
-      - name: Test
-        run: dotnet test Abituria.sln --configuration Release --no-build --no-restore
+      - name: Test C# with OpenCover report
+        run: dotnet test Abituria.sln --configuration Release --no-build --no-restore --results-directory artifacts/coverage/csharp --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+      - name: Test Python with branch coverage
+        run: |
+          python -m coverage run --branch --source=tools -m unittest discover -s tests/python -p "test_*.py"
+          python -m coverage xml -o artifacts/coverage/python-coverage.xml
+      - name: Enforce project coverage thresholds
+        shell: pwsh
+        run: |
+          $reports = @(Get-ChildItem artifacts/coverage/csharp -Recurse -Filter coverage.opencover.xml)
+          if ($reports.Count -ne 1) { throw "Expected exactly one OpenCover report, found $($reports.Count)." }
+          ./tools/release/Test-CoverageThreshold.ps1 `
+            -OpenCoverReport $reports[0].FullName `
+            -PythonCoverageReport artifacts/coverage/python-coverage.xml
       - name: Verify whitespace formatting
         run: dotnet format Abituria.sln whitespace --verify-no-changes --no-restore
       - name: Audit direct and transitive NuGet packages

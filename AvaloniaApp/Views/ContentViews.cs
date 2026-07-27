@@ -15,7 +15,7 @@ public sealed class FormulaListView : UserControl
     public FormulaListView(FormulaCatalog catalog, Action<FormulaArticle> open)
     {
         var root = new StackPanel { Spacing = 14 };
-        root.Children.Add(UiFactory.PageTitle("Tablice matematyczne", "Pełny zestaw 18 tematów ze starszych wersji projektu."));
+        root.Children.Add(UiFactory.PageTitle("Tablice matematyczne", "18 działów zgodnych zakresem z tablicami CKE dla Formuły 2023."));
         if (catalog.Introduction.Count > 0)
             root.Children.Add(UiFactory.Card(new RichContentView(catalog.Introduction)));
         foreach (var article in catalog.Articles.OrderBy(item => item.Order))

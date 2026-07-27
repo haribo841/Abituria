@@ -134,6 +134,32 @@ public sealed class ReleaseContractTests
     }
 
     [Fact]
+    public void Build_and_sonar_workflows_enforce_csharp_and_python_coverage_without_exclusions()
+    {
+        var build = File.ReadAllText(Absolute(".github/workflows/build.yml"));
+        var sonar = File.ReadAllText(Absolute(".github/workflows/sonarcloud.yml"));
+        var requiredFragments = new[]
+        {
+            "actions/setup-python@v7",
+            "tools/requirements-test.txt",
+            "--source=tools",
+            "tests/python",
+            "python-coverage.xml",
+            "Test-CoverageThreshold.ps1"
+        };
+
+        Assert.All(requiredFragments, fragment =>
+        {
+            Assert.Contains(fragment, build, StringComparison.Ordinal);
+            Assert.Contains(fragment, sonar, StringComparison.Ordinal);
+        });
+        Assert.Contains("sonar.python.coverage.reportPaths", sonar, StringComparison.Ordinal);
+        Assert.DoesNotContain("sonar.coverage.exclusions", sonar, StringComparison.Ordinal);
+        Assert.Contains("MinimumOverallCoverage = 90", File.ReadAllText(Absolute("tools/release/Test-CoverageThreshold.ps1")), StringComparison.Ordinal);
+        Assert.Contains("MinimumBranchCoverage = 85", File.ReadAllText(Absolute("tools/release/Test-CoverageThreshold.ps1")), StringComparison.Ordinal);
+    }
+
+    [Fact]
     public void Pages_build_uses_pinned_docfx_and_does_not_publish_image_directory()
     {
         var workflow = File.ReadAllText(Absolute(".github/workflows/pages.yml"))
@@ -245,8 +271,34 @@ public sealed class ReleaseContractTests
         Assert.Contains(
             root.GetProperty("allowedHosts").EnumerateArray(),
             item => item.GetString() == "www.w3.org");
+        Assert.Contains(
+            root.GetProperty("allowedHosts").EnumerateArray(),
+            item => item.GetString() == "bip.cke.gov.pl");
+        var onlineCheckExclusions = root.GetProperty("onlineCheckExclusions");
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() == "https://www.contributor-covenant.org/" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "GitHub-hosted runners",
+                    StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() == "https://www.nuget.org/packages/" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "locked restore data",
+                    StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() ==
+                    "https://bip.cke.gov.pl/attachments/download/9944" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "SHA-256",
+                    StringComparison.Ordinal));
         Assert.All(
-            root.GetProperty("onlineCheckExclusions").EnumerateArray(),
+            onlineCheckExclusions.EnumerateArray(),
             item =>
             {
                 Assert.StartsWith("https://", item.GetProperty("urlPrefix").GetString(), StringComparison.Ordinal);

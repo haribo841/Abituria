@@ -58,11 +58,13 @@ Nie wolno usuwać parametru bramy, ręcznie zmieniać `releaseEligible` ani wył
 
 ## Aktualny stan
 
-`releaseEligible` ma wartość `true`. Wszystkie zasoby paczkowane przez projekt mają status `approved`. Podstawę dla trzech grup, które wcześniej były zablokowane, stanowi [deklaracja praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 19 lipca 2026 r.
+`releaseEligible` ma wartość `true`. Wszystkie zasoby paczkowane przez projekt mają status `approved`. Podstawę dla trzech grup, które wcześniej były zablokowane, stanowi [deklaracja praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 19 lipca 2026 r. Deklarację rozszerzono 27 lipca 2026 r. o transkrypcję tablic CKE dla Formuły 2023.
 
 ### Materiały CKE
 
 Grupa `cke-2021-correction-exam` obejmuje `Content/exam-2021-correction.json` i `img/mp21z*.png`. Autorem źródłowego arkusza i zasad oceniania `EMAP-P0-100-2108` pozostaje Centralna Komisja Egzaminacyjna, a adaptację i weryfikację wykonał Adam Kubiś. Status `approved` wynika z deklaracji posiadania praw lub skutecznego upoważnienia do publicznej redystrybucji tych zasobów jako części Abiturii. Deklaracja nie przenosi autorstwa i nie udziela samodzielnej licencji na te materiały poza Abiturią.
+
+Grupa `cke-formula-2023-transcription` obejmuje `Content/formulas.json`. Dokument źródłowy CKE jest wskazany dokładnym adresem i sumą SHA-256 w katalogu treści oraz w [macierzy pokrycia tablic](FORMULA_2023_COVERAGE.md). Transkrypcję i weryfikację wykonał Adam Kubiś, natomiast autorem dokumentu źródłowego pozostaje Centralna Komisja Egzaminacyjna. Status `approved` wynika z rozszerzenia deklaracji z 27 lipca 2026 r.
 
 ### Odziedziczone grafiki matematyczne
 
@@ -78,7 +80,7 @@ Manifest oznacza obecnie jako `approved`:
 
 - aktualne treści techniczne i inwentarz autorstwa Adama Kubisia na licencji MIT;
 - zmigrowane treści matematyczne, dla których dowodem jest zachowana historyczna licencja MIT i inwentarz migracji;
-- materiały CKE oraz odziedziczone grafiki objęte deklaracją praw lub upoważnienia do publicznej redystrybucji wyłącznie jako części Abiturii;
+- arkusz CKE 2021, transkrypcję tablic CKE dla Formuły 2023 oraz odziedziczone grafiki objęte deklaracją praw lub upoważnienia do publicznej redystrybucji wyłącznie jako części Abiturii;
 - font Mulish na licencji SIL Open Font License 1.1, potwierdzonej przez `fonts/OFL.txt` i `fonts/README.txt`.
 
 Status zatwierdzony należy ponownie ocenić po każdej zmianie źródła, zakresu plików albo sposobu pakowania.

@@ -20,7 +20,7 @@
 | Ukończone zadania | `CompleteExerciseService`, niewpięty do UI | Idempotentny zapis ukończenia per profil |
 | Kalkulator kwadratowy | `CalcQuadraticFunc`, `QuadraticPage` | Delta, miejsca zerowe, wierzchołek, trzy postacie i kroki obliczeń |
 | Kalkulator ogólny | `Opis struktury systemu.txt`, prototyp i issues #1/#3 | Bezpieczny parser działań, nawiasów, potęg i pierwiastków, Ans oraz historia sesji |
-| Tablice matematyczne | `PageF1`–`PageF18`, `WPage`–`W18Page` | 18 artykułów w `Content/formulas.json` |
+| Tablice matematyczne | historyczne `PageF1`-`PageF18` i `WPage`-`W18Page`; aktualny dokument CKE dla Formuły 2023 | 18 zachowanych artykułów w `Content/formulas.json`, uzupełnionych i zweryfikowanych według wszystkich 17 sekcji CKE |
 | Wektory | `pages/chapters/WektoryPage.xaml` | Pełny artykuł i 8 ilustracji |
 | Matura poprawkowa 2021 | `Z1Page`–`Z35Page` | 35 zadań, 169 zweryfikowanych podpowiedzi i 9 obrazów |
 | Weryfikacja arkusza | CKE `EMAP-P0-100-2108` | Klucz 1–28, treści, odpowiedzi otwarte i strony źródłowe zapisane w danych |
@@ -39,7 +39,9 @@
 
 ## Korekty treści
 
-Importer zachowuje kolejność tekstu, wzorów i obrazów. W czasie importu poprawiane są znane błędy:
+Importer zachowuje kolejność tekstu, wzorów i obrazów dla treści historycznych innych niż tablice. Katalog tablic jest obecnie kuratorowaną transkrypcją CKE i pełny import kopiuje go z parametru `FormulaCatalogPath`, zamiast ponownie odczytywać stare ekrany WPF. Chroni to poprawioną treść przed cofnięciem przez kolejny import.
+
+W historycznej ścieżce importu poprawiane są znane błędy:
 
 - `/cdot` → `\cdot`,
 - `/text` → `\text`,
@@ -57,7 +59,9 @@ Po porównaniu z arkuszem i zasadami oceniania CKE naprawiono również odziedzi
 
 Testy automatyczne wymagają:
 
-- dokładnie 18 tablic, 9 pozycji działowych, w tym 7 dostępnych i 2 placeholdery, 17 tematów oraz 6 grup placeholderów poza działami,
+- dokładnie 18 tablic i kompletne odwzorowanie wszystkich podpunktów 17 sekcji CKE dla Formuły 2023,
+- dokładnie 91 kątów od 0 do 90 stopni w tekstowej tabeli trygonometrycznej,
+- 9 pozycji działowych, w tym 7 dostępnych i 2 placeholdery, 17 tematów oraz 6 grup placeholderów poza działami,
 - dokładnie 35 kolejnych zadań: 28 zamkniętych i 7 otwartych,
 - czterech niepustych opcji i klucza 1–4 dla każdego zadania zamkniętego,
 - niepustej odpowiedzi ujawnianej dla każdego zadania otwartego,

@@ -27,7 +27,7 @@ Paczki są samowystarczalne i nie wymagają instalacji środowiska .NET. Są to 
 
 - lokalne konta chronione hasłem oraz profile gościa;
 - jednorazowe kody odzyskiwania i postęp zapisywany osobno dla każdego profilu;
-- 18 tablic matematycznych;
+- 18 tablic matematycznych zgodnych zakresem z oficjalnym dokumentem CKE dla Formuły 2023;
 - 7 dostępnych działów matematycznych i 2 jawnie oznaczone działy w przygotowaniu;
 - 35 zadań z matury poprawkowej 2021, dostępnych według arkusza lub 17 tematów;
 - sprawdzanie odpowiedzi A-D, podpowiedzi, ujawnianie odpowiedzi i sesyjny brudnopis;

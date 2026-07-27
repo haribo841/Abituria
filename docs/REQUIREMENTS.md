@@ -45,7 +45,7 @@ Zakres bieżącej implementacji obejmuje:
 - import historycznych profili gościa z pliku `users.txt`,
 - zapis ukończonych zadań osobno dla profilu,
 - ekran startowy z kaflami głównych obszarów,
-- 18 tablic matematycznych,
+- 18 tablic matematycznych obejmujących kompletny zakres dokumentu CKE dla Formuły 2023,
 - 7 dostępnych działów: Wektory, Liczby naturalne i indukcja, Alfabet grecki, Liczby rzeczywiste, zbiory i logika, Wyrażenia algebraiczne, równania i nierówności, Funkcja kwadratowa i równanie kwadratowe oraz Logarytmy,
 - 35 zadań matury poprawkowej 2021,
 - przeglądanie zadań według arkusza i tematów,
@@ -83,7 +83,7 @@ Poza bieżącym zakresem pozostają:
 | F-03 | System zapisuje hasła wyłącznie jako skróty z solą. | Wysoki | Zaimplementowane | `PasswordHasher`, `AccountServiceTests` |
 | F-04 | System umożliwia odzyskanie i zmianę hasła przez kod odzyskiwania. | Wysoki | Zaimplementowane | `LoginView`, `ProfileView`, `AccountServiceTests` |
 | F-05 | System importuje historyczne profile gościa z `users.txt` idempotentnie. | Średni | Zaimplementowane | `AccountService`, `InitialLocalAccounts`, `AccountServiceTests` |
-| F-06 | System pokazuje 18 tablic matematycznych z treści JSON. | Wysoki | Zaimplementowane | `Content/formulas.json`, `ContentInventoryTests` |
+| F-06 | System pokazuje 18 tablic matematycznych obejmujących wszystkie 17 sekcji i podpunkty dokumentu CKE dla Formuły 2023, z jawnym źródłem i sumą SHA-256. | Wysoki | Zaimplementowane | `Content/formulas.json`, `FORMULA_2023_COVERAGE.md`, `ContentInventoryTests` |
 | F-07 | System pokazuje 7 dostępnych działów matematyki, w tym Wektory oraz pełny zakres treści issue #35. | Wysoki | Zaimplementowane | `Content/chapters.json`, `ContentInventoryTests`, `Issue35MathChaptersRegressionTests` |
 | F-08 | System pokazuje 35 zadań matury poprawkowej 2021. | Wysoki | Zaimplementowane | `Content/exam-2021-correction.json`, `ContentInventoryTests` |
 | F-09 | System umożliwia wybór zadań według arkusza lub tematu. | Wysoki | Zaimplementowane | `ExerciseListView`, `ContentInventoryTests` |
@@ -217,7 +217,7 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 4. `dotnet format whitespace Abituria.sln --verify-no-changes --no-restore` nie zgłasza zmian.
 5. `git diff --check` nie zgłasza błędów.
 6. SonarQube Cloud nie raportuje otwartych problemów po analizie aktualnego commita.
-7. Inwentarz treści potwierdza 18 tablic, 9 pozycji działowych, w tym 7 dostępnych i 2 placeholdery, 17 tematów i 35 zadań.
+7. Inwentarz treści potwierdza 18 tablic, kompletne odwzorowanie 17 sekcji CKE, 91 kątów w tabeli trygonometrycznej, 9 pozycji działowych, w tym 7 dostępnych i 2 placeholdery, 17 tematów i 35 zadań.
 8. Wszystkie obrazy wskazane przez treści istnieją w repozytorium.
 9. Każde zadanie ma kompletną umowę odpowiedzi: opcje i klucz dla zadań zamkniętych albo odpowiedź ujawnianą dla zadań otwartych.
 10. Kalkulator ogólny przechodzi regresje dla issues #1-#9 oraz powiązanych dyskusji.

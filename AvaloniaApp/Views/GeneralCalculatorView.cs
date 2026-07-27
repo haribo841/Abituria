@@ -383,9 +383,9 @@ public sealed class GeneralCalculatorView : UserControl
         var end = Math.Clamp(Math.Max(_expression.SelectionStart, _expression.SelectionEnd), 0, source.Length);
         _expression.Text = source[..start] + text + source[end..];
         var caret = start + caretOffset;
+        _expression.CaretIndex = caret + selectionLength;
         _expression.SelectionStart = caret;
         _expression.SelectionEnd = caret + selectionLength;
-        _expression.CaretIndex = caret + selectionLength;
         _expression.Focus();
     }
 
@@ -510,9 +510,9 @@ public sealed class GeneralCalculatorView : UserControl
         var start = Math.Clamp(selectionStart, 0, text.Length);
         var end = Math.Clamp(start + selectionLength, start, text.Length);
         _expression.Text = text;
+        _expression.CaretIndex = end;
         _expression.SelectionStart = start;
         _expression.SelectionEnd = end;
-        _expression.CaretIndex = end;
         _expression.Focus();
     }
 

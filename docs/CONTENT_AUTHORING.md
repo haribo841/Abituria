@@ -2,7 +2,7 @@
 
 Kod C# odpowiada za wczytanie, walidację i wyświetlenie treści. Długie opisy, materiały edukacyjne i wzory są przechowywane poza kodem:
 
-- `Content/formulas.json` - tablice wzorów,
+- `Content/formulas.json` - kuratorowana transkrypcja tablic CKE dla Formuły 2023,
 - `Content/chapters.json` - materiały działowe,
 - `Content/exam-2021-correction.json` - zadania, odpowiedzi i podpowiedzi,
 - `Content/placeholders.json` - treść ekranów zaplanowanych lub zastąpionych,
@@ -16,6 +16,8 @@ powershell -ExecutionPolicy Bypass -File tools/Sync-Issue35Content.ps1
 ```
 
 Test end-to-end uruchamia importer do pustego katalogu i wymaga semantycznej zgodności wyniku z aktywnymi katalogami, więc rozbieżność seeda, importera i aplikacji blokuje testy.
+
+`Content/formulas.json` jest kanonicznym katalogiem tablic. Wersja schematu 3 wymaga obiektu `source` z wydawcą, tytułem, adresem dokumentu, sumą SHA-256, datą publikacji i datą weryfikacji. Maszynową macierz sekcji i podpunktów zawiera `tools/seeds/formula-2023-coverage.json`. Pełny importer przyjmuje `-FormulaCatalogPath` i kopiuje ten katalog bez przetwarzania historycznych ekranów wzorów.
 
 Tekst matematyczny używa ograniczników `\(` oraz `\)`. Każdy fizyczny wiersz musi zawierać kompletne, niezagnieżdżone i niepuste pary ograniczników. Nie wolno otwierać wzoru w jednym wierszu lub bloku i zamykać go w następnym. `TextView` oraz jego `TextPainter` renderują cały poprawny wiersz jako jeden przepływ tekstu i matematyki. Historyczny znacznik listy `\(-\)` jest wcześniej normalizowany do zwykłego znaku `-`.
 

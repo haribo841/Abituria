@@ -208,11 +208,14 @@ public sealed class ContentInventoryTests
     [Fact]
     public void Every_rendered_rich_text_line_is_supported_by_text_renderer()
     {
-        foreach (var line in ReadRichTextLines().Where(line => !string.IsNullOrWhiteSpace(line)))
-        {
-            var painter = new TextPainter { LaTeX = line };
-            Assert.True(string.IsNullOrWhiteSpace(painter.ErrorMessage), $"{line}: {painter.ErrorMessage}");
-        }
+        var errors = ReadRichTextLines()
+            .Where(line => !string.IsNullOrWhiteSpace(line))
+            .Select(line => (Line: line, Painter: new TextPainter { LaTeX = line }))
+            .Where(result => !string.IsNullOrWhiteSpace(result.Painter.ErrorMessage))
+            .Select(result => $"{result.Line}: {result.Painter.ErrorMessage}")
+            .ToArray();
+
+        Assert.True(errors.Length == 0, string.Join(Environment.NewLine, errors));
     }
 
     [Fact]

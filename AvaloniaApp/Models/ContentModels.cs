@@ -34,8 +34,19 @@ public sealed class UiCopyEntry
 public sealed class FormulaCatalog
 {
     public int SchemaVersion { get; set; }
+    public FormulaSourceDocument Source { get; set; } = new();
     public List<ContentBlock> Introduction { get; set; } = [];
     public List<FormulaArticle> Articles { get; set; } = [];
+}
+
+public sealed class FormulaSourceDocument
+{
+    public string Publisher { get; set; } = string.Empty;
+    public string Title { get; set; } = string.Empty;
+    public string DocumentUrl { get; set; } = string.Empty;
+    public string DocumentSha256 { get; set; } = string.Empty;
+    public string PublishedOn { get; set; } = string.Empty;
+    public string VerifiedOn { get; set; } = string.Empty;
 }
 
 public sealed class FormulaArticle

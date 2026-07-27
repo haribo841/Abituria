@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "publisher": "Centralna Komisja Egzaminacyjna",
+    "title": "Wybrane wzory matematyczne na egzamin maturalny z matematyki",
+    "documentUrl": "https://bip.cke.gov.pl/attachments/download/9944",
+    "documentSha256": "57CFF1265A7E38C13ECB6A00F566A37CDFDA667ABF2D550BA65E19E166CC0D45",
+    "publishedOn": "2024-08-26",
+    "verifiedOn": "2026-07-27"
+  },
+  "sections": [
+    {
+      "number": 1,
+      "title": "Wartość bezwzględna liczby",
+      "printedPages": "4",
+      "articleIds": [ "formula-1" ],
+      "requiredItems": [ "definition", "distance-interpretation", "single-variable-properties", "triangle-inequalities", "product-and-quotient", "distance-inequalities" ]
+    },
+    {
+      "number": 2,
+      "title": "Potęgi i pierwiastki",
+      "printedPages": "4-5",
+      "articleIds": [ "formula-2" ],
+      "requiredItems": [ "positive-integer-power", "arithmetic-root", "negative-odd-root", "rational-exponents", "power-laws", "power-inequalities" ]
+    },
+    {
+      "number": 3,
+      "title": "Logarytmy",
+      "printedPages": "5-6",
+      "articleIds": [ "formula-3" ],
+      "requiredItems": [ "definition", "inverse-identity", "product-quotient-power", "change-of-base", "reciprocal-base", "decimal-notation" ]
+    },
+    {
+      "number": 4,
+      "title": "Silnia. Współczynnik dwumianowy",
+      "printedPages": "6",
+      "articleIds": [ "formula-4" ],
+      "requiredItems": [ "factorial", "zero-factorial", "factorial-recurrence", "binomial-two-forms", "boundary-values", "symmetry", "pascal-identity" ]
+    },
+    {
+      "number": 5,
+      "title": "Wzór dwumianowy Newtona",
+      "printedPages": "7",
+      "articleIds": [ "formula-5" ],
+      "requiredItems": [ "sum-binomial", "difference-binomial" ]
+    },
+    {
+      "number": 6,
+      "title": "Wzory skróconego mnożenia",
+      "printedPages": "7",
+      "articleIds": [ "formula-6" ],
+      "requiredItems": [ "squares", "cubes", "difference-of-nth-powers", "difference-of-squares", "sum-and-difference-of-cubes", "powers-minus-one" ]
+    },
+    {
+      "number": 7,
+      "title": "Funkcja kwadratowa",
+      "printedPages": "7-9",
+      "articleIds": [ "formula-8" ],
+      "requiredItems": [ "discriminant", "general-form", "vertex-and-orientation", "root-cases", "canonical-form", "product-form", "viete" ]
+    },
+    {
+      "number": 8,
+      "title": "Ciągi",
+      "printedPages": "9-11",
+      "articleIds": [ "formula-7", "formula-16" ],
+      "requiredItems": [ "arithmetic-sequence", "geometric-sequence", "infinite-geometric-sum", "limit-arithmetic", "squeeze-theorem", "compound-interest", "selected-limits" ]
+    },
+    {
+      "number": 9,
+      "title": "Trygonometria",
+      "printedPages": "11-14",
+      "articleIds": [ "formula-12" ],
+      "requiredItems": [ "acute-angle-definitions", "general-angle-definitions", "graphs", "same-angle-identities", "special-values", "sum-and-difference", "double-angle", "reduction", "sum-difference-product-identities", "periodicity" ]
+    },
+    {
+      "number": 10,
+      "title": "Planimetria",
+      "printedPages": "15-22",
+      "articleIds": [ "formula-10" ],
+      "requiredItems": [ "triangle-notation", "pythagoras", "sine-theorem", "cosine-theorem", "triangle-areas", "right-triangle", "equilateral-triangle", "congruence", "similarity", "angle-bisector", "thales", "circle", "sector", "circle-angles", "tangent-and-chord", "tangent-segments", "secant-and-tangent", "quadrilaterals", "cyclic-quadrilateral", "tangential-quadrilateral", "similar-areas" ]
+    },
+    {
+      "number": 11,
+      "title": "Geometria analityczna na płaszczyźnie kartezjańskiej",
+      "printedPages": "22-26",
+      "articleIds": [ "formula-9" ],
+      "requiredItems": [ "segment-length", "midpoint", "line-equations", "parallel-lines", "perpendicular-lines", "point-line-distance", "circle-equations", "vectors", "transformations", "triangle-area", "centroid" ]
+    },
+    {
+      "number": 12,
+      "title": "Stereometria",
+      "printedPages": "26-28",
+      "articleIds": [ "formula-11" ],
+      "requiredItems": [ "three-perpendiculars-theorem", "cuboid", "right-prism", "pyramid", "cylinder", "cone", "sphere" ]
+    },
+    {
+      "number": 13,
+      "title": "Kombinatoryka",
+      "printedPages": "28",
+      "articleIds": [ "formula-13" ],
+      "requiredItems": [ "permutations", "combinations", "variations-with-repetition", "variations-without-repetition" ]
+    },
+    {
+      "number": 14,
+      "title": "Rachunek prawdopodobieństwa",
+      "printedPages": "29-30",
+      "articleIds": [ "formula-14" ],
+      "requiredItems": [ "probability-properties", "classical-definition", "bernoulli-scheme", "conditional-probability", "total-probability", "bayes", "expected-value" ]
+    },
+    {
+      "number": 15,
+      "title": "Parametry danych statystycznych",
+      "printedPages": "31-32",
+      "articleIds": [ "formula-15" ],
+      "requiredItems": [ "arithmetic-mean", "geometric-mean", "quadratic-mean", "mean-inequalities", "weighted-mean", "median", "variance-and-standard-deviation" ]
+    },
+    {
+      "number": 16,
+      "title": "Pochodna funkcji",
+      "printedPages": "32-33",
+      "articleIds": [ "formula-17" ],
+      "requiredItems": [ "sum-difference-product-quotient", "chain-rule", "selected-derivatives", "tangent-equation" ]
+    },
+    {
+      "number": 17,
+      "title": "Tablica wartości funkcji trygonometrycznych",
+      "printedPages": "34",
+      "articleIds": [ "formula-18" ],
+      "requiredItems": [ "angles-zero-through-ninety", "sine-values", "cosine-values", "tangent-values" ]
+    }
+  ]
+}

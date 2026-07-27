@@ -33,7 +33,7 @@ Powiązane issue: <!-- np. Closes #123 -->
 
 ### Testy i pokrycie
 
-<!-- Jakie testy dodano lub zmieniono? Jaki jest wpływ na pokrycie nowego kodu? -->
+<!-- Jakie testy C# lub Python dodano albo zmieniono? Podaj łączne pokrycie i pokrycie gałęzi z Test-CoverageThreshold.ps1. -->
 
 ### SonarQube Cloud
 
@@ -64,7 +64,7 @@ W każdym wierszu podaj wpływ i dowód albo `Nie dotyczy - <uzasadnienie>`.
 
 - [ ] Zmiana ma jeden spójny cel, a powiązane issue i zakres są opisane.
 - [ ] Nowe lub zmienione zachowanie ma test regresyjny, jednostkowy albo integracyjny, lub wyjaśniłem, dlaczego nie dotyczy.
-- [ ] Pełny build Release, testy z raportem OpenCover, formatowanie i analizatory zakończyły się powodzeniem.
+- [ ] Pełny build Release, testy C# i Python, raporty OpenCover i Cobertura oraz bramka pokrycia `90%`/`85%` zakończyły się powodzeniem.
 - [ ] Sprawdziłem SonarQube Cloud: quality gate przechodzi i zmiana nie pozostawia nowych issues, albo jawnie opisałem brak skanu z forka.
 - [ ] Sprawdziłem CodeQL: code scanning nie pozostawia nowych alertów albo jawnie opisałem, dlaczego skan nie był dostępny.
 - [ ] Zaktualizowałem właściwą dokumentację i sprawdziłem DocFX oraz odnośniki, jeśli zmiana ich dotyczy.

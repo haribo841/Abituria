@@ -2,9 +2,9 @@
 
 Wersja dokumentu: `0.9.0-beta.1`.
 
-Data ostatniego lokalnego wykonania: 25 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, konfiguracja `Release`.
+Data ostatniego lokalnego wykonania: 27 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.12.13`, konfiguracja `Release`.
 
-Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` z kolektorem XPlat Code Coverage i raportem OpenCover zakończył się wynikiem `430/430 PASS` w czasie `6 s`. Zestaw obejmuje testy stylu, motywów, widocznego fokusu, breakpointów, własnego chrome, dialogów i kosztu renderowania dyskusji #49.
+Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `449/449 PASS` w czasie `9 s`. OpenCover wykazał `94,81%` pokrycia linii i `85,21%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `92,35%` pokrycia łącznego i `85,32%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
 
 Dokument rozróżnia wyniki automatyczne, retrospektywne poświadczenie historycznych testów uczestników oraz czynności bieżącego procesu wydawniczego. Brak szczegółowej karty sesji nie jest uzupełniany przez domysł, a poświadczenie historyczne nie jest przedstawiane jako test bieżącej paczki.
 
@@ -30,14 +30,15 @@ Celem testów końcowych jest potwierdzenie, że Abituria spełnia aktualny zakr
 | --- | --- | --- |
 | Kalkulator | `ExpressionCalculatorTests`, `ExpressionCalculatorRobustnessTests`, `CalculatorSessionTests`, `RepeatedEqualsTests`, `QuadraticSolverTests` | poprawność obliczeń, błędy wejścia, granice i historia |
 | Konta i dane | `AccountServiceTests`, `Issue14RegistrationRegressionTests`, `ReleaseDatabaseCompatibilityTests` | profil gościa, hasła, odzyskiwanie, postęp i kompatybilność bazy |
-| Treści | `ContentInventoryTests`, `ContentSeparationTests`, `Issue35MathChaptersRegressionTests` | kompletność katalogu, format JSON i renderowanie treści |
-| UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests` | osiągalne ścieżki użytkownika, pojedyncze okno, losowanie i kontekst zadania |
+| Treści | `ContentInventoryTests`, `ContentSeparationTests`, `Issue35MathChaptersRegressionTests`, `Formula2023ContentTests` | kompletność katalogu i tablic CKE Formuła 2023, format JSON oraz renderowanie treści |
+| UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests` | osiągalne ścieżki użytkownika, wszystkie trasy shella, edycję kalkulatora, pojedyncze okno, losowanie i kontekst zadania |
 | Dostępność kontrolek | `AccessibilityRegressionTests` | nazwy pól i symbolicznych przycisków oraz dynamiczne regiony wyników |
 | Wizualne | `Discussion10VisualRegressionTests` | renderowanie list matematycznych i zachowanie przy minimalnym rozmiarze okna |
 | Styl, motywy i własny chrome | `Discussion49StyleRegressionTests` | Mulish, brak wymuszonego Light i Inter, cztery ustawienia motywu, stany interakcji, fokus, breakpointy, dialogi, sterowanie i skalowanie okna |
 | Koszt renderowania UI | `Discussion49StyleRegressionTests` | rozgrzany render reprezentatywnego widoku w motywie jasnym, ciemnym i wysokiego kontrastu oraz budżet czasu i pamięci |
-| Wydanie | `ReleaseRuntimeTests`, `ReleaseContractTests`, `ReleaseValidationScriptTests`, `NuGetLicenseBundleTests` | izolowany smoke test, wersjonowanie, zawartość paczek i dowody licencji |
-| Jakość | `dotnet format`, audyt NuGet, test pochodzenia zasobów, SonarQube Cloud, CodeQL | formatowanie, podatności, kompletność manifestu, jakość kodu i code scanning |
+| Wydanie | `ReleaseRuntimeTests`, `ReleaseContractTests`, `ReleaseValidationScriptTests`, `NuGetLicenseBundleTests` | izolowany smoke test, wersjonowanie, zawartość paczek, dowody licencji i działanie bramki pokrycia |
+| Python i PDF | `tests/python/test_new_commission_pdf.py` | generowanie, walidację struktury oraz błędy czcionek i obrazu wejściowego |
+| Jakość | `Test-CoverageThreshold.ps1`, `dotnet format`, audyt NuGet, test pochodzenia zasobów, SonarQube Cloud, CodeQL | minimalne pokrycie `90%`/`85%`, formatowanie, podatności, kompletność manifestu, jakość kodu i code scanning |
 
 ## Regresje stylu i dostępności dyskusji #49
 
@@ -79,7 +80,17 @@ Podstawowa brama techniczna:
 ```powershell
 dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
 dotnet build Abituria.sln --configuration Release --no-restore
-dotnet test Abituria.sln --configuration Release --no-build --no-restore
+python -m pip install --requirement tools/requirements-test.txt
+dotnet test Abituria.sln --configuration Release --no-build --no-restore `
+  --results-directory artifacts/coverage/csharp `
+  --collect:"XPlat Code Coverage" `
+  -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+python -m coverage run --branch --source=tools -m unittest discover -s tests/python -p "test_*.py"
+python -m coverage xml -o artifacts/coverage/python-coverage.xml
+$openCoverReport = Get-ChildItem artifacts/coverage/csharp -Recurse -Filter coverage.opencover.xml
+pwsh -NoProfile -File tools/release/Test-CoverageThreshold.ps1 `
+  -OpenCoverReport $openCoverReport.FullName `
+  -PythonCoverageReport artifacts/coverage/python-coverage.xml
 dotnet format Abituria.sln whitespace --verify-no-changes --no-restore
 git diff --check
 ```
