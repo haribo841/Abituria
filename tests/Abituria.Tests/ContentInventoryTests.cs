@@ -165,7 +165,8 @@ public sealed class ContentInventoryTests
         foreach (var exercise in exercises)
         {
             Assert.False(string.IsNullOrWhiteSpace(exercise.Prompt));
-            Assert.NotEmpty(exercise.Hints);
+            Assert.InRange(exercise.Hints.Count, 2, int.MaxValue);
+            Assert.All(exercise.Hints, hint => Assert.False(string.IsNullOrWhiteSpace(hint)));
             if (exercise.IsMultipleChoice)
             {
                 Assert.Equal(4, exercise.Options.Count);

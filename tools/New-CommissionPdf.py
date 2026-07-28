@@ -376,7 +376,7 @@ def build_pdf(
                 "Zestaw xUnit obejmuje testy jednostkowe, integracyjne, regresyjne, wizualne, headless UI, "
                 "systemowe i kontraktowe wydania. Automatyczna brama wykonuje restore z lockfile, build Release, "
                 "testy, formatowanie, audyt NuGet, walidację pochodzenia treści oraz analizę SonarQube. "
-                "Pełny lokalny przebieg 27 lipca 2026 r. zakończył się wynikiem 449/449.",
+                "Pełny lokalny przebieg 27 lipca 2026 r. zakończył się wynikiem 455/455.",
                 st["Body"],
             ),
             table(
@@ -582,7 +582,7 @@ def build_pdf(
                     ["1. Prezentacja", "PASS: prezentacja, demonstracja i Q&A na nagraniu", "NOT APPLICABLE"],
                     ["2. Produkt", "PASS RETROSPEKTYWNY", "PASS techniczny"],
                     ["3. Dokumentacja", "PARTIAL: ograniczony materiał archiwalny", "PASS lokalny"],
-                    ["4. Testowanie", "PASS RETROSPEKTYWNY", "PASS: 449/449"],
+                    ["4. Testowanie", "PASS RETROSPEKTYWNY", "PASS: 455/455"],
                     ["5. Wdrożenie", "PASS: dwie publiczne paczki; niezależna instalacja retrospektywna", "PENDING publicznego Release"],
                     ["6. Praca zespołu", "PARTIAL: brak osobnej pisemnej opinii", "PASS dla pracy jednoosobowej"],
                     ["7. Wkład", "PARTIAL: brak ocen indywidualnych", "Adam Kubiś - autor bieżącej implementacji"],

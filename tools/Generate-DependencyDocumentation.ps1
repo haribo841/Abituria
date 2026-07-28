@@ -39,6 +39,67 @@ if ([string]::IsNullOrWhiteSpace($docfxVersion) -or
     throw "Nie można jednoznacznie odczytać wersji przypiętych narzędzi DocFX, SBOM i SonarScanner."
 }
 
+$pythonRequirementPath = Join-Path $root "tools/requirements-test.txt"
+$pythonDependencyMetadata = @{
+    "charset-normalizer" = [pscustomobject]@{
+        Purpose = "Dekodowanie tekstu wymagane przez ReportLab."
+        License = "MIT"
+        Type = "przechodnia, jawnie przypięta"
+    }
+    "coverage" = [pscustomobject]@{
+        Purpose = "Pomiar pokrycia linii i gałęzi kodu Python."
+        License = "Apache-2.0"
+        Type = "bezpośrednia testowa"
+    }
+    "pillow" = [pscustomobject]@{
+        Purpose = "Obsługa obrazu wzorcowego wymagana przez ReportLab."
+        License = "MIT-CMU"
+        Type = "przechodnia, jawnie przypięta"
+    }
+    "pypdf" = [pscustomobject]@{
+        Purpose = "Walidacja stron i treści wygenerowanego PDF."
+        License = "BSD-3-Clause"
+        Type = "bezpośrednia testowa"
+    }
+    "reportlab" = [pscustomobject]@{
+        Purpose = "Generowanie dokumentacji technicznej PDF."
+        License = "BSD-3-Clause"
+        Type = "bezpośrednia narzędziowa"
+    }
+}
+$pythonDependencies = @(
+    foreach ($line in Get-Content -LiteralPath $pythonRequirementPath -Encoding UTF8) {
+        $requirement = $line.Trim()
+        if (-not $requirement -or $requirement.StartsWith("#", [StringComparison]::Ordinal)) {
+            continue
+        }
+        if ($requirement -notmatch '^(?<id>[A-Za-z0-9._-]+)==(?<version>[A-Za-z0-9.+-]+)$') {
+            throw "Nieobsługiwany wpis w tools/requirements-test.txt: $requirement"
+        }
+
+        $id = $Matches.id
+        if (-not $pythonDependencyMetadata.ContainsKey($id)) {
+            throw "Brak metadanych dokumentacyjnych dla zależności Python $id."
+        }
+        $metadata = $pythonDependencyMetadata[$id]
+        [pscustomobject]@{
+            Id = $id
+            Version = $Matches.version
+            Purpose = $metadata.Purpose
+            License = $metadata.License
+            Type = $metadata.Type
+        }
+    }
+)
+if ($pythonDependencies.Count -ne $pythonDependencyMetadata.Count) {
+    throw "tools/requirements-test.txt musi zawierać każdą udokumentowaną zależność Python dokładnie raz."
+}
+foreach ($id in $pythonDependencyMetadata.Keys) {
+    if (@($pythonDependencies | Where-Object Id -eq $id).Count -ne 1) {
+        throw "Zależność Python $id nie występuje dokładnie raz w tools/requirements-test.txt."
+    }
+}
+
 $purposes = @{
     "Avalonia" = "Podstawowy framework interfejsu desktopowego."
     "Avalonia.Desktop" = "Klasyczny cykl życia aplikacji desktopowej i backendy systemowe."
@@ -135,7 +196,7 @@ $production = @($packages | Where-Object { $_.Scope -ne "testowa" } | Sort-Objec
 $dependencyLines = [System.Collections.Generic.List[string]]::new()
 $dependencyLines.Add("# Zależności Abiturii")
 $dependencyLines.Add("")
-$dependencyLines.Add("Ten dokument jest generowany przez ``tools/Generate-DependencyDocumentation.ps1`` z przypiętych plików ``packages.lock.json``, manifestu narzędzi i workflow. Nie należy edytować tabel ręcznie.")
+$dependencyLines.Add("Ten dokument jest generowany przez ``tools/Generate-DependencyDocumentation.ps1`` z przypiętych plików ``packages.lock.json`` i ``tools/requirements-test.txt``, manifestu narzędzi oraz workflow. Nie należy edytować tabel ręcznie.")
 $dependencyLines.Add("")
 $dependencyLines.Add("## Zależności bezpośrednie")
 $dependencyLines.Add("")
@@ -155,6 +216,16 @@ $dependencyLines.Add("| --- | --- | --- | --- | --- |")
 $dependencyLines.Add("| ``docfx`` | ``$docfxVersion`` | Budowanie kanonicznej strony dokumentacji i kontrola ostrzeżeń. | MIT | ``.config/dotnet-tools.json`` |")
 $dependencyLines.Add("| ``Microsoft.Sbom.DotNetTool`` | ``$sbomToolVersion`` | Generowanie osobnego manifestu SPDX dla każdej paczki. | MIT | ``.config/dotnet-tools.json`` |")
 $dependencyLines.Add("| ``dotnet-sonarscanner`` | ``$($sonarVersions[0])`` | Analiza C# i oczekiwanie na wynik SonarQube Quality Gate. | LGPL-3.0 | workflow SonarQube i wydania |")
+$dependencyLines.Add("")
+$dependencyLines.Add("## Narzędzia Python")
+$dependencyLines.Add("")
+$dependencyLines.Add("Te pakiety nie są częścią paczek aplikacji. Generator dokumentacji PDF i jego testy instalują dokładnie wersje zapisane w ``tools/requirements-test.txt``.")
+$dependencyLines.Add("")
+$dependencyLines.Add("| Pakiet | Wersja | Typ | Zastosowanie | Licencja |")
+$dependencyLines.Add("| --- | --- | --- | --- | --- |")
+foreach ($package in ($pythonDependencies | Sort-Object Id)) {
+    $dependencyLines.Add("| ``$(Escape-Markdown $package.Id)`` | ``$(Escape-Markdown $package.Version)`` | $(Escape-Markdown $package.Type) | $(Escape-Markdown $package.Purpose) | $(Escape-Markdown $package.License) |")
+}
 $dependencyLines.Add("")
 $dependencyLines.Add("## Pełne rozwiązanie zależności")
 $dependencyLines.Add("")

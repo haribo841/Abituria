@@ -30,6 +30,7 @@ Przed wysłaniem pull requestu uruchom pełny zestaw kompilacji, testów z pokry
 dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
 dotnet build Abituria.sln --configuration Release --no-restore --no-incremental
 python -m pip install --requirement tools/requirements-test.txt
+python -m pip check
 dotnet test Abituria.sln --configuration Release --no-build --no-restore `
   --results-directory artifacts/coverage/csharp `
   --collect:"XPlat Code Coverage" `

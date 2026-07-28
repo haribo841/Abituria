@@ -48,6 +48,7 @@ public sealed class ReleaseContractTests
         var testProject = XDocument.Load(Absolute("tests/Abituria.Tests/Abituria.Tests.csproj"));
         var properties = XDocument.Load(Absolute("Directory.Build.props"));
         var dependencyDocumentation = File.ReadAllText(Absolute("docs/DEPENDENCIES.md"));
+        var pythonRequirements = File.ReadAllLines(Absolute("tools/requirements-test.txt"));
         var packages = project.Descendants("PackageReference")
             .ToDictionary(
                 node => node.Attribute("Include")!.Value,
@@ -77,6 +78,21 @@ public sealed class ReleaseContractTests
         Assert.Contains("| `docfx` | `2.78.5` |", dependencyDocumentation, StringComparison.Ordinal);
         Assert.Contains("| `Microsoft.Sbom.DotNetTool` | `4.1.5` |", dependencyDocumentation, StringComparison.Ordinal);
         Assert.Contains("| `dotnet-sonarscanner` | `11.2.1` |", dependencyDocumentation, StringComparison.Ordinal);
+        Assert.Equal(
+            [
+                "charset-normalizer==3.4.9",
+                "coverage==7.15.2",
+                "pillow==12.3.0",
+                "pypdf==6.10.0",
+                "reportlab==4.4.9"
+            ],
+            pythonRequirements);
+        Assert.All(pythonRequirements, requirement =>
+        {
+            var separator = requirement.IndexOf("==", StringComparison.Ordinal);
+            Assert.True(separator > 0);
+            Assert.Contains($"| `{requirement[..separator]}` | `{requirement[(separator + 2)..]}` |", dependencyDocumentation, StringComparison.Ordinal);
+        });
         Assert.Contains("| LGPL-3.0 |", dependencyDocumentation, StringComparison.Ordinal);
         Assert.True(File.Exists(Absolute("packages.lock.json")));
         Assert.True(File.Exists(Absolute("tests/Abituria.Tests/packages.lock.json")));
@@ -154,6 +170,7 @@ public sealed class ReleaseContractTests
             Assert.Contains(fragment, sonar, StringComparison.Ordinal);
         });
         Assert.Contains("sonar.python.coverage.reportPaths", sonar, StringComparison.Ordinal);
+        Assert.Contains("dotnet format Abituria.sln analyzers --verify-no-changes", build, StringComparison.Ordinal);
         Assert.DoesNotContain("sonar.coverage.exclusions", sonar, StringComparison.Ordinal);
         Assert.Contains("MinimumOverallCoverage = 90", File.ReadAllText(Absolute("tools/release/Test-CoverageThreshold.ps1")), StringComparison.Ordinal);
         Assert.Contains("MinimumBranchCoverage = 85", File.ReadAllText(Absolute("tools/release/Test-CoverageThreshold.ps1")), StringComparison.Ordinal);

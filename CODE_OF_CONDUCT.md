@@ -1,10 +1,10 @@
 ﻿
-# Przymierze Współpracy — Kodeks Postępowania
+# Przymierze Współpracy - Kodeks Postępowania
 
 ## Nasza Przysięga
 
-W celu wspierania otwartego i przyjaznego środowiska, my — jako współpracownicy i
-opiekunowie projektu — zobowiązujemy się dopilnować, aby uczestnictwo w naszym projekcie
+W celu wspierania otwartego i przyjaznego środowiska, my - jako współpracownicy i
+opiekunowie projektu - zobowiązujemy się dopilnować, aby uczestnictwo w naszym projekcie
 oraz przynależność do jego społeczności były pozbawione nękania bez względu na budowę
 ciała, doświadczenie, kolor skóry, narodowość, niepełnosprawność, orientację i
 identyfikację seksualną, pochodzenie etniczne, religię, wiek czy wygląd zewnętrzny.
@@ -27,8 +27,8 @@ Wśród przykładów zachowania, którego nie będziemy akceptować, są:
 * Trollowanie, obraźliwe bądź urągające komentarze oraz ataki osobiste bądź
   polityczne,
 * Nękanie, zarówno na forum publicznym jak i prywatnym,
-* Publikowanie danych osobistych innych osób — takich jak
-  adres fizyczny czy elektroniczny — bez ich wyraźnej zgody,
+* Publikowanie danych osobistych innych osób - takich jak
+  adres fizyczny czy elektroniczny - bez ich wyraźnej zgody,
 * Inne zachowania, które mogłyby zostać uznane za nieodpowiednie w kontekście
   profesjonalnym.
 
@@ -48,7 +48,7 @@ za nieodpowiednie lub szkodliwe.
 ## Zakres działania
 
 Ten Kodeks Postępowania ma zastosowanie wewnątrz projektu, a w przypadku
-reprezentowania projektu lub jego społeczności przez współpracownika — także na zewnątrz
+reprezentowania projektu lub jego społeczności przez współpracownika - także na zewnątrz
 projektu. Do przykładów reprezentowania projektu zalicza się używanie oficjalnego adresu
 e-mail projektu, publikowanie na oficjalnym koncie w mediach społecznościowych lub branie
 udziału w wydarzeniu (zarówno w Internecie, jak i poza nim) jako oficjalny przedstawiciel

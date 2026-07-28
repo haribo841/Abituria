@@ -1,6 +1,6 @@
 # Zależności Abiturii
 
-Ten dokument jest generowany przez `tools/Generate-DependencyDocumentation.ps1` z przypiętych plików `packages.lock.json`, manifestu narzędzi i workflow. Nie należy edytować tabel ręcznie.
+Ten dokument jest generowany przez `tools/Generate-DependencyDocumentation.ps1` z przypiętych plików `packages.lock.json` i `tools/requirements-test.txt`, manifestu narzędzi oraz workflow. Nie należy edytować tabel ręcznie.
 
 ## Zależności bezpośrednie
 
@@ -29,6 +29,18 @@ Narzędzia w tej tabeli nie są częścią grafu runtime ani paczek aplikacji. S
 | `docfx` | `2.78.5` | Budowanie kanonicznej strony dokumentacji i kontrola ostrzeżeń. | MIT | `.config/dotnet-tools.json` |
 | `Microsoft.Sbom.DotNetTool` | `4.1.5` | Generowanie osobnego manifestu SPDX dla każdej paczki. | MIT | `.config/dotnet-tools.json` |
 | `dotnet-sonarscanner` | `11.2.1` | Analiza C# i oczekiwanie na wynik SonarQube Quality Gate. | LGPL-3.0 | workflow SonarQube i wydania |
+
+## Narzędzia Python
+
+Te pakiety nie są częścią paczek aplikacji. Generator dokumentacji PDF i jego testy instalują dokładnie wersje zapisane w `tools/requirements-test.txt`.
+
+| Pakiet | Wersja | Typ | Zastosowanie | Licencja |
+| --- | --- | --- | --- | --- |
+| `charset-normalizer` | `3.4.9` | przechodnia, jawnie przypięta | Dekodowanie tekstu wymagane przez ReportLab. | MIT |
+| `coverage` | `7.15.2` | bezpośrednia testowa | Pomiar pokrycia linii i gałęzi kodu Python. | Apache-2.0 |
+| `pillow` | `12.3.0` | przechodnia, jawnie przypięta | Obsługa obrazu wzorcowego wymagana przez ReportLab. | MIT-CMU |
+| `pypdf` | `6.10.0` | bezpośrednia testowa | Walidacja stron i treści wygenerowanego PDF. | BSD-3-Clause |
+| `reportlab` | `4.4.9` | bezpośrednia narzędziowa | Generowanie dokumentacji technicznej PDF. | BSD-3-Clause |
 
 ## Pełne rozwiązanie zależności
 

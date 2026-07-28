@@ -238,4 +238,31 @@ public sealed class CalculatorInputStateTests
         Assert.Throws<ArgumentOutOfRangeException>(() => state.MarkResult(double.NegativeInfinity));
         Assert.False(state.IsAfterResult);
     }
+
+    [Fact]
+    public void Neutral_and_error_states_preserve_text_until_a_valid_result_exists()
+    {
+        var state = new CalculatorInputState();
+
+        Assert.Equal("2+2", state.BeginValue("2+2"));
+        Assert.Equal("2+2", state.BeginOperator("2+2"));
+        Assert.Null(state.CreateRootFromResult(2));
+
+        state.MarkError();
+        var square = state.CreateSquare("niepoprawne", 2, 50);
+        Assert.Equal("niepoprawne", square.Text);
+        Assert.Equal("niepoprawne".Length, square.SelectionStart);
+        Assert.True(square.ShouldCalculate);
+        Assert.False(state.IsAfterError);
+    }
+
+    [Fact]
+    public void Root_degree_below_two_is_rejected_after_a_result()
+    {
+        var state = new CalculatorInputState();
+        state.MarkResult(4);
+
+        Assert.Throws<ArgumentOutOfRangeException>(() => state.CreateRootFromResult(1));
+        Assert.True(state.IsAfterResult);
+    }
 }

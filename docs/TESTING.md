@@ -2,9 +2,9 @@
 
 Wersja dokumentu: `0.9.0-beta.1`.
 
-Data ostatniego lokalnego wykonania: 27 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.12.13`, konfiguracja `Release`.
+Data ostatniego lokalnego wykonania: 27 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
 
-Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `449/449 PASS` w czasie `9 s`. OpenCover wykazał `94,81%` pokrycia linii i `85,21%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `92,35%` pokrycia łącznego i `85,32%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
+Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `455/455 PASS` w czasie `9 s`. OpenCover wykazał `95,00%` pokrycia linii i `86,61%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `92,86%` pokrycia łącznego i `86,70%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
 
 Dokument rozróżnia wyniki automatyczne, retrospektywne poświadczenie historycznych testów uczestników oraz czynności bieżącego procesu wydawniczego. Brak szczegółowej karty sesji nie jest uzupełniany przez domysł, a poświadczenie historyczne nie jest przedstawiane jako test bieżącej paczki.
 
@@ -81,6 +81,7 @@ Podstawowa brama techniczna:
 dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
 dotnet build Abituria.sln --configuration Release --no-restore
 python -m pip install --requirement tools/requirements-test.txt
+python -m pip check
 dotnet test Abituria.sln --configuration Release --no-build --no-restore `
   --results-directory artifacts/coverage/csharp `
   --collect:"XPlat Code Coverage" `

@@ -47,6 +47,34 @@ public sealed class ReleaseRuntimeTests
     }
 
     [Fact]
+    public void Build_info_fallbacks_handle_all_supported_metadata_shapes()
+    {
+        const string sourceRevision = "0123456789abcdef";
+        var cases = new[]
+        {
+            new BuildInfoCase(new Version(9, 9, 9), "1.2.3", "abcdef0", "deadbee", " ", "1.2.3", "abcdef0"),
+            new BuildInfoCase(new Version(9, 9, 9), "1.2.3+abcdef0", null, null, null, "1.2.3", "abcdef0"),
+            new BuildInfoCase(new Version(2, 3, 4, 5), null, null, sourceRevision, null, "2.3.4", sourceRevision),
+            new BuildInfoCase(new Version(9, 9, 9), "1.2.3+", null, sourceRevision, null, "1.2.3", sourceRevision),
+            new BuildInfoCase(new Version(9, 9, 9), "1.2.3+not-a-hash", null, sourceRevision, null, "1.2.3", sourceRevision),
+            new BuildInfoCase(new Version(9, 9, 9), "1.2.3+abcdef", null, sourceRevision, null, "1.2.3", sourceRevision),
+            new BuildInfoCase(new Version(9, 9, 9), $"1.2.3+{new string('a', 65)}", null, sourceRevision, null, "1.2.3", sourceRevision),
+            new BuildInfoCase(new Version(9, 9, 9), "1.2.3+abcdefg", null, sourceRevision, null, "1.2.3", sourceRevision),
+            new BuildInfoCase(new Version(9, 9, 9), "1.2.3+prefix/0123456789abcdef", null, null, null, "1.2.3", sourceRevision),
+            new BuildInfoCase(new Version(9, 9, 9), "1.2.3", " ", sourceRevision, null, "1.2.3", sourceRevision)
+        };
+
+        Assert.All(cases, testCase =>
+        {
+            var assembly = CreateBuildInfoAssembly(testCase);
+            var buildInfo = AppBuildInfo.FromAssembly(assembly, testCase.CommitOverride);
+
+            Assert.Equal(testCase.ExpectedVersion, buildInfo.Version);
+            Assert.Equal(testCase.ExpectedCommit, buildInfo.Commit);
+        });
+    }
+
+    [Fact]
     public void Release_smoke_command_accepts_only_the_documented_syntax()
     {
         var directory = Path.Combine(Path.GetTempPath(), "Abituria.Tests", "smoke-parser");
@@ -292,4 +320,47 @@ public sealed class ReleaseRuntimeTests
         Microsoft.Data.Sqlite.SqliteConnection.ClearAllPools();
         if (Directory.Exists(directory)) Directory.Delete(directory, true);
     }
+
+    private static AssemblyBuilder CreateBuildInfoAssembly(BuildInfoCase testCase)
+    {
+        var assemblyName = new AssemblyName($"Abituria.BuildInfo.Test.{Guid.NewGuid():N}")
+        {
+            Version = testCase.AssemblyVersion
+        };
+        var assembly = AssemblyBuilder.DefineDynamicAssembly(assemblyName, AssemblyBuilderAccess.Run);
+        if (testCase.InformationalVersion is not null)
+        {
+            var constructor = typeof(AssemblyInformationalVersionAttribute)
+                .GetConstructor([typeof(string)])!;
+            assembly.SetCustomAttribute(new CustomAttributeBuilder(
+                constructor,
+                [testCase.InformationalVersion]));
+        }
+
+        var metadataConstructor = typeof(AssemblyMetadataAttribute)
+            .GetConstructor([typeof(string), typeof(string)])!;
+        if (testCase.RepositoryCommit is not null)
+        {
+            assembly.SetCustomAttribute(new CustomAttributeBuilder(
+                metadataConstructor,
+                ["repositorycommit", testCase.RepositoryCommit]));
+        }
+        if (testCase.SourceRevision is not null)
+        {
+            assembly.SetCustomAttribute(new CustomAttributeBuilder(
+                metadataConstructor,
+                ["sourcerevisionid", testCase.SourceRevision]));
+        }
+
+        return assembly;
+    }
+
+    private sealed record BuildInfoCase(
+        Version AssemblyVersion,
+        string? InformationalVersion,
+        string? RepositoryCommit,
+        string? SourceRevision,
+        string? CommitOverride,
+        string ExpectedVersion,
+        string ExpectedCommit);
 }
