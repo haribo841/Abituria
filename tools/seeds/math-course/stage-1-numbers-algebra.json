@@ -1,0 +1,286 @@
+{
+  "stage": 1,
+  "title": "Blok I-IV - liczby i algebra",
+  "requirements": [
+    {
+      "id": "I.B.1",
+      "areaId": "area-i",
+      "level": "basic",
+      "number": 1,
+      "lessonId": "real-numbers",
+      "text": "wykonuje działania (dodawanie, odejmowanie, mnożenie, dzielenie, potęgowanie, pierwiastkowanie, logarytmowanie) w zbiorze liczb rzeczywistych;"
+    },
+    {
+      "id": "I.B.2",
+      "areaId": "area-i",
+      "level": "basic",
+      "number": 2,
+      "lessonId": "natural-numbers",
+      "text": "przeprowadza proste dowody dotyczące podzielności liczb całkowitych i reszt z dzielenia, np.: a) dowód podzielności przez 24 iloczynu czterech kolejnych liczb naturalnych, b) dowód własności: jeśli liczba przy dzieleniu przez 4 daje resztę 3, to nie jest kwadratem liczby całkowitej;"
+    },
+    {
+      "id": "I.B.3",
+      "areaId": "area-i",
+      "level": "basic",
+      "number": 3,
+      "lessonId": "real-numbers",
+      "text": "stosuje własności pierwiastków dowolnego stopnia, w tym pierwiastków stopnia nieparzystego z liczb ujemnych;"
+    },
+    {
+      "id": "I.B.4",
+      "areaId": "area-i",
+      "level": "basic",
+      "number": 4,
+      "lessonId": "real-numbers",
+      "text": "stosuje związek pierwiastkowania z potęgowaniem oraz prawa działań na potęgach i pierwiastkach;"
+    },
+    {
+      "id": "I.B.5",
+      "areaId": "area-i",
+      "level": "basic",
+      "number": 5,
+      "lessonId": "real-numbers",
+      "text": "stosuje monotoniczność potęgowania, w szczególności własności: jeśli x < y oraz a > 1, to aˣ < aʸ, zaś gdy x < y i 0 < a < 1, to aˣ > aʸ;"
+    },
+    {
+      "id": "I.B.6",
+      "areaId": "area-i",
+      "level": "basic",
+      "number": 6,
+      "lessonId": "sets-and-logic",
+      "text": "posługuje się pojęciem przedziału liczbowego, zaznacza przedziały na osi liczbowej;"
+    },
+    {
+      "id": "I.B.7",
+      "areaId": "area-i",
+      "level": "basic",
+      "number": 7,
+      "lessonId": "sets-and-logic",
+      "text": "stosuje interpretację geometryczną i algebraiczną wartości bezwzględnej, rozwiązuje równania typu: |x + 4| = 5;"
+    },
+    {
+      "id": "I.B.8",
+      "areaId": "area-i",
+      "level": "basic",
+      "number": 8,
+      "lessonId": "percentages-and-finance",
+      "text": "wykorzystuje własności potęgowania i pierwiastkowania w sytuacjach praktycznych, w tym do obliczania procentów składanych, zysków z lokat i kosztów kredytów;"
+    },
+    {
+      "id": "I.B.9",
+      "areaId": "area-i",
+      "level": "basic",
+      "number": 9,
+      "lessonId": "logarithms",
+      "text": "stosuje związek logarytmowania z potęgowaniem, posługuje się wzorami na logarytm iloczynu, logarytm ilorazu i logarytm potęgi."
+    },
+    {
+      "id": "I.E.1",
+      "areaId": "area-i",
+      "level": "extended",
+      "number": 1,
+      "lessonId": "logarithms-extended",
+      "text": "stosuje wzór na zamianę podstawy logarytmu."
+    },
+    {
+      "id": "II.B.1",
+      "areaId": "area-ii",
+      "level": "basic",
+      "number": 1,
+      "lessonId": "algebraic-expressions",
+      "text": "stosuje wzory skróconego mnożenia na: (a + b)², (a - b)², a² - b²;"
+    },
+    {
+      "id": "II.B.2",
+      "areaId": "area-ii",
+      "level": "basic",
+      "number": 2,
+      "lessonId": "algebraic-expressions",
+      "text": "dodaje, odejmuje i mnoży wielomiany jednej i wielu zmiennych;"
+    },
+    {
+      "id": "II.B.3",
+      "areaId": "area-ii",
+      "level": "basic",
+      "number": 3,
+      "lessonId": "algebraic-expressions",
+      "text": "wyłącza poza nawias jednomian z sumy algebraicznej;"
+    },
+    {
+      "id": "II.B.4",
+      "areaId": "area-ii",
+      "level": "basic",
+      "number": 4,
+      "lessonId": "algebraic-expressions",
+      "text": "mnoży i dzieli wyrażenia wymierne."
+    },
+    {
+      "id": "II.E.1",
+      "areaId": "area-ii",
+      "level": "extended",
+      "number": 1,
+      "lessonId": "algebraic-expressions-extended",
+      "text": "dzieli wielomian jednej zmiennej W(x) przez dwumian postaci x - a;"
+    },
+    {
+      "id": "II.E.2",
+      "areaId": "area-ii",
+      "level": "extended",
+      "number": 2,
+      "lessonId": "algebraic-expressions-extended",
+      "text": "rozkłada wielomiany na czynniki metodą wyłączania wspólnego czynnika przed nawias oraz metodą grupowania wyrazów;"
+    },
+    {
+      "id": "II.E.3",
+      "areaId": "area-ii",
+      "level": "extended",
+      "number": 3,
+      "lessonId": "algebraic-expressions-extended",
+      "text": "znajduje pierwiastki całkowite wielomianu o współczynnikach całkowitych;"
+    },
+    {
+      "id": "II.E.4",
+      "areaId": "area-ii",
+      "level": "extended",
+      "number": 4,
+      "lessonId": "algebraic-expressions-extended",
+      "text": "stosuje podstawowe własności trójkąta Pascala oraz następujące własności współczynnika dwumianowego (symbolu Newtona): \\(\\binom{n}{0}=1\\), \\(\\binom{n}{1}=n\\), \\(\\binom{n}{n-1}=n\\), \\(\\binom{n}{k}=\\binom{n}{n-k}\\), \\(\\binom{n}{k}+\\binom{n}{k+1}=\\binom{n+1}{k+1}\\);"
+    },
+    {
+      "id": "II.E.5",
+      "areaId": "area-ii",
+      "level": "extended",
+      "number": 5,
+      "lessonId": "algebraic-expressions-extended",
+      "text": "korzysta ze wzorów na: a³ + b³, a³ - b³, aⁿ - bⁿ, (a + b)ⁿ i (a - b)ⁿ;"
+    },
+    {
+      "id": "II.E.6",
+      "areaId": "area-ii",
+      "level": "extended",
+      "number": 6,
+      "lessonId": "algebraic-expressions-extended",
+      "text": "dodaje i odejmuje wyrażenia wymierne, np.: 1/(x + 1) - 1/x, 1/x + 1/x² + 1/x³, (x + 1)/(x + 2) + (x - 1)/(x + 1)."
+    },
+    {
+      "id": "III.B.1",
+      "areaId": "area-iii",
+      "level": "basic",
+      "number": 1,
+      "lessonId": "equations-and-inequalities",
+      "text": "przekształca równania i nierówności w sposób równoważny, w tym np. przekształca równoważnie równanie 5/(x + 1) = (x + 3)/(2x - 1);"
+    },
+    {
+      "id": "III.B.2",
+      "areaId": "area-iii",
+      "level": "basic",
+      "number": 2,
+      "lessonId": "equations-and-inequalities",
+      "text": "interpretuje równania i nierówności liniowe sprzeczne oraz tożsamościowe;"
+    },
+    {
+      "id": "III.B.3",
+      "areaId": "area-iii",
+      "level": "basic",
+      "number": 3,
+      "lessonId": "equations-and-inequalities",
+      "text": "rozwiązuje nierówności liniowe z jedną niewiadomą;"
+    },
+    {
+      "id": "III.B.4",
+      "areaId": "area-iii",
+      "level": "basic",
+      "number": 4,
+      "lessonId": "equations-and-inequalities",
+      "text": "rozwiązuje równania i nierówności kwadratowe;"
+    },
+    {
+      "id": "III.B.5",
+      "areaId": "area-iii",
+      "level": "basic",
+      "number": 5,
+      "lessonId": "equations-and-inequalities",
+      "text": "rozwiązuje równania wielomianowe postaci W(x) = 0 dla wielomianów doprowadzonych do postaci iloczynowej."
+    },
+    {
+      "id": "III.E.1",
+      "areaId": "area-iii",
+      "level": "extended",
+      "number": 1,
+      "lessonId": "equations-and-inequalities-extended",
+      "text": "rozwiązuje równania wielomianowe postaci W(x) = 0 oraz nierówności wielomianowe typu: W(x) > 0, W(x) ≥ 0, W(x) < 0, W(x) ≤ 0 dla wielomianów doprowadzonych do postaci iloczynowej lub takich, które dają się doprowadzić do postaci iloczynowej metodą wyłączania wspólnego czynnika przed nawias lub metodą grupowania;"
+    },
+    {
+      "id": "III.E.2",
+      "areaId": "area-iii",
+      "level": "extended",
+      "number": 2,
+      "lessonId": "equations-and-inequalities-extended",
+      "text": "rozwiązuje równania i nierówności wymierne, które dadzą się sprowadzić do równania lub nierówności liniowej lub kwadratowej;"
+    },
+    {
+      "id": "III.E.3",
+      "areaId": "area-iii",
+      "level": "extended",
+      "number": 3,
+      "lessonId": "equations-and-inequalities-extended",
+      "text": "stosuje wzory Viète'a dla równań kwadratowych;"
+    },
+    {
+      "id": "III.E.4",
+      "areaId": "area-iii",
+      "level": "extended",
+      "number": 4,
+      "lessonId": "equations-and-inequalities-extended",
+      "text": "rozwiązuje równania i nierówności z wartością bezwzględną;"
+    },
+    {
+      "id": "III.E.5",
+      "areaId": "area-iii",
+      "level": "extended",
+      "number": 5,
+      "lessonId": "equations-and-inequalities-extended",
+      "text": "analizuje równania i nierówności liniowe z parametrami oraz równania i nierówności kwadratowe z parametrami, w szczególności: wyznacza liczbę rozwiązań w zależności od parametrów, podaje warunki, przy których rozwiązania mają określone znaki bądź należą do określonego przedziału, wyznacza rozwiązania w zależności od parametrów;"
+    },
+    {
+      "id": "III.E.6",
+      "areaId": "area-iii",
+      "level": "extended",
+      "number": 6,
+      "lessonId": "equations-and-inequalities-extended",
+      "text": "rozwiązuje równania wielomianowe, które dają się doprowadzić do równania kwadratowego, w szczególności równania dwukwadratowe;"
+    },
+    {
+      "id": "III.E.7",
+      "areaId": "area-iii",
+      "level": "extended",
+      "number": 7,
+      "lessonId": "equations-and-inequalities-extended",
+      "text": "rozwiązuje równania wymierne postaci V(x)/W(x) = 0, gdzie wielomiany V(x) i W(x) są zapisane w postaci iloczynowej."
+    },
+    {
+      "id": "IV.B.1",
+      "areaId": "area-iv",
+      "level": "basic",
+      "number": 1,
+      "lessonId": "systems-of-equations",
+      "text": "rozwiązuje układy równań liniowych z dwiema niewiadomymi, podaje interpretację geometryczną układów oznaczonych, nieoznaczonych i sprzecznych;"
+    },
+    {
+      "id": "IV.B.2",
+      "areaId": "area-iv",
+      "level": "basic",
+      "number": 2,
+      "lessonId": "systems-of-equations",
+      "text": "stosuje układy równań do rozwiązywania zadań tekstowych."
+    },
+    {
+      "id": "IV.E.1",
+      "areaId": "area-iv",
+      "level": "extended",
+      "number": 1,
+      "lessonId": "systems-of-equations-extended",
+      "text": "rozwiązuje układy równań liniowych i kwadratowych z dwiema niewiadomymi, które można sprowadzić do równania kwadratowego lub liniowego, a które nie są trudniejsze niż układ: x² + y² + ax + by = c, x² + y² + dx + ey = f."
+    }
+  ]
+}

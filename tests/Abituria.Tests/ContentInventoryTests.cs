@@ -11,12 +11,9 @@ public sealed class ContentInventoryTests
     private static readonly string RepositoryRoot = FindRepositoryRoot();
     private static readonly string[] ExpectedPlaceholderIds =
         ["exercise-set-e", "graph-generator", "matura-2019", "matura-2020", "matura-2021", "trigonometric-calculator"];
-    private static readonly string[] ExpectedAvailableChapterIds =
-        ["equations-and-inequalities", "greek-alphabet", "logarithms", "natural-numbers", "quadratic-function", "sets-and-logic", "vectors"];
-    private static readonly string[] ExpectedChapterStatuses = ["available", "placeholder"];
+    private static readonly string[] RetainedLessonIds =
+        ["equations-and-inequalities", "greek-alphabet", "logarithms", "natural-numbers", "number-sequences", "prime-numbers", "quadratic-function", "sets-and-logic", "vectors"];
     private static readonly string[] ExpectedContentBlockTypes = ["richText", "image"];
-    private static readonly string[] ExpectedUnavailableChapterTitles =
-        ["Ciągi liczbowe", "Liczby pierwsze"];
     private static readonly string[] ExpectedTask7Options =
         ["\\(g(x)=-2x+2\\)", "\\(g(x)=-2x\\)", "\\(g(x)=-2x+6\\)", "\\(g(x)=-2x+8\\)"];
 
@@ -24,7 +21,8 @@ public sealed class ContentInventoryTests
     public void Migrated_content_has_expected_inventory()
     {
         var formulas = Read<FormulaCatalog>("Content/formulas.json");
-        var chapters = Read<ChapterCatalog>("Content/chapters.json");
+        var course = Read<MathCourseCatalog>("Content/chapters.json");
+        var courseExercises = Read<CourseExerciseCatalog>("Content/course-exercises.json");
         var exam = Read<ExamCatalog>("Content/exam-2021-correction.json").Exam;
         var placeholders = Read<PlaceholderCatalog>("Content/placeholders.json");
         var roadmap = Read<RoadmapCatalog>("Content/roadmap.json");
@@ -33,30 +31,24 @@ public sealed class ContentInventoryTests
         Assert.NotEmpty(formulas.Introduction);
         Assert.Equal(Enumerable.Range(1, 18), formulas.Articles.Select(item => item.Order));
         Assert.All(formulas.Articles, item => Assert.NotEmpty(item.Blocks));
-        Assert.Equal(9, chapters.Chapters.Count);
-        Assert.NotEmpty(chapters.Introduction);
-        Assert.Equal(
-            ExpectedAvailableChapterIds,
-            chapters.Chapters.Where(item => item.IsAvailable).Select(item => item.Id).Order());
-        Assert.All(chapters.Chapters.Where(item => item.IsAvailable), item => Assert.NotEmpty(item.Blocks));
-        var vectorChapter = chapters.Chapters.Single(item => item.Id == "vectors");
+        Assert.Equal(3, course.SchemaVersion);
+        Assert.Equal(4, course.Groups.Count);
+        Assert.Equal(13, course.Areas.Count);
+        Assert.Equal(34, course.Lessons.Count);
+        Assert.NotEmpty(course.Introduction);
+        Assert.All(RetainedLessonIds, id => Assert.Contains(course.Lessons, lesson => lesson.Id == id));
+        Assert.All(course.Lessons, item => Assert.NotEmpty(item.Blocks));
+        var vectorChapter = course.Lessons.Single(item => item.Id == "vectors");
         Assert.Equal(8, vectorChapter.Blocks.Count(block => block.Type == "image"));
-        Assert.Equal(chapters.Chapters.Count, chapters.Chapters.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
-        Assert.All(chapters.Chapters, item => Assert.Contains(item.Status, ExpectedChapterStatuses));
+        Assert.Equal(course.Lessons.Count, course.Lessons.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
         Assert.All(
-            chapters.Chapters.SelectMany(item => item.Blocks),
+            course.Lessons.SelectMany(item => item.Blocks),
             block => Assert.Contains(block.Type, ExpectedContentBlockTypes));
+        Assert.Equal(357, courseExercises.Exercises.Count);
         Assert.Equal(6, placeholders.Items.Count);
         Assert.Equal(
             ExpectedPlaceholderIds,
             placeholders.Items.Select(item => item.Id).Order());
-        Assert.Equal(
-            ExpectedUnavailableChapterTitles,
-            chapters.Chapters.Where(item => !item.IsAvailable).Select(item => item.Title).Order());
-        var roadmapIds = roadmap.Items.Select(item => item.Id).ToHashSet(StringComparer.Ordinal);
-        Assert.All(
-            chapters.Chapters.Where(item => item.RoadmapId is not null),
-            chapter => Assert.Contains(chapter.RoadmapId!, roadmapIds));
         Assert.Equal(17, exam.Topics.Count);
         Assert.NotEmpty(exam.Introduction);
         Assert.NotEmpty(exam.TopicIntroduction);
@@ -73,7 +65,7 @@ public sealed class ContentInventoryTests
         Assert.Contains(roadmap.Items, item => item.Id == "formula-editor-prototype" && item.Status == RoadmapStatus.Superseded);
         Assert.Contains(roadmap.Items, item => item.Id == "natural-numbers" && item.Status == RoadmapStatus.Migrated);
         Assert.Contains(roadmap.Items, item => item.Id == "greek-alphabet" && item.Status == RoadmapStatus.Migrated);
-        Assert.Contains(roadmap.Items, item => item.Id == "chapters-expansion" && item.Status == RoadmapStatus.Planned);
+        Assert.Contains(roadmap.Items, item => item.Id == "chapters-expansion" && item.Status == RoadmapStatus.Migrated);
         Assert.Contains(placeholders.Items.Single(item => item.Id == "matura-2021").Blocks,
             block => block.Text is not null && block.Text.Contains("79%", StringComparison.Ordinal) && block.Text.Contains("56%", StringComparison.Ordinal));
 
@@ -186,24 +178,26 @@ public sealed class ContentInventoryTests
     public void Referenced_images_exist_and_legacy_latex_typos_are_removed()
     {
         var formulas = Read<FormulaCatalog>("Content/formulas.json");
-        var chapters = Read<ChapterCatalog>("Content/chapters.json");
+        var course = Read<MathCourseCatalog>("Content/chapters.json");
+        var courseExercises = Read<CourseExerciseCatalog>("Content/course-exercises.json");
         var exam = Read<ExamCatalog>("Content/exam-2021-correction.json").Exam;
         var assets = formulas.Articles.SelectMany(item => item.Blocks)
-            .Concat(chapters.Chapters.SelectMany(item => item.Blocks))
+            .Concat(course.Lessons.SelectMany(item => item.Blocks))
             .Where(block => block.Type == "image")
             .Select(block => block.Asset!)
             .Concat(exam.Exercises.SelectMany(item => item.Assets))
+            .Concat(courseExercises.Exercises.SelectMany(item => item.Assets))
             .Distinct(StringComparer.OrdinalIgnoreCase);
         Assert.All(assets, asset => Assert.True(File.Exists(Path.Combine(RepositoryRoot, asset.Replace('/', Path.DirectorySeparatorChar))), asset));
 
-        var allJson = string.Join('\n', Directory.GetFiles(Path.Combine(RepositoryRoot, "Content"), "*.json").Select(File.ReadAllText));
-        Assert.DoesNotContain("/cdot", allJson, StringComparison.Ordinal);
-        Assert.DoesNotContain("/text", allJson, StringComparison.Ordinal);
-        Assert.DoesNotContain("\\tg", allJson, StringComparison.Ordinal);
-        Assert.DoesNotContain("1=-\\frac{\\Delta}", allJson, StringComparison.Ordinal);
-        Assert.DoesNotContain("x_1+x_1=", allJson, StringComparison.Ordinal);
-        Assert.DoesNotContain("x_1\\cdot{x_1}=", allJson, StringComparison.Ordinal);
-        Assert.DoesNotContain("B=(x_1,y_1)", allJson, StringComparison.Ordinal);
+        var allRenderedText = string.Join('\n', ReadRichTexts());
+        Assert.DoesNotContain("/cdot", allRenderedText, StringComparison.Ordinal);
+        Assert.DoesNotContain("/text", allRenderedText, StringComparison.Ordinal);
+        Assert.DoesNotContain("\\tg", allRenderedText, StringComparison.Ordinal);
+        Assert.DoesNotContain("1=-\\frac{\\Delta}", allRenderedText, StringComparison.Ordinal);
+        Assert.DoesNotContain("x_1+x_1=", allRenderedText, StringComparison.Ordinal);
+        Assert.DoesNotContain("x_1\\cdot{x_1}=", allRenderedText, StringComparison.Ordinal);
+        Assert.DoesNotContain("B=(x_1,y_1)", allRenderedText, StringComparison.Ordinal);
     }
 
     [Fact]
@@ -234,18 +228,26 @@ public sealed class ContentInventoryTests
     private static IEnumerable<string> ReadRichTexts()
     {
         var formulas = Read<FormulaCatalog>("Content/formulas.json");
-        var chapters = Read<ChapterCatalog>("Content/chapters.json");
+        var course = Read<MathCourseCatalog>("Content/chapters.json");
+        var courseExercises = Read<CourseExerciseCatalog>("Content/course-exercises.json");
         var exam = Read<ExamCatalog>("Content/exam-2021-correction.json").Exam;
         var placeholders = Read<PlaceholderCatalog>("Content/placeholders.json");
         var roadmap = Read<RoadmapCatalog>("Content/roadmap.json");
-        var exercises = exam.Exercises;
+        var exercises = exam.Exercises.Concat(courseExercises.Exercises);
         foreach (var text in formulas.Introduction.Concat(formulas.Articles.SelectMany(item => item.Blocks))
-                     .Concat(chapters.Introduction).Concat(chapters.Chapters.SelectMany(item => item.Blocks))
+                     .Concat(course.Introduction).Concat(course.Lessons.SelectMany(item => item.Blocks))
                      .Concat(exam.Introduction).Concat(exam.TopicIntroduction)
                      .Concat(placeholders.Items.SelectMany(item => item.Blocks))
                      .Concat(roadmap.Introduction)
                      .Select(block => block.Text).Where(text => !string.IsNullOrWhiteSpace(text)))
             yield return text!;
+        foreach (var requirement in course.Requirements)
+            yield return requirement.Text;
+        foreach (var example in course.Lessons.SelectMany(lesson => lesson.WorkedExamples))
+        {
+            yield return example.Prompt;
+            yield return example.Solution;
+        }
         foreach (var exercise in exercises)
         {
             yield return exercise.Prompt;

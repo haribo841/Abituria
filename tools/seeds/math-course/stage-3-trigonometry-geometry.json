@@ -1,0 +1,350 @@
+{
+  "stage": 3,
+  "title": "Blok VII-X - trygonometria i geometria",
+  "requirements": [
+    {
+      "id": "VII.B.1",
+      "areaId": "area-vii",
+      "level": "basic",
+      "number": 1,
+      "lessonId": "trigonometry",
+      "text": "wykorzystuje definicje funkcji: sinus, cosinus i tangens dla kątów od 0° do 180°, w szczególności wyznacza wartości funkcji trygonometrycznych dla kątów 30°, 45°, 60°;"
+    },
+    {
+      "id": "VII.B.2",
+      "areaId": "area-vii",
+      "level": "basic",
+      "number": 2,
+      "lessonId": "trigonometry",
+      "text": "korzysta ze wzorów sin² α + cos² α = 1, tg α = sin α / cos α;"
+    },
+    {
+      "id": "VII.B.3",
+      "areaId": "area-vii",
+      "level": "basic",
+      "number": 3,
+      "lessonId": "trigonometry",
+      "text": "stosuje twierdzenie cosinusów oraz wzór na pole trójkąta P = 1/2 · a · b · sin γ;"
+    },
+    {
+      "id": "VII.B.4",
+      "areaId": "area-vii",
+      "level": "basic",
+      "number": 4,
+      "lessonId": "trigonometry",
+      "text": "oblicza kąty trójkąta prostokątnego i długości jego boków przy odpowiednich danych (rozwiązuje trójkąty prostokątne, w tym z wykorzystaniem funkcji trygonometrycznych)."
+    },
+    {
+      "id": "VII.E.1",
+      "areaId": "area-vii",
+      "level": "extended",
+      "number": 1,
+      "lessonId": "trigonometry-extended",
+      "text": "stosuje miarę łukową, zamienia stopnie na radiany i odwrotnie;"
+    },
+    {
+      "id": "VII.E.2",
+      "areaId": "area-vii",
+      "level": "extended",
+      "number": 2,
+      "lessonId": "trigonometry-extended",
+      "text": "posługuje się wykresami funkcji trygonometrycznych: sinus, cosinus, tangens;"
+    },
+    {
+      "id": "VII.E.3",
+      "areaId": "area-vii",
+      "level": "extended",
+      "number": 3,
+      "lessonId": "trigonometry-extended",
+      "text": "wykorzystuje okresowość funkcji trygonometrycznych;"
+    },
+    {
+      "id": "VII.E.4",
+      "areaId": "area-vii",
+      "level": "extended",
+      "number": 4,
+      "lessonId": "trigonometry-extended",
+      "text": "stosuje wzory redukcyjne dla funkcji trygonometrycznych;"
+    },
+    {
+      "id": "VII.E.5",
+      "areaId": "area-vii",
+      "level": "extended",
+      "number": 5,
+      "lessonId": "trigonometry-extended",
+      "text": "korzysta ze wzorów na sinus, cosinus i tangens sumy i różnicy kątów, a także na funkcje trygonometryczne kątów podwojonych;"
+    },
+    {
+      "id": "VII.E.6",
+      "areaId": "area-vii",
+      "level": "extended",
+      "number": 6,
+      "lessonId": "trigonometry-extended",
+      "text": "rozwiązuje równania trygonometryczne;"
+    },
+    {
+      "id": "VII.E.7",
+      "areaId": "area-vii",
+      "level": "extended",
+      "number": 7,
+      "lessonId": "trigonometry-extended",
+      "text": "stosuje twierdzenie sinusów;"
+    },
+    {
+      "id": "VII.E.8",
+      "areaId": "area-vii",
+      "level": "extended",
+      "number": 8,
+      "lessonId": "trigonometry-extended",
+      "text": "oblicza kąty trójkąta i długości jego boków przy odpowiednich danych (rozwiązuje trójkąty)."
+    },
+    {
+      "id": "VIII.B.1",
+      "areaId": "area-viii",
+      "level": "basic",
+      "number": 1,
+      "lessonId": "planimetry",
+      "text": "wyznacza promienie i średnice okręgów, długości cięciw okręgów oraz odcinków stycznych, w tym z wykorzystaniem twierdzenia Pitagorasa;"
+    },
+    {
+      "id": "VIII.B.2",
+      "areaId": "area-viii",
+      "level": "basic",
+      "number": 2,
+      "lessonId": "planimetry",
+      "text": "rozpoznaje trójkąty ostrokątne, prostokątne i rozwartokątne przy danych długościach boków (m.in. stosuje twierdzenie odwrotne do twierdzenia Pitagorasa i twierdzenie cosinusów); stosuje twierdzenie: w trójkącie naprzeciw większego kąta wewnętrznego leży dłuższy bok;"
+    },
+    {
+      "id": "VIII.B.3",
+      "areaId": "area-viii",
+      "level": "basic",
+      "number": 3,
+      "lessonId": "planimetry",
+      "text": "rozpoznaje wielokąty foremne i korzysta z ich podstawowych własności;"
+    },
+    {
+      "id": "VIII.B.4",
+      "areaId": "area-viii",
+      "level": "basic",
+      "number": 4,
+      "lessonId": "planimetry",
+      "text": "korzysta z własności kątów i przekątnych w prostokątach, równoległobokach, rombach i trapezach;"
+    },
+    {
+      "id": "VIII.B.5",
+      "areaId": "area-viii",
+      "level": "basic",
+      "number": 5,
+      "lessonId": "planimetry",
+      "text": "stosuje własności kątów wpisanych i środkowych;"
+    },
+    {
+      "id": "VIII.B.6",
+      "areaId": "area-viii",
+      "level": "basic",
+      "number": 6,
+      "lessonId": "planimetry",
+      "text": "stosuje wzory na pole wycinka koła i długość łuku okręgu;"
+    },
+    {
+      "id": "VIII.B.7",
+      "areaId": "area-viii",
+      "level": "basic",
+      "number": 7,
+      "lessonId": "planimetry",
+      "text": "stosuje twierdzenie Talesa;"
+    },
+    {
+      "id": "VIII.B.8",
+      "areaId": "area-viii",
+      "level": "basic",
+      "number": 8,
+      "lessonId": "planimetry",
+      "text": "korzysta z cech podobieństwa trójkątów;"
+    },
+    {
+      "id": "VIII.B.9",
+      "areaId": "area-viii",
+      "level": "basic",
+      "number": 9,
+      "lessonId": "planimetry",
+      "text": "wykorzystuje zależności między obwodami oraz między polami figur podobnych;"
+    },
+    {
+      "id": "VIII.B.10",
+      "areaId": "area-viii",
+      "level": "basic",
+      "number": 10,
+      "lessonId": "planimetry",
+      "text": "wskazuje podstawowe punkty szczególne w trójkącie: środek okręgu wpisanego w trójkąt, środek okręgu opisanego na trójkącie, ortocentrum, środek ciężkości oraz korzysta z ich własności;"
+    },
+    {
+      "id": "VIII.B.11",
+      "areaId": "area-viii",
+      "level": "basic",
+      "number": 11,
+      "lessonId": "planimetry",
+      "text": "przeprowadza dowody geometryczne;"
+    },
+    {
+      "id": "VIII.B.12",
+      "areaId": "area-viii",
+      "level": "basic",
+      "number": 12,
+      "lessonId": "planimetry",
+      "text": "stosuje funkcje trygonometryczne do wyznaczania długości odcinków w figurach płaskich oraz obliczania pól figur."
+    },
+    {
+      "id": "VIII.E.1",
+      "areaId": "area-viii",
+      "level": "extended",
+      "number": 1,
+      "lessonId": "planimetry-extended",
+      "text": "stosuje własności czworokątów wpisanych w okrąg i opisanych na okręgu;"
+    },
+    {
+      "id": "VIII.E.2",
+      "areaId": "area-viii",
+      "level": "extended",
+      "number": 2,
+      "lessonId": "planimetry-extended",
+      "text": "stosuje twierdzenie odwrotne do twierdzenia Talesa."
+    },
+    {
+      "id": "IX.B.1",
+      "areaId": "area-ix",
+      "level": "basic",
+      "number": 1,
+      "lessonId": "analytic-geometry",
+      "text": "rozpoznaje wzajemne położenie prostych na płaszczyźnie na podstawie ich równań, w tym znajduje wspólny punkt dwóch prostych, jeśli taki istnieje;"
+    },
+    {
+      "id": "IX.B.2",
+      "areaId": "area-ix",
+      "level": "basic",
+      "number": 2,
+      "lessonId": "analytic-geometry",
+      "text": "posługuje się równaniami prostych na płaszczyźnie, w postaci kierunkowej i ogólnej, w tym wyznacza równanie prostej o zadanych własnościach (takich, jak np. przechodzenie przez dwa dane punkty, znany współczynnik kierunkowy, równoległość do innej prostej);"
+    },
+    {
+      "id": "IX.B.3",
+      "areaId": "area-ix",
+      "level": "basic",
+      "number": 3,
+      "lessonId": "analytic-geometry",
+      "text": "oblicza odległość dwóch punktów w układzie współrzędnych;"
+    },
+    {
+      "id": "IX.B.4",
+      "areaId": "area-ix",
+      "level": "basic",
+      "number": 4,
+      "lessonId": "analytic-geometry",
+      "text": "posługuje się równaniem okręgu (x - a)² + (y - b)² = r²;"
+    },
+    {
+      "id": "IX.B.5",
+      "areaId": "area-ix",
+      "level": "basic",
+      "number": 5,
+      "lessonId": "analytic-geometry",
+      "text": "wyznacza obrazy okręgów i wielokątów w symetriach osiowych względem osi układu współrzędnych, symetrii środkowej (o środku w początku układu współrzędnych)."
+    },
+    {
+      "id": "IX.E.1",
+      "areaId": "area-ix",
+      "level": "extended",
+      "number": 1,
+      "lessonId": "analytic-geometry-extended",
+      "text": "znajduje punkty wspólne prostej i okręgu;"
+    },
+    {
+      "id": "IX.E.2",
+      "areaId": "area-ix",
+      "level": "extended",
+      "number": 2,
+      "lessonId": "analytic-geometry-extended",
+      "text": "znajduje punkty wspólne dwóch okręgów;"
+    },
+    {
+      "id": "IX.E.3",
+      "areaId": "area-ix",
+      "level": "extended",
+      "number": 3,
+      "lessonId": "vectors",
+      "text": "zna pojęcie wektora i oblicza jego współrzędne oraz długość, dodaje wektory i mnoży wektor przez liczbę, oba te działania wykonuje zarówno analitycznie, jak i geometrycznie;"
+    },
+    {
+      "id": "IX.E.4",
+      "areaId": "area-ix",
+      "level": "extended",
+      "number": 4,
+      "lessonId": "analytic-geometry-extended",
+      "text": "wyznacza równanie prostej prostopadłej do zadanej prostej i prostej stycznej do zadanego okręgu."
+    },
+    {
+      "id": "X.B.1",
+      "areaId": "area-x",
+      "level": "basic",
+      "number": 1,
+      "lessonId": "stereometry",
+      "text": "rozpoznaje wzajemne położenie prostych w przestrzeni, w szczególności proste prostopadłe nieprzecinające się;"
+    },
+    {
+      "id": "X.B.2",
+      "areaId": "area-x",
+      "level": "basic",
+      "number": 2,
+      "lessonId": "stereometry",
+      "text": "posługuje się pojęciem kąta między prostą a płaszczyzną oraz pojęciem kąta dwuściennego między półpłaszczyznami;"
+    },
+    {
+      "id": "X.B.3",
+      "areaId": "area-x",
+      "level": "basic",
+      "number": 3,
+      "lessonId": "stereometry",
+      "text": "rozpoznaje w graniastosłupach i ostrosłupach kąty między odcinkami (np. krawędziami, krawędziami i przekątnymi) oraz kąty między ścianami, oblicza miary tych kątów;"
+    },
+    {
+      "id": "X.B.4",
+      "areaId": "area-x",
+      "level": "basic",
+      "number": 4,
+      "lessonId": "stereometry",
+      "text": "rozpoznaje w walcach i w stożkach kąt między odcinkami oraz kąt między odcinkami i płaszczyznami (np. kąt rozwarcia stożka, kąt między tworzącą a podstawą), oblicza miary tych kątów;"
+    },
+    {
+      "id": "X.B.5",
+      "areaId": "area-x",
+      "level": "basic",
+      "number": 5,
+      "lessonId": "stereometry",
+      "text": "oblicza objętości i pola powierzchni graniastosłupów, ostrosłupów, walca, stożka i kuli, również z wykorzystaniem trygonometrii;"
+    },
+    {
+      "id": "X.B.6",
+      "areaId": "area-x",
+      "level": "basic",
+      "number": 6,
+      "lessonId": "stereometry",
+      "text": "wykorzystuje zależność między objętościami brył podobnych."
+    },
+    {
+      "id": "X.E.1",
+      "areaId": "area-x",
+      "level": "extended",
+      "number": 1,
+      "lessonId": "stereometry-extended",
+      "text": "zna i stosuje twierdzenie o prostej prostopadłej do płaszczyzny i o trzech prostopadłych;"
+    },
+    {
+      "id": "X.E.2",
+      "areaId": "area-x",
+      "level": "extended",
+      "number": 2,
+      "lessonId": "stereometry-extended",
+      "text": "wyznacza przekroje sześcianu i ostrosłupów prawidłowych oraz oblicza ich pola, także z wykorzystaniem trygonometrii."
+    }
+  ]
+}

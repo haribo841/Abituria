@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "stage": 4,
+  "scenarios": [
+    {
+      "requirementId": "XI.B.1",
+      "foundationPrompt": "Ile dwuliterowych napisów można utworzyć z liter \\(A,B,C\\), jeśli litery mogą się powtarzać?",
+      "foundationSolution": "Na każde z dwóch miejsc mamy \\(3\\) wybory, więc powstaje \\(3\\cdot3=9\\) napisów.",
+      "examPrompt": "Ile jest dodatnich liczb dwucyfrowych o różnych cyfrach?",
+      "examSolution": "Cyfrę dziesiątek wybieramy na \\(9\\) sposobów, a cyfrę jedności na \\(9\\) sposobów spośród pozostałych cyfr, w tym zera. Razem \\(81\\).",
+      "numericPrompt": "Ile wyników ma rzut dwiema rozróżnialnymi monetami?",
+      "numericValue": 4,
+      "numericSolution": "Możliwe uporządkowane wyniki to \\(OO,OR,RO,RR\\), czyli cztery.",
+      "reasoningPrompt": "Ile uścisków dłoni nastąpi, gdy każda para spośród \\(8\\) osób przywita się dokładnie raz?",
+      "reasoningSolution": "Każdy uścisk odpowiada wyborowi pary bez kolejności, więc liczba wynosi \\(8\\cdot7/2=28\\).",
+      "method": "Opisz obiekty bez pominięć i podwójnego liczenia, używając tabeli, drzewa lub wyboru kolejnych miejsc."
+    },
+    {
+      "requirementId": "XI.B.2",
+      "foundationPrompt": "Ile kodów postaci litera-cyfra można utworzyć z \\(4\\) liter i \\(6\\) cyfr?",
+      "foundationSolution": "Wybory są kolejnymi czynnościami, więc stosujemy regułę mnożenia: \\(4\\cdot6=24\\).",
+      "examPrompt": "Do miasta prowadzą \\(3\\) drogi kolejowe i \\(4\\) autobusowe. Na ile sposobów można wybrać podróż w jedną stronę, a na ile podróż tam i z powrotem różnymi środkami?",
+      "examSolution": "W jedną stronę mamy \\(3+4=7\\) możliwości. Dla różnych środków: kolej tam i autobus z powrotem albo odwrotnie, czyli \\(3\\cdot4+4\\cdot3=24\\).",
+      "numericPrompt": "Menu zawiera \\(3\\) zupy, \\(5\\) dań głównych i \\(2\\) desery. Ile pełnych zestawów można wybrać?",
+      "numericValue": 30,
+      "numericSolution": "Wybieramy po jednej pozycji z każdej grupy: \\(3\\cdot5\\cdot2=30\\).",
+      "reasoningPrompt": "Ile czterocyfrowych liczb parzystych można utworzyć z cyfr \\(0,1,2,3\\) bez powtórzeń?",
+      "reasoningSolution": "Gdy ostatnia cyfra to \\(0\\), pierwszą wybieramy na \\(3\\), a dwie środkowe ustawiamy na \\(2\\) sposoby: \\(6\\). Gdy ostatnia to \\(2\\), pierwsza ma \\(2\\) wybory bez zera i dwójki, a środek \\(2\\) ustawienia: \\(4\\). Razem \\(10\\).",
+      "method": "Rozdziel rozłączne przypadki regułą dodawania, a kolejne niezależne decyzje regułą mnożenia."
+    },
+    {
+      "requirementId": "XI.E.1",
+      "foundationPrompt": "Na ile sposobów można ustawić \\(6\\) różnych książek na półce?",
+      "foundationSolution": "To permutacje sześciu elementów: \\(6!=720\\).",
+      "examPrompt": "Z \\(10\\) osób wybierz trzyosobową komisję i wyznacz przewodniczącego spośród wybranych.",
+      "examSolution": "Komisję wybieramy na \\(\\binom{10}{3}=120\\) sposobów, a przewodniczącego na \\(3\\). Razem \\(360\\).",
+      "numericPrompt": "Ile pięcioelementowych podzbiorów ma zbiór dziesięcioelementowy?",
+      "numericValue": 252,
+      "numericSolution": "Liczba wynosi \\(\\binom{10}{5}=252\\).",
+      "reasoningPrompt": "Ile czteroliterowych napisów bez powtórzeń można utworzyć z \\(7\\) różnych liter?",
+      "reasoningSolution": "Kolejno mamy \\(7,6,5,4\\) możliwości, więc liczba wariacji bez powtórzeń wynosi \\(7\\cdot6\\cdot5\\cdot4=840\\).",
+      "method": "Rozstrzygnij, czy kolejność ma znaczenie i czy elementy mogą się powtarzać, a potem dobierz permutacje, wariacje lub kombinacje."
+    },
+    {
+      "requirementId": "XI.E.2",
+      "foundationPrompt": "Na ile sposobów można wybrać \\(3\\) osoby z \\(8\\)?",
+      "foundationSolution": "Kolejność nie ma znaczenia, więc wynik to \\(\\binom83=56\\).",
+      "examPrompt": "Ile podzbiorów parzystej liczności ma zbiór o \\(6\\) elementach?",
+      "examSolution": "Sumujemy \\(\\binom60+\\binom62+\\binom64+\\binom66=1+15+15+1=32\\). Jest to połowa wszystkich \\(2^6\\) podzbiorów.",
+      "numericPrompt": "Oblicz \\(\\binom95+\\binom96\\).",
+      "numericValue": 210,
+      "numericSolution": "Z reguły Pascala suma wynosi \\(\\binom{10}{6}=210\\).",
+      "reasoningPrompt": "Ile pięcioosobowych zespołów z \\(7\\) kobiet i \\(5\\) mężczyzn zawiera dokładnie \\(3\\) kobiety?",
+      "reasoningSolution": "Wybieramy \\(3\\) z \\(7\\) kobiet i \\(2\\) z \\(5\\) mężczyzn: \\(\\binom73\\binom52=35\\cdot10=350\\).",
+      "method": "Zapisz kryterium jako wybór podzbiorów, zastosuj symbol Newtona i użyj symetrii lub reguły Pascala do uproszczenia."
+    },
+    {
+      "requirementId": "XII.B.1",
+      "foundationPrompt": "Rzucamy uczciwą kostką. Oblicz prawdopodobieństwo wyniku większego od \\(4\\).",
+      "foundationSolution": "Sprzyjają wyniki \\(5\\) i \\(6\\) spośród sześciu równoprawdopodobnych, więc prawdopodobieństwo wynosi \\(2/6=1/3\\).",
+      "examPrompt": "Losujemy jedną kartę z talii \\(52\\) kart. Oblicz prawdopodobieństwo wylosowania asa lub króla.",
+      "examSolution": "Są \\(4\\) asy i \\(4\\) króle, a zdarzenia są rozłączne. Prawdopodobieństwo wynosi \\(8/52=2/13\\).",
+      "numericPrompt": "Rzucamy dwiema monetami. Podaj prawdopodobieństwo otrzymania dokładnie jednego orła.",
+      "numericValue": 0.5,
+      "numericSolution": "Sprzyjają dwa z czterech wyników: \\(OR\\) i \\(RO\\), więc prawdopodobieństwo wynosi \\(1/2\\).",
+      "reasoningPrompt": "Rzucamy dwiema kostkami. Oblicz prawdopodobieństwo, że suma oczek wyniesie \\(8\\).",
+      "reasoningSolution": "Jest \\(36\\) uporządkowanych wyników. Sumę \\(8\\) dają \\((2,6),(3,5),(4,4),(5,3),(6,2)\\), więc prawdopodobieństwo wynosi \\(5/36\\).",
+      "method": "Zbuduj skończoną przestrzeń równoprawdopodobnych wyników i podziel liczbę wyników sprzyjających przez wszystkie."
+    },
+    {
+      "requirementId": "XII.B.2",
+      "foundationPrompt": "Oblicz średnią, medianę i dominantę danych \\(2,3,3,5,7\\).",
+      "foundationSolution": "Średnia to \\(20/5=4\\), mediana \\(3\\), a dominanta \\(3\\).",
+      "examPrompt": "Oceny \\(3,4,5\\) mają wagi odpowiednio \\(1,2,3\\). Oblicz średnią ważoną.",
+      "examSolution": "Mamy \\((3\\cdot1+4\\cdot2+5\\cdot3)/(1+2+3)=26/6=13/3\\).",
+      "numericPrompt": "Podaj medianę danych \\(1,4,6,9,12,20\\).",
+      "numericValue": 7.5,
+      "numericSolution": "Dla sześciu danych mediana jest średnią dwóch środkowych: \\((6+9)/2=7,5\\).",
+      "reasoningPrompt": "Do danych \\(4,5,6\\) dodano liczbę \\(100\\). Porównaj zmianę średniej i mediany.",
+      "reasoningSolution": "Początkowo średnia i mediana wynoszą \\(5\\). Po dodaniu \\(100\\) średnia wynosi \\(115/4=28,75\\), a mediana \\((5+6)/2=5,5\\). Odstająca wartość silnie zmienia średnią, lecz niewiele medianę.",
+      "method": "Uporządkuj dane dla mediany i dominanty, a przy średniej ważonej podziel sumę iloczynów przez sumę wag."
+    },
+    {
+      "requirementId": "XII.E.1",
+      "foundationPrompt": "W grupie jest \\(60\\) osób, \\(36\\) zna angielski, a \\(18\\) zna angielski i niemiecki. Oblicz prawdopodobieństwo znajomości niemieckiego pod warunkiem znajomości angielskiego.",
+      "foundationSolution": "Mamy \\(P(N|A)=P(N\\cap A)/P(A)=18/36=1/2\\).",
+      "examPrompt": "Choroba występuje u \\(1%\\) osób. Test ma czułość \\(90%\\) i fałszywie dodatni wynik u \\(5%\\) zdrowych. Oblicz prawdopodobieństwo choroby po dodatnim wyniku.",
+      "examSolution": "Z Bayesa: licznik to \\(0,01\\cdot0,9=0,009\\), a prawdopodobieństwo wyniku dodatniego \\(0,009+0,99\\cdot0,05=0,0585\\). Iloraz wynosi około \\(0,15385\\), czyli \\(15,38%\\).",
+      "numericPrompt": "Jeśli \\(P(A)=0,4\\) i \\(P(B|A)=0,5\\), oblicz \\(P(A\\cap B)\\).",
+      "numericValue": 0.2,
+      "numericSolution": "Z definicji prawdopodobieństwa warunkowego \\(P(A\\cap B)=P(A)P(B|A)=0,2\\).",
+      "reasoningPrompt": "Dwie maszyny produkują odpowiednio \\(60%\\) i \\(40%\\) wyrobów, z odsetkiem wad \\(2%\\) i \\(5%\\). Oblicz prawdopodobieństwo wady i pochodzenia wadliwego wyrobu z drugiej maszyny.",
+      "reasoningSolution": "Prawdopodobieństwo wady wynosi \\(0,6\\cdot0,02+0,4\\cdot0,05=0,032\\). Z Bayesa prawdopodobieństwo drugiej maszyny przy wadzie to \\(0,4\\cdot0,05/0,032=0,625\\).",
+      "method": "Rozpisz przecięcia i gałęzie drzewa, oblicz prawdopodobieństwo całkowite, a w Bayesie odwróć warunek przez iloraz."
+    },
+    {
+      "requirementId": "XII.E.2",
+      "foundationPrompt": "Monetę z prawdopodobieństwem orła \\(0,6\\) rzucamy \\(4\\) razy. Oblicz prawdopodobieństwo dokładnie dwóch orłów.",
+      "foundationSolution": "Ze schematu Bernoullego: \\(\\binom42 0,6^2 0,4^2=6\\cdot0,36\\cdot0,16=0,3456\\).",
+      "examPrompt": "Prawdopodobieństwo sukcesu wynosi \\(0,8\\). W pięciu niezależnych próbach oblicz prawdopodobieństwo co najmniej czterech sukcesów.",
+      "examSolution": "Sumujemy przypadki \\(4\\) i \\(5\\): \\(\\binom54 0,8^4 0,2+0,8^5=0,4096+0,32768=0,73728\\).",
+      "numericPrompt": "W trzech niezależnych próbach z \\(p=0,5\\) podaj prawdopodobieństwo dokładnie jednego sukcesu.",
+      "numericValue": 0.375,
+      "numericSolution": "Mamy \\(\\binom31(0,5)^1(0,5)^2=3/8=0,375\\).",
+      "reasoningPrompt": "W dziesięciu niezależnych próbach sukces ma prawdopodobieństwo \\(0,1\\). Oblicz prawdopodobieństwo co najmniej jednego sukcesu metodą zdarzenia przeciwnego.",
+      "reasoningSolution": "Zdarzeniem przeciwnym jest brak sukcesu we wszystkich próbach, o prawdopodobieństwie \\(0,9^{10}\\). Szukany wynik to \\(1-0,9^{10}\\approx0,65132\\).",
+      "method": "Sprawdź niezależność i stałe prawdopodobieństwo sukcesu, dobierz liczbę sukcesów oraz użyj współczynnika dwumianowego."
+    }
+  ]
+}

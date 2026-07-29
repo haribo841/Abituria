@@ -29,7 +29,7 @@ public sealed class HomeView : UserControl
             AddTile(grid, new HomeTile("Wzory", "18 pełnych tablic matematycznych", "img/wzory.png", showFormulas)),
             AddTile(grid, new HomeTile("Zadania", "Matura poprawkowa 2021 i archiwalne zestawy", "img/zadania.png", showExams)),
             AddTile(grid, new HomeTile("Kalkulator", "Wyrażenia i pełna analiza funkcji kwadratowej", "img/kalkulator.png", showCalculator)),
-            AddTile(grid, new HomeTile("Działy", "7 działów: teoria, przykłady i zadania", "img/dzialy.png", showChapters)),
+            AddTile(grid, new HomeTile("Działy", "13 obszarów: teoria, przykłady i 357 ćwiczeń", "img/dzialy.png", showChapters)),
             AddTile(grid, new HomeTile("Plan rozwoju", "Przeniesione, zaplanowane i zastąpione elementy starych wersji", "img/abituria.png", showRoadmap))
         };
 

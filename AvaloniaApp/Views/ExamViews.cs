@@ -22,7 +22,7 @@ public sealed class ExamOverviewView : UserControl
         Action openExam,
         Action<string> openTopic,
         Action<PlaceholderItem> openPlaceholder,
-        Action<ExerciseDefinition, string?> openExercise,
+        Action<LearningExercise, string?> openExercise,
         ExerciseRandomizer? randomizer = null)
     {
         var exerciseRandomizer = randomizer ?? new ExerciseRandomizer();
@@ -87,10 +87,10 @@ public sealed class ExamOverviewView : UserControl
 
     private static Button RandomExerciseButton(
         string text,
-        IReadOnlyList<ExerciseDefinition> exercises,
+        IReadOnlyList<LearningExercise> exercises,
         string? topicId,
         ExerciseRandomizer randomizer,
-        Action<ExerciseDefinition, string?> openExercise)
+        Action<LearningExercise, string?> openExercise)
     {
         var button = new Button
         {
@@ -120,7 +120,7 @@ public sealed class ExerciseListView : UserControl
 {
     private readonly StackPanel _list = new() { Spacing = 8 };
 
-    public ExerciseListView(ExamDefinition exam, string? topicId, LocalProfile profile, AccountService accounts, Action<ExerciseDefinition> open, Action back)
+    public ExerciseListView(ExamDefinition exam, string? topicId, LocalProfile profile, AccountService accounts, Action<LearningExercise> open, Action back)
     {
         var root = new StackPanel { Spacing = 16 };
         var backButton = new Button { Content = "← Arkusze", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Left };
@@ -137,7 +137,7 @@ public sealed class ExerciseListView : UserControl
         AttachedToVisualTree += async (_, _) => await LoadAsync(exam, topic, profile, accounts, open);
     }
 
-    private async Task LoadAsync(ExamDefinition exam, ExerciseTopicDefinition? topic, LocalProfile profile, AccountService accounts, Action<ExerciseDefinition> open)
+    private async Task LoadAsync(ExamDefinition exam, ExerciseTopicDefinition? topic, LocalProfile profile, AccountService accounts, Action<LearningExercise> open)
     {
         var completed = await accounts.GetCompletedExerciseIdsAsync(profile.Id);
         _list.Children.Clear();
@@ -162,13 +162,17 @@ public sealed class ExerciseListView : UserControl
 }
 
 public sealed record ExerciseViewContext(
-    IReadOnlyList<ExerciseDefinition> Exercises,
+    IReadOnlyList<LearningExercise> Exercises,
     SourceDocument Source,
     UiCopyCatalog Copy,
     LocalProfile Profile,
     AccountService Accounts,
     Action Back,
-    Action<ExerciseDefinition> OpenExercise);
+    Action<LearningExercise> OpenExercise)
+{
+    public string BackLabel { get; init; } = "Lista zadań";
+    public string? SourceUrl { get; init; }
+}
 
 public sealed class ExerciseView : UserControl
 {
@@ -177,7 +181,7 @@ public sealed class ExerciseView : UserControl
     private int _hintIndex;
     private int? _selectedOption;
 
-    public ExerciseView(ExerciseDefinition exercise, ExerciseViewContext context)
+    public ExerciseView(LearningExercise exercise, ExerciseViewContext context)
     {
         AutomationProperties.SetLiveSetting(_status, AutomationLiveSetting.Polite);
         AutomationProperties.SetName(_status, "Wynik sprawdzania zadania");
@@ -189,19 +193,15 @@ public sealed class ExerciseView : UserControl
         AddScratchpad(root);
         AddAnswerControls(root, exercise, context);
         AddHintControls(root, exercise);
-        root.Children.Add(UiFactory.InfoBand(context.Copy.FormatRequired(
-            "exam.source",
-            exercise.VerificationSource,
-            exercise.SourcePage,
-            FormatVerifiedOn(context.Source.VerifiedOn))));
+        root.Children.Add(BuildSourceBand(exercise, context));
         root.Children.Add(_status);
         Content = UiFactory.PageScroll(root);
     }
 
-    private static StackPanel BuildNavigation(ExerciseDefinition exercise, ExerciseViewContext context)
+    private static StackPanel BuildNavigation(LearningExercise exercise, ExerciseViewContext context)
     {
         var topButtons = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8 };
-        var backButton = new Button { Content = "← Lista zadań", Classes = { "ghost" } };
+        var backButton = new Button { Content = $"← {context.BackLabel}", Classes = { "ghost" } };
         backButton.Click += (_, _) => context.Back();
         topButtons.Children.Add(backButton);
         var currentIndex = context.Exercises.ToList().FindIndex(item => item.Id == exercise.Id);
@@ -217,8 +217,8 @@ public sealed class ExerciseView : UserControl
     private static Button NavigationButton(
         string label,
         string actionName,
-        ExerciseDefinition target,
-        Action<ExerciseDefinition> openExercise)
+        LearningExercise target,
+        Action<LearningExercise> openExercise)
     {
         var button = new Button { Content = label, Classes = { "ghost" } };
         ToolTip.SetTip(button, target.Title);
@@ -228,12 +228,17 @@ public sealed class ExerciseView : UserControl
         return button;
     }
 
-    private static void AddPrompt(StackPanel root, ExerciseDefinition exercise)
+    private static void AddPrompt(StackPanel root, LearningExercise exercise)
     {
-        root.Children.Add(UiFactory.PageTitle(exercise.Title, exercise.IsMultipleChoice ? "Wybierz jedną odpowiedź." : "Rozwiązuj samodzielnie i odsłaniaj kolejne wskazówki."));
+        root.Children.Add(UiFactory.PageTitle(exercise.Title, ExerciseSubtitle(exercise)));
         root.Children.Add(UiFactory.Card(new RichContentView([new ContentBlock { Type = "richText", Text = exercise.Prompt }])));
-        foreach (var asset in exercise.Assets)
-            root.Children.Add(UiFactory.Card(UiFactory.AssetImage(asset, 820, 470, $"Ilustracja do zadania {exercise.Number}")));
+        for (var index = 0; index < exercise.Assets.Count; index++)
+        {
+            var alternativeText = index < exercise.AssetAlternativeTexts.Count
+                ? exercise.AssetAlternativeTexts[index]
+                : $"Ilustracja do zadania {exercise.Number}";
+            root.Children.Add(UiFactory.Card(UiFactory.AssetImage(exercise.Assets[index], 820, 470, alternativeText)));
+        }
     }
 
     private static void AddScratchpad(StackPanel root)
@@ -252,15 +257,17 @@ public sealed class ExerciseView : UserControl
         root.Children.Add(UiFactory.Card(scratchPanel));
     }
 
-    private void AddAnswerControls(StackPanel root, ExerciseDefinition exercise, ExerciseViewContext context)
+    private void AddAnswerControls(StackPanel root, LearningExercise exercise, ExerciseViewContext context)
     {
         if (exercise.IsMultipleChoice)
             AddMultipleChoiceControls(root, exercise, context);
+        else if (exercise.IsNumeric)
+            AddNumericControls(root, exercise, context);
         else
             AddRevealControl(root, exercise, context);
     }
 
-    private void AddMultipleChoiceControls(StackPanel root, ExerciseDefinition exercise, ExerciseViewContext context)
+    private void AddMultipleChoiceControls(StackPanel root, LearningExercise exercise, ExerciseViewContext context)
     {
         var options = new StackPanel { Spacing = 8 };
         for (var index = 0; index < exercise.Options.Count; index++)
@@ -293,7 +300,32 @@ public sealed class ExerciseView : UserControl
         root.Children.Add(check);
     }
 
-    private void AddRevealControl(StackPanel root, ExerciseDefinition exercise, ExerciseViewContext context)
+    private void AddNumericControls(StackPanel root, LearningExercise exercise, ExerciseViewContext context)
+    {
+        var answer = new TextBox { PlaceholderText = "Wpisz liczbę lub proste wyrażenie" };
+        AutomationProperties.SetName(answer, "Odpowiedź liczbowa");
+        root.Children.Add(answer);
+
+        var check = new Button
+        {
+            Content = "Sprawdź wynik",
+            Classes = { "primary" },
+            HorizontalAlignment = HorizontalAlignment.Left
+        };
+        AutomationProperties.SetHelpText(
+            check,
+            "Możesz użyć przecinka lub kropki dziesiętnej. Poprawny wynik zostanie zapisany w lokalnym profilu.");
+        check.Click += async (_, _) =>
+        {
+            var result = new NumericAnswerEvaluator(new ExpressionCalculator()).Evaluate(exercise, answer.Text);
+            if (result.IsCorrect)
+                await context.Accounts.MarkExerciseCompletedAsync(context.Profile.Id, exercise.Id);
+            ShowStatus(result.Message, result.IsCorrect);
+        };
+        root.Children.Add(check);
+    }
+
+    private void AddRevealControl(StackPanel root, LearningExercise exercise, ExerciseViewContext context)
     {
         var reveal = new Button
         {
@@ -313,7 +345,7 @@ public sealed class ExerciseView : UserControl
         root.Children.Add(reveal);
     }
 
-    private void AddHintControls(StackPanel root, ExerciseDefinition exercise)
+    private void AddHintControls(StackPanel root, LearningExercise exercise)
     {
         var hint = new Button { Content = "Następna podpowiedź", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Left };
         hint.Click += (_, _) =>
@@ -335,4 +367,28 @@ public sealed class ExerciseView : UserControl
         DateOnly.TryParseExact(value, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var date)
             ? date.ToString("d MMMM yyyy 'r'", CultureInfo.GetCultureInfo("pl-PL"))
             : value;
+
+    private static string ExerciseSubtitle(LearningExercise exercise)
+    {
+        if (exercise.IsMultipleChoice)
+            return "Wybierz jedną odpowiedź.";
+        if (exercise.IsNumeric)
+            return "Oblicz wynik. Możesz wpisać liczbę albo bezpieczne wyrażenie matematyczne.";
+        return "Rozwiązuj samodzielnie i świadomie ujawnij pełne rozwiązanie.";
+    }
+
+    private static Border BuildSourceBand(LearningExercise exercise, ExerciseViewContext context)
+    {
+        if (!exercise.IsCourseExercise)
+            return UiFactory.InfoBand(context.Copy.FormatRequired(
+                "exam.source",
+                exercise.VerificationSource,
+                exercise.SourcePage,
+                FormatVerifiedOn(context.Source.VerifiedOn)));
+
+        var sourceUrl = string.IsNullOrWhiteSpace(context.SourceUrl) ? string.Empty : $"\n{context.SourceUrl}";
+        return UiFactory.InfoBand(
+            "Źródło wymagania",
+            $"{exercise.VerificationSource}. Weryfikacja: {FormatVerifiedOn(context.Source.VerifiedOn)}.{sourceUrl}");
+    }
 }

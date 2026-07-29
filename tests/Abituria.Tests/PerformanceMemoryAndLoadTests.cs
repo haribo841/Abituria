@@ -115,7 +115,7 @@ public sealed class PerformanceMemoryAndLoadTests
     {
         var warmup = new ContentRepository();
         Assert.NotEmpty(warmup.Formulas.Articles);
-        Assert.NotEmpty(warmup.Chapters.Chapters);
+        Assert.NotEmpty(warmup.MathCourse.Lessons);
         Assert.NotEmpty(warmup.Exam.Exercises);
 
         ForceFullCollection();
@@ -130,7 +130,7 @@ public sealed class PerformanceMemoryAndLoadTests
         {
             var content = new ContentRepository();
             formulas += content.Formulas.Articles.Count;
-            chapters += content.Chapters.Chapters.Count;
+            chapters += content.MathCourse.Lessons.Count;
             exercises += content.Exam.Exercises.Count;
         }
 
@@ -147,7 +147,7 @@ public sealed class PerformanceMemoryAndLoadTests
             $"retainedGrowthBytes={retainedGrowthBytes}");
 
         Assert.Equal(ContentReloads * warmup.Formulas.Articles.Count, formulas);
-        Assert.Equal(ContentReloads * warmup.Chapters.Chapters.Count, chapters);
+        Assert.Equal(ContentReloads * warmup.MathCourse.Lessons.Count, chapters);
         Assert.Equal(ContentReloads * warmup.Exam.Exercises.Count, exercises);
         Assert.True(
             stopwatch.Elapsed < TimeSpan.FromSeconds(15),

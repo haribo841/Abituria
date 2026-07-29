@@ -13,10 +13,23 @@ namespace Abituria.Views;
 
 public sealed class ProfileView : UserControl
 {
+    public const int ExamExerciseTotal = 35;
+    public const int BasicCourseExerciseTotal = 219;
+    public const int ExtendedCourseExerciseTotal = 138;
+
     private readonly TextBlock _progress = new() { Classes = { "muted" } };
     private readonly TextBlock _status = new() { TextWrapping = TextWrapping.Wrap };
 
     public ProfileView(LocalProfile profile, AccountService accounts, Action logout)
+        : this(profile, accounts, new CourseExerciseCatalog(), logout)
+    {
+    }
+
+    public ProfileView(
+        LocalProfile profile,
+        AccountService accounts,
+        CourseExerciseCatalog courseExercises,
+        Action logout)
     {
         AutomationProperties.SetName(_progress, "Postęp w zadaniach");
         AutomationProperties.SetLiveSetting(_progress, AutomationLiveSetting.Polite);
@@ -57,13 +70,24 @@ public sealed class ProfileView : UserControl
         root.Children.Add(logoutButton);
         root.Children.Add(_status);
         Content = UiFactory.PageScroll(root);
-        AttachedToVisualTree += async (_, _) => await LoadProgressAsync(profile, accounts);
+        AttachedToVisualTree += async (_, _) => await LoadProgressAsync(profile, accounts, courseExercises);
     }
 
-    private async Task LoadProgressAsync(LocalProfile profile, AccountService accounts)
+    private async Task LoadProgressAsync(
+        LocalProfile profile,
+        AccountService accounts,
+        CourseExerciseCatalog courseExercises)
     {
         var completed = await accounts.GetCompletedExerciseIdsAsync(profile.Id);
-        _progress.Text = $"Ukończone zadania: {completed.Count} / 35";
+        var courseById = courseExercises.Exercises.ToDictionary(item => item.Id, StringComparer.Ordinal);
+        var examCount = completed.Count(id => id.StartsWith("mp21-", StringComparison.Ordinal));
+        var basicCount = completed.Count(id =>
+            courseById.TryGetValue(id, out var exercise) && exercise.Level == "basic");
+        var extendedCount = completed.Count(id =>
+            courseById.TryGetValue(id, out var exercise) && exercise.Level == "extended");
+        _progress.Text = $"Arkusz: {examCount} / {ExamExerciseTotal}\n" +
+            $"Podstawa: {basicCount} / {BasicCourseExerciseTotal}\n" +
+            $"Część rozszerzona: {extendedCount} / {ExtendedCourseExerciseTotal}";
     }
 
     private async Task ShowRecoveryCodeAsync(string code)

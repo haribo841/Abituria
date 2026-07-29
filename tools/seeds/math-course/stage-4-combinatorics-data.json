@@ -1,0 +1,70 @@
+{
+  "stage": 4,
+  "title": "Blok XI-XII - kombinatoryka, prawdopodobieństwo i statystyka",
+  "requirements": [
+    {
+      "id": "XI.B.1",
+      "areaId": "area-xi",
+      "level": "basic",
+      "number": 1,
+      "lessonId": "combinatorics",
+      "text": "zlicza obiekty w prostych sytuacjach kombinatorycznych;"
+    },
+    {
+      "id": "XI.B.2",
+      "areaId": "area-xi",
+      "level": "basic",
+      "number": 2,
+      "lessonId": "combinatorics",
+      "text": "zlicza obiekty, stosując reguły mnożenia i dodawania (także łącznie) dla dowolnej liczby czynności, np.: a) obliczenie, ile jest czterocyfrowych nieparzystych liczb całkowitych dodatnich takich, że w ich zapisie dziesiętnym występuje dokładnie jedna cyfra 1 i dokładnie jedna cyfra 2, b) obliczenie, ile jest czterocyfrowych parzystych liczb całkowitych dodatnich takich, że w ich zapisie dziesiętnym występuje dokładnie jedna cyfra 0 i dokładnie jedna cyfra 1."
+    },
+    {
+      "id": "XI.E.1",
+      "areaId": "area-xi",
+      "level": "extended",
+      "number": 1,
+      "lessonId": "combinatorics-extended",
+      "text": "oblicza liczbę możliwych sytuacji, spełniających określone kryteria, z wykorzystaniem reguły mnożenia i dodawania (także łącznie) oraz wzorów na liczbę: permutacji, kombinacji i wariacji;"
+    },
+    {
+      "id": "XI.E.2",
+      "areaId": "area-xi",
+      "level": "extended",
+      "number": 2,
+      "lessonId": "combinatorics-extended",
+      "text": "stosuje współczynnik dwumianowy (symbol Newtona) i jego własności przy rozwiązywaniu problemów kombinatorycznych."
+    },
+    {
+      "id": "XII.B.1",
+      "areaId": "area-xii",
+      "level": "basic",
+      "number": 1,
+      "lessonId": "probability-statistics",
+      "text": "oblicza prawdopodobieństwo w modelu klasycznym;"
+    },
+    {
+      "id": "XII.B.2",
+      "areaId": "area-xii",
+      "level": "basic",
+      "number": 2,
+      "lessonId": "probability-statistics",
+      "text": "oblicza średnią arytmetyczną i średnią ważoną, znajduje medianę i dominantę."
+    },
+    {
+      "id": "XII.E.1",
+      "areaId": "area-xii",
+      "level": "extended",
+      "number": 1,
+      "lessonId": "probability-statistics-extended",
+      "text": "oblicza prawdopodobieństwo warunkowe i stosuje wzór Bayesa, stosuje twierdzenie o prawdopodobieństwie całkowitym;"
+    },
+    {
+      "id": "XII.E.2",
+      "areaId": "area-xii",
+      "level": "extended",
+      "number": 2,
+      "lessonId": "probability-statistics-extended",
+      "text": "stosuje schemat Bernoullego."
+    }
+  ]
+}

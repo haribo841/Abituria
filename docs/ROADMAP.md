@@ -7,6 +7,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - shell AvaloniaUI 12 i .NET 10 LTS,
 - konta SQLite, profile gościa i postęp,
 - 18 tablic matematycznych,
+- pełny kurs matematyki Formuły 2023: 4 grupy, 13 obszarów, 119 wymagań, 238 rozwiązanych przykładów i 357 ćwiczeń z filtrem poziomu oraz osobnym postępem,
 - dział Wektory z ośmioma ilustracjami,
 - materiały issue #35: liczby naturalne i indukcja, alfabet grecki, liczby rzeczywiste i zbiory, algebra, równania i nierówności, funkcja kwadratowa oraz logarytmy,
 - 35 zadań matury poprawkowej 2021 zweryfikowanych z materiałami CKE,
@@ -19,7 +20,6 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 ## Zaplanowane
 
 - generator wykresów i kalkulator funkcji trygonometrycznych,
-- uzupełnienie działów Ciągi liczbowe i Liczby pierwsze,
 - arkusze 2019, 2020 i matura podstawowa 2021,
 - materiały wideo i wyszukiwanie zapisu matematycznego.
 

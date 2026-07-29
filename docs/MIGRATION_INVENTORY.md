@@ -31,7 +31,7 @@
 | Matury 2019/2020/2021 | pojedyncze ekrany informacyjne | Zachowane jako placeholdery z kontekstem historycznym i linkiem do roadmapy |
 | Planowane kalkulatory | ekrany z `TODO` | Generator wykresów i kalkulator funkcji trygonometrycznych zachowane jako placeholdery |
 | Działy issue #35 | `Uzupełnić Treść działów matematyki.txt` i niezależny seed `tools/seeds/issue-35-content.json` | Aksjomatyka i indukcja, alfabet grecki, liczby rzeczywiste i zbiory, algebra, równania i nierówności, wszystkie przypadki delty, ułamki, przybliżenia, potęgi i pierwiastki, przedziały, procenty, logarytmy oraz zadania |
-| Pozostałe planowane działy | puste ekrany starych wersji | Dwa nazwane placeholdery: ciągi liczbowe i liczby pierwsze |
+| Kurs Formuły 2023 | podstawa programowa z 2024 r. oraz informatory CKE dla poziomu podstawowego i rozszerzonego | 4 grupy, 13 obszarów, 73 wymagania podstawowe i 46 rozszerzonych, 238 autorskich przykładów oraz 357 autorskich ćwiczeń; historyczne identyfikatory i materiały issue #35 zachowane w lekcjach |
 | E1–E35 | puste szablony widoków | Jedna jawna pozycja „Zestaw E1–E35” zamiast 35 kopii pustego ekranu |
 | `Window1` / WPF-Math | niepodłączone okno demonstracyjne z eksportem SVG/PNG | Jawna pozycja `superseded` w roadmapie; renderowanie wzorów zastąpił CSharpMath, a nieosiągalnego eksportu nie przeniesiono |
 | Dokumenty projektowe | pięć plików `.txt` z katalogu starych wersji | Dokładne kopie w `docs/legacy/originals`, streszczenia w `docs/legacy` i pozycje roadmapy |
@@ -61,7 +61,8 @@ Testy automatyczne wymagają:
 
 - dokładnie 18 tablic i kompletne odwzorowanie wszystkich podpunktów 17 sekcji CKE dla Formuły 2023,
 - dokładnie 91 kątów od 0 do 90 stopni w tekstowej tabeli trygonometrycznej,
-- 9 pozycji działowych, w tym 7 dostępnych i 2 placeholdery, 17 tematów oraz 6 grup placeholderów poza działami,
+- dokładnie 4 grupy, 13 obszarów, 73 wymagania podstawowe, 46 dodatkowych wymagań rozszerzonych, 238 przykładów i 357 ćwiczeń kursowych,
+- dokładnie 219 ćwiczeń podstawowych i 138 rozszerzonych, po 3 unikalne ćwiczenia i 2 rozwiązane przykłady dla każdego wymagania,
 - dokładnie 35 kolejnych zadań: 28 zamkniętych i 7 otwartych,
 - czterech niepustych opcji i klucza 1–4 dla każdego zadania zamkniętego,
 - niepustej odpowiedzi ujawnianej dla każdego zadania otwartego,
@@ -70,13 +71,13 @@ Testy automatyczne wymagają:
 - braku znanych uszkodzonych komend LaTeX,
 - poprawnego parsowania każdego wyrażenia matematycznego przez renderer CSharpMath.
 
-Bezpośrednia regresja issue #35 wymaga wszystkich wskazanych sekcji, 24 liter alfabetu greckiego, przykładów, wskazówek i odpowiedzi, poprawnego przypadku `\(\Delta{}<0\)` oraz statusów roadmapy. Testy wymagają także 92 plików zasobów, pełnego klucza CKE dla zadań 1-28 oraz jednoznacznego przypisania wszystkich zadań do tematów.
+Bezpośrednia regresja issue #35 wymaga wszystkich wskazanych sekcji, 24 liter alfabetu greckiego, przykładów, wskazówek i odpowiedzi, poprawnego przypadku `\(\Delta{}<0\)` oraz zachowania historycznych identyfikatorów lekcji. Regresja kursu wymaga także rozdzielonych seedów czterech etapów, deterministycznego generatora, filtra poziomu, trzech trybów odpowiedzi, czterech autorskich diagramów z tekstami alternatywnymi oraz zgodności macierzy `119/238/357`. Testy wymagają ponadto pełnego klucza CKE dla zadań 1-28 oraz jednoznacznego przypisania wszystkich zadań do tematów.
 
 Drugi audyt przed usunięciem snapshotów potwierdził `276/276` zgodnych wystąpień zasobów bez braków i różnic. Ujawnił dwa brakujące placeholdery kalkulatorów oraz brak dokładnych kopii dokumentów planistycznych; oba problemy zostały usunięte.
 
 Końcowy audyt z 30 czerwca 2026 r. porównał wizualnie wszystkie 35 zadań, dziewięć ilustracji zadaniowych, pełny klucz 1-28 oraz odpowiedzi 29-35 z arkuszem i zasadami oceniania CKE. Ujawnił i usunął pozostałe błędy terminologiczne w podpowiedziach do zadań 6, 22 i 29, niejednoznaczny zapis kątów w zadaniach 18-19 oraz niepoprawny zapis przedziału w odpowiedzi do zadania 29. Data weryfikacji jest teraz pobierana z metadanych egzaminu.
 
-Ten sam audyt sklasyfikował niepodłączony prototyp `Window1` / WPF-Math jako `superseded`, poprawił odmianę liczby zadań w nawigacji i potwierdził działanie interfejsu przy `1280x820` oraz minimalnym `960x640`. Lokalne i zdalne bramy repozytorium wykonują `restore`, `build Release`, pełne testy, format, audyt zależności oraz analizę SonarQube. Proces tagu rozszerza je o natywne pakowanie i smoke test na trzech deklarowanych systemach.
+Ten sam audyt sklasyfikował niepodłączony prototyp `Window1` / WPF-Math jako `superseded`, poprawił odmianę liczby zadań w nawigacji i potwierdził działanie interfejsu przy `1280x820` oraz minimalnym `960x640`. Regresje kursu rozszerzają kontrolę o `720x520`, `960x640` i `1280x820`. Lokalne i zdalne bramy repozytorium wykonują `restore`, `build Release`, pełne testy, format, audyt zależności oraz analizę SonarQube. Proces tagu rozszerza je o natywne pakowanie i smoke test na trzech deklarowanych systemach.
 
 ## Celowo nieprzeniesione
 

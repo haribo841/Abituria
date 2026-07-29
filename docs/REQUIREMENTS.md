@@ -46,7 +46,7 @@ Zakres bieżącej implementacji obejmuje:
 - zapis ukończonych zadań osobno dla profilu,
 - ekran startowy z kaflami głównych obszarów,
 - 18 tablic matematycznych obejmujących kompletny zakres dokumentu CKE dla Formuły 2023,
-- 7 dostępnych działów: Wektory, Liczby naturalne i indukcja, Alfabet grecki, Liczby rzeczywiste, zbiory i logika, Wyrażenia algebraiczne, równania i nierówności, Funkcja kwadratowa i równanie kwadratowe oraz Logarytmy,
+- pełny kurs Formuły 2023: 4 grupy, 13 obszarów, 73 wymagania podstawowe, 46 dodatkowych wymagań rozszerzonych, 238 rozwiązanych przykładów i 357 ćwiczeń,
 - 35 zadań matury poprawkowej 2021,
 - przeglądanie zadań według arkusza i tematów,
 - sprawdzanie odpowiedzi w zadaniach zamkniętych,
@@ -60,7 +60,6 @@ Zakres bieżącej implementacji obejmuje:
 - ekran "O programie" oraz diagnostyczny tryb wydaniowy bez otwierania UI,
 - samowystarczalne, przenośne paczki x64 dla Windows 11, Ubuntu 24.04 i macOS 15 Intel,
 - dokumentację GitHub Pages, sumy SHA-256, osobne SBOM i atestacje pochodzenia artefaktów,
-- placeholdery dla działów Ciągi liczbowe i Liczby pierwsze,
 - placeholdery dla funkcji świadomie nieukończonych.
 
 Poza bieżącym zakresem pozostają:
@@ -84,11 +83,11 @@ Poza bieżącym zakresem pozostają:
 | F-04 | System umożliwia odzyskanie i zmianę hasła przez kod odzyskiwania. | Wysoki | Zaimplementowane | `LoginView`, `ProfileView`, `AccountServiceTests` |
 | F-05 | System importuje historyczne profile gościa z `users.txt` idempotentnie. | Średni | Zaimplementowane | `AccountService`, `InitialLocalAccounts`, `AccountServiceTests` |
 | F-06 | System pokazuje 18 tablic matematycznych obejmujących wszystkie 17 sekcji i podpunkty dokumentu CKE dla Formuły 2023, z jawnym źródłem i sumą SHA-256. | Wysoki | Zaimplementowane | `Content/formulas.json`, `FORMULA_2023_COVERAGE.md`, `ContentInventoryTests` |
-| F-07 | System pokazuje 7 dostępnych działów matematyki, w tym Wektory oraz pełny zakres treści issue #35. | Wysoki | Zaimplementowane | `Content/chapters.json`, `ContentInventoryTests`, `Issue35MathChaptersRegressionTests` |
+| F-07 | System pokazuje pełny kurs Formuły 2023 w 4 grupach i 13 obszarach, obejmujący 73 wymagania podstawowe i 46 rozszerzonych. | Wysoki | Zaimplementowane | `Content/chapters.json`, `MATH_COURSE_2023_COVERAGE.md`, `MathCourse2023ContentTests` |
 | F-08 | System pokazuje 35 zadań matury poprawkowej 2021. | Wysoki | Zaimplementowane | `Content/exam-2021-correction.json`, `ContentInventoryTests` |
 | F-09 | System umożliwia wybór zadań według arkusza lub tematu. | Wysoki | Zaimplementowane | `ExerciseListView`, `ContentInventoryTests` |
-| F-10 | System sprawdza odpowiedzi A-D w zadaniach zamkniętych i zapisuje postęp po poprawnej odpowiedzi. | Wysoki | Zaimplementowane | `ExerciseView`, `ExerciseAndRoutingCoverageTests` |
-| F-11 | System ujawnia odpowiedzi otwarte i zapisuje postęp po ujawnieniu. | Wysoki | Zaimplementowane | `ExerciseView`, `ExerciseAndRoutingCoverageTests` |
+| F-10 | System sprawdza odpowiedzi A-D w zadaniach zamkniętych i zapisuje postęp po poprawnej odpowiedzi. | Wysoki | Zaimplementowane | `ExerciseView`, `ExerciseAndRoutingCoverageTests`, `MathCourse2023ContentTests` |
+| F-11 | System ujawnia pełne rozwiązania zadań otwartych i zapisuje postęp dopiero po świadomym ujawnieniu. | Wysoki | Zaimplementowane | `ExerciseView`, `ExerciseAndRoutingCoverageTests`, `MathCourse2023ContentTests` |
 | F-12 | System udostępnia podpowiedzi krokowe dla zadań. | Wysoki | Zaimplementowane | `ExerciseView`, `ContentInventoryTests` |
 | F-13 | System udostępnia sesyjny brudnopis zadania. | Średni | Zaimplementowane | `ExerciseView` |
 | F-14 | System udostępnia kalkulator funkcji kwadratowej z krokami rozwiązania. | Wysoki | Zaimplementowane | `QuadraticSolver`, `QuadraticSolverTests` |
@@ -100,6 +99,8 @@ Poza bieżącym zakresem pozostają:
 | F-20 | System udostępnia ekran "O programie" z wersją, commitem, licencją, autorem i repozytorium. | Średni | Zaimplementowane | `AppBuildInfo`, `AboutView`, `AboutViewTests` |
 | F-21 | Opublikowany plik wykonywalny obsługuje `--release-smoke-test --data-directory <katalog>` bez otwierania UI i bez dostępu do prawdziwych danych użytkownika. | Wysoki | Zaimplementowane | `ReleaseSmokeTest`, `ReleaseRuntimeTests` |
 | F-22 | System pozwala wylosować zadanie z całego arkusza albo z aktywnego tematu, zachowując kontekst poprzedniego i następnego zadania. | Średni | Zaimplementowane | `ExerciseRandomizer`, `ExamOverviewView`, `ExerciseRandomizerTests` |
+| F-23 | System sprawdza odpowiedzi liczbowe bezpiecznym parserem, akceptuje przecinek i kropkę oraz stosuje tolerancję bezwzględną i względną `1e-9`. | Wysoki | Zaimplementowane | `NumericAnswerEvaluator`, `ExpressionCalculator`, `MathCourse2023ContentTests` |
+| F-24 | Profil pokazuje osobno postęp arkusza `x/35`, podstawy `x/219` i części rozszerzonej `x/138` bez zmiany schematu SQLite. | Wysoki | Zaimplementowane | `ProfileView`, `AccountService`, `MathCourse2023ContentTests` |
 
 ## 5. Wymagania niefunkcjonalne
 
@@ -147,7 +148,7 @@ System nie zakłada kont administratora, ról sieciowych ani synchronizacji wiel
 | Konta i profil | Logowanie, rejestracja, odzyskiwanie hasła, postęp | `AccountService.cs`, `LoginView.cs`, `ProfileView.cs` |
 | Dane lokalne | SQLite, encje, migracje i import legacy | `AppDbContext.cs`, `InitialLocalAccounts.cs` |
 | Treści edukacyjne | Ładowanie i renderowanie JSON, wzorów i obrazów | `ContentRepository.cs`, `RichContentView.cs`, `UiFactory.cs` |
-| Tablice i działy | Lista wzorów, artykuły i placeholdery działów | `ContentViews.cs`, `Content/formulas.json`, `Content/chapters.json` |
+| Tablice i działy | Lista wzorów oraz hierarchia grupa - obszar - lekcja - ćwiczenie z filtrem poziomu | `ContentViews.cs`, `Content/formulas.json`, `Content/chapters.json`, `Content/course-exercises.json` |
 | Zadania maturalne | Lista zadań, tematy, podpowiedzi, odpowiedzi, postęp | `ExamViews.cs`, `Content/exam-2021-correction.json` |
 | Kalkulator kwadratowy | Delta, miejsca zerowe, wierzchołek, postacie funkcji | `CalculatorView.cs`, `QuadraticSolver.cs` |
 | Kalkulator ogólny | Parser wyrażeń, historia, `Ans`, wejście ekranowe | `GeneralCalculatorView.cs`, `ExpressionCalculator.cs`, `CalculatorSession.cs`, `CalculatorInputState.cs` |
@@ -167,7 +168,7 @@ System nie zakłada kont administratora, ról sieciowych ani synchronizacji wiel
 | UC-08 | Powtarzanie działania kalkulatora | Uczeń | Użytkownik naciska `=` kilka razy po poprawnym wyniku. | System stosuje semantykę powtórzenia bez utraty historii. |
 | UC-09 | Użycie kalkulatora funkcji kwadratowej | Uczeń | Użytkownik wpisuje współczynniki `a`, `b`, `c` i klika obliczenie. | System pokazuje wynik i kroki. |
 | UC-10 | Sprawdzenie planu rozwoju | Opiekun lub użytkownik | Użytkownik otwiera roadmapę. | Funkcje są opisane jako przeniesione, planowane lub zastąpione. |
-| UC-11 | Przeglądanie działu matematyki | Uczeń | Użytkownik otwiera listę działów i wybiera dostępny materiał. | System otwiera artykuł z teorią, przykładami i zadaniami; tylko ciągi i liczby pierwsze są oznaczone jako treść w przygotowaniu. |
+| UC-11 | Przeglądanie kursu matematyki | Uczeń | Użytkownik wybiera poziom, obszar i lekcję. | System pokazuje dokładne wymagania, teorię, dwa przykłady na wymaganie i trzy ćwiczenia z nawigacją w obrębie lekcji. |
 
 ## 9. Wymagania dotyczące interfejsu użytkownika
 
@@ -217,30 +218,31 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 4. `dotnet format whitespace Abituria.sln --verify-no-changes --no-restore` nie zgłasza zmian.
 5. `git diff --check` nie zgłasza błędów.
 6. SonarQube Cloud nie raportuje otwartych problemów po analizie aktualnego commita.
-7. Inwentarz treści potwierdza 18 tablic, kompletne odwzorowanie 17 sekcji CKE, 91 kątów w tabeli trygonometrycznej, 9 pozycji działowych, w tym 7 dostępnych i 2 placeholdery, 17 tematów i 35 zadań.
+7. Inwentarz treści potwierdza 18 tablic, kompletne odwzorowanie 17 sekcji CKE, 91 kątów w tabeli trygonometrycznej, 4 grupy i 13 obszarów kursu, kontrakt `119/238/357`, 17 tematów oraz 35 zadań arkusza.
 8. Wszystkie obrazy wskazane przez treści istnieją w repozytorium.
-9. Każde zadanie ma kompletną umowę odpowiedzi: opcje i klucz dla zadań zamkniętych albo odpowiedź ujawnianą dla zadań otwartych.
+9. Każde zadanie ma kompletną umowę odpowiedzi: opcje i klucz, oczekiwany wynik z tolerancją albo pełne rozwiązanie ujawniane na żądanie.
 10. Kalkulator ogólny przechodzi regresje dla issues #1-#9 oraz powiązanych dyskusji.
 11. Widoki architektury nie używają WPF `Page`, `Frame`, `NavigationWindow` ani nie otwierają nieograniczonych niemodalnych okien.
 12. Dokumenty `README.md`, `docs/BUSINESS_ANALYSIS.md`, `docs/ARCHITECTURE.md`, `docs/REQUIREMENTS.md`, `docs/ACCESSIBILITY_WCAG_AUDIT.md`, `docs/MIGRATION_INVENTORY.md`, `docs/ROADMAP.md` i `docs/SONARQUBE.md` są dostępne z repozytorium.
-13. Bezpośrednia regresja issue #35 potwierdza wymagane sekcje sześciu nowych materiałów, wszystkie 24 litery alfabetu greckiego, przypadek `\(\Delta{}<0\)`, zadania ze wskazówkami i odpowiedziami, statusy roadmapy oraz renderowanie każdego artykułu przy `960x640` i `1280x820`.
-14. Importer odtwarza katalog issue #35 z niezależnego seeda do pustego `OutputRoot`, bez odczytywania aktywnych plików wynikowych, a test end-to-end potwierdza zgodność wszystkich działów i pozycji roadmapy.
-15. Testy wydania przechodzą na natywnych runnerach Windows, Ubuntu i macOS, a opublikowany artefakt przechodzi diagnostyczny smoke test w katalogu tymczasowym.
-16. Tag, assembly, nazwy paczek, ekran "O programie", changelog i strona dokumentacji wskazują tę samą wersję z `Directory.Build.props`.
-17. Każda paczka zawiera `LICENSE`, skróconą instrukcję, `THIRD-PARTY-NOTICES.md` oraz `licenses/nuget/manifest.json` zgodny z `Abituria.deps.json`, ale nie zawiera PDB, sekretów ani starych snapshotów.
-18. Sumy w `SHA256SUMS.txt` zgadzają się z paczkami, każda paczka ma osobny SBOM SPDX, artefakty mają atestację pochodzenia, a `Generate-DependencyDocumentation.ps1 -Verify` potwierdza aktualność wykazu zależności i narzędzi.
-19. `tools/Test-ContentProvenance.ps1 -RequireReleaseEligible` kończy się powodzeniem. Obecność choć jednego statusu `blocked` zabrania publicznego wydania.
-20. GitHub Pages buduje się z kanonicznych plików Markdown, a automatyczny test linków nie zgłasza błędów.
-21. `PerformanceMemoryAndLoadTests` przechodzi w konfiguracji Release, a metryki nie przekraczają opisanych budżetów.
-22. Losowanie z całego arkusza i z tematu otwiera zadanie należące do właściwej puli oraz zachowuje ten kontekst nawigacji.
-23. Wynik historycznych testów użyteczności z uczestnikami, ograniczenia zachowanego materiału oraz późniejsze poprawki heurystyczne są rozdzielone i udokumentowane zgodnie z `USABILITY_TEST_PROTOCOL.md`, `USABILITY_TEST_RESULTS.md` oraz `ACCEPTANCE_PROTOCOL.md`. Brakujące liczby, daty, komentarze i poprawki uczestników nie mogą być rekonstruowane przez domysł.
-24. Protokoły I-IV rozdzielają daty technicznej rekonstrukcji od poświadczonej końcowej decyzji prowadzącego z początku lutego 2022 r. Historyczna, uzgodniona forma przekazania i odrębny status nieistniejącego jeszcze publicznego GitHub Release są zapisane w `acceptance/README.md` i `DELIVERY_PROTOCOL.md`.
-25. `DEFENSE_PROTOCOL.md` zapisuje rzeczywistą datę publicznej obrony, role i nazwiska członków komisji, demonstrację aplikacji, pytania i odpowiedzi, wynik oraz publiczny odnośnik do nagrania, bez utożsamiania historycznej wersji z bieżącą migracją.
-26. `EVALUATION_PROTOCOL.md` odwzorowuje wszystkie obszary i warunki Issue #45, rozdziela bezpośrednie dowody od poświadczeń retrospektywnych, nie przypisuje historycznej oceny bieżącej migracji i zawiera decyzję oraz komentarz zamykający.
-27. Testy dyskusji #49 potwierdzają własny chrome, pełny zestaw stanów interakcji, widoczny fokus, przełączenie czterech ustawień motywu i różne obrazy palet.
-28. Testy breakpointów potwierdzają zmianę Login przy `860`, Start przy `780` i kalkulatora ogólnego przy `900`, a główne okno zachowuje minimum `720x520`.
-29. Test wpływu stylowania na renderowanie i nawigację mieści się w zapisanym budżecie czasu i pamięci oraz przechodzi dla wariantu jasnego, ciemnego i wysokiego kontrastu.
-30. `ACCESSIBILITY_WCAG_AUDIT.md` zawiera wszystkie 55 obowiązujących kryteriów A/AA WCAG 2.2, nie przedstawia testów headless jako certyfikatu i jawnie wskazuje kontrole wymagające technologii asystującej lub użytkownika.
+13. Bezpośrednia regresja Issue #35 potwierdza zachowanie wymaganych sekcji, wszystkich 24 liter alfabetu greckiego, przypadku `\(\Delta{}<0\)` oraz historycznych identyfikatorów lekcji.
+14. Generator agreguje cztery niezależne pliki etapów i odtwarza identyczne katalogi: 4 grupy, 13 obszarów, 73 wymagania podstawowe, 46 rozszerzonych, 238 przykładów i 357 ćwiczeń.
+15. Testy kursu potwierdzają filtr poziomu, trzy tryby odpowiedzi, nawigację, opisy alternatywne diagramów i brak przepełnień przy `720x520`, `960x640` i `1280x820`.
+16. Testy wydania przechodzą na natywnych runnerach Windows, Ubuntu i macOS, a opublikowany artefakt przechodzi diagnostyczny smoke test w katalogu tymczasowym.
+17. Tag, assembly, nazwy paczek, ekran "O programie", changelog i strona dokumentacji wskazują tę samą wersję z `Directory.Build.props`.
+18. Każda paczka zawiera `LICENSE`, skróconą instrukcję, `THIRD-PARTY-NOTICES.md` oraz `licenses/nuget/manifest.json` zgodny z `Abituria.deps.json`, ale nie zawiera PDB, sekretów ani starych snapshotów.
+19. Sumy w `SHA256SUMS.txt` zgadzają się z paczkami, każda paczka ma osobny SBOM SPDX, artefakty mają atestację pochodzenia, a `Generate-DependencyDocumentation.ps1 -Verify` potwierdza aktualność wykazu zależności i narzędzi.
+20. `tools/Test-ContentProvenance.ps1 -RequireReleaseEligible` kończy się powodzeniem. Obecność choć jednego statusu `blocked` zabrania publicznego wydania.
+21. GitHub Pages buduje się z kanonicznych plików Markdown, a automatyczny test linków nie zgłasza błędów.
+22. `PerformanceMemoryAndLoadTests` przechodzi w konfiguracji Release, a metryki nie przekraczają opisanych budżetów.
+23. Losowanie z całego arkusza i z tematu otwiera zadanie należące do właściwej puli oraz zachowuje ten kontekst nawigacji.
+24. Wynik historycznych testów użyteczności z uczestnikami, ograniczenia zachowanego materiału oraz późniejsze poprawki heurystyczne są rozdzielone i udokumentowane zgodnie z `USABILITY_TEST_PROTOCOL.md`, `USABILITY_TEST_RESULTS.md` oraz `ACCEPTANCE_PROTOCOL.md`. Brakujące liczby, daty, komentarze i poprawki uczestników nie mogą być rekonstruowane przez domysł.
+25. Protokoły I-IV rozdzielają daty technicznej rekonstrukcji od poświadczonej końcowej decyzji prowadzącego z początku lutego 2022 r. Historyczna, uzgodniona forma przekazania i odrębny status nieistniejącego jeszcze publicznego GitHub Release są zapisane w `acceptance/README.md` i `DELIVERY_PROTOCOL.md`.
+26. `DEFENSE_PROTOCOL.md` zapisuje rzeczywistą datę publicznej obrony, role i nazwiska członków komisji, demonstrację aplikacji, pytania i odpowiedzi, wynik oraz publiczny odnośnik do nagrania, bez utożsamiania historycznej wersji z bieżącą migracją.
+27. `EVALUATION_PROTOCOL.md` odwzorowuje wszystkie obszary i warunki Issue #45, rozdziela bezpośrednie dowody od poświadczeń retrospektywnych, nie przypisuje historycznej oceny bieżącej migracji i zawiera decyzję oraz komentarz zamykający.
+28. Testy dyskusji #49 potwierdzają własny chrome, pełny zestaw stanów interakcji, widoczny fokus, przełączenie czterech ustawień motywu i różne obrazy palet.
+29. Testy breakpointów potwierdzają zmianę Login przy `860`, Start przy `780` i kalkulatora ogólnego przy `900`, a główne okno zachowuje minimum `720x520`.
+30. Test wpływu stylowania na renderowanie i nawigację mieści się w zapisanym budżecie czasu i pamięci oraz przechodzi dla wariantu jasnego, ciemnego i wysokiego kontrastu.
+31. `ACCESSIBILITY_WCAG_AUDIT.md` zawiera wszystkie 55 obowiązujących kryteriów A/AA WCAG 2.2, nie przedstawia testów headless jako certyfikatu i jawnie wskazuje kontrole wymagające technologii asystującej lub użytkownika.
 
 ## Macierz zgodności wymagań z implementacją
 
@@ -259,7 +261,11 @@ Historyczny problem polegał na tym, że dokument wymagań projektowych był pus
 
 ## Status issue #35
 
-Historyczne zgłoszenie wymagało uzupełnienia treści działów matematyki. Aktywny katalog `Content/chapters.json` zawiera 9 pozycji: 7 dostępnych artykułów i 2 jawne placeholdery. Kanoniczne dane issue #35 są przechowywane w `tools/seeds/issue-35-content.json` i synchronizowane skryptem `tools/Sync-Issue35Content.ps1`. Bezpośrednie testy sprawdzają aksjomatykę i indukcję, alfabet grecki, liczby rzeczywiste i zbiory, algebrę, równania i nierówności, funkcję kwadratową, logarytmy, przykłady, zadania oraz odtworzenie katalogu do pustego katalogu wyjściowego. Oryginalna notatka pozostaje zachowana bajt w bajt w `docs/legacy/originals`.
+Historyczne zgłoszenie wymagało uzupełnienia treści działów matematyki. Jego identyfikatory i materiały pozostają zachowane jako lekcje w schemacie 3. Kanoniczny seed historyczny nadal znajduje się w `tools/seeds/issue-35-content.json`, a `tools/Sync-Issue35Content.ps1` jest kompatybilnym wrapperem nowego generatora. Oryginalna notatka pozostaje zachowana bajt w bajt w `docs/legacy/originals`.
+
+## Status Issue #3
+
+Lokalna implementacja obejmuje pełny kontrakt `119/238/357`, filtr poziomu, ćwiczenia kursowe, postęp i macierz pokrycia. Issue #3 pozostaje otwarte do czasu przejścia wszystkich bramek lokalnych, autoryzowanego pushu, zdalnego wyniku SonarCloud bez nowych Issues i końcowego komentarza z odnośnikami do commita oraz workflow.
 
 ## Status issue #36
 

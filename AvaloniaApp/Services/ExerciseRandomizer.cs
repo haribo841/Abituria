@@ -19,7 +19,7 @@ public sealed class ExerciseRandomizer
         _random = random;
     }
 
-    public ExerciseDefinition? Select(IReadOnlyList<ExerciseDefinition> exercises)
+    public LearningExercise? Select(IReadOnlyList<LearningExercise> exercises)
     {
         ArgumentNullException.ThrowIfNull(exercises);
         return exercises.Count == 0 ? null : exercises[_random.Next(exercises.Count)];

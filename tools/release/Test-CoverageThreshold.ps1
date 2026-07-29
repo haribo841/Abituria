@@ -37,6 +37,38 @@ function Read-XmlReport {
     }
 }
 
+function Get-OpenCoverFileMap {
+    param($Module)
+
+    $files = @{}
+    foreach ($file in @($Module.Files.File)) {
+        $files[[string]$file.uid] = [string]$file.fullPath
+    }
+
+    return $files
+}
+
+function Add-OpenCoverLineVisits {
+    param(
+        $Module,
+        [hashtable]$LineVisits
+    )
+
+    $files = Get-OpenCoverFileMap -Module $Module
+    foreach ($sequencePoint in @($Module.SelectNodes(".//SequencePoint"))) {
+        $fileId = [string]$sequencePoint.fileid
+        if (-not $files.ContainsKey($fileId) -or [int]$sequencePoint.sl -le 0) {
+            continue
+        }
+
+        $key = "$($files[$fileId])|$([int]$sequencePoint.sl)"
+        $isVisited = [int]$sequencePoint.vc -gt 0
+        if (-not $LineVisits.ContainsKey($key) -or $isVisited) {
+            $LineVisits[$key] = $isVisited
+        }
+    }
+}
+
 function Get-OpenCoverMetrics {
     param([xml]$Report)
 
@@ -47,25 +79,7 @@ function Get-OpenCoverMetrics {
 
     $lineVisits = @{}
     foreach ($module in @($Report.CoverageSession.Modules.Module)) {
-        $files = @{}
-        foreach ($file in @($module.Files.File)) {
-            $files[[string]$file.uid] = [string]$file.fullPath
-        }
-
-        foreach ($sequencePoint in @($module.SelectNodes(".//SequencePoint"))) {
-            $fileId = [string]$sequencePoint.fileid
-            if (-not $files.ContainsKey($fileId) -or [int]$sequencePoint.sl -le 0) {
-                continue
-            }
-
-            $key = "$($files[$fileId])|$([int]$sequencePoint.sl)"
-            if (-not $lineVisits.ContainsKey($key)) {
-                $lineVisits[$key] = $false
-            }
-            if ([int]$sequencePoint.vc -gt 0) {
-                $lineVisits[$key] = $true
-            }
-        }
+        Add-OpenCoverLineVisits -Module $module -LineVisits $lineVisits
     }
 
     $coveredLines = @($lineVisits.Values | Where-Object { $_ }).Count

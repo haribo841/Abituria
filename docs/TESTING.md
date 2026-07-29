@@ -2,9 +2,9 @@
 
 Wersja dokumentu: `0.9.0-beta.1`.
 
-Data ostatniego lokalnego wykonania: 27 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
+Data ostatniego lokalnego wykonania: 28 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
 
-Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `455/455 PASS` w czasie `9 s`. OpenCover wykazał `95,00%` pokrycia linii i `86,61%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `92,86%` pokrycia łącznego i `86,70%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
+Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `468/468 PASS` w czasie `11 s`. OpenCover wykazał `95,30%` pokrycia linii i `86,54%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,04%` pokrycia łącznego i `86,62%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
 
 Dokument rozróżnia wyniki automatyczne, retrospektywne poświadczenie historycznych testów uczestników oraz czynności bieżącego procesu wydawniczego. Brak szczegółowej karty sesji nie jest uzupełniany przez domysł, a poświadczenie historyczne nie jest przedstawiane jako test bieżącej paczki.
 
@@ -30,7 +30,7 @@ Celem testów końcowych jest potwierdzenie, że Abituria spełnia aktualny zakr
 | --- | --- | --- |
 | Kalkulator | `ExpressionCalculatorTests`, `ExpressionCalculatorRobustnessTests`, `CalculatorSessionTests`, `RepeatedEqualsTests`, `QuadraticSolverTests` | poprawność obliczeń, błędy wejścia, granice i historia |
 | Konta i dane | `AccountServiceTests`, `Issue14RegistrationRegressionTests`, `ReleaseDatabaseCompatibilityTests` | profil gościa, hasła, odzyskiwanie, postęp i kompatybilność bazy |
-| Treści | `ContentInventoryTests`, `ContentSeparationTests`, `Issue35MathChaptersRegressionTests`, `Formula2023ContentTests` | kompletność katalogu i tablic CKE Formuła 2023, format JSON oraz renderowanie treści |
+| Treści | `ContentInventoryTests`, `ContentSeparationTests`, `Issue35MathChaptersRegressionTests`, `Formula2023ContentTests`, `MathCourse2023ContentTests` | kompletność tablic i kursu Formuły 2023, kontrakt `4/13/73/46/238/357`, osobne scenariusze 119 wymagań, format JSON oraz renderowanie treści |
 | UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests` | osiągalne ścieżki użytkownika, wszystkie trasy shella, edycję kalkulatora, pojedyncze okno, losowanie i kontekst zadania |
 | Dostępność kontrolek | `AccessibilityRegressionTests` | nazwy pól i symbolicznych przycisków oraz dynamiczne regiony wyników |
 | Wizualne | `Discussion10VisualRegressionTests` | renderowanie list matematycznych i zachowanie przy minimalnym rozmiarze okna |
@@ -93,6 +93,7 @@ pwsh -NoProfile -File tools/release/Test-CoverageThreshold.ps1 `
   -OpenCoverReport $openCoverReport.FullName `
   -PythonCoverageReport artifacts/coverage/python-coverage.xml
 dotnet format Abituria.sln whitespace --verify-no-changes --no-restore
+dotnet format Abituria.sln analyzers --verify-no-changes --no-restore --severity info
 git diff --check
 ```
 

@@ -78,7 +78,10 @@ public partial class MainWindow : Window
 
     private void ViewModelOnPropertyChanged(object? sender, PropertyChangedEventArgs e)
     {
-        if (e.PropertyName is nameof(AppViewModel.CurrentPage) or nameof(AppViewModel.ActiveProfile)) Render();
+        if (e.PropertyName is nameof(AppViewModel.CurrentPage) or
+            nameof(AppViewModel.ActiveProfile) or
+            nameof(AppViewModel.SelectedCourseLevel))
+            Render();
     }
 
     private void Render()
@@ -144,8 +147,10 @@ public partial class MainWindow : Window
     private bool IsSelected(AppPage page) => page switch
     {
         AppPage.Formulas => _viewModel.CurrentPage is AppPage.Formulas or AppPage.FormulaDetail,
-        AppPage.Exams => _viewModel.CurrentPage is AppPage.Exams or AppPage.ExerciseList or AppPage.Exercise,
-        AppPage.Chapters => _viewModel.CurrentPage is AppPage.Chapters or AppPage.ChapterDetail,
+        AppPage.Exams => _viewModel.CurrentPage is AppPage.Exams or AppPage.ExerciseList ||
+            (_viewModel.CurrentPage == AppPage.Exercise && _viewModel.SelectedExercise?.IsCourseExercise != true),
+        AppPage.Chapters => _viewModel.CurrentPage is AppPage.Chapters or AppPage.CourseArea or AppPage.CourseLesson ||
+            (_viewModel.CurrentPage == AppPage.Exercise && _viewModel.SelectedExercise?.IsCourseExercise == true),
         AppPage.Calculator => _viewModel.CurrentPage is AppPage.Calculator or AppPage.GeneralCalculator,
         AppPage.Roadmap => _viewModel.CurrentPage == AppPage.Roadmap,
         _ => _viewModel.CurrentPage == page
@@ -175,20 +180,35 @@ public partial class MainWindow : Window
         AppPage.ExerciseList => new ExerciseListView(_content.Exam, _viewModel.SelectedTopicId, _viewModel.ActiveProfile!, _accounts, _viewModel.OpenExercise, () => _viewModel.Navigate(AppPage.Exams)),
         AppPage.Exercise when _viewModel.SelectedExercise is not null => new ExerciseView(
             _viewModel.SelectedExercise, CreateExerciseViewContext()),
-        AppPage.Chapters => new ChapterListView(_content.Chapters, OpenChapter),
-        AppPage.ChapterDetail when _viewModel.SelectedChapter is { IsAvailable: true } => new ArticleView(
-            _viewModel.SelectedChapter.Title, "Materiał działowy", _viewModel.SelectedChapter.Blocks,
+        AppPage.Chapters => new ChapterListView(
+            _content.MathCourse,
+            _viewModel.SelectedCourseLevel,
+            _viewModel.SetCourseLevel,
+            _viewModel.OpenCourseArea),
+        AppPage.CourseArea when _viewModel.SelectedCourseArea is not null => new CourseAreaView(
+            _content.MathCourse,
+            _viewModel.SelectedCourseArea,
+            _viewModel.SelectedCourseLevel,
+            _viewModel.SetCourseLevel,
+            _viewModel.OpenCourseLesson,
             () => _viewModel.Navigate(AppPage.Chapters)),
-        AppPage.ChapterDetail when _viewModel.SelectedChapter is not null => new PlaceholderView(
-            _viewModel.SelectedChapter.Title, _viewModel.SelectedChapter.Message ?? "Treść w przygotowaniu.",
-            _viewModel.SelectedChapter.Blocks, () => _viewModel.Navigate(AppPage.Chapters),
-            _viewModel.SelectedChapter.RoadmapId is null ? null : () => _viewModel.OpenRoadmap(_viewModel.SelectedChapter.RoadmapId)),
+        AppPage.CourseLesson when _viewModel.SelectedCourseLesson is not null => new CourseLessonView(
+            _content.MathCourse,
+            _content.CourseExercises,
+            _viewModel.SelectedCourseLesson,
+            _viewModel.SelectedCourseLevel,
+            _viewModel.OpenCourseExercise,
+            () => _viewModel.Navigate(AppPage.CourseArea)),
         AppPage.Calculator => new CalculatorView(_content.UiCopy, _viewModel.OpenGeneralCalculator, OpenPlannedCalculator),
         AppPage.GeneralCalculator => new GeneralCalculatorView(
             _calculatorSession, _content.UiCopy, () => _viewModel.Navigate(AppPage.Calculator)),
         AppPage.Roadmap => new RoadmapView(_content.Roadmap, _viewModel.SelectedRoadmapId),
         AppPage.About => new AboutView(_buildInfo),
-        AppPage.Profile => new ProfileView(_viewModel.ActiveProfile!, _accounts, _viewModel.Logout),
+        AppPage.Profile => new ProfileView(
+            _viewModel.ActiveProfile!,
+            _accounts,
+            _content.CourseExercises,
+            _viewModel.Logout),
         AppPage.Placeholder when _viewModel.SelectedPlaceholder is not null => new PlaceholderView(
             _viewModel.SelectedPlaceholder.Title, _viewModel.SelectedPlaceholder.Message,
             _viewModel.SelectedPlaceholder.Blocks,
@@ -197,20 +217,46 @@ public partial class MainWindow : Window
         _ => new TextBlock { Text = "Nie udało się otworzyć strony.", Margin = new Thickness(30) }
     };
 
-    private void OpenChapter(ChapterArticle chapter) => _viewModel.OpenChapter(chapter);
+    private List<LearningExercise> CurrentExerciseContext()
+    {
+        if (_viewModel.SelectedExercise?.IsCourseExercise == true && _viewModel.SelectedCourseLesson is not null)
+        {
+            var exerciseIds = _viewModel.SelectedCourseLesson.ExerciseIds.ToHashSet(StringComparer.Ordinal);
+            return _content.CourseExercises.Exercises
+                .Where(item => exerciseIds.Contains(item.Id))
+                .OrderBy(item => item.Number)
+                .ToList();
+        }
 
-    private List<ExerciseDefinition> CurrentExerciseContext() => _viewModel.SelectedTopicId is null
-        ? _content.Exam.Exercises.OrderBy(item => item.Number).ToList()
-        : _content.Exam.Exercises.Where(item => item.TopicId == _viewModel.SelectedTopicId).OrderBy(item => item.Number).ToList();
+        return _viewModel.SelectedTopicId is null
+            ? _content.Exam.Exercises.OrderBy(item => item.Number).ToList()
+            : _content.Exam.Exercises
+                .Where(item => item.TopicId == _viewModel.SelectedTopicId)
+                .OrderBy(item => item.Number)
+                .ToList();
+    }
 
-    private ExerciseViewContext CreateExerciseViewContext() => new(
-        CurrentExerciseContext(),
-        _content.Exam.Source,
-        _content.UiCopy,
-        _viewModel.ActiveProfile!,
-        _accounts,
-        () => _viewModel.Navigate(AppPage.ExerciseList),
-        _viewModel.OpenExercise);
+    private ExerciseViewContext CreateExerciseViewContext()
+    {
+        var courseExercise = _viewModel.SelectedExercise?.IsCourseExercise == true;
+        var legalSource = _content.MathCourse.Sources.Single(source => source.Id == "legal-basis-2024");
+        return new ExerciseViewContext(
+            CurrentExerciseContext(),
+            courseExercise
+                ? new SourceDocument { VerifiedOn = legalSource.VerifiedOn }
+                : _content.Exam.Source,
+            _content.UiCopy,
+            _viewModel.ActiveProfile!,
+            _accounts,
+            courseExercise
+                ? () => _viewModel.Navigate(AppPage.CourseLesson)
+                : () => _viewModel.Navigate(AppPage.ExerciseList),
+            courseExercise ? _viewModel.OpenCourseExercise : _viewModel.OpenExercise)
+        {
+            BackLabel = courseExercise ? "Lekcja" : "Lista zadań",
+            SourceUrl = courseExercise ? legalSource.DocumentUrl : null
+        };
+    }
 
     private void OpenPlannedCalculator(string id)
     {

@@ -27,7 +27,11 @@ public sealed class RichContentView : UserControl
                     stack.Children.Add(CreateText(block.Text));
                     break;
                 case "image" when !string.IsNullOrWhiteSpace(block.Asset):
-                    stack.Children.Add(UiFactory.AssetImage(block.Asset, 920, 560, "Ilustracja matematyczna"));
+                    stack.Children.Add(UiFactory.AssetImage(
+                        block.Asset,
+                        920,
+                        560,
+                        block.AlternativeText ?? "Ilustracja matematyczna"));
                     break;
             }
         }

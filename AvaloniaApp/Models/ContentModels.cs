@@ -57,22 +57,83 @@ public sealed class FormulaArticle
     public List<ContentBlock> Blocks { get; set; } = [];
 }
 
-public sealed class ChapterCatalog
+public sealed class MathCourseCatalog
 {
     public int SchemaVersion { get; set; }
+    public string Author { get; set; } = string.Empty;
+    public List<CourseSourceDocument> Sources { get; set; } = [];
     public List<ContentBlock> Introduction { get; set; } = [];
-    public List<ChapterArticle> Chapters { get; set; } = [];
+    public List<CourseGroup> Groups { get; set; } = [];
+    public List<CourseArea> Areas { get; set; } = [];
+    public List<CourseRequirement> Requirements { get; set; } = [];
+    public List<MathCourseLesson> Lessons { get; set; } = [];
 }
 
-public sealed class ChapterArticle
+public sealed class CourseSourceDocument
 {
     public string Id { get; set; } = string.Empty;
+    public string Publisher { get; set; } = string.Empty;
     public string Title { get; set; } = string.Empty;
-    public string Status { get; set; } = string.Empty;
-    public string? Message { get; set; }
-    public string? RoadmapId { get; set; }
+    public string DocumentUrl { get; set; } = string.Empty;
+    public string DocumentSha256 { get; set; } = string.Empty;
+    public string PublishedOn { get; set; } = string.Empty;
+    public string VerifiedOn { get; set; } = string.Empty;
+}
+
+public sealed class CourseGroup
+{
+    public string Id { get; set; } = string.Empty;
+    public int Order { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public List<string> AreaIds { get; set; } = [];
+}
+
+public sealed class CourseArea
+{
+    public string Id { get; set; } = string.Empty;
+    public int Order { get; set; }
+    public string OfficialNumber { get; set; } = string.Empty;
+    public string GroupId { get; set; } = string.Empty;
+    public string Title { get; set; } = string.Empty;
+    public List<string> LessonIds { get; set; } = [];
+}
+
+public sealed class CourseRequirement
+{
+    public string Id { get; set; } = string.Empty;
+    public string AreaId { get; set; } = string.Empty;
+    public string Level { get; set; } = string.Empty;
+    public int Number { get; set; }
+    public string Text { get; set; } = string.Empty;
+    public string SourceId { get; set; } = string.Empty;
+    public string LessonId { get; set; } = string.Empty;
+    public List<string> WorkedExampleIds { get; set; } = [];
+    public List<string> ExerciseIds { get; set; } = [];
+}
+
+public sealed class MathCourseLesson
+{
+    public string Id { get; set; } = string.Empty;
+    public string AreaId { get; set; } = string.Empty;
+    public int Order { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string Level { get; set; } = string.Empty;
+    public bool AlwaysVisible { get; set; }
+    public List<string> RequirementIds { get; set; } = [];
     public List<ContentBlock> Blocks { get; set; } = [];
-    public bool IsAvailable => string.Equals(Status, "available", StringComparison.OrdinalIgnoreCase);
+    public List<WorkedExample> WorkedExamples { get; set; } = [];
+    public List<string> ExerciseIds { get; set; } = [];
+}
+
+public sealed class WorkedExample
+{
+    public string Id { get; set; } = string.Empty;
+    public string RequirementId { get; set; } = string.Empty;
+    public string Kind { get; set; } = string.Empty;
+    public string Title { get; set; } = string.Empty;
+    public string Author { get; set; } = string.Empty;
+    public string Prompt { get; set; } = string.Empty;
+    public string Solution { get; set; } = string.Empty;
 }
 
 public sealed class ContentBlock
@@ -80,6 +141,7 @@ public sealed class ContentBlock
     public string Type { get; set; } = string.Empty;
     public string? Text { get; set; }
     public string? Asset { get; set; }
+    public string? AlternativeText { get; set; }
 }
 
 public sealed class ExamCatalog
@@ -98,7 +160,7 @@ public sealed class ExamDefinition
     public List<ContentBlock> TopicIntroduction { get; set; } = [];
     public SourceDocument Source { get; set; } = new();
     public List<ExerciseTopicDefinition> Topics { get; set; } = [];
-    public List<ExerciseDefinition> Exercises { get; set; } = [];
+    public List<LearningExercise> Exercises { get; set; } = [];
 }
 
 public sealed class SourceDocument
@@ -118,12 +180,13 @@ public sealed class ExerciseTopicDefinition
     public List<int> ExerciseNumbers { get; set; } = [];
 }
 
-public sealed class ExerciseDefinition
+public class LearningExercise
 {
     public string Id { get; set; } = string.Empty;
     public string ExamId { get; set; } = string.Empty;
     public int Number { get; set; }
     public string Title { get; set; } = string.Empty;
+    public string? Author { get; set; }
     public string TopicId { get; set; } = string.Empty;
     public int SourcePage { get; set; }
     public string VerificationSource { get; set; } = string.Empty;
@@ -134,7 +197,27 @@ public sealed class ExerciseDefinition
     public List<string> Hints { get; set; } = [];
     public string? RevealedAnswer { get; set; }
     public List<string> Assets { get; set; } = [];
+    public List<string> AssetAlternativeTexts { get; set; } = [];
+    public string? RequirementId { get; set; }
+    public string? Level { get; set; }
+    public double? ExpectedValue { get; set; }
+    public double AbsoluteTolerance { get; set; } = 1e-9;
+    public double RelativeTolerance { get; set; } = 1e-9;
     public bool IsMultipleChoice => string.Equals(Mode, "multipleChoice", StringComparison.OrdinalIgnoreCase);
+    public bool IsNumeric => string.Equals(Mode, "numeric", StringComparison.OrdinalIgnoreCase);
+    public bool IsRevealOnly => string.Equals(Mode, "revealOnly", StringComparison.OrdinalIgnoreCase);
+    public bool IsCourseExercise => Id.StartsWith("course-", StringComparison.Ordinal);
+}
+
+public sealed class ExerciseDefinition : LearningExercise
+{
+}
+
+public sealed class CourseExerciseCatalog
+{
+    public int SchemaVersion { get; set; }
+    public string Author { get; set; } = string.Empty;
+    public List<LearningExercise> Exercises { get; set; } = [];
 }
 
 public sealed class PlaceholderCatalog

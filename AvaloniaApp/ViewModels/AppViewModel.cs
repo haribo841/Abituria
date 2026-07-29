@@ -13,7 +13,8 @@ public enum AppPage
     ExerciseList,
     Exercise,
     Chapters,
-    ChapterDetail,
+    CourseArea,
+    CourseLesson,
     Calculator,
     GeneralCalculator,
     Roadmap,
@@ -22,13 +23,21 @@ public enum AppPage
     Placeholder
 }
 
+public enum CourseLevelFilter
+{
+    Basic,
+    Extended
+}
+
 public sealed class AppViewModel : ObservableObject
 {
     private AppPage _currentPage = AppPage.Login;
     private LocalProfile? _activeProfile;
     private FormulaArticle? _selectedFormula;
-    private ChapterArticle? _selectedChapter;
-    private ExerciseDefinition? _selectedExercise;
+    private CourseArea? _selectedCourseArea;
+    private MathCourseLesson? _selectedCourseLesson;
+    private LearningExercise? _selectedExercise;
+    private CourseLevelFilter _selectedCourseLevel = CourseLevelFilter.Basic;
     private string? _selectedTopicId;
     private string? _selectedRoadmapId;
     private PlaceholderItem? _selectedPlaceholder;
@@ -46,8 +55,10 @@ public sealed class AppViewModel : ObservableObject
     }
 
     public FormulaArticle? SelectedFormula { get => _selectedFormula; private set => SetProperty(ref _selectedFormula, value); }
-    public ChapterArticle? SelectedChapter { get => _selectedChapter; private set => SetProperty(ref _selectedChapter, value); }
-    public ExerciseDefinition? SelectedExercise { get => _selectedExercise; private set => SetProperty(ref _selectedExercise, value); }
+    public CourseArea? SelectedCourseArea { get => _selectedCourseArea; private set => SetProperty(ref _selectedCourseArea, value); }
+    public MathCourseLesson? SelectedCourseLesson { get => _selectedCourseLesson; private set => SetProperty(ref _selectedCourseLesson, value); }
+    public LearningExercise? SelectedExercise { get => _selectedExercise; private set => SetProperty(ref _selectedExercise, value); }
+    public CourseLevelFilter SelectedCourseLevel { get => _selectedCourseLevel; private set => SetProperty(ref _selectedCourseLevel, value); }
     public string? SelectedTopicId { get => _selectedTopicId; private set => SetProperty(ref _selectedTopicId, value); }
     public string? SelectedRoadmapId { get => _selectedRoadmapId; private set => SetProperty(ref _selectedRoadmapId, value); }
     public PlaceholderItem? SelectedPlaceholder { get => _selectedPlaceholder; private set => SetProperty(ref _selectedPlaceholder, value); }
@@ -66,9 +77,23 @@ public sealed class AppViewModel : ObservableObject
 
     public void Navigate(AppPage page) => CurrentPage = ActiveProfile is null ? AppPage.Login : page;
     public void OpenFormula(FormulaArticle article) { SelectedFormula = article; CurrentPage = AppPage.FormulaDetail; }
-    public void OpenChapter(ChapterArticle chapter) { SelectedChapter = chapter; CurrentPage = AppPage.ChapterDetail; }
-    public void OpenExercise(ExerciseDefinition exercise) { SelectedExercise = exercise; CurrentPage = AppPage.Exercise; }
-    public void OpenRandomExercise(ExerciseDefinition exercise, string? topicId)
+    public void OpenCourseArea(CourseArea area) { SelectedCourseArea = area; CurrentPage = AppPage.CourseArea; }
+    public void OpenCourseLesson(MathCourseLesson lesson) { SelectedCourseLesson = lesson; CurrentPage = AppPage.CourseLesson; }
+    public void SetCourseLevel(CourseLevelFilter level) => SelectedCourseLevel = level;
+    public void OpenExercise(LearningExercise exercise)
+    {
+        SelectedCourseLesson = null;
+        SelectedExercise = exercise;
+        CurrentPage = AppPage.Exercise;
+    }
+
+    public void OpenCourseExercise(LearningExercise exercise)
+    {
+        SelectedExercise = exercise;
+        CurrentPage = AppPage.Exercise;
+    }
+
+    public void OpenRandomExercise(LearningExercise exercise, string? topicId)
     {
         SelectedTopicId = topicId;
         OpenExercise(exercise);

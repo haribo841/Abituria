@@ -18,8 +18,10 @@ public sealed record ReleaseSmokeTestReport(
     string Version,
     string Commit,
     int FormulaCount,
-    int ChapterCount,
-    int ExerciseCount,
+    int CourseAreaCount,
+    int CourseRequirementCount,
+    int CourseExerciseCount,
+    int ExamExerciseCount,
     string QuadraticSummary);
 
 public static class ReleaseSmokeTestCommand
@@ -88,7 +90,9 @@ public static class ReleaseSmokeTestCommand
             await Console.Out.WriteLineAsync($"ABITURIA_RELEASE_SMOKE version={report.Version} commit={report.Commit}");
             await Console.Out.WriteLineAsync(
                 $"Abituria {report.Version}: smoke test zakończony powodzeniem " +
-                $"({report.FormulaCount} wzorów, {report.ChapterCount} działów, {report.ExerciseCount} zadań).");
+                $"({report.FormulaCount} tablic, {report.CourseAreaCount} obszarów, " +
+                $"{report.CourseRequirementCount} wymagań, {report.CourseExerciseCount} ćwiczeń kursu, " +
+                $"{report.ExamExerciseCount} zadań arkusza).");
             return SuccessExitCode;
         }
         catch (Exception exception)
@@ -130,7 +134,9 @@ public static class ReleaseSmokeTestRunner
             buildInfo.Version,
             buildInfo.Commit,
             content.Formulas.Articles.Count,
-            content.Chapters.Chapters.Count,
+            content.MathCourse.Areas.Count,
+            content.MathCourse.Requirements.Count,
+            content.CourseExercises.Exercises.Count,
             content.Exam.Exercises.Count,
             quadraticSummary);
     }
@@ -161,15 +167,21 @@ public static class ReleaseSmokeTestRunner
 
     private static void EnsureContentIsAvailable(ContentRepository content)
     {
-        if (content.Formulas.Articles.Count == 0 ||
-            content.Chapters.Chapters.Count == 0 ||
-            content.Exam.Exercises.Count == 0 ||
+        if (content.Formulas.Articles.Count != 18 ||
+            content.MathCourse.Groups.Count != 4 ||
+            content.MathCourse.Areas.Count != 13 ||
+            content.MathCourse.Requirements.Count != 119 ||
+            content.MathCourse.Lessons.SelectMany(lesson => lesson.WorkedExamples).Count() != 238 ||
+            content.CourseExercises.Exercises.Count != 357 ||
+            content.Exam.Exercises.Count != 35 ||
             content.UiCopy.Entries.Count == 0)
         {
             throw new InvalidDataException("Nie załadowano kompletu podstawowych treści aplikacji.");
         }
 
         if (!content.Formulas.Articles.Any(article => article.Id == "formula-2") ||
+            !content.MathCourse.Requirements.Any(requirement => requirement.Id == "I.B.1") ||
+            !content.CourseExercises.Exercises.Any(exercise => exercise.Id == "course-i-b01-1") ||
             !content.Exam.Exercises.Any(exercise => exercise.Id == "mp21-z9"))
         {
             throw new InvalidDataException("Nie załadowano reprezentatywnych materiałów wydania.");

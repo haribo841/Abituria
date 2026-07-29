@@ -1,6 +1,6 @@
 # Analiza biznesowa projektu Abituria
 
-Status: aktywny dokument biznesowy dla bieżącej implementacji. Stan na 19 lipca 2026 r.
+Status: aktywny dokument biznesowy dla bieżącej implementacji. Stan na 28 lipca 2026 r.
 
 Ten dokument zastępuje historyczną checklistę `docs/legacy/analiza-biznesowa.md` jako podstawa oceny uzasadnienia, zakresu, ryzyk i warunków wydania. Nie zastępuje [wymagań projektowych](REQUIREMENTS.md), [architektury](ARCHITECTURE.md), [roadmapy](ROADMAP.md) ani [procesu wydania](RELEASE_PROCESS.md), lecz łączy ich perspektywę produktową.
 
@@ -81,14 +81,14 @@ Koszty bieżącego wariantu obejmują przede wszystkim czas przygotowania treśc
 Zakres bieżącej implementacji jest zdefiniowany normatywnie w [REQUIREMENTS.md](REQUIREMENTS.md). Obejmuje między innymi:
 
 - profile gościa i lokalne konta z zapisem postępu w SQLite;
-- tablice matematyczne, dostępne działy, przykłady i zadania;
+- tablice matematyczne oraz pełny kurs Formuły 2023 obejmujący 4 grupy, 13 obszarów, 119 wymagań, 238 przykładów i 357 ćwiczeń;
 - sprawdzanie odpowiedzi zamkniętych, ujawnianie odpowiedzi otwartych oraz podpowiedzi;
 - kalkulator funkcji kwadratowej;
 - kalkulator ogólny z parserem wyrażeń, nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią i powtarzanym `=`;
 - losowanie zadań z całego arkusza albo wybranego tematu;
 - dokumentację, bramy jakości, diagnostyczny smoke test artefaktu i automatyzację przygotowania paczek.
 
-Zakres treści jest mniejszy niż lista tematów z historycznych planów. Aktualnie dostępnych jest siedem działów, a „Ciągi liczbowe” i „Liczby pierwsze” są jawnymi placeholderami. Dostępny katalog obejmuje 35 zadań matury poprawkowej 2021. Prawo do redystrybucji treści i ilustracji jako części Abiturii zostało potwierdzone oświadczeniem właściciela, przy zachowaniu ich rzeczywistego autorstwa i źródła.
+Kurs odpowiada podstawie programowej z 2024 r. stosowanej dla matury 2026. Filtr podstawowy pokazuje 73 wymagania i 219 ćwiczeń, a rozszerzony dodaje 46 wymagań i 138 ćwiczeń. Niezależny katalog obejmuje 35 zadań matury poprawkowej 2021. Prawo do redystrybucji ewidencjonowanych treści i ilustracji jako części Abiturii zostało potwierdzone oświadczeniem właściciela, przy zachowaniu ich rzeczywistego autorstwa i źródła.
 
 ### 5.2. Poza zakresem beta
 
@@ -114,7 +114,7 @@ Rzeczywiste daty najwcześniejszych weryfikowalnych stanów technicznych I-IV bi
 | Tydzień 3 | M2 - architektura i nawigacja | autor implementacji | zrealizowane: AvaloniaUI, jedno `MainWindow`, `AppViewModel`, testy architektury |
 | Tydzień 4-5 | M3a - ekran startowy i nawigacja | autor implementacji | zrealizowane: shell, widoki i routing |
 | Tydzień 6-7 | M3b - kalkulatory | autor implementacji | zrealizowane: kalkulator ogólny i funkcji kwadratowej z regresjami |
-| Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | częściowo zrealizowane: siedem działów, 35 zadań, dwa placeholdery |
+| Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | zrealizowane lokalnie: pełny kurs `119/238/357`, 35 zadań arkusza, tablice i postęp; Issue #3 czeka na pełne bramki i autoryzowaną publikację zmian |
 | Tydzień 12 | M5a - testy i regresje | autor implementacji | zrealizowane ciągle: testy jednostkowe, integracyjne, UI i CI |
 | Tydzień 13 | M5b - dokumentacja i pakowanie | autor implementacji | technicznie zrealizowane: dokumentacja, workflow, paczki portable i smoke test |
 | Tydzień 14 | M6 - publiczne prerelease | autor implementacji | prawnie odblokowane i technicznie przygotowane; wymaga jeszcze zatwierdzonego commita, tagu, natywnych workflow i publikacji GitHub Release |
@@ -189,7 +189,7 @@ Szczegóły odpowiedzialności warstw, modułów, danych i automatyzacji zawiera
 | Ryzyko | Skutek | Działanie ograniczające |
 | --- | --- | --- |
 | Utrata lub nieaktualność dowodu praw do zasobów | ryzyko zakwestionowania dystrybucji | wersjonowane oświadczenie właściciela, niezmieniane przypisanie źródeł i obowiązkowa brama inwentarza przed wydaniem |
-| Zbyt szeroki zakres treści | opóźnienie albo niepełna jakość | jawne placeholdery i roadmapa zamiast deklarowania nieistniejących funkcji |
+| Zbyt szeroki zakres treści | opóźnienie albo niepełna jakość | maszynowa macierz `119/238/357`, podzielone seedy, deterministyczny generator i testy kompletności |
 | Błąd merytoryczny | utrata wartości edukacyjnej | treści, przykłady i zadania są objęte inwentarzem oraz regresjami |
 | Regresja kalkulatora lub nawigacji | błędne wyniki albo trudność użycia | parser niezależny od UI, testy regresyjne i architektura jednego okna |
 | Brak testów wydania na platformie docelowej | nieuruchamialna paczka | natywne workflow Windows, Ubuntu i macOS oraz smoke test finalnego archiwum |

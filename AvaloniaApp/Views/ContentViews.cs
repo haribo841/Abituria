@@ -2,8 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Abituria.Models;
+using Abituria.Services;
 using Abituria.Ui;
+using Abituria.ViewModels;
 using Avalonia;
+using Avalonia.Automation;
 using Avalonia.Controls;
 using Avalonia.Layout;
 using Avalonia.Media;
@@ -50,27 +53,245 @@ public sealed class ArticleView : UserControl
 
 public sealed class ChapterListView : UserControl
 {
-    public ChapterListView(ChapterCatalog catalog, Action<ChapterArticle> open)
+    public ChapterListView(
+        MathCourseCatalog catalog,
+        CourseLevelFilter level,
+        Action<CourseLevelFilter> selectLevel,
+        Action<CourseArea> openArea)
     {
         var root = new StackPanel { Spacing = 14 };
-        root.Children.Add(UiFactory.PageTitle("Działy", "Materiały działowe zachowane ze wszystkich wersji projektu."));
+        root.Children.Add(UiFactory.PageTitle(
+            "Działy",
+            "Pełny kurs matematyki dla Formuły 2023 według podstawy programowej stosowanej na maturze 2026."));
+        root.Children.Add(BuildLevelFilter(level, selectLevel));
         if (catalog.Introduction.Count > 0)
             root.Children.Add(UiFactory.Card(new RichContentView(catalog.Introduction)));
-        foreach (var chapter in catalog.Chapters)
+
+        foreach (var group in catalog.Groups.OrderBy(item => item.Order))
         {
-            var suffix = chapter.IsAvailable ? "" : " - treść w przygotowaniu";
+            root.Children.Add(new TextBlock
+            {
+                Text = group.Title,
+                Classes = { "h2" },
+                Margin = new Thickness(0, 8, 0, 0)
+            });
+
+            foreach (var areaId in group.AreaIds)
+            {
+                var area = catalog.Areas.Single(item => item.Id == areaId);
+                var requirements = MathCourseNavigation.GetVisibleRequirements(catalog, area.Id, level);
+                var button = new Button
+                {
+                    Content = $"{area.OfficialNumber}. {area.Title} - {requirements.Length} wymagań",
+                    Classes = { "list" },
+                    HorizontalAlignment = HorizontalAlignment.Stretch,
+                    HorizontalContentAlignment = HorizontalAlignment.Left
+                };
+                AutomationProperties.SetName(button, $"Otwórz obszar {area.OfficialNumber}: {area.Title}");
+                button.Click += (_, _) => openArea(area);
+                root.Children.Add(button);
+            }
+        }
+
+        Content = UiFactory.PageScroll(root);
+    }
+
+    internal static StackPanel BuildLevelFilter(
+        CourseLevelFilter selectedLevel,
+        Action<CourseLevelFilter> selectLevel)
+    {
+        var panel = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8 };
+        panel.Children.Add(LevelButton("Podstawowy", CourseLevelFilter.Basic, selectedLevel, selectLevel));
+        panel.Children.Add(LevelButton("Rozszerzony", CourseLevelFilter.Extended, selectedLevel, selectLevel));
+        return panel;
+    }
+
+    private static Button LevelButton(
+        string label,
+        CourseLevelFilter value,
+        CourseLevelFilter selectedLevel,
+        Action<CourseLevelFilter> selectLevel)
+    {
+        var button = new Button
+        {
+            Content = label,
+            Classes = { value == selectedLevel ? "primary" : "ghost" },
+            MinWidth = 132
+        };
+        AutomationProperties.SetName(button, $"Poziom kursu: {label}");
+        button.Click += (_, _) => selectLevel(value);
+        return button;
+    }
+}
+
+public sealed class CourseAreaView : UserControl
+{
+    public CourseAreaView(
+        MathCourseCatalog catalog,
+        CourseArea area,
+        CourseLevelFilter level,
+        Action<CourseLevelFilter> selectLevel,
+        Action<MathCourseLesson> openLesson,
+        Action back)
+    {
+        var root = new StackPanel { Spacing = 14 };
+        root.Children.Add(BackButton("← Wszystkie obszary", back));
+        root.Children.Add(UiFactory.PageTitle(
+            $"{area.OfficialNumber}. {area.Title}",
+            level == CourseLevelFilter.Basic
+                ? "Poziom podstawowy oraz materiały pomocnicze."
+                : "Poziom podstawowy, rozszerzony oraz materiały pomocnicze."));
+        root.Children.Add(ChapterListView.BuildLevelFilter(level, selectLevel));
+
+        foreach (var lesson in MathCourseNavigation.GetVisibleLessons(catalog, area.Id, level))
+        {
+            var requirementCount = lesson.RequirementIds.Count(id =>
+                catalog.Requirements.Any(requirement => requirement.Id == id &&
+                    (level == CourseLevelFilter.Extended || requirement.Level == "basic")));
+            var suffix = lesson.AlwaysVisible
+                ? " - materiał pomocniczy"
+                : $" - {requirementCount} wymagań";
             var button = new Button
             {
-                Content = chapter.Title + suffix,
+                Content = lesson.Title + suffix,
                 Classes = { "list" },
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 HorizontalContentAlignment = HorizontalAlignment.Left
             };
-            button.Click += (_, _) => open(chapter);
+            AutomationProperties.SetName(button, $"Otwórz lekcję: {lesson.Title}");
+            button.Click += (_, _) => openLesson(lesson);
             root.Children.Add(button);
         }
+
         Content = UiFactory.PageScroll(root);
     }
+
+    private static Button BackButton(string label, Action back)
+    {
+        var button = new Button { Content = label, Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Left };
+        button.Click += (_, _) => back();
+        return button;
+    }
+}
+
+public sealed class CourseLessonView : UserControl
+{
+    public CourseLessonView(
+        MathCourseCatalog catalog,
+        CourseExerciseCatalog exerciseCatalog,
+        MathCourseLesson lesson,
+        CourseLevelFilter level,
+        Action<LearningExercise> openExercise,
+        Action back)
+    {
+        var root = new StackPanel { Spacing = 16 };
+        var backButton = new Button { Content = "← Lekcje", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Left };
+        backButton.Click += (_, _) => back();
+        root.Children.Add(backButton);
+        root.Children.Add(UiFactory.PageTitle(lesson.Title, LevelLabel(lesson)));
+
+        if (lesson.Blocks.Count > 0)
+            root.Children.Add(UiFactory.Card(new RichContentView(lesson.Blocks)));
+
+        var visibleRequirementIds = VisibleRequirementIds(catalog, lesson, level);
+        AddRequirements(root, catalog, visibleRequirementIds);
+        AddWorkedExamples(root, lesson, visibleRequirementIds);
+        AddExercises(root, exerciseCatalog, lesson, visibleRequirementIds, openExercise);
+        Content = UiFactory.PageScroll(root);
+    }
+
+    private static HashSet<string> VisibleRequirementIds(
+        MathCourseCatalog catalog,
+        MathCourseLesson lesson,
+        CourseLevelFilter level) => lesson.RequirementIds
+        .Where(id => catalog.Requirements.Any(requirement => requirement.Id == id &&
+            (level == CourseLevelFilter.Extended || requirement.Level == "basic")))
+        .ToHashSet(StringComparer.Ordinal);
+
+    private static void AddRequirements(
+        StackPanel root,
+        MathCourseCatalog catalog,
+        HashSet<string> requirementIds)
+    {
+        if (requirementIds.Count == 0)
+            return;
+
+        root.Children.Add(new TextBlock { Text = "Wymagania", Classes = { "h2" } });
+        foreach (var requirement in catalog.Requirements.Where(item => requirementIds.Contains(item.Id)))
+        {
+            var level = requirement.Level == "basic" ? "podstawowy" : "rozszerzony";
+            var panel = new StackPanel { Spacing = 6 };
+            panel.Children.Add(new TextBlock
+            {
+                Text = $"{requirement.Id} - poziom {level}",
+                FontWeight = FontWeight.SemiBold,
+                TextWrapping = TextWrapping.Wrap
+            });
+            panel.Children.Add(RichContentView.CreateText(requirement.Text));
+            root.Children.Add(UiFactory.Card(panel, new Thickness(16)));
+        }
+    }
+
+    private static void AddWorkedExamples(
+        StackPanel root,
+        MathCourseLesson lesson,
+        HashSet<string> requirementIds)
+    {
+        var examples = lesson.WorkedExamples
+            .Where(example => requirementIds.Contains(example.RequirementId))
+            .ToArray();
+        if (examples.Length == 0)
+            return;
+
+        root.Children.Add(new TextBlock { Text = "Rozwiązane przykłady", Classes = { "h2" } });
+        foreach (var example in examples)
+        {
+            var panel = new StackPanel { Spacing = 8 };
+            panel.Children.Add(new TextBlock
+            {
+                Text = $"{example.Title} ({example.RequirementId})",
+                FontWeight = FontWeight.SemiBold,
+                TextWrapping = TextWrapping.Wrap
+            });
+            panel.Children.Add(RichContentView.CreateText(example.Prompt));
+            panel.Children.Add(RichContentView.CreateText($"Rozwiązanie: {example.Solution}"));
+            root.Children.Add(UiFactory.Card(panel, new Thickness(16)));
+        }
+    }
+
+    private static void AddExercises(
+        StackPanel root,
+        CourseExerciseCatalog exerciseCatalog,
+        MathCourseLesson lesson,
+        HashSet<string> requirementIds,
+        Action<LearningExercise> openExercise)
+    {
+        var exercises = exerciseCatalog.Exercises
+            .Where(exercise => lesson.ExerciseIds.Contains(exercise.Id, StringComparer.Ordinal))
+            .Where(exercise => exercise.RequirementId is not null && requirementIds.Contains(exercise.RequirementId))
+            .OrderBy(exercise => exercise.Number)
+            .ToArray();
+        if (exercises.Length == 0)
+            return;
+
+        root.Children.Add(new TextBlock { Text = "Ćwiczenia", Classes = { "h2" } });
+        foreach (var exercise in exercises)
+        {
+            var button = new Button
+            {
+                Content = exercise.Title,
+                Classes = { "list" },
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                HorizontalContentAlignment = HorizontalAlignment.Left
+            };
+            button.Click += (_, _) => openExercise(exercise);
+            root.Children.Add(button);
+        }
+    }
+
+    private static string LevelLabel(MathCourseLesson lesson) => lesson.AlwaysVisible
+        ? "Materiał pomocniczy widoczny na obu poziomach."
+        : lesson.Level == "basic" ? "Lekcja poziomu podstawowego." : "Lekcja poziomu rozszerzonego.";
 }
 
 public sealed class PlaceholderView : UserControl

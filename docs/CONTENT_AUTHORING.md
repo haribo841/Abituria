@@ -3,19 +3,32 @@
 Kod C# odpowiada za wczytanie, walidację i wyświetlenie treści. Długie opisy, materiały edukacyjne i wzory są przechowywane poza kodem:
 
 - `Content/formulas.json` - kuratorowana transkrypcja tablic CKE dla Formuły 2023,
-- `Content/chapters.json` - materiały działowe,
+- `Content/chapters.json` - wygenerowany katalog kursu Formuły 2023 w schemacie 3,
+- `Content/course-exercises.json` - wygenerowane ćwiczenia kursowe,
 - `Content/exam-2021-correction.json` - zadania, odpowiedzi i podpowiedzi,
 - `Content/placeholders.json` - treść ekranów zaplanowanych lub zastąpionych,
 - `Content/roadmap.json` - opis planu rozwoju,
 - `Content/ui-copy.json` - dłuższe statyczne objaśnienia interfejsu.
 
-Kanoniczne źródło treści i statusów wprowadzonych dla issue #35 znajduje się w `tools/seeds/issue-35-content.json`. Po jego edycji należy odtworzyć aktywne `Content/chapters.json` i `Content/roadmap.json`:
+Kanoniczne źródło treści historycznych wprowadzonych dla issue #35 znajduje się w `tools/seeds/issue-35-content.json`. Jest ono włączane do lekcji kursu bez zmiany identyfikatorów. Kompatybilny wrapper zachowuje dotychczasowy punkt wejścia:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File tools/Sync-Issue35Content.ps1
+pwsh -NoProfile -File tools/Sync-Issue35Content.ps1
 ```
 
-Test end-to-end uruchamia importer do pustego katalogu i wymaga semantycznej zgodności wyniku z aktywnymi katalogami, więc rozbieżność seeda, importera i aplikacji blokuje testy.
+Źródłem prawdy dla pełnego kursu jest katalog `tools/seeds/math-course`: metadane grup, obszarów, lekcji i źródeł znajdują się w `catalog.json`, a 119 wymagań jest podzielonych między cztery pliki etapów. Po zmianie seeda należy odtworzyć oba katalogi aplikacji i macierz pokrycia:
+
+```powershell
+pwsh -NoProfile -File tools/New-MathCourseContent.ps1
+```
+
+Skrypt wymaga dokładnie `4/13/73/46/238/357`, sprawdza unikalność i długość identyfikatorów oraz zapisuje deterministyczny wynik do `Content/chapters.json`, `Content/course-exercises.json` i `docs/MATH_COURSE_2023_COVERAGE.md`. Diagramy kursu są autorskimi zasobami generowanymi poleceniem:
+
+```powershell
+pwsh -NoProfile -File tools/New-MathCourseDiagrams.ps1
+```
+
+Test end-to-end generuje katalog do pustego katalogu i wymaga semantycznej zgodności z aktywnymi plikami, więc rozbieżność seedów, generatora i aplikacji blokuje testy. Nie należy ręcznie edytować plików wygenerowanych.
 
 `Content/formulas.json` jest kanonicznym katalogiem tablic. Wersja schematu 3 wymaga obiektu `source` z wydawcą, tytułem, adresem dokumentu, sumą SHA-256, datą publikacji i datą weryfikacji. Maszynową macierz sekcji i podpunktów zawiera `tools/seeds/formula-2023-coverage.json`. Pełny importer przyjmuje `-FormulaCatalogPath` i kopiuje ten katalog bez przetwarzania historycznych ekranów wzorów.
 

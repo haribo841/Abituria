@@ -28,7 +28,8 @@ Paczki są samowystarczalne i nie wymagają instalacji środowiska .NET. Są to 
 - lokalne konta chronione hasłem oraz profile gościa;
 - jednorazowe kody odzyskiwania i postęp zapisywany osobno dla każdego profilu;
 - 18 tablic matematycznych zgodnych zakresem z oficjalnym dokumentem CKE dla Formuły 2023;
-- 7 dostępnych działów matematycznych i 2 jawnie oznaczone działy w przygotowaniu;
+- pełny kurs Formuły 2023: 4 grupy, 13 obszarów, 119 wymagań, 238 rozwiązanych przykładów i 357 ćwiczeń;
+- filtr poziomu podstawowego i rozszerzonego oraz trzy tryby odpowiedzi: wybór, wynik liczbowy i ujawnienie rozwiązania;
 - 35 zadań z matury poprawkowej 2021, dostępnych według arkusza lub 17 tematów;
 - sprawdzanie odpowiedzi A-D, podpowiedzi, ujawnianie odpowiedzi i sesyjny brudnopis;
 - kalkulator ogólny z nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią i powtarzaniem `=`;
@@ -116,7 +117,7 @@ Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalneg
 | [Wsparcie](SUPPORT.md) | zgłaszanie błędów i wymagane dane diagnostyczne |
 | [Bezpieczeństwo](SECURITY.md) | prywatne zgłoszenia podatności i wspierane wersje |
 
-Kompletność sześciu materiałów uzupełnionych w ramach historycznego `issue #35`, ich kanoniczny seed oraz regresje opisuje [inwentarz migracji](docs/MIGRATION_INVENTORY.md).
+Kompletność kursu rozwijanego w ramach Issue #3, zachowanie treści historycznego Issue #35 oraz regresje opisują [macierz kursu](docs/MATH_COURSE_2023_COVERAGE.md) i [inwentarz migracji](docs/MIGRATION_INVENTORY.md).
 
 ## Autor i licencje
 

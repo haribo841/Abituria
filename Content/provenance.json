@@ -24,17 +24,21 @@
       ]
     },
     {
-      "id": "migrated-mathematics-content",
+      "id": "mathematics-course-formula-2023",
       "paths": [
-        "Content/chapters.json"
+        "Content/chapters.json",
+        "Content/course-exercises.json",
+        "img/course/*.png"
       ],
-      "author": "Historyczni autorzy projektu Ich Troje, migracja i korekty: Adam Kubiś",
-      "source": "Historyczne repozytorium Projekt-Inzynierski oraz bieżąca migracja treści",
-      "license": "MIT",
+      "author": "Adam Kubiś - przykłady, ćwiczenia, rozwiązania i diagramy; Rzeczpospolita Polska - brzmienie wymagań; historyczni autorzy projektu Ich Troje - zachowane fragmenty",
+      "source": "Podstawa programowa Dz.U. 2024 poz. 1019, informatory CKE Formuła 2023 oraz zachowane treści historyczne; dokładne adresy i SHA-256 w Content/chapters.json",
+      "license": "MIT dla materiałów autorskich i odziedziczonych; urzędowe brzmienie wymagań z przypisaniem źródła",
       "distributionStatus": "approved",
       "evidence": [
+        "LICENSE",
         "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",
-        "docs/MIGRATION_INVENTORY.md"
+        "docs/MIGRATION_INVENTORY.md",
+        "docs/MATH_COURSE_2023_COVERAGE.md"
       ]
     },
     {

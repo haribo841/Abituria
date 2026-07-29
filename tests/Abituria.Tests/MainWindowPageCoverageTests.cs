@@ -64,24 +64,22 @@ public sealed class MainWindowPageCoverageTests
             Click(window, "Działy");
             AssertPage<ChapterListView>(window);
 
-            var availableChapter = content.Chapters.Chapters.First(chapter => chapter.IsAvailable);
-            viewModel.OpenChapter(availableChapter);
+            var area = content.MathCourse.Areas.First();
+            viewModel.OpenCourseArea(area);
             Render();
-            AssertPage<ArticleView>(window);
+            AssertPage<CourseAreaView>(window);
 
-            var plannedChapter = content.Chapters.Chapters.First(chapter => !chapter.IsAvailable && chapter.RoadmapId is not null);
-            viewModel.Navigate(AppPage.Chapters);
-            viewModel.OpenChapter(plannedChapter);
+            var lesson = content.MathCourse.Lessons.First(item => item.AreaId == area.Id && item.RequirementIds.Count > 0);
+            viewModel.OpenCourseLesson(lesson);
             Render();
-            AssertPage<PlaceholderView>(window);
-            Click(window, "Zobacz w planie rozwoju");
-            AssertPage<RoadmapView>(window);
-            Assert.Equal(plannedChapter.RoadmapId, viewModel.SelectedRoadmapId);
+            AssertPage<CourseLessonView>(window);
 
-            viewModel.OpenChapter(plannedChapter);
+            var courseExercise = content.CourseExercises.Exercises.First(exercise => lesson.ExerciseIds.Contains(exercise.Id));
+            viewModel.OpenCourseExercise(courseExercise);
             Render();
-            Click(window, "← Wróć");
-            AssertPage<ChapterListView>(window);
+            AssertPage<ExerciseView>(window);
+            Click(window, "← Lekcja");
+            AssertPage<CourseLessonView>(window);
 
             Click(window, "Kalkulator");
             AssertPage<CalculatorView>(window);

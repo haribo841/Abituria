@@ -43,7 +43,7 @@ Te same przypięte zależności są instalowane w CI, a generator ma osobny zest
 
 Po wygenerowaniu PDF musi zostać wyrenderowany do obrazów i sprawdzony wizualnie. Potwierdzenie tej kontroli jest częścią bieżącego zestawu dowodów.
 
-Ostatnia kontrola: 27 lipca 2026 r., 9 stron A4 wyrenderowanych przez Poppler przy 130 DPI. Sprawdzono wszystkie strony, w tym aktualny wynik `455/455`, sekcję publicznej obrony M7 i macierz Issue #45; nie stwierdzono obcięć, nakładania tekstu, uszkodzonych znaków ani nieczytelnych tabel.
+Ostatnia kontrola tego wygenerowanego pakietu: 27 lipca 2026 r., 9 stron A4 wyrenderowanych przez Poppler przy 130 DPI. Sprawdzony plik utrwalał ówczesny wynik `455/455`, sekcję publicznej obrony M7 i macierz Issue #45; nie stwierdzono obcięć, nakładania tekstu, uszkodzonych znaków ani nieczytelnych tabel. Bieżące wyniki repozytorium są prowadzone osobno w `TESTING.md` i wymagają ponownego wygenerowania pakietu przed wydaniem.
 
 ## Zasady przekazania
 

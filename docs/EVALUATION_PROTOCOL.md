@@ -66,7 +66,7 @@ Nagranie bezpośrednio potwierdza prezentację, demonstrację oraz sesję pytań
 | Obszar Issue #45 | HISTORYCZNY 2022 | BIEŻĄCA MIGRACJA | Uzasadnienie |
 | --- | --- | --- | --- |
 | 1. Prezentacja projektu i produktu | PASS | NOT APPLICABLE | nagranie potwierdza omówienie projektu, demonstrację i Q&A; bieżąca migracja nie była przedmiotem komisji z 2022 r. |
-| 2. Uzyskany produkt | PASS RETROSPEKTYWNY | PASS techniczny | komisja zaakceptowała historyczny produkt; bieżący zakres obejmuje konta, SQLite, 7 dostępnych działów, 35 zadań, podpowiedzi, losowanie i dwa kalkulatory |
+| 2. Uzyskany produkt | PASS RETROSPEKTYWNY | PASS techniczny | komisja zaakceptowała historyczny produkt; bieżący zakres obejmuje konta, SQLite, pełny kurs Formuły 2023 `119/238/357`, 35 zadań arkusza, podpowiedzi, losowanie i dwa kalkulatory |
 | 2a. Innowacyjność | PARTIAL | PARTIAL | integracja nauki, zadań, podpowiedzi i narzędzi jest udokumentowana, ale nie zachowano osobnej punktacji ani porównawczej analizy innowacyjności |
 | 3. Dokumentacja projektu | PARTIAL historyczny | PASS lokalny | historyczne wydanie nie zachowało pełnego zestawu według obecnego standardu; bieżący pakiet obejmuje wymagania, architekturę, instalację, testy, licencje, autorstwo, wersje i ograniczenia |
 | 4. Testowanie produktu | PASS RETROSPEKTYWNY | PASS | właściciel potwierdził pomyślne testy historyczne; bieżący zestaw obejmuje testy jednostkowe, integracyjne, funkcjonalne, regresyjne, UI, instalacyjne, wydajnościowe, pamięciowe i obciążeniowe |
@@ -74,7 +74,7 @@ Nagranie bezpośrednio potwierdza prezentację, demonstrację oraz sesję pytań
 | 6. Przebieg pracy zespołu | PARTIAL | PASS dla pracy jednoosobowej | stare repozytorium zachowuje Issues, Project, przepływ kolumn i PR-y, lecz brak osobnej pisemnej opinii prowadzącego; bieżącą implementację rozwija Adam Kubiś |
 | 7. Ocena zespołowa i indywidualny wkład | PARTIAL | PASS dla autorstwa bieżącego | poświadczono wynik projektu i obrony, ale nie zachowano rozdziału ocen indywidualnych; `AUTHORS.md` prawidłowo przypisuje bieżącą implementację Adamowi Kubisiowi |
 
-Zakres i jakość bieżącej migracji są oceniane względem zatwierdzonego, jawnego zakresu, a nie względem niewdrożonych obietnic historycznych. Dwa placeholdery i funkcje poza zakresem beta są opisane jako ograniczenia, a nie jako istniejące możliwości.
+Zakres i jakość bieżącej migracji są oceniane względem zatwierdzonego, jawnego zakresu, a nie względem niewdrożonych obietnic historycznych. Pełny kurs Formuły 2023 ma osobną macierz pokrycia, natomiast niewdrożone kalkulatory i arkusze pozostają opisane jako ograniczenia, a nie jako istniejące możliwości.
 
 ## Warunki uznania projektu za zaakceptowany
 

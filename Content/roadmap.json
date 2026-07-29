@@ -105,13 +105,14 @@
                   },
                   {
                       "id":  "chapters-expansion",
-                      "title":  "Pozostałe działy matematyki",
-                      "status":  "planned",
-                      "summary":  "Uzupełnienie materiałów o ciągach liczbowych i liczbach pierwszych.",
+                      "title":  "Pełny kurs matematyki - Formuła 2023",
+                      "status":  "migrated",
+                      "summary":  "Uzupełniono 13 obszarów, 119 wymagań, 238 przykładów i 357 ćwiczeń dla poziomu podstawowego i rozszerzonego.",
                       "context":  "chapters",
                       "sourceRefs":  [
-                                         "DzialyPage.xaml",
-                                         "PageChapters.xaml"
+                                         "Content/chapters.json",
+                                         "Content/course-exercises.json",
+                                         "docs/MATH_COURSE_2023_COVERAGE.md"
                                      ]
                   },
                   {

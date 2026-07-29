@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "legal-basis-2024",
+      "publisher": "Rzeczpospolita Polska",
+      "title": "Rozporządzenie Ministra Edukacji z dnia 28 czerwca 2024 r. zmieniające rozporządzenie w sprawie podstawy programowej",
+      "documentUrl": "https://eli.gov.pl/api/acts/DU/2024/1019/text/O/D20241019.pdf",
+      "documentSha256": "4EC3AD07DC6912223F9973991F647B8759E7D41EB9889B94F396D6935FD5F8ED",
+      "publishedOn": "2024-07-11",
+      "verifiedOn": "2026-07-28"
+    },
+    {
+      "id": "cke-basic-guide-2023",
+      "publisher": "Centralna Komisja Egzaminacyjna",
+      "title": "Informator o egzaminie maturalnym z matematyki od roku szkolnego 2024/2025 - poziom podstawowy, Formuła 2023",
+      "documentUrl": "https://bip.cke.gov.pl/attachments/download/10085",
+      "documentSha256": "88A0EA8E2EE444506CCA5E89C860178E33B04F181650A36D9C9B4DC9BBE625B2",
+      "publishedOn": "",
+      "verifiedOn": "2026-07-28"
+    },
+    {
+      "id": "cke-extended-guide-2023",
+      "publisher": "Centralna Komisja Egzaminacyjna",
+      "title": "Informator o egzaminie maturalnym z matematyki od roku szkolnego 2024/2025 - poziom rozszerzony, Formuła 2023",
+      "documentUrl": "https://bip.cke.gov.pl/attachments/download/10088",
+      "documentSha256": "BD408CDC8877E04EC79AAC3177FAB304E6F66C6B5FA152D8D3436D4ACFB2BC6F",
+      "publishedOn": "",
+      "verifiedOn": "2026-07-28"
+    }
+  ],
+  "groups": [
+    {
+      "id": "numbers-algebra",
+      "order": 1,
+      "title": "Liczby i algebra",
+      "areaIds": ["area-i", "area-ii", "area-iii", "area-iv"]
+    },
+    {
+      "id": "functions-analysis",
+      "order": 2,
+      "title": "Funkcje, ciągi i optymalizacja",
+      "areaIds": ["area-v", "area-vi", "area-xiii"]
+    },
+    {
+      "id": "trigonometry-geometry",
+      "order": 3,
+      "title": "Trygonometria i geometria",
+      "areaIds": ["area-vii", "area-viii", "area-ix", "area-x"]
+    },
+    {
+      "id": "combinatorics-data",
+      "order": 4,
+      "title": "Kombinatoryka, prawdopodobieństwo i statystyka",
+      "areaIds": ["area-xi", "area-xii"]
+    }
+  ],
+  "areas": [
+    { "id": "area-i", "order": 1, "officialNumber": "I", "groupId": "numbers-algebra", "title": "Liczby rzeczywiste" },
+    { "id": "area-ii", "order": 2, "officialNumber": "II", "groupId": "numbers-algebra", "title": "Wyrażenia algebraiczne" },
+    { "id": "area-iii", "order": 3, "officialNumber": "III", "groupId": "numbers-algebra", "title": "Równania i nierówności" },
+    { "id": "area-iv", "order": 4, "officialNumber": "IV", "groupId": "numbers-algebra", "title": "Układy równań" },
+    { "id": "area-v", "order": 5, "officialNumber": "V", "groupId": "functions-analysis", "title": "Funkcje" },
+    { "id": "area-vi", "order": 6, "officialNumber": "VI", "groupId": "functions-analysis", "title": "Ciągi" },
+    { "id": "area-vii", "order": 7, "officialNumber": "VII", "groupId": "trigonometry-geometry", "title": "Trygonometria" },
+    { "id": "area-viii", "order": 8, "officialNumber": "VIII", "groupId": "trigonometry-geometry", "title": "Planimetria" },
+    { "id": "area-ix", "order": 9, "officialNumber": "IX", "groupId": "trigonometry-geometry", "title": "Geometria analityczna na płaszczyźnie kartezjańskiej" },
+    { "id": "area-x", "order": 10, "officialNumber": "X", "groupId": "trigonometry-geometry", "title": "Stereometria" },
+    { "id": "area-xi", "order": 11, "officialNumber": "XI", "groupId": "combinatorics-data", "title": "Kombinatoryka" },
+    { "id": "area-xii", "order": 12, "officialNumber": "XII", "groupId": "combinatorics-data", "title": "Rachunek prawdopodobieństwa i statystyka" },
+    { "id": "area-xiii", "order": 13, "officialNumber": "XIII", "groupId": "functions-analysis", "title": "Optymalizacja i rachunek różniczkowy" }
+  ],
+  "lessons": [
+    { "id": "real-numbers", "areaId": "area-i", "order": 1, "title": "Działania na liczbach rzeczywistych", "level": "basic" },
+    { "id": "natural-numbers", "areaId": "area-i", "order": 2, "title": "Liczby naturalne i podzielność", "level": "basic" },
+    {
+      "id": "prime-numbers",
+      "areaId": "area-i",
+      "order": 3,
+      "title": "Liczby pierwsze",
+      "level": "supplemental",
+      "alwaysVisible": true,
+      "blocks": [
+        {
+          "type": "richText",
+          "text": "Liczby pierwsze\n\nLiczba pierwsza jest liczbą naturalną większą od \\(1\\), która ma dokładnie dwa dodatnie dzielniki: \\(1\\) i samą siebie. Liczby \\(0\\) i \\(1\\) nie są pierwsze. Liczba naturalna większa od \\(1\\), która nie jest pierwsza, jest złożona.\n\nKażdą liczbę naturalną większą od \\(1\\) można jednoznacznie, z dokładnością do kolejności czynników, rozłożyć na iloczyn liczb pierwszych. Przykładowo \\(360=2^3\\cdot3^2\\cdot5\\). Rozkład pozwala obliczać największy wspólny dzielnik i najmniejszą wspólną wielokrotność.\n\nAby sprawdzić pierwszość liczby \\(n\\), wystarczy badać dzielniki pierwsze nie większe niż \\(\\sqrt n\\). Sito Eratostenesa wyznacza liczby pierwsze w skończonym zakresie przez skreślanie kolejnych wielokrotności.\n\nPrzykład. Liczba \\(97\\) jest pierwsza: żaden z dzielników pierwszych \\(2,3,5,7\\), nie większych niż \\(\\sqrt{97}\\), jej nie dzieli.\n\nĆwiczenie pomocnicze. Rozłóż \\(756\\) na czynniki pierwsze i oblicz liczbę jego dodatnich dzielników.\nWskazówka. Najpierw dziel przez \\(2\\), potem przez \\(3\\) i \\(7\\).\nRozwiązanie. \\(756=2^2\\cdot3^3\\cdot7\\), więc liczba dzielników wynosi \\((2+1)(3+1)(1+1)=24\\)."
+        }
+      ]
+    },
+    { "id": "sets-and-logic", "areaId": "area-i", "order": 4, "title": "Przedziały i wartość bezwzględna", "level": "basic" },
+    { "id": "percentages-and-finance", "areaId": "area-i", "order": 5, "title": "Procenty składane i finanse", "level": "basic" },
+    { "id": "logarithms", "areaId": "area-i", "order": 6, "title": "Potęgi, pierwiastki i logarytmy", "level": "basic" },
+    { "id": "logarithms-extended", "areaId": "area-i", "order": 7, "title": "Zmiana podstawy logarytmu", "level": "extended" },
+    { "id": "greek-alphabet", "areaId": "area-i", "order": 8, "title": "Alfabet grecki", "level": "supplemental", "alwaysVisible": true },
+    { "id": "algebraic-expressions", "areaId": "area-ii", "order": 1, "title": "Wyrażenia algebraiczne", "level": "basic" },
+    { "id": "algebraic-expressions-extended", "areaId": "area-ii", "order": 2, "title": "Wielomiany i wyrażenia wymierne", "level": "extended" },
+    { "id": "equations-and-inequalities", "areaId": "area-iii", "order": 1, "title": "Równania i nierówności", "level": "basic" },
+    { "id": "equations-and-inequalities-extended", "areaId": "area-iii", "order": 2, "title": "Równania i nierówności - rozszerzenie", "level": "extended" },
+    { "id": "systems-of-equations", "areaId": "area-iv", "order": 1, "title": "Układy równań", "level": "basic" },
+    { "id": "systems-of-equations-extended", "areaId": "area-iv", "order": 2, "title": "Układy liniowe i kwadratowe", "level": "extended" },
+    { "id": "functions-and-graphs", "areaId": "area-v", "order": 1, "title": "Funkcje i ich wykresy", "level": "basic" },
+    { "id": "quadratic-function", "areaId": "area-v", "order": 2, "title": "Funkcja kwadratowa", "level": "basic" },
+    { "id": "functions-extended", "areaId": "area-v", "order": 3, "title": "Przekształcenia, złożenia i monotoniczność", "level": "extended" },
+    { "id": "number-sequences", "areaId": "area-vi", "order": 1, "title": "Ciągi liczbowe", "level": "basic" },
+    { "id": "sequences-extended", "areaId": "area-vi", "order": 2, "title": "Granice i szeregi geometryczne", "level": "extended" },
+    { "id": "trigonometry", "areaId": "area-vii", "order": 1, "title": "Trygonometria", "level": "basic" },
+    { "id": "trigonometry-extended", "areaId": "area-vii", "order": 2, "title": "Trygonometria - rozszerzenie", "level": "extended" },
+    { "id": "planimetry", "areaId": "area-viii", "order": 1, "title": "Planimetria", "level": "basic" },
+    { "id": "planimetry-extended", "areaId": "area-viii", "order": 2, "title": "Okręgi i twierdzenie Talesa - rozszerzenie", "level": "extended" },
+    { "id": "analytic-geometry", "areaId": "area-ix", "order": 1, "title": "Geometria analityczna", "level": "basic" },
+    { "id": "analytic-geometry-extended", "areaId": "area-ix", "order": 2, "title": "Proste i okręgi - rozszerzenie", "level": "extended" },
+    { "id": "vectors", "areaId": "area-ix", "order": 3, "title": "Wektory", "level": "extended" },
+    { "id": "stereometry", "areaId": "area-x", "order": 1, "title": "Stereometria", "level": "basic" },
+    { "id": "stereometry-extended", "areaId": "area-x", "order": 2, "title": "Przekroje i prostopadłość w przestrzeni", "level": "extended" },
+    { "id": "combinatorics", "areaId": "area-xi", "order": 1, "title": "Kombinatoryka", "level": "basic" },
+    { "id": "combinatorics-extended", "areaId": "area-xi", "order": 2, "title": "Kombinatoryka - rozszerzenie", "level": "extended" },
+    { "id": "probability-statistics", "areaId": "area-xii", "order": 1, "title": "Prawdopodobieństwo i statystyka", "level": "basic" },
+    { "id": "probability-statistics-extended", "areaId": "area-xii", "order": 2, "title": "Prawdopodobieństwo - rozszerzenie", "level": "extended" },
+    { "id": "quadratic-optimization", "areaId": "area-xiii", "order": 1, "title": "Optymalizacja z funkcją kwadratową", "level": "basic" },
+    { "id": "derivatives-and-optimization", "areaId": "area-xiii", "order": 2, "title": "Granice, pochodne i optymalizacja", "level": "extended" }
+  ]
+}

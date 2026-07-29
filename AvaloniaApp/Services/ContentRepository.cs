@@ -16,7 +16,8 @@ public sealed class ContentRepository
     public ContentRepository()
     {
         Formulas = Load<FormulaCatalog>("Content/formulas.json");
-        Chapters = Load<ChapterCatalog>("Content/chapters.json");
+        MathCourse = Load<MathCourseCatalog>("Content/chapters.json");
+        CourseExercises = Load<CourseExerciseCatalog>("Content/course-exercises.json");
         Exam = Load<ExamCatalog>("Content/exam-2021-correction.json").Exam;
         Placeholders = Load<PlaceholderCatalog>("Content/placeholders.json");
         Roadmap = Load<RoadmapCatalog>("Content/roadmap.json");
@@ -24,7 +25,8 @@ public sealed class ContentRepository
     }
 
     public FormulaCatalog Formulas { get; }
-    public ChapterCatalog Chapters { get; }
+    public MathCourseCatalog MathCourse { get; }
+    public CourseExerciseCatalog CourseExercises { get; }
     public ExamDefinition Exam { get; }
     public PlaceholderCatalog Placeholders { get; }
     public RoadmapCatalog Roadmap { get; }

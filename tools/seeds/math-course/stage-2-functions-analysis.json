@@ -1,0 +1,270 @@
+{
+  "stage": 2,
+  "title": "Blok V, VI, XIII - funkcje, ciągi i optymalizacja",
+  "requirements": [
+    {
+      "id": "V.B.1",
+      "areaId": "area-v",
+      "level": "basic",
+      "number": 1,
+      "lessonId": "functions-and-graphs",
+      "text": "określa funkcje jako jednoznaczne przyporządkowanie za pomocą opisu słownego, tabeli, wykresu, wzoru (także różnymi wzorami na różnych przedziałach);"
+    },
+    {
+      "id": "V.B.2",
+      "areaId": "area-v",
+      "level": "basic",
+      "number": 2,
+      "lessonId": "functions-and-graphs",
+      "text": "oblicza wartość funkcji zadanej wzorem algebraicznym;"
+    },
+    {
+      "id": "V.B.3",
+      "areaId": "area-v",
+      "level": "basic",
+      "number": 3,
+      "lessonId": "functions-and-graphs",
+      "text": "odczytuje i interpretuje wartości funkcji określonych za pomocą tabel, wykresów, wzorów itp., również w sytuacjach wielokrotnego użycia tego samego źródła informacji lub kilku źródeł jednocześnie;"
+    },
+    {
+      "id": "V.B.4",
+      "areaId": "area-v",
+      "level": "basic",
+      "number": 4,
+      "lessonId": "functions-and-graphs",
+      "text": "odczytuje z wykresu funkcji: dziedzinę, zbiór wartości, miejsca zerowe, przedziały monotoniczności, przedziały, w których funkcja przyjmuje wartości większe (nie mniejsze) lub mniejsze (nie większe) od danej liczby, największe i najmniejsze wartości funkcji (o ile istnieją) w danym przedziale domkniętym oraz argumenty, dla których wartości największe i najmniejsze są przez funkcję przyjmowane;"
+    },
+    {
+      "id": "V.B.5",
+      "areaId": "area-v",
+      "level": "basic",
+      "number": 5,
+      "lessonId": "functions-and-graphs",
+      "text": "interpretuje współczynniki występujące we wzorze funkcji liniowej;"
+    },
+    {
+      "id": "V.B.6",
+      "areaId": "area-v",
+      "level": "basic",
+      "number": 6,
+      "lessonId": "functions-and-graphs",
+      "text": "wyznacza wzór funkcji liniowej na podstawie informacji o jej wykresie lub o jej własnościach;"
+    },
+    {
+      "id": "V.B.7",
+      "areaId": "area-v",
+      "level": "basic",
+      "number": 7,
+      "lessonId": "quadratic-function",
+      "text": "szkicuje wykres funkcji kwadratowej zadanej wzorem;"
+    },
+    {
+      "id": "V.B.8",
+      "areaId": "area-v",
+      "level": "basic",
+      "number": 8,
+      "lessonId": "quadratic-function",
+      "text": "interpretuje współczynniki występujące we wzorze funkcji kwadratowej w postaci ogólnej, kanonicznej i iloczynowej (jeśli istnieje);"
+    },
+    {
+      "id": "V.B.9",
+      "areaId": "area-v",
+      "level": "basic",
+      "number": 9,
+      "lessonId": "quadratic-function",
+      "text": "wyznacza wzór funkcji kwadratowej na podstawie informacji o tej funkcji lub o jej wykresie;"
+    },
+    {
+      "id": "V.B.10",
+      "areaId": "area-v",
+      "level": "basic",
+      "number": 10,
+      "lessonId": "quadratic-function",
+      "text": "wyznacza największą i najmniejszą wartość funkcji kwadratowej w przedziale domkniętym;"
+    },
+    {
+      "id": "V.B.11",
+      "areaId": "area-v",
+      "level": "basic",
+      "number": 11,
+      "lessonId": "quadratic-function",
+      "text": "wykorzystuje własności funkcji liniowej i kwadratowej do interpretacji zagadnień geometrycznych, fizycznych itp., także osadzonych w kontekście praktycznym;"
+    },
+    {
+      "id": "V.B.12",
+      "areaId": "area-v",
+      "level": "basic",
+      "number": 12,
+      "lessonId": "functions-and-graphs",
+      "text": "na podstawie wykresu funkcji y = f(x) szkicuje wykresy funkcji y = f(x - a), y = f(x) + b;"
+    },
+    {
+      "id": "V.B.13",
+      "areaId": "area-v",
+      "level": "basic",
+      "number": 13,
+      "lessonId": "functions-and-graphs",
+      "text": "posługuje się funkcją f(x) = a/x, w tym jej wykresem, do opisu i interpretacji zagadnień związanych z wielkościami odwrotnie proporcjonalnymi, również w zastosowaniach praktycznych;"
+    },
+    {
+      "id": "V.B.14",
+      "areaId": "area-v",
+      "level": "basic",
+      "number": 14,
+      "lessonId": "functions-and-graphs",
+      "text": "posługuje się funkcjami wykładniczą i logarytmiczną, w tym ich wykresami, do opisu i interpretacji zagadnień związanych z zastosowaniami praktycznymi."
+    },
+    {
+      "id": "V.E.1",
+      "areaId": "area-v",
+      "level": "extended",
+      "number": 1,
+      "lessonId": "functions-extended",
+      "text": "na podstawie wykresu funkcji y = f(x) rysuje wykresy funkcji y = -f(x), y = f(-x);"
+    },
+    {
+      "id": "V.E.2",
+      "areaId": "area-v",
+      "level": "extended",
+      "number": 2,
+      "lessonId": "functions-extended",
+      "text": "posługuje się złożeniami funkcji;"
+    },
+    {
+      "id": "V.E.3",
+      "areaId": "area-v",
+      "level": "extended",
+      "number": 3,
+      "lessonId": "functions-extended",
+      "text": "dowodzi monotoniczności funkcji zadanej wzorem, jak w przykładzie: wykaż, że funkcja f(x) = (x - 1)/(x + 2) jest monotoniczna w przedziale (-∞, -2)."
+    },
+    {
+      "id": "VI.B.1",
+      "areaId": "area-vi",
+      "level": "basic",
+      "number": 1,
+      "lessonId": "number-sequences",
+      "text": "oblicza wyrazy ciągu określonego wzorem ogólnym;"
+    },
+    {
+      "id": "VI.B.2",
+      "areaId": "area-vi",
+      "level": "basic",
+      "number": 2,
+      "lessonId": "number-sequences",
+      "text": "oblicza początkowe wyrazy ciągów określonych rekurencyjnie;"
+    },
+    {
+      "id": "VI.B.3",
+      "areaId": "area-vi",
+      "level": "basic",
+      "number": 3,
+      "lessonId": "number-sequences",
+      "text": "w prostych przypadkach bada, czy ciąg jest rosnący, czy malejący;"
+    },
+    {
+      "id": "VI.B.4",
+      "areaId": "area-vi",
+      "level": "basic",
+      "number": 4,
+      "lessonId": "number-sequences",
+      "text": "sprawdza, czy dany ciąg jest arytmetyczny lub geometryczny;"
+    },
+    {
+      "id": "VI.B.5",
+      "areaId": "area-vi",
+      "level": "basic",
+      "number": 5,
+      "lessonId": "number-sequences",
+      "text": "stosuje wzór na n-ty wyraz i na sumę n początkowych wyrazów ciągu arytmetycznego;"
+    },
+    {
+      "id": "VI.B.6",
+      "areaId": "area-vi",
+      "level": "basic",
+      "number": 6,
+      "lessonId": "number-sequences",
+      "text": "stosuje wzór na n-ty wyraz i na sumę n początkowych wyrazów ciągu geometrycznego;"
+    },
+    {
+      "id": "VI.B.7",
+      "areaId": "area-vi",
+      "level": "basic",
+      "number": 7,
+      "lessonId": "number-sequences",
+      "text": "wykorzystuje własności ciągów, w tym arytmetycznych i geometrycznych, do rozwiązywania zadań, również osadzonych w kontekście praktycznym."
+    },
+    {
+      "id": "VI.E.1",
+      "areaId": "area-vi",
+      "level": "extended",
+      "number": 1,
+      "lessonId": "sequences-extended",
+      "text": "oblicza granice ciągów, korzystając z granic ciągów typu 1/n, \\(\\sqrt[n]{a}\\) oraz twierdzeń o granicach sumy, różnicy, iloczynu i ilorazu ciągów zbieżnych, a także twierdzenia o trzech ciągach;"
+    },
+    {
+      "id": "VI.E.2",
+      "areaId": "area-vi",
+      "level": "extended",
+      "number": 2,
+      "lessonId": "sequences-extended",
+      "text": "rozpoznaje zbieżne szeregi geometryczne i oblicza ich sumę."
+    },
+    {
+      "id": "XIII.B.1",
+      "areaId": "area-xiii",
+      "level": "basic",
+      "number": 1,
+      "lessonId": "quadratic-optimization",
+      "text": "rozwiązuje zadania optymalizacyjne w sytuacjach dających się opisać funkcją kwadratową."
+    },
+    {
+      "id": "XIII.E.1",
+      "areaId": "area-xiii",
+      "level": "extended",
+      "number": 1,
+      "lessonId": "derivatives-and-optimization",
+      "text": "oblicza granice funkcji (w tym jednostronne);"
+    },
+    {
+      "id": "XIII.E.2",
+      "areaId": "area-xiii",
+      "level": "extended",
+      "number": 2,
+      "lessonId": "derivatives-and-optimization",
+      "text": "stosuje własność Darboux do uzasadniania istnienia miejsca zerowego funkcji;"
+    },
+    {
+      "id": "XIII.E.3",
+      "areaId": "area-xiii",
+      "level": "extended",
+      "number": 3,
+      "lessonId": "derivatives-and-optimization",
+      "text": "stosuje definicję pochodnej funkcji, podaje interpretację geometryczną i fizyczną pochodnej;"
+    },
+    {
+      "id": "XIII.E.4",
+      "areaId": "area-xiii",
+      "level": "extended",
+      "number": 4,
+      "lessonId": "derivatives-and-optimization",
+      "text": "oblicza pochodną funkcji potęgowej o wykładniku rzeczywistym oraz oblicza pochodną, korzystając z twierdzeń o pochodnej sumy, różnicy, iloczynu, ilorazu i funkcji złożonej;"
+    },
+    {
+      "id": "XIII.E.5",
+      "areaId": "area-xiii",
+      "level": "extended",
+      "number": 5,
+      "lessonId": "derivatives-and-optimization",
+      "text": "stosuje pochodną do badania monotoniczności funkcji;"
+    },
+    {
+      "id": "XIII.E.6",
+      "areaId": "area-xiii",
+      "level": "extended",
+      "number": 6,
+      "lessonId": "derivatives-and-optimization",
+      "text": "rozwiązuje zadania optymalizacyjne z zastosowaniem pochodnej."
+    }
+  ]
+}

@@ -39,6 +39,8 @@ flowchart TB
     Views --> Ui["UiFactory i RichContentView"]
     Views --> Accounts
     Views --> Content
+    Views --> CourseNavigation["MathCourseNavigation<br/>filtr i hierarchia kursu"]
+    Views --> NumericAnswers["NumericAnswerEvaluator<br/>bezpieczna odpowiedź liczbowa"]
     Views --> CalculatorSession
 
     CalculatorSession --> ExpressionCalculator
@@ -65,7 +67,7 @@ flowchart TB
 | Katalog | Odpowiedzialność | Przykłady |
 | --- | --- | --- |
 | `AvaloniaApp` | Kod aplikacji desktopowej | `App.axaml.cs`, `MainWindow.axaml.cs`, `Program.cs` |
-| `AvaloniaApp/Models` | Kontrakty danych i modeli treści | `UiCopyCatalog`, `ExamDefinition`, `LocalProfile` |
+| `AvaloniaApp/Models` | Kontrakty danych i modeli treści | `MathCourseCatalog`, `LearningExercise`, `ExamDefinition`, `LocalProfile` |
 | `AvaloniaApp/Data` | SQLite, encje EF Core i migracje | `AppDbContext`, `AppDbContextFactory`, `InitialLocalAccounts` |
 | `AvaloniaApp/Services` | Logika aplikacyjna, domenowa i uruchomieniowa | konta, hasła, repozytorium treści, kalkulatory, informacje o buildzie, smoke test |
 | `AvaloniaApp/ViewModels` | Stan sesji i wybór strony | `AppViewModel`, `AppPage` |
@@ -102,7 +104,7 @@ Stan nawigacji jest scentralizowany w `AppViewModel`:
 
 - `Login` ustawia aktywny profil i przechodzi do strony startowej,
 - `Navigate` blokuje dostęp do stron, gdy nie ma aktywnego profilu,
-- `OpenFormula`, `OpenChapter`, `OpenExercise`, `OpenTopic`, `OpenRoadmap` i `OpenPlaceholder` zapisują kontekst wybranej strony,
+- `OpenFormula`, `OpenCourseArea`, `OpenCourseLesson`, `OpenExercise`, `OpenTopic`, `OpenRoadmap` i `OpenPlaceholder` zapisują kontekst wybranej strony,
 - `OpenRandomExercise` zapisuje wylosowane zadanie i zachowuje kontekst całego arkusza albo wybranego tematu,
 - `OpenGeneralCalculator` przełącza z huba kalkulatorów na kalkulator ogólny.
 
@@ -160,14 +162,15 @@ Dane trwałe są zapisywane w SQLite w katalogu `LocalApplicationData/Abituria/a
 `ContentRepository` ładuje zasoby JSON z `Content` jako zasoby Avalonia:
 
 - `formulas.json` - tablice matematyczne,
-- `chapters.json` - działy,
+- `chapters.json` - hierarchiczny kurs Formuły 2023: źródła, grupy, obszary, wymagania, lekcje i przykłady,
+- `course-exercises.json` - ćwiczenia kursowe korzystające ze wspólnego modelu `LearningExercise`,
 - `exam-2021-correction.json` - zadania maturalne, odpowiedzi, podpowiedzi i źródła,
 - `placeholders.json` - jawne placeholdery funkcji,
 - `roadmap.json` - plan rozwoju,
 - `ui-copy.json` - dłuższe statyczne teksty interfejsu.
 - `provenance.json` - autor, źródło, licencja i status redystrybucji każdego paczkowanego zasobu.
 
-Kod produkcyjny odpowiada za wczytanie i wyświetlenie treści, a nie za przechowywanie długich materiałów edukacyjnych. Renderowanie treści miesza zwykłe `TextBlock`, obrazy z zasobów oraz `MathView` z `Sylinko.CSharpMath.Avalonia`.
+Kod produkcyjny odpowiada za wczytanie i wyświetlenie treści, a nie za przechowywanie długich materiałów edukacyjnych. `MathCourseNavigation` realizuje filtr podstawowy/rozszerzony i hierarchię obszar - lekcja - ćwiczenie. `NumericAnswerEvaluator` przekazuje wyrażenia do bezpiecznego parsera kalkulatora, obsługuje przecinek lub kropkę, tolerancję bezwzględną i względną oraz odrzuca błędy i wartości niefinitywne. Renderowanie treści miesza zwykłe `TextBlock`, obrazy z zasobów oraz `MathView` z `Sylinko.CSharpMath.Avalonia`.
 
 Manifest pochodzenia jest porównywany z zasobami zadeklarowanymi w `Abituria.csproj`. Testy wymagają dokładnie jednego wpisu dla każdego pliku, kompletnego autora, źródła, licencji lub podstawy dystrybucji i istniejących dowodów. Status `blocked` nie psuje lokalnej kompilacji, ale `Test-ContentProvenance.ps1 -RequireReleaseEligible` bezwarunkowo blokuje publiczne wydanie.
 
@@ -196,6 +199,7 @@ Projekt ma testy dla głównych warstw:
 - `Discussion49StyleRegressionTests` - font, własny chrome, stany interakcji, widoczny fokus, motywy, breakpointy, dialogi i koszt renderowania,
 - `ReleaseRuntimeTests`, `AboutViewTests` - izolowany smoke test, metadane builda i ekran "O programie",
 - `ContentProvenanceTests` - kompletność i jednoznaczność pochodzenia paczkowanych zasobów.
+- `MathCourse2023ContentTests` - kontrakt `4/13/73/46/238/357`, generowanie, filtr, tryby odpowiedzi, postęp, obrazy alternatywne i rozmiary UI.
 
 CI używa workflow `build` do restore, build oraz testów C# i Pythona. Raporty OpenCover i Cobertura trafiają do wspólnej bramki wymagającej `90%` łącznego pokrycia i `85%` pokrycia gałęzi. Dodatkowy workflow `sonarcloud` uruchamia wielojęzyczny SonarScanner for .NET, przekazuje oba raporty i czeka na quality gate. Workflow wydania działa na natywnych runnerach Windows, Ubuntu i macOS: odtwarza lockfile, audytuje NuGet, publikuje self-contained, wykonuje smoke test, sprawdza architekturę i zawartość archiwów oraz generuje sumy SHA-256, SBOM i atestacje. GitHub Pages powstaje z tych samych plików Markdown przez DocFX.
 

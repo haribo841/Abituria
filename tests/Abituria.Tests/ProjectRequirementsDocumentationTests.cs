@@ -24,7 +24,8 @@ public sealed class ProjectRequirementsDocumentationTests
             "## 11. Kryteria akceptacji projektu",
             "## Macierz zgodności wymagań z implementacją",
             "## Status issue #34",
-            "## Status issue #35"
+            "## Status issue #35",
+            "## Status Issue #3"
         };
 
         Assert.All(requiredHeadings, heading => Assert.Contains(heading, text, StringComparison.Ordinal));
@@ -33,7 +34,8 @@ public sealed class ProjectRequirementsDocumentationTests
         Assert.Contains("NF-01", text, StringComparison.Ordinal);
         Assert.Contains("UC-01", text, StringComparison.Ordinal);
         Assert.Contains("UC-11", text, StringComparison.Ordinal);
-        Assert.Contains("9 pozycji działowych, w tym 7 dostępnych i 2 placeholdery", text, StringComparison.Ordinal);
+        Assert.Contains("4 grupy i 13 obszarów kursu", text, StringComparison.Ordinal);
+        Assert.Contains("119/238/357", text, StringComparison.Ordinal);
         Assert.Contains("Issue35MathChaptersRegressionTests", text, StringComparison.Ordinal);
         Assert.Contains("tools/seeds/issue-35-content.json", text, StringComparison.Ordinal);
         Assert.Contains("1280x820", text, StringComparison.Ordinal);

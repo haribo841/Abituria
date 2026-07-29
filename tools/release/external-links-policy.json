@@ -6,6 +6,7 @@
   "allowedHosts": [
     "bip.cke.gov.pl",
     "cli.github.com",
+    "eli.gov.pl",
     "github.com",
     "haribo841.github.io",
     "www.contributor-covenant.org",
@@ -21,6 +22,18 @@
     {
       "urlPrefix": "https://bip.cke.gov.pl/attachments/download/9944",
       "reason": "The exact CKE source document is pinned by SHA-256 in the content catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
+    },
+    {
+      "urlPrefix": "https://bip.cke.gov.pl/attachments/download/10085",
+      "reason": "The basic-level CKE guide is pinned by SHA-256 in the course catalog; transient PDF-host availability is not a content-integrity check."
+    },
+    {
+      "urlPrefix": "https://bip.cke.gov.pl/attachments/download/10088",
+      "reason": "The extended-level CKE guide is pinned by SHA-256 in the course catalog; transient PDF-host availability is not a content-integrity check."
+    },
+    {
+      "urlPrefix": "https://eli.gov.pl/api/acts/DU/2024/1019/text/O/D20241019.pdf",
+      "reason": "The official legal basis is pinned by SHA-256 in the course catalog; transient document-host availability is not a content-integrity check."
     },
     {
       "urlPrefix": "https://www.contributor-covenant.org/",

@@ -87,17 +87,17 @@ Wzory są renderowane przez CSharpMath. Jeżeli konkretna formuła jest nieczyte
 
 ## Działy
 
-Dostępnych jest 7 materiałów:
+Sekcja zawiera pełny kurs dla Formuły 2023 według podstawy programowej z 2024 r. Kurs obejmuje cztery grupy, 13 oficjalnych obszarów, 73 wymagania podstawowe i 46 dodatkowych wymagań rozszerzonych. Każde wymaganie ma dwa rozwiązane przykłady oraz trzy ćwiczenia, razem 238 przykładów i 357 ćwiczeń.
 
-1. Wektory.
-2. Liczby naturalne i indukcja.
-3. Alfabet grecki.
-4. Liczby rzeczywiste, zbiory i logika.
-5. Wyrażenia algebraiczne, równania i nierówności.
-6. Funkcja kwadratowa i równanie kwadratowe.
-7. Logarytmy.
+Filtr „Podstawowy” jest domyślny. Pokazuje 73 wymagania i 219 ćwiczeń podstawowych. Filtr „Rozszerzony” zachowuje treści podstawowe i dodaje 46 wymagań oraz 138 ćwiczeń części rozszerzonej. Alfabet grecki i lekcja o liczbach pierwszych pozostają widoczne na obu poziomach jako materiały pomocnicze; nie zmieniają urzędowych liczników wymagań ani ćwiczeń.
 
-„Ciągi liczbowe” i „Liczby pierwsze” są jawnie oznaczone jako treść w przygotowaniu. Ich widok prowadzi do odpowiedniej pozycji planu rozwoju zamiast udawać gotowy materiał.
+Nawigacja prowadzi kolejno przez obszar, lekcję i ćwiczenie. Przyciski poprzedniego i następnego zadania pozostają w bieżącej lekcji. Ćwiczenia mają trzy tryby:
+
+- `multipleChoice` - ukończenie po wskazaniu poprawnej odpowiedzi;
+- `numeric` - obliczenie sprawdzane bezpiecznym parserem, z przecinkiem lub kropką dziesiętną;
+- `revealOnly` - dowód albo odpowiedź symboliczna oznaczana jako ukończona po świadomym ujawnieniu pełnego rozwiązania.
+
+Dokładne wymagania pochodzą z aktu urzędowego. Przykłady, ćwiczenia, rozwiązania i diagramy są autorskie i przypisane Adamowi Kubisiowi. Zadania ani rozwiązania z informatorów CKE nie zostały przepisane. Źródła, sumy SHA-256 i pełną macierz opisuje [pokrycie kursu matematyki](MATH_COURSE_2023_COVERAGE.md).
 
 ## Zadania
 
@@ -118,7 +118,7 @@ Rozwiązuj zadanie samodzielnie, korzystaj z kolejnych podpowiedzi i kliknij „
 
 Brudnopis służy wyłącznie bieżącej pracy. Nie jest zapisywany po opuszczeniu zadania. Przyciski strzałek przechodzą do poprzedniego i następnego zadania w aktualnym kontekście, czyli w całym arkuszu albo w wybranym temacie.
 
-Strona „Profil” pokazuje liczbę ukończonych zadań z 35. Postęp jest lokalny i oddzielny dla każdego profilu.
+Strona „Profil” pokazuje osobno postęp arkusza `x/35`, podstawy `x/219` oraz części rozszerzonej `x/138`. Postęp jest lokalny i oddzielny dla każdego profilu.
 
 ## Kalkulator funkcji kwadratowej
 

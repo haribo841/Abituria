@@ -237,9 +237,11 @@ public sealed class ReleaseRuntimeTests
             Assert.True(File.Exists(report.DatabasePath));
             Assert.Equal("0.9.0-beta.1", report.Version);
             Assert.Equal(AppBuildInfo.Current.Commit, report.Commit);
-            Assert.True(report.FormulaCount > 0);
-            Assert.True(report.ChapterCount > 0);
-            Assert.True(report.ExerciseCount > 0);
+            Assert.Equal(18, report.FormulaCount);
+            Assert.Equal(13, report.CourseAreaCount);
+            Assert.Equal(119, report.CourseRequirementCount);
+            Assert.Equal(357, report.CourseExerciseCount);
+            Assert.Equal(35, report.ExamExerciseCount);
             Assert.Equal("Dwa miejsca zerowe: x₁ = 1, x₂ = 2", report.QuadraticSummary);
 
             var profiles = await services.GetRequiredService<AccountService>().GetProfilesAsync();

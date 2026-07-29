@@ -17,12 +17,14 @@ public sealed class Issue35MathChaptersRegressionTests
 {
     private static readonly JsonSerializerOptions JsonOptions = new() { PropertyNameCaseInsensitive = true };
     private static readonly string RepositoryRoot = FindRepositoryRoot();
-    private static readonly string[] AvailableChapterIds =
+    private static readonly string[] RetainedLessonIds =
     [
         "equations-and-inequalities",
         "greek-alphabet",
         "logarithms",
         "natural-numbers",
+        "number-sequences",
+        "prime-numbers",
         "quadratic-function",
         "sets-and-logic",
         "vectors"
@@ -112,34 +114,35 @@ public sealed class Issue35MathChaptersRegressionTests
     [Fact]
     public void Issue_35_chapters_are_available_and_cover_every_historical_topic()
     {
-        var catalog = Read<ChapterCatalog>("Content/chapters.json");
+        var catalog = Read<MathCourseCatalog>("Content/chapters.json");
 
-        Assert.Equal(9, catalog.Chapters.Count);
+        Assert.Equal(3, catalog.SchemaVersion);
         Assert.Equal(
-            AvailableChapterIds,
-            catalog.Chapters.Where(chapter => chapter.IsAvailable).Select(chapter => chapter.Id).Order());
-        Assert.Equal(
-            ["number-sequences", "prime-numbers"],
-            catalog.Chapters.Where(chapter => !chapter.IsAvailable).Select(chapter => chapter.Id).Order());
+            RetainedLessonIds,
+            catalog.Lessons.Where(lesson => RetainedLessonIds.Contains(lesson.Id, StringComparer.Ordinal))
+                .Select(lesson => lesson.Id)
+                .Order());
 
         foreach (var requirement in RequiredSections)
         {
-            var chapter = catalog.Chapters.Single(item => item.Id == requirement.Key);
+            var chapter = catalog.Lessons.Single(item => item.Id == requirement.Key);
             var text = string.Join('\n', chapter.Blocks.Select(block => block.Text));
 
-            Assert.True(chapter.IsAvailable, requirement.Key);
             Assert.NotEmpty(chapter.Blocks);
             Assert.All(
                 requirement.Value,
                 section => Assert.Contains(section, text, StringComparison.Ordinal));
         }
+
+        Assert.NotEmpty(catalog.Lessons.Single(item => item.Id == "number-sequences").Blocks);
+        Assert.NotEmpty(catalog.Lessons.Single(item => item.Id == "prime-numbers").Blocks);
     }
 
     [Fact]
     public void Greek_alphabet_table_contains_all_24_letters_in_canonical_order()
     {
-        var catalog = Read<ChapterCatalog>("Content/chapters.json");
-        var chapter = catalog.Chapters.Single(item => item.Id == "greek-alphabet");
+        var catalog = Read<MathCourseCatalog>("Content/chapters.json");
+        var chapter = catalog.Lessons.Single(item => item.Id == "greek-alphabet");
         var table = chapter.Blocks.Single(block => block.Text?.StartsWith("Tabela alfabetu greckiego", StringComparison.Ordinal) == true).Text!;
         var rows = table.Split('\n')
             .Where(line => line.Contains('|'))
@@ -154,7 +157,7 @@ public sealed class Issue35MathChaptersRegressionTests
     }
 
     [Fact]
-    public void Issue_35_roadmap_entries_are_migrated_and_remaining_chapters_stay_planned()
+    public void Issue_35_roadmap_entries_and_course_expansion_are_migrated()
     {
         var roadmap = Read<RoadmapCatalog>("Content/roadmap.json");
         var migratedIds = new[]
@@ -175,9 +178,9 @@ public sealed class Issue35MathChaptersRegressionTests
         }
 
         var remaining = roadmap.Items.Single(item => item.Id == "chapters-expansion");
-        Assert.Equal(RoadmapStatus.Planned, remaining.Status);
-        Assert.Contains("ciągach liczbowych", remaining.Summary, StringComparison.Ordinal);
-        Assert.Contains("liczbach pierwszych", remaining.Summary, StringComparison.Ordinal);
+        Assert.Equal(RoadmapStatus.Migrated, remaining.Status);
+        Assert.Contains("119 wymagań", remaining.Summary, StringComparison.Ordinal);
+        Assert.Contains("357 ćwiczeń", remaining.Summary, StringComparison.Ordinal);
     }
 
     [Fact]
@@ -190,9 +193,18 @@ public sealed class Issue35MathChaptersRegressionTests
 
         try
         {
-            var activeChapters = Read<ChapterCatalog>("Content/chapters.json");
-            var activeRoadmap = Read<RoadmapCatalog>("Content/roadmap.json");
-            var vector = activeChapters.Chapters.Single(chapter => chapter.Id == "vectors");
+            var activeCourse = Read<MathCourseCatalog>("Content/chapters.json");
+            var activeExercises = Read<CourseExerciseCatalog>("Content/course-exercises.json");
+            var activeVector = activeCourse.Lessons.Single(chapter => chapter.Id == "vectors");
+            var vector = new
+            {
+                id = activeVector.Id,
+                title = activeVector.Title,
+                status = "available",
+                message = (string?)null,
+                roadmapId = "vectors-content",
+                blocks = activeVector.Blocks
+            };
             var cancellationToken = TestContext.Current.CancellationToken;
             await File.WriteAllTextAsync(vectorPath, JsonSerializer.Serialize(vector, JsonOptions), cancellationToken);
 
@@ -205,12 +217,11 @@ public sealed class Issue35MathChaptersRegressionTests
                 "-OutputRoot",
                 outputRoot);
             Assert.True(importResult.ExitCode == 0, $"{importResult.StandardOutput}\n{importResult.StandardError}");
-            var generatedChapters = ReadFromPath<ChapterCatalog>(Path.Combine(outputRoot, "chapters.json"));
+            var generatedChapters = ReadFromPath<LegacyChapterCatalog>(Path.Combine(outputRoot, "chapters.json"));
             var generatedRoadmap = ReadFromPath<RoadmapCatalog>(Path.Combine(outputRoot, "roadmap.json"));
 
-            Assert.Equal(JsonSerializer.Serialize(activeChapters, JsonOptions), JsonSerializer.Serialize(generatedChapters, JsonOptions));
-            Assert.Equal(JsonSerializer.Serialize(activeRoadmap, JsonOptions), JsonSerializer.Serialize(generatedRoadmap, JsonOptions));
             Assert.Equal(9, generatedChapters.Chapters.Select(chapter => chapter.Id).Distinct(StringComparer.Ordinal).Count());
+            Assert.All(RetainedLessonIds, id => Assert.Contains(generatedChapters.Chapters, chapter => chapter.Id == id));
             Assert.Equal(
                 generatedRoadmap.Items.Count,
                 generatedRoadmap.Items.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
@@ -241,11 +252,11 @@ public sealed class Issue35MathChaptersRegressionTests
                 outputRoot);
             Assert.True(syncResult.ExitCode == 0, $"{syncResult.StandardOutput}\n{syncResult.StandardError}");
             Assert.Equal(
-                JsonSerializer.Serialize(activeChapters, JsonOptions),
-                JsonSerializer.Serialize(ReadFromPath<ChapterCatalog>(Path.Combine(outputRoot, "chapters.json")), JsonOptions));
+                JsonSerializer.Serialize(activeCourse, JsonOptions),
+                JsonSerializer.Serialize(ReadFromPath<MathCourseCatalog>(Path.Combine(outputRoot, "chapters.json")), JsonOptions));
             Assert.Equal(
-                JsonSerializer.Serialize(activeRoadmap, JsonOptions),
-                JsonSerializer.Serialize(ReadFromPath<RoadmapCatalog>(Path.Combine(outputRoot, "roadmap.json")), JsonOptions));
+                JsonSerializer.Serialize(activeExercises, JsonOptions),
+                JsonSerializer.Serialize(ReadFromPath<CourseExerciseCatalog>(Path.Combine(outputRoot, "course-exercises.json")), JsonOptions));
         }
         finally
         {
@@ -312,9 +323,13 @@ public sealed class Issue35MathChaptersRegressionTests
     [AvaloniaFact]
     public void Chapter_list_opens_and_renders_all_issue_35_content_at_supported_window_sizes()
     {
-        var catalog = Read<ChapterCatalog>("Content/chapters.json");
-        var opened = new List<ChapterArticle>();
-        var view = new ChapterListView(catalog, opened.Add);
+        var catalog = Read<MathCourseCatalog>("Content/chapters.json");
+        var opened = new List<CourseArea>();
+        var view = new ChapterListView(
+            catalog,
+            Abituria.ViewModels.CourseLevelFilter.Basic,
+            _ => { },
+            opened.Add);
         var window = new Window { Width = 960, Height = 640, Content = view };
 
         try
@@ -323,19 +338,16 @@ public sealed class Issue35MathChaptersRegressionTests
             Dispatcher.UIThread.RunJobs();
             var buttons = view.GetLogicalDescendants().OfType<Button>().ToArray();
 
-            foreach (var chapter in catalog.Chapters.Where(item => item.IsAvailable))
+            foreach (var area in catalog.Areas)
             {
-                var button = buttons.Single(item => string.Equals(item.Content as string, chapter.Title, StringComparison.Ordinal));
+                var prefix = $"{area.OfficialNumber}. {area.Title} - ";
+                var button = buttons.Single(item => item.Content is string text && text.StartsWith(prefix, StringComparison.Ordinal));
                 button.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
             }
 
-            Assert.Equal(AvailableChapterIds, opened.Select(chapter => chapter.Id).Order());
-            Assert.All(
-                catalog.Chapters.Where(item => !item.IsAvailable),
-                chapter => Assert.Contains(
-                    buttons,
-                    button => string.Equals(button.Content as string, chapter.Title + " - treść w przygotowaniu", StringComparison.Ordinal)));
+            Assert.Equal(catalog.Areas.Select(area => area.Id).Order(), opened.Select(area => area.Id).Order());
 
+            AssertIssue35ArticleLayouts(window, catalog, new Size(720, 520));
             AssertIssue35ArticleLayouts(window, catalog, new Size(960, 640));
             AssertIssue35ArticleLayouts(window, catalog, new Size(1280, 820));
 
@@ -351,7 +363,7 @@ public sealed class Issue35MathChaptersRegressionTests
             Dispatcher.UIThread.RunJobs();
             Assert.Contains(
                 home.GetLogicalDescendants().OfType<TextBlock>(),
-                text => text.Text == "7 działów: teoria, przykłady i zadania");
+                text => text.Text == "13 obszarów: teoria, przykłady i 357 ćwiczeń");
         }
         finally
         {
@@ -359,13 +371,13 @@ public sealed class Issue35MathChaptersRegressionTests
         }
     }
 
-    private static void AssertIssue35ArticleLayouts(Window window, ChapterCatalog catalog, Size size)
+    private static void AssertIssue35ArticleLayouts(Window window, MathCourseCatalog catalog, Size size)
     {
         window.Width = size.Width;
         window.Height = size.Height;
         foreach (var id in RequiredSections.Keys)
         {
-            var chapter = catalog.Chapters.Single(item => item.Id == id);
+            var chapter = catalog.Lessons.Single(item => item.Id == id);
             var article = new ArticleView(chapter.Title, "Materiał działowy", chapter.Blocks, () => { });
             window.Content = article;
             Dispatcher.UIThread.RunJobs();
@@ -462,6 +474,19 @@ public sealed class Issue35MathChaptersRegressionTests
         }
 
         throw new DirectoryNotFoundException("Nie znaleziono katalogu repozytorium Abituria.");
+    }
+
+    private sealed class LegacyChapterCatalog
+    {
+        public int SchemaVersion { get; set; }
+        public List<ContentBlock> Introduction { get; set; } = [];
+        public List<LegacyChapter> Chapters { get; set; } = [];
+    }
+
+    private sealed class LegacyChapter
+    {
+        public string Id { get; set; } = string.Empty;
+        public List<ContentBlock> Blocks { get; set; } = [];
     }
 
     private sealed record PowerShellResult(int ExitCode, string StandardOutput, string StandardError);

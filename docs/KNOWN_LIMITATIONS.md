@@ -31,7 +31,8 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 
 ## Treści edukacyjne
 
-- Dostępnych jest 7 działów, a „Ciągi liczbowe” i „Liczby pierwsze” pozostają placeholderami.
+- Kurs matematyki obejmuje Formułę 2023 na poziomie podstawowym i rozszerzonym; nie zawiera osobnego kursu Formuły 2015.
+- Ćwiczenia kursowe są autorskie i nie odtwarzają zadań ani rozwiązań z informatorów CKE.
 - Dostępny jest arkusz matury poprawkowej 2021. Arkusze 2019, 2020 i matura podstawowa 2021 pozostają w przygotowaniu.
 - Generator wykresów i kalkulator funkcji trygonometrycznych pozostają placeholderami.
 - Renderer CSharpMath obsługuje używany podzbiór zapisu matematycznego, ale nie jest pełnym silnikiem TeX. Treści muszą przechodzić walidację delimitera i regresje renderowania.

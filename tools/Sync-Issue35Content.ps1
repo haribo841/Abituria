@@ -1,33 +1,26 @@
-param(
+﻿param(
     [string]$ContentRoot = (Join-Path $PSScriptRoot '..\Content')
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
-$seedPath = Join-Path $PSScriptRoot 'seeds\issue-35-content.json'
-$chaptersPath = Join-Path $ContentRoot 'chapters.json'
-$roadmapPath = Join-Path $ContentRoot 'roadmap.json'
-
-$seed = Get-Content -Raw -Encoding UTF8 $seedPath | ConvertFrom-Json
-$currentChapters = Get-Content -Raw -Encoding UTF8 $chaptersPath | ConvertFrom-Json
-$vectors = @($currentChapters.chapters | Where-Object { $_.id -eq 'vectors' })
-if ($vectors.Count -ne 1 -or $vectors[0].status -ne 'available') {
-    throw 'Aktywny katalog musi zawierac dokladnie jeden dostepny rozdzial vectors.'
+$generatorPath = Join-Path $PSScriptRoot 'New-MathCourseContent.ps1'
+if (-not (Test-Path -LiteralPath $generatorPath -PathType Leaf)) {
+    throw "Nie znaleziono generatora kursu: $generatorPath"
 }
 
-$chapterCatalog = [ordered]@{
-    schemaVersion = 2
-    introduction = @($seed.chapterIntroduction)
-    chapters = @($vectors[0]) + @($seed.chapters)
-}
-$roadmapCatalog = [ordered]@{
-    schemaVersion = 1
-    introduction = @($seed.roadmapIntroduction)
-    items = @($seed.roadmapItems)
+$canonicalContentRoot = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\Content'))
+$requestedContentRoot = [System.IO.Path]::GetFullPath($ContentRoot)
+$documentationPath = if ([string]::Equals(
+        $canonicalContentRoot,
+        $requestedContentRoot,
+        [StringComparison]::OrdinalIgnoreCase)) {
+    Join-Path $PSScriptRoot '..\docs\MATH_COURSE_2023_COVERAGE.md'
+} else {
+    Join-Path $requestedContentRoot 'MATH_COURSE_2023_COVERAGE.md'
 }
 
-$chapterCatalog | ConvertTo-Json -Depth 100 | Set-Content -LiteralPath $chaptersPath -Encoding UTF8
-$roadmapCatalog | ConvertTo-Json -Depth 100 | Set-Content -LiteralPath $roadmapPath -Encoding UTF8
+& $generatorPath -ContentRoot $ContentRoot -DocumentationPath $documentationPath
 
-Write-Host "Zsynchronizowano $($chapterCatalog.chapters.Count) dzialow i $($roadmapCatalog.items.Count) pozycji roadmapy."
+Write-Host 'Zsynchronizowano treści Issue #35 jako część katalogu kursu Formuła 2023.'

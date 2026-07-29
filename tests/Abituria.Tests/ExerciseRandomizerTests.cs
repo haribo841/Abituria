@@ -47,7 +47,7 @@ public sealed class ExerciseRandomizerTests
                 new ExerciseTopicDefinition { Id = "geometry", Title = "Geometria", ExerciseNumbers = [2] }
             ]
         };
-        ExerciseDefinition? opened = null;
+        LearningExercise? opened = null;
         string? selectedTopicId = "previous-topic";
         var view = new ExamOverviewView(
             exam,
