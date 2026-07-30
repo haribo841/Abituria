@@ -13,7 +13,7 @@ public sealed class ContentInventoryTests
         ["exercise-set-e", "graph-generator", "matura-2019", "matura-2020", "matura-2021", "trigonometric-calculator"];
     private static readonly string[] RetainedLessonIds =
         ["equations-and-inequalities", "greek-alphabet", "logarithms", "natural-numbers", "number-sequences", "prime-numbers", "quadratic-function", "sets-and-logic", "vectors"];
-    private static readonly string[] ExpectedContentBlockTypes = ["richText", "image"];
+    private static readonly string[] ExpectedContentBlockTypes = ["richText", "diagram"];
     private static readonly string[] ExpectedTask7Options =
         ["\\(g(x)=-2x+2\\)", "\\(g(x)=-2x\\)", "\\(g(x)=-2x+6\\)", "\\(g(x)=-2x+8\\)"];
 
@@ -23,7 +23,8 @@ public sealed class ContentInventoryTests
         var formulas = Read<FormulaCatalog>("Content/formulas.json");
         var course = Read<MathCourseCatalog>("Content/chapters.json");
         var courseExercises = Read<CourseExerciseCatalog>("Content/course-exercises.json");
-        var exam = Read<ExamCatalog>("Content/exam-2021-correction.json").Exam;
+        var examCatalog = Read<ExamCatalog>("Content/exam-2021-correction.json");
+        var exam = examCatalog.Exam;
         var placeholders = Read<PlaceholderCatalog>("Content/placeholders.json");
         var roadmap = Read<RoadmapCatalog>("Content/roadmap.json");
 
@@ -31,7 +32,9 @@ public sealed class ContentInventoryTests
         Assert.NotEmpty(formulas.Introduction);
         Assert.Equal(Enumerable.Range(1, 18), formulas.Articles.Select(item => item.Order));
         Assert.All(formulas.Articles, item => Assert.NotEmpty(item.Blocks));
-        Assert.Equal(3, course.SchemaVersion);
+        Assert.Equal(4, formulas.SchemaVersion);
+        Assert.Equal(4, course.SchemaVersion);
+        Assert.Equal(3, examCatalog.SchemaVersion);
         Assert.Equal(4, course.Groups.Count);
         Assert.Equal(13, course.Areas.Count);
         Assert.Equal(34, course.Lessons.Count);
@@ -39,7 +42,7 @@ public sealed class ContentInventoryTests
         Assert.All(RetainedLessonIds, id => Assert.Contains(course.Lessons, lesson => lesson.Id == id));
         Assert.All(course.Lessons, item => Assert.NotEmpty(item.Blocks));
         var vectorChapter = course.Lessons.Single(item => item.Id == "vectors");
-        Assert.Equal(8, vectorChapter.Blocks.Count(block => block.Type == "image"));
+        Assert.Equal(8, vectorChapter.Blocks.Count(block => block.Type == "diagram"));
         Assert.Equal(course.Lessons.Count, course.Lessons.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
         Assert.All(
             course.Lessons.SelectMany(item => item.Blocks),
@@ -69,11 +72,10 @@ public sealed class ContentInventoryTests
         Assert.Contains(placeholders.Items.Single(item => item.Id == "matura-2021").Blocks,
             block => block.Text is not null && block.Text.Contains("79%", StringComparison.Ordinal) && block.Text.Contains("56%", StringComparison.Ordinal));
 
-        var assetCount = Directory.GetFiles(Path.Combine(RepositoryRoot, "img"), "*", SearchOption.AllDirectories).Length
-            + Directory.GetFiles(Path.Combine(RepositoryRoot, "fonts"), "*", SearchOption.AllDirectories).Length;
-        // Odzyskane, lokalne grafiki mogą pozostawać w ignorowanym katalogu img.
-        // Inwentarz pilnuje, aby żaden z 92 zasobów repozytorium nie zniknął.
-        Assert.InRange(assetCount, 92, int.MaxValue);
+        var diagrams = Read<DiagramCatalog>("Content/diagrams.json");
+        Assert.Equal(1, diagrams.SchemaVersion);
+        Assert.Equal(57, diagrams.Diagrams.Count);
+        Assert.Equal(57, diagrams.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
     }
 
     [Fact]
@@ -108,7 +110,7 @@ public sealed class ContentInventoryTests
         var task17 = exam.Exercises.Single(item => item.Number == 17);
         Assert.Contains("BSC", task17.Prompt);
         Assert.Equal("\\(40^{\\circ}\\)", task17.Options[3]);
-        Assert.Contains("img/mp21z17.png", task17.Assets);
+        Assert.Contains("exam-mp21-z17", task17.DiagramIds);
         Assert.DoesNotContain("x=-2", string.Join(' ', task17.Hints), StringComparison.Ordinal);
         var task18 = exam.Exercises.Single(item => item.Number == 18);
         Assert.Contains("\\angle BOC", task18.Prompt, StringComparison.Ordinal);
@@ -175,20 +177,30 @@ public sealed class ContentInventoryTests
     }
 
     [Fact]
-    public void Referenced_images_exist_and_legacy_latex_typos_are_removed()
+    public void Referenced_diagrams_exist_are_all_used_and_legacy_latex_typos_are_removed()
     {
         var formulas = Read<FormulaCatalog>("Content/formulas.json");
         var course = Read<MathCourseCatalog>("Content/chapters.json");
         var courseExercises = Read<CourseExerciseCatalog>("Content/course-exercises.json");
         var exam = Read<ExamCatalog>("Content/exam-2021-correction.json").Exam;
-        var assets = formulas.Articles.SelectMany(item => item.Blocks)
+        var diagrams = Read<DiagramCatalog>("Content/diagrams.json");
+        var referencedDiagramIds = formulas.Articles.SelectMany(item => item.Blocks)
             .Concat(course.Lessons.SelectMany(item => item.Blocks))
-            .Where(block => block.Type == "image")
-            .Select(block => block.Asset!)
-            .Concat(exam.Exercises.SelectMany(item => item.Assets))
-            .Concat(courseExercises.Exercises.SelectMany(item => item.Assets))
-            .Distinct(StringComparer.OrdinalIgnoreCase);
-        Assert.All(assets, asset => Assert.True(File.Exists(Path.Combine(RepositoryRoot, asset.Replace('/', Path.DirectorySeparatorChar))), asset));
+            .Where(block => block.Type == "diagram")
+            .Select(block => block.DiagramId!)
+            .Concat(exam.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(courseExercises.Exercises.SelectMany(item => item.DiagramIds))
+            .Distinct(StringComparer.Ordinal)
+            .Order(StringComparer.Ordinal)
+            .ToArray();
+        var catalogIds = diagrams.Diagrams.Select(item => item.Id).Order(StringComparer.Ordinal).ToArray();
+        Assert.Equal(catalogIds, referencedDiagramIds);
+        Assert.All(diagrams.Diagrams, diagram =>
+        {
+            Assert.False(string.IsNullOrWhiteSpace(diagram.SourceId));
+            Assert.False(string.IsNullOrWhiteSpace(diagram.AlternativeText));
+            Assert.NotEmpty(diagram.Primitives);
+        });
 
         var allRenderedText = string.Join('\n', ReadRichTexts());
         Assert.DoesNotContain("/cdot", allRenderedText, StringComparison.Ordinal);

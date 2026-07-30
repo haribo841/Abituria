@@ -27,11 +27,6 @@
     <Compile Include="AvaloniaApp\**\*.cs" />
     <AvaloniaXaml Include="AvaloniaApp\**\*.axaml" />
     <AvaloniaResource Include="Content\**\*.json" />
-    <AvaloniaResource Include="img\?.png" />
-    <AvaloniaResource Include="img\mp21z*.png" />
-    <AvaloniaResource Include="img\course\*.png" />
-    <AvaloniaResource Include="img\w*.png" />
-    <AvaloniaResource Include="img\abituria.png;img\dzialy.png;img\icon.png;img\kalkulator.png;img\zadania.png" />
     <AvaloniaResource Include="fonts\**\*.ttf" />
   </ItemGroup>
 

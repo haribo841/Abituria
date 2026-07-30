@@ -21,7 +21,8 @@ public sealed class ExerciseAndRoutingCoverageTests
         var accounts = new AccountService(new AppDbContextFactory(Path.Combine(directory, "exercise-view.db")), new PasswordHasher(1_000));
         await accounts.InitializeAsync();
         var profile = (await accounts.GetProfilesAsync()).Single(item => item.Kind == ProfileKind.Guest);
-        var copy = new ContentRepository().UiCopy;
+        var repository = new ContentRepository();
+        var copy = repository.UiCopy;
         var source = new SourceDocument { VerifiedOn = "2026-07-07" };
         var exercises = CreateExercises();
         var opened = new List<string>();
@@ -32,6 +33,7 @@ public sealed class ExerciseAndRoutingCoverageTests
             copy,
             profile,
             accounts,
+            repository.Diagrams,
             () => backCalls++,
             exercise => opened.Add(exercise.Id));
         var view = new ExerciseView(exercises[1], context);
@@ -115,8 +117,8 @@ public sealed class ExerciseAndRoutingCoverageTests
             viewModel.OpenExercise(content.Exam.Exercises[1]);
             Dispatcher.UIThread.RunJobs();
             var exerciseView = PageControl<ExerciseView>(window);
-            ClickButtonContaining(exerciseView, "Lista");
-            Assert.Equal(AppPage.ExerciseList, viewModel.CurrentPage);
+            ClickButtonContaining(exerciseView, "Matura");
+            Assert.Equal(AppPage.Matura, viewModel.CurrentPage);
         }
         finally
         {
@@ -126,7 +128,7 @@ public sealed class ExerciseAndRoutingCoverageTests
         }
     }
 
-    private static IReadOnlyList<ExerciseDefinition> CreateExercises() =>
+    private static IReadOnlyList<LearningExercise> CreateExercises() =>
     [
         new()
         {

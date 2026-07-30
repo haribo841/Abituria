@@ -98,9 +98,10 @@ Poza bieżącym zakresem pozostają:
 | F-19 | System udostępnia dla działów issue #35 teorię, przykłady, zadania, wskazówki i odpowiedzi, a przypadek ujemnej delty opisuje w zbiorze liczb rzeczywistych. | Wysoki | Zaimplementowane | `Content/chapters.json`, `Issue35MathChaptersRegressionTests` |
 | F-20 | System udostępnia ekran "O programie" z wersją, commitem, licencją, autorem i repozytorium. | Średni | Zaimplementowane | `AppBuildInfo`, `AboutView`, `AboutViewTests` |
 | F-21 | Opublikowany plik wykonywalny obsługuje `--release-smoke-test --data-directory <katalog>` bez otwierania UI i bez dostępu do prawdziwych danych użytkownika. | Wysoki | Zaimplementowane | `ReleaseSmokeTest`, `ReleaseRuntimeTests` |
-| F-22 | System pozwala wylosować zadanie z całego arkusza albo z aktywnego tematu, zachowując kontekst poprzedniego i następnego zadania. | Średni | Zaimplementowane | `ExerciseRandomizer`, `ExamOverviewView`, `ExerciseRandomizerTests` |
+| F-22 | System pozwala wylosować zadanie z całego arkusza albo z aktywnego tematu, zachowując kontekst poprzedniego i następnego zadania. | Średni | Zaimplementowane | `ExerciseRandomizer`, `MaturaView`, `TaskTopicsView`, `ExerciseRandomizerTests` |
 | F-23 | System sprawdza odpowiedzi liczbowe bezpiecznym parserem, akceptuje przecinek i kropkę oraz stosuje tolerancję bezwzględną i względną `1e-9`. | Wysoki | Zaimplementowane | `NumericAnswerEvaluator`, `ExpressionCalculator`, `MathCourse2023ContentTests` |
 | F-24 | Profil pokazuje osobno postęp arkusza `x/35`, podstawy `x/219` i części rozszerzonej `x/138` bez zmiany schematu SQLite. | Wysoki | Zaimplementowane | `ProfileView`, `AccountService`, `MathCourse2023ContentTests` |
+| F-25 | Start pokazuje sześć kafelków, a niezależne strony `Matura` i `Zadania` rozdzielają pełny arkusz, 17 tematów, losowanie i placeholdery z właściwym kontekstem powrotu. | Wysoki | Zaimplementowane | `HomeView`, `MaturaView`, `TaskTopicsView`, `Issue4NavigationTests` |
 
 ## 5. Wymagania niefunkcjonalne
 
@@ -127,6 +128,7 @@ Poza bieżącym zakresem pozostają:
 | NF-19 | Login, Start i kalkulator ogólny zmieniają strukturę układu odpowiednio przy szerokościach `860`, `780` i `900`, bez utraty logicznej kolejności kontrolek. | Wysoki | Zaimplementowane | `AdaptiveLayout`, testy breakpointów Avalonia Headless |
 | NF-20 | Dialogi aplikacji są skalowalne, mają bezpieczne granice wymiarów i przewijanie dla treści wykraczającej poza obszar klienta. | Wysoki | Zaimplementowane | `AdaptiveLayout.CreateDialog`, test właściwości dialogu |
 | NF-21 | Wszystkie kryteria WCAG 2.2 A/AA są przeglądane i śledzone, z jawnym rozdzieleniem dowodów automatycznych, kontroli manualnych i kryteriów nieodpowiednich dla aplikacji desktopowej. | Wysoki | Audyt wykonany, kontrole manualne pozostają jawne | `docs/ACCESSIBILITY_WCAG_AUDIT.md`, `AccessibilityRegressionTests`, `Discussion49StyleRegressionTests` |
+| NF-22 | Aktywne treści używają dokładnie 57 skalowalnych diagramów z opisami alternatywnymi i nie ładują rastrów; `img/icon.ico` pozostaje jedynym statycznym wyjątkiem jako ikona aplikacji. | Wysoki | Zaimplementowane | `Content/diagrams.json`, `DiagramView`, `DiagramCatalogTests`, `LegacyImageArchiveTests` |
 
 ## 6. Opis użytkowników systemu
 
@@ -219,7 +221,7 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 5. `git diff --check` nie zgłasza błędów.
 6. SonarQube Cloud nie raportuje otwartych problemów po analizie aktualnego commita.
 7. Inwentarz treści potwierdza 18 tablic, kompletne odwzorowanie 17 sekcji CKE, 91 kątów w tabeli trygonometrycznej, 4 grupy i 13 obszarów kursu, kontrakt `119/238/357`, 17 tematów oraz 35 zadań arkusza.
-8. Wszystkie obrazy wskazane przez treści istnieją w repozytorium.
+8. Wszystkie identyfikatory diagramów wskazane przez treści istnieją, są używane i mają niepuste opisy alternatywne.
 9. Każde zadanie ma kompletną umowę odpowiedzi: opcje i klucz, oczekiwany wynik z tolerancją albo pełne rozwiązanie ujawniane na żądanie.
 10. Kalkulator ogólny przechodzi regresje dla issues #1-#9 oraz powiązanych dyskusji.
 11. Widoki architektury nie używają WPF `Page`, `Frame`, `NavigationWindow` ani nie otwierają nieograniczonych niemodalnych okien.
@@ -243,6 +245,7 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 29. Testy breakpointów potwierdzają zmianę Login przy `860`, Start przy `780` i kalkulatora ogólnego przy `900`, a główne okno zachowuje minimum `720x520`.
 30. Test wpływu stylowania na renderowanie i nawigację mieści się w zapisanym budżecie czasu i pamięci oraz przechodzi dla wariantu jasnego, ciemnego i wysokiego kontrastu.
 31. `ACCESSIBILITY_WCAG_AUDIT.md` zawiera wszystkie 55 obowiązujących kryteriów A/AA WCAG 2.2, nie przedstawia testów headless jako certyfikatu i jawnie wskazuje kontrole wymagające technologii asystującej lub użytkownika.
+32. Kryteria Issue #4 wymagają sześciu kafelków, osobnych tras `Matura` i `Zadania`, zachowania 35 identyfikatorów arkusza i istniejącego postępu, dokładnie 57 używanych diagramów, 75 zgodnych sum archiwum oraz braku aktywnych PNG/JPG, `Bitmap`, `Image` i `AssetImage` poza ikoną `img/icon.ico` używaną tylko jako `ApplicationIcon`.
 
 ## Macierz zgodności wymagań z implementacją
 

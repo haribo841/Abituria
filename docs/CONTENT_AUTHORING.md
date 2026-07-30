@@ -3,9 +3,10 @@
 Kod C# odpowiada za wczytanie, walidację i wyświetlenie treści. Długie opisy, materiały edukacyjne i wzory są przechowywane poza kodem:
 
 - `Content/formulas.json` - kuratorowana transkrypcja tablic CKE dla Formuły 2023,
-- `Content/chapters.json` - wygenerowany katalog kursu Formuły 2023 w schemacie 3,
+- `Content/chapters.json` - wygenerowany katalog kursu Formuły 2023 w schemacie 4,
 - `Content/course-exercises.json` - wygenerowane ćwiczenia kursowe,
-- `Content/exam-2021-correction.json` - zadania, odpowiedzi i podpowiedzi,
+- `Content/exam-2021-correction.json` - zadania, odpowiedzi, podpowiedzi i identyfikatory diagramów w schemacie 3,
+- `Content/diagrams.json` - 57 aktywnych definicji wektorowych w schemacie 1,
 - `Content/placeholders.json` - treść ekranów zaplanowanych lub zastąpionych,
 - `Content/roadmap.json` - opis planu rozwoju,
 - `Content/ui-copy.json` - dłuższe statyczne objaśnienia interfejsu.
@@ -22,15 +23,17 @@ pwsh -NoProfile -File tools/Sync-Issue35Content.ps1
 pwsh -NoProfile -File tools/New-MathCourseContent.ps1
 ```
 
-Skrypt wymaga dokładnie `4/13/73/46/238/357`, sprawdza unikalność i długość identyfikatorów oraz zapisuje deterministyczny wynik do `Content/chapters.json`, `Content/course-exercises.json` i `docs/MATH_COURSE_2023_COVERAGE.md`. Diagramy kursu są autorskimi zasobami generowanymi poleceniem:
+Skrypt wymaga dokładnie `4/13/73/46/238/357`, sprawdza unikalność i długość identyfikatorów oraz zapisuje deterministyczny wynik do `Content/chapters.json`, `Content/course-exercises.json` i `docs/MATH_COURSE_2023_COVERAGE.md`. Aktywny katalog 57 diagramów jest odtwarzany deterministycznie poleceniem:
 
 ```powershell
-pwsh -NoProfile -File tools/New-MathCourseDiagrams.ps1
+pwsh -NoProfile -File tools/New-DiagramCatalog.ps1
 ```
+
+Generator zapisuje wyłącznie dane prymitywów wektorowych i nie tworzy PNG. Historyczne rastry znajdują się poza aplikacją w `docs/legacy/originals/images/`; ich mapowanie i sumy odtwarza `tools/New-LegacyImageArchiveManifest.ps1`.
 
 Test end-to-end generuje katalog do pustego katalogu i wymaga semantycznej zgodności z aktywnymi plikami, więc rozbieżność seedów, generatora i aplikacji blokuje testy. Nie należy ręcznie edytować plików wygenerowanych.
 
-`Content/formulas.json` jest kanonicznym katalogiem tablic. Wersja schematu 3 wymaga obiektu `source` z wydawcą, tytułem, adresem dokumentu, sumą SHA-256, datą publikacji i datą weryfikacji. Maszynową macierz sekcji i podpunktów zawiera `tools/seeds/formula-2023-coverage.json`. Pełny importer przyjmuje `-FormulaCatalogPath` i kopiuje ten katalog bez przetwarzania historycznych ekranów wzorów.
+`Content/formulas.json` jest kanonicznym katalogiem tablic. Wersja schematu 4 wymaga obiektu `source` z wydawcą, tytułem, adresem dokumentu, sumą SHA-256, datą publikacji i datą weryfikacji oraz używa identyfikatorów diagramów zamiast ścieżek obrazów. Maszynową macierz sekcji i podpunktów zawiera `tools/seeds/formula-2023-coverage.json`. Pełny importer przyjmuje `-FormulaCatalogPath` i kopiuje ten katalog bez przetwarzania historycznych ekranów wzorów.
 
 Tekst matematyczny używa ograniczników `\(` oraz `\)`. Każdy fizyczny wiersz musi zawierać kompletne, niezagnieżdżone i niepuste pary ograniczników. Nie wolno otwierać wzoru w jednym wierszu lub bloku i zamykać go w następnym. `TextView` oraz jego `TextPainter` renderują cały poprawny wiersz jako jeden przepływ tekstu i matematyki. Historyczny znacznik listy `\(-\)` jest wcześniej normalizowany do zwykłego znaku `-`.
 

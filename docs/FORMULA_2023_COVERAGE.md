@@ -41,4 +41,4 @@ Maszynową listę sekcji, wymaganych podpunktów, stron i identyfikatorów przec
 - dokładnie 91 wierszy tabeli trygonometrycznej dla kątów od 0 do 90 stopni;
 - poprawnego renderowania tekstu, matematyki, tabel i ilustracji.
 
-PDF ani jego wycinki nie są paczkowane z aplikacją. Wzory i tabele są dostępne jako tekst, a odziedziczone diagramy są używane wyłącznie tam, gdzie ich znaczenie odpowiada oficjalnemu dokumentowi.
+PDF ani jego wycinki nie są paczkowane z aplikacją. Wzory i tabele są dostępne jako tekst, a diagramy są renderowane z deterministycznych definicji wektorowych tylko tam, gdzie ich znaczenie odpowiada oficjalnemu dokumentowi.

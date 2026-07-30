@@ -25,8 +25,7 @@
         "Właściwy plan brzmi: Rozpoznaj rodzaje liczb i działań, ustal kolejność działań, a przybliżenie wykonaj dopiero po wyniku dokładnym."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Rozpoznaj rodzaje liczb i działań, ustal kolejność działań, a przybliżenie wykonaj dopiero po wyniku dokładnym.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -49,8 +48,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\(\\sqrt[3]{-125}=-5\\) i \\(2^3=8\\), zatem wynik to \\(3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.1",
       "level": "basic",
       "expectedValue": 3.0,
@@ -74,8 +72,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Ponieważ \\(1,4^2=1,96<2\\), mamy \\(1,4<\\sqrt2\\). Ponadto \\(2<(3/2)^2=2,25\\), więc \\(\\sqrt2<3/2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -104,8 +101,7 @@
         "Właściwy plan brzmi: Zapisz liczby przez ich reszty lub wskaż wymagane czynniki pierwsze wśród kolejnych liczb."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zapisz liczby przez ich reszty lub wskaż wymagane czynniki pierwsze wśród kolejnych liczb.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -128,8 +124,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Liczba \\(74\\) daje resztę \\(4\\), a \\(4^2=16\\) daje resztę \\(1\\) modulo \\(5\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.2",
       "level": "basic",
       "expectedValue": 1.0,
@@ -153,8 +148,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Wśród pięciu kolejnych liczb jest wielokrotność \\(5\\), wielokrotność \\(3\\) oraz czynniki zapewniające podzielność przez \\(8\\): liczba podzielna przez \\(4\\) i inna parzysta. Iloczyn zawiera więc czynniki \\(5\\cdot3\\cdot8=120\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -183,8 +177,7 @@
         "Właściwy plan brzmi: Sprawdź parzystość stopnia pierwiastka i znajdź liczbę, której odpowiednia potęga daje liczbę podpierwiastkową."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Sprawdź parzystość stopnia pierwiastka i znajdź liczbę, której odpowiednia potęga daje liczbę podpierwiastkową.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -207,8 +200,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\((-7)^3=-343\\), zatem wynik to \\(-7\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.3",
       "level": "basic",
       "expectedValue": -7.0,
@@ -232,8 +224,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Parzysta potęga każdej liczby rzeczywistej jest nieujemna, więc nie może dać \\(-16\\). Potęga nieparzysta zachowuje znak, a \\((-2)^3=-8\\), więc drugi pierwiastek istnieje i wynosi \\(-2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -262,8 +253,7 @@
         "Właściwy plan brzmi: Zamień pierwiastek na potęgę o wykładniku wymiernym albo połącz pierwiastki tego samego stopnia."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zamień pierwiastek na potęgę o wykładniku wymiernym albo połącz pierwiastki tego samego stopnia.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -286,8 +276,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Ponieważ \\(\\sqrt[4]{16}=2\\), mamy \\(16^{3/4}=2^3=8\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.4",
       "level": "basic",
       "expectedValue": 8.0,
@@ -311,8 +300,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Dla pierwiastków tego samego stopnia możemy połączyć iloraz: \\(\\sqrt[3]{54/2}=\\sqrt[3]{27}=3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -341,8 +329,7 @@
         "Właściwy plan brzmi: Sprowadź potęgi do wspólnej podstawy i uwzględnij, czy podstawa jest większa od 1, czy leży między 0 i 1."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Sprowadź potęgi do wspólnej podstawy i uwzględnij, czy podstawa jest większa od 1, czy leży między 0 i 1.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.5",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -365,8 +352,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Funkcja \\(2^x\\) jest rosnąca, więc większa wartość to \\(2^5=32\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.5",
       "level": "basic",
       "expectedValue": 32.0,
@@ -390,8 +376,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Podstawa \\(2/3\\) leży między \\(0\\) i \\(1\\), więc potęga maleje wraz z wykładnikiem. Ponieważ \\(-3<-2\\), mamy \\((2/3)^{-3}>(2/3)^{-2}\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.5",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -420,8 +405,7 @@
         "Właściwy plan brzmi: Narysuj końce przedziałów na jednej osi i osobno sprawdź, czy każdy koniec należy do wyniku."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Narysuj końce przedziałów na jednej osi i osobno sprawdź, czy każdy koniec należy do wyniku.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.6",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -444,8 +428,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Są to \\(-2,-1,0,1,2\\), czyli pięć liczb.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.6",
       "level": "basic",
       "expectedValue": 5.0,
@@ -469,8 +452,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Usuwamy liczby większe od \\(1\\) i nie większe od \\(4\\). Pozostaje \\([-3,1]\\cup(4,5]\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.6",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -499,8 +481,7 @@
         "Właściwy plan brzmi: Traktuj wartość bezwzględną jako odległość albo rozpisz dwa przypadki z kontrolą znaku."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Traktuj wartość bezwzględną jako odległość albo rozpisz dwa przypadki z kontrolą znaku.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.7",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -523,8 +504,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Równania \\(2x-3=5\\) i \\(2x-3=-5\\) dają \\(x=4\\) oraz \\(x=-1\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.7",
       "level": "basic",
       "expectedValue": 4.0,
@@ -548,8 +528,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Szukamy liczb oddalonych od \\(2\\) o więcej niż \\(3\\), więc \\(x<-1\\) lub \\(x>5\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.7",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -578,8 +557,7 @@
         "Właściwy plan brzmi: Zamień procent na współczynnik wzrostu lub spadku i pomnóż współczynniki kolejnych okresów."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zamień procent na współczynnik wzrostu lub spadku i pomnóż współczynniki kolejnych okresów.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.8",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -602,8 +580,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\(1000\\cdot1,1^2=1210\\) zł.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.8",
       "level": "basic",
       "expectedValue": 1210.0,
@@ -627,8 +604,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Lokata daje współczynnik \\(1,04^3=1,124864\\), czyli wzrost około 12,4864%. Jest więc korzystniejsza niż jednorazowe 12%.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.8",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -657,8 +633,7 @@
         "Właściwy plan brzmi: Sprowadź logarytm do równania potęgowego albo użyj prawa iloczynu, ilorazu lub potęgi po sprawdzeniu dziedziny."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Sprowadź logarytm do równania potęgowego albo użyj prawa iloczynu, ilorazu lub potęgi po sprawdzeniu dziedziny.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.9",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -681,8 +656,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Logarytmy wynoszą \\(3\\) i \\(-1\\), więc suma to \\(2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.9",
       "level": "basic",
       "expectedValue": 2.0,
@@ -706,8 +680,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Ze wzoru na logarytm potęgi mamy \\(2\\log_7 3=\\log_7 3^2=\\log_7 9\\). Podstawa \\(7\\) jest dodatnia i różna od \\(1\\), a argumenty są dodatnie.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.B.9",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -736,8 +709,7 @@
         "Właściwy plan brzmi: Zapisz oba logarytmy przez tę samą, dozwoloną podstawę i skróć otrzymany iloraz."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zapisz oba logarytmy przez tę samą, dozwoloną podstawę i skróć otrzymany iloraz.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -760,8 +732,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Po zamianie podstawy na \\(2\\): \\(\\log_4 8=3/2=1,5\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.E.1",
       "level": "extended",
       "expectedValue": 1.5,
@@ -785,8 +756,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Ze wzoru na zamianę podstawy \\(\\log_2 7=\\ln7/\\ln2\\), więc odwrotność to \\(\\ln2/\\ln7=\\log_7 2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "I.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -815,8 +785,7 @@
         "Właściwy plan brzmi: Rozpoznaj jeden z trzech wzorów skróconego mnożenia i sprawdź znak wyrazu mieszanego."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Rozpoznaj jeden z trzech wzorów skróconego mnożenia i sprawdź znak wyrazu mieszanego.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -839,8 +808,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Różnica kwadratów daje \\((102-98)(102+98)=4\\cdot200=800\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.B.1",
       "level": "basic",
       "expectedValue": 800.0,
@@ -864,8 +832,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Po rozwinięciu nawiasów składniki \\(2ab\\) i \\(-2ab\\) redukują się, a pozostają dwa składniki \\(a^2\\) i dwa \\(b^2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -894,8 +861,7 @@
         "Właściwy plan brzmi: Usuń nawiasy z kontrolą znaków, wykonaj mnożenie rozdzielnie i połącz tylko wyrazy podobne."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Usuń nawiasy z kontrolą znaków, wykonaj mnożenie rozdzielnie i połącz tylko wyrazy podobne.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -918,8 +884,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Wyrazy z \\(x^2\\) to \\(-x^2+6x^2=5x^2\\), więc współczynnik wynosi \\(5\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.B.2",
       "level": "basic",
       "expectedValue": 5.0,
@@ -943,8 +908,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Minus przed drugim nawiasem zmienia oba znaki: \\(3x^2+y-x^2+2y=2x^2+3y\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -973,8 +937,7 @@
         "Właściwy plan brzmi: Znajdź największy wspólny dzielnik współczynników i najmniejsze wspólne potęgi zmiennych."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Znajdź największy wspólny dzielnik współczynników i najmniejsze wspólne potęgi zmiennych.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -997,8 +960,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\(4x(x+2)\\), a dla \\(x=2\\): \\(8\\cdot4=32\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.B.3",
       "level": "basic",
       "expectedValue": 32.0,
@@ -1022,8 +984,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Oba wyrazy są podzielne przez \\(-5x^2\\). Po podzieleniu dostajemy \\(-5x^2(x^2-2)\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -1052,8 +1013,7 @@
         "Właściwy plan brzmi: Najpierw zapisz dziedzinę, rozłóż wielomiany na czynniki, a dzielenie zastąp mnożeniem przez odwrotność."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Najpierw zapisz dziedzinę, rozłóż wielomiany na czynniki, a dzielenie zastąp mnożeniem przez odwrotność.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -1076,8 +1036,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Po uproszczeniu wyrażenie ma wartość \\(x+3=8\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.B.4",
       "level": "basic",
       "expectedValue": 8.0,
@@ -1101,8 +1060,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Wymagamy \\(x\\neq-2,0,2\\). Po zamianie dzielenia na mnożenie przez odwrotność i rozkładzie licznika otrzymujemy \\(x\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -1131,8 +1089,7 @@
         "Właściwy plan brzmi: Użyj schematu Hornera albo twierdzenia o reszcie, podstawiając zero dzielnika."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Użyj schematu Hornera albo twierdzenia o reszcie, podstawiając zero dzielnika.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -1155,8 +1112,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Z twierdzenia o reszcie jest nią \\(W(3)=27-6+5=26\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.1",
       "level": "extended",
       "expectedValue": 26.0,
@@ -1180,8 +1136,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Obliczamy wartość wielomianu dla \\(1\\): \\(1-3+2=0\\). Reszta jest zerowa, więc \\(x-1\\) jest dzielnikiem.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -1210,8 +1165,7 @@
         "Właściwy plan brzmi: Utwórz grupy mające ten sam czynnik nawiasowy, a następnie wyłącz go przed wspólny nawias."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Utwórz grupy mające ten sam czynnik nawiasowy, a następnie wyłącz go przed wspólny nawias.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -1234,8 +1188,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Grupowanie daje \\((x+4)(x^2+2)\\). Czynnik liniowy dla \\(x=1\\) ma wartość \\(5\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.2",
       "level": "extended",
       "expectedValue": 5.0,
@@ -1259,8 +1212,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Grupujemy pierwsze dwa i ostatnie dwa wyrazy: \\(3a(a-2b)+2(a-2b)=(a-2b)(3a+2)\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -1289,8 +1241,7 @@
         "Właściwy plan brzmi: Wyznacz dzielniki wyrazu wolnego, sprawdź kandydatów i po znalezieniu zera obniż stopień wielomianu."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wyznacz dzielniki wyrazu wolnego, sprawdź kandydatów i po znalezieniu zera obniż stopień wielomianu.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.3",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -1313,8 +1264,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Wielomian rozkłada się na \\((x-1)(x-2)(x-3)\\), więc największym pierwiastkiem jest \\(3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.3",
       "level": "extended",
       "expectedValue": 3.0,
@@ -1338,8 +1288,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Każdy całkowity pierwiastek musi dzielić wyraz wolny, więc kandydatami są \\(\\pm1,\\pm2\\). Żaden po podstawieniu nie zeruje wielomianu.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.3",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -1368,8 +1317,7 @@
         "Właściwy plan brzmi: Użyj symetrii lub reguły Pascala, a przy uzasadnieniu zinterpretuj symbol Newtona jako liczbę wyborów."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Użyj symetrii lub reguły Pascala, a przy uzasadnieniu zinterpretuj symbol Newtona jako liczbę wyborów.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.4",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -1392,8 +1340,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Z symetrii \\(\\binom{10}{8}=\\binom{10}{2}=10\\cdot9/2=45\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.4",
       "level": "extended",
       "expectedValue": 45.0,
@@ -1417,8 +1364,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Wybór \\(k\\) elementów jednoznacznie wyznacza \\(n-k\\) elementów niewybranych. Oba zbiory wyborów mają więc tyle samo elementów.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.4",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -1447,8 +1393,7 @@
         "Właściwy plan brzmi: Rozpoznaj sumę lub różnicę potęg albo zastosuj współczynniki kolejnego wiersza trójkąta Pascala."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Rozpoznaj sumę lub różnicę potęg albo zastosuj współczynniki kolejnego wiersza trójkąta Pascala.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.5",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -1471,8 +1416,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Współczynnik wynosi \\(\\binom42=6\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.5",
       "level": "extended",
       "expectedValue": 6.0,
@@ -1496,8 +1440,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Korzystamy ze wzoru \\(a^n-b^n=(a-b)(a^{n-1}+a^{n-2}b+\\ldots+b^{n-1})\\). Iloraz to \\(a^4+a^3b+a^2b^2+ab^3+b^4\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.5",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -1526,8 +1469,7 @@
         "Właściwy plan brzmi: Najpierw zapisz wykluczenia, znajdź wspólny mianownik i dopiero potem połącz liczniki."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Najpierw zapisz wykluczenia, znajdź wspólny mianownik i dopiero potem połącz liczniki.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.6",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -1550,8 +1492,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Suma to \\(1/2+1/4+1/8=7/8=0,875\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.6",
       "level": "extended",
       "expectedValue": 0.875,
@@ -1575,8 +1516,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Dla \\(x\\neq1,-1\\) otrzymujemy \\((2(x+1)-3(x-1))/((x-1)(x+1))=(5-x)/(x^2-1)\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "II.E.6",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -1605,8 +1545,7 @@
         "Właściwy plan brzmi: Ustal dziedzinę przed usunięciem mianowników, wykonuj operacje równoważne i sprawdź kandydatów."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Ustal dziedzinę przed usunięciem mianowników, wykonuj operacje równoważne i sprawdź kandydatów.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -1629,8 +1568,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Po usunięciu mianowników powstaje \\((3x+1)(x-3)=0\\), więc większym rozwiązaniem jest \\(3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.1",
       "level": "basic",
       "expectedValue": 3.0,
@@ -1654,8 +1592,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Mianownik nie może być zerem, więc \\(x\\neq2\\). Po pomnożeniu otrzymujemy \\(1=x\\), a \\(x=1\\) spełnia założenie. Bez założenia można byłoby niejawnie dopuścić niedozwolone działanie dla \\(x=2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -1684,8 +1621,7 @@
         "Właściwy plan brzmi: Sprowadź obie strony do postaci zebranej i sprawdź, czy pozostaje zdanie prawdziwe, fałszywe czy równanie z niewiadomą."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Sprowadź obie strony do postaci zebranej i sprawdź, czy pozostaje zdanie prawdziwe, fałszywe czy równanie z niewiadomą.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -1708,8 +1644,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Równanie jest tożsamościowe, więc spełniają je wszystkie trzy wskazane liczby.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.2",
       "level": "basic",
       "expectedValue": 3.0,
@@ -1733,8 +1668,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Dla \\(a\\neq1\\) dzielimy przez \\(a-1\\) i dostajemy jedno rozwiązanie \\(x=1\\). Dla \\(a=1\\) powstaje \\(0=0\\), więc rozwiązań jest nieskończenie wiele.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -1763,8 +1697,7 @@
         "Właściwy plan brzmi: Zredukuj wyrazy podobne i pamiętaj o zmianie zwrotu przy mnożeniu lub dzieleniu przez liczbę ujemną."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zredukuj wyrazy podobne i pamiętaj o zmianie zwrotu przy mnożeniu lub dzieleniu przez liczbę ujemną.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -1787,8 +1720,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Nierówność daje \\(x<4\\), więc największą liczbą całkowitą jest \\(3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.3",
       "level": "basic",
       "expectedValue": 3.0,
@@ -1812,8 +1744,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Po rozwinięciu \\(2-2x>x-7\\), więc \\(9>3x\\), czyli \\(x<3\\). Na osi jest to półprosta \\((-\\infty,3)\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -1842,8 +1773,7 @@
         "Właściwy plan brzmi: Wyznacz pierwiastki i znak współczynnika kwadratowego, a następnie odczytaj znaki z paraboli lub osi."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wyznacz pierwiastki i znak współczynnika kwadratowego, a następnie odczytaj znaki z paraboli lub osi.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -1866,8 +1796,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Pierwiastki równania to \\(2\\) i \\(3\\), więc większy wynosi \\(3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.4",
       "level": "basic",
       "expectedValue": 3.0,
@@ -1891,8 +1820,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Pierwiastki to \\(1\\) i \\(3\\), a ramiona paraboli są skierowane w dół. Funkcja jest dodatnia między pierwiastkami, więc \\(x\\in(1,3)\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -1921,8 +1849,7 @@
         "Właściwy plan brzmi: Zastosuj zasadę iloczynu równego zeru do każdego czynnika i nie pomijaj pierwiastków wielokrotnych."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zastosuj zasadę iloczynu równego zeru do każdego czynnika i nie pomijaj pierwiastków wielokrotnych.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.5",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -1945,8 +1872,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Rozwiązania to \\(2\\) i \\(-5\\), a ich suma wynosi \\(-3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.5",
       "level": "basic",
       "expectedValue": -3.0,
@@ -1970,8 +1896,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Pierwiastek \\(x=1/2\\) ma krotność \\(2\\), a \\(x=-4\\) krotność \\(1\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.B.5",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -2000,8 +1925,7 @@
         "Właściwy plan brzmi: Rozłóż wielomian na czynniki, uporządkuj pierwiastki z krotnościami i zbuduj siatkę znaków."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Rozłóż wielomian na czynniki, uporządkuj pierwiastki z krotnościami i zbuduj siatkę znaków.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2024,8 +1948,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Rozwiązaniem jest \\((-2,1)\\), a liczbami całkowitymi są \\(-1\\) i \\(0\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.1",
       "level": "extended",
       "expectedValue": 2.0,
@@ -2049,8 +1972,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Rozkład to \\(x(x-2)(x+2)\\). Analiza znaków przy pierwiastkach \\(-2,0,2\\) daje \\([-2,0]\\cup[2,\\infty)\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2079,8 +2001,7 @@
         "Właściwy plan brzmi: Przenieś wszystko na jedną stronę, rozłóż licznik i mianownik, a miejsca zerowe mianownika zawsze wyklucz."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Przenieś wszystko na jedną stronę, rozłóż licznik i mianownik, a miejsca zerowe mianownika zawsze wyklucz.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2103,8 +2024,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Po uwzględnieniu \\(x\\neq2\\) otrzymujemy \\(x=5\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.2",
       "level": "extended",
       "expectedValue": 5.0,
@@ -2128,8 +2048,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Punkty krytyczne to \\(-2,1,2\\), przy czym \\(1\\) jest wykluczone. Siatka znaków daje \\((-\\infty,-2)\\cup(1,2)\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2158,8 +2077,7 @@
         "Właściwy plan brzmi: Odczytaj sumę i iloczyn pierwiastków z ilorazów współczynników, a potem przekształć żądane wyrażenie."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Odczytaj sumę i iloczyn pierwiastków z ilorazów współczynników, a potem przekształć żądane wyrażenie.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.3",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2182,8 +2100,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Ze wzoru Viète'a iloczyn wynosi \\(c/a=-4/2=-2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.3",
       "level": "extended",
       "expectedValue": -2.0,
@@ -2207,8 +2124,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Mamy \\(x_1+x_2=4\\) i \\(x_1x_2=1\\). Zatem \\(x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2=16-2=14\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.3",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2237,8 +2153,7 @@
         "Właściwy plan brzmi: Wyznacz punkty zmiany znaku wyrażeń pod modułami i rozwiąż osobno każdy dopuszczalny przypadek."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wyznacz punkty zmiany znaku wyrażeń pod modułami i rozwiąż osobno każdy dopuszczalny przypadek.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.4",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2261,8 +2176,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Rozwiązania to \\(-3\\) i \\(4\\), więc większym jest \\(4\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.4",
       "level": "extended",
       "expectedValue": 4.0,
@@ -2286,8 +2200,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Punkty podziału to \\(-2\\) i \\(1\\). W środkowym przedziale suma jest stała i równa \\(3\\). W zewnętrznych przedziałach równanie daje odpowiednio \\(x=-3\\) i \\(x=2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.4",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2316,8 +2229,7 @@
         "Właściwy plan brzmi: Oddziel przypadki zerowania się współczynników, a dla równania kwadratowego połącz deltę ze wzorami Viète'a."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Oddziel przypadki zerowania się współczynników, a dla równania kwadratowego połącz deltę ze wzorami Viète'a.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.5",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2340,8 +2252,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Warunek \\(\\Delta{}=0\\) daje \\(m^2=9\\), a dodatnia wartość to \\(3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.5",
       "level": "extended",
       "expectedValue": 3.0,
@@ -2365,8 +2276,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Dla \\(m\\neq1\\) istnieje jedno rozwiązanie \\(x=(m+2)/(m-1)\\). Dla \\(m=1\\) powstaje sprzeczność \\(0=3\\), więc rozwiązań nie ma.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.5",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2395,8 +2305,7 @@
         "Właściwy plan brzmi: Wprowadź zmienną pomocniczą dla powtarzającej się potęgi i po rozwiązaniu sprawdź warunki odwrotnego podstawienia."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wprowadź zmienną pomocniczą dla powtarzającej się potęgi i po rozwiązaniu sprawdź warunki odwrotnego podstawienia.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.6",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2419,8 +2328,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Rozwiązania to \\(-2,-1,1,2\\), więc największe wynosi \\(2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.6",
       "level": "extended",
       "expectedValue": 2.0,
@@ -2444,8 +2352,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Dla \\(t=x^2\\geq0\\) otrzymujemy \\((t+4)(t-1)=0\\). Wartość \\(t=-4\\) jest niedopuszczalna, a \\(t=1\\) daje \\(x=\\pm1\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.6",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2474,8 +2381,7 @@
         "Właściwy plan brzmi: Najpierw wyznacz zera mianownika, potem zera licznika i usuń z odpowiedzi wszystkie wartości niedozwolone."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Najpierw wyznacz zera mianownika, potem zera licznika i usuń z odpowiedzi wszystkie wartości niedozwolone.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.7",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2498,8 +2404,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Po kontroli dziedziny jedynym dopuszczalnym zerem licznika jest \\(x=2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.7",
       "level": "extended",
       "expectedValue": 2.0,
@@ -2523,8 +2428,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Dziedzina jest ustalana dla wyrażenia pierwotnego. Dla \\(x=-1\\) pierwotny mianownik jest zerem, więc wartość pozostaje wykluczona mimo algebraicznego skrócenia.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "III.E.7",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2553,8 +2457,7 @@
         "Właściwy plan brzmi: Użyj eliminacji lub podstawiania i porównaj współczynniki prostych, aby sklasyfikować układ."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Użyj eliminacji lub podstawiania i porównaj współczynniki prostych, aby sklasyfikować układ.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IV.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -2577,8 +2480,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Dodanie równań daje \\(2x=8\\), zatem \\(x=4\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IV.B.1",
       "level": "basic",
       "expectedValue": 4.0,
@@ -2602,8 +2504,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Lewe strony są proporcjonalne, ale po podwojeniu pierwszej prawej strony otrzymalibyśmy \\(6\\), nie \\(8\\). Proste są równoległe i różne, więc układ jest sprzeczny.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IV.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -2632,8 +2533,7 @@
         "Właściwy plan brzmi: Nazwij niewiadome, przetłumacz każde zdanie na osobne równanie i na końcu sprawdź jednostki oraz sens wyniku."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Nazwij niewiadome, przetłumacz każde zdanie na osobne równanie i na końcu sprawdź jednostki oraz sens wyniku.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IV.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -2656,8 +2556,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Po dodaniu równań otrzymujemy dwa razy większą liczbę: \\(34\\), więc wynosi ona \\(17\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IV.B.2",
       "level": "basic",
       "expectedValue": 17.0,
@@ -2681,8 +2580,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Dla boków \\(a,b\\) mamy \\(a+b=17\\) i \\(a-b=5\\). Stąd \\(a=11\\), \\(b=6\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IV.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -2711,8 +2609,7 @@
         "Właściwy plan brzmi: Wyznacz jedną niewiadomą z prostszego równania, podstaw ją do drugiego i sprawdź wszystkie otrzymane pary."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wyznacz jedną niewiadomą z prostszego równania, podstaw ją do drugiego i sprawdź wszystkie otrzymane pary.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IV.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2735,8 +2632,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Równanie \\(x^2=9\\) daje dwie wartości \\(x\\), więc układ ma dwa rozwiązania.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IV.E.1",
       "level": "extended",
       "expectedValue": 2.0,
@@ -2760,8 +2656,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Z \\(y=4-x\\) otrzymujemy \\(x^2+(4-x)^2=10\\), czyli \\(x^2-4x+3=0\\). Dla \\(x=1\\) mamy \\(y=3\\), a dla \\(x=3\\) mamy \\(y=1\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IV.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -2790,8 +2685,7 @@
         "Właściwy plan brzmi: Dla każdego argumentu sprawdź, czy reguła, tabela lub wykres przypisuje dokładnie jedną wartość."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Dla każdego argumentu sprawdź, czy reguła, tabela lub wykres przypisuje dokładnie jedną wartość.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -2814,8 +2708,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Każdy z pięciu argumentów ma jedną przypisaną wartość, więc tabela zawiera pięć wartości, licząc powtórzenia.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.1",
       "level": "basic",
       "expectedValue": 5.0,
@@ -2839,8 +2732,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Dla większości argumentów, na przykład \\(x=0\\), równanie daje dwie wartości \\(y=1\\) i \\(y=-1\\). Nie ma więc jednoznacznego przyporządkowania.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -2869,8 +2761,7 @@
         "Właściwy plan brzmi: Podstaw cały argument w miejsce każdej zmiennej, zachowaj nawiasy i sprawdź dziedzinę."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Podstaw cały argument w miejsce każdej zmiennej, zachowaj nawiasy i sprawdź dziedzinę.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -2893,8 +2784,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Po podstawieniu: \\(4-6-1=-3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.2",
       "level": "basic",
       "expectedValue": -3.0,
@@ -2918,8 +2808,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Podstawiamy cały argument: \\((a+1)^2-2(a+1)=a^2-1\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -2948,8 +2837,7 @@
         "Właściwy plan brzmi: Najpierw wskaż argument, potem odpowiadającą mu wartość i dopiero wykonaj wymaganą interpretację lub porównanie."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Najpierw wskaż argument, potem odpowiadającą mu wartość i dopiero wykonaj wymaganą interpretację lub porównanie.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -2972,8 +2860,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Dodajemy odczytane wartości: \\(4+(-2)=2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.3",
       "level": "basic",
       "expectedValue": 2.0,
@@ -2997,8 +2884,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Wartość rośnie o \\(3\\) przy wzroście argumentu o \\(1\\), a dla \\(x=0\\) wynosi \\(5\\). Wzór \\(f(x)=3x+5\\) daje wszystkie cztery wartości.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3027,8 +2913,7 @@
         "Właściwy plan brzmi: Odczytuj każdą własność osobno, pilnując końców dziedziny i argumentów, dla których osiągane są ekstrema."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Odczytuj każdą własność osobno, pilnując końców dziedziny i argumentów, dla których osiągane są ekstrema.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3051,8 +2936,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Wykres przecina oś argumentów w punktach o argumentach \\(-2\\) i \\(2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.4",
       "level": "basic",
       "expectedValue": 2.0,
@@ -3076,8 +2960,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Dziedziną jest \\(\\mathbb R\\), zbiorem wartości \\([0,\\infty)\\). Funkcja maleje na \\(( -\\infty,1]\\), rośnie na \\([1,\\infty)\\), a minimum \\(0\\) osiąga dla \\(x=1\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3106,8 +2989,7 @@
         "Właściwy plan brzmi: Zapisz funkcję jako \\(y=ax+b\\): znak i wartość \\(a\\) opisują nachylenie, a \\(b\\) przecięcie z osią wartości."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zapisz funkcję jako \\(y=ax+b\\): znak i wartość \\(a\\) opisują nachylenie, a \\(b\\) przecięcie z osią wartości.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.5",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3130,8 +3012,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Po zapisaniu \\(y=-4x+7\\) współczynnik kierunkowy wynosi \\(-4\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.5",
       "level": "basic",
       "expectedValue": -4.0,
@@ -3155,8 +3036,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Mają ten sam współczynnik kierunkowy, więc są równoległe. Różne wyrazy wolne oznaczają różne punkty przecięcia z osią \\(Oy\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.5",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3185,8 +3065,7 @@
         "Właściwy plan brzmi: Wyznacz współczynnik kierunkowy z dwóch punktów lub własności równoległości, a następnie oblicz wyraz wolny."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wyznacz współczynnik kierunkowy z dwóch punktów lub własności równoległości, a następnie oblicz wyraz wolny.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.6",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3209,8 +3088,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Z równania \\(10=2\\cdot3+b\\) wynika \\(b=4\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.6",
       "level": "basic",
       "expectedValue": 4.0,
@@ -3234,8 +3112,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Punkty wykresu to \\((4,0)\\) i \\((0,8)\\), więc \\(a=(0-8)/(4-0)=-2\\). Otrzymujemy \\(f(x)=-2x+8\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.6",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3264,8 +3141,7 @@
         "Właściwy plan brzmi: Odczytaj postać funkcji, wyznacz wierzchołek, oś, miejsca zerowe i kierunek ramion."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Odczytaj postać funkcji, wyznacz wierzchołek, oś, miejsca zerowe i kierunek ramion.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.7",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3288,8 +3164,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Wierzchołek paraboli to \\((0,-4)\\), więc minimum wynosi \\(-4\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.7",
       "level": "basic",
       "expectedValue": -4.0,
@@ -3313,8 +3188,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Miejsca zerowe to \\(-2\\) i \\(4\\), oś symetrii \\(x=1\\), a ramiona są w górę. Wartość w osi wynosi \\(-9\\), więc wierzchołek to \\((1,-9)\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.7",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3343,8 +3217,7 @@
         "Właściwy plan brzmi: Dobierz postać: ogólna eksponuje współczynniki, kanoniczna wierzchołek, a iloczynowa miejsca zerowe."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Dobierz postać: ogólna eksponuje współczynniki, kanoniczna wierzchołek, a iloczynowa miejsca zerowe.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.8",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3367,8 +3240,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "W postaci \\(a(x-p)^2+q\\) mamy \\(p=-2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.8",
       "level": "basic",
       "expectedValue": -2.0,
@@ -3392,8 +3264,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Uzupełnienie kwadratu daje \\((x-3)^2-4\\). Miejsca zerowe to \\(1\\) i \\(5\\), więc postać iloczynowa to \\((x-1)(x-5)\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.8",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3422,8 +3293,7 @@
         "Właściwy plan brzmi: Wybierz postać zgodną z danymi, wprowadź współczynnik skali i wyznacz go z dodatkowego punktu."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wybierz postać zgodną z danymi, wprowadź współczynnik skali i wyznacz go z dodatkowego punktu.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.9",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3446,8 +3316,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Warunek daje \\(4a+2=10\\), więc \\(a=2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.9",
       "level": "basic",
       "expectedValue": 2.0,
@@ -3471,8 +3340,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Drugie miejsce zerowe jest symetryczne względem osi i wynosi \\(-1\\). Zatem \\(f(x)=a(x-3)(x+1)\\). Warunek \\(f(0)=3\\) daje \\(-3a=3\\), więc \\(a=-1\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.9",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3501,8 +3369,7 @@
         "Właściwy plan brzmi: Sprawdź, czy wierzchołek należy do przedziału, oblicz wartości w nim i w obu końcach, a następnie je porównaj."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Sprawdź, czy wierzchołek należy do przedziału, oblicz wartości w nim i w obu końcach, a następnie je porównaj.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.10",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3525,8 +3392,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Porównanie wierzchołka i końców daje największą wartość \\(f(5)=8\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.10",
       "level": "basic",
       "expectedValue": 8.0,
@@ -3550,8 +3416,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Wewnątrz przedziału jedynym punktem zmiany monotoniczności może być wierzchołek, a wartości skrajne mogą też wystąpić na krańcach ograniczonej dziedziny. Porównanie tych kandydatów jest kompletne.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.10",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3580,8 +3445,7 @@
         "Właściwy plan brzmi: Przetłumacz wielkości z kontekstu na argument i wartość funkcji, ustal fizyczną dziedzinę i zinterpretuj wynik."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Przetłumacz wielkości z kontekstu na argument i wartość funkcji, ustal fizyczną dziedzinę i zinterpretuj wynik.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.11",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3604,8 +3468,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "W chwili \\(t=2\\) funkcja osiąga wartość \\(21\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.11",
       "level": "basic",
       "expectedValue": 21.0,
@@ -3629,8 +3492,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Długości boków wymagają \\(0<x<10\\). Funkcja \\(-x^2+10x\\) ma wierzchołek dla \\(x=5\\), więc największe pole \\(25\\) ma kwadrat \\(5\\times5\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.11",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3659,8 +3521,7 @@
         "Właściwy plan brzmi: Zmiana wewnątrz argumentu przesuwa wykres poziomo ze znakiem przeciwnym, a składnik zewnętrzny pionowo zgodnie ze znakiem."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zmiana wewnątrz argumentu przesuwa wykres poziomo ze znakiem przeciwnym, a składnik zewnętrzny pionowo zgodnie ze znakiem.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.12",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3683,8 +3544,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Wykres przesuwa się o 4 w prawo, więc argument zmienia się z \\(2\\) na \\(6\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.12",
       "level": "basic",
       "expectedValue": 6.0,
@@ -3708,8 +3568,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Zapis \\(x+1\\) przesuwa o 1 w lewo, a \\(-4\\) o 4 w dół. Wierzchołek przechodzi z \\((0,0)\\) do \\((-1,-4)\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.12",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3738,8 +3597,7 @@
         "Właściwy plan brzmi: Rozpoznaj stały iloczyn \\(xy=a\\), wyznacz parametr i pamiętaj o wykluczeniu zerowego argumentu."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Rozpoznaj stały iloczyn \\(xy=a\\), wyznacz parametr i pamiętaj o wykluczeniu zerowego argumentu.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.13",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3762,8 +3620,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\(36/9=4\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.13",
       "level": "basic",
       "expectedValue": 4.0,
@@ -3787,8 +3644,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Dziedzina i zbiór wartości wykluczają zero. Ponieważ stała jest ujemna, gałęzie hiperboli leżą w drugiej i czwartej ćwiartce, a osiami asymptot są osie układu.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.13",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3817,8 +3673,7 @@
         "Właściwy plan brzmi: Wyznacz wartość początkową i stały współczynnik zmiany, a czas rozwiązuj przez potęgowanie lub logarytm."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wyznacz wartość początkową i stały współczynnik zmiany, a czas rozwiązuj przez potęgowanie lub logarytm.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.14",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3841,8 +3696,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\(3^3=27\\), więc \\(200\\cdot27=5400\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.14",
       "level": "basic",
       "expectedValue": 5400.0,
@@ -3866,8 +3720,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Dla \\(t=2\\): \\(L=140\\), \\(E=144\\). Dla \\(t=5\\): \\(L=200\\), \\(E=248,832\\). Wzrost wykładniczy coraz bardziej wyprzedza liniowy.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.B.14",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -3896,8 +3749,7 @@
         "Właściwy plan brzmi: Dla \\(-f(x)\\) odbij wartości względem osi \\(Ox\\), a dla \\(f(-x)\\) argumenty względem osi \\(Oy\\)."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Dla \\(-f(x)\\) odbij wartości względem osi \\(Ox\\), a dla \\(f(-x)\\) argumenty względem osi \\(Oy\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -3920,8 +3772,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Zmiana znaku wartości daje \\(-(-7)=7\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.E.1",
       "level": "extended",
       "expectedValue": 7.0,
@@ -3945,8 +3796,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Najpierw \\(f(-x)=-x^3-1\\), a potem \\(-f(-x)=x^3+1\\). Dwa odbicia odpowiadają symetrii środkowej względem początku.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -3975,8 +3825,7 @@
         "Właściwy plan brzmi: Wykonuj funkcję wewnętrzną jako pierwszą i sprawdź, czy jej wartości należą do dziedziny funkcji zewnętrznej."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wykonuj funkcję wewnętrzną jako pierwszą i sprawdź, czy jej wartości należą do dziedziny funkcji zewnętrznej.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -3999,8 +3848,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Najpierw \\(g(5)=10\\), a potem \\(f(10)=7\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.E.2",
       "level": "extended",
       "expectedValue": 7.0,
@@ -4024,8 +3872,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Mamy \\((f\\circ g)(x)=x^2+1\\), natomiast \\((g\\circ f)(x)=(x+1)^2\\). Wzory nie są równe, na przykład dla \\(x=1\\) dają \\(2\\) i \\(4\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -4054,8 +3901,7 @@
         "Właściwy plan brzmi: Weź \\(x_1<x_2\\), przekształć znak różnicy \\(f(x_2)-f(x_1)\\) i kontroluj znaki mianowników."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Weź \\(x_1<x_2\\), przekształć znak różnicy \\(f(x_2)-f(x_1)\\) i kontroluj znaki mianowników.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.E.3",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -4078,8 +3924,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\(f(2)=2\\) i \\(f(1)=-1\\), więc różnica wynosi \\(3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.E.3",
       "level": "extended",
       "expectedValue": 3.0,
@@ -4103,8 +3948,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Dla \\(0<x_1<x_2\\) różnica \\(g(x_2)-g(x_1)=(x_1-x_2)/(x_1x_2)\\) jest ujemna, bo licznik jest ujemny, a mianownik dodatni.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "V.E.3",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -4133,8 +3977,7 @@
         "Właściwy plan brzmi: Podstaw numer wyrazu do wzoru ogólnego albo rozwiąż równanie względem numeru."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Podstaw numer wyrazu do wzoru ogólnego albo rozwiąż równanie względem numeru.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4157,8 +4000,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Po podstawieniu \\(n=10\\) otrzymujemy \\(20+3=23\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.1",
       "level": "basic",
       "expectedValue": 23.0,
@@ -4182,8 +4024,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Rozwiązujemy \\(4n-3=41\\), więc \\(4n=44\\) i \\(n=11\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4212,8 +4053,7 @@
         "Właściwy plan brzmi: Zacznij od podanego wyrazu i stosuj regułę rekurencyjną dokładnie raz dla każdego kolejnego indeksu."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zacznij od podanego wyrazu i stosuj regułę rekurencyjną dokładnie raz dla każdego kolejnego indeksu.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4236,8 +4076,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Wyrazy to \\(4,2,0,-2,-4\\), więc \\(a_5=-4\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.2",
       "level": "basic",
       "expectedValue": -4.0,
@@ -4261,8 +4100,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Kolejno otrzymujemy \\(1,2,4,7,11\\), ponieważ dodawane wartości to \\(1,2,3,4\\). Różnice nie są stałe, lecz rosną o \\(1\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4291,8 +4129,7 @@
         "Właściwy plan brzmi: Oblicz i zbadaj znak różnicy \\(a_{n+1}-a_n\\) w całej dziedzinie indeksów."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Oblicz i zbadaj znak różnicy \\(a_{n+1}-a_n\\) w całej dziedzinie indeksów.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4315,8 +4152,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Po odjęciu \\(4(n+1)-7-(4n-7)=4\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.3",
       "level": "basic",
       "expectedValue": 4.0,
@@ -4340,8 +4176,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Różnica \\(1/(n+1)-1/n=-1/(n(n+1))<0\\), więc ciąg jest ściśle malejący.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4370,8 +4205,7 @@
         "Właściwy plan brzmi: Porównaj wszystkie kolejne różnice dla arytmetycznego albo ilorazy dla geometrycznego, uwzględniając zera."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Porównaj wszystkie kolejne różnice dla arytmetycznego albo ilorazy dla geometrycznego, uwzględniając zera.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4394,8 +4228,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Każdy kolejny wyraz powstaje przez odjęcie \\(3\\), więc różnica to \\(-3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.4",
       "level": "basic",
       "expectedValue": -3.0,
@@ -4419,8 +4252,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Różnice wynoszą \\(1,2,3\\), a ilorazy \\(2,2,7/4\\). Żadna z tych wielkości nie jest stała, więc ciąg nie jest ani arytmetyczny, ani geometryczny.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4449,8 +4281,7 @@
         "Właściwy plan brzmi: Ustal \\(a_1\\), różnicę i numer, użyj wzoru na wyraz, a sumę licz przez pierwszy i ostatni wyraz."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Ustal \\(a_1\\), różnicę i numer, użyj wzoru na wyraz, a sumę licz przez pierwszy i ostatni wyraz.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.5",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4473,8 +4304,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Jest to suma liczb od 1 do 20: \\(20\\cdot21/2=210\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.5",
       "level": "basic",
       "expectedValue": 210.0,
@@ -4498,8 +4328,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Z \\(99=7+(n-1)4\\) wynika \\(n=24\\). Suma to \\(24(7+99)/2=1272\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.5",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4528,8 +4357,7 @@
         "Właściwy plan brzmi: Użyj \\(a_n=a_1q^{n-1}\\), a dla sumy rozdziel przypadek \\(q=1\\) od \\(q\\neq1\\)."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Użyj \\(a_n=a_1q^{n-1}\\), a dla sumy rozdziel przypadek \\(q=1\\) od \\(q\\neq1\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.6",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4552,8 +4380,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Suma \\(1+2+4+8+16\\) wynosi \\(31\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.6",
       "level": "basic",
       "expectedValue": 31.0,
@@ -4577,8 +4404,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Mamy \\(a_5/a_2=q^3=27\\), więc dodatni iloraz wynosi \\(q=3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.6",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4607,8 +4433,7 @@
         "Właściwy plan brzmi: Rozpoznaj stałą różnicę lub iloraz w opisie, zapisz model ciągu i zinterpretuj jednostki wyniku."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Rozpoznaj stałą różnicę lub iloraz w opisie, zapisz model ciągu i zinterpretuj jednostki wyniku.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.7",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4631,8 +4456,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "To ciąg arytmetyczny: \\(20+4\\cdot5=40\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.7",
       "level": "basic",
       "expectedValue": 40.0,
@@ -4656,8 +4480,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Wpłaty stałe dają \\(6\\cdot250=1500\\) zł. Rosnące mają szósty wyraz 350 i sumę \\(6(100+350)/2=1350\\) zł, więc wariant stały daje o 150 zł więcej.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.B.7",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4686,8 +4509,7 @@
         "Właściwy plan brzmi: Podziel przez najwyższą potęgę indeksu lub zastosuj prawa granic i twierdzenie o trzech ciągach."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Podziel przez najwyższą potęgę indeksu lub zastosuj prawa granic i twierdzenie o trzech ciągach.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -4710,8 +4532,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Po podzieleniu przez \\(n\\) granica jest ilorazem współczynników wiodących \\(5/2=2,5\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.E.1",
       "level": "extended",
       "expectedValue": 2.5,
@@ -4735,8 +4556,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Z \\(-1\\leq\\sin n\\leq1\\) wynika \\(-1/n\\leq\\sin n/n\\leq1/n\\). Obie granice skrajne są równe zero, więc środkowa też wynosi zero.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -4765,8 +4585,7 @@
         "Właściwy plan brzmi: Wyznacz iloraz, najpierw sprawdź warunek \\(|q|<1\\), a dopiero potem użyj wzoru \\(a_1/(1-q)\\)."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wyznacz iloraz, najpierw sprawdź warunek \\(|q|<1\\), a dopiero potem użyj wzoru \\(a_1/(1-q)\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -4789,8 +4608,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Dla \\(q=1/4\\) suma wynosi \\(1/(1-1/4)=4/3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.E.2",
       "level": "extended",
       "expectedValue": 1.3333333333333333,
@@ -4814,8 +4632,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Iloraz geometryczny wynosi \\(3/2\\), a warunkiem zbieżności jest \\(|q|<1\\). Tu wyrazy nie dążą do zera, więc szereg jest rozbieżny.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VI.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -4844,8 +4661,7 @@
         "Właściwy plan brzmi: Zapisz ograniczenie, wyraź jedną wielkość przez drugą, określ dziedzinę i zbadaj wierzchołek funkcji kwadratowej."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zapisz ograniczenie, wyraź jedną wielkość przez drugą, określ dziedzinę i zbadaj wierzchołek funkcji kwadratowej.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4868,8 +4684,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Maksimum osiąga kwadrat o boku \\(6\\), więc pole wynosi \\(36\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.B.1",
       "level": "basic",
       "expectedValue": 36.0,
@@ -4893,8 +4708,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Iloczyn ma postać \\(P(x)=x(18-x)=-x^2+18x\\). Wierzchołek jest dla \\(x=9\\), więc obie liczby wynoszą \\(9\\), a iloczyn \\(81\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -4923,8 +4737,7 @@
         "Właściwy plan brzmi: Najpierw spróbuj podstawienia, a przy postaci nieoznaczonej zastosuj rozkład, skracanie lub wyrażenie sprzężone."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Najpierw spróbuj podstawienia, a przy postaci nieoznaczonej zastosuj rozkład, skracanie lub wyrażenie sprzężone.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -4947,8 +4760,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Po skróceniu otrzymujemy \\(x+3\\), którego granica dla \\(x\\to3\\) wynosi \\(6\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.1",
       "level": "extended",
       "expectedValue": 6.0,
@@ -4972,8 +4784,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Mnożymy przez wyrażenie sprzężone i otrzymujemy \\(1/(\\sqrt{1+x}+1)\\), więc granica wynosi \\(1/2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5002,8 +4813,7 @@
         "Właściwy plan brzmi: Sprawdź ciągłość na przedziale oraz przeciwne znaki wartości na jego końcach, a potem zastosuj własność Darboux."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Sprawdź ciągłość na przedziale oraz przeciwne znaki wartości na jego końcach, a potem zastosuj własność Darboux.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5026,8 +4836,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\(f(0)=-1\\) i \\(f(1)=1\\), więc iloczyn wynosi \\(-1\\), co potwierdza zmianę znaku.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.2",
       "level": "extended",
       "expectedValue": -1.0,
@@ -5051,8 +4860,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Funkcja skokowa \\(f(x)=-1\\) dla \\(x<1/2\\) i \\(f(x)=1\\) dla \\(x\\geq1/2\\) ma przeciwne znaki na końcach \\([0,1]\\), ale nigdy nie przyjmuje zera. Brakuje ciągłości.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5081,8 +4889,7 @@
         "Właściwy plan brzmi: Zbuduj granicę ilorazu różnicowego, a wynik interpretuj jako nachylenie stycznej lub chwilową szybkość zmiany."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zbuduj granicę ilorazu różnicowego, a wynik interpretuj jako nachylenie stycznej lub chwilową szybkość zmiany.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.3",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5105,8 +4912,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Pochodna funkcji wynosi \\(2x\\), więc dla \\(x=2\\) otrzymujemy \\(4\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.3",
       "level": "extended",
       "expectedValue": 4.0,
@@ -5130,8 +4936,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Punkt to \\((1,1)\\), a współczynnik kierunkowy \\(f'(1)=2\\). Styczna ma równanie \\(y-1=2(x-1)\\), czyli \\(y=2x-1\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.3",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5160,8 +4965,7 @@
         "Właściwy plan brzmi: Rozpoznaj sumę, iloczyn, iloraz lub złożenie i stosuj odpowiednie reguły wraz z dziedziną."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Rozpoznaj sumę, iloczyn, iloraz lub złożenie i stosuj odpowiednie reguły wraz z dziedziną.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.4",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5184,8 +4988,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\(f'(x)=3x^2-4\\), więc \\(f'(2)=12-4=8\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.4",
       "level": "extended",
       "expectedValue": 8.0,
@@ -5209,8 +5012,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Reguła łańcuchowa daje \\(h'(x)=1/\\sqrt{2x+1}\\). Pochodna istnieje dla \\(x>-1/2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.4",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5239,8 +5041,7 @@
         "Właściwy plan brzmi: Oblicz pochodną, wyznacz jej zera i punkty wykluczone, a potem odczytaj monotoniczność z tabeli znaków."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Oblicz pochodną, wyznacz jej zera i punkty wykluczone, a potem odczytaj monotoniczność z tabeli znaków.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.5",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5263,8 +5064,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Równanie \\(g'(x)=3x^2-3=0\\) daje \\(x=\\pm1\\), więc dodatni punkt to \\(1\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.5",
       "level": "extended",
       "expectedValue": 1.0,
@@ -5288,8 +5088,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Pochodna \\(h'(x)=1-1/x^2=(x^2-1)/x^2\\). Jest dodatnia dla \\(|x|>1\\) i ujemna dla \\(0<|x|<1\\). Trzeba rozdzielić przedziały przez \\(-1,0,1\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.5",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5318,8 +5117,7 @@
         "Właściwy plan brzmi: Zbuduj funkcję celu i dziedzinę, znajdź punkty krytyczne oraz końce, a wynik sprawdź znakiem pochodnej lub porównaniem wartości."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zbuduj funkcję celu i dziedzinę, znajdź punkty krytyczne oraz końce, a wynik sprawdź znakiem pochodnej lub porównaniem wartości.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.6",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5342,8 +5140,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Warunek \\(P'(x)=20-2x=0\\) daje \\(x=10\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.6",
       "level": "extended",
       "expectedValue": 10.0,
@@ -5367,8 +5164,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Minimalizujemy kwadrat odległości \\(D(x)=x^2+(x^2-3)^2\\). Pochodna \\(D'(x)=2x(2x^2-5)\\) daje kandydatów \\(x=0\\) i \\(x=\\pm\\sqrt{5/2}\\). Porównanie daje minimum dla \\(x=\\pm\\sqrt{5/2}\\), z \\(y=5/2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XIII.E.6",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5397,8 +5193,7 @@
         "Właściwy plan brzmi: Ustal ćwiartkę lub role boków w trójkącie i zastosuj definicje funkcji trygonometrycznych."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Ustal ćwiartkę lub role boków w trójkącie i zastosuj definicje funkcji trygonometrycznych.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -5421,8 +5216,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\(2\\cdot1/2+1=2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.B.1",
       "level": "basic",
       "expectedValue": 2.0,
@@ -5446,8 +5240,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Przeciwprostokątna ma długość \\(13\\), bok przyległy \\(12\\). Zatem \\(\\sin\\alpha{}=5/13\\), \\(\\cos\\alpha{}=12/13\\), \\(\\operatorname{tg}\\alpha{}=5/12\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -5476,8 +5269,7 @@
         "Właściwy plan brzmi: Użyj jedynki trygonometrycznej, dobierz znak z położenia kąta i dopiero oblicz tangens jako iloraz."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Użyj jedynki trygonometrycznej, dobierz znak z położenia kąta i dopiero oblicz tangens jako iloraz.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -5500,8 +5292,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Z jedynki trygonometrycznej \\(\\cos\\alpha{}=12/13\\), więc tangens wynosi \\(5/12\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.B.2",
       "level": "basic",
       "expectedValue": 0.4166666666666667,
@@ -5525,8 +5316,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Jedynka trygonometryczna daje \\(1-\\sin^2\\alpha{}=\\cos^2\\alpha\\). Po skróceniu przez niezerowy cosinus otrzymujemy \\(\\cos\\alpha\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -5555,8 +5345,7 @@
         "Właściwy plan brzmi: Dla trzech boków lub dwóch boków i kąta użyj twierdzenia cosinusów, a dla pola dwóch boków i kąta między nimi."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Dla trzech boków lub dwóch boków i kąta użyj twierdzenia cosinusów, a dla pola dwóch boków i kąta między nimi.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -5579,8 +5368,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Ponieważ \\(\\sin90^\\circ{}=1\\), pole wynosi \\((1/2)\\cdot8\\cdot5=20\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.B.3",
       "level": "basic",
       "expectedValue": 20.0,
@@ -5604,8 +5392,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Z \\(9^2=7^2+8^2-2\\cdot7\\cdot8\\cos\\gamma\\) otrzymujemy \\(81=113-112\\cos\\gamma\\), więc \\(\\cos\\gamma{}=2/7\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -5634,8 +5421,7 @@
         "Właściwy plan brzmi: Narysuj trójkąt prostokątny, przypisz bokom role względem kąta i wybierz odpowiednią funkcję."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Narysuj trójkąt prostokątny, przypisz bokom role względem kąta i wybierz odpowiednią funkcję.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -5658,8 +5444,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Z twierdzenia Pitagorasa \\(c=\\sqrt{81+144}=15\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.B.4",
       "level": "basic",
       "expectedValue": 15.0,
@@ -5683,8 +5468,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Mamy \\(\\operatorname{tg}45^\\circ{}=h/20=1\\), więc \\(h=20\\) m.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -5713,8 +5497,7 @@
         "Właściwy plan brzmi: Użyj proporcji \\(180^\\circ{}=\\pi\\) radianów i zachowaj jednostkę do końca przeliczenia."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Użyj proporcji \\(180^\\circ{}=\\pi\\) radianów i zachowaj jednostkę do końca przeliczenia.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5737,8 +5520,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\((3\\pi/4)\\cdot180^\\circ/\\pi{}=135^\\circ\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.1",
       "level": "extended",
       "expectedValue": 135.0,
@@ -5762,8 +5544,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Pełny obrót to \\(360^\\circ{}=2\\pi\\). Otrzymujemy \\(300^\\circ\\) oraz \\(5\\pi/3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5792,8 +5573,7 @@
         "Właściwy plan brzmi: Odczytaj z wzoru skalę pionową, przesunięcia i okres, a dla tangensa uwzględnij miejsca zerowe cosinusa."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Odczytaj z wzoru skalę pionową, przesunięcia i okres, a dla tangensa uwzględnij miejsca zerowe cosinusa.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5816,8 +5596,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Ponieważ \\(\\sin x\\in[-1,1]\\), minimum to \\(4\\cdot(-1)-1=-5\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.2",
       "level": "extended",
       "expectedValue": -5.0,
@@ -5841,8 +5620,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Okres wynosi \\(\\pi\\). Asymptoty pionowe mają równania \\(x=\\pi/2+k\\pi\\), gdzie \\(k\\in\\mathbb Z\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5871,8 +5649,7 @@
         "Właściwy plan brzmi: Odejmij całkowitą wielokrotność okresu, a przy skalowanym argumencie rozwiąż równanie na zmianę argumentu."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Odejmij całkowitą wielokrotność okresu, a przy skalowanym argumencie rozwiąż równanie na zmianę argumentu.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.3",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5895,8 +5672,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Odejmujemy \\(6\\pi\\): \\(13\\pi/2-6\\pi{}=\\pi/2\\), więc sinus wynosi \\(1\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.3",
       "level": "extended",
       "expectedValue": 1.0,
@@ -5920,8 +5696,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Cosinus powtarza wartości po przesunięciu o \\(2\\pi\\). Najmniejszy dodatni okres to \\(T=2\\pi\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.3",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5950,8 +5725,7 @@
         "Właściwy plan brzmi: Sprowadź kąt do pierwszej ćwiartki, ustal znak funkcji w ćwiartce i zastosuj odpowiednią tożsamość."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Sprowadź kąt do pierwszej ćwiartki, ustal znak funkcji w ćwiartce i zastosuj odpowiednią tożsamość.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.4",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -5974,8 +5748,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Ponieważ \\(120^\\circ{}=180^\\circ-60^\\circ\\), mamy \\(-\\cos60^\\circ{}=-1/2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.4",
       "level": "extended",
       "expectedValue": -0.5,
@@ -5999,8 +5772,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Odejmujemy \\(720^\\circ\\), otrzymując \\(45^\\circ\\). Zatem wartość to \\(\\sqrt2/2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.4",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -6029,8 +5801,7 @@
         "Właściwy plan brzmi: Rozłóż kąt na sumę lub różnicę kątów znanych i zastosuj właściwy wzór z kontrolą znaków."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Rozłóż kąt na sumę lub różnicę kątów znanych i zastosuj właściwy wzór z kontrolą znaków.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.5",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -6053,8 +5824,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\(\\sin60^\\circ{}=\\sqrt3/2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.5",
       "level": "extended",
       "expectedValue": 0.8660254037844386,
@@ -6078,8 +5848,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Wstawiamy \\(x+x\\): \\(\\sin(x+x)=\\sin x\\cos x+\\cos x\\sin x=2\\sin x\\cos x\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.5",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -6108,8 +5877,7 @@
         "Właściwy plan brzmi: Sprowadź równanie do jednej funkcji, zapisz rozwiązanie ogólne i wybierz wartości z podanego przedziału."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Sprowadź równanie do jednej funkcji, zapisz rozwiązanie ogólne i wybierz wartości z podanego przedziału.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.6",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -6132,8 +5900,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Rozwiązania to \\(\\pi/4\\) i \\(5\\pi/4\\), więc są dwa.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.6",
       "level": "extended",
       "expectedValue": 2.0,
@@ -6157,8 +5924,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Warunek \\(2x=k\\pi\\) daje \\(x=k\\pi/2\\). W przedziale leżą \\(-\\pi,-\\pi/2,0,\\pi/2,\\pi\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.6",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -6187,8 +5953,7 @@
         "Właściwy plan brzmi: Połącz każdy bok z kątem leżącym naprzeciw niego i sprawdź, czy dane wyznaczają jeden czy dwa kąty."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Połącz każdy bok z kątem leżącym naprzeciw niego i sprawdź, czy dane wyznaczają jeden czy dwa kąty.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.7",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -6211,8 +5976,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\(b=10\\sin90^\\circ/\\sin30^\\circ{}=20\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.7",
       "level": "extended",
       "expectedValue": 20.0,
@@ -6236,8 +6000,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Z twierdzenia sinusów \\(\\sin\\beta{}=10\\cdot(1/2)/8=5/8\\). W przedziale \\((0,180^\\circ)\\) sinus przyjmuje tę wartość dla kąta ostrego i dopełniającego go do \\(180^\\circ\\); jeśli suma z \\(\\alpha\\) jest mniejsza od \\(180^\\circ\\), powstają dwa trójkąty.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.7",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -6266,8 +6029,7 @@
         "Właściwy plan brzmi: Uzupełnij brakujące kąty, a następnie dobierz twierdzenie sinusów lub cosinusów do dostępnych par danych."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Uzupełnij brakujące kąty, a następnie dobierz twierdzenie sinusów lub cosinusów do dostępnych par danych.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.8",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -6290,8 +6052,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Suma kątów wynosi \\(180^\\circ\\), więc trzeci ma \\(70^\\circ\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.8",
       "level": "extended",
       "expectedValue": 70.0,
@@ -6315,8 +6076,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Trzeci kąt to \\(105^\\circ\\). Z twierdzenia sinusów \\(b=10\\sin45^\\circ/\\sin30^\\circ{}=10\\sqrt2\\), a \\(c=10\\sin105^\\circ/\\sin30^\\circ{}=5(\\sqrt6+\\sqrt2)\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VII.E.8",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -6345,8 +6105,7 @@
         "Właściwy plan brzmi: Połącz środek z końcem cięciwy lub punktem styczności i użyj prostopadłości oraz twierdzenia Pitagorasa."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Połącz środek z końcem cięciwy lub punktem styczności i użyj prostopadłości oraz twierdzenia Pitagorasa.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6369,8 +6128,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Średnica jest dwa razy większa od promienia, więc wynosi \\(14\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.1",
       "level": "basic",
       "expectedValue": 14.0,
@@ -6394,8 +6152,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Trójkąty utworzone przez środek, punkt zewnętrzny i punkty styczności są prostokątne, mają wspólną przeciwprostokątną oraz równe promienie. Są przystające, więc odcinki styczne są równe.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6424,8 +6181,7 @@
         "Właściwy plan brzmi: Uporządkuj boki i porównaj kwadrat najdłuższego z sumą kwadratów pozostałych."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Uporządkuj boki i porównaj kwadrat najdłuższego z sumą kwadratów pozostałych.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6448,8 +6204,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Najdłuższy bok ma \\(25\\), więc jego kwadrat wynosi \\(625\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.2",
       "level": "basic",
       "expectedValue": 625.0,
@@ -6473,8 +6228,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Naprzeciw dłuższego boku leży większy kąt. Ponieważ \\(9^2=81<6^2+7^2=85\\), największy kąt jest ostry, a zatem cały trójkąt jest ostrokątny.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6503,8 +6257,7 @@
         "Właściwy plan brzmi: Podziel wielokąt foremny na przystające trójkąty ze środkiem i użyj symetrii."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Podziel wielokąt foremny na przystające trójkąty ze środkiem i użyj symetrii.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6527,8 +6280,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Pełny kąt dzielimy na pięć równych części: \\(360^\\circ/5=72^\\circ\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.3",
       "level": "basic",
       "expectedValue": 72.0,
@@ -6552,8 +6304,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Obwód wynosi \\(24\\). Sześciokąt składa się z sześciu trójkątów równobocznych, więc pole to \\(6\\cdot(4^2\\sqrt3/4)=24\\sqrt3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6582,8 +6333,7 @@
         "Właściwy plan brzmi: Wykorzystaj równoległość, równość boków i własności przekątnych właściwe dla danego czworokąta."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wykorzystaj równoległość, równość boków i własności przekątnych właściwe dla danego czworokąta.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6606,8 +6356,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Z twierdzenia Pitagorasa przekątna wynosi \\(\\sqrt{36+64}=10\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.4",
       "level": "basic",
       "expectedValue": 10.0,
@@ -6631,8 +6380,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Kąty przy każdej podstawie są równe, a kąty przy ramieniu sumują się do \\(180^\\circ\\). Miary to \\(70^\\circ,70^\\circ,110^\\circ,110^\\circ\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6661,8 +6409,7 @@
         "Właściwy plan brzmi: Zidentyfikuj łuk i użyj relacji: kąt wpisany jest połową kąta środkowego opartego na tym samym łuku."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zidentyfikuj łuk i użyj relacji: kąt wpisany jest połową kąta środkowego opartego na tym samym łuku.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.5",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6685,8 +6432,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Kąt środkowy jest dwa razy większy, więc ma \\(74^\\circ\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.5",
       "level": "basic",
       "expectedValue": 74.0,
@@ -6710,8 +6456,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Wszystkie kąty wpisane oparte na tym samym łuku mają tę samą miarę, więc drugi również ma \\(42^\\circ\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.5",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6740,8 +6485,7 @@
         "Właściwy plan brzmi: Oblicz, jaką część pełnego kąta stanowi dany kąt, i pomnóż tę część przez obwód lub pole koła."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Oblicz, jaką część pełnego kąta stanowi dany kąt, i pomnóż tę część przez obwód lub pole koła.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.6",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6764,8 +6508,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Pole to \\((1/2)\\pi\\cdot4^2=8\\pi\\), więc współczynnik wynosi \\(8\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.6",
       "level": "basic",
       "expectedValue": 8.0,
@@ -6789,8 +6532,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Pełny obwód to \\(18\\pi\\), więc łuk stanowi \\(1/6\\) obwodu. Kąt ma \\(360^\\circ/6=60^\\circ\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.6",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6819,8 +6561,7 @@
         "Właściwy plan brzmi: Wskaż pary odpowiadających odcinków przeciętych przez proste równoległe i ułóż proporcję w tej samej kolejności."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wskaż pary odpowiadających odcinków przeciętych przez proste równoległe i ułóż proporcję w tej samej kolejności.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.7",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6843,8 +6584,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mnożenie na krzyż daje \\(2x=30\\), więc \\(x=15\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.7",
       "level": "basic",
       "expectedValue": 15.0,
@@ -6868,8 +6608,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Środki dzielą oba boki w tym samym stosunku \\(1:1\\). Z odwrotnej postaci zależności Talesa odcinek jest równoległy do podstawy, a podobieństwo w skali \\(1/2\\) daje połowę długości.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.7",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6898,8 +6637,7 @@
         "Właściwy plan brzmi: Dobierz jedną z cech podobieństwa i zachowaj kolejność odpowiadających sobie wierzchołków oraz boków."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Dobierz jedną z cech podobieństwa i zachowaj kolejność odpowiadających sobie wierzchołków oraz boków.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.8",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6922,8 +6660,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Stosunek odpowiadających boków wynosi \\(15/5=3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.8",
       "level": "basic",
       "expectedValue": 3.0,
@@ -6947,8 +6684,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Równość kąta zawartego i proporcjonalność obu par boków przy nim spełniają cechę bok-kąt-bok, więc trójkąty są podobne.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.8",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -6977,8 +6713,7 @@
         "Właściwy plan brzmi: Długości i obwody zmieniają się w skali \\(k\\), a pola w skali \\(k^2\\)."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Długości i obwody zmieniają się w skali \\(k\\), a pola w skali \\(k^2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.9",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7001,8 +6736,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Pole mnoży się przez \\(4^2=16\\), więc wynosi \\(12\\cdot16=192\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.9",
       "level": "basic",
       "expectedValue": 192.0,
@@ -7026,8 +6760,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Skala wynosi \\(30/18=5/3\\), więc stosunek pól \\(25/9\\). Pole większego to \\(27\\cdot25/9=75\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.9",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7056,8 +6789,7 @@
         "Właściwy plan brzmi: Połącz każdy punkt szczególny z właściwymi prostymi: medianami, dwusiecznymi, symetralnymi lub wysokościami."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Połącz każdy punkt szczególny z właściwymi prostymi: medianami, dwusiecznymi, symetralnymi lub wysokościami.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.10",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7080,8 +6812,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Środek ciężkości leży w \\(2/3\\) długości mediany od wierzchołka: \\(12\\cdot2/3=8\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.10",
       "level": "basic",
       "expectedValue": 8.0,
@@ -7105,8 +6836,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Środek okręgu wpisanego jest przecięciem dwusiecznych, opisanego przecięciem symetralnych boków, a ortocentrum przecięciem wysokości.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.10",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7135,8 +6865,7 @@
         "Właściwy plan brzmi: Nazwij tezę, wskaż dane i prowadź łańcuch uzasadnień oparty na definicjach, przystawaniu, podobieństwie lub znanych twierdzeniach."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Nazwij tezę, wskaż dane i prowadź łańcuch uzasadnień oparty na definicjach, przystawaniu, podobieństwie lub znanych twierdzeniach.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.11",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7159,8 +6888,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Pozostałe kąty są równe i mają łącznie \\(140^\\circ\\), więc każdy ma \\(70^\\circ\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.11",
       "level": "basic",
       "expectedValue": 70.0,
@@ -7184,8 +6912,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Prowadzimy przekątną i stosujemy twierdzenie o odcinku łączącym środki dwóch boków w obu powstałych trójkątach. Oba fragmenty odcinka są równoległe do odpowiednich podstaw, więc leżą na jednej prostej równoległej do obu podstaw.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.11",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7214,8 +6941,7 @@
         "Właściwy plan brzmi: Wydziel trójkąt prostokątny, wyznacz brakującą wysokość funkcją trygonometryczną i zastosuj właściwy wzór na pole."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wydziel trójkąt prostokątny, wyznacz brakującą wysokość funkcją trygonometryczną i zastosuj właściwy wzór na pole.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.12",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7238,8 +6964,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Pole wynosi \\(8\\cdot5\\sin30^\\circ{}=20\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.12",
       "level": "basic",
       "expectedValue": 20.0,
@@ -7263,8 +6988,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Apotema sześciokąta to wysokość trójkąta równobocznego: \\(3\\sqrt3\\). Odległość przeciwległych boków jest podwójną apotemą, czyli \\(6\\sqrt3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.B.12",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7293,8 +7017,7 @@
         "Właściwy plan brzmi: Dla czworokąta wpisanego użyj sumy kątów przeciwległych, a dla opisanego równości sum przeciwległych boków."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Dla czworokąta wpisanego użyj sumy kątów przeciwległych, a dla opisanego równości sum przeciwległych boków.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -7317,8 +7040,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Kąt przeciwległy ma \\(180^\\circ-95^\\circ{}=85^\\circ\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.E.1",
       "level": "extended",
       "expectedValue": 85.0,
@@ -7342,8 +7064,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "W prostokącie kąty przeciwległe mają po \\(90^\\circ\\), więc ich suma to \\(180^\\circ\\), co spełnia warunek wpisania. W rombie sumy długości przeciwległych boków są równe, bo wszystkie boki mają tę samą długość, co spełnia warunek opisania.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -7372,8 +7093,7 @@
         "Właściwy plan brzmi: Sprawdź, czy punkty leżą na dwóch bokach lub ramionach kąta i czy odpowiednie stosunki podziału są równe."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Sprawdź, czy punkty leżą na dwóch bokach lub ramionach kąta i czy odpowiednie stosunki podziału są równe.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -7396,8 +7116,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Iloraz wynosi \\(9/6=3/2=1,5\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.E.2",
       "level": "extended",
       "expectedValue": 1.5,
@@ -7421,8 +7140,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Twierdzenie odwrotne wymaga równości odpowiednich stosunków podziału obu boków, na przykład \\(AD/DB=AE/EC\\). Równość dwóch odcinków bez informacji o pozostałych nie zapewnia tej proporcji.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "VIII.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -7451,8 +7169,7 @@
         "Właściwy plan brzmi: Porównaj współczynniki kierunkowe albo rozwiąż układ równań i sklasyfikuj liczbę punktów wspólnych."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Porównaj współczynniki kierunkowe albo rozwiąż układ równań i sklasyfikuj liczbę punktów wspólnych.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7475,8 +7192,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Z \\(2x+1=-x+7\\) mamy \\(3x=6\\), więc \\(x=2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.1",
       "level": "basic",
       "expectedValue": 2.0,
@@ -7500,8 +7216,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Drugie równanie jest dokładnie dwukrotnością pierwszego, więc równania opisują tę samą prostą.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7530,8 +7245,7 @@
         "Właściwy plan brzmi: Oblicz nachylenie z punktów lub zachowaj proporcje współczynników przy równoległości, uwzględniając proste pionowe."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Oblicz nachylenie z punktów lub zachowaj proporcje współczynników przy równoległości, uwzględniając proste pionowe.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7554,8 +7268,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Współczynnik wynosi \\((9-1)/(4-0)=2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.2",
       "level": "basic",
       "expectedValue": 2.0,
@@ -7579,8 +7292,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Każdy punkt ma pierwszą współrzędną \\(-3\\), więc równanie to \\(x=-3\\). Nie jest wykresem funkcji \\(y=ax+b\\), bo jednemu argumentowi odpowiada wiele wartości \\(y\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7609,8 +7321,7 @@
         "Właściwy plan brzmi: Odejmij odpowiednie współrzędne, zastosuj twierdzenie Pitagorasa i pierwiastek oblicz dopiero na końcu."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Odejmij odpowiednie współrzędne, zastosuj twierdzenie Pitagorasa i pierwiastek oblicz dopiero na końcu.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7633,8 +7344,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\(\\sqrt{36+64}=10\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.3",
       "level": "basic",
       "expectedValue": 10.0,
@@ -7658,8 +7368,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Długości wynoszą \\(AB=3\\), \\(BC=4\\), \\(AC=5\\). Równość \\(3^2+4^2=5^2\\) dowodzi prostokątności przy \\(B\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7688,8 +7397,7 @@
         "Właściwy plan brzmi: Porównaj równanie z postacią \\((x-a)^2+(y-b)^2=r^2\\) albo wyznacz środek jako środek średnicy."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Porównaj równanie z postacią \\((x-a)^2+(y-b)^2=r^2\\) albo wyznacz środek jako środek średnicy.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7712,8 +7420,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Prawa strona to \\(r^2=49\\), więc promień wynosi \\(7\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.4",
       "level": "basic",
       "expectedValue": 7.0,
@@ -7737,8 +7444,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Po podstawieniu otrzymujemy \\((5-2)^2+(1-1)^2=9\\), czyli prawą stronę równania. Punkt leży na okręgu.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7767,8 +7473,7 @@
         "Właściwy plan brzmi: Przekształć każdy punkt: względem \\(Ox\\) zmień znak \\(y\\), względem \\(Oy\\) znak \\(x\\), a względem początku oba."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Przekształć każdy punkt: względem \\(Ox\\) zmień znak \\(y\\), względem \\(Oy\\) znak \\(x\\), a względem początku oba.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.5",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7791,8 +7496,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Symetria względem \\(Oy\\) zmienia znak pierwszej współrzędnej, więc wynosi ona \\(7\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.5",
       "level": "basic",
       "expectedValue": 7.0,
@@ -7816,8 +7520,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Środek \\((2,-1)\\) przechodzi na \\((-2,-1)\\), a promień się nie zmienia. Równanie obrazu to \\((x+2)^2+(y+1)^2=16\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.B.5",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -7846,8 +7549,7 @@
         "Właściwy plan brzmi: Podstaw równanie prostej do równania okręgu i oceń liczbę rozwiązań powstałego równania kwadratowego."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Podstaw równanie prostej do równania okręgu i oceń liczbę rozwiązań powstałego równania kwadratowego.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -7870,8 +7572,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Po podstawieniu \\(y=3\\) otrzymujemy \\(x^2=0\\), więc prosta jest styczna w jednym punkcie.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.E.1",
       "level": "extended",
       "expectedValue": 1.0,
@@ -7895,8 +7596,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Równanie \\(x^2=4-c^2\\) ma dwa rozwiązania dla \\(|c|<2\\), jedno dla \\(|c|=2\\) i żadnego dla \\(|c|>2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -7925,8 +7625,7 @@
         "Właściwy plan brzmi: Porównaj odległość środków z sumą i różnicą promieni albo odejmij równania, aby uzyskać oś wspólnej cięciwy."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Porównaj odległość środków z sumą i różnicą promieni albo odejmij równania, aby uzyskać oś wspólnej cięciwy.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -7949,8 +7648,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Zachodzi \\(|7-4|<5<7+4\\), więc okręgi przecinają się w dwóch punktach.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.E.2",
       "level": "extended",
       "expectedValue": 2.0,
@@ -7974,8 +7672,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Odjęcie równań daje \\(y=1\\). Wtedy \\(x^2+1=5\\), więc \\(x=\\pm2\\). Punkty to \\((2,1)\\) i \\((-2,1)\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -8004,8 +7701,7 @@
         "Właściwy plan brzmi: Odejmij współrzędne końca i początku, a działania na wektorach wykonuj osobno na każdej składowej."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Odejmij współrzędne końca i początku, a działania na wektorach wykonuj osobno na każdej składowej.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.E.3",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -8028,8 +7724,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Długość to \\(\\sqrt{36+64}=10\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.E.3",
       "level": "extended",
       "expectedValue": 10.0,
@@ -8053,8 +7748,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Dodajemy współrzędne wektora do punktu początkowego: \\(C=(2-5,3+4)=(-3,7)\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.E.3",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -8083,8 +7777,7 @@
         "Właściwy plan brzmi: Dla prostopadłości użyj ujemnej odwrotności nachylenia, a styczną ustaw prostopadle do promienia w punkcie styczności."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Dla prostopadłości użyj ujemnej odwrotności nachylenia, a styczną ustaw prostopadle do promienia w punkcie styczności.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.E.4",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -8107,8 +7800,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Iloczyn nachyleń prostych prostopadłych wynosi \\(-1\\), więc drugi współczynnik to \\(1/4\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.E.4",
       "level": "extended",
       "expectedValue": 0.25,
@@ -8132,8 +7824,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Promień do punktu styczności musi być pionowy. Punkty to \\((0,2)\\) i \\((0,-2)\\), więc styczne mają równania \\(y=2\\) i \\(y=-2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "IX.E.4",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -8162,8 +7853,7 @@
         "Właściwy plan brzmi: Sprawdź kolejno punkt wspólny, równoległość kierunków i możliwość zawarcia obu prostych w jednej płaszczyźnie."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Sprawdź kolejno punkt wspólny, równoległość kierunków i możliwość zawarcia obu prostych w jednej płaszczyźnie.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8186,8 +7876,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Proste skośne z definicji nie przecinają się, więc nie mają punktów wspólnych.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.1",
       "level": "basic",
       "expectedValue": 0.0,
@@ -8211,8 +7900,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Sąsiednie przecinają się, a w sześcianie są prostopadłe. Przeciwległe o tym samym kierunku są równoległe. Nieprzecinające się o różnych kierunkach są skośne.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8241,8 +7929,7 @@
         "Właściwy plan brzmi: Zbuduj rzut prostokątny prostej na płaszczyznę albo proste prostopadłe do wspólnej krawędzi ścian."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zbuduj rzut prostokątny prostej na płaszczyznę albo proste prostopadłe do wspólnej krawędzi ścian.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8265,8 +7952,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Z definicji prosta prostopadła do płaszczyzny tworzy z nią kąt \\(90^\\circ\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.2",
       "level": "basic",
       "expectedValue": 90.0,
@@ -8290,8 +7976,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Wysokość z twierdzenia Pitagorasa wynosi \\(8\\). Sinus kąta między prostą a płaszczyzną to stosunek składowej prostopadłej do długości prostej: \\(8/10=4/5\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8320,8 +8005,7 @@
         "Właściwy plan brzmi: Wskaż rzut odcinka na podstawę i zbuduj trójkąt prostokątny zawierający szukany kąt."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wskaż rzut odcinka na podstawę i zbuduj trójkąt prostokątny zawierający szukany kąt.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8344,8 +8028,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Przekątna ma długość \\(\\sqrt{3^2+4^2+12^2}=\\sqrt{169}=13\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.3",
       "level": "basic",
       "expectedValue": 13.0,
@@ -8369,8 +8052,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Łączymy wierzchołek ostrosłupa, wierzchołek podstawy i środek podstawy. Krawędź boczna jest przeciwprostokątną, jej rzutem na podstawę jest odcinek od środka do wierzchołka, a wysokość jest prostopadła do podstawy.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.3",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8399,8 +8081,7 @@
         "Właściwy plan brzmi: Wykonaj przekrój osiowy i zamień zagadnienie przestrzenne na trójkąt prostokątny lub równoramienny."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wykonaj przekrój osiowy i zamień zagadnienie przestrzenne na trójkąt prostokątny lub równoramienny.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8423,8 +8104,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Z twierdzenia Pitagorasa \\(h=\\sqrt{13^2-5^2}=12\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.4",
       "level": "basic",
       "expectedValue": 12.0,
@@ -8448,8 +8128,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Przekrój osiowy jest trójkątem równoramiennym, którego ramiona są tworzącymi. Kąt rozwarcia to kąt przy wierzchołku między tymi ramionami; wysokość stożka dzieli go na połowy.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.4",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8478,8 +8157,7 @@
         "Właściwy plan brzmi: Rozpoznaj bryłę, wyznacz brakujące długości z przekroju i zastosuj wzór z poprawną potęgą jednostki."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Rozpoznaj bryłę, wyznacz brakujące długości z przekroju i zastosuj wzór z poprawną potęgą jednostki.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.5",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8502,8 +8180,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Objętość wynosi \\(5^3=125\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.5",
       "level": "basic",
       "expectedValue": 125.0,
@@ -8527,8 +8204,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Pole wynosi \\(4\\pi r^2=36\\pi\\), a objętość \\((4/3)\\pi r^3=36\\pi\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.5",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8557,8 +8233,7 @@
         "Właściwy plan brzmi: Wyznacz skalę długości, pamiętając, że pola rosną z \\(k^2\\), a objętości z \\(k^3\\)."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wyznacz skalę długości, pamiętając, że pola rosną z \\(k^2\\), a objętości z \\(k^3\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.6",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8581,8 +8256,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Objętość mnoży się przez \\(2^3=8\\), więc wynosi \\(56\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.6",
       "level": "basic",
       "expectedValue": 56.0,
@@ -8606,8 +8280,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Skala długości wynosi \\(3:5\\), więc stosunek objętości to \\(3^3:5^3=27:125\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.B.6",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8636,8 +8309,7 @@
         "Właściwy plan brzmi: Wskaż dwie przecinające się proste w płaszczyźnie albo rzut odcinka i zastosuj właściwe twierdzenie o prostopadłości."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Wskaż dwie przecinające się proste w płaszczyźnie albo rzut odcinka i zastosuj właściwe twierdzenie o prostopadłości.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -8660,8 +8332,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Wystarczą dwie przecinające się proste tej płaszczyzny.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.E.1",
       "level": "extended",
       "expectedValue": 2.0,
@@ -8685,8 +8356,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Przez punkt w płaszczyźnie istnieje wiele kierunków prostopadłych do jednej wybranej prostej, w tym kierunki leżące w samej płaszczyźnie. Dopiero dwie przecinające się proste ustalają normalny kierunek płaszczyzny.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -8715,8 +8385,7 @@
         "Właściwy plan brzmi: Znajdź punkty przecięcia płaszczyzny z krawędziami, połącz je w kolejności i oblicz pole z podobieństwa lub przekątnych ścian."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Znajdź punkty przecięcia płaszczyzny z krawędziami, połącz je w kolejności i oblicz pole z podobieństwa lub przekątnych ścian.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -8739,8 +8408,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Przekrój ma bok \\(6\\), więc pole wynosi \\(36\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.E.2",
       "level": "extended",
       "expectedValue": 36.0,
@@ -8764,8 +8432,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Przekrój jest kwadratem podobnym do podstawy. Jeśli odległości od wierzchołka na krawędziach bocznych są w skali \\(k\\) względem całych krawędzi, boki przekroju są w skali \\(k\\), a jego pole w skali \\(k^2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "X.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -8794,8 +8461,7 @@
         "Właściwy plan brzmi: Opisz obiekty bez pominięć i podwójnego liczenia, używając tabeli, drzewa lub wyboru kolejnych miejsc."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Opisz obiekty bez pominięć i podwójnego liczenia, używając tabeli, drzewa lub wyboru kolejnych miejsc.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XI.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8818,8 +8484,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Możliwe uporządkowane wyniki to \\(OO,OR,RO,RR\\), czyli cztery.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XI.B.1",
       "level": "basic",
       "expectedValue": 4.0,
@@ -8843,8 +8508,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Każdy uścisk odpowiada wyborowi pary bez kolejności, więc liczba wynosi \\(8\\cdot7/2=28\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XI.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8873,8 +8537,7 @@
         "Właściwy plan brzmi: Rozdziel rozłączne przypadki regułą dodawania, a kolejne niezależne decyzje regułą mnożenia."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Rozdziel rozłączne przypadki regułą dodawania, a kolejne niezależne decyzje regułą mnożenia.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XI.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8897,8 +8560,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Wybieramy po jednej pozycji z każdej grupy: \\(3\\cdot5\\cdot2=30\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XI.B.2",
       "level": "basic",
       "expectedValue": 30.0,
@@ -8922,8 +8584,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Gdy ostatnia cyfra to \\(0\\), pierwszą wybieramy na \\(3\\), a dwie środkowe ustawiamy na \\(2\\) sposoby: \\(6\\). Gdy ostatnia to \\(2\\), pierwsza ma \\(2\\) wybory bez zera i dwójki, a środek \\(2\\) ustawienia: \\(4\\). Razem \\(10\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XI.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -8952,8 +8613,7 @@
         "Właściwy plan brzmi: Rozstrzygnij, czy kolejność ma znaczenie i czy elementy mogą się powtarzać, a potem dobierz permutacje, wariacje lub kombinacje."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Rozstrzygnij, czy kolejność ma znaczenie i czy elementy mogą się powtarzać, a potem dobierz permutacje, wariacje lub kombinacje.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XI.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -8976,8 +8636,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Liczba wynosi \\(\\binom{10}{5}=252\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XI.E.1",
       "level": "extended",
       "expectedValue": 252.0,
@@ -9001,8 +8660,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Kolejno mamy \\(7,6,5,4\\) możliwości, więc liczba wariacji bez powtórzeń wynosi \\(7\\cdot6\\cdot5\\cdot4=840\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XI.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -9031,8 +8689,7 @@
         "Właściwy plan brzmi: Zapisz kryterium jako wybór podzbiorów, zastosuj symbol Newtona i użyj symetrii lub reguły Pascala do uproszczenia."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zapisz kryterium jako wybór podzbiorów, zastosuj symbol Newtona i użyj symetrii lub reguły Pascala do uproszczenia.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XI.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -9055,8 +8712,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Z reguły Pascala suma wynosi \\(\\binom{10}{6}=210\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XI.E.2",
       "level": "extended",
       "expectedValue": 210.0,
@@ -9080,8 +8736,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Wybieramy \\(3\\) z \\(7\\) kobiet i \\(2\\) z \\(5\\) mężczyzn: \\(\\binom73\\binom52=35\\cdot10=350\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XI.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -9110,8 +8765,7 @@
         "Właściwy plan brzmi: Zbuduj skończoną przestrzeń równoprawdopodobnych wyników i podziel liczbę wyników sprzyjających przez wszystkie."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Zbuduj skończoną przestrzeń równoprawdopodobnych wyników i podziel liczbę wyników sprzyjających przez wszystkie.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XII.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -9134,8 +8788,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Sprzyjają dwa z czterech wyników: \\(OR\\) i \\(RO\\), więc prawdopodobieństwo wynosi \\(1/2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XII.B.1",
       "level": "basic",
       "expectedValue": 0.5,
@@ -9159,8 +8812,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Jest \\(36\\) uporządkowanych wyników. Sumę \\(8\\) dają \\((2,6),(3,5),(4,4),(5,3),(6,2)\\), więc prawdopodobieństwo wynosi \\(5/36\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XII.B.1",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -9189,8 +8841,7 @@
         "Właściwy plan brzmi: Uporządkuj dane dla mediany i dominanty, a przy średniej ważonej podziel sumę iloczynów przez sumę wag."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Uporządkuj dane dla mediany i dominanty, a przy średniej ważonej podziel sumę iloczynów przez sumę wag.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XII.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -9213,8 +8864,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Dla sześciu danych mediana jest średnią dwóch środkowych: \\((6+9)/2=7,5\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XII.B.2",
       "level": "basic",
       "expectedValue": 7.5,
@@ -9238,8 +8888,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Początkowo średnia i mediana wynoszą \\(5\\). Po dodaniu \\(100\\) średnia wynosi \\(115/4=28,75\\), a mediana \\((5+6)/2=5,5\\). Odstająca wartość silnie zmienia średnią, lecz niewiele medianę.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XII.B.2",
       "level": "basic",
       "absoluteTolerance": 1E-09,
@@ -9268,8 +8917,7 @@
         "Właściwy plan brzmi: Rozpisz przecięcia i gałęzie drzewa, oblicz prawdopodobieństwo całkowite, a w Bayesie odwróć warunek przez iloraz."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Rozpisz przecięcia i gałęzie drzewa, oblicz prawdopodobieństwo całkowite, a w Bayesie odwróć warunek przez iloraz.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XII.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -9292,8 +8940,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Z definicji prawdopodobieństwa warunkowego \\(P(A\\cap B)=P(A)P(B|A)=0,2\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XII.E.1",
       "level": "extended",
       "expectedValue": 0.2,
@@ -9317,8 +8964,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Prawdopodobieństwo wady wynosi \\(0,6\\cdot0,02+0,4\\cdot0,05=0,032\\). Z Bayesa prawdopodobieństwo drugiej maszyny przy wadzie to \\(0,4\\cdot0,05/0,032=0,625\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XII.E.1",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -9347,8 +8993,7 @@
         "Właściwy plan brzmi: Sprawdź niezależność i stałe prawdopodobieństwo sukcesu, dobierz liczbę sukcesów oraz użyj współczynnika dwumianowego."
       ],
       "revealedAnswer": "Poprawna jest odpowiedź A. Sprawdź niezależność i stałe prawdopodobieństwo sukcesu, dobierz liczbę sukcesów oraz użyj współczynnika dwumianowego.",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XII.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,
@@ -9371,8 +9016,7 @@
         "Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej."
       ],
       "revealedAnswer": "Mamy \\(\\binom31(0,5)^1(0,5)^2=3/8=0,375\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XII.E.2",
       "level": "extended",
       "expectedValue": 0.375,
@@ -9396,8 +9040,7 @@
         "Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku."
       ],
       "revealedAnswer": "Zdarzeniem przeciwnym jest brak sukcesu we wszystkich próbach, o prawdopodobieństwie \\(0,9^{10}\\). Szukany wynik to \\(1-0,9^{10}\\approx0,65132\\).",
-      "assets": [],
-      "assetAlternativeTexts": [],
+      "diagramIds": [],
       "requirementId": "XII.E.2",
       "level": "extended",
       "absoluteTolerance": 1E-09,

@@ -58,27 +58,25 @@ Nie wolno usuwać parametru bramy, ręcznie zmieniać `releaseEligible` ani wył
 
 ## Aktualny stan
 
-`releaseEligible` ma wartość `true`. Wszystkie zasoby paczkowane przez projekt mają status `approved`. Podstawę dla trzech grup, które wcześniej były zablokowane, stanowi [deklaracja praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 19 lipca 2026 r. Deklarację rozszerzono 27 lipca 2026 r. o transkrypcję tablic CKE dla Formuły 2023. Kurs Formuły 2023 rozdziela urzędowe brzmienie wymagań, autorskie materiały dydaktyczne i zachowane materiały historyczne.
+`releaseEligible` ma wartość `true`. Wszystkie zasoby paczkowane przez projekt mają status `approved`. Podstawę stanowi [deklaracja praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 19 lipca 2026 r., rozszerzona 27 lipca o transkrypcję tablic CKE i zaktualizowana 29 lipca po usunięciu rastrów z działania aplikacji. Kurs Formuły 2023 rozdziela urzędowe brzmienie wymagań, autorskie materiały dydaktyczne i zachowane materiały historyczne.
 
 ### Materiały CKE
 
-Grupa `cke-2021-correction-exam` obejmuje `Content/exam-2021-correction.json` i `img/mp21z*.png`. Autorem źródłowego arkusza i zasad oceniania `EMAP-P0-100-2108` pozostaje Centralna Komisja Egzaminacyjna, a adaptację i weryfikację wykonał Adam Kubiś. Status `approved` wynika z deklaracji posiadania praw lub skutecznego upoważnienia do publicznej redystrybucji tych zasobów jako części Abiturii. Deklaracja nie przenosi autorstwa i nie udziela samodzielnej licencji na te materiały poza Abiturią.
+Grupa `cke-2021-correction-exam` obejmuje wyłącznie `Content/exam-2021-correction.json`. Autorem źródłowego arkusza i zasad oceniania `EMAP-P0-100-2108` pozostaje Centralna Komisja Egzaminacyjna, a adaptację i weryfikację wykonał Adam Kubiś. Diagramy używane przez zadania są osobnymi definicjami w katalogu `runtime-vector-diagrams`.
 
 Grupa `cke-formula-2023-transcription` obejmuje `Content/formulas.json`. Dokument źródłowy CKE jest wskazany dokładnym adresem i sumą SHA-256 w katalogu treści oraz w [macierzy pokrycia tablic](FORMULA_2023_COVERAGE.md). Transkrypcję i weryfikację wykonał Adam Kubiś, natomiast autorem dokumentu źródłowego pozostaje Centralna Komisja Egzaminacyjna. Status `approved` wynika z rozszerzenia deklaracji z 27 lipca 2026 r.
 
 ### Kurs matematyki Formuły 2023
 
-Grupa `mathematics-course-formula-2023` obejmuje `Content/chapters.json`, `Content/course-exercises.json` i `img/course/*.png`. Dokładne wymagania pochodzą z podstawy programowej ogłoszonej w Dz.U. 2024 poz. 1019. Katalog przypina adres aktu, dwa informatory CKE, ich sumy SHA-256 i datę weryfikacji. Informatory służą do określenia kontekstu egzaminu; ich zadania, rozwiązania ani ilustracje nie zostały skopiowane.
+Grupa `mathematics-course-formula-2023` obejmuje `Content/chapters.json` i `Content/course-exercises.json`. Dokładne wymagania pochodzą z podstawy programowej ogłoszonej w Dz.U. 2024 poz. 1019. Katalog przypina adres aktu, dwa informatory CKE, ich sumy SHA-256 i datę weryfikacji. Informatory służą do określenia kontekstu egzaminu; ich zadania, rozwiązania ani ilustracje nie zostały skopiowane.
 
-Przykłady, ćwiczenia, podpowiedzi, pełne rozwiązania i cztery diagramy kursu są materiałami autorskimi Adama Kubisia. Zachowane fragmenty issue #35 nadal mają historyczne przypisanie i identyfikatory. Maszynowa macierz [MATH_COURSE_2023_COVERAGE.md](MATH_COURSE_2023_COVERAGE.md) rozdziela te warstwy oraz dokumentuje kontrakt `119/238/357`.
+Przykłady, ćwiczenia, podpowiedzi, pełne rozwiązania i cztery nowe definicje diagramów kursu są materiałami autorskimi Adama Kubisia. Osiem zachowanych diagramów wektorowych nadal ma historyczne przypisanie. Maszynowa macierz [MATH_COURSE_2023_COVERAGE.md](MATH_COURSE_2023_COVERAGE.md) rozdziela te warstwy oraz dokumentuje kontrakt `119/238/357`.
 
-### Odziedziczone grafiki matematyczne
+### Diagramy i archiwum historyczne
 
-Grupa `inherited-mathematics-images` obejmuje `img/?.png` i `img/w*.png`. Autorzy pozostają nieustaleni, a źródłem są historyczne snapshoty projektu. Status `approved` wynika z deklaracji posiadania praw lub skutecznego upoważnienia do publicznej redystrybucji tych grafik jako części Abiturii. Nie jest to przypisanie autorstwa ani samodzielna licencja na grafiki.
+Grupa `runtime-vector-diagrams` obejmuje `Content/diagrams.json` z dokładnie 57 definicjami wektorowymi: 36 dla tablic wzorów, 9 dla arkusza i 12 dla kursu. Każda definicja ma stabilny identyfikator, źródło i opis alternatywny. Aplikacja renderuje wyłącznie te dane, bez ładowania rastrów.
 
-### Grafiki i ikony aplikacji
-
-Grupa `inherited-application-images` obejmuje grafiki nawigacji, `img/icon.png` oraz `img/icon.ico`, z którego wyprowadzane są metadane graficzne paczek Windows i macOS. Autorzy pozostają nieustaleni, a źródłem są historyczne snapshoty projektu. Status `approved` wynika z deklaracji posiadania praw lub skutecznego upoważnienia do publicznej redystrybucji tych grafik jako części Abiturii. Nie jest to przypisanie autorstwa ani samodzielna licencja na grafiki.
+Siedemdziesiąt pięć historycznych obrazów znajduje się w `docs/legacy/originals/images/`. Pliki zachowano bajt w bajt, udokumentowano mapowaniem `PATH-MAPPING.csv` i sumami `SHA256SUMS`, ale nie są paczkowane ani publikowane przez DocFX. Jedynym statycznym wyjątkiem jest `img/icon.ico` w grupie `application-icon`, używany wyłącznie jako `ApplicationIcon`.
 
 ## Grupy zatwierdzone
 
@@ -87,7 +85,7 @@ Manifest oznacza obecnie jako `approved`:
 - aktualne treści techniczne i inwentarz autorstwa Adama Kubisia na licencji MIT;
 - autorskie przykłady, ćwiczenia, rozwiązania i diagramy kursu Formuły 2023 wraz z przypisanym urzędowym źródłem dokładnego brzmienia wymagań;
 - zmigrowane treści matematyczne, dla których dowodem jest zachowana historyczna licencja MIT i inwentarz migracji;
-- arkusz CKE 2021, transkrypcję tablic CKE dla Formuły 2023 oraz odziedziczone grafiki objęte deklaracją praw lub upoważnienia do publicznej redystrybucji wyłącznie jako części Abiturii;
+- arkusz CKE 2021, transkrypcję tablic CKE dla Formuły 2023, katalog diagramów oraz ikonę aplikacji objęte deklaracją praw lub upoważnienia do publicznej redystrybucji wyłącznie jako części Abiturii;
 - font Mulish na licencji SIL Open Font License 1.1, potwierdzonej przez `fonts/OFL.txt` i `fonts/README.txt`.
 
 Status zatwierdzony należy ponownie ocenić po każdej zmianie źródła, zakresu plików albo sposobu pakowania.
@@ -106,7 +104,7 @@ Usunięcie problematycznego pliku jest dopuszczalne tylko wtedy, gdy projekt prz
 
 ## Zależności programistyczne
 
-Pakiety NuGet nie są wpisywane do manifestu zasobów. Ich dokładnie rozwiązane wersje i licencje generują [DEPENDENCIES.md](DEPENDENCIES.md) oraz [THIRD-PARTY-NOTICES.md](../THIRD-PARTY-NOTICES.md). Fonty, obrazy i treści pozostają w `Content/provenance.json`, ponieważ nie są rozwiązywane przez NuGet.
+Pakiety NuGet nie są wpisywane do manifestu zasobów. Ich dokładnie rozwiązane wersje i licencje generują [DEPENDENCIES.md](DEPENDENCIES.md) oraz [THIRD-PARTY-NOTICES.md](../THIRD-PARTY-NOTICES.md). Fonty, ikona, aktywne diagramy i treści pozostają w `Content/provenance.json`, ponieważ nie są rozwiązywane przez NuGet. Niepublikowane oryginały historyczne są opisane we własnym archiwum i nie należą do zbioru paczkowanych zasobów.
 
 ## Kryterium zgody na publikację
 

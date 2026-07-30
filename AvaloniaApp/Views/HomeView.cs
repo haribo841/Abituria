@@ -11,7 +11,15 @@ namespace Abituria.Views;
 
 public sealed class HomeView : UserControl
 {
-    public HomeView(string profileName, UiCopyCatalog copy, Action showFormulas, Action showExams, Action showCalculator, Action showChapters, Action showRoadmap)
+    public HomeView(
+        string profileName,
+        UiCopyCatalog copy,
+        Action showFormulas,
+        Action showMatura,
+        Action showTasks,
+        Action showCalculator,
+        Action showChapters,
+        Action showRoadmap)
     {
         var root = new StackPanel { Spacing = 20 };
         root.Children.Add(UiFactory.PageTitle("Start", $"Cześć, {profileName}. Wybierz obszar nauki."));
@@ -26,11 +34,12 @@ public sealed class HomeView : UserControl
         };
         var tiles = new[]
         {
-            AddTile(grid, new HomeTile("Wzory", "18 pełnych tablic matematycznych", "img/wzory.png", showFormulas)),
-            AddTile(grid, new HomeTile("Zadania", "Matura poprawkowa 2021 i archiwalne zestawy", "img/zadania.png", showExams)),
-            AddTile(grid, new HomeTile("Kalkulator", "Wyrażenia i pełna analiza funkcji kwadratowej", "img/kalkulator.png", showCalculator)),
-            AddTile(grid, new HomeTile("Działy", "13 obszarów: teoria, przykłady i 357 ćwiczeń", "img/dzialy.png", showChapters)),
-            AddTile(grid, new HomeTile("Plan rozwoju", "Przeniesione, zaplanowane i zastąpione elementy starych wersji", "img/abituria.png", showRoadmap))
+            AddTile(grid, new HomeTile("Wzory", "18 pełnych tablic matematycznych", "📐", showFormulas)),
+            AddTile(grid, new HomeTile("Matura", "Arkusz poprawkowy 2021 i archiwalne zestawy", "🎓", showMatura)),
+            AddTile(grid, new HomeTile("Zadania", "35 zadań uporządkowanych w 17 tematach", "📝", showTasks)),
+            AddTile(grid, new HomeTile("Kalkulator", "Wyrażenia i pełna analiza funkcji kwadratowej", "🧮", showCalculator)),
+            AddTile(grid, new HomeTile("Działy", "13 obszarów: teoria, przykłady i 357 ćwiczeń", "📚", showChapters)),
+            AddTile(grid, new HomeTile("Plan rozwoju", "Przeniesione, zaplanowane i zastąpione elementy starych wersji", "🗺️", showRoadmap))
         };
 
         AdaptiveLayout.ObserveWidth(this, 780, isCompact => ApplyTileLayout(grid, tiles, isCompact));
@@ -43,7 +52,7 @@ public sealed class HomeView : UserControl
     private static Button AddTile(Grid grid, HomeTile tile)
     {
         var content = new StackPanel { Spacing = 10 };
-        content.Children.Add(UiFactory.AssetImage(tile.Asset, 52, 52, $"Ikona sekcji {tile.Title}"));
+        content.Children.Add(UiFactory.Glyph(tile.Glyph, 44, $"Ikona sekcji {tile.Title}"));
         content.Children.Add(new TextBlock { Text = tile.Title, Classes = { "h2" } });
         content.Children.Add(new TextBlock { Text = tile.Description, Classes = { "muted" }, TextWrapping = TextWrapping.Wrap });
         var button = new Button
@@ -66,7 +75,7 @@ public sealed class HomeView : UserControl
         if (isCompact)
         {
             grid.ColumnDefinitions = new ColumnDefinitions("*");
-            grid.RowDefinitions = new RowDefinitions("Auto,Auto,Auto,Auto,Auto");
+            grid.RowDefinitions = new RowDefinitions("Auto,Auto,Auto,Auto,Auto,Auto");
             grid.ColumnSpacing = 0;
             for (var index = 0; index < tiles.Length; index++)
                 Position(tiles[index], 0, index);
@@ -80,7 +89,8 @@ public sealed class HomeView : UserControl
         Position(tiles[1], 1, 0);
         Position(tiles[2], 0, 1);
         Position(tiles[3], 1, 1);
-        Position(tiles[4], 0, 2, 2);
+        Position(tiles[4], 0, 2);
+        Position(tiles[5], 1, 2);
     }
 
     private static void Position(Control control, int column, int row, int columnSpan = 1)
@@ -90,5 +100,5 @@ public sealed class HomeView : UserControl
         Grid.SetColumnSpan(control, columnSpan);
     }
 
-    private sealed record HomeTile(string Title, string Description, string Asset, Action Action);
+    private sealed record HomeTile(string Title, string Description, string Glyph, Action Action);
 }

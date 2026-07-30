@@ -51,7 +51,7 @@ Legenda statusów:
 - dialogi kodu odzyskiwania są skalowalne, mają minimalne i maksymalne wymiary oraz przewijanie;
 - komunikaty konta, sprawdzania zadania i kalkulatorów mają nazwy automatyzacji oraz ustawienie live `Polite`;
 - symboliczne przyciski, obrazy treści i pola wejściowe otrzymują opisowe nazwy automatyzacji.
-- placeholdery pól używają kontrastowego `TextMutedBrush`, a czarny napis w rastrowym logo jest prezentowany na stałej jasnej powierzchni także w motywie ciemnym i wysokiego kontrastu.
+- placeholdery pól używają kontrastowego `TextMutedBrush`, a tekstowy znak koniczyny i nazwa aplikacji korzystają z kolorów bieżącego motywu.
 
 ## Kontrast palet
 
@@ -79,7 +79,7 @@ Wartości dotyczą zdefiniowanych zasobów palety. Test renderowania pozostaje p
 
 | Kryterium | Poziom | Status | Ocena i dowód |
 | --- | --- | --- | --- |
-| 1.1.1 Non-text Content | A | `M` | `UiFactory.AssetImage` ustawia tekst alternatywny, kafle mają nazwy i opisy automatyzacji, a przyciski symboliczne mają nazwy opisujące działanie. Należy potwierdzić na natywnym drzewie automatyzacji, że obrazy dekoracyjne nie są ogłaszane, a wszystkie ilustracje edukacyjne mają użyteczny opis. |
+| 1.1.1 Non-text Content | A | `M` | `DiagramView` udostępnia opis alternatywny z walidowanego katalogu, kafle mają nazwy i opisy automatyzacji, a przyciski symboliczne mają nazwy opisujące działanie. Należy potwierdzić opisy diagramów na natywnym drzewie automatyzacji. |
 | 1.2.1 Audio-only and Video-only (Prerecorded) | A | `N/D` | Aplikacja nie zawiera audio ani wideo. |
 | 1.2.2 Captions (Prerecorded) | A | `N/D` | Aplikacja nie zawiera zsynchronizowanych nagrań. |
 | 1.2.3 Audio Description or Media Alternative (Prerecorded) | A | `N/D` | Aplikacja nie zawiera nagrań wideo. |
@@ -92,7 +92,7 @@ Wartości dotyczą zdefiniowanych zasobów palety. Test renderowania pozostaje p
 | 1.3.5 Identify Input Purpose | AA | `N/D` | Kryterium opiera się na programowych tokenach celu wejścia dostępnych w technologiach webowych. W aplikacji lokalnej pola mają opisowe nazwy automatyzacji, ale nie istnieje odpowiednik HTML `autocomplete`. |
 | 1.4.1 Use of Color | A | `P` | Sukces, błąd, status roadmapy i ukończenie zadania mają tekst lub symbol oprócz koloru. |
 | 1.4.2 Audio Control | A | `N/D` | Aplikacja nie odtwarza dźwięku. |
-| 1.4.3 Contrast (Minimum) | AA | `P` | Reprezentatywne pary zwykłego tekstu i placeholderów we wszystkich trzech paletach przekraczają `4,5:1`. Czarny napis rastrowego logo ma dedykowane białe tło. Wartości są zapisane w tabeli kontrastu i chronione testem zasobów oraz właściwości kontrolek. |
+| 1.4.3 Contrast (Minimum) | AA | `P` | Reprezentatywne pary zwykłego tekstu i placeholderów we wszystkich trzech paletach przekraczają `4,5:1`. Znak aplikacji i diagramy używają dynamicznych zasobów kolorów motywu. Wartości są zapisane w tabeli kontrastu i chronione testem właściwości kontrolek. |
 | 1.4.4 Resize Text | AA | `M` | Układy zawijają tekst, przewijają treść i reagują na mniejszą szerokość. Należy wykonać ręczny przegląd przy systemowym skalowaniu tekstu i DPI do odpowiednika `200%` na każdej wspieranej platformie. |
 | 1.4.5 Images of Text | AA | `P` | Tekst interfejsu jest renderowany jako tekst. Obraz logo korzysta z wyjątku dla logotypu, a grafiki matematyczne są częścią materiału edukacyjnego i mają nazwy alternatywne. |
 | 1.4.10 Reflow | AA | `M` | Login, Start i kalkulator mają jawne breakpointy, pozostałe widoki zawijają tekst i przewijają się pionowo. Desktopowe minimum `720x520` nie jest równoważne wymaganiu webowemu `320` pikseli CSS, dlatego nie składamy ścisłej deklaracji dla tego kryterium. |

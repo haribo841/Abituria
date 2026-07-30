@@ -24,8 +24,8 @@ if (-not $CuratedChaptersOnly) {
     }
 
     $formulaCatalog = Get-Content -Raw -Encoding UTF8 $FormulaCatalogPath | ConvertFrom-Json
-    if ($formulaCatalog.schemaVersion -ne 3 -or @($formulaCatalog.articles).Count -ne 18) {
-        throw 'Katalog FormulaCatalogPath musi mieć schemaVersion 3 i dokładnie 18 działów.'
+    if ($formulaCatalog.schemaVersion -ne 4 -or @($formulaCatalog.articles).Count -ne 18) {
+        throw 'Katalog FormulaCatalogPath musi mieć schemaVersion 4 i dokładnie 18 działów.'
     }
 }
 
@@ -179,6 +179,25 @@ function Convert-TokensToText([object[]]$Tokens) {
     return (Repair-LegacyText $result.Trim())
 }
 
+function Convert-ImagePathToDiagramId([string]$Path) {
+    $normalized = $Path.Replace('\\', '/').TrimStart('/')
+    $map = @{
+        'img/1.png' = 'course-vector-1'; 'img/2.png' = 'course-vector-2'
+        'img/3.png' = 'course-vector-3'; 'img/4.png' = 'course-vector-4'
+        'img/5.png' = 'course-vector-5'; 'img/6.png' = 'course-vector-6'
+        'img/7.png' = 'course-vector-7'; 'img/8.png' = 'course-vector-8'
+        'img/mp21z9.png' = 'exam-mp21-z9'; 'img/mp21z12.png' = 'exam-mp21-z12'
+        'img/mp21z17.png' = 'exam-mp21-z17'; 'img/mp21z18.png' = 'exam-mp21-z18'
+        'img/mp21z19.png' = 'exam-mp21-z19'; 'img/mp21z20.png' = 'exam-mp21-z20'
+        'img/mp21z24.png' = 'exam-mp21-z24'; 'img/mp21z32.png' = 'exam-mp21-z32'
+        'img/mp21z33.png' = 'exam-mp21-z33'
+    }
+    if (-not $map.ContainsKey($normalized)) {
+        throw "Brak bezpiecznego mapowania dawnej grafiki na diagram: $normalized"
+    }
+    return $map[$normalized]
+}
+
 function Convert-TokensToBlocks([object[]]$Tokens) {
     $blocks = [System.Collections.Generic.List[object]]::new()
     $buffer = [System.Collections.Generic.List[object]]::new()
@@ -189,7 +208,7 @@ function Convert-TokensToBlocks([object[]]$Tokens) {
                 $blocks.Add([ordered]@{ type = 'richText'; text = $text })
             }
             $buffer.Clear()
-            $blocks.Add([ordered]@{ type = 'image'; asset = $token.Value })
+            $blocks.Add([ordered]@{ type = 'diagram'; diagramId = (Convert-ImagePathToDiagramId $token.Value) })
         } elseif ($token.Kind -ne 'Option') {
             $buffer.Add($token)
         }
@@ -298,7 +317,8 @@ function Get-Exercises {
             mode = $(if ($number -le 28) { 'multipleChoice' } else { 'revealOnly' })
             prompt = Convert-TokensToText $parts.PromptTokens; options = $parts.Options
             correctOption = $answer; hints = @(Get-Hints $code)
-            revealedAnswer = Get-RevealedAnswer $code; assets = $parts.Assets
+            revealedAnswer = Get-RevealedAnswer $code
+            diagramIds = @($parts.Assets | ForEach-Object { Convert-ImagePathToDiagramId $_ })
         }
 
         # The legacy XAML contains copied answers and hints; keep verified CKE corrections deterministic.
@@ -328,7 +348,7 @@ function Get-Exercises {
                     '\(\text{Kąt środkowy ma miarę dwa razy większą od kąta wpisanego opartego na tym samym łuku.}\)',
                     '\(\angle BSC=2\cdot20^{\circ}=40^{\circ}\)'
                 )
-                $exercise.assets = @('img/mp21z17.png')
+                $exercise.diagramIds = @('exam-mp21-z17')
             }
             18 {
                 $exercise.prompt = 'Okrąg o środku w punkcie \(O\) jest wpisany w trójkąt \(ABC\). Wiadomo, że \(|AB|=|AC|\) i \(\angle BOC=100^{\circ}\) (zobacz rysunek). Miara kąta \(BAC\) jest równa:'
@@ -452,8 +472,28 @@ $placeholders = @(
 $roadmap = @($issue35Seed.roadmapItems)
 
 Write-Json 'formulas.json' $formulaCatalog
-Write-Json 'chapters.json' ([ordered]@{ schemaVersion = 2; introduction = @($issue35Seed.chapterIntroduction); chapters = $chapters })
-Write-Json 'exam-2021-correction.json' ([ordered]@{ schemaVersion = 2; exam = $exam })
+Write-Json 'exam-2021-correction.json' ([ordered]@{ schemaVersion = 3; exam = $exam })
 Write-Json 'placeholders.json' ([ordered]@{ schemaVersion = 2; items = $placeholders })
 Write-Json 'roadmap.json' ([ordered]@{ schemaVersion = 1; introduction = @($issue35Seed.roadmapIntroduction); items = $roadmap })
-Write-Host "Wygenerowano: $($formulas.Count) tablic, $($chapters.Count) działów i $($exam.exercises.Count) zadań."
+$legacyCatalogName = '.legacy-chapters.json'
+$legacyCatalogPath = Join-Path $OutputRoot $legacyCatalogName
+Write-Json $legacyCatalogName ([ordered]@{
+        schemaVersion = 2
+        introduction = @($issue35Seed.chapterIntroduction)
+        chapters = $chapters
+    })
+
+try {
+    & (Join-Path $PSScriptRoot 'New-MathCourseContent.ps1') `
+        -ContentRoot $OutputRoot `
+        -DocumentationPath (Join-Path $OutputRoot 'MATH_COURSE_2023_COVERAGE.md') `
+        -LegacyCatalogPath $legacyCatalogPath
+    & (Join-Path $PSScriptRoot 'New-DiagramCatalog.ps1') `
+        -OutputPath (Join-Path $OutputRoot 'diagrams.json')
+} finally {
+    if (Test-Path -LiteralPath $legacyCatalogPath -PathType Leaf) {
+        Remove-Item -LiteralPath $legacyCatalogPath -Force
+    }
+}
+
+Write-Host "Wygenerowano: $($formulas.Count) tablic, 34 lekcje kursu, 57 diagramów i $($exam.exercises.Count) zadań."

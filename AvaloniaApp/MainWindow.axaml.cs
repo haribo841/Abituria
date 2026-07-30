@@ -109,14 +109,16 @@ public partial class MainWindow : Window
         header.Classes.Add("app-header");
         var grid = new Grid { ColumnDefinitions = new ColumnDefinitions("Auto,*,Auto"), ColumnSpacing = 18 };
         var brand = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 10, VerticalAlignment = VerticalAlignment.Center };
-        brand.Children.Add(UiFactory.AssetImage("img/icon.png", 34, 34, "Logo Abituria"));
+        AutomationProperties.SetName(brand, "🍀 Abituria");
+        brand.Children.Add(UiFactory.Glyph("🍀", 30, "Koniczyna Abituria"));
         brand.Children.Add(new TextBlock { Text = "Abituria", Classes = { "brand-text" }, VerticalAlignment = VerticalAlignment.Center });
         grid.Children.Add(brand);
 
         var nav = new WrapPanel { HorizontalAlignment = HorizontalAlignment.Center, VerticalAlignment = VerticalAlignment.Center };
         AddNav(nav, "Start", AppPage.Home);
         AddNav(nav, "Wzory", AppPage.Formulas);
-        AddNav(nav, "Zadania", AppPage.Exams);
+        AddNav(nav, "Matura", AppPage.Matura);
+        AddNav(nav, "Zadania", AppPage.Tasks);
         AddNav(nav, "Działy", AppPage.Chapters);
         AddNav(nav, "Kalkulator", AppPage.Calculator);
         AddNav(nav, "Plan rozwoju", AppPage.Roadmap);
@@ -147,8 +149,14 @@ public partial class MainWindow : Window
     private bool IsSelected(AppPage page) => page switch
     {
         AppPage.Formulas => _viewModel.CurrentPage is AppPage.Formulas or AppPage.FormulaDetail,
-        AppPage.Exams => _viewModel.CurrentPage is AppPage.Exams or AppPage.ExerciseList ||
-            (_viewModel.CurrentPage == AppPage.Exercise && _viewModel.SelectedExercise?.IsCourseExercise != true),
+        AppPage.Matura => _viewModel.CurrentPage == AppPage.Matura ||
+            (_viewModel.ExamNavigationOrigin == ExamNavigationOrigin.Matura &&
+             (_viewModel.CurrentPage is AppPage.ExerciseList or AppPage.Exercise) &&
+             _viewModel.SelectedExercise?.IsCourseExercise != true),
+        AppPage.Tasks => _viewModel.CurrentPage == AppPage.Tasks ||
+            (_viewModel.ExamNavigationOrigin == ExamNavigationOrigin.Tasks &&
+             (_viewModel.CurrentPage is AppPage.ExerciseList or AppPage.Exercise) &&
+             _viewModel.SelectedExercise?.IsCourseExercise != true),
         AppPage.Chapters => _viewModel.CurrentPage is AppPage.Chapters or AppPage.CourseArea or AppPage.CourseLesson ||
             (_viewModel.CurrentPage == AppPage.Exercise && _viewModel.SelectedExercise?.IsCourseExercise == true),
         AppPage.Calculator => _viewModel.CurrentPage is AppPage.Calculator or AppPage.GeneralCalculator,
@@ -162,22 +170,36 @@ public partial class MainWindow : Window
             _viewModel.ActiveProfile!.DisplayName,
             _content.UiCopy,
             () => _viewModel.Navigate(AppPage.Formulas),
-            () => _viewModel.Navigate(AppPage.Exams),
+            () => _viewModel.Navigate(AppPage.Matura),
+            () => _viewModel.Navigate(AppPage.Tasks),
             () => _viewModel.Navigate(AppPage.Calculator),
             () => _viewModel.Navigate(AppPage.Chapters),
             () => _viewModel.OpenRoadmap()),
         AppPage.Formulas => new FormulaListView(_content.Formulas, _viewModel.OpenFormula),
         AppPage.FormulaDetail when _viewModel.SelectedFormula is not null => new ArticleView(
             _viewModel.SelectedFormula.Title, "Tablica matematyczna", _viewModel.SelectedFormula.Blocks,
-            () => _viewModel.Navigate(AppPage.Formulas)),
-        AppPage.Exams => new ExamOverviewView(
+            () => _viewModel.Navigate(AppPage.Formulas), _content.Diagrams),
+        AppPage.Matura => new MaturaView(
             _content.Exam,
             _content.Placeholders.Items,
             _viewModel.OpenExam,
+            _viewModel.OpenPlaceholder,
+            _viewModel.OpenRandomExercise),
+        AppPage.Tasks => new TaskTopicsView(
+            _content.Exam,
+            _content.Placeholders.Items,
             _viewModel.OpenTopic,
             _viewModel.OpenPlaceholder,
             _viewModel.OpenRandomExercise),
-        AppPage.ExerciseList => new ExerciseListView(_content.Exam, _viewModel.SelectedTopicId, _viewModel.ActiveProfile!, _accounts, _viewModel.OpenExercise, () => _viewModel.Navigate(AppPage.Exams)),
+        AppPage.ExerciseList => new ExerciseListView(
+            _content.Exam,
+            _viewModel.SelectedTopicId,
+            _viewModel.ActiveProfile!,
+            _accounts,
+            _viewModel.OpenExercise,
+            _viewModel.ExamNavigationOrigin == ExamNavigationOrigin.Matura ? "← Matura" : "← Zadania",
+            () => _viewModel.Navigate(
+                _viewModel.ExamNavigationOrigin == ExamNavigationOrigin.Matura ? AppPage.Matura : AppPage.Tasks)),
         AppPage.Exercise when _viewModel.SelectedExercise is not null => new ExerciseView(
             _viewModel.SelectedExercise, CreateExerciseViewContext()),
         AppPage.Chapters => new ChapterListView(
@@ -198,7 +220,8 @@ public partial class MainWindow : Window
             _viewModel.SelectedCourseLesson,
             _viewModel.SelectedCourseLevel,
             _viewModel.OpenCourseExercise,
-            () => _viewModel.Navigate(AppPage.CourseArea)),
+            () => _viewModel.Navigate(AppPage.CourseArea),
+            _content.Diagrams),
         AppPage.Calculator => new CalculatorView(_content.UiCopy, _viewModel.OpenGeneralCalculator, OpenPlannedCalculator),
         AppPage.GeneralCalculator => new GeneralCalculatorView(
             _calculatorSession, _content.UiCopy, () => _viewModel.Navigate(AppPage.Calculator)),
@@ -212,7 +235,12 @@ public partial class MainWindow : Window
         AppPage.Placeholder when _viewModel.SelectedPlaceholder is not null => new PlaceholderView(
             _viewModel.SelectedPlaceholder.Title, _viewModel.SelectedPlaceholder.Message,
             _viewModel.SelectedPlaceholder.Blocks,
-            () => _viewModel.Navigate(_viewModel.SelectedPlaceholder.Category == "calculator" ? AppPage.Calculator : AppPage.Exams),
+            () => _viewModel.Navigate(_viewModel.SelectedPlaceholder.Category switch
+            {
+                "calculator" => AppPage.Calculator,
+                "exam" => AppPage.Matura,
+                _ => AppPage.Tasks
+            }),
             _viewModel.SelectedPlaceholder.RoadmapId is null ? null : () => _viewModel.OpenRoadmap(_viewModel.SelectedPlaceholder.RoadmapId)),
         _ => new TextBlock { Text = "Nie udało się otworzyć strony.", Margin = new Thickness(30) }
     };
@@ -240,6 +268,24 @@ public partial class MainWindow : Window
     {
         var courseExercise = _viewModel.SelectedExercise?.IsCourseExercise == true;
         var legalSource = _content.MathCourse.Sources.Single(source => source.Id == "legal-basis-2024");
+        Action back;
+        string backLabel;
+        if (courseExercise)
+        {
+            back = () => _viewModel.Navigate(AppPage.Chapters);
+            backLabel = "Działy";
+        }
+        else if (_viewModel.ExamNavigationOrigin == ExamNavigationOrigin.Matura)
+        {
+            back = () => _viewModel.Navigate(AppPage.Matura);
+            backLabel = "Matura";
+        }
+        else
+        {
+            back = () => _viewModel.Navigate(AppPage.Tasks);
+            backLabel = "Zadania";
+        }
+
         return new ExerciseViewContext(
             CurrentExerciseContext(),
             courseExercise
@@ -248,12 +294,11 @@ public partial class MainWindow : Window
             _content.UiCopy,
             _viewModel.ActiveProfile!,
             _accounts,
-            courseExercise
-                ? () => _viewModel.Navigate(AppPage.CourseLesson)
-                : () => _viewModel.Navigate(AppPage.ExerciseList),
+            _content.Diagrams,
+            back,
             courseExercise ? _viewModel.OpenCourseExercise : _viewModel.OpenExercise)
         {
-            BackLabel = courseExercise ? "Lekcja" : "Lista zadań",
+            BackLabel = backLabel,
             SourceUrl = courseExercise ? legalSource.DocumentUrl : null
         };
     }

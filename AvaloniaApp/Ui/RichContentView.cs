@@ -16,7 +16,7 @@ public sealed class RichContentView : UserControl
     private const string InlineMathOpeningDelimiter = @"\(";
     private const string InlineMathClosingDelimiter = @"\)";
 
-    public RichContentView(IEnumerable<ContentBlock> blocks)
+    public RichContentView(IEnumerable<ContentBlock> blocks, DiagramCatalog? diagrams = null)
     {
         var stack = new StackPanel { Spacing = 14, HorizontalAlignment = HorizontalAlignment.Stretch };
         foreach (var block in blocks)
@@ -26,12 +26,10 @@ public sealed class RichContentView : UserControl
                 case "richText" when !string.IsNullOrWhiteSpace(block.Text):
                     stack.Children.Add(CreateText(block.Text));
                     break;
-                case "image" when !string.IsNullOrWhiteSpace(block.Asset):
-                    stack.Children.Add(UiFactory.AssetImage(
-                        block.Asset,
-                        920,
-                        560,
-                        block.AlternativeText ?? "Ilustracja matematyczna"));
+                case "diagram" when !string.IsNullOrWhiteSpace(block.DiagramId):
+                    if (diagrams is null)
+                        throw new InvalidOperationException($"Brak katalogu dla diagramu '{block.DiagramId}'.");
+                    stack.Children.Add(new DiagramView(diagrams.GetRequired(block.DiagramId)));
                     break;
             }
         }

@@ -16,6 +16,8 @@ public sealed class ContentRepository
     public ContentRepository()
     {
         Formulas = Load<FormulaCatalog>("Content/formulas.json");
+        Diagrams = Load<DiagramCatalog>("Content/diagrams.json");
+        DiagramCatalogValidator.Validate(Diagrams);
         MathCourse = Load<MathCourseCatalog>("Content/chapters.json");
         CourseExercises = Load<CourseExerciseCatalog>("Content/course-exercises.json");
         Exam = Load<ExamCatalog>("Content/exam-2021-correction.json").Exam;
@@ -25,6 +27,7 @@ public sealed class ContentRepository
     }
 
     public FormulaCatalog Formulas { get; }
+    public DiagramCatalog Diagrams { get; }
     public MathCourseCatalog MathCourse { get; }
     public CourseExerciseCatalog CourseExercises { get; }
     public ExamDefinition Exam { get; }

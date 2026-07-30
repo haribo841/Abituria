@@ -186,12 +186,13 @@ public sealed class ReleaseContractTests
 
         Assert.Contains("dotnet tool run docfx", workflow, StringComparison.Ordinal);
         Assert.Contains("--warningsAsErrors", workflow, StringComparison.Ordinal);
-        Assert.Contains("actions/deploy-pages@v4", workflow, StringComparison.Ordinal);
+        Assert.Contains("actions/deploy-pages@v5", workflow, StringComparison.Ordinal);
         Assert.Contains(
             "    permissions:\n      contents: read\n      pages: write\n      id-token: write",
             buildJob,
             StringComparison.Ordinal);
-        Assert.Contains("actions/configure-pages@v5", buildJob, StringComparison.Ordinal);
+        Assert.Contains("actions/configure-pages@v6", buildJob, StringComparison.Ordinal);
+        Assert.Contains("actions/upload-pages-artifact@v5", buildJob, StringComparison.Ordinal);
         Assert.Contains("https://haribo841.github.io/Abituria/", docfx, StringComparison.Ordinal);
         Assert.DoesNotContain("\"resource\"", docfx, StringComparison.Ordinal);
         Assert.DoesNotContain("img", docfx, StringComparison.OrdinalIgnoreCase);
@@ -415,12 +416,9 @@ public sealed class ReleaseContractTests
             "schedule:",
             "workflow_dispatch:",
             "security-events: write",
-            "actions/checkout@v4",
-            "actions/setup-dotnet@v4",
+            "actions/checkout@v5",
             "github/codeql-action/init@v4",
-            "build-mode: manual",
-            "dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode",
-            "dotnet build Abituria.sln --configuration Release --no-restore --no-incremental",
+            "build-mode: none",
             "github/codeql-action/analyze@v4"
         };
 
@@ -435,9 +433,52 @@ public sealed class ReleaseContractTests
             Assert.Contains(fragment, codeQlWorkflow, StringComparison.Ordinal));
         Assert.DoesNotContain("branches: [master]", codeQlWorkflow, StringComparison.Ordinal);
         Assert.DoesNotContain("github/codeql-action/autobuild", codeQlWorkflow, StringComparison.Ordinal);
+        Assert.DoesNotContain("actions/setup-dotnet", codeQlWorkflow, StringComparison.Ordinal);
+        Assert.DoesNotContain("dotnet restore", codeQlWorkflow, StringComparison.Ordinal);
+        Assert.DoesNotContain("dotnet build", codeQlWorkflow, StringComparison.Ordinal);
+        Assert.DoesNotContain("build-mode: manual", codeQlWorkflow, StringComparison.Ordinal);
         Assert.DoesNotContain("make ", codeQlWorkflow, StringComparison.Ordinal);
         Assert.Contains("braku nowych, nierozstrzygniętych alertów", securityPolicy, StringComparison.Ordinal);
         Assert.Contains("### CodeQL", pullRequestTemplate, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void Workflows_use_node_24_compatible_action_majors_without_legacy_references()
+    {
+        var workflows = Directory.GetFiles(Absolute(".github/workflows"), "*.yml")
+            .Select(File.ReadAllText)
+            .ToArray();
+        var allWorkflows = string.Join('\n', workflows);
+        var requiredActions = new[]
+        {
+            "actions/checkout@v5",
+            "actions/setup-dotnet@v5",
+            "actions/cache@v5",
+            "actions/configure-pages@v6",
+            "actions/upload-pages-artifact@v5",
+            "actions/deploy-pages@v5",
+            "actions/upload-artifact@v6",
+            "actions/download-artifact@v7",
+            "actions/setup-python@v7",
+            "actions/attest@v4",
+            "github/codeql-action/init@v4",
+            "github/codeql-action/analyze@v4"
+        };
+        var forbiddenActions = new[]
+        {
+            "actions/checkout@v4",
+            "actions/setup-dotnet@v4",
+            "actions/cache@v4",
+            "actions/configure-pages@v5",
+            "actions/upload-pages-artifact@v4",
+            "actions/deploy-pages@v4",
+            "actions/upload-artifact@v4",
+            "actions/download-artifact@v4"
+        };
+
+        Assert.All(requiredActions, action => Assert.Contains(action, allWorkflows, StringComparison.Ordinal));
+        Assert.All(forbiddenActions, action => Assert.DoesNotContain(action, allWorkflows, StringComparison.Ordinal));
+        Assert.DoesNotContain("ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION", allWorkflows, StringComparison.Ordinal);
     }
 
     [Fact]

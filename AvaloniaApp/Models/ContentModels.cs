@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Text.Json.Serialization;
 
 namespace Abituria.Models;
@@ -47,6 +48,53 @@ public sealed class FormulaSourceDocument
     public string DocumentSha256 { get; set; } = string.Empty;
     public string PublishedOn { get; set; } = string.Empty;
     public string VerifiedOn { get; set; } = string.Empty;
+}
+
+public sealed class DiagramCatalog
+{
+    public int SchemaVersion { get; set; }
+    public List<DiagramDefinition> Diagrams { get; set; } = [];
+
+    public DiagramDefinition GetRequired(string id)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(id);
+        var matches = Diagrams.Where(item => string.Equals(item.Id, id, StringComparison.Ordinal)).Take(2).ToArray();
+        return matches.Length == 1
+            ? matches[0]
+            : throw new KeyNotFoundException($"Diagram '{id}' nie istnieje albo jego identyfikator nie jest unikalny.");
+    }
+}
+
+public sealed class DiagramDefinition
+{
+    public string Id { get; set; } = string.Empty;
+    public string SourceId { get; set; } = string.Empty;
+    public string AlternativeText { get; set; } = string.Empty;
+    public double Width { get; set; }
+    public double Height { get; set; }
+    public List<DiagramPrimitive> Primitives { get; set; } = [];
+}
+
+public sealed class DiagramPrimitive
+{
+    public string Type { get; set; } = string.Empty;
+    public List<double> Points { get; set; } = [];
+    public double X { get; set; }
+    public double Y { get; set; }
+    public double X2 { get; set; }
+    public double Y2 { get; set; }
+    public double RadiusX { get; set; }
+    public double RadiusY { get; set; }
+    public double StartAngle { get; set; }
+    public double SweepAngle { get; set; }
+    public string? Text { get; set; }
+    public string Stroke { get; set; } = "primary";
+    public string Fill { get; set; } = "none";
+    public double StrokeThickness { get; set; } = 2;
+    public double FontSize { get; set; } = 22;
+    public bool Dashed { get; set; }
+    public bool ArrowStart { get; set; }
+    public bool ArrowEnd { get; set; }
 }
 
 public sealed class FormulaArticle
@@ -140,8 +188,7 @@ public sealed class ContentBlock
 {
     public string Type { get; set; } = string.Empty;
     public string? Text { get; set; }
-    public string? Asset { get; set; }
-    public string? AlternativeText { get; set; }
+    public string? DiagramId { get; set; }
 }
 
 public sealed class ExamCatalog
@@ -180,7 +227,7 @@ public sealed class ExerciseTopicDefinition
     public List<int> ExerciseNumbers { get; set; } = [];
 }
 
-public class LearningExercise
+public sealed class LearningExercise
 {
     public string Id { get; set; } = string.Empty;
     public string ExamId { get; set; } = string.Empty;
@@ -196,8 +243,7 @@ public class LearningExercise
     public int? CorrectOption { get; set; }
     public List<string> Hints { get; set; } = [];
     public string? RevealedAnswer { get; set; }
-    public List<string> Assets { get; set; } = [];
-    public List<string> AssetAlternativeTexts { get; set; } = [];
+    public List<string> DiagramIds { get; set; } = [];
     public string? RequirementId { get; set; }
     public string? Level { get; set; }
     public double? ExpectedValue { get; set; }
@@ -207,10 +253,6 @@ public class LearningExercise
     public bool IsNumeric => string.Equals(Mode, "numeric", StringComparison.OrdinalIgnoreCase);
     public bool IsRevealOnly => string.Equals(Mode, "revealOnly", StringComparison.OrdinalIgnoreCase);
     public bool IsCourseExercise => Id.StartsWith("course-", StringComparison.Ordinal);
-}
-
-public sealed class ExerciseDefinition : LearningExercise
-{
 }
 
 public sealed class CourseExerciseCatalog

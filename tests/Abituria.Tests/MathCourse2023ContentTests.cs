@@ -3,6 +3,7 @@ using System.Text.Json;
 using Abituria.Data;
 using Abituria.Models;
 using Abituria.Services;
+using Abituria.Ui;
 using Abituria.ViewModels;
 using Abituria.Views;
 using Avalonia;
@@ -49,7 +50,7 @@ public sealed class MathCourse2023ContentTests
         var course = Read<MathCourseCatalog>("Content/chapters.json");
         var exerciseCatalog = Read<CourseExerciseCatalog>("Content/course-exercises.json");
 
-        Assert.Equal(3, course.SchemaVersion);
+        Assert.Equal(4, course.SchemaVersion);
         Assert.Equal(Author, course.Author);
         Assert.Equal(1, exerciseCatalog.SchemaVersion);
         Assert.Equal(Author, exerciseCatalog.Author);
@@ -84,22 +85,21 @@ public sealed class MathCourse2023ContentTests
     }
 
     [Fact]
-    public void Geometry_diagrams_are_original_course_assets_with_alternative_descriptions()
+    public void Course_diagrams_use_stable_catalog_ids_with_alternative_descriptions()
     {
         var course = Read<MathCourseCatalog>("Content/chapters.json");
-        var imageBlocks = course.Lessons.SelectMany(lesson => lesson.Blocks)
-            .Where(block => block.Asset?.StartsWith("img/course/", StringComparison.Ordinal) == true)
+        var diagrams = Read<DiagramCatalog>("Content/diagrams.json");
+        var diagramBlocks = course.Lessons.SelectMany(lesson => lesson.Blocks)
+            .Where(block => block.Type == "diagram")
             .ToArray();
 
-        Assert.Equal(4, imageBlocks.Length);
-        Assert.All(imageBlocks, block =>
-        {
-            Assert.EndsWith(".png", block.Asset, StringComparison.OrdinalIgnoreCase);
-            Assert.False(string.IsNullOrWhiteSpace(block.AlternativeText));
-            Assert.True(File.Exists(Absolute(block.Asset!)), block.Asset);
-            Assert.True(new FileInfo(Absolute(block.Asset!)).Length > 1_000, block.Asset);
-        });
-        Assert.Equal(4, imageBlocks.Select(block => block.Asset).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(12, diagramBlocks.Length);
+        Assert.Equal(12, diagramBlocks.Select(block => block.DiagramId).Distinct(StringComparer.Ordinal).Count());
+        Assert.All(diagramBlocks, block =>
+            Assert.Contains(diagrams.Diagrams, diagram => diagram.Id == block.DiagramId &&
+                !string.IsNullOrWhiteSpace(diagram.AlternativeText)));
+        Assert.Equal(4, diagrams.Diagrams.Count(diagram => diagram.SourceId == "adam-course"));
+        Assert.Equal(8, diagrams.Diagrams.Count(diagram => diagram.SourceId == "legacy-vectors"));
     }
 
     [Fact]
@@ -157,6 +157,17 @@ public sealed class MathCourse2023ContentTests
             AssertJsonEquivalent(Absolute("Content/chapters.json"), Path.Combine(outputRoot, "chapters.json"));
             AssertJsonEquivalent(Absolute("Content/course-exercises.json"), Path.Combine(outputRoot, "course-exercises.json"));
             Assert.True(File.Exists(documentationPath));
+            var generatedDocumentation = NormalizeLineEndings(File.ReadAllText(documentationPath));
+            var trackedDocumentation = NormalizeLineEndings(File.ReadAllText(Absolute("docs/MATH_COURSE_2023_COVERAGE.md")));
+            Assert.Equal(trackedDocumentation, generatedDocumentation);
+            Assert.Contains("- [Rozporządzenie Ministra Edukacji", generatedDocumentation, StringComparison.Ordinal);
+            Assert.Contains("  - wydawca: Rzeczpospolita Polska", generatedDocumentation, StringComparison.Ordinal);
+            Assert.Contains($"  - SHA-256: `{LegalHash}`", generatedDocumentation, StringComparison.Ordinal);
+            Assert.Contains($"  - SHA-256: `{BasicGuideHash}`", generatedDocumentation, StringComparison.Ordinal);
+            Assert.Contains($"  - SHA-256: `{ExtendedGuideHash}`", generatedDocumentation, StringComparison.Ordinal);
+            Assert.Equal(3, generatedDocumentation.Split("  - weryfikacja: 2026-07-28", StringSplitOptions.None).Length - 1);
+            foreach (var forbidden in new[] { "$(@{", ".documentSha256", "System.Management.Automation" })
+                Assert.DoesNotContain(forbidden, generatedDocumentation, StringComparison.Ordinal);
             Assert.Contains("119 ", result.StandardOutput, StringComparison.Ordinal);
             Assert.Contains("357 ", result.StandardOutput, StringComparison.Ordinal);
         }
@@ -319,6 +330,7 @@ public sealed class MathCourse2023ContentTests
             AssertResponsive(window, extendedAreaView);
 
             var lesson = course.Lessons.Single(item => item.Id == "real-numbers");
+            var diagrams = Read<DiagramCatalog>("Content/diagrams.json");
             var openedExercises = new List<LearningExercise>();
             var lessonView = new CourseLessonView(
                 course,
@@ -326,7 +338,8 @@ public sealed class MathCourse2023ContentTests
                 lesson,
                 CourseLevelFilter.Basic,
                 openedExercises.Add,
-                () => { });
+                () => { },
+                diagrams);
             window.Content = lessonView;
             Render();
             Assert.Equal(lesson.WorkedExamples.Count, lessonView.GetLogicalDescendants().OfType<TextBlock>()
@@ -347,6 +360,7 @@ public sealed class MathCourse2023ContentTests
                 new AccountService(
                     new AppDbContextFactory(Path.Combine(Path.GetTempPath(), $"course-navigation-{Guid.NewGuid():N}.db")),
                     new PasswordHasher(1_000)),
+                diagrams,
                 () => { },
                 navigatedExercises.Add)
             {
@@ -373,11 +387,12 @@ public sealed class MathCourse2023ContentTests
                 diagramLesson,
                 CourseLevelFilter.Basic,
                 _ => { },
-                () => { });
+                () => { },
+                diagrams);
             window.Content = diagramView;
             Render();
-            Assert.Contains(diagramView.GetLogicalDescendants().OfType<Image>(), image =>
-                AutomationProperties.GetName(image)?.Contains("Trójkąt prostokątny", StringComparison.Ordinal) == true);
+            Assert.Contains(diagramView.GetLogicalDescendants().OfType<DiagramView>(), diagram =>
+                AutomationProperties.GetName(diagram)?.Contains("Trójkąt prostokątny", StringComparison.Ordinal) == true);
         }
         finally
         {
@@ -402,6 +417,7 @@ public sealed class MathCourse2023ContentTests
             repository.UiCopy,
             profile,
             accounts,
+            repository.Diagrams,
             () => { },
             _ => { })
         {
@@ -670,6 +686,10 @@ public sealed class MathCourse2023ContentTests
         using var actual = JsonDocument.Parse(File.ReadAllText(actualPath));
         Assert.True(JsonElement.DeepEquals(expected.RootElement, actual.RootElement), actualPath);
     }
+
+    private static string NormalizeLineEndings(string value) => value
+        .Replace("\r\n", "\n", StringComparison.Ordinal)
+        .Replace('\r', '\n');
 
     private static void Render() => Dispatcher.UIThread.RunJobs();
 

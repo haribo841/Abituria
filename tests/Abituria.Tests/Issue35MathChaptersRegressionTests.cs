@@ -116,7 +116,7 @@ public sealed class Issue35MathChaptersRegressionTests
     {
         var catalog = Read<MathCourseCatalog>("Content/chapters.json");
 
-        Assert.Equal(3, catalog.SchemaVersion);
+        Assert.Equal(4, catalog.SchemaVersion);
         Assert.Equal(
             RetainedLessonIds,
             catalog.Lessons.Where(lesson => RetainedLessonIds.Contains(lesson.Id, StringComparer.Ordinal))
@@ -354,6 +354,7 @@ public sealed class Issue35MathChaptersRegressionTests
             var home = new HomeView(
                 "Tester",
                 Read<UiCopyCatalog>("Content/ui-copy.json"),
+                () => { },
                 () => { },
                 () => { },
                 () => { },

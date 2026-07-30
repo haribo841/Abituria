@@ -66,30 +66,26 @@ function Get-DiagramBlock([string]$LessonId) {
     switch ($LessonId) {
         'trigonometry' {
             return [ordered]@{
-                type = 'image'
-                asset = 'img/course/right-triangle.png'
-                alternativeText = 'Trójkąt prostokątny z przyprostokątnymi a i b, przeciwprostokątną c oraz zaznaczonym kątem alfa.'
+                type = 'diagram'
+                diagramId = 'course-right-triangle'
             }
         }
         'planimetry' {
             return [ordered]@{
-                type = 'image'
-                asset = 'img/course/circle-angles.png'
-                alternativeText = 'Okrąg z kątem środkowym AOB i kątem wpisanym ACB opartymi na tym samym łuku AB.'
+                type = 'diagram'
+                diagramId = 'course-circle-angles'
             }
         }
         'analytic-geometry' {
             return [ordered]@{
-                type = 'image'
-                asset = 'img/course/coordinate-vector.png'
-                alternativeText = 'Układ współrzędnych z punktami A i B oraz wektorem od A do B, którego składowe pokazano równolegle do osi.'
+                type = 'diagram'
+                diagramId = 'course-coordinate-vector'
             }
         }
         'stereometry' {
             return [ordered]@{
-                type = 'image'
-                asset = 'img/course/cube-section.png'
-                alternativeText = 'Sześcian z zaznaczoną płaszczyzną przekroju przechodzącą przez trzy wierzchołki.'
+                type = 'diagram'
+                diagramId = 'course-cube-section'
             }
         }
         default { return $null }
@@ -150,7 +146,10 @@ function New-CoverageDocument([object]$Catalog, [object[]]$Requirements, [object
     [void]$builder.AppendLine('## Przypięte źródła')
     [void]$builder.AppendLine()
     foreach ($source in $Catalog.sources) {
-        [void]$builder.AppendLine("- [$($source.title)]($($source.documentUrl)) - SHA-256 `$($source.documentSha256)`; weryfikacja $($source.verifiedOn).")
+        [void]$builder.AppendLine(('- [{0}]({1})' -f [string]$source.title, [string]$source.documentUrl))
+        [void]$builder.AppendLine(('  - wydawca: {0}' -f [string]$source.publisher))
+        [void]$builder.AppendLine(('  - SHA-256: `{0}`' -f [string]$source.documentSha256))
+        [void]$builder.AppendLine(('  - weryfikacja: {0}' -f [string]$source.verifiedOn))
     }
     [void]$builder.AppendLine()
     [void]$builder.AppendLine('## Audyt liczbowy')
@@ -359,8 +358,7 @@ foreach ($raw in $rawRequirements) {
             "Właściwy plan brzmi: $($scenario.method)"
         )
         revealedAnswer = "Poprawna jest odpowiedź A. $($scenario.method)"
-        assets = @()
-        assetAlternativeTexts = @()
+        diagramIds = @()
         requirementId = [string]$raw.id
         level = [string]$raw.level
         absoluteTolerance = 0.000000001
@@ -383,8 +381,7 @@ foreach ($raw in $rawRequirements) {
             'Wpisz sam wynik jako liczbę albo proste wyrażenie; możesz użyć przecinka lub kropki dziesiętnej.'
         )
         revealedAnswer = [string]$scenario.numericSolution
-        assets = @()
-        assetAlternativeTexts = @()
+        diagramIds = @()
         requirementId = [string]$raw.id
         level = [string]$raw.level
         expectedValue = [double]$scenario.numericValue
@@ -408,8 +405,7 @@ foreach ($raw in $rawRequirements) {
             'Rozdziel rozwiązanie na dane, metodę, obliczenia i kontrolę otrzymanego wyniku.'
         )
         revealedAnswer = [string]$scenario.reasoningSolution
-        assets = @()
-        assetAlternativeTexts = @()
+        diagramIds = @()
         requirementId = [string]$raw.id
         level = [string]$raw.level
         absoluteTolerance = 0.000000001
@@ -457,7 +453,7 @@ foreach ($rawArea in @($catalogSeed.areas)) {
 }
 
 $courseCatalog = [ordered]@{
-    schemaVersion = 3
+    schemaVersion = 4
     author = $author
     sources = @($catalogSeed.sources)
     introduction = @(

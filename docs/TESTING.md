@@ -2,9 +2,9 @@
 
 Wersja dokumentu: `0.9.0-beta.1`.
 
-Data ostatniego lokalnego wykonania: 28 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
+Data ostatniego lokalnego wykonania: 30 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
 
-Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `468/468 PASS` w czasie `11 s`. OpenCover wykazał `95,30%` pokrycia linii i `86,54%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,04%` pokrycia łącznego i `86,62%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
+Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `481/481 PASS` w czasie `16 s`. OpenCover wykazał `95,66%` pokrycia linii i `88,06%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,66%` pokrycia łącznego i `88,12%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
 
 Dokument rozróżnia wyniki automatyczne, retrospektywne poświadczenie historycznych testów uczestników oraz czynności bieżącego procesu wydawniczego. Brak szczegółowej karty sesji nie jest uzupełniany przez domysł, a poświadczenie historyczne nie jest przedstawiane jako test bieżącej paczki.
 
@@ -30,8 +30,8 @@ Celem testów końcowych jest potwierdzenie, że Abituria spełnia aktualny zakr
 | --- | --- | --- |
 | Kalkulator | `ExpressionCalculatorTests`, `ExpressionCalculatorRobustnessTests`, `CalculatorSessionTests`, `RepeatedEqualsTests`, `QuadraticSolverTests` | poprawność obliczeń, błędy wejścia, granice i historia |
 | Konta i dane | `AccountServiceTests`, `Issue14RegistrationRegressionTests`, `ReleaseDatabaseCompatibilityTests` | profil gościa, hasła, odzyskiwanie, postęp i kompatybilność bazy |
-| Treści | `ContentInventoryTests`, `ContentSeparationTests`, `Issue35MathChaptersRegressionTests`, `Formula2023ContentTests`, `MathCourse2023ContentTests` | kompletność tablic i kursu Formuły 2023, kontrakt `4/13/73/46/238/357`, osobne scenariusze 119 wymagań, format JSON oraz renderowanie treści |
-| UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests` | osiągalne ścieżki użytkownika, wszystkie trasy shella, edycję kalkulatora, pojedyncze okno, losowanie i kontekst zadania |
+| Treści | `ContentInventoryTests`, `ContentSeparationTests`, `Issue35MathChaptersRegressionTests`, `Formula2023ContentTests`, `MathCourse2023ContentTests`, `DiagramCatalogTests`, `LegacyImageArchiveTests` | kompletność tablic i kursu Formuły 2023, kontrakt `4/13/73/46/238/357`, 57 aktywnych diagramów, zgodność archiwum 75 obrazów, format JSON oraz renderowanie treści |
+| UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests`, `Issue4NavigationTests` | osiągalne ścieżki użytkownika, osobne trasy Matury i Zadań, wszystkie trasy shella, edycję kalkulatora, pojedyncze okno, losowanie i kontekst zadania |
 | Dostępność kontrolek | `AccessibilityRegressionTests` | nazwy pól i symbolicznych przycisków oraz dynamiczne regiony wyników |
 | Wizualne | `Discussion10VisualRegressionTests` | renderowanie list matematycznych i zachowanie przy minimalnym rozmiarze okna |
 | Styl, motywy i własny chrome | `Discussion49StyleRegressionTests` | Mulish, brak wymuszonego Light i Inter, cztery ustawienia motywu, stany interakcji, fokus, breakpointy, dialogi, sterowanie i skalowanie okna |
@@ -50,7 +50,7 @@ Nowy zestaw testów nie ocenia wyglądu wyłącznie przez obecność nazw klas. 
 | Motyw domyślny | aplikacja nie wymusza `RequestedThemeVariant="Light"`; wariant systemowy pozostaje rzeczywistym ustawieniem domyślnym |
 | Palety | reprezentatywny widok renderuje się w ustawieniu jasnym, ciemnym i wysokiego kontrastu, a obrazy różnią się zgodnie z paletą |
 | Kontrast | najważniejsze pary tekst-tło, granica-tło i fokus-tło są liczone według WCAG i mieszczą się w progach `4,5:1` lub `3:1` |
-| Logo i placeholdery | w trybie ciemnym i wysokiego kontrastu placeholder ma kontrastowy `TextMutedBrush`, a rastrowe logo z czarnym napisem pozostaje na białej powierzchni |
+| Znak aplikacji i placeholdery | w trybie ciemnym i wysokiego kontrastu placeholder ma kontrastowy `TextMutedBrush`, a tekstowa koniczyna korzysta z kolorów bieżącego motywu |
 | Stany interakcji | style zawierają i stosują `:pointerover`, `:pressed`, `:focus` oraz `:focus-visible` dla kontrolek używanych przez aplikację |
 | Widoczny fokus | render kontrolki przed i po fokusie klawiaturowym ma mierzalną zmianę ramki, a fokus nie jest sygnalizowany wyłącznie kolorem tekstu |
 | Własny chrome | `WindowDecorations=None`, obszar przeciągania, przyciski okna, zmiana `WindowState` oraz osiem krawędzi `BeginResizeDrag` pozostają obecne |

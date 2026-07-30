@@ -112,14 +112,16 @@ try {
         releaseEligibilityAtGeneration = $releaseEligibility
         approvedAssetGroupsNotIncludedBecausePackageIsDocumentationOnly = @(
             "cke-2021-correction-exam",
-            "inherited-mathematics-images",
-            "inherited-application-images"
+            "cke-formula-2023-transcription",
+            "runtime-vector-diagrams",
+            "application-icon"
         )
         excludedScopes = @(
             "aplikacja i biblioteki wykonywalne - poza zakresem pakietu dokumentacyjnego",
             "kod źródłowy i testy - poza zakresem pakietu dokumentacyjnego",
             "Content/exam-2021-correction.json - poza zakresem pakietu dokumentacyjnego",
-            "img/ - poza zakresem pakietu dokumentacyjnego",
+            "Content/diagrams.json - poza zakresem pakietu dokumentacyjnego",
+            "img/icon.ico - poza zakresem pakietu dokumentacyjnego",
             "tools/Import-LegacyContent.ps1",
             "docs/legacy/",
             ".git i historia Git"

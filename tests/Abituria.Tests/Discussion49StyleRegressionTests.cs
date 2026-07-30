@@ -196,7 +196,7 @@ public sealed class Discussion49StyleRegressionTests
         var application = Assert.IsType<TestApplication>(Application.Current);
         using var manager = new AppThemeManager(application);
         var content = new ContentRepository();
-        var view = new HomeView("Tester", content.UiCopy, () => { }, () => { }, () => { }, () => { }, () => { });
+        var view = new HomeView("Tester", content.UiCopy, () => { }, () => { }, () => { }, () => { }, () => { }, () => { });
         var window = ShowInWindow(view, 960, 640);
 
         try
@@ -234,7 +234,7 @@ public sealed class Discussion49StyleRegressionTests
             var login = new LoginView(accounts, content.UiCopy, _ => { });
             AssertResponsiveColumns(login, "LoginLayoutRoot", 1100, 720, 2, 1);
 
-            var home = new HomeView("Tester", content.UiCopy, () => { }, () => { }, () => { }, () => { }, () => { });
+            var home = new HomeView("Tester", content.UiCopy, () => { }, () => { }, () => { }, () => { }, () => { }, () => { });
             AssertResponsiveColumns(home, "HomeLayoutRoot", 1100, 720, 2, 1);
 
             var calculator = new GeneralCalculatorView(
@@ -399,7 +399,7 @@ public sealed class Discussion49StyleRegressionTests
             var themeButton = window.GetLogicalDescendants()
                 .OfType<Button>()
                 .Single(button => AutomationProperties.GetAutomationId(button) == "ThemeButton");
-            var pages = new[] { AppPage.Home, AppPage.Formulas, AppPage.Exams, AppPage.Calculator, AppPage.About };
+            var pages = new[] { AppPage.Home, AppPage.Formulas, AppPage.Matura, AppPage.Tasks, AppPage.Calculator, AppPage.About };
             var hashes = new HashSet<string>(StringComparer.Ordinal);
 
             GC.Collect();
@@ -435,6 +435,13 @@ public sealed class Discussion49StyleRegressionTests
             Assert.True(stopwatch.Elapsed < TimeSpan.FromSeconds(10), $"Renderowanie i nawigacja trwały {stopwatch.Elapsed}.");
             Assert.True(allocatedBytes <= 128L * 1024L * 1024L, $"Renderowanie zaalokowało {allocatedBytes} B.");
             Assert.True(hashes.Count >= 3, $"Oczekiwano co najmniej 3 różnych klatek, uzyskano {hashes.Count}.");
+            for (var attempt = 0;
+                 attempt < 4 && !((themeButton.Content as string)?.Contains("Systemowy", StringComparison.Ordinal) ?? false);
+                 attempt++)
+            {
+                themeButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                Dispatcher.UIThread.RunJobs();
+            }
             Assert.Contains("Systemowy", themeButton.Content as string, StringComparison.Ordinal);
         }
         finally

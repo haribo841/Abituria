@@ -39,14 +39,19 @@ public sealed class FormulaListView : UserControl
 
 public sealed class ArticleView : UserControl
 {
-    public ArticleView(string title, string subtitle, IReadOnlyList<ContentBlock> blocks, Action back)
+    public ArticleView(
+        string title,
+        string subtitle,
+        IReadOnlyList<ContentBlock> blocks,
+        Action back,
+        DiagramCatalog? diagrams = null)
     {
         var root = new StackPanel { Spacing = 18 };
         var backButton = new Button { Content = "← Wróć", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Left };
         backButton.Click += (_, _) => back();
         root.Children.Add(backButton);
         root.Children.Add(UiFactory.PageTitle(title, subtitle));
-        root.Children.Add(UiFactory.Card(new RichContentView(blocks), new Thickness(22)));
+        root.Children.Add(UiFactory.Card(new RichContentView(blocks, diagrams), new Thickness(22)));
         Content = UiFactory.PageScroll(root);
     }
 }
@@ -182,7 +187,8 @@ public sealed class CourseLessonView : UserControl
         MathCourseLesson lesson,
         CourseLevelFilter level,
         Action<LearningExercise> openExercise,
-        Action back)
+        Action back,
+        DiagramCatalog? diagrams = null)
     {
         var root = new StackPanel { Spacing = 16 };
         var backButton = new Button { Content = "← Lekcje", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Left };
@@ -191,7 +197,7 @@ public sealed class CourseLessonView : UserControl
         root.Children.Add(UiFactory.PageTitle(lesson.Title, LevelLabel(lesson)));
 
         if (lesson.Blocks.Count > 0)
-            root.Children.Add(UiFactory.Card(new RichContentView(lesson.Blocks)));
+            root.Children.Add(UiFactory.Card(new RichContentView(lesson.Blocks, diagrams)));
 
         var visibleRequirementIds = VisibleRequirementIds(catalog, lesson, level);
         AddRequirements(root, catalog, visibleRequirementIds);
@@ -289,9 +295,16 @@ public sealed class CourseLessonView : UserControl
         }
     }
 
-    private static string LevelLabel(MathCourseLesson lesson) => lesson.AlwaysVisible
-        ? "Materiał pomocniczy widoczny na obu poziomach."
-        : lesson.Level == "basic" ? "Lekcja poziomu podstawowego." : "Lekcja poziomu rozszerzonego.";
+    private static string LevelLabel(MathCourseLesson lesson)
+    {
+        if (lesson.AlwaysVisible)
+            return "Materiał pomocniczy widoczny na obu poziomach.";
+
+        if (lesson.Level == "basic")
+            return "Lekcja poziomu podstawowego.";
+
+        return "Lekcja poziomu rozszerzonego.";
+    }
 }
 
 public sealed class PlaceholderView : UserControl

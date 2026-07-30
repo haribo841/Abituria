@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Abituria.Models;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Platform;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Abituria.Services;
@@ -120,7 +119,7 @@ public static class ReleaseSmokeTestRunner
         var buildInfo = services.GetRequiredService<AppBuildInfo>();
 
         EnsureContentIsAvailable(content);
-        EnsureApplicationAssetsAreAvailable();
+        EnsureApplicationDiagramsAreAvailable(content);
         EnsureCalculatorIsOperational(calculator);
         var quadraticSummary = EnsureQuadraticCalculatorIsOperational();
         await EnsureGuestProfileIsAvailableAsync(accounts);
@@ -188,13 +187,13 @@ public static class ReleaseSmokeTestRunner
         }
     }
 
-    private static void EnsureApplicationAssetsAreAvailable()
+    private static void EnsureApplicationDiagramsAreAvailable(ContentRepository content)
     {
-        foreach (var asset in new[] { "img/icon.png", "img/w9a.png", "img/mp21z9.png" })
-        {
-            using var stream = AssetLoader.Open(new Uri($"avares://Abituria/{asset}"));
-            if (stream.Length == 0) throw new InvalidDataException($"Zasób aplikacji jest pusty: {asset}.");
-        }
+        if (content.Diagrams.Diagrams.Count != 57)
+            throw new InvalidDataException("Katalog diagramów aplikacji jest niekompletny.");
+
+        foreach (var diagramId in new[] { "formula-w9a", "exam-mp21-z9", "course-right-triangle" })
+            _ = content.Diagrams.GetRequired(diagramId);
     }
 
     private static void EnsureCalculatorIsOperational(ExpressionCalculator calculator)

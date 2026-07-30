@@ -9,7 +9,8 @@ public enum AppPage
     Home,
     Formulas,
     FormulaDetail,
-    Exams,
+    Matura,
+    Tasks,
     ExerciseList,
     Exercise,
     Chapters,
@@ -29,6 +30,12 @@ public enum CourseLevelFilter
     Extended
 }
 
+public enum ExamNavigationOrigin
+{
+    Matura,
+    Tasks
+}
+
 public sealed class AppViewModel : ObservableObject
 {
     private AppPage _currentPage = AppPage.Login;
@@ -38,6 +45,7 @@ public sealed class AppViewModel : ObservableObject
     private MathCourseLesson? _selectedCourseLesson;
     private LearningExercise? _selectedExercise;
     private CourseLevelFilter _selectedCourseLevel = CourseLevelFilter.Basic;
+    private ExamNavigationOrigin _examNavigationOrigin = ExamNavigationOrigin.Matura;
     private string? _selectedTopicId;
     private string? _selectedRoadmapId;
     private PlaceholderItem? _selectedPlaceholder;
@@ -59,6 +67,7 @@ public sealed class AppViewModel : ObservableObject
     public MathCourseLesson? SelectedCourseLesson { get => _selectedCourseLesson; private set => SetProperty(ref _selectedCourseLesson, value); }
     public LearningExercise? SelectedExercise { get => _selectedExercise; private set => SetProperty(ref _selectedExercise, value); }
     public CourseLevelFilter SelectedCourseLevel { get => _selectedCourseLevel; private set => SetProperty(ref _selectedCourseLevel, value); }
+    public ExamNavigationOrigin ExamNavigationOrigin { get => _examNavigationOrigin; private set => SetProperty(ref _examNavigationOrigin, value); }
     public string? SelectedTopicId { get => _selectedTopicId; private set => SetProperty(ref _selectedTopicId, value); }
     public string? SelectedRoadmapId { get => _selectedRoadmapId; private set => SetProperty(ref _selectedRoadmapId, value); }
     public PlaceholderItem? SelectedPlaceholder { get => _selectedPlaceholder; private set => SetProperty(ref _selectedPlaceholder, value); }
@@ -75,7 +84,18 @@ public sealed class AppViewModel : ObservableObject
         CurrentPage = AppPage.Login;
     }
 
-    public void Navigate(AppPage page) => CurrentPage = ActiveProfile is null ? AppPage.Login : page;
+    public void Navigate(AppPage page)
+    {
+        if (ActiveProfile is null)
+        {
+            CurrentPage = AppPage.Login;
+            return;
+        }
+
+        if (page == AppPage.Matura) ExamNavigationOrigin = ExamNavigationOrigin.Matura;
+        if (page == AppPage.Tasks) ExamNavigationOrigin = ExamNavigationOrigin.Tasks;
+        CurrentPage = page;
+    }
     public void OpenFormula(FormulaArticle article) { SelectedFormula = article; CurrentPage = AppPage.FormulaDetail; }
     public void OpenCourseArea(CourseArea area) { SelectedCourseArea = area; CurrentPage = AppPage.CourseArea; }
     public void OpenCourseLesson(MathCourseLesson lesson) { SelectedCourseLesson = lesson; CurrentPage = AppPage.CourseLesson; }
@@ -96,10 +116,21 @@ public sealed class AppViewModel : ObservableObject
     public void OpenRandomExercise(LearningExercise exercise, string? topicId)
     {
         SelectedTopicId = topicId;
+        ExamNavigationOrigin = topicId is null ? ExamNavigationOrigin.Matura : ExamNavigationOrigin.Tasks;
         OpenExercise(exercise);
     }
-    public void OpenExam() { SelectedTopicId = null; CurrentPage = AppPage.ExerciseList; }
-    public void OpenTopic(string topicId) { SelectedTopicId = topicId; CurrentPage = AppPage.ExerciseList; }
+    public void OpenExam()
+    {
+        SelectedTopicId = null;
+        ExamNavigationOrigin = ExamNavigationOrigin.Matura;
+        CurrentPage = AppPage.ExerciseList;
+    }
+    public void OpenTopic(string topicId)
+    {
+        SelectedTopicId = topicId;
+        ExamNavigationOrigin = ExamNavigationOrigin.Tasks;
+        CurrentPage = AppPage.ExerciseList;
+    }
     public void OpenGeneralCalculator() => CurrentPage = AppPage.GeneralCalculator;
     public void OpenRoadmap(string? itemId = null) { SelectedRoadmapId = itemId; CurrentPage = AppPage.Roadmap; }
     public void OpenPlaceholder(PlaceholderItem item) { SelectedPlaceholder = item; CurrentPage = AppPage.Placeholder; }

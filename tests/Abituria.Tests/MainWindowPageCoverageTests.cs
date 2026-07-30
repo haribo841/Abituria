@@ -46,13 +46,16 @@ public sealed class MainWindowPageCoverageTests
             AssertPage<ArticleView>(window);
 
             Click(window, "Zadania");
-            AssertPage<ExamOverviewView>(window);
+            AssertPage<TaskTopicsView>(window);
+
+            Click(window, "Matura");
+            AssertPage<MaturaView>(window);
 
             viewModel.OpenExam();
             Render();
             AssertPage<ExerciseListView>(window);
 
-            viewModel.Navigate(AppPage.Exams);
+            viewModel.Navigate(AppPage.Tasks);
             viewModel.OpenTopic(content.Exam.Topics[0].Id);
             Render();
             AssertPage<ExerciseListView>(window);
@@ -78,8 +81,16 @@ public sealed class MainWindowPageCoverageTests
             viewModel.OpenCourseExercise(courseExercise);
             Render();
             AssertPage<ExerciseView>(window);
-            Click(window, "← Lekcja");
-            AssertPage<CourseLessonView>(window);
+            Click(window, "← Działy");
+            AssertPage<ChapterListView>(window);
+
+            viewModel.Navigate(AppPage.Tasks);
+            viewModel.OpenTopic(content.Exam.Topics[0].Id);
+            viewModel.OpenExercise(content.Exam.Exercises.First(item => item.TopicId == content.Exam.Topics[0].Id));
+            Render();
+            AssertPage<ExerciseView>(window);
+            Click(window, "← Zadania");
+            AssertPage<TaskTopicsView>(window);
 
             Click(window, "Kalkulator");
             AssertPage<CalculatorView>(window);
@@ -104,12 +115,12 @@ public sealed class MainWindowPageCoverageTests
             Click(window, "← Wróć");
             AssertPage<CalculatorView>(window);
 
-            var examPlaceholder = content.Placeholders.Items.First(item => item.Category != "calculator");
+            var examPlaceholder = content.Placeholders.Items.First(item => item.Category == "exam");
             viewModel.OpenPlaceholder(examPlaceholder);
             Render();
             AssertPage<PlaceholderView>(window);
             Click(window, "← Wróć");
-            AssertPage<ExamOverviewView>(window);
+            AssertPage<MaturaView>(window);
 
             viewModel.Navigate((AppPage)int.MaxValue);
             Render();

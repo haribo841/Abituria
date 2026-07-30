@@ -1,0 +1,5429 @@
+{
+  "schemaVersion": 1,
+  "diagrams": [
+    {
+      "id": "formula-w9a",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Układ współrzędnych z odcinkiem łączącym punkty A i B.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 110.0,
+          "y": 520.0,
+          "x2": 900.0,
+          "y2": 520.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 200.0,
+          "y": 590.0,
+          "x2": 200.0,
+          "y2": 70.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 905.0,
+          "y": 515.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 210.0,
+          "y": 55.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 170.0,
+          "y": 525.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "line",
+          "x": 310.0,
+          "y": 455.0,
+          "x2": 700.0,
+          "y2": 140.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "ellipse",
+          "x": 310.0,
+          "y": 455.0,
+          "radiusX": 6.0,
+          "radiusY": 6.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 700.0,
+          "y": 140.0,
+          "radiusX": 6.0,
+          "radiusY": 6.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 275.0,
+          "y": 455.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 715.0,
+          "y": 115.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 310.0,
+          "y": 455.0,
+          "x2": 700.0,
+          "y2": 455.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 700.0,
+          "y": 455.0,
+          "x2": 700.0,
+          "y2": 140.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        }
+      ]
+    },
+    {
+      "id": "formula-w9b",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Prosta y równa się ax plus b oraz kąt nachylenia alfa.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 110.0,
+          "y": 520.0,
+          "x2": 900.0,
+          "y2": 520.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 200.0,
+          "y": 590.0,
+          "x2": 200.0,
+          "y2": 70.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 905.0,
+          "y": 515.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 210.0,
+          "y": 55.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 170.0,
+          "y": 525.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "line",
+          "x": 280.0,
+          "y": 590.0,
+          "x2": 790.0,
+          "y2": 90.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "arc",
+          "x": 705.0,
+          "y": 520.0,
+          "radiusX": 80.0,
+          "radiusY": 80.0,
+          "startAngle": -45.0,
+          "sweepAngle": 45.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0
+        },
+        {
+          "type": "text",
+          "x": 745.0,
+          "y": 445.0,
+          "text": "45°",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 690.0,
+          "y": 270.0,
+          "text": "k",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10e",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Trójkąt z bokami a, b, c i wysokością h.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            150.0,
+            500.0,
+            820.0,
+            500.0,
+            650.0,
+            130.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 125.0,
+          "y": 505.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 825.0,
+          "y": 505.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 650.0,
+          "y": 95.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 510.0,
+          "text": "c",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 365.0,
+          "y": 285.0,
+          "text": "b",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 755.0,
+          "y": 300.0,
+          "text": "a",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "arc",
+          "x": 150.0,
+          "y": 500.0,
+          "radiusX": 85.0,
+          "radiusY": 85.0,
+          "startAngle": -37.0,
+          "sweepAngle": 37.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 220.0,
+          "y": 440.0,
+          "text": "α",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 650.0,
+          "y": 130.0,
+          "x2": 650.0,
+          "y2": 500.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "polyline",
+          "points": [
+            650.0,
+            470.0,
+            680.0,
+            470.0,
+            680.0,
+            500.0
+          ],
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 620.0,
+          "y": 315.0,
+          "text": "h",
+          "stroke": "muted",
+          "fontSize": 23.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10f",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Trójkąt równoramienny z opuszczoną wysokością.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            150.0,
+            500.0,
+            820.0,
+            500.0,
+            650.0,
+            130.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 125.0,
+          "y": 505.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 825.0,
+          "y": 505.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 650.0,
+          "y": 95.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 510.0,
+          "text": "c",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 365.0,
+          "y": 285.0,
+          "text": "a",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 755.0,
+          "y": 300.0,
+          "text": "a",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "arc",
+          "x": 150.0,
+          "y": 500.0,
+          "radiusX": 85.0,
+          "radiusY": 85.0,
+          "startAngle": -37.0,
+          "sweepAngle": 37.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 220.0,
+          "y": 440.0,
+          "text": "α",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 650.0,
+          "y": 130.0,
+          "x2": 650.0,
+          "y2": 500.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "polyline",
+          "points": [
+            650.0,
+            470.0,
+            680.0,
+            470.0,
+            680.0,
+            500.0
+          ],
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 620.0,
+          "y": 315.0,
+          "text": "h",
+          "stroke": "muted",
+          "fontSize": 23.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10g",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Dwie proste równoległe przecięte sieczną.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 110.0,
+          "y": 480.0,
+          "x2": 900.0,
+          "y2": 480.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 200.0,
+          "y": 300.0,
+          "x2": 930.0,
+          "y2": 300.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 250.0,
+          "y": 570.0,
+          "x2": 700.0,
+          "y2": 110.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 135.0,
+          "y": 500.0,
+          "text": "p",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 875.0,
+          "y": 320.0,
+          "text": "q",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 585.0,
+          "y": 205.0,
+          "text": "k",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10a",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Dwa trójkąty używane do porównania cech przystawania.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            90.0,
+            480.0,
+            400.0,
+            480.0,
+            330.0,
+            150.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            560.0,
+            480.0,
+            890.0,
+            480.0,
+            800.0,
+            175.0
+          ],
+          "stroke": "accent",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 65.0,
+          "y": 485.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 405.0,
+          "y": 485.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 325.0,
+          "y": 115.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 535.0,
+          "y": 485.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 895.0,
+          "y": 485.0,
+          "text": "E",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 800.0,
+          "y": 140.0,
+          "text": "F",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 415.0,
+          "y": 280.0,
+          "text": "≅",
+          "stroke": "muted",
+          "fontSize": 34.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10b",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Dwa odpowiadające sobie trójkąty.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            90.0,
+            480.0,
+            400.0,
+            480.0,
+            330.0,
+            150.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            560.0,
+            480.0,
+            890.0,
+            480.0,
+            800.0,
+            175.0
+          ],
+          "stroke": "accent",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 65.0,
+          "y": 485.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 405.0,
+          "y": 485.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 325.0,
+          "y": 115.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 535.0,
+          "y": 485.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 895.0,
+          "y": 485.0,
+          "text": "E",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 800.0,
+          "y": 140.0,
+          "text": "F",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 415.0,
+          "y": 280.0,
+          "text": "≅",
+          "stroke": "muted",
+          "fontSize": 34.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10c",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Para trójkątów o odpowiadających bokach i kątach.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            90.0,
+            480.0,
+            400.0,
+            480.0,
+            330.0,
+            150.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            560.0,
+            480.0,
+            890.0,
+            480.0,
+            800.0,
+            175.0
+          ],
+          "stroke": "accent",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 65.0,
+          "y": 485.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 405.0,
+          "y": 485.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 325.0,
+          "y": 115.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 535.0,
+          "y": 485.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 895.0,
+          "y": 485.0,
+          "text": "E",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 800.0,
+          "y": 140.0,
+          "text": "F",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 415.0,
+          "y": 280.0,
+          "text": "≅",
+          "stroke": "muted",
+          "fontSize": 34.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10d",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Trójkąt ABC z oznaczonymi bokami i kątami.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            150.0,
+            500.0,
+            820.0,
+            500.0,
+            650.0,
+            130.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 125.0,
+          "y": 505.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 825.0,
+          "y": 505.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 650.0,
+          "y": 95.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 510.0,
+          "text": "c",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 365.0,
+          "y": 285.0,
+          "text": "b",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 755.0,
+          "y": 300.0,
+          "text": "a",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "arc",
+          "x": 150.0,
+          "y": 500.0,
+          "radiusX": 85.0,
+          "radiusY": 85.0,
+          "startAngle": -37.0,
+          "sweepAngle": 37.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 220.0,
+          "y": 440.0,
+          "text": "α",
+          "stroke": "accent",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10h",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Konfiguracja prostych do twierdzenia Talesa.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 90.0,
+          "y": 430.0,
+          "x2": 900.0,
+          "y2": 430.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 120.0,
+          "y": 530.0,
+          "x2": 800.0,
+          "y2": 100.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 320.0,
+          "y": 535.0,
+          "x2": 250.0,
+          "y2": 250.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 650.0,
+          "y": 520.0,
+          "x2": 580.0,
+          "y2": 140.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 80.0,
+          "y": 440.0,
+          "text": "P",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 300.0,
+          "y": 450.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 625.0,
+          "y": 450.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10i",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Trapez o podstawach a i b oraz wysokości h.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            170.0,
+            500.0,
+            830.0,
+            500.0,
+            690.0,
+            180.0,
+            310.0,
+            180.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 690.0,
+          "y": 180.0,
+          "x2": 690.0,
+          "y2": 500.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 500.0,
+          "y": 510.0,
+          "text": "a",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 140.0,
+          "text": "b",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 710.0,
+          "y": 330.0,
+          "text": "h",
+          "stroke": "accent",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10m",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Koło o środku O i promieniu r.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 225.0,
+          "radiusY": 225.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 310.0,
+          "text": "O",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 665.0,
+          "y2": 175.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 590.0,
+          "y": 225.0,
+          "text": "r",
+          "stroke": "accent",
+          "fontSize": 25.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10n",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Wycinek koła o kącie środkowym alfa.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 225.0,
+          "radiusY": 225.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 310.0,
+          "text": "O",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 690.0,
+          "y2": 220.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 700.0,
+          "y2": 415.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "arc",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 85.0,
+          "radiusY": 85.0,
+          "startAngle": -29.0,
+          "sweepAngle": 53.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 575.0,
+          "y": 315.0,
+          "text": "α",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 700.0,
+          "y": 195.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 710.0,
+          "y": 415.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10o",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Kąt środkowy i kąt wpisany oparte na tym samym łuku.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 225.0,
+          "radiusY": 225.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 310.0,
+          "text": "O",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 430.0,
+          "x2": 665.0,
+          "y2": 175.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 430.0,
+          "x2": 700.0,
+          "y2": 410.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 665.0,
+          "y2": 175.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 700.0,
+          "y2": 410.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "arc",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 72.0,
+          "radiusY": 72.0,
+          "startAngle": -42.0,
+          "sweepAngle": 65.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0
+        },
+        {
+          "type": "arc",
+          "x": 300.0,
+          "y": 430.0,
+          "radiusX": 64.0,
+          "radiusY": 64.0,
+          "startAngle": -35.0,
+          "sweepAngle": 32.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0
+        },
+        {
+          "type": "text",
+          "x": 530.0,
+          "y": 315.0,
+          "text": "2α",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 350.0,
+          "y": 390.0,
+          "text": "α",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 650.0,
+          "y": 140.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 710.0,
+          "y": 410.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 270.0,
+          "y": 430.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10p",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Kąt między styczną i cięciwą okręgu.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 225.0,
+          "radiusY": 225.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 310.0,
+          "text": "O",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 250.0,
+          "y": 545.0,
+          "x2": 835.0,
+          "y2": 90.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 250.0,
+          "y": 545.0,
+          "x2": 850.0,
+          "y2": 545.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 220.0,
+          "y": 545.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 690.0,
+          "y": 180.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 850.0,
+          "y": 545.0,
+          "text": "P",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10r",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Styczna do okręgu i promień poprowadzony do punktu styczności.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 225.0,
+          "radiusY": 225.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 310.0,
+          "text": "O",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 250.0,
+          "y": 545.0,
+          "x2": 835.0,
+          "y2": 90.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 250.0,
+          "y": 545.0,
+          "x2": 850.0,
+          "y2": 545.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 220.0,
+          "y": 545.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 690.0,
+          "y": 180.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 850.0,
+          "y": 545.0,
+          "text": "P",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10s",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Dwie styczne poprowadzone z punktu P do okręgu.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 225.0,
+          "radiusY": 225.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 310.0,
+          "text": "O",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 275.0,
+          "y": 465.0,
+          "x2": 875.0,
+          "y2": 325.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 340.0,
+          "y": 135.0,
+          "x2": 875.0,
+          "y2": 325.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 250.0,
+          "y": 470.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 325.0,
+          "y": 100.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 885.0,
+          "y": 310.0,
+          "text": "P",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10t",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Sieczna i styczna poprowadzone z punktu zewnętrznego.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 225.0,
+          "radiusY": 225.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 310.0,
+          "text": "O",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 175.0,
+          "y": 555.0,
+          "x2": 850.0,
+          "y2": 180.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 175.0,
+          "y": 555.0,
+          "x2": 900.0,
+          "y2": 555.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 155.0,
+          "y": 555.0,
+          "text": "P",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 370.0,
+          "y": 430.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 675.0,
+          "y": 255.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 500.0,
+          "y": 560.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10j",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Trapez z zaznaczoną wysokością.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            170.0,
+            500.0,
+            830.0,
+            500.0,
+            690.0,
+            180.0,
+            310.0,
+            180.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 690.0,
+          "y": 180.0,
+          "x2": 690.0,
+          "y2": 500.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 500.0,
+          "y": 510.0,
+          "text": "a",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 140.0,
+          "text": "b",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 710.0,
+          "y": 330.0,
+          "text": "h",
+          "stroke": "accent",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10k",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Równoległobok z przekątnymi.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            170.0,
+            500.0,
+            720.0,
+            500.0,
+            850.0,
+            180.0,
+            300.0,
+            180.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 170.0,
+          "y": 500.0,
+          "x2": 850.0,
+          "y2": 180.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 180.0,
+          "x2": 720.0,
+          "y2": 500.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 120.0,
+          "y": 505.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 730.0,
+          "y": 505.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 860.0,
+          "y": 150.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 270.0,
+          "y": 150.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10l",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Romb z prostopadłymi przekątnymi.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            150.0,
+            325.0,
+            500.0,
+            110.0,
+            850.0,
+            325.0,
+            500.0,
+            540.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 150.0,
+          "y": 325.0,
+          "x2": 850.0,
+          "y2": 325.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 110.0,
+          "x2": 500.0,
+          "y2": 540.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "polyline",
+          "points": [
+            500.0,
+            325.0,
+            530.0,
+            325.0,
+            530.0,
+            355.0,
+            500.0,
+            355.0
+          ],
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowEnd": false
+        }
+      ]
+    },
+    {
+      "id": "formula-w10u",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Czworokąt wpisany w okrąg.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 225.0,
+          "radiusY": 225.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 310.0,
+          "text": "O",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "polygon",
+          "points": [
+            355.0,
+            155.0,
+            690.0,
+            190.0,
+            725.0,
+            455.0,
+            300.0,
+            475.0
+          ],
+          "stroke": "accent",
+          "fill": "none",
+          "strokeThickness": 3.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 335.0,
+          "y": 120.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 700.0,
+          "y": 160.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 735.0,
+          "y": 455.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 270.0,
+          "y": 475.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 490.0,
+          "text": "α + γ = 180°",
+          "stroke": "accent",
+          "fontSize": 23.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w10w",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Czworokąt opisany na okręgu.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 225.0,
+          "radiusY": 225.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 310.0,
+          "text": "O",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "polygon",
+          "points": [
+            260.0,
+            455.0,
+            385.0,
+            120.0,
+            760.0,
+            175.0,
+            820.0,
+            470.0
+          ],
+          "stroke": "accent",
+          "fill": "none",
+          "strokeThickness": 3.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 245.0,
+          "y": 460.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 370.0,
+          "y": 85.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 770.0,
+          "y": 145.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 830.0,
+          "y": 470.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w11a",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Proste k, l i m względem płaszczyzny i punktu P.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            170.0,
+            470.0,
+            760.0,
+            470.0,
+            900.0,
+            210.0,
+            310.0,
+            210.0
+          ],
+          "stroke": "muted",
+          "fill": "surface",
+          "strokeThickness": 3.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 190.0,
+          "y": 560.0,
+          "x2": 780.0,
+          "y2": 110.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 350.0,
+          "y": 380.0,
+          "x2": 850.0,
+          "y2": 300.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 510.0,
+          "y": 330.0,
+          "x2": 510.0,
+          "y2": 120.0,
+          "stroke": "danger",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 805.0,
+          "y": 445.0,
+          "text": "l",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 835.0,
+          "y": 270.0,
+          "text": "m",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 525.0,
+          "y": 115.0,
+          "text": "k",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 340.0,
+          "text": "P",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w11b",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Prostopadłościan z oznaczonymi krawędziami.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            260.0,
+            210.0,
+            650.0,
+            210.0,
+            650.0,
+            500.0,
+            260.0,
+            500.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            390.0,
+            110.0,
+            780.0,
+            110.0,
+            780.0,
+            400.0,
+            650.0,
+            500.0,
+            650.0,
+            210.0,
+            260.0,
+            210.0
+          ],
+          "stroke": "muted",
+          "fill": "none",
+          "strokeThickness": 3.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 260.0,
+          "y": 500.0,
+          "x2": 390.0,
+          "y2": 400.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 390.0,
+          "y": 110.0,
+          "x2": 390.0,
+          "y2": 400.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 390.0,
+          "y": 400.0,
+          "x2": 780.0,
+          "y2": 400.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 235.0,
+          "y": 505.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 660.0,
+          "y": 505.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 790.0,
+          "y": 400.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 370.0,
+          "y": 405.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w11c",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Graniastosłup prosty z wysokością h.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            260.0,
+            500.0,
+            650.0,
+            500.0,
+            730.0,
+            390.0,
+            660.0,
+            180.0,
+            420.0,
+            90.0,
+            270.0,
+            210.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "polyline",
+          "points": [
+            270.0,
+            210.0,
+            570.0,
+            300.0,
+            730.0,
+            390.0
+          ],
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 420.0,
+          "y": 90.0,
+          "x2": 570.0,
+          "y2": 300.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 570.0,
+          "y": 300.0,
+          "x2": 570.0,
+          "y2": 520.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 585.0,
+          "y": 395.0,
+          "text": "h",
+          "stroke": "accent",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w11d",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Ostrosłup z wysokością h.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            230.0,
+            500.0,
+            700.0,
+            500.0,
+            820.0,
+            400.0,
+            420.0,
+            390.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 525.0,
+          "y": 80.0,
+          "x2": 230.0,
+          "y2": 500.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 525.0,
+          "y": 80.0,
+          "x2": 700.0,
+          "y2": 500.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 525.0,
+          "y": 80.0,
+          "x2": 820.0,
+          "y2": 400.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 525.0,
+          "y": 80.0,
+          "x2": 420.0,
+          "y2": 390.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 525.0,
+          "y": 80.0,
+          "x2": 525.0,
+          "y2": 430.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 540.0,
+          "y": 260.0,
+          "text": "h",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 515.0,
+          "y": 45.0,
+          "text": "S",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w11e",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Walec o promieniu r i wysokości h.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 145.0,
+          "radiusX": 180.0,
+          "radiusY": 70.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 500.0,
+          "radiusX": 180.0,
+          "radiusY": 70.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": true
+        },
+        {
+          "type": "line",
+          "x": 320.0,
+          "y": 145.0,
+          "x2": 320.0,
+          "y2": 500.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 680.0,
+          "y": 145.0,
+          "x2": 680.0,
+          "y2": 500.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 500.0,
+          "x2": 650.0,
+          "y2": 500.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 565.0,
+          "y": 470.0,
+          "text": "r",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 700.0,
+          "y": 310.0,
+          "text": "h",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w11f",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Stożek o promieniu r, wysokości h i tworzącej l.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 500.0,
+          "radiusX": 210.0,
+          "radiusY": 70.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": true
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 70.0,
+          "x2": 290.0,
+          "y2": 500.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 70.0,
+          "x2": 710.0,
+          "y2": 500.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 70.0,
+          "x2": 500.0,
+          "y2": 500.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 500.0,
+          "x2": 685.0,
+          "y2": 500.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 515.0,
+          "y": 280.0,
+          "text": "h",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 595.0,
+          "y": 470.0,
+          "text": "r",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 650.0,
+          "y": 285.0,
+          "text": "l",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w11g",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Kula o środku O i promieniu r.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 225.0,
+          "radiusY": 225.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 225.0,
+          "radiusY": 75.0,
+          "stroke": "muted",
+          "fill": "none",
+          "strokeThickness": 3.0,
+          "dashed": true
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 690.0,
+          "y2": 325.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 585.0,
+          "y": 290.0,
+          "text": "r",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 475.0,
+          "y": 310.0,
+          "text": "O",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w12a",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Trójkąt prostokątny z bokami a, b, c i kątem alfa.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            150.0,
+            500.0,
+            820.0,
+            500.0,
+            650.0,
+            130.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 125.0,
+          "y": 505.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 825.0,
+          "y": 505.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 650.0,
+          "y": 95.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 510.0,
+          "text": "c",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 365.0,
+          "y": 285.0,
+          "text": "b",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 755.0,
+          "y": 300.0,
+          "text": "a",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "arc",
+          "x": 150.0,
+          "y": 500.0,
+          "radiusX": 85.0,
+          "radiusY": 85.0,
+          "startAngle": -37.0,
+          "sweepAngle": 37.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 220.0,
+          "y": 440.0,
+          "text": "α",
+          "stroke": "accent",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w12b",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Punkt M w układzie współrzędnych i kąt alfa.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 110.0,
+          "y": 520.0,
+          "x2": 900.0,
+          "y2": 520.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 200.0,
+          "y": 590.0,
+          "x2": 200.0,
+          "y2": 70.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 905.0,
+          "y": 515.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 210.0,
+          "y": 55.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 170.0,
+          "y": 525.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "line",
+          "x": 200.0,
+          "y": 520.0,
+          "x2": 550.0,
+          "y2": 170.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 550.0,
+          "y": 170.0,
+          "x2": 550.0,
+          "y2": 520.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "arc",
+          "x": 200.0,
+          "y": 520.0,
+          "radiusX": 110.0,
+          "radiusY": 110.0,
+          "startAngle": -45.0,
+          "sweepAngle": 45.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0
+        },
+        {
+          "type": "text",
+          "x": 360.0,
+          "y": 320.0,
+          "text": "r",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 565.0,
+          "y": 145.0,
+          "text": "M = (x,y)",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 280.0,
+          "y": 470.0,
+          "text": "α",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "formula-w12c",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Wykres funkcji sinus.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 110.0,
+          "y": 520.0,
+          "x2": 900.0,
+          "y2": 520.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 200.0,
+          "y": 590.0,
+          "x2": 200.0,
+          "y2": 70.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 905.0,
+          "y": 515.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 210.0,
+          "y": 55.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 170.0,
+          "y": 525.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "polyline",
+          "points": [
+            100.0,
+            520.0,
+            180.0,
+            430.0,
+            260.0,
+            350.0,
+            340.0,
+            430.0,
+            420.0,
+            520.0,
+            500.0,
+            610.0,
+            580.0,
+            520.0,
+            660.0,
+            430.0,
+            740.0,
+            350.0,
+            820.0,
+            430.0,
+            900.0,
+            520.0
+          ],
+          "stroke": "accent",
+          "strokeThickness": 5.0,
+          "dashed": false,
+          "arrowEnd": false
+        }
+      ]
+    },
+    {
+      "id": "formula-w12d",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Wykres funkcji cosinus.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 110.0,
+          "y": 520.0,
+          "x2": 900.0,
+          "y2": 520.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 200.0,
+          "y": 590.0,
+          "x2": 200.0,
+          "y2": 70.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 905.0,
+          "y": 515.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 210.0,
+          "y": 55.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 170.0,
+          "y": 525.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "polyline",
+          "points": [
+            100.0,
+            350.0,
+            180.0,
+            430.0,
+            260.0,
+            520.0,
+            340.0,
+            610.0,
+            420.0,
+            520.0,
+            500.0,
+            430.0,
+            580.0,
+            350.0,
+            660.0,
+            430.0,
+            740.0,
+            520.0,
+            820.0,
+            610.0,
+            900.0,
+            520.0
+          ],
+          "stroke": "accent",
+          "strokeThickness": 5.0,
+          "dashed": false,
+          "arrowEnd": false
+        }
+      ]
+    },
+    {
+      "id": "formula-w12e",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Wykres funkcji tangens z asymptotami.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 110.0,
+          "y": 520.0,
+          "x2": 900.0,
+          "y2": 520.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 200.0,
+          "y": 590.0,
+          "x2": 200.0,
+          "y2": 70.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 905.0,
+          "y": 515.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 210.0,
+          "y": 55.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 170.0,
+          "y": 525.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "line",
+          "x": 330.0,
+          "y": 90.0,
+          "x2": 330.0,
+          "y2": 590.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 670.0,
+          "y": 90.0,
+          "x2": 670.0,
+          "y2": 590.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "polyline",
+          "points": [
+            340.0,
+            575.0,
+            390.0,
+            520.0,
+            440.0,
+            450.0,
+            500.0,
+            325.0,
+            560.0,
+            200.0,
+            610.0,
+            130.0,
+            660.0,
+            80.0
+          ],
+          "stroke": "accent",
+          "strokeThickness": 5.0,
+          "dashed": false,
+          "arrowEnd": false
+        }
+      ]
+    },
+    {
+      "id": "formula-w12f",
+      "sourceId": "cke-formula-2023",
+      "alternativeText": "Tabela wartości funkcji trygonometrycznych dla wybranych kątów.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            100.0,
+            100.0,
+            900.0,
+            100.0,
+            900.0,
+            550.0,
+            100.0,
+            550.0
+          ],
+          "stroke": "primary",
+          "fill": "surface",
+          "strokeThickness": 3.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 100.0,
+          "y": 190.0,
+          "x2": 900.0,
+          "y2": 190.0,
+          "stroke": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 100.0,
+          "y": 280.0,
+          "x2": 900.0,
+          "y2": 280.0,
+          "stroke": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 100.0,
+          "y": 370.0,
+          "x2": 900.0,
+          "y2": 370.0,
+          "stroke": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 100.0,
+          "y": 460.0,
+          "x2": 900.0,
+          "y2": 460.0,
+          "stroke": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 280.0,
+          "y": 100.0,
+          "x2": 280.0,
+          "y2": 550.0,
+          "stroke": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 435.0,
+          "y": 100.0,
+          "x2": 435.0,
+          "y2": 550.0,
+          "stroke": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 590.0,
+          "y": 100.0,
+          "x2": 590.0,
+          "y2": 550.0,
+          "stroke": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 745.0,
+          "y": 100.0,
+          "x2": 745.0,
+          "y2": 550.0,
+          "stroke": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 130.0,
+          "y": 125.0,
+          "text": "α",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 300.0,
+          "y": 125.0,
+          "text": "0°",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 455.0,
+          "y": 125.0,
+          "text": "30°",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 610.0,
+          "y": 125.0,
+          "text": "45°",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 765.0,
+          "y": 125.0,
+          "text": "60°",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 125.0,
+          "y": 215.0,
+          "text": "sin α",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 125.0,
+          "y": 305.0,
+          "text": "cos α",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 125.0,
+          "y": 395.0,
+          "text": "tg α",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 315.0,
+          "y": 215.0,
+          "text": "0",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 215.0,
+          "text": "1/2",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 625.0,
+          "y": 215.0,
+          "text": "√2/2",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 780.0,
+          "y": 215.0,
+          "text": "√3/2",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mp21-z9",
+      "sourceId": "cke-2021-correction",
+      "alternativeText": "Układ współrzędnych z prostą k nachyloną pod kątem 45 stopni.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 110.0,
+          "y": 520.0,
+          "x2": 900.0,
+          "y2": 520.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 200.0,
+          "y": 590.0,
+          "x2": 200.0,
+          "y2": 70.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 905.0,
+          "y": 515.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 210.0,
+          "y": 55.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 170.0,
+          "y": 525.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "line",
+          "x": 280.0,
+          "y": 590.0,
+          "x2": 790.0,
+          "y2": 90.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "arc",
+          "x": 705.0,
+          "y": 520.0,
+          "radiusX": 80.0,
+          "radiusY": 80.0,
+          "startAngle": -45.0,
+          "sweepAngle": 45.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0
+        },
+        {
+          "type": "text",
+          "x": 745.0,
+          "y": 445.0,
+          "text": "45°",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 690.0,
+          "y": 270.0,
+          "text": "k",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mp21-z12",
+      "sourceId": "cke-2021-correction",
+      "alternativeText": "Wykres paraboli skierowanej ramionami w dół.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 110.0,
+          "y": 520.0,
+          "x2": 900.0,
+          "y2": 520.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 200.0,
+          "y": 590.0,
+          "x2": 200.0,
+          "y2": 70.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 905.0,
+          "y": 515.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 210.0,
+          "y": 55.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 170.0,
+          "y": 525.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "polyline",
+          "points": [
+            280.0,
+            550.0,
+            340.0,
+            350.0,
+            410.0,
+            210.0,
+            480.0,
+            140.0,
+            550.0,
+            125.0,
+            620.0,
+            170.0,
+            690.0,
+            280.0,
+            760.0,
+            455.0,
+            800.0,
+            580.0
+          ],
+          "stroke": "accent",
+          "strokeThickness": 5.0,
+          "dashed": false,
+          "arrowEnd": false
+        }
+      ]
+    },
+    {
+      "id": "exam-mp21-z17",
+      "sourceId": "cke-2021-correction",
+      "alternativeText": "Okrąg z czworokątem ABCD i kątem 20 stopni.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 225.0,
+          "radiusY": 225.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 310.0,
+          "text": "O",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 430.0,
+          "x2": 665.0,
+          "y2": 175.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 430.0,
+          "x2": 700.0,
+          "y2": 410.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 665.0,
+          "y2": 175.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 700.0,
+          "y2": 410.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "arc",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 72.0,
+          "radiusY": 72.0,
+          "startAngle": -42.0,
+          "sweepAngle": 65.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0
+        },
+        {
+          "type": "arc",
+          "x": 300.0,
+          "y": 430.0,
+          "radiusX": 64.0,
+          "radiusY": 64.0,
+          "startAngle": -35.0,
+          "sweepAngle": 32.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0
+        },
+        {
+          "type": "text",
+          "x": 530.0,
+          "y": 315.0,
+          "text": "2α",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 350.0,
+          "y": 390.0,
+          "text": "α",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 650.0,
+          "y": 140.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 710.0,
+          "y": 410.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 270.0,
+          "y": 430.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mp21-z18",
+      "sourceId": "cke-2021-correction",
+      "alternativeText": "Okrąg wpisany w trójkąt ABC i kąt środkowy 100 stopni.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            150.0,
+            500.0,
+            820.0,
+            500.0,
+            650.0,
+            130.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 125.0,
+          "y": 505.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 825.0,
+          "y": 505.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 650.0,
+          "y": 95.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 510.0,
+          "text": "c",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 365.0,
+          "y": 285.0,
+          "text": "b",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 755.0,
+          "y": 300.0,
+          "text": "a",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "arc",
+          "x": 150.0,
+          "y": 500.0,
+          "radiusX": 85.0,
+          "radiusY": 85.0,
+          "startAngle": -37.0,
+          "sweepAngle": 37.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 220.0,
+          "y": 440.0,
+          "text": "α",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "ellipse",
+          "x": 550.0,
+          "y": 380.0,
+          "radiusX": 105.0,
+          "radiusY": 105.0,
+          "stroke": "accent",
+          "fill": "none",
+          "strokeThickness": 3.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 550.0,
+          "y": 380.0,
+          "x2": 620.0,
+          "y2": 455.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 525.0,
+          "y": 350.0,
+          "text": "O",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 615.0,
+          "y": 385.0,
+          "text": "100°",
+          "stroke": "danger",
+          "fontSize": 22.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mp21-z19",
+      "sourceId": "cke-2021-correction",
+      "alternativeText": "Okrąg z przecinającymi się cięciwami oraz kątami 55 i 140 stopni.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 225.0,
+          "radiusY": 225.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 310.0,
+          "text": "O",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 665.0,
+          "y2": 175.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 590.0,
+          "y": 225.0,
+          "text": "r",
+          "stroke": "accent",
+          "fontSize": 25.0
+        },
+        {
+          "type": "line",
+          "x": 310.0,
+          "y": 430.0,
+          "x2": 690.0,
+          "y2": 180.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 285.0,
+          "y": 245.0,
+          "x2": 720.0,
+          "y2": 405.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 300.0,
+          "text": "140°",
+          "stroke": "danger",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 650.0,
+          "y": 180.0,
+          "text": "55°",
+          "stroke": "accent",
+          "fontSize": 22.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mp21-z20",
+      "sourceId": "cke-2021-correction",
+      "alternativeText": "Kwadrat ABCD z odcinkami wewnętrznymi.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            250.0,
+            150.0,
+            750.0,
+            150.0,
+            750.0,
+            500.0,
+            250.0,
+            500.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 250.0,
+          "y": 500.0,
+          "x2": 750.0,
+          "y2": 150.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 250.0,
+          "y": 300.0,
+          "x2": 750.0,
+          "y2": 300.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 225.0,
+          "y": 505.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 760.0,
+          "y": 505.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 760.0,
+          "y": 115.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 225.0,
+          "y": 115.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mp21-z24",
+      "sourceId": "cke-2021-correction",
+      "alternativeText": "Graniastosłup o krawędziach długości 2.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            260.0,
+            500.0,
+            650.0,
+            500.0,
+            730.0,
+            390.0,
+            660.0,
+            180.0,
+            420.0,
+            90.0,
+            270.0,
+            210.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "polyline",
+          "points": [
+            270.0,
+            210.0,
+            570.0,
+            300.0,
+            730.0,
+            390.0
+          ],
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 420.0,
+          "y": 90.0,
+          "x2": 570.0,
+          "y2": 300.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 570.0,
+          "y": 300.0,
+          "x2": 570.0,
+          "y2": 520.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 585.0,
+          "y": 395.0,
+          "text": "h",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 160.0,
+          "y": 510.0,
+          "text": "2",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 690.0,
+          "y": 520.0,
+          "text": "2",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 760.0,
+          "y": 365.0,
+          "text": "2",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mp21-z32",
+      "sourceId": "cke-2021-correction",
+      "alternativeText": "Trójkąt z podstawą podzieloną odcinkiem długości 6 i kątami 60 oraz 30 stopni.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            150.0,
+            500.0,
+            820.0,
+            500.0,
+            650.0,
+            130.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 125.0,
+          "y": 505.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 825.0,
+          "y": 505.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 650.0,
+          "y": 95.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 510.0,
+          "text": "c",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 365.0,
+          "y": 285.0,
+          "text": "b",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 755.0,
+          "y": 300.0,
+          "text": "a",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "arc",
+          "x": 150.0,
+          "y": 500.0,
+          "radiusX": 85.0,
+          "radiusY": 85.0,
+          "startAngle": -37.0,
+          "sweepAngle": 37.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 220.0,
+          "y": 440.0,
+          "text": "α",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 650.0,
+          "y": 130.0,
+          "x2": 650.0,
+          "y2": 500.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "polyline",
+          "points": [
+            650.0,
+            470.0,
+            680.0,
+            470.0,
+            680.0,
+            500.0
+          ],
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 620.0,
+          "y": 315.0,
+          "text": "h",
+          "stroke": "muted",
+          "fontSize": 23.0
+        },
+        {
+          "type": "text",
+          "x": 405.0,
+          "y": 460.0,
+          "text": "6",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 365.0,
+          "y": 440.0,
+          "text": "60°",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 720.0,
+          "y": 450.0,
+          "text": "30°",
+          "stroke": "accent",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mp21-z33",
+      "sourceId": "cke-2021-correction",
+      "alternativeText": "Trapez ABCD z przekątnymi przecinającymi się w punkcie S.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            170.0,
+            500.0,
+            830.0,
+            500.0,
+            690.0,
+            180.0,
+            310.0,
+            180.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 690.0,
+          "y": 180.0,
+          "x2": 690.0,
+          "y2": 500.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 500.0,
+          "y": 510.0,
+          "text": "a",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 140.0,
+          "text": "b",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 710.0,
+          "y": 330.0,
+          "text": "h",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 170.0,
+          "y": 500.0,
+          "x2": 690.0,
+          "y2": 180.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 310.0,
+          "y": 180.0,
+          "x2": 830.0,
+          "y2": 500.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 500.0,
+          "y": 330.0,
+          "text": "S",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "course-right-triangle",
+      "sourceId": "adam-course",
+      "alternativeText": "Trójkąt prostokątny z przyprostokątnymi a i b, przeciwprostokątną c oraz kątem alfa.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            150.0,
+            500.0,
+            820.0,
+            500.0,
+            650.0,
+            130.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 125.0,
+          "y": 505.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 825.0,
+          "y": 505.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 650.0,
+          "y": 95.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 510.0,
+          "text": "c",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 365.0,
+          "y": 285.0,
+          "text": "b",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 755.0,
+          "y": 300.0,
+          "text": "a",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "arc",
+          "x": 150.0,
+          "y": 500.0,
+          "radiusX": 85.0,
+          "radiusY": 85.0,
+          "startAngle": -37.0,
+          "sweepAngle": 37.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 220.0,
+          "y": 440.0,
+          "text": "α",
+          "stroke": "accent",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "course-circle-angles",
+      "sourceId": "adam-course",
+      "alternativeText": "Okrąg z kątem środkowym AOB i kątem wpisanym ACB opartymi na tym samym łuku.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 225.0,
+          "radiusY": 225.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 310.0,
+          "text": "O",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 430.0,
+          "x2": 665.0,
+          "y2": 175.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 430.0,
+          "x2": 700.0,
+          "y2": 410.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 665.0,
+          "y2": 175.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 700.0,
+          "y2": 410.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "arc",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 72.0,
+          "radiusY": 72.0,
+          "startAngle": -42.0,
+          "sweepAngle": 65.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0
+        },
+        {
+          "type": "arc",
+          "x": 300.0,
+          "y": 430.0,
+          "radiusX": 64.0,
+          "radiusY": 64.0,
+          "startAngle": -35.0,
+          "sweepAngle": 32.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0
+        },
+        {
+          "type": "text",
+          "x": 530.0,
+          "y": 315.0,
+          "text": "2α",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 350.0,
+          "y": 390.0,
+          "text": "α",
+          "stroke": "accent",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 650.0,
+          "y": 140.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 710.0,
+          "y": 410.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 270.0,
+          "y": 430.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "course-coordinate-vector",
+      "sourceId": "adam-course",
+      "alternativeText": "Układ współrzędnych z punktami A i B oraz składowymi wektora od A do B.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 110.0,
+          "y": 520.0,
+          "x2": 900.0,
+          "y2": 520.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 200.0,
+          "y": 590.0,
+          "x2": 200.0,
+          "y2": 70.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 905.0,
+          "y": 515.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 210.0,
+          "y": 55.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 170.0,
+          "y": 525.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "line",
+          "x": 310.0,
+          "y": 455.0,
+          "x2": 700.0,
+          "y2": 140.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "ellipse",
+          "x": 310.0,
+          "y": 455.0,
+          "radiusX": 6.0,
+          "radiusY": 6.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 700.0,
+          "y": 140.0,
+          "radiusX": 6.0,
+          "radiusY": 6.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 275.0,
+          "y": 455.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 715.0,
+          "y": 115.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 310.0,
+          "y": 455.0,
+          "x2": 700.0,
+          "y2": 455.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 700.0,
+          "y": 455.0,
+          "x2": 700.0,
+          "y2": 140.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        }
+      ]
+    },
+    {
+      "id": "course-cube-section",
+      "sourceId": "adam-course",
+      "alternativeText": "Sześcian z zaznaczoną płaszczyzną przekroju przechodzącą przez trzy wierzchołki.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            250.0,
+            210.0,
+            650.0,
+            210.0,
+            650.0,
+            520.0,
+            250.0,
+            520.0
+          ],
+          "stroke": "accent",
+          "fill": "none",
+          "strokeThickness": 3.0,
+          "dashed": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            390.0,
+            90.0,
+            790.0,
+            90.0,
+            790.0,
+            400.0,
+            650.0,
+            520.0,
+            650.0,
+            210.0,
+            250.0,
+            210.0
+          ],
+          "stroke": "muted",
+          "fill": "none",
+          "strokeThickness": 3.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 250.0,
+          "y": 520.0,
+          "x2": 390.0,
+          "y2": 400.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 390.0,
+          "y": 90.0,
+          "x2": 390.0,
+          "y2": 400.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            250.0,
+            210.0,
+            790.0,
+            90.0,
+            650.0,
+            520.0
+          ],
+          "stroke": "danger",
+          "fill": "surface",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 290.0,
+          "text": "przekrój",
+          "stroke": "danger",
+          "fontSize": 25.0
+        }
+      ]
+    },
+    {
+      "id": "course-vector-1",
+      "sourceId": "legacy-vectors",
+      "alternativeText": "Wektor AB z początkiem, końcem, długością, kierunkiem i zwrotem.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 190.0,
+          "y": 470.0,
+          "x2": 760.0,
+          "y2": 180.0,
+          "stroke": "accent",
+          "strokeThickness": 5.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "ellipse",
+          "x": 190.0,
+          "y": 470.0,
+          "radiusX": 7.0,
+          "radiusY": 7.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 155.0,
+          "y": 480.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 770.0,
+          "y": 155.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 430.0,
+          "y": 295.0,
+          "text": "AB⃗",
+          "stroke": "accent",
+          "fontSize": 30.0
+        },
+        {
+          "type": "text",
+          "x": 95.0,
+          "y": 540.0,
+          "text": "początek wektora",
+          "stroke": "muted",
+          "fontSize": 19.0
+        },
+        {
+          "type": "text",
+          "x": 715.0,
+          "y": 105.0,
+          "text": "zwrot i koniec",
+          "stroke": "muted",
+          "fontSize": 19.0
+        }
+      ]
+    },
+    {
+      "id": "course-vector-2",
+      "sourceId": "legacy-vectors",
+      "alternativeText": "Trzy wektory o różnych kierunkach i zwrotach.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 150.0,
+          "y": 180.0,
+          "x2": 450.0,
+          "y2": 80.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 400.0,
+          "y": 500.0,
+          "x2": 190.0,
+          "y2": 350.0,
+          "stroke": "success",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 620.0,
+          "y": 300.0,
+          "x2": 880.0,
+          "y2": 260.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": true,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 290.0,
+          "y": 105.0,
+          "text": "v⃗",
+          "stroke": "danger",
+          "fontSize": 28.0
+        },
+        {
+          "type": "text",
+          "x": 270.0,
+          "y": 410.0,
+          "text": "w⃗",
+          "stroke": "success",
+          "fontSize": 28.0
+        },
+        {
+          "type": "text",
+          "x": 735.0,
+          "y": 230.0,
+          "text": "u⃗",
+          "stroke": "accent",
+          "fontSize": 28.0
+        }
+      ]
+    },
+    {
+      "id": "course-vector-3",
+      "sourceId": "legacy-vectors",
+      "alternativeText": "Równoległobok z wektorami AD i BC oraz AB.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 190.0,
+          "y": 500.0,
+          "x2": 420.0,
+          "y2": 150.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 190.0,
+          "y": 500.0,
+          "x2": 740.0,
+          "y2": 500.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 420.0,
+          "y": 150.0,
+          "x2": 800.0,
+          "y2": 150.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 740.0,
+          "y": 500.0,
+          "x2": 800.0,
+          "y2": 150.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 245.0,
+          "y": 315.0,
+          "text": "AD⃗",
+          "stroke": "danger",
+          "fontSize": 27.0
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 505.0,
+          "text": "AB⃗",
+          "stroke": "accent",
+          "fontSize": 27.0
+        }
+      ]
+    },
+    {
+      "id": "course-vector-4",
+      "sourceId": "legacy-vectors",
+      "alternativeText": "Wektor o składowych 3 i 4 w układzie współrzędnych.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 110.0,
+          "y": 520.0,
+          "x2": 900.0,
+          "y2": 520.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 200.0,
+          "y": 590.0,
+          "x2": 200.0,
+          "y2": 70.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 905.0,
+          "y": 515.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 210.0,
+          "y": 55.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 170.0,
+          "y": 525.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "line",
+          "x": 310.0,
+          "y": 510.0,
+          "x2": 560.0,
+          "y2": 150.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 310.0,
+          "y": 510.0,
+          "x2": 560.0,
+          "y2": 510.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 560.0,
+          "y": 510.0,
+          "x2": 560.0,
+          "y2": 150.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 415.0,
+          "y": 520.0,
+          "text": "3",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 575.0,
+          "y": 330.0,
+          "text": "4",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 440.0,
+          "y": 295.0,
+          "text": "v⃗",
+          "stroke": "danger",
+          "fontSize": 28.0
+        }
+      ]
+    },
+    {
+      "id": "course-vector-5",
+      "sourceId": "legacy-vectors",
+      "alternativeText": "Wektor AB o współrzędnych 8 i minus 6.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 110.0,
+          "y": 520.0,
+          "x2": 900.0,
+          "y2": 520.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 200.0,
+          "y": 590.0,
+          "x2": 200.0,
+          "y2": 70.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 905.0,
+          "y": 515.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 210.0,
+          "y": 55.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 170.0,
+          "y": 525.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "line",
+          "x": 360.0,
+          "y": 170.0,
+          "x2": 770.0,
+          "y2": 470.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 360.0,
+          "y": 170.0,
+          "x2": 360.0,
+          "y2": 470.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 360.0,
+          "y": 470.0,
+          "x2": 770.0,
+          "y2": 470.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 475.0,
+          "y": 285.0,
+          "text": "AB⃗ = [8,-6]",
+          "stroke": "danger",
+          "fontSize": 25.0
+        }
+      ]
+    },
+    {
+      "id": "course-vector-6",
+      "sourceId": "legacy-vectors",
+      "alternativeText": "Dwa równe wektory przesunięte równolegle.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 130.0,
+          "y": 490.0,
+          "x2": 450.0,
+          "y2": 270.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 850.0,
+          "y": 220.0,
+          "x2": 530.0,
+          "y2": 440.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 450.0,
+          "y": 270.0,
+          "x2": 850.0,
+          "y2": 220.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 130.0,
+          "y": 490.0,
+          "x2": 530.0,
+          "y2": 440.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 275.0,
+          "y": 350.0,
+          "text": "v⃗",
+          "stroke": "danger",
+          "fontSize": 28.0
+        },
+        {
+          "type": "text",
+          "x": 665.0,
+          "y": 310.0,
+          "text": "u⃗",
+          "stroke": "accent",
+          "fontSize": 28.0
+        }
+      ]
+    },
+    {
+      "id": "course-vector-7",
+      "sourceId": "legacy-vectors",
+      "alternativeText": "Dodawanie wektorów v i w metodą trójkąta.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 190.0,
+          "y": 520.0,
+          "x2": 420.0,
+          "y2": 140.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 420.0,
+          "y": 140.0,
+          "x2": 800.0,
+          "y2": 300.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 190.0,
+          "y": 520.0,
+          "x2": 800.0,
+          "y2": 300.0,
+          "stroke": "danger",
+          "strokeThickness": 5.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 275.0,
+          "y": 300.0,
+          "text": "v⃗",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 610.0,
+          "y": 175.0,
+          "text": "w⃗",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 405.0,
+          "text": "v⃗ + w⃗",
+          "stroke": "danger",
+          "fontSize": 28.0
+        }
+      ]
+    },
+    {
+      "id": "course-vector-8",
+      "sourceId": "legacy-vectors",
+      "alternativeText": "Różnica wektorów v i w przedstawiona geometrycznie.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 390.0,
+          "y": 500.0,
+          "x2": 620.0,
+          "y2": 180.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 620.0,
+          "y": 180.0,
+          "x2": 890.0,
+          "y2": 300.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 190.0,
+          "y": 100.0,
+          "x2": 390.0,
+          "y2": 500.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 190.0,
+          "y": 100.0,
+          "x2": 620.0,
+          "y2": 180.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 235.0,
+          "y": 280.0,
+          "text": "v⃗ - w⃗",
+          "stroke": "danger",
+          "fontSize": 27.0
+        },
+        {
+          "type": "text",
+          "x": 720.0,
+          "y": 190.0,
+          "text": "w⃗",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 455.0,
+          "y": 315.0,
+          "text": "v⃗",
+          "stroke": "primary",
+          "fontSize": 24.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using Abituria.Models;
 using Avalonia;
 using Avalonia.Automation;
@@ -7,8 +6,6 @@ using Avalonia.Controls;
 using Avalonia.Layout;
 using Avalonia.Markup.Xaml.MarkupExtensions;
 using Avalonia.Media;
-using Avalonia.Media.Imaging;
-using Avalonia.Platform;
 
 namespace Abituria.Ui;
 
@@ -72,31 +69,19 @@ public static class UiFactory
         return scrollViewer;
     }
 
-    public static Image AssetImage(
-        string assetPath,
-        double? maxWidth = null,
-        double? maxHeight = null,
-        string? alternativeText = null)
+    public static TextBlock Glyph(string glyph, double fontSize, string alternativeText)
     {
-        var image = new Image
+        ArgumentException.ThrowIfNullOrWhiteSpace(glyph);
+        ArgumentException.ThrowIfNullOrWhiteSpace(alternativeText);
+        var text = new TextBlock
         {
-            Source = LoadBitmap(assetPath),
-            MaxWidth = maxWidth ?? double.PositiveInfinity,
-            MaxHeight = maxHeight ?? double.PositiveInfinity,
-            Stretch = Stretch.Uniform,
-            HorizontalAlignment = HorizontalAlignment.Left
+            Text = glyph,
+            FontFamily = FontFamily.Default,
+            FontSize = fontSize,
+            HorizontalAlignment = HorizontalAlignment.Left,
+            VerticalAlignment = VerticalAlignment.Center
         };
-        AutomationProperties.SetName(
-            image,
-            string.IsNullOrWhiteSpace(alternativeText)
-                ? $"Ilustracja: {Path.GetFileNameWithoutExtension(assetPath)}"
-                : alternativeText);
-        return image;
-    }
-
-    public static Bitmap LoadBitmap(string assetPath)
-    {
-        var normalized = assetPath.TrimStart('/').Replace('\\', '/');
-        return new Bitmap(AssetLoader.Open(new Uri($"avares://Abituria/{normalized}")));
+        AutomationProperties.SetName(text, alternativeText);
+        return text;
     }
 }

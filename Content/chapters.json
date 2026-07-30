@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "author": "Adam Kubiś",
   "sources": [
     {
@@ -4176,9 +4176,8 @@
           "text": "Podstawa teorii\n\nFunkcje trygonometryczne wiążą miary kątów z proporcjami boków. Rysunek pomocniczy pozwala dobrać definicję, twierdzenie sinusów lub cosinusów.\n\nKażde wymaganie w tej lekcji ma dwa rozwiązane przykłady i trzy ćwiczenia z pełnym rozwiązaniem."
         },
         {
-          "type": "image",
-          "asset": "img/course/right-triangle.png",
-          "alternativeText": "Trójkąt prostokątny z przyprostokątnymi a i b, przeciwprostokątną c oraz zaznaczonym kątem alfa."
+          "type": "diagram",
+          "diagramId": "course-right-triangle"
         }
       ],
       "workedExamples": [
@@ -4493,9 +4492,8 @@
           "text": "Podstawa teorii\n\nW geometrii płaskiej zapisuj dane na własnym rysunku i uzasadniaj każdą zależność twierdzeniem albo definicją. Sama zgodność z rysunkiem nie jest dowodem.\n\nKażde wymaganie w tej lekcji ma dwa rozwiązane przykłady i trzy ćwiczenia z pełnym rozwiązaniem."
         },
         {
-          "type": "image",
-          "asset": "img/course/circle-angles.png",
-          "alternativeText": "Okrąg z kątem środkowym AOB i kątem wpisanym ACB opartymi na tym samym łuku AB."
+          "type": "diagram",
+          "diagramId": "course-circle-angles"
         }
       ],
       "workedExamples": [
@@ -4839,9 +4837,8 @@
           "text": "Podstawa teorii\n\nGeometria analityczna tłumaczy punkty, proste, okręgi i wektory na równania. Wynik algebraiczny warto sprawdzić przez jego znaczenie geometryczne.\n\nKażde wymaganie w tej lekcji ma dwa rozwiązane przykłady i trzy ćwiczenia z pełnym rozwiązaniem."
         },
         {
-          "type": "image",
-          "asset": "img/course/coordinate-vector.png",
-          "alternativeText": "Układ współrzędnych z punktami A i B oraz wektorem od A do B, którego składowe pokazano równolegle do osi."
+          "type": "diagram",
+          "diagramId": "course-coordinate-vector"
         }
       ],
       "workedExamples": [
@@ -5056,64 +5053,64 @@
           "text": "Podstawowa wiedza o wektorach\n\nWektor - to uporządkowana para punktów (strzałka wyznaczona przez dwa punkty)."
         },
         {
-          "type": "image",
-          "asset": "img/1.png"
+          "type": "diagram",
+          "diagramId": "course-vector-1"
         },
         {
           "type": "richText",
           "text": "Rys. 1 Wektor wyznaczony przez dwa punkty\n\nWektor ma trzy cechy, które go jednoznacznie wyznaczają:\n\n\\(\\cdot\\)długość (czasami inaczej zwana modułem lub wartością)\n\\(\\cdot\\)kierunek (kierunek prostej zawierającej wektor)\n\\(\\cdot\\)zwrot (grot strzałki)\n\nJeżeli znamy punkt w którym wektor ma początek, to taki wektor nazywamy wektorem zaczepionym.\nWektor zaczepiony w punkcie \\(A\\,\\) i o końcu w punkcie \\(\\,B\\,\\) zapiszemy tak: \\(\\:\\vec{AB}\\).\nJeżeli wektor może być opisany tylko przez długość, kierunek i zwrot. Wtedy taki wektor nazywamy wektorem swobodnym i oznaczamy najczęściej małymi literami, np. tak: \\(\\:\\vec{v},\\vec{u},\\vec{w}\\)."
         },
         {
-          "type": "image",
-          "asset": "img/2.png"
+          "type": "diagram",
+          "diagramId": "course-vector-2"
         },
         {
           "type": "richText",
           "text": "Rys. 2 Wektory swobodne\n\nPojęcia: wektor zaczepiony oraz wektorem swobodnym są w praktyce rzadko stosowane. Najczęściej oba rodzaje wektorów określa się krótko pojęciem: wektor.\n\nPrzykład 1.\n\nW równoległoboku \\(\\:ABCD\\) wektory zaczepione \\(\\:\\vec{AD}\\) i \\(\\:\\vec{BC}\\) wyznaczają ten sam wektor swobodny:"
         },
         {
-          "type": "image",
-          "asset": "img/3.png"
+          "type": "diagram",
+          "diagramId": "course-vector-3"
         },
         {
           "type": "richText",
           "text": "Rys. 3 Wektory w równoległoboku\n\nPodobnie wektory \\(\\:\\vec{AB}\\:\\) i \\(\\:\\vec{DC}\\:\\) wyznaczają ten sam wektor swobodny.\nZauważmy, że kolejność punktów ma znaczenie. Wektor \\(\\:\\vec{CD}\\:\\) ma przeciwny zwrot do wektora \\(\\:\\vec{DC}\\).\nZatem wektory \\(\\:\\vec{AB}\\:\\) i \\(\\:\\vec{CD}\\:\\) nie wyznaczają tego samego wektora swobodnego.\nWspółrzędne wektora zapisujemy w nawiasach kwadratowych, np.:\n\n\\(\\:\\vec{v}=[3,4]\\:\\)\n\\(\\:\\vec{AB}=[2,-1]\\:\\)\nPierwsza współrzędna oznacza przesunięcie wzdłuż osi \\(\\:Ox\\), a druga wzdłuż osi \\(\\:Oy\\).\n\nPrzykład 2.\n\nNarysujmy wektory: \\(\\:\\vec{v}=[3,4]\\:\\) oraz \\(\\:\\vec{AB}=[2,-1]\\):"
         },
         {
-          "type": "image",
-          "asset": "img/4.png"
+          "type": "diagram",
+          "diagramId": "course-vector-4"
         },
         {
           "type": "richText",
           "text": "Rys. 4 Współrzędne wektorów\n\nWspółrzędna \\(\\:y\\)-owa wektora \\(\\:\\vec{AB}\\:\\) jest ujemna i dlatego przesuwamy się w dół. Na rysunku pionowe przesunięcie zostało podpisane dodatnią liczbą \\(\\:1\\), ponieważ długość odcinka jest zawsze dodatnia.\n\nJeżeli mamy \\(\\:A=(x_1,y_1)\\,\\) oraz \\(\\:B=(x_2,y_2)\\,\\) to:\n\n\\(\\:\\vec{AB}=[x_2-x_1,y_2-y_1]\\)\nDługość wektora o danych współrzędnych \\(\\:\\vec{AB}=[x,y]\\:\\) obliczamy ze wzoru:\n\n\\(\\mid{\\vec{AB}}\\mid{}=\\sqrt{x^2+y^2}\\)\n\nPrzykład 3.\n\nOblicz współrzędne wektora o początku w punkcie \\(\\:A=(5,2)\\,\\) i końcu w punkcie \\(\\:B=(-3,8)\\). Oblicz długość wektora \\(\\:\\vec{AB}\\:\\).\n\nRozwiązanie:\n\nNajpierw liczymy współrzędne wektora:\n\n\\(\\:\\vec{AB}=[x_2-x_1,y_2-y_1]\\)"
         },
         {
-          "type": "image",
-          "asset": "img/5.png"
+          "type": "diagram",
+          "diagramId": "course-vector-5"
         },
         {
           "type": "richText",
           "text": "Rys. 5 Wektor w układzie współrzędnych\n\nTeraz możemy obliczyć jego długość:\n\n\\(\\mid{\\vec{AB}}\\mid{}=\\sqrt{(-8)^2+6^2}=\\sqrt{64+36}=\\sqrt{100}=10\\)\n\nWektor przeciwny - to taki, który ma współrzędne przeciwnych znaków.\nJeżeli wektory \\(\\:\\vec{v}\\) i \\(\\:\\vec{u}\\) są przeciwne, to mają tą samą długość i kierunek, ale przeciwne zwroty."
         },
         {
-          "type": "image",
-          "asset": "img/6.png"
+          "type": "diagram",
+          "diagramId": "course-vector-6"
         },
         {
           "type": "richText",
           "text": "Rys. 6 Wektory przeciwne\n\nPrzykład 4.\nZnajdź wektor przeciwny \\(\\:\\vec{u}\\:\\)do wektora:\n\na) \\(\\:\\vec{v}=[5,11]\\)\n\nb) \\(\\:\\vec{v}=[-4,0]\\)\n\nc) \\(\\:\\vec{v}=[-\\frac{1}{2},3]\\)\n\nRozwiązanie:\n\na) \\(\\:\\vec{u}=-\\vec{v}=[-5,-11]\\)\n\nb) \\(\\:\\vec{u}=-\\vec{v}=[4,0]\\)\n\nc) \\(\\:\\vec{u}=-\\vec{v}=[\\frac{1}{2},-3]\\)\n\nDodawanie wektorów wykonujemy dodając ich współrzędne.\n\nPrzykład 5.\n\nWykonaj dodawanie wektorów \\(\\:\\vec{v}=[2,3]\\) i \\(\\:\\vec{u}=[4,-1]\\)\n\nRozwiązanie:\n\n\\(\\:\\vec{v}+\\vec{w}=[2,3]+[4,-1]=[2+4,3+(-1)]=[6,2]\\)"
         },
         {
-          "type": "image",
-          "asset": "img/7.png"
+          "type": "diagram",
+          "diagramId": "course-vector-7"
         },
         {
           "type": "richText",
           "text": "Rys. 7 Dodawanie wektorów - interpretacja graficzna\n\nOdejmowanie wektorów wykonujemy odejmując ich współrzędne.\n\nPrzykład 6.\n\nWykonaj odejmowanie wektorów \\(\\:\\vec{v}=[2,3]\\) i \\(\\:\\vec{u}=[4,-1]\\)\n\nRozwiązanie:\n\n\\(\\:\\vec{v}-\\vec{w}=[2,3]-[4,-1]=[2-4,3-(-1)]=[-2,4]\\)"
         },
         {
-          "type": "image",
-          "asset": "img/8.png"
+          "type": "diagram",
+          "diagramId": "course-vector-8"
         },
         {
           "type": "richText",
@@ -5167,9 +5164,8 @@
           "text": "Podstawa teorii\n\nW stereometrii kluczowe jest wskazanie właściwego przekroju i trójkąta pomocniczego. Nie zakładaj prostopadłości, jeśli nie wynika ona z danych lub twierdzenia.\n\nKażde wymaganie w tej lekcji ma dwa rozwiązane przykłady i trzy ćwiczenia z pełnym rozwiązaniem."
         },
         {
-          "type": "image",
-          "asset": "img/course/cube-section.png",
-          "alternativeText": "Sześcian z zaznaczoną płaszczyzną przekroju przechodzącą przez trzy wierzchołki."
+          "type": "diagram",
+          "diagramId": "course-cube-section"
         }
       ],
       "workedExamples": [

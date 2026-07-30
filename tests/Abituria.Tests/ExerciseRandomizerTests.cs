@@ -24,7 +24,7 @@ public sealed class ExerciseRandomizerTests
     {
         var first = CreateExercise("first", "algebra");
         var second = CreateExercise("second", "geometry");
-        IReadOnlyList<ExerciseDefinition> exercises = [first, second];
+        IReadOnlyList<LearningExercise> exercises = [first, second];
         var randomizer = new ExerciseRandomizer(new FixedRandom(1));
 
         var selected = randomizer.Select(exercises);
@@ -34,7 +34,7 @@ public sealed class ExerciseRandomizerTests
     }
 
     [AvaloniaFact]
-    public void Overview_opens_a_random_exercise_from_the_current_pool()
+    public void Matura_and_tasks_open_random_exercises_from_their_current_pools()
     {
         var algebra = CreateExercise("algebra", "algebra");
         var geometry = CreateExercise("geometry", "geometry");
@@ -49,11 +49,10 @@ public sealed class ExerciseRandomizerTests
         };
         LearningExercise? opened = null;
         string? selectedTopicId = "previous-topic";
-        var view = new ExamOverviewView(
+        var maturaView = new MaturaView(
             exam,
             [],
             () => { },
-            _ => { },
             _ => { },
             (exercise, topicId) =>
             {
@@ -61,20 +60,32 @@ public sealed class ExerciseRandomizerTests
                 selectedTopicId = topicId;
             },
             new ExerciseRandomizer(new FixedRandom(1)));
-        var window = new Window { Width = 960, Height = 640, Content = view };
+        var window = new Window { Width = 960, Height = 640, Content = maturaView };
 
         try
         {
             window.Show();
             Dispatcher.UIThread.RunJobs();
 
-            ClickButton(view, "Losuj zadanie z tego arkusza");
+            ClickButton(maturaView, "Losuj zadanie z tego arkusza");
 
             Assert.Same(geometry, opened);
             Assert.Null(selectedTopicId);
 
-            ClickButton(view, "Tematy");
-            ClickButton(view, "Losuj zadanie z tematu: Algebra");
+            var tasksView = new TaskTopicsView(
+                exam,
+                [],
+                _ => { },
+                _ => { },
+                (exercise, topicId) =>
+                {
+                    opened = exercise;
+                    selectedTopicId = topicId;
+                },
+                new ExerciseRandomizer(new FixedRandom(0)));
+            window.Content = tasksView;
+            Dispatcher.UIThread.RunJobs();
+            ClickButton(tasksView, "Losuj zadanie z tematu: Algebra");
 
             Assert.Same(algebra, opened);
             Assert.Equal("algebra", selectedTopicId);
@@ -86,13 +97,12 @@ public sealed class ExerciseRandomizerTests
     }
 
     [AvaloniaFact]
-    public void Overview_disables_randomization_for_an_empty_pool()
+    public void Matura_disables_randomization_for_an_empty_pool()
     {
-        var view = new ExamOverviewView(
+        var view = new MaturaView(
             new ExamDefinition(),
             [],
             () => { },
-            _ => { },
             _ => { },
             (_, _) => { });
 
@@ -103,7 +113,7 @@ public sealed class ExerciseRandomizerTests
         Assert.False(button.IsEnabled);
     }
 
-    private static ExerciseDefinition CreateExercise(string id, string topicId) => new()
+    private static LearningExercise CreateExercise(string id, string topicId) => new()
     {
         Id = id,
         TopicId = topicId,

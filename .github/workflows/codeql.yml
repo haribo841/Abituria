@@ -31,26 +31,13 @@ jobs:
       security-events: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Install .NET SDK from global.json
-        uses: actions/setup-dotnet@v4
-        with:
-          global-json-file: global.json
-          cache: true
-          cache-dependency-path: |
-            packages.lock.json
-            tests/Abituria.Tests/packages.lock.json
+        uses: actions/checkout@v5
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v4
         with:
           languages: csharp
-          build-mode: manual
-      - name: Restore in locked mode
-        run: dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
-      - name: Build for CodeQL
-        run: dotnet build Abituria.sln --configuration Release --no-restore --no-incremental
+          build-mode: none
       - name: Perform CodeQL analysis
         uses: github/codeql-action/analyze@v4
         with:
           category: /language:csharp
-

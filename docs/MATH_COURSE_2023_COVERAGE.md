@@ -5,9 +5,18 @@ Każdy identyfikator wymagania ma osobny scenariusz dydaktyczny w jednym z czter
 
 ## Przypięte źródła
 
-- [Rozporządzenie Ministra Edukacji z dnia 28 czerwca 2024 r. zmieniające rozporządzenie w sprawie podstawy programowej](https://eli.gov.pl/api/acts/DU/2024/1019/text/O/D20241019.pdf) - SHA-256 $(@{id=legal-basis-2024; publisher=Rzeczpospolita Polska; title=Rozporządzenie Ministra Edukacji z dnia 28 czerwca 2024 r. zmieniające rozporządzenie w sprawie podstawy programowej; documentUrl=https://eli.gov.pl/api/acts/DU/2024/1019/text/O/D20241019.pdf; documentSha256=4EC3AD07DC6912223F9973991F647B8759E7D41EB9889B94F396D6935FD5F8ED; publishedOn=2024-07-11; verifiedOn=2026-07-28}.documentSha256); weryfikacja 2026-07-28.
-- [Informator o egzaminie maturalnym z matematyki od roku szkolnego 2024/2025 - poziom podstawowy, Formuła 2023](https://bip.cke.gov.pl/attachments/download/10085) - SHA-256 $(@{id=cke-basic-guide-2023; publisher=Centralna Komisja Egzaminacyjna; title=Informator o egzaminie maturalnym z matematyki od roku szkolnego 2024/2025 - poziom podstawowy, Formuła 2023; documentUrl=https://bip.cke.gov.pl/attachments/download/10085; documentSha256=88A0EA8E2EE444506CCA5E89C860178E33B04F181650A36D9C9B4DC9BBE625B2; publishedOn=; verifiedOn=2026-07-28}.documentSha256); weryfikacja 2026-07-28.
-- [Informator o egzaminie maturalnym z matematyki od roku szkolnego 2024/2025 - poziom rozszerzony, Formuła 2023](https://bip.cke.gov.pl/attachments/download/10088) - SHA-256 $(@{id=cke-extended-guide-2023; publisher=Centralna Komisja Egzaminacyjna; title=Informator o egzaminie maturalnym z matematyki od roku szkolnego 2024/2025 - poziom rozszerzony, Formuła 2023; documentUrl=https://bip.cke.gov.pl/attachments/download/10088; documentSha256=BD408CDC8877E04EC79AAC3177FAB304E6F66C6B5FA152D8D3436D4ACFB2BC6F; publishedOn=; verifiedOn=2026-07-28}.documentSha256); weryfikacja 2026-07-28.
+- [Rozporządzenie Ministra Edukacji z dnia 28 czerwca 2024 r. zmieniające rozporządzenie w sprawie podstawy programowej](https://eli.gov.pl/api/acts/DU/2024/1019/text/O/D20241019.pdf)
+  - wydawca: Rzeczpospolita Polska
+  - SHA-256: `4EC3AD07DC6912223F9973991F647B8759E7D41EB9889B94F396D6935FD5F8ED`
+  - weryfikacja: 2026-07-28
+- [Informator o egzaminie maturalnym z matematyki od roku szkolnego 2024/2025 - poziom podstawowy, Formuła 2023](https://bip.cke.gov.pl/attachments/download/10085)
+  - wydawca: Centralna Komisja Egzaminacyjna
+  - SHA-256: `88A0EA8E2EE444506CCA5E89C860178E33B04F181650A36D9C9B4DC9BBE625B2`
+  - weryfikacja: 2026-07-28
+- [Informator o egzaminie maturalnym z matematyki od roku szkolnego 2024/2025 - poziom rozszerzony, Formuła 2023](https://bip.cke.gov.pl/attachments/download/10088)
+  - wydawca: Centralna Komisja Egzaminacyjna
+  - SHA-256: `BD408CDC8877E04EC79AAC3177FAB304E6F66C6B5FA152D8D3436D4ACFB2BC6F`
+  - weryfikacja: 2026-07-28
 
 ## Audyt liczbowy
 

@@ -27,10 +27,9 @@
       "id": "mathematics-course-formula-2023",
       "paths": [
         "Content/chapters.json",
-        "Content/course-exercises.json",
-        "img/course/*.png"
+        "Content/course-exercises.json"
       ],
-      "author": "Adam Kubiś - przykłady, ćwiczenia, rozwiązania i diagramy; Rzeczpospolita Polska - brzmienie wymagań; historyczni autorzy projektu Ich Troje - zachowane fragmenty",
+      "author": "Adam Kubiś - przykłady, ćwiczenia i rozwiązania; Rzeczpospolita Polska - brzmienie wymagań; historyczni autorzy projektu Ich Troje - zachowane fragmenty",
       "source": "Podstawa programowa Dz.U. 2024 poz. 1019, informatory CKE Formuła 2023 oraz zachowane treści historyczne; dokładne adresy i SHA-256 w Content/chapters.json",
       "license": "MIT dla materiałów autorskich i odziedziczonych; urzędowe brzmienie wymagań z przypisaniem źródła",
       "distributionStatus": "approved",
@@ -58,8 +57,7 @@
     {
       "id": "cke-2021-correction-exam",
       "paths": [
-        "Content/exam-2021-correction.json",
-        "img/mp21z*.png"
+        "Content/exam-2021-correction.json"
       ],
       "author": "Centralna Komisja Egzaminacyjna, adaptacja i weryfikacja: Adam Kubiś",
       "source": "Arkusz i zasady oceniania CKE EMAP-P0-100-2108",
@@ -71,34 +69,29 @@
       ]
     },
     {
-      "id": "inherited-mathematics-images",
+      "id": "runtime-vector-diagrams",
       "paths": [
-        "img/?.png",
-        "img/w*.png"
+        "Content/diagrams.json"
       ],
-      "author": "Autorzy nieustaleni, zasoby odziedziczone z historycznego projektu",
-      "source": "Historyczne snapshoty Projekt-Inzynierski",
-      "license": "Deklaracja uprawnienia do publicznej redystrybucji w ramach Abiturii z 2026-07-19",
+      "author": "Adam Kubiś - nowe definicje kursu; Centralna Komisja Egzaminacyjna - źródłowa treść tablic i arkusza; historyczni autorzy projektu Ich Troje - źródła zachowanych diagramów",
+      "source": "Deterministyczne definicje wektorowe opracowane na podstawie przypisanych źródeł; bez dołączania historycznych rastrów do aplikacji",
+      "license": "MIT dla definicji autorskich i odziedziczonych; materiały CKE z przypisaniem źródła zgodnie z deklaracją praw",
       "distributionStatus": "approved",
       "evidence": [
         "docs/ASSET_RIGHTS_DECLARATION.md",
         "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",
-        "docs/MIGRATION_INVENTORY.md"
+        "docs/MIGRATION_INVENTORY.md",
+        "docs/MATH_COURSE_2023_COVERAGE.md"
       ]
     },
     {
-      "id": "inherited-application-images",
+      "id": "application-icon",
       "paths": [
-        "img/abituria.png",
-        "img/dzialy.png",
-        "img/icon.ico",
-        "img/icon.png",
-        "img/kalkulator.png",
-        "img/zadania.png"
+        "img/icon.ico"
       ],
-      "author": "Autorzy nieustaleni, zasoby odziedziczone z historycznego projektu",
+      "author": "Autorzy historycznego projektu Ich Troje",
       "source": "Historyczne snapshoty Projekt-Inzynierski",
-      "license": "Deklaracja uprawnienia do publicznej redystrybucji w ramach Abiturii z 2026-07-19",
+      "license": "MIT na podstawie zachowanego pliku LICENSE-2022-Ich-Troje.txt",
       "distributionStatus": "approved",
       "evidence": [
         "docs/ASSET_RIGHTS_DECLARATION.md",

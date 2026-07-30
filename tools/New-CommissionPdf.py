@@ -331,7 +331,7 @@ def build_pdf(
                     ["Moduł", "Odpowiedzialność", "Kluczowe elementy"],
                     ["Shell i nawigacja", "Jedno okno, przełączanie widoków i kontekst zadania.", "MainWindow, AppViewModel"],
                     ["Treści", "Ładowanie tablic, działów, zadań i tekstów interfejsu.", "ContentRepository, RichContentView"],
-                    ["Zadania", "Lista, tematy, podpowiedzi, odpowiedzi, postęp i losowanie.", "ExamOverviewView, ExerciseView, ExerciseRandomizer"],
+                    ["Matura i zadania", "Arkusz, tematy, podpowiedzi, odpowiedzi, postęp i losowanie.", "MaturaView, TaskTopicsView, ExerciseView, ExerciseRandomizer"],
                     ["Kalkulatory", "Parser wyrażeń i analiza funkcji kwadratowej.", "ExpressionCalculator, CalculatorSession, QuadraticSolver"],
                     ["Konta", "Profile, rejestracja, hasła, odzyskiwanie i zapis postępu.", "AccountService, PasswordHasher, AppDbContext"],
                     ["Wydanie", "Smoke test, wersja, paczki, SBOM i walidacja archiwów.", "ReleaseSmokeTest, tools/release"],

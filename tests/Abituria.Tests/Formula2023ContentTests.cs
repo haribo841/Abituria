@@ -25,7 +25,7 @@ public sealed partial class Formula2023ContentTests
     {
         var catalog = Read<FormulaCatalog>("Content/formulas.json");
 
-        Assert.Equal(3, catalog.SchemaVersion);
+        Assert.Equal(4, catalog.SchemaVersion);
         Assert.Equal("Centralna Komisja Egzaminacyjna", catalog.Source.Publisher);
         Assert.Equal("Wybrane wzory matematyczne na egzamin maturalny z matematyki", catalog.Source.Title);
         Assert.Equal(ExpectedDocumentUrl, catalog.Source.DocumentUrl);
@@ -126,7 +126,7 @@ public sealed partial class Formula2023ContentTests
         var importer = ReadText("tools/Import-LegacyContent.ps1");
 
         Assert.Contains("$FormulaCatalogPath", importer, StringComparison.Ordinal);
-        Assert.Contains("schemaVersion -ne 3", importer, StringComparison.Ordinal);
+        Assert.Contains("schemaVersion -ne 4", importer, StringComparison.Ordinal);
         Assert.Contains("Write-Json 'formulas.json' $formulaCatalog", importer, StringComparison.Ordinal);
         Assert.DoesNotContain("Get-FormulaArticles", importer, StringComparison.Ordinal);
         Assert.DoesNotContain("pages\\equations", importer, StringComparison.Ordinal);
@@ -152,10 +152,16 @@ public sealed partial class Formula2023ContentTests
     [InlineData(1280, 820)]
     public void Every_formula_article_renders_without_math_errors_or_horizontal_overflow(int width, int height)
     {
-        var catalog = new ContentRepository().Formulas;
+        var repository = new ContentRepository();
+        var catalog = repository.Formulas;
         foreach (var article in catalog.Articles)
         {
-            var view = new ArticleView(article.Title, "Tablice CKE - Formuła 2023", article.Blocks, () => { });
+            var view = new ArticleView(
+                article.Title,
+                "Tablice CKE - Formuła 2023",
+                article.Blocks,
+                () => { },
+                repository.Diagrams);
             var window = ShowInWindow(view, width, height);
             try
             {

@@ -92,8 +92,9 @@ public sealed class FinalDocumentationTests
         Assert.Contains("commission-documentation-candidate", handoffScript, StringComparison.Ordinal);
         Assert.Contains("isRunnable = $false", handoffScript, StringComparison.Ordinal);
         Assert.Contains("cke-2021-correction-exam", handoffScript, StringComparison.Ordinal);
-        Assert.Contains("inherited-mathematics-images", handoffScript, StringComparison.Ordinal);
-        Assert.Contains("inherited-application-images", handoffScript, StringComparison.Ordinal);
+        Assert.Contains("cke-formula-2023-transcription", handoffScript, StringComparison.Ordinal);
+        Assert.Contains("runtime-vector-diagrams", handoffScript, StringComparison.Ordinal);
+        Assert.Contains("application-icon", handoffScript, StringComparison.Ordinal);
     }
 
     [Fact]

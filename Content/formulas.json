@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "source": {
     "publisher": "Centralna Komisja Egzaminacyjna",
     "title": "Wybrane wzory matematyczne na egzamin maturalny z matematyki",
@@ -112,12 +112,12 @@
           "type": "richText",
           "text": "GEOMETRIA ANALITYCZNA NA PŁASZCZYŹNIE KARTEZJAŃSKIEJ\nDługość odcinka\nDla \\(A=(x_A,y_A)\\) i \\(B=(x_B,y_B)\\):\n\\(| AB|=\\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}\\)\nŚrodek odcinka\n\\(S=\\left(\\frac{x_A+x_B}{2},\\frac{y_A+y_B}{2}\\right)\\)"
         },
-        { "type": "image", "asset": "img/w9a.png" },
+        { "type": "diagram", "diagramId": "formula-w9a" },
         {
           "type": "richText",
           "text": "Równania prostej\nRównanie kierunkowe prostej nierównoległej do osi \\(Oy\\): \\(y=ax+b\\), gdzie \\(a=\\operatorname{tg}\\alpha\\).\nProsta przecina oś \\(Oy\\) w punkcie \\((0,b)\\).\nProsta o współczynniku \\(a\\), przechodząca przez \\(P=(x_0,y_0)\\):\n\\(y=a(x-x_0)+y_0\\)\nProsta przez \\(A=(x_A,y_A)\\), \\(B=(x_B,y_B)\\), gdy \\(x_A\\neq x_B\\):\n\\(y-y_A=a(x-x_A)\\), gdzie \\(a=\\frac{y_B-y_A}{x_B-x_A}\\)\nRównanie ogólne: \\(Ax+By+C=0\\), gdzie \\(A,B,C\\in\\mathbb{R}\\) oraz \\(A^2+B^2\\neq 0\\).\nDla \\(A=0\\) prosta jest równoległa do osi \\(Ox\\), dla \\(B=0\\) do osi \\(Oy\\), a dla \\(C=0\\) przechodzi przez początek układu.\nProsta przez dwa dowolne punkty:\n\\((y-y_A)(x_B-x_A)-(y_B-y_A)(x-x_A)=0\\)"
         },
-        { "type": "image", "asset": "img/w9b.png" },
+        { "type": "diagram", "diagramId": "formula-w9b" },
         {
           "type": "richText",
           "text": "Proste równoległe\nDla równań kierunkowych: \\(a_1=a_2\\).\nDla równań ogólnych: \\(A_1B_2-A_2B_1=0\\).\nProste prostopadłe\nDla równań kierunkowych: \\(a_1a_2=-1\\).\nDla równań ogólnych: \\(A_1A_2+B_1B_2=0\\).\nOdległość punktu od prostej\nOdległość punktu \\(P=(x_0,y_0)\\) od prostej \\(Ax+By+C=0\\):\n\\(d=\\frac{| Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}\\)\nOkrąg\nPostać kanoniczna okręgu o środku \\(S=(a,b)\\) i promieniu \\(r>0\\):\n\\((x-a)^2+(y-b)^2=r^2\\)\nPostać ogólna: \\(x^2+y^2-2ax-2by+c=0\\), gdzie \\(c=a^2+b^2-r^2\\).\nWektory\n\\(\\vec{AB}=[x_B-x_A,y_B-y_A]\\)\nDla \\(\\vec{u}=[u_1,u_2]\\), \\(\\vec{v}=[v_1,v_2]\\) i \\(a\\in\\mathbb{R}\\):\n\\(\\vec{u}+\\vec{v}=[u_1+v_1,u_2+v_2]\\)\n\\(a\\vec{u}=[au_1,au_2]\\)\n\\(|\\vec{u}|=\\sqrt{u_1^2+u_2^2}\\)\nPrzekształcenia\nPrzesunięcie o \\([a,b]\\): \\((x,y)\\mapsto(x+a,y+b)\\).\nSymetria względem \\(Ox\\): \\((x,y)\\mapsto(x,-y)\\).\nSymetria względem \\(Oy\\): \\((x,y)\\mapsto(-x,y)\\).\nSymetria względem \\(K=(a,b)\\): \\((x,y)\\mapsto(2a-x,2b-y)\\).\nW szczególności symetria względem początku układu: \\((x,y)\\mapsto(-x,-y)\\).\nPole trójkąta\n\\(P_{\\triangle ABC}=\\frac{1}{2}\\left|(x_B-x_A)(y_C-y_A)-(y_B-y_A)(x_C-x_A)\\right|\\)\nŚrodek ciężkości\n\\(S=\\left(\\frac{x_A+x_B+x_C}{3},\\frac{y_A+y_B+y_C}{3}\\right)\\)"
@@ -133,63 +133,63 @@
           "type": "richText",
           "text": "PLANIMETRIA\nW trójkącie \\(ABC\\): \\(a,b,c\\) oznaczają długości boków, \\(\\alpha,\\beta,\\gamma\\) miary kątów przy \\(A,B,C\\), \\(R,r\\) promienie okręgów opisanego i wpisanego, \\(h_a,h_b,h_c\\) wysokości, a \\(p=\\frac{a+b+c}{2}\\) połowę obwodu.\nTwierdzenie Pitagorasa i odwrotne\nKąt \\(\\gamma\\) jest prosty wtedy i tylko wtedy, gdy \\(a^2+b^2=c^2\\).\nTwierdzenie sinusów\n\\(\\frac{a}{\\sin\\alpha}=\\frac{b}{\\sin\\beta}=\\frac{c}{\\sin\\gamma}=2R\\)\nTwierdzenie cosinusów\n\\(a^2=b^2+c^2-2bc\\cos\\alpha\\)\n\\(b^2=a^2+c^2-2ac\\cos\\beta\\)\n\\(c^2=a^2+b^2-2ab\\cos\\gamma\\)\nPola trójkąta\n\\(P=\\frac12ah_a=\\frac12bh_b=\\frac12ch_c\\)\n\\(P=\\frac12ab\\sin\\gamma{}=\\frac12bc\\sin\\alpha{}=\\frac12ca\\sin\\beta\\)\n\\(P=\\frac{abc}{4R}=pr\\)\n\\(P=\\sqrt{p(p-a)(p-b)(p-c)}\\)\n\\(P=\\frac12a^2\\frac{\\sin\\beta\\sin\\gamma}{\\sin\\alpha}=\\frac12b^2\\frac{\\sin\\gamma\\sin\\alpha}{\\sin\\beta}=\\frac12c^2\\frac{\\sin\\alpha\\sin\\beta}{\\sin\\gamma}\\)\n\\(P=2R^2\\sin\\alpha\\sin\\beta\\sin\\gamma\\)\nZwiązki w trójkącie prostokątnym\nJeśli \\(D\\) jest spodkiem wysokości z kąta prostego \\(C\\), to:\n\\(h_c=\\sqrt{| AD|\\cdot| DB|}=\\frac{ab}{c}\\)\n\\(r=\\frac{a+b-c}{2}\\), \\(R=\\frac{c}{2}\\)\n\\(a=c\\sin\\alpha{}=c\\cos\\beta{}=b\\operatorname{tg}\\alpha{}=\\frac{b}{\\operatorname{tg}\\beta}\\)\nTrójkąt równoboczny\n\\(h=\\frac{a\\sqrt3}{2}\\), \\(P=\\frac{a^2\\sqrt3}{4}\\), \\(r=\\frac{h}{3}\\), \\(R=\\frac{2h}{3}\\)"
         },
-        { "type": "image", "asset": "img/w10e.png" },
-        { "type": "image", "asset": "img/w10f.png" },
-        { "type": "image", "asset": "img/w10g.png" },
+        { "type": "diagram", "diagramId": "formula-w10e" },
+        { "type": "diagram", "diagramId": "formula-w10f" },
+        { "type": "diagram", "diagramId": "formula-w10g" },
         {
           "type": "richText",
           "text": "Cechy przystawania trójkątów\n- bok-bok-bok: odpowiednie trzy boki są równe\n- bok-kąt-bok: odpowiednie dwa boki i kąt między nimi są równe\n- kąt-bok-kąt: odpowiedni bok i dwa kąty do niego przyległe są równe\nCechy podobieństwa trójkątów\n- bok-bok-bok: odpowiednie boki są proporcjonalne\n- bok-kąt-bok: dwie pary boków są proporcjonalne, a kąty między nimi przystające\n- kąt-kąt-kąt: odpowiednie kąty są przystające"
         },
-        { "type": "image", "asset": "img/w10a.png" },
-        { "type": "image", "asset": "img/w10b.png" },
-        { "type": "image", "asset": "img/w10c.png" },
-        { "type": "image", "asset": "img/w10d.png" },
+        { "type": "diagram", "diagramId": "formula-w10a" },
+        { "type": "diagram", "diagramId": "formula-w10b" },
+        { "type": "diagram", "diagramId": "formula-w10c" },
+        { "type": "diagram", "diagramId": "formula-w10d" },
         {
           "type": "richText",
           "text": "Twierdzenie o dwusiecznej kąta\nJeżeli dwusieczna kąta wewnętrznego lub zewnętrznego przy \\(C\\) przecina prostą \\(AB\\) w punkcie \\(D\\), to:\n\\(\\frac{| AD|}{| BD|}=\\frac{| AC|}{| BC|}\\)\nTwierdzenie Talesa i odwrotne\nDla prostych \\(AB\\) i \\(CD\\), przecinających się w \\(P\\):\n\\(\\frac{| AB|}{| PA|}=\\frac{| CD|}{| PC|}\\) wtedy i tylko wtedy, gdy proste \\(AC\\) i \\(BD\\) są równoległe."
         },
-        { "type": "image", "asset": "img/w10h.png" },
-        { "type": "image", "asset": "img/w10i.png" },
+        { "type": "diagram", "diagramId": "formula-w10h" },
+        { "type": "diagram", "diagramId": "formula-w10i" },
         {
           "type": "richText",
           "text": "Koło\nDla promienia \\(r\\): \\(P=\\pi r^2\\), \\(L=2\\pi r\\)."
         },
-        { "type": "image", "asset": "img/w10m.png" },
+        { "type": "diagram", "diagramId": "formula-w10m" },
         {
           "type": "richText",
           "text": "Wycinek koła\nDla kąta środkowego \\(\\alpha\\) wyrażonego w stopniach:\n\\(P=\\frac{\\alpha}{360^\\circ}\\pi r^2\\)\n\\(L=\\frac{\\alpha}{360^\\circ}2\\pi r\\)"
         },
-        { "type": "image", "asset": "img/w10n.png" },
+        { "type": "diagram", "diagramId": "formula-w10n" },
         {
           "type": "richText",
           "text": "Kąty w okręgu\nKąt wpisany jest równy połowie kąta środkowego opartego na tym samym łuku. Kąt wpisany oparty na półokręgu jest prosty. Kąty wpisane oparte na tym samym łuku są równe."
         },
-        { "type": "image", "asset": "img/w10o.png" },
+        { "type": "diagram", "diagramId": "formula-w10o" },
         {
           "type": "richText",
           "text": "Kąt między styczną i cięciwą\nDla stycznej \\(AC\\), cięciwy \\(AB\\) i punktu \\(P\\) na okręgu:\n\\(|\\angle APB|=|\\angle CAB|\\), \\(|\\angle AOB|=2|\\angle CAB|\\)"
         },
-        { "type": "image", "asset": "img/w10p.png" },
-        { "type": "image", "asset": "img/w10r.png" },
+        { "type": "diagram", "diagramId": "formula-w10p" },
+        { "type": "diagram", "diagramId": "formula-w10r" },
         {
           "type": "richText",
           "text": "Odcinki stycznych\nJeżeli styczne w \\(A\\) i \\(B\\) przecinają się w \\(P\\), to \\(| PA|=| PB|\\).\nOdcinki siecznej i stycznej\nJeżeli sieczna przecina okrąg w \\(A,B\\), styczna dotyka go w \\(C\\), a proste przecinają się w \\(P\\), to:\n\\(| PA|\\cdot| PB|=| PC|^2\\)"
         },
-        { "type": "image", "asset": "img/w10s.png" },
-        { "type": "image", "asset": "img/w10t.png" },
+        { "type": "diagram", "diagramId": "formula-w10s" },
+        { "type": "diagram", "diagramId": "formula-w10t" },
         {
           "type": "richText",
           "text": "Czworokąty\nTrapez ma co najmniej jedną parę boków równoległych: \\(P=\\frac{a+b}{2}h\\).\nRównoległobok ma dwie pary boków równoległych:\n\\(P=ah=ab\\sin\\alpha{}=\\frac12| AC|| BD|\\sin\\gamma\\)\nRomb ma wszystkie boki równe:\n\\(P=ah=a^2\\sin\\alpha{}=\\frac12| AC|| BD|\\)\nDeltoid jest wypukły i ma oś symetrii zawierającą przekątną:\n\\(P=\\frac12| AC|| BD|\\)"
         },
-        { "type": "image", "asset": "img/w10j.png" },
-        { "type": "image", "asset": "img/w10k.png" },
-        { "type": "image", "asset": "img/w10l.png" },
+        { "type": "diagram", "diagramId": "formula-w10j" },
+        { "type": "diagram", "diagramId": "formula-w10k" },
+        { "type": "diagram", "diagramId": "formula-w10l" },
         {
           "type": "richText",
           "text": "Okrąg opisany na czworokącie\nNa czworokącie można opisać okrąg wtedy i tylko wtedy, gdy sumy przeciwległych kątów wynoszą \\(180^\\circ\\):\n\\(\\alpha+\\gamma{}=180^\\circ\\), \\(\\beta+\\delta{}=180^\\circ\\)\nOkrąg wpisany w czworokąt\nW czworokąt wypukły można wpisać okrąg wtedy i tylko wtedy, gdy sumy długości przeciwległych boków są równe:\n\\(a+c=b+d\\)\nPola figur podobnych\nJeżeli figura \\(\\mathcal{B}\\) jest podobna do figury \\(\\mathcal{A}\\) w skali \\(k\\), a \\(P_{\\mathcal{A}}\\neq 0\\), to:\n\\(\\frac{P_{\\mathcal{B}}}{P_{\\mathcal{A}}}=k^2\\)"
         },
-        { "type": "image", "asset": "img/w10u.png" },
-        { "type": "image", "asset": "img/w10w.png" }
+        { "type": "diagram", "diagramId": "formula-w10u" },
+        { "type": "diagram", "diagramId": "formula-w10w" }
       ]
     },
     {
@@ -201,37 +201,37 @@
           "type": "richText",
           "text": "STEREOMETRIA\nTwierdzenie o trzech prostych prostopadłych\nProsta \\(k\\) przebija płaszczyznę w punkcie \\(P\\) pod kątem ostrym, \\(l\\) jest jej rzutem prostokątnym na płaszczyznę, a \\(m\\) leży w płaszczyźnie i przechodzi przez \\(P\\). Wtedy \\(m\\perp k\\) wtedy i tylko wtedy, gdy \\(m\\perp l\\)."
         },
-        { "type": "image", "asset": "img/w11a.png" },
+        { "type": "diagram", "diagramId": "formula-w11a" },
         {
           "type": "richText",
           "text": "Przyjmujemy: \\(P_c\\) - pole całkowite, \\(P_b\\) - pole boczne, \\(P_p\\) - pole podstawy, \\(V\\) - objętość.\nProstopadłościan\nDla krawędzi \\(a,b,c\\): \\(P_c=2(ab+bc+ca)\\), \\(V=abc\\)."
         },
-        { "type": "image", "asset": "img/w11b.png" },
+        { "type": "diagram", "diagramId": "formula-w11b" },
         {
           "type": "richText",
           "text": "Graniastosłup prosty\n\\(P_b=Ob\\cdot h\\), \\(V=P_p\\cdot h\\), gdzie \\(Ob\\) jest obwodem podstawy."
         },
-        { "type": "image", "asset": "img/w11c.png" },
+        { "type": "diagram", "diagramId": "formula-w11c" },
         {
           "type": "richText",
           "text": "Ostrosłup\n\\(V=\\frac13P_p\\cdot h\\)"
         },
-        { "type": "image", "asset": "img/w11d.png" },
+        { "type": "diagram", "diagramId": "formula-w11d" },
         {
           "type": "richText",
           "text": "Walec\n\\(P_b=2\\pi rh\\), \\(P_c=2\\pi r(r+h)\\), \\(V=\\pi r^2h\\)"
         },
-        { "type": "image", "asset": "img/w11e.png" },
+        { "type": "diagram", "diagramId": "formula-w11e" },
         {
           "type": "richText",
           "text": "Stożek\n\\(P_b=\\pi rl\\), \\(P_c=\\pi r(r+l)\\), \\(V=\\frac13\\pi r^2h\\)"
         },
-        { "type": "image", "asset": "img/w11f.png" },
+        { "type": "diagram", "diagramId": "formula-w11f" },
         {
           "type": "richText",
           "text": "Kula\n\\(P_c=4\\pi r^2\\), \\(V=\\frac43\\pi r^3\\)"
         },
-        { "type": "image", "asset": "img/w11g.png" }
+        { "type": "diagram", "diagramId": "formula-w11g" }
       ]
     },
     {
@@ -243,24 +243,24 @@
           "type": "richText",
           "text": "TRYGONOMETRIA\nKąt ostry w trójkącie prostokątnym\n\\(\\sin\\alpha{}=\\frac{a}{c}\\), \\(\\cos\\alpha{}=\\frac{b}{c}\\), \\(\\operatorname{tg}\\alpha{}=\\frac{a}{b}\\)"
         },
-        { "type": "image", "asset": "img/w12a.png" },
+        { "type": "diagram", "diagramId": "formula-w12a" },
         {
           "type": "richText",
           "text": "Dowolny kąt\nDla punktu \\(M=(x,y)\\) i \\(r=| OM|=\\sqrt{x^2+y^2}>0\\):\n\\(\\sin\\alpha{}=\\frac{y}{r}\\), \\(\\cos\\alpha{}=\\frac{x}{r}\\), \\(\\operatorname{tg}\\alpha{}=\\frac{y}{x}\\) dla \\(x\\neq 0\\)"
         },
-        { "type": "image", "asset": "img/w12b.png" },
+        { "type": "diagram", "diagramId": "formula-w12b" },
         {
           "type": "richText",
           "text": "Wykresy funkcji trygonometrycznych"
         },
-        { "type": "image", "asset": "img/w12c.png" },
-        { "type": "image", "asset": "img/w12d.png" },
-        { "type": "image", "asset": "img/w12e.png" },
+        { "type": "diagram", "diagramId": "formula-w12c" },
+        { "type": "diagram", "diagramId": "formula-w12d" },
+        { "type": "diagram", "diagramId": "formula-w12e" },
         {
           "type": "richText",
           "text": "Związki funkcji tego samego kąta\n\\(\\sin^2\\alpha+\\cos^2\\alpha{}=1\\)\n\\(\\operatorname{tg}\\alpha{}=\\frac{\\sin\\alpha}{\\cos\\alpha}\\) dla \\(\\alpha\\neq\\frac{\\pi}{2}+k\\pi\\), \\(k\\in\\mathbb{Z}\\)\nWartości dla wybranych kątów\n| \\(\\alpha\\) | \\(0^\\circ\\) | \\(30^\\circ\\) | \\(45^\\circ\\) | \\(60^\\circ\\) | \\(90^\\circ\\) |\n| --- | --- | --- | --- | --- | --- |\n| \\(\\sin\\alpha\\) | \\(0\\) | \\(\\frac12\\) | \\(\\frac{\\sqrt2}{2}\\) | \\(\\frac{\\sqrt3}{2}\\) | \\(1\\) |\n| \\(\\cos\\alpha\\) | \\(1\\) | \\(\\frac{\\sqrt3}{2}\\) | \\(\\frac{\\sqrt2}{2}\\) | \\(\\frac12\\) | \\(0\\) |\n| \\(\\operatorname{tg}\\alpha\\) | \\(0\\) | \\(\\frac{\\sqrt3}{3}\\) | \\(1\\) | \\(\\sqrt3\\) | nie istnieje |"
         },
-        { "type": "image", "asset": "img/w12f.png" },
+        { "type": "diagram", "diagramId": "formula-w12f" },
         {
           "type": "richText",
           "text": "Suma i różnica kątów\n\\(\\sin(\\alpha+\\beta)=\\sin\\alpha\\cos\\beta+\\cos\\alpha\\sin\\beta\\)\n\\(\\sin(\\alpha-\\beta)=\\sin\\alpha\\cos\\beta-\\cos\\alpha\\sin\\beta\\)\n\\(\\cos(\\alpha+\\beta)=\\cos\\alpha\\cos\\beta-\\sin\\alpha\\sin\\beta\\)\n\\(\\cos(\\alpha-\\beta)=\\cos\\alpha\\cos\\beta+\\sin\\alpha\\sin\\beta\\)\n\\(\\operatorname{tg}(\\alpha+\\beta)=\\frac{\\operatorname{tg}\\alpha+\\operatorname{tg}\\beta}{1-\\operatorname{tg}\\alpha\\operatorname{tg}\\beta}\\)\n\\(\\operatorname{tg}(\\alpha-\\beta)=\\frac{\\operatorname{tg}\\alpha-\\operatorname{tg}\\beta}{1+\\operatorname{tg}\\alpha\\operatorname{tg}\\beta}\\)\nWzory dla tangensa obowiązują, gdy występujące tangensy istnieją i mianownik nie jest zerem.\nPodwojony kąt\n\\(\\sin2\\alpha{}=2\\sin\\alpha\\cos\\alpha\\)\n\\(\\cos2\\alpha{}=\\cos^2\\alpha-\\sin^2\\alpha{}=2\\cos^2\\alpha-1=1-2\\sin^2\\alpha\\)\n\\(\\operatorname{tg}2\\alpha{}=\\frac{2\\operatorname{tg}\\alpha}{1-\\operatorname{tg}^2\\alpha}\\), jeżeli wyrażenie jest określone.\nWzory redukcyjne\n\\(\\sin(90^\\circ-\\alpha)=\\cos\\alpha\\), \\(\\cos(90^\\circ-\\alpha)=\\sin\\alpha\\)\n\\(\\sin(90^\\circ+\\alpha)=\\cos\\alpha\\), \\(\\cos(90^\\circ+\\alpha)=-\\sin\\alpha\\)\n\\(\\sin(180^\\circ-\\alpha)=\\sin\\alpha\\), \\(\\cos(180^\\circ-\\alpha)=-\\cos\\alpha\\), \\(\\operatorname{tg}(180^\\circ-\\alpha)=-\\operatorname{tg}\\alpha\\)\n\\(\\sin(180^\\circ+\\alpha)=-\\sin\\alpha\\), \\(\\cos(180^\\circ+\\alpha)=-\\cos\\alpha\\), \\(\\operatorname{tg}(180^\\circ+\\alpha)=\\operatorname{tg}\\alpha\\)\nSumy, różnice i iloczyny\n\\(\\sin\\alpha+\\sin\\beta{}=2\\sin\\frac{\\alpha+\\beta}{2}\\cos\\frac{\\alpha-\\beta}{2}\\)\n\\(\\sin\\alpha-\\sin\\beta{}=2\\cos\\frac{\\alpha+\\beta}{2}\\sin\\frac{\\alpha-\\beta}{2}\\)\n\\(\\cos\\alpha+\\cos\\beta{}=2\\cos\\frac{\\alpha+\\beta}{2}\\cos\\frac{\\alpha-\\beta}{2}\\)\n\\(\\cos\\alpha-\\cos\\beta{}=-2\\sin\\frac{\\alpha+\\beta}{2}\\sin\\frac{\\alpha-\\beta}{2}\\)\n\\(\\sin\\alpha\\sin\\beta{}=-\\frac12[\\cos(\\alpha+\\beta)-\\cos(\\alpha-\\beta)]\\)\n\\(\\cos\\alpha\\cos\\beta{}=\\frac12[\\cos(\\alpha+\\beta)+\\cos(\\alpha-\\beta)]\\)\n\\(\\sin\\alpha\\cos\\beta{}=\\frac12[\\sin(\\alpha+\\beta)+\\sin(\\alpha-\\beta)]\\)\nOkresowość, dla \\(k\\in\\mathbb{Z}\\)\n\\(\\sin(\\alpha+k\\cdot360^\\circ)=\\sin\\alpha\\)\n\\(\\cos(\\alpha+k\\cdot360^\\circ)=\\cos\\alpha\\)\n\\(\\operatorname{tg}(\\alpha+k\\cdot180^\\circ)=\\operatorname{tg}\\alpha\\), gdy tangens istnieje."

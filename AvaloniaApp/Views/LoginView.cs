@@ -56,12 +56,21 @@ public sealed class LoginView : UserControl
     private static Border BuildIntroCard()
     {
         var intro = new StackPanel { Spacing = 18 };
+        var brand = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 12 };
+        AutomationProperties.SetName(brand, "🍀 Abituria");
+        brand.Children.Add(UiFactory.Glyph("🍀", 48, "Koniczyna Abituria"));
+        brand.Children.Add(new TextBlock
+        {
+            Text = "Abituria",
+            Classes = { "brand-text" },
+            VerticalAlignment = VerticalAlignment.Center
+        });
         intro.Children.Add(new Border
         {
             Name = "LoginBrandLogoSurface",
             Classes = { "brand-logo-surface" },
             HorizontalAlignment = HorizontalAlignment.Left,
-            Child = UiFactory.AssetImage("img/abituria.png", 230, 92, "Logo Abituria")
+            Child = brand
         });
         intro.Children.Add(new TextBlock { Text = "Twój matematyczny korepetytor", Classes = { "h1" }, TextWrapping = TextWrapping.Wrap });
         intro.Children.Add(new TextBlock

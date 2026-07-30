@@ -60,12 +60,14 @@ public sealed class AccessibilityRegressionTests
         var accounts = new AccountService(
             new AppDbContextFactory(Path.Combine(Path.GetTempPath(), "Abituria.Tests", "accessibility-exercise.db")),
             new PasswordHasher(1_000));
+        var repository = new ContentRepository();
         var context = new ExerciseViewContext(
             exercises,
             new SourceDocument { VerifiedOn = "2026-07-19" },
-            new ContentRepository().UiCopy,
+            repository.UiCopy,
             new LocalProfile(Guid.NewGuid(), "Tester", ProfileKind.Guest),
             accounts,
+            repository.Diagrams,
             () => { },
             _ => { });
         var view = new ExerciseView(exercises[1], context);
@@ -81,7 +83,7 @@ public sealed class AccessibilityRegressionTests
             button => string.Equals(button.Content as string, "Sprawdź odpowiedź", StringComparison.Ordinal));
         Assert.Contains("zapisana", AutomationProperties.GetHelpText(check), StringComparison.OrdinalIgnoreCase);
 
-        var openExercise = new ExerciseDefinition
+        var openExercise = new LearningExercise
         {
             Id = "open",
             Number = 4,
@@ -125,7 +127,7 @@ public sealed class AccessibilityRegressionTests
         Assert.Contains("Nowy kod odzyskiwania", profileSource, StringComparison.Ordinal);
     }
 
-    private static ExerciseDefinition Exercise(string id, int number, string title) => new()
+    private static LearningExercise Exercise(string id, int number, string title) => new()
     {
         Id = id,
         Number = number,

@@ -56,7 +56,7 @@ Archiwum wariantu B nie zawiera wykonywalnej aplikacji, bibliotek, źródeł tre
 
 ## Wyłączone zasoby i skutki funkcjonalne
 
-Wariant B celowo zawiera wyłącznie dokumentację, dlatego nie obejmuje zasobów wykonawczych i edukacyjnych niezależnie od ich zatwierdzonego statusu prawnego. W szczególności nie zawiera `Content/exam-2021-correction.json`, `img/`, `tools/Import-LegacyContent.ps1`, DLL, EXE, `.app` ani pełnego źródła projektu.
+Wariant B celowo zawiera wyłącznie dokumentację, dlatego nie obejmuje zasobów wykonawczych i edukacyjnych niezależnie od ich zatwierdzonego statusu prawnego. W szczególności nie zawiera `Content/exam-2021-correction.json`, `Content/diagrams.json`, `img/icon.ico`, `tools/Import-LegacyContent.ps1`, DLL, EXE, `.app` ani pełnego źródła projektu.
 
 Skutek: pakiet wariantu B nie jest uruchamialny i nie może być przedstawiany jako publiczne wydanie, instalator albo kompletna paczka Abiturii. Dostarcza wyłącznie materiał do oceny technicznej i formalnej.
 
