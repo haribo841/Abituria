@@ -22,6 +22,9 @@ public static class AppServiceRegistration
         services.AddSingleton<ContentRepository>();
         services.AddSingleton<ExpressionCalculator>();
         services.AddSingleton<CalculatorSession>();
+        services.AddSingleton<AvaloniaTextClipboard>();
+        services.AddSingleton<ITextClipboard>(provider => provider.GetRequiredService<AvaloniaTextClipboard>());
+        services.AddSingleton<ExerciseScratchpadSession>();
         services.AddSingleton(AppBuildInfo.Current);
         services.AddSingleton<AppViewModel>();
         services.AddSingleton<MainWindow>();

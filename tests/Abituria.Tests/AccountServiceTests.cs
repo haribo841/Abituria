@@ -137,5 +137,42 @@ public sealed class AccountServiceTests : IAsyncLifetime
         var guest = Assert.Single(profiles, profile => profile.Kind == Models.ProfileKind.Guest);
 
         Assert.Equal("Maturzysta", guest.DisplayName);
+        Assert.Equal(Models.CalculatorPipMode.OwnedWindow, guest.CalculatorPipMode);
+    }
+
+    [Fact]
+    public async Task Calculator_pip_mode_is_validated_and_stored_per_profile()
+    {
+        var first = (await _accounts.RegisterAsync("PierwszyPip", ValidPassword, ValidPassword)).Profile!;
+        var second = (await _accounts.RegisterAsync("DrugiPip", ValidPassword, ValidPassword)).Profile!;
+
+        Assert.True(await _accounts.SetCalculatorPipModeAsync(first.Id, Models.CalculatorPipMode.AlwaysOnTopWindow));
+        Assert.True(await _accounts.SetCalculatorPipModeAsync(second.Id, Models.CalculatorPipMode.InAppPanel));
+        Assert.False(await _accounts.SetCalculatorPipModeAsync(Guid.NewGuid(), Models.CalculatorPipMode.OwnedWindow));
+        await Assert.ThrowsAsync<ArgumentOutOfRangeException>(() =>
+            _accounts.SetCalculatorPipModeAsync(first.Id, (Models.CalculatorPipMode)99));
+
+        var profiles = await _accounts.GetProfilesAsync();
+        Assert.Equal(
+            Models.CalculatorPipMode.AlwaysOnTopWindow,
+            profiles.Single(profile => profile.Id == first.Id).CalculatorPipMode);
+        Assert.Equal(
+            Models.CalculatorPipMode.InAppPanel,
+            profiles.Single(profile => profile.Id == second.Id).CalculatorPipMode);
+
+        await using (var context = _factory.CreateDbContext())
+        {
+            var stored = await context.Profiles.SingleAsync(
+                profile => profile.Id == first.Id,
+                TestContext.Current.CancellationToken);
+            stored.CalculatorPipMode = (Models.CalculatorPipMode)99;
+            await context.SaveChangesAsync(TestContext.Current.CancellationToken);
+        }
+
+        var normalized = (await _accounts.GetProfilesAsync()).Single(profile => profile.Id == first.Id);
+        Assert.Equal(Models.CalculatorPipMode.OwnedWindow, normalized.CalculatorPipMode);
+        var authenticated = await _accounts.AuthenticateAsync(first.Id, ValidPassword);
+        Assert.True(authenticated.Success);
+        Assert.Equal(Models.CalculatorPipMode.OwnedWindow, authenticated.Profile?.CalculatorPipMode);
     }
 }

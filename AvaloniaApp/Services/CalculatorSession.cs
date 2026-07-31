@@ -4,6 +4,11 @@ using System.Globalization;
 
 namespace Abituria.Services;
 
+public sealed class CalculatorResultAvailableEventArgs(string displayValue) : EventArgs
+{
+    public string DisplayValue { get; } = displayValue;
+}
+
 public sealed record CalculationHistoryItem(
     string Expression,
     string Result,
@@ -28,6 +33,8 @@ public sealed class CalculatorSession
     public double? LastResult { get; private set; }
     public IReadOnlyList<CalculationHistoryItem> History => _readOnlyHistory;
 
+    public event EventHandler<CalculatorResultAvailableEventArgs>? ResultAvailable;
+
     public CalculationResult Calculate(string? expression)
     {
         var ansInput = LastResult;
@@ -38,6 +45,7 @@ public sealed class CalculatorSession
         LastResult = result.Value.Value;
         _repeatOperation = evaluation.RepeatOperation;
         AddHistory((result.NormalizedExpression ?? expression!).Trim(), result, ansInput);
+        PublishResult(result);
         return result;
     }
 
@@ -55,6 +63,7 @@ public sealed class CalculatorSession
 
         LastResult = result.Value.Value;
         AddHistory(expression, result, lastResult);
+        PublishResult(result);
         return result;
     }
 
@@ -83,6 +92,7 @@ public sealed class CalculatorSession
 
         LastResult = item.Value;
         _repeatOperation = evaluation.RepeatOperation;
+        PublishResult(result);
         return result;
     }
 
@@ -98,6 +108,9 @@ public sealed class CalculatorSession
         _history.Insert(0, new CalculationHistoryItem(expression, result.DisplayValue, result.Value!.Value, ansInput));
         if (_history.Count > HistoryLimit) _history.RemoveAt(_history.Count - 1);
     }
+
+    private void PublishResult(CalculationResult result) =>
+        ResultAvailable?.Invoke(this, new CalculatorResultAvailableEventArgs(result.DisplayValue));
 
     private static string Format(double value) => value.ToString("R", CultureInfo.InvariantCulture);
 

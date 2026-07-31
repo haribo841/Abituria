@@ -41,9 +41,11 @@ public sealed class ReleaseDatabaseCompatibilityTests
             var profile = Assert.Single(await firstRun.GetProfilesAsync());
             Assert.Equal(HistoricalProfileName, profile.DisplayName);
             Assert.Equal(ProfileKind.Password, profile.Kind);
+            Assert.Equal(CalculatorPipMode.OwnedWindow, profile.CalculatorPipMode);
             Assert.True((await firstRun.AuthenticateAsync(profile.Id, HistoricalPassword)).Success);
             Assert.Equal(["mp21-z7"], await firstRun.GetCompletedExerciseIdsAsync(profile.Id));
             await firstRun.MarkExerciseCompletedAsync(profile.Id, "mp21-z35");
+            Assert.True(await firstRun.SetCalculatorPipModeAsync(profile.Id, CalculatorPipMode.AlwaysOnTopWindow));
 
             SqliteConnection.ClearAllPools();
             var restarted = new AccountService(new AppDbContextFactory(databasePath), hasher);
@@ -53,7 +55,11 @@ public sealed class ReleaseDatabaseCompatibilityTests
             Assert.Equal(
                 ["mp21-z35", "mp21-z7"],
                 (await restarted.GetCompletedExerciseIdsAsync(profile.Id)).Order(StringComparer.Ordinal));
+            Assert.Equal(
+                CalculatorPipMode.AlwaysOnTopWindow,
+                Assert.Single(await restarted.GetProfilesAsync()).CalculatorPipMode);
             Assert.Equal("9.0.17", await ReadMigrationProductVersionAsync(databasePath));
+            Assert.Contains("202607310001_AddProfilePipPreference", await ReadMigrationIdsAsync(databasePath));
         }
         finally
         {
@@ -83,6 +89,19 @@ public sealed class ReleaseDatabaseCompatibilityTests
         command.Parameters.AddWithValue("$name", HistoricalProfileName);
         return (long)(await command.ExecuteScalarAsync(TestContext.Current.CancellationToken)
             ?? throw new InvalidDataException("Historyczny profil nie zawiera liczby iteracji hasła."));
+    }
+
+    private static async Task<IReadOnlyList<string>> ReadMigrationIdsAsync(string databasePath)
+    {
+        await using var connection = new SqliteConnection(ConnectionString(databasePath));
+        await connection.OpenAsync(TestContext.Current.CancellationToken);
+        await using var command = connection.CreateCommand();
+        command.CommandText = "SELECT \"MigrationId\" FROM \"__EFMigrationsHistory\" ORDER BY \"MigrationId\";";
+        await using var reader = await command.ExecuteReaderAsync(TestContext.Current.CancellationToken);
+        var migrationIds = new List<string>();
+        while (await reader.ReadAsync(TestContext.Current.CancellationToken))
+            migrationIds.Add(reader.GetString(0));
+        return migrationIds;
     }
 
     private static string ConnectionString(string databasePath) =>

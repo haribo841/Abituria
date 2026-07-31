@@ -98,6 +98,9 @@ public sealed class MainWindowPageCoverageTests
             Render();
             AssertPage<GeneralCalculatorView>(window);
 
+            Click(window, "Opcje");
+            AssertPage<OptionsView>(window);
+
             viewModel.OpenRoadmap("graph-generator");
             Render();
             AssertPage<RoadmapView>(window);

@@ -19,6 +19,7 @@ public sealed class LocalProfileEntity
     public byte[]? RecoveryCodeHash { get; set; }
     public DateTime CreatedUtc { get; set; }
     public DateTime? LastLoginUtc { get; set; }
+    public CalculatorPipMode CalculatorPipMode { get; set; } = CalculatorPipMode.OwnedWindow;
     public ICollection<ExerciseProgressEntity> Progress { get; set; } = [];
 }
 
@@ -52,6 +53,7 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : DbCon
             entity.HasIndex(profile => profile.NormalizedName).IsUnique();
             entity.Property(profile => profile.DisplayName).HasMaxLength(30).IsRequired();
             entity.Property(profile => profile.NormalizedName).HasMaxLength(30).IsRequired();
+            entity.Property(profile => profile.CalculatorPipMode).HasConversion<int>().IsRequired();
         });
 
         modelBuilder.Entity<ExerciseProgressEntity>(entity =>

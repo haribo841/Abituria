@@ -176,6 +176,9 @@ public sealed record ExerciseViewContext(
 {
     public string BackLabel { get; init; } = "Lista zadań";
     public string? SourceUrl { get; init; }
+    public ExerciseScratchpadSession? Scratchpads { get; init; }
+    public ITextClipboard? Clipboard { get; init; }
+    public Action? OpenCalculatorPip { get; init; }
 }
 
 public sealed class ExerciseView : UserControl
@@ -194,7 +197,7 @@ public sealed class ExerciseView : UserControl
         var root = new StackPanel { Spacing = 16 };
         root.Children.Add(BuildNavigation(exercise, context));
         AddPrompt(root, exercise, context.Diagrams);
-        AddScratchpad(root);
+        AddScratchpad(root, exercise, context);
         AddAnswerControls(root, exercise, context);
         AddHintControls(root, exercise);
         root.Children.Add(BuildSourceBand(exercise, context));
@@ -240,18 +243,40 @@ public sealed class ExerciseView : UserControl
             root.Children.Add(UiFactory.Card(new DiagramView(diagrams.GetRequired(diagramId))));
     }
 
-    private static void AddScratchpad(StackPanel root)
+    private void AddScratchpad(StackPanel root, LearningExercise exercise, ExerciseViewContext context)
     {
         var scratchpad = new TextBox
         {
             AcceptsReturn = true,
             TextWrapping = TextWrapping.Wrap,
             MinHeight = 130,
-            PlaceholderText = "Zapisz tutaj własne obliczenia. Brudnopis nie jest zapisywany po opuszczeniu zadania."
+            Text = context.Scratchpads?.GetText(context.Profile.Id, exercise.Id) ?? string.Empty,
+            PlaceholderText = "Zapisz tutaj własne obliczenia. Brudnopis jest przechowywany do zamknięcia aplikacji."
         };
         AutomationProperties.SetName(scratchpad, "Brudnopis do zadania");
+        if (context.Scratchpads is not null)
+            scratchpad.TextChanged += (_, _) => context.Scratchpads.SetText(context.Profile.Id, exercise.Id, scratchpad.Text);
+        if (context.Clipboard is not null)
+            TextBoxClipboardBehavior.Attach(scratchpad, context.Clipboard, message => ShowStatus(message, false));
+
         var scratchPanel = new StackPanel { Spacing = 8 };
-        scratchPanel.Children.Add(new TextBlock { Text = "Brudnopis", FontSize = 18, FontWeight = FontWeight.SemiBold });
+        var header = new Grid { ColumnDefinitions = new ColumnDefinitions("*,Auto"), ColumnSpacing = 10 };
+        header.Children.Add(new TextBlock
+        {
+            Text = "Brudnopis",
+            FontSize = 18,
+            FontWeight = FontWeight.SemiBold,
+            VerticalAlignment = VerticalAlignment.Center
+        });
+        if (context.OpenCalculatorPip is not null)
+        {
+            var openCalculator = new Button { Content = "Otwórz kalkulator PiP", Classes = { "ghost" } };
+            AutomationProperties.SetName(openCalculator, "Otwórz kalkulator Picture in Picture");
+            openCalculator.Click += (_, _) => context.OpenCalculatorPip();
+            Grid.SetColumn(openCalculator, 1);
+            header.Children.Add(openCalculator);
+        }
+        scratchPanel.Children.Add(header);
         scratchPanel.Children.Add(scratchpad);
         root.Children.Add(UiFactory.Card(scratchPanel));
     }
@@ -303,6 +328,8 @@ public sealed class ExerciseView : UserControl
     {
         var answer = new TextBox { PlaceholderText = "Wpisz liczbę lub proste wyrażenie" };
         AutomationProperties.SetName(answer, "Odpowiedź liczbowa");
+        if (context.Clipboard is not null)
+            TextBoxClipboardBehavior.Attach(answer, context.Clipboard, message => ShowStatus(message, false));
         root.Children.Add(answer);
 
         var check = new Button

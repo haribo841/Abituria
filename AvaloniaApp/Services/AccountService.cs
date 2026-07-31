@@ -34,7 +34,15 @@ public sealed class AccountService(AppDbContextFactory contextFactory, PasswordH
         return await context.Profiles
             .AsNoTracking()
             .OrderBy(profile => profile.DisplayName)
-            .Select(profile => new LocalProfile(profile.Id, profile.DisplayName, profile.Kind))
+            .Select(profile => new LocalProfile(
+                profile.Id,
+                profile.DisplayName,
+                profile.Kind,
+                profile.CalculatorPipMode == CalculatorPipMode.OwnedWindow ||
+                profile.CalculatorPipMode == CalculatorPipMode.AlwaysOnTopWindow ||
+                profile.CalculatorPipMode == CalculatorPipMode.InAppPanel
+                    ? profile.CalculatorPipMode
+                    : CalculatorPipMode.OwnedWindow))
             .ToListAsync();
     }
 
@@ -169,6 +177,20 @@ public sealed class AccountService(AppDbContextFactory contextFactory, PasswordH
         return ids.ToHashSet(StringComparer.Ordinal);
     }
 
+    public async Task<bool> SetCalculatorPipModeAsync(Guid profileId, CalculatorPipMode mode)
+    {
+        if (!IsSupportedCalculatorPipMode(mode))
+            throw new ArgumentOutOfRangeException(nameof(mode), mode, "Nieobsługiwany tryb kalkulatora PiP.");
+
+        await using var context = contextFactory.CreateDbContext();
+        var profile = await context.Profiles.SingleOrDefaultAsync(item => item.Id == profileId);
+        if (profile is null) return false;
+
+        profile.CalculatorPipMode = mode;
+        await context.SaveChangesAsync();
+        return true;
+    }
+
     private static void ApplyCredential(LocalProfileEntity entity, PasswordCredential credential, string recoveryCode)
     {
         entity.PasswordHash = credential.Hash;
@@ -177,7 +199,16 @@ public sealed class AccountService(AppDbContextFactory contextFactory, PasswordH
         entity.RecoveryCodeHash = PasswordHasher.HashRecoveryCode(recoveryCode);
     }
 
-    private static LocalProfile ToProfile(LocalProfileEntity entity) => new(entity.Id, entity.DisplayName, entity.Kind);
+    private static LocalProfile ToProfile(LocalProfileEntity entity) =>
+        new(entity.Id, entity.DisplayName, entity.Kind, NormalizeCalculatorPipMode(entity.CalculatorPipMode));
+
+    private static CalculatorPipMode NormalizeCalculatorPipMode(CalculatorPipMode mode) =>
+        IsSupportedCalculatorPipMode(mode) ? mode : CalculatorPipMode.OwnedWindow;
+
+    private static bool IsSupportedCalculatorPipMode(CalculatorPipMode mode) =>
+        mode is CalculatorPipMode.OwnedWindow or
+            CalculatorPipMode.AlwaysOnTopWindow or
+            CalculatorPipMode.InAppPanel;
     private static string NormalizeName(string value) => value.Trim().ToUpperInvariant();
 
     private static async Task ImportLegacyProfilesAsync(AppDbContext context)

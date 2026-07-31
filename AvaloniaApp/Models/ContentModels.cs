@@ -309,7 +309,18 @@ public enum ProfileKind
     Password = 1
 }
 
-public sealed record LocalProfile(Guid Id, string DisplayName, ProfileKind Kind);
+public enum CalculatorPipMode
+{
+    OwnedWindow = 0,
+    AlwaysOnTopWindow = 1,
+    InAppPanel = 2
+}
+
+public sealed record LocalProfile(
+    Guid Id,
+    string DisplayName,
+    ProfileKind Kind,
+    CalculatorPipMode CalculatorPipMode = CalculatorPipMode.OwnedWindow);
 
 public sealed record RegistrationResult(bool Success, string Message, LocalProfile? Profile = null, string? RecoveryCode = null);
 

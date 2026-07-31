@@ -19,13 +19,13 @@
 | Rejestracja i logowanie | niedokończony prototyp EF/LocalDB | Lokalne konta SQLite z rzeczywistą walidacją hasła |
 | Ukończone zadania | `CompleteExerciseService`, niewpięty do UI | Idempotentny zapis ukończenia per profil |
 | Kalkulator kwadratowy | `CalcQuadraticFunc`, `QuadraticPage` | Delta, miejsca zerowe, wierzchołek, trzy postacie i kroki obliczeń |
-| Kalkulator ogólny | `Opis struktury systemu.txt`, prototyp i issues #1/#3 | Bezpieczny parser działań, nawiasów, potęg i pierwiastków, Ans oraz historia sesji |
+| Kalkulator ogólny | `Opis struktury systemu.txt`, prototyp i issues #1/#3 | Bezpieczny parser działań, nawiasów, potęg i pierwiastków, Ans, historia sesji, pojedynczy PiP i automatyczny schowek wyniku |
 | Tablice matematyczne | historyczne `PageF1`-`PageF18` i `WPage`-`W18Page`; aktualny dokument CKE dla Formuły 2023 | 18 zachowanych artykułów w `Content/formulas.json`, uzupełnionych i zweryfikowanych według wszystkich 17 sekcji CKE |
 | Wektory | `pages/chapters/WektoryPage.xaml` | Pełny artykuł i 8 ilustracji |
 | Matura poprawkowa 2021 | `Z1Page`–`Z35Page` | 35 zadań, 169 zweryfikowanych podpowiedzi i 9 obrazów |
 | Weryfikacja arkusza | CKE `EMAP-P0-100-2108` | Klucz 1–28, treści, odpowiedzi otwarte i strony źródłowe zapisane w danych |
 | Zadania według tematów | `ZadaniaPage.xaml` | 17 kategorii obejmujących każde z 35 zadań dokładnie raz |
-| Brudnopis | pola tekstowe ekranów zadań | Wielowierszowe pole robocze utrzymywane w bieżącej sesji widoku |
+| Brudnopis | pola tekstowe ekranów zadań | Wielowierszowe pole robocze przechowywane osobno dla profilu i zadania do zamknięcia aplikacji, z `Ctrl+V` lub `Cmd+V` i menu `Wklej` |
 | Zadania 1–28 | checkboxy i `correctAnsw` | Cztery opcje, sprawdzanie i zapis po poprawnej odpowiedzi |
 | Zadania 29–35 | `ShowAnsBtn`/`ConfirmBtn` | Tryb `revealOnly`; zapis po ujawnieniu odpowiedzi |
 | Matury 2019/2020/2021 | pojedyncze ekrany informacyjne | Zachowane jako placeholdery z kontekstem historycznym i linkiem do roadmapy |

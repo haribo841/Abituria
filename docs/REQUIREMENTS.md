@@ -53,9 +53,10 @@ Zakres bieżącej implementacji obejmuje:
 - ujawnianie odpowiedzi w zadaniach otwartych,
 - podpowiedzi krokowe,
 - losowanie zadań z całego arkusza albo wybranego tematu,
-- sesyjny brudnopis zadania,
+- brudnopis przechowywany osobno dla profilu i zadania do zamknięcia aplikacji,
 - kalkulator funkcji kwadratowej,
 - kalkulator ogólny z nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią i powtarzanym `=`,
+- pojedynczy kalkulator Picture in Picture z trzema trybami hostowania oraz automatycznym schowkiem `Ans`,
 - roadmapę odróżniającą funkcje przeniesione, planowane i zastąpione,
 - ekran "O programie" oraz diagnostyczny tryb wydaniowy bez otwierania UI,
 - samowystarczalne, przenośne paczki x64 dla Windows 11, Ubuntu 24.04 i macOS 15 Intel,
@@ -89,7 +90,7 @@ Poza bieżącym zakresem pozostają:
 | F-10 | System sprawdza odpowiedzi A-D w zadaniach zamkniętych i zapisuje postęp po poprawnej odpowiedzi. | Wysoki | Zaimplementowane | `ExerciseView`, `ExerciseAndRoutingCoverageTests`, `MathCourse2023ContentTests` |
 | F-11 | System ujawnia pełne rozwiązania zadań otwartych i zapisuje postęp dopiero po świadomym ujawnieniu. | Wysoki | Zaimplementowane | `ExerciseView`, `ExerciseAndRoutingCoverageTests`, `MathCourse2023ContentTests` |
 | F-12 | System udostępnia podpowiedzi krokowe dla zadań. | Wysoki | Zaimplementowane | `ExerciseView`, `ContentInventoryTests` |
-| F-13 | System udostępnia sesyjny brudnopis zadania. | Średni | Zaimplementowane | `ExerciseView` |
+| F-13 | System przechowuje brudnopis osobno dla profilu i zadania podczas całej sesji aplikacji. | Średni | Zaimplementowane | `ExerciseScratchpadSession`, `ExerciseView`, `Issue5CalculatorPipTests` |
 | F-14 | System udostępnia kalkulator funkcji kwadratowej z krokami rozwiązania. | Wysoki | Zaimplementowane | `QuadraticSolver`, `QuadraticSolverTests` |
 | F-15 | System udostępnia kalkulator ogólny obsługujący działania podstawowe, nawiasy, potęgi i pierwiastki. | Wysoki | Zaimplementowane | `ExpressionCalculator`, `ExpressionCalculator*Tests` |
 | F-16 | System obsługuje historię kalkulatora, `Ans`, powtarzane `=` i przyciski `1/x`, `x²`, pierwiastki. | Wysoki | Zaimplementowane | `CalculatorSession`, `CalculatorInputState`, testy kalkulatora |
@@ -102,6 +103,8 @@ Poza bieżącym zakresem pozostają:
 | F-23 | System sprawdza odpowiedzi liczbowe bezpiecznym parserem, akceptuje przecinek i kropkę oraz stosuje tolerancję bezwzględną i względną `1e-9`. | Wysoki | Zaimplementowane | `NumericAnswerEvaluator`, `ExpressionCalculator`, `MathCourse2023ContentTests` |
 | F-24 | Profil pokazuje osobno postęp arkusza `x/35`, podstawy `x/219` i części rozszerzonej `x/138` bez zmiany schematu SQLite. | Wysoki | Zaimplementowane | `ProfileView`, `AccountService`, `MathCourse2023ContentTests` |
 | F-25 | Start pokazuje sześć kafelków, a niezależne strony `Matura` i `Zadania` rozdzielają pełny arkusz, 17 tematów, losowanie i placeholdery z właściwym kontekstem powrotu. | Wysoki | Zaimplementowane | `HomeView`, `MaturaView`, `TaskTopicsView`, `Issue4NavigationTests` |
+| F-26 | System udostępnia pojedynczy kalkulator Picture in Picture i przenosi tę samą sesję bez utraty wyrażenia między oknem nad Abiturią, oknem zawsze na wierzchu i panelem aplikacji. Wybrany tryb jest zapisywany osobno dla profilu. | Wysoki | Zaimplementowane | `CalculatorPipController`, `OptionsView`, migracja `202607310001_AddProfilePipPreference`, `Issue5CalculatorPipTests` |
+| F-27 | Każdy poprawny wynik kalkulatora ogólnego trafia dokładnie do schowka systemowego, a brudnopis i odpowiedź liczbowa obsługują `Ctrl+V` lub `Cmd+V` oraz menu `Wklej` w miejscu kursora albo zaznaczenia. | Wysoki | Zaimplementowane | `CalculatorClipboardCoordinator`, `TextBoxClipboardBehavior`, `Issue5CalculatorPipTests` |
 
 ## 5. Wymagania niefunkcjonalne
 
@@ -113,7 +116,7 @@ Poza bieżącym zakresem pozostają:
 | NF-04 | Długie treści edukacyjne i wzory nie są zapisane bezpośrednio w C#. | Wysoki | Zaimplementowane | `ContentSeparationTests`, katalog `Content` |
 | NF-05 | Hasła nie są przechowywane jawnie. | Wysoki | Zaimplementowane | `PasswordHasher`, `AccountServiceTests` |
 | NF-06 | Błędy kalkulatora są kontrolowane i nie powodują awarii aplikacji. | Wysoki | Zaimplementowane | `ExpressionCalculatorRobustnessTests`, regresje issues #1-#9 |
-| NF-07 | Nawigacja nie tworzy nieograniczonej liczby okien. | Wysoki | Zaimplementowane | `NavigationArchitectureTests` |
+| NF-07 | Nawigacja nie tworzy nieograniczonej liczby okien; jedynym kontrolowanym wyjątkiem jest pojedyncze okno kalkulatora PiP zarządzane przez `CalculatorPipController`. | Wysoki | Zaimplementowane | `NavigationArchitectureTests`, `Issue5CalculatorPipTests` |
 | NF-08 | Treści matematyczne renderują się bez znanych uszkodzonych komend LaTeX. | Wysoki | Zaimplementowane | `ContentInventoryTests`, `Discussion10VisualRegressionTests` |
 | NF-09 | Repozytorium ma bramy jakości: build, testy, format i SonarQube Cloud. | Wysoki | Zaimplementowane | `.github/workflows`, `docs/SONARQUBE.md` |
 | NF-10 | Migracja zachowuje oryginalne dokumenty legacy bajt w bajt. | Średni | Zaimplementowane | `docs/legacy/originals`, SHA-256, `ContentInventoryTests` |
@@ -246,14 +249,15 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 30. Test wpływu stylowania na renderowanie i nawigację mieści się w zapisanym budżecie czasu i pamięci oraz przechodzi dla wariantu jasnego, ciemnego i wysokiego kontrastu.
 31. `ACCESSIBILITY_WCAG_AUDIT.md` zawiera wszystkie 55 obowiązujących kryteriów A/AA WCAG 2.2, nie przedstawia testów headless jako certyfikatu i jawnie wskazuje kontrole wymagające technologii asystującej lub użytkownika.
 32. Kryteria Issue #4 wymagają sześciu kafelków, osobnych tras `Matura` i `Zadania`, zachowania 35 identyfikatorów arkusza i istniejącego postępu, dokładnie 57 używanych diagramów, 75 zgodnych sum archiwum oraz braku aktywnych PNG/JPG, `Bitmap`, `Image` i `AssetImage` poza ikoną `img/icon.ico` używaną tylko jako `ApplicationIcon`.
+33. Kryteria Issue #5 wymagają pojedynczego PiP w trzech trybach, zachowania sesji przy zmianie hosta, ustawienia per profil, dokładnego i uporządkowanego kopiowania `DisplayValue`, wklejania w brudnopisie i odpowiedzi liczbowej oraz izolacji brudnopisu między profilami i zadaniami.
 
 ## Macierz zgodności wymagań z implementacją
 
 | Obszar | Wymagania | Implementacja | Testy lub dokumenty |
 | --- | --- | --- | --- |
-| Konta i bezpieczeństwo | F-01 - F-05, NF-05 | `AccountService`, `PasswordHasher`, `LoginView`, `ProfileView` | `AccountServiceTests`, `Issue14RegistrationRegressionTests` |
-| Treści edukacyjne | F-06 - F-13, F-19, F-22, NF-04, NF-08 | `Content/*.json`, `ContentRepository`, `RichContentView`, `ExamViews`, `ExerciseRandomizer` | `ContentInventoryTests`, `ContentSeparationTests`, `Discussion10VisualRegressionTests`, `Issue35MathChaptersRegressionTests`, `ExerciseRandomizerTests` |
-| Kalkulatory | F-14 - F-16, NF-06 | `QuadraticSolver`, `ExpressionCalculator`, `CalculatorSession`, `CalculatorInputState` | `QuadraticSolverTests`, `ExpressionCalculator*Tests`, `CalculatorSessionTests` |
+| Konta i bezpieczeństwo | F-01 - F-05, NF-05 | `AccountService`, `PasswordHasher`, `LoginView`, `ProfileView` | `AccountServiceTests`, `Issue14RegistrationRegressionTests`, `ReleaseDatabaseCompatibilityTests` |
+| Treści edukacyjne | F-06 - F-13, F-19, F-22, NF-04, NF-08 | `Content/*.json`, `ContentRepository`, `RichContentView`, `ExamViews`, `ExerciseRandomizer`, `ExerciseScratchpadSession` | `ContentInventoryTests`, `ContentSeparationTests`, `Discussion10VisualRegressionTests`, `Issue35MathChaptersRegressionTests`, `ExerciseRandomizerTests`, `ExerciseScratchpadSessionTests` |
+| Kalkulatory | F-14 - F-16, F-26 - F-27, NF-06 | `QuadraticSolver`, `ExpressionCalculator`, `CalculatorSession`, `CalculatorInputState`, `CalculatorPipController`, `CalculatorClipboardCoordinator`, `TextBoxClipboardBehavior` | `QuadraticSolverTests`, `ExpressionCalculator*Tests`, `CalculatorSessionTests`, `Issue5CalculatorPipTests` |
 | Nawigacja, styl i dostępność UI | F-17, NF-02, NF-03, NF-07, NF-15 - NF-21 | `MainWindow`, `AppThemeManager`, `AdaptiveLayout`, `AppStyles.axaml`, `Views` | `NavigationArchitectureTests`, `ExerciseAndRoutingCoverageTests`, `AccessibilityRegressionTests`, `Discussion49StyleRegressionTests`, `docs/ACCESSIBILITY_WCAG_AUDIT.md` |
 | Migracja i dokumentacja | F-18, NF-09, NF-10 | `docs`, `.github/workflows`, `docs/legacy/originals` | `docs/MIGRATION_INVENTORY.md`, `docs/ARCHITECTURE.md`, `docs/DEFENSE_PROTOCOL.md`, `docs/EVALUATION_PROTOCOL.md`, ten dokument |
 | Wydanie i łańcuch dostaw | F-20 - F-21, NF-11 - NF-14 | `Directory.Build.props`, `global.json`, lockfile, `tools/release`, workflow wydania | `ReleaseRuntimeTests`, `ContentProvenanceTests`, `PerformanceMemoryAndLoadTests`, `docs/RELEASE_PROCESS.md` |

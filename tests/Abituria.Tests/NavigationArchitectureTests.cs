@@ -105,10 +105,20 @@ public sealed class NavigationArchitectureTests
             Path.Combine(root, "AvaloniaApp", "Views", "ProfileView.cs")
         };
         var dialogFactoryFile = Path.Combine(root, "AvaloniaApp", "Ui", "AdaptiveLayout.cs");
+        var pipControllerFile = Path.Combine(root, "AvaloniaApp", "Ui", "CalculatorPipController.cs");
 
         foreach (var file in files)
         {
             var source = File.ReadAllText(file);
+            if (string.Equals(file, pipControllerFile, StringComparison.OrdinalIgnoreCase))
+            {
+                Assert.Contains("private Window? _window", source, StringComparison.Ordinal);
+                Assert.Contains("ShowInTaskbar = false", source, StringComparison.Ordinal);
+                Assert.Contains("window.Show(_owner)", source, StringComparison.Ordinal);
+                Assert.Contains("_window?.Activate()", source, StringComparison.Ordinal);
+                continue;
+            }
+
             Assert.DoesNotContain(".Show(", source, StringComparison.Ordinal);
             if (modalDialogFiles.Contains(file))
             {

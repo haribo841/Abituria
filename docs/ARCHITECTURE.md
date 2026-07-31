@@ -8,7 +8,7 @@ Abituria jest lokalną aplikacją desktopową `.NET 10 LTS` z interfejsem Avalon
 
 Najważniejsze decyzje architektoniczne:
 
-- jedno główne okno `MainWindow` i nawigacja przez podmianę kontrolek `UserControl`,
+- jedno główne okno `MainWindow`, nawigacja przez podmianę kontrolek `UserControl` i jeden kontrolowany host kalkulatora PiP,
 - brak aktywnej nawigacji WPF, `Page`, `Frame` i `NavigationWindow`,
 - ręczna kompozycja widoków w C# zamiast rozbudowanych hierarchii XAML,
 - usługi aplikacyjne rejestrowane w prostym kontenerze DI z `Microsoft.Extensions.DependencyInjection`,
@@ -32,10 +32,13 @@ flowchart TB
     Services --> Content["ContentRepository"]
     Services --> CalculatorSession["CalculatorSession"]
     Services --> ExpressionCalculator["ExpressionCalculator"]
+    Services --> Clipboard["AvaloniaTextClipboard"]
+    Services --> Scratchpads["ExerciseScratchpadSession"]
     Services --> BuildInfo["AppBuildInfo"]
 
     Window --> ViewModel
     Window --> Views["Widoki Avalonia<br/>Home, Login, Profile, Content, Exam, Calculator"]
+    Window --> Pip["CalculatorPipController<br/>jeden widok i trzy hosty"]
     Views --> Ui["UiFactory i RichContentView"]
     Views --> Accounts
     Views --> Content
@@ -45,11 +48,13 @@ flowchart TB
 
     CalculatorSession --> ExpressionCalculator
     CalculatorSession --> CalculatorHistory["Historia sesji i Ans"]
+    CalculatorSession --> ClipboardCoordinator["CalculatorClipboardCoordinator"]
+    ClipboardCoordinator --> Clipboard
 
     Content --> Json["Content/*.json"]
     Json --> Provenance["provenance.json<br/>brama redystrybucji"]
     Ui --> Math["Sylinko.CSharpMath.Avalonia"]
-    Ui --> Assets["img i fonts"]
+    Ui --> Assets["diagramy wektorowe, font i ikona aplikacji"]
 
     Accounts --> DbFactory["AppDbContextFactory"]
     DbFactory --> SQLite["SQLite<br/>LocalApplicationData/Abituria/abituria.db"]
@@ -90,11 +95,13 @@ flowchart TB
 - `ExpressionCalculator`,
 - `ExerciseRandomizer`,
 - `CalculatorSession`,
+- `AvaloniaTextClipboard`,
+- `ExerciseScratchpadSession`,
 - `AppBuildInfo`,
 - `AppViewModel`,
 - `MainWindow`.
 
-Po utworzeniu kontenera aplikacja inicjalizuje konta i w trybie desktopowym ustawia `MainWindow` jako jedyne główne okno. Tryb diagnostyczny kieruje bazę do jawnie przekazanego katalogu tymczasowego, wyłącza import `%APPDATA%/Abituria/users.txt`, nie tworzy okna i sprawdza zasoby, SQLite, profil gościa, kalkulator oraz informacje o buildzie.
+Po utworzeniu kontenera aplikacja inicjalizuje konta i w trybie desktopowym ustawia `MainWindow` jako główne okno. `CalculatorPipController` może utworzyć najwyżej jedno małe okno należące do `MainWindow`; alternatywnie hostuje ten sam widok jako panel wewnątrz głównego okna. Tryb diagnostyczny kieruje bazę do jawnie przekazanego katalogu tymczasowego, wyłącza import `%APPDATA%/Abituria/users.txt`, nie tworzy okna i sprawdza zasoby, SQLite, profil gościa, kalkulator oraz informacje o buildzie.
 
 ## Nawigacja i shell UI
 
@@ -108,7 +115,7 @@ Stan nawigacji jest scentralizowany w `AppViewModel`:
 - `OpenRandomExercise` zapisuje wylosowane zadanie i zachowuje kontekst całego arkusza albo wybranego tematu,
 - `OpenGeneralCalculator` przełącza z huba kalkulatorów na kalkulator ogólny.
 
-Widoki są zwykłymi kontrolkami Avalonia `UserControl`. Produkcyjny kod nie używa WPF `Page`, `Frame` ani `NavigationWindow`. Regresja `NavigationArchitectureTests` pilnuje też, żeby kod produkcyjny nie wrócił do niemodalnego otwierania wielu okien.
+Widoki są zwykłymi kontrolkami Avalonia `UserControl`. Produkcyjny kod nie używa WPF `Page`, `Frame` ani `NavigationWindow`. Regresja `NavigationArchitectureTests` dopuszcza dokładnie jeden kontrolowany wyjątek od zakazu okien niemodalnych: `CalculatorPipController`, który przechowuje pojedynczą instancję okna i widoku, ustawia właściciela oraz nie pokazuje PiP na pasku zadań.
 
 ### Własny chrome okna
 
@@ -153,9 +160,10 @@ Zmiana `Grid.Row` i `Grid.Column` nie zmienia kolejności dzieci w drzewie logic
 - logowanie,
 - odzyskiwanie hasła,
 - zmianę hasła,
-- zapis ukończonych zadań.
+- zapis ukończonych zadań,
+- odczyt i zapis trybu kalkulatora PiP z walidacją wartości enum.
 
-Dane trwałe są zapisywane w SQLite w katalogu `LocalApplicationData/Abituria/abituria.db`. Hasła są haszowane przez `PasswordHasher` z PBKDF2-HMAC-SHA256, osobną solą i wersjonowaną liczbą iteracji. Kod odzyskiwania jest pokazywany użytkownikowi tylko raz, a w bazie pozostaje jego skrót.
+Dane trwałe są zapisywane w SQLite w katalogu `LocalApplicationData/Abituria/abituria.db`. Migracja `202607310001_AddProfilePipPreference` dodaje ustawienie trybu PiP z bezpieczną wartością domyślną `OwnedWindow`. Hasła są haszowane przez `PasswordHasher` z PBKDF2-HMAC-SHA256, osobną solą i wersjonowaną liczbą iteracji. Kod odzyskiwania jest pokazywany użytkownikowi tylko raz, a w bazie pozostaje jego skrót. Brudnopis korzysta z `ExerciseScratchpadSession`, jest indeksowany identyfikatorem profilu i zadania oraz celowo nie trafia do SQLite.
 
 ## Treści edukacyjne
 
@@ -170,7 +178,7 @@ Dane trwałe są zapisywane w SQLite w katalogu `LocalApplicationData/Abituria/a
 - `ui-copy.json` - dłuższe statyczne teksty interfejsu.
 - `provenance.json` - autor, źródło, licencja i status redystrybucji każdego paczkowanego zasobu.
 
-Kod produkcyjny odpowiada za wczytanie i wyświetlenie treści, a nie za przechowywanie długich materiałów edukacyjnych. `MathCourseNavigation` realizuje filtr podstawowy/rozszerzony i hierarchię obszar - lekcja - ćwiczenie. `NumericAnswerEvaluator` przekazuje wyrażenia do bezpiecznego parsera kalkulatora, obsługuje przecinek lub kropkę, tolerancję bezwzględną i względną oraz odrzuca błędy i wartości niefinitywne. Renderowanie treści miesza zwykłe `TextBlock`, obrazy z zasobów oraz `MathView` z `Sylinko.CSharpMath.Avalonia`.
+Kod produkcyjny odpowiada za wczytanie i wyświetlenie treści, a nie za przechowywanie długich materiałów edukacyjnych. `MathCourseNavigation` realizuje filtr podstawowy/rozszerzony i hierarchię obszar - lekcja - ćwiczenie. `NumericAnswerEvaluator` przekazuje wyrażenia do bezpiecznego parsera kalkulatora, obsługuje przecinek lub kropkę, tolerancję bezwzględną i względną oraz odrzuca błędy i wartości niefinitywne. Renderowanie treści miesza zwykłe `TextBlock`, skalowalne `DiagramView` oraz `MathView` z `Sylinko.CSharpMath.Avalonia`.
 
 Manifest pochodzenia jest porównywany z zasobami zadeklarowanymi w `Abituria.csproj`. Testy wymagają dokładnie jednego wpisu dla każdego pliku, kompletnego autora, źródła, licencji lub podstawy dystrybucji i istniejących dowodów. Status `blocked` nie psuje lokalnej kompilacji, ale `Test-ContentProvenance.ps1 -RequireReleaseEligible` bezwarunkowo blokuje publiczne wydanie.
 
@@ -181,6 +189,10 @@ Kalkulator funkcji kwadratowej korzysta z `QuadraticSolver`. Kalkulator ogólny 
 - `ExpressionCalculator` - tokenizer, parser i ewaluator wyrażeń,
 - `CalculatorSession` - historia, `Ans` i powtarzanie operacji,
 - `CalculatorInputState` - semantyka wejścia po wyniku, błędzie, `=`, `1/x`, pierwiastku i `x²`.
+
+Pełny ekran i kompaktowy PiP korzystają z tego samego `GeneralCalculatorView`. `CalculatorPipController` przenosi tę samą kontrolkę między oknem należącym do Abiturii, oknem `Topmost` i panelem w prawym dolnym rogu, więc wyrażenie oraz `CalculatorSession` nie są zerowane przy zmianie trybu. Ustawienie wybiera się na stronie `Opcje` i zapisuje osobno dla profilu.
+
+`CalculatorSession` publikuje zdarzenie wyłącznie po poprawnym wyniku. `CalculatorClipboardCoordinator` szereguje asynchroniczne zapisy, aby szybkie obliczenia nie odwróciły kolejności wartości `Ans`. `AvaloniaTextClipboard` izoluje dostęp do schowka platformy i zwraca kontrolowany komunikat zamiast przerywać obliczenie. `TextBoxClipboardBehavior` zapewnia wspólne wklejanie w brudnopisie i odpowiedzi liczbowej z zachowaniem kursora oraz zaznaczenia.
 
 `ExerciseRandomizer` wybiera jedno zadanie z przekazanej, niezmienianej puli. Widok listy przekazuje kontekst całego arkusza albo konkretnego tematu do `AppViewModel`, dzięki czemu przyciski poprzedniego i następnego zadania nie opuszczają wylosowanej puli.
 
@@ -198,8 +210,9 @@ Projekt ma testy dla głównych warstw:
 - `Discussion10VisualRegressionTests` - układ inline, listy matematyczne i regresje wizualne,
 - `Discussion49StyleRegressionTests` - font, własny chrome, stany interakcji, widoczny fokus, motywy, breakpointy, dialogi i koszt renderowania,
 - `ReleaseRuntimeTests`, `AboutViewTests` - izolowany smoke test, metadane builda i ekran "O programie",
-- `ContentProvenanceTests` - kompletność i jednoznaczność pochodzenia paczkowanych zasobów.
-- `MathCourse2023ContentTests` - kontrakt `4/13/73/46/238/357`, generowanie, filtr, tryby odpowiedzi, postęp, obrazy alternatywne i rozmiary UI.
+- `ContentProvenanceTests` - kompletność i jednoznaczność pochodzenia paczkowanych zasobów,
+- `MathCourse2023ContentTests` - kontrakt `4/13/73/46/238/357`, generowanie, filtr, tryby odpowiedzi, postęp, opisy alternatywne i rozmiary UI,
+- `Issue5CalculatorPipTests` - PiP, ustawienia profilu, kolejność schowka, wklejanie, sesyjny brudnopis, motywy i rozmiary UI.
 
 CI używa workflow `build` do restore, build oraz testów C# i Pythona. Raporty OpenCover i Cobertura trafiają do wspólnej bramki wymagającej `90%` łącznego pokrycia i `85%` pokrycia gałęzi. Dodatkowy workflow `sonarcloud` uruchamia wielojęzyczny SonarScanner for .NET, przekazuje oba raporty i czeka na quality gate. Workflow wydania działa na natywnych runnerach Windows, Ubuntu i macOS: odtwarza lockfile, audytuje NuGet, publikuje self-contained, wykonuje smoke test, sprawdza architekturę i zawartość archiwów oraz generuje sumy SHA-256, SBOM i atestacje. GitHub Pages powstaje z tych samych plików Markdown przez DocFX.
 

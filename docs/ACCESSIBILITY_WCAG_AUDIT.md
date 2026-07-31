@@ -50,7 +50,9 @@ Legenda statusów:
 - układ logowania przechodzi do jednej kolumny poniżej `860`, ekran Start poniżej `780`, a kalkulator ogólny poniżej `900`;
 - dialogi kodu odzyskiwania są skalowalne, mają minimalne i maksymalne wymiary oraz przewijanie;
 - komunikaty konta, sprawdzania zadania i kalkulatorów mają nazwy automatyzacji oraz ustawienie live `Polite`;
-- symboliczne przyciski, obrazy treści i pola wejściowe otrzymują opisowe nazwy automatyzacji.
+- status schowka kalkulatora ma opisową nazwę automatyzacji i region live `Polite`;
+- brudnopis i odpowiedź liczbowa pozwalają wkleić tekst klawiaturą albo nazwanym poleceniem menu kontekstowego;
+- symboliczne przyciski, diagramy treści i pola wejściowe otrzymują opisowe nazwy automatyzacji.
 - placeholdery pól używają kontrastowego `TextMutedBrush`, a tekstowy znak koniczyny i nazwa aplikacji korzystają z kolorów bieżącego motywu.
 
 ## Kontrast palet
@@ -104,7 +106,7 @@ Wartości dotyczą zdefiniowanych zasobów palety. Test renderowania pozostaje p
 
 | Kryterium | Poziom | Status | Ocena i dowód |
 | --- | --- | --- | --- |
-| 2.1.1 Keyboard | A | `M` | Standardowe kontrolki są osiągalne klawiaturą, kalkulator obsługuje `Enter`, `Escape` i edycję, a funkcje własnego chrome mają przyciski. Pełny scenariusz klawiaturowy wszystkich widoków wymaga ręcznego przejścia na natywnym backendzie. |
+| 2.1.1 Keyboard | A | `M` | Standardowe kontrolki są osiągalne klawiaturą, kalkulator obsługuje `Enter`, `Escape` i edycję, a brudnopis oraz odpowiedź liczbowa obsługują `Ctrl+V` lub `Cmd+V`. Funkcje własnego chrome i zamknięcie PiP mają przyciski. Pełny scenariusz klawiaturowy wszystkich widoków wymaga ręcznego przejścia na natywnym backendzie. |
 | 2.1.2 No Keyboard Trap | A | `M` | Nie ma celowo blokujących kontrolek; dialogi są modalne i można je zamknąć przyciskiem. Należy potwierdzić przejście `Tab` i `Shift+Tab` przez oba dialogi oraz powrót fokusu do właściciela. |
 | 2.1.4 Character Key Shortcuts | A | `P` | Jednoznakowe skróty kalkulatora działają wyłącznie w polu edycji wyrażenia, co spełnia wyjątek dla aktywnej kontrolki tekstowej. |
 | 2.2.1 Timing Adjustable | A | `N/D` | Aplikacja nie nakłada limitów czasu na naukę, formularze ani sesję. |
@@ -148,7 +150,7 @@ Wartości dotyczą zdefiniowanych zasobów palety. Test renderowania pozostaje p
 | Kryterium | Poziom | Status | Ocena i dowód |
 | --- | --- | --- | --- |
 | 4.1.2 Name, Role, Value | A | `M` | Automatyczne regresje sprawdzają nazwy pól, przycisków symbolicznych oraz dynamicznych wyników. Pełne role, wartości, stany wyboru, stan rozwinięcia i dostępność każdego widoku wymagają przeglądu przez Accessibility Insights, Inspect lub odpowiednik oraz czytnik ekranu. |
-| 4.1.3 Status Messages | AA | `P` | Status konta, wynik kalkulatora, wynik funkcji kwadratowej, sprawdzenie zadania i podpowiedź używają nazw automatyzacji i `AutomationLiveSetting.Polite`, bez wymuszania zmiany fokusu. |
+| 4.1.3 Status Messages | AA | `P` | Status konta i schowka, wynik kalkulatora, wynik funkcji kwadratowej, sprawdzenie zadania i podpowiedź używają nazw automatyzacji i `AutomationLiveSetting.Polite`, bez wymuszania zmiany fokusu. |
 
 Kryterium 4.1.1 Parsing nie ma w tabeli, ponieważ [WCAG 2.2 usunęło je jako przestarzałe](https://www.w3.org/TR/WCAG22/#parsing). Poprawność AXAML i drzewa kontrolek pozostaje niezależnie sprawdzana przez build i testy uruchomieniowe.
 
@@ -164,8 +166,10 @@ Poniższe czynności nie blokują używania aplikacji ani technicznego zamknięc
 6. sprawdzić zachowanie tooltipów z klawiaturą, myszą i powiększeniem;
 7. zmierzyć wszystkie cele wskaźnika mniejsze niż `24x24` albo udokumentować wyjątek odstępu;
 8. sprawdzić schowek i menedżer haseł w polach logowania i odzyskiwania;
-9. zweryfikować motyw systemowy oraz wykrywanie wysokiego kontrastu na każdym wspieranym systemie;
-10. dołączyć wersję systemu, backend Avalonia, rozdzielczość, skalowanie i wynik do protokołu.
+9. sprawdzić `Ctrl+V` lub `Cmd+V`, menu `Wklej`, automatyczne kopiowanie `Ans` oraz komunikat niedostępnego schowka;
+10. sprawdzić kolejność fokusu i natywne role w trzech trybach PiP, w tym powrót fokusu po zamknięciu okna;
+11. zweryfikować motyw systemowy oraz wykrywanie wysokiego kontrastu na każdym wspieranym systemie;
+12. dołączyć wersję systemu, backend Avalonia, rozdzielczość, skalowanie i wynik do protokołu.
 
 ## Wniosek
 

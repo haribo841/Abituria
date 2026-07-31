@@ -18,6 +18,7 @@ public enum AppPage
     CourseLesson,
     Calculator,
     GeneralCalculator,
+    Options,
     Roadmap,
     About,
     Profile,
@@ -46,6 +47,7 @@ public sealed class AppViewModel : ObservableObject
     private LearningExercise? _selectedExercise;
     private CourseLevelFilter _selectedCourseLevel = CourseLevelFilter.Basic;
     private ExamNavigationOrigin _examNavigationOrigin = ExamNavigationOrigin.Matura;
+    private CalculatorPipMode _calculatorPipMode = CalculatorPipMode.OwnedWindow;
     private string? _selectedTopicId;
     private string? _selectedRoadmapId;
     private PlaceholderItem? _selectedPlaceholder;
@@ -68,6 +70,7 @@ public sealed class AppViewModel : ObservableObject
     public LearningExercise? SelectedExercise { get => _selectedExercise; private set => SetProperty(ref _selectedExercise, value); }
     public CourseLevelFilter SelectedCourseLevel { get => _selectedCourseLevel; private set => SetProperty(ref _selectedCourseLevel, value); }
     public ExamNavigationOrigin ExamNavigationOrigin { get => _examNavigationOrigin; private set => SetProperty(ref _examNavigationOrigin, value); }
+    public CalculatorPipMode CalculatorPipMode { get => _calculatorPipMode; private set => SetProperty(ref _calculatorPipMode, value); }
     public string? SelectedTopicId { get => _selectedTopicId; private set => SetProperty(ref _selectedTopicId, value); }
     public string? SelectedRoadmapId { get => _selectedRoadmapId; private set => SetProperty(ref _selectedRoadmapId, value); }
     public PlaceholderItem? SelectedPlaceholder { get => _selectedPlaceholder; private set => SetProperty(ref _selectedPlaceholder, value); }
@@ -75,12 +78,14 @@ public sealed class AppViewModel : ObservableObject
     public void Login(LocalProfile profile)
     {
         ActiveProfile = profile;
+        CalculatorPipMode = profile.CalculatorPipMode;
         CurrentPage = AppPage.Home;
     }
 
     public void Logout()
     {
         ActiveProfile = null;
+        CalculatorPipMode = CalculatorPipMode.OwnedWindow;
         CurrentPage = AppPage.Login;
     }
 
@@ -132,6 +137,7 @@ public sealed class AppViewModel : ObservableObject
         CurrentPage = AppPage.ExerciseList;
     }
     public void OpenGeneralCalculator() => CurrentPage = AppPage.GeneralCalculator;
+    public void SetCalculatorPipMode(CalculatorPipMode mode) => CalculatorPipMode = mode;
     public void OpenRoadmap(string? itemId = null) { SelectedRoadmapId = itemId; CurrentPage = AppPage.Roadmap; }
     public void OpenPlaceholder(PlaceholderItem item) { SelectedPlaceholder = item; CurrentPage = AppPage.Placeholder; }
 }

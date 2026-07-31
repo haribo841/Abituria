@@ -36,8 +36,11 @@ Zestaw chroni obecny kalkulator przed regresjami opisanymi w historycznych issue
 | Zera wiodące | Dokładne przypadki issue #9, normalizacja każdego literału, komunikat użytkownika, klawiatura ekranowa, wklejanie, historia i rzeczywiste dzielenie przez zero |
 | `Ans` z pierwiastkiem | `1/(Ans∛(Ans))` dla wartości dodatnich, ujemnych, zera, małych liczb, brakującego `Ans` i niedomiaru zakresu |
 | `x²` | Wynik, całe wyrażenie, zaznaczenie, pusty szablon, historia, kolejne `=`, liczby zmiennoprzecinkowe i przepełnienie |
+| Schowek `Ans` | Dokładny `DisplayValue` po obliczeniu, kolejnym `=`, działaniach na wyniku i odtworzeniu historii, kolejność szybkich zapisów oraz brak zmiany po błędzie |
+| Picture in Picture | Dwa launchery, pojedyncza instancja, trzy hosty, zmiana trybu bez utraty wyrażenia, zamknięcie przy wylogowaniu, motywy i rozmiary `720x520`, `960x640`, `1280x820` |
+| Brudnopis i odpowiedź | Wklejanie skrótem i menu w miejscu kursora lub zaznaczenia, kontrolowany błąd schowka oraz izolacja tekstu między profilami i zadaniami |
 | Kultury systemowe | Identyczne wyniki dla `pl-PL`, `en-US`, `de-DE`, `fr-FR` i `tr-TR` |
-| Nawigacja | Brak zależności WPF `Page` i `NavigationWindow`, wszystkie widoki jako `UserControl`, jeden skalowalny `ShellHost` i minimalny rozmiar `960x640` |
+| Nawigacja | Brak zależności WPF `Page` i `NavigationWindow`, wszystkie widoki jako `UserControl`, jeden skalowalny `ShellHost`, jeden kontrolowany host PiP i minimalny rozmiar `720x520` |
 
 Przestrzeń wszystkich możliwych napisów jest nieskończona, dlatego zestaw łączy wyczerpujące macierze ograniczonych alfabetów z generowaniem deterministycznym, testami granic i dokładnymi regresjami.
 

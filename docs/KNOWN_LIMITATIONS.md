@@ -27,7 +27,7 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 - Nie ma synchronizacji między urządzeniami, konta internetowego, chmury ani współdzielenia postępu.
 - Nie ma automatycznej kopii zapasowej. Użytkownik odpowiada za kopię lokalnej bazy.
 - Cała baza SQLite nie jest szyfrowana. Hasła i kody odzyskiwania są przechowywane wyłącznie jako skróty, ale nazwy profili oraz postęp pozostają czytelne dla osoby mającej dostęp do pliku.
-- Brudnopis zadania jest sesyjny i nie jest zapisywany po opuszczeniu widoku.
+- Brudnopis zadania jest przechowywany przy nawigacji, ale tylko w pamięci procesu. Znika po zamknięciu aplikacji i nie jest częścią kopii bazy SQLite.
 
 ## Treści edukacyjne
 
@@ -46,6 +46,8 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 - Wyrażenie ma limit 512 znaków i 64 poziomów zagnieżdżenia.
 - Pierwiastek stopnia parzystego z liczby ujemnej, dzielenie przez zero, `0^0`, `NaN`, nieskończoność i wynik zespolony są kontrolowanymi błędami.
 - Historia kalkulatora ogólnego ma maksymalnie 20 poprawnych pozycji i istnieje tylko do zamknięcia aplikacji. Błędy nie są zapisywane.
+- Poprawny wynik kalkulatora ogólnego automatycznie zastępuje tekst w schowku systemowym. Niedostępny schowek nie blokuje obliczenia, ale integracja schowka oraz zachowanie okien `Owned` i `Topmost` nadal wymagają natywnego smoke testu na każdym wspieranym systemie.
+- Kalkulator PiP ma pojedynczą instancję i nie przechowuje własnej historii niezależnej od pełnego kalkulatora. Oba widoki współdzielą `Ans`, historię i bieżącą sesję obliczeń.
 - Kalkulator funkcji kwadratowej wymaga rzeczywistych współczynników i `a != 0`.
 
 ## Wsparcie

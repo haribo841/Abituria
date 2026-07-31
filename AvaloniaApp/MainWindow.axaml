@@ -72,6 +72,19 @@
       </Grid>
     </Border>
 
+    <Border x:Name="PipOverlayHost"
+            Width="360"
+            MaxHeight="440"
+            Margin="16"
+            Padding="0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Background="{DynamicResource SurfaceBrush}"
+            BorderBrush="{DynamicResource BorderBrush}"
+            BorderThickness="1"
+            CornerRadius="8"
+            IsVisible="False" />
+
     <Grid x:Name="ResizeGrips"
           Panel.ZIndex="100"
           IsVisible="True">

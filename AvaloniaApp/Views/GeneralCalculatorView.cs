@@ -9,8 +9,15 @@ using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Layout;
 using Avalonia.Media;
+using Avalonia.Threading;
 
 namespace Abituria.Views;
+
+public enum GeneralCalculatorLayout
+{
+    Full,
+    PictureInPicture
+}
 
 public sealed class GeneralCalculatorView : UserControl
 {
@@ -25,24 +32,45 @@ public sealed class GeneralCalculatorView : UserControl
 
     private readonly StackPanel _historyItems = new() { Spacing = 8 };
     private readonly StackPanel _result = new() { Spacing = 6 };
+    private readonly TextBlock _clipboardStatus = new() { TextWrapping = TextWrapping.Wrap };
     private readonly CalculatorInputState _inputState = new();
     private readonly CalculatorSession _session;
+    private readonly CalculatorClipboardCoordinator? _clipboardCoordinator;
     private bool _inputWasNormalized;
     private bool _repeatOnNextEquals;
 
-    public GeneralCalculatorView(CalculatorSession session, UiCopyCatalog copy, Action back)
+    public GeneralCalculatorView(
+        CalculatorSession session,
+        UiCopyCatalog copy,
+        Action back,
+        CalculatorClipboardCoordinator? clipboardCoordinator = null,
+        GeneralCalculatorLayout layout = GeneralCalculatorLayout.Full)
     {
-        _session = session;
+        _session = session ?? throw new ArgumentNullException(nameof(session));
+        ArgumentNullException.ThrowIfNull(copy);
+        ArgumentNullException.ThrowIfNull(back);
+        _clipboardCoordinator = clipboardCoordinator;
+        var isPictureInPicture = layout == GeneralCalculatorLayout.PictureInPicture;
         AutomationProperties.SetName(_expression, "Wyrażenie matematyczne");
         AutomationProperties.SetLiveSetting(_result, AutomationLiveSetting.Polite);
         AutomationProperties.SetName(_result, "Wynik kalkulatora");
-        var root = new StackPanel { Spacing = 18 };
+        AutomationProperties.SetLiveSetting(_clipboardStatus, AutomationLiveSetting.Polite);
+        AutomationProperties.SetName(_clipboardStatus, "Stan schowka kalkulatora");
+        _clipboardStatus.Classes.Add("muted");
+        var root = new StackPanel { Spacing = isPictureInPicture ? 12 : 18 };
 
-        var backButton = new Button { Content = "Wróć do kalkulatorów", Classes = { GhostButtonClass }, HorizontalAlignment = HorizontalAlignment.Left };
-        backButton.Click += (_, _) => back();
-        root.Children.Add(backButton);
-        root.Children.Add(UiFactory.PageTitle("Kalkulator ogólny", "Działania podstawowe, nawiasy, potęgi i pierwiastki w jednym wyrażeniu."));
-        root.Children.Add(UiFactory.InfoBand(copy.GetRequired("calculator.general.syntax")));
+        if (isPictureInPicture)
+        {
+            root.Children.Add(BuildPictureInPictureHeader(back));
+        }
+        else
+        {
+            var backButton = new Button { Content = "Wróć do kalkulatorów", Classes = { GhostButtonClass }, HorizontalAlignment = HorizontalAlignment.Left };
+            backButton.Click += (_, _) => back();
+            root.Children.Add(backButton);
+            root.Children.Add(UiFactory.PageTitle("Kalkulator ogólny", "Działania podstawowe, nawiasy, potęgi i pierwiastki w jednym wyrażeniu."));
+            root.Children.Add(UiFactory.InfoBand(copy.GetRequired("calculator.general.syntax")));
+        }
 
         _expression.AddHandler(InputElement.TextInputEvent, OnTextInput, RoutingStrategies.Tunnel);
         _expression.KeyDown += OnExpressionKeyDown;
@@ -50,7 +78,7 @@ public sealed class GeneralCalculatorView : UserControl
         var workArea = new Grid
         {
             Name = "CalculatorLayoutRoot",
-            ColumnDefinitions = new ColumnDefinitions("3*,2*"),
+            ColumnDefinitions = new ColumnDefinitions(isPictureInPicture ? "*" : "3*,2*"),
             RowDefinitions = new RowDefinitions("Auto"),
             ColumnSpacing = 18
         };
@@ -59,30 +87,78 @@ public sealed class GeneralCalculatorView : UserControl
         calculator.Children.Add(BuildKeypad());
         ResetResult();
         calculator.Children.Add(UiFactory.Card(_result, new Thickness(18), "SurfaceAltBrush"));
+        if (_clipboardCoordinator is not null)
+        {
+            UpdateClipboardStatus(_clipboardCoordinator.LastResult);
+            calculator.Children.Add(_clipboardStatus);
+            AttachedToVisualTree += (_, _) => _clipboardCoordinator.StatusChanged += ClipboardCoordinatorOnStatusChanged;
+            DetachedFromVisualTree += (_, _) => _clipboardCoordinator.StatusChanged -= ClipboardCoordinatorOnStatusChanged;
+        }
         workArea.Children.Add(calculator);
 
-        var history = BuildHistoryPanel();
-        Grid.SetColumn(history, 1);
-        workArea.Children.Add(history);
-
-        AdaptiveLayout.ObserveWidth(this, 900, isCompact =>
+        if (!isPictureInPicture)
         {
-            workArea.ColumnDefinitions = new ColumnDefinitions(isCompact ? "*" : "3*,2*");
-            workArea.RowDefinitions = new RowDefinitions(isCompact ? "Auto,Auto" : "Auto");
-            workArea.ColumnSpacing = isCompact ? 0 : 18;
-            workArea.RowSpacing = isCompact ? 18 : 0;
+            var history = BuildHistoryPanel();
+            Grid.SetColumn(history, 1);
+            workArea.Children.Add(history);
 
-            Grid.SetColumn(calculator, 0);
-            Grid.SetRow(calculator, 0);
-            Grid.SetColumn(history, isCompact ? 0 : 1);
-            Grid.SetRow(history, isCompact ? 1 : 0);
-        });
+            AdaptiveLayout.ObserveWidth(this, 900, isCompact =>
+            {
+                workArea.ColumnDefinitions = new ColumnDefinitions(isCompact ? "*" : "3*,2*");
+                workArea.RowDefinitions = new RowDefinitions(isCompact ? "Auto,Auto" : "Auto");
+                workArea.ColumnSpacing = isCompact ? 0 : 18;
+                workArea.RowSpacing = isCompact ? 18 : 0;
+
+                Grid.SetColumn(calculator, 0);
+                Grid.SetRow(calculator, 0);
+                Grid.SetColumn(history, isCompact ? 0 : 1);
+                Grid.SetRow(history, isCompact ? 1 : 0);
+            });
+        }
 
         root.Children.Add(workArea);
 
-        RenderHistory();
-        Content = UiFactory.PageScroll(root);
+        if (!isPictureInPicture) RenderHistory();
+        var scrollViewer = UiFactory.PageScroll(root);
+        if (isPictureInPicture) scrollViewer.Padding = new Thickness(12);
+        Content = scrollViewer;
     }
+
+    private static Grid BuildPictureInPictureHeader(Action close)
+    {
+        var header = new Grid { ColumnDefinitions = new ColumnDefinitions("*,Auto"), ColumnSpacing = 8 };
+        header.Children.Add(new TextBlock
+        {
+            Text = "Kalkulator PiP",
+            Classes = { "h2" },
+            VerticalAlignment = VerticalAlignment.Center
+        });
+        var closeButton = new Button { Content = "Zamknij", Classes = { GhostButtonClass } };
+        AutomationProperties.SetName(closeButton, "Zamknij kalkulator Picture in Picture");
+        closeButton.Click += (_, _) => close();
+        Grid.SetColumn(closeButton, 1);
+        header.Children.Add(closeButton);
+        return header;
+    }
+
+    private void ClipboardCoordinatorOnStatusChanged(object? sender, CalculatorClipboardStatusChangedEventArgs eventArgs)
+    {
+        if (Dispatcher.UIThread.CheckAccess())
+            UpdateClipboardStatus(eventArgs.Result);
+        else
+            Dispatcher.UIThread.Post(() => UpdateClipboardStatus(eventArgs.Result));
+    }
+
+    private void UpdateClipboardStatus(ClipboardWriteResult? result)
+    {
+        _clipboardStatus.Text = result?.Message ?? "Poprawny wynik zostanie automatycznie skopiowany do schowka.";
+        UiFactory.UseResource(
+            _clipboardStatus,
+            TextBlock.ForegroundProperty,
+            result is { Success: false } ? "WarningBrush" : "TextMutedBrush");
+    }
+
+    public void FocusExpression() => _expression.Focus();
 
     private Border BuildKeypad()
     {

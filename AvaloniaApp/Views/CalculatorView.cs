@@ -13,7 +13,17 @@ namespace Abituria.Views;
 public sealed class CalculatorView : UserControl
 {
     public CalculatorView(UiCopyCatalog copy, Action openGeneralCalculator, Action<string> openPlannedCalculator)
+        : this(copy, openGeneralCalculator, () => { }, openPlannedCalculator)
     {
+    }
+
+    public CalculatorView(
+        UiCopyCatalog copy,
+        Action openGeneralCalculator,
+        Action openPictureInPicture,
+        Action<string> openPlannedCalculator)
+    {
+        ArgumentNullException.ThrowIfNull(openPictureInPicture);
         var root = new StackPanel { Spacing = 18 };
         root.Children.Add(UiFactory.PageTitle("Kalkulator funkcji kwadratowej", "Poznaj sposób obliczania delty, miejsc zerowych i postaci funkcji krok po kroku."));
         root.Children.Add(UiFactory.InfoBand(copy.GetRequired("calculator.quadratic.usage")));
@@ -70,6 +80,7 @@ public sealed class CalculatorView : UserControl
         root.Children.Add(new TextBlock { Text = "Pozostałe narzędzia", Classes = { "h2" } });
         var plannedTools = new WrapPanel { Orientation = Orientation.Horizontal };
         AddTool(plannedTools, "Kalkulator ogólny", openGeneralCalculator);
+        AddTool(plannedTools, "Otwórz kalkulator PiP", openPictureInPicture);
         AddPlannedTool(plannedTools, "Generator wykresów", "graph-generator", openPlannedCalculator);
         AddPlannedTool(plannedTools, "Funkcje trygonometryczne", "trigonometric-calculator", openPlannedCalculator);
         root.Children.Add(plannedTools);

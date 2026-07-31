@@ -31,10 +31,11 @@ Paczki są samowystarczalne i nie wymagają instalacji środowiska .NET. Są to 
 - pełny kurs Formuły 2023: 4 grupy, 13 obszarów, 119 wymagań, 238 rozwiązanych przykładów i 357 ćwiczeń;
 - filtr poziomu podstawowego i rozszerzonego oraz trzy tryby odpowiedzi: wybór, wynik liczbowy i ujawnienie rozwiązania;
 - 35 zadań z matury poprawkowej 2021, dostępnych według arkusza lub 17 tematów;
-- sprawdzanie odpowiedzi A-D, podpowiedzi, ujawnianie odpowiedzi i sesyjny brudnopis;
-- kalkulator ogólny z nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią i powtarzaniem `=`;
+- sprawdzanie odpowiedzi A-D, podpowiedzi, ujawnianie odpowiedzi i brudnopis przechowywany osobno dla profilu i zadania do zamknięcia aplikacji;
+- kalkulator ogólny z nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią, powtarzaniem `=` i automatycznym kopiowaniem wyniku;
+- pojedynczy kalkulator Picture in Picture w oknie nad Abiturią, oknie zawsze na wierzchu albo panelu aplikacji;
 - kalkulator funkcji kwadratowej z postacią ogólną, kanoniczną i iloczynową;
-- jedno okno aplikacji z nawigacją między materiałami, zadaniami, kalkulatorami, profilem i planem rozwoju;
+- główne okno aplikacji z nawigacją między materiałami, zadaniami, kalkulatorami, opcjami, profilem i planem rozwoju;
 - własny pasek tytułu z pełnym sterowaniem oknem oraz skalowalne układy dla szerokości od `720` pikseli;
 - motyw systemowy, jasny, ciemny i wysokiego kontrastu, widoczny fokus oraz jawne stany interakcji kontrolek;
 - ekran „O programie” z wersją, identyfikatorem commita, licencją, autorem i adresem repozytorium.

@@ -4,7 +4,7 @@ Wersja dokumentu: `0.9.0-beta.1`.
 
 Data ostatniego lokalnego wykonania: 30 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
 
-Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `481/481 PASS` w czasie `16 s`. OpenCover wykazał `95,66%` pokrycia linii i `88,06%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,66%` pokrycia łącznego i `88,12%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
+Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `494/494 PASS` w czasie `15 s`. OpenCover wykazał `95,49%` pokrycia linii i `86,90%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,22%` pokrycia łącznego i `86,96%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
 
 Dokument rozróżnia wyniki automatyczne, retrospektywne poświadczenie historycznych testów uczestników oraz czynności bieżącego procesu wydawniczego. Brak szczegółowej karty sesji nie jest uzupełniany przez domysł, a poświadczenie historyczne nie jest przedstawiane jako test bieżącej paczki.
 
@@ -28,10 +28,10 @@ Celem testów końcowych jest potwierdzenie, że Abituria spełnia aktualny zakr
 
 | Obszar | Najważniejsze klasy lub narzędzia | Co chronią |
 | --- | --- | --- |
-| Kalkulator | `ExpressionCalculatorTests`, `ExpressionCalculatorRobustnessTests`, `CalculatorSessionTests`, `RepeatedEqualsTests`, `QuadraticSolverTests` | poprawność obliczeń, błędy wejścia, granice i historia |
-| Konta i dane | `AccountServiceTests`, `Issue14RegistrationRegressionTests`, `ReleaseDatabaseCompatibilityTests` | profil gościa, hasła, odzyskiwanie, postęp i kompatybilność bazy |
+| Kalkulator | `ExpressionCalculatorTests`, `ExpressionCalculatorRobustnessTests`, `CalculatorSessionTests`, `RepeatedEqualsTests`, `QuadraticSolverTests`, `Issue5CalculatorPipTests` | poprawność obliczeń, błędy wejścia, granice, historia, PiP i schowek `Ans` |
+| Konta i dane | `AccountServiceTests`, `Issue14RegistrationRegressionTests`, `ReleaseDatabaseCompatibilityTests`, `ExerciseScratchpadSessionTests` | profil gościa, hasła, odzyskiwanie, postęp, preferencję PiP, brudnopis sesji i kompatybilność bazy |
 | Treści | `ContentInventoryTests`, `ContentSeparationTests`, `Issue35MathChaptersRegressionTests`, `Formula2023ContentTests`, `MathCourse2023ContentTests`, `DiagramCatalogTests`, `LegacyImageArchiveTests` | kompletność tablic i kursu Formuły 2023, kontrakt `4/13/73/46/238/357`, 57 aktywnych diagramów, zgodność archiwum 75 obrazów, format JSON oraz renderowanie treści |
-| UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests`, `Issue4NavigationTests` | osiągalne ścieżki użytkownika, osobne trasy Matury i Zadań, wszystkie trasy shella, edycję kalkulatora, pojedyncze okno, losowanie i kontekst zadania |
+| UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests`, `Issue4NavigationTests`, `Issue5CalculatorPipTests` | osiągalne ścieżki użytkownika, osobne trasy Matury i Zadań, wszystkie trasy shella, edycję kalkulatora, kontrolowany pojedynczy PiP, wklejanie, losowanie i kontekst zadania |
 | Dostępność kontrolek | `AccessibilityRegressionTests` | nazwy pól i symbolicznych przycisków oraz dynamiczne regiony wyników |
 | Wizualne | `Discussion10VisualRegressionTests` | renderowanie list matematycznych i zachowanie przy minimalnym rozmiarze okna |
 | Styl, motywy i własny chrome | `Discussion49StyleRegressionTests` | Mulish, brak wymuszonego Light i Inter, cztery ustawienia motywu, stany interakcji, fokus, breakpointy, dialogi, sterowanie i skalowanie okna |
@@ -39,6 +39,12 @@ Celem testów końcowych jest potwierdzenie, że Abituria spełnia aktualny zakr
 | Wydanie | `ReleaseRuntimeTests`, `ReleaseContractTests`, `ReleaseValidationScriptTests`, `NuGetLicenseBundleTests` | izolowany smoke test, wersjonowanie, zawartość paczek, dowody licencji i działanie bramki pokrycia |
 | Python i PDF | `tests/python/test_new_commission_pdf.py` | generowanie, walidację struktury oraz błędy czcionek i obrazu wejściowego |
 | Jakość | `Test-CoverageThreshold.ps1`, `dotnet format`, audyt NuGet, test pochodzenia zasobów, SonarQube Cloud, CodeQL | minimalne pokrycie `90%`/`85%`, formatowanie, podatności, kompletność manifestu, jakość kodu i code scanning |
+
+## Natywny smoke test Issue #5
+
+30 lipca 2026 r. na Windows 11 x64 uruchomiono rzeczywistą aplikację z kompilacji Release. Profil gościa przeszedł migrację, PiP otworzył się jako pojedyncze okno należące do Abiturii, obliczenie `7*6` pokazało `42` i status udanego kopiowania, a `Ctrl+V` wkleił dokładnie `42` do brudnopisu zadania. Zmiana trybu na panel aplikacji i z powrotem do okna zachowała wyrażenie `7*6` i wynik. Po teście przywrócono ustawienie „Nad Abiturią” i zamknięto oba hosty.
+
+Natywne zachowanie schowka oraz właściwości `Owned` i `Topmost` na Ubuntu 24.04 i macOS 15 pozostaje do potwierdzenia na odpowiednich systemach po autoryzowanym pushu. Testy Avalonia Headless sprawdzają wspólną logikę i wszystkie trzy tryby, ale nie są przedstawiane jako zamiennik tej kontroli platformowej.
 
 ## Regresje stylu i dostępności dyskusji #49
 

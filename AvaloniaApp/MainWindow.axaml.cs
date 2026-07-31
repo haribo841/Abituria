@@ -25,9 +25,14 @@ public partial class MainWindow : Window
     private readonly AccountService _accounts;
     private readonly ContentRepository _content;
     private readonly CalculatorSession _calculatorSession;
+    private readonly AvaloniaTextClipboard _textClipboard;
+    private readonly ExerciseScratchpadSession _scratchpads;
+    private readonly CalculatorClipboardCoordinator _clipboardCoordinator;
+    private readonly CalculatorPipController _pipController;
     private readonly AppBuildInfo _buildInfo;
     private readonly AppThemeManager _themeManager;
     private Border _shellHost = null!;
+    private Border _pipOverlayHost = null!;
     private Button? _themeButton;
     private Button? _maximizeButton;
     private Grid? _resizeGrips;
@@ -37,12 +42,21 @@ public partial class MainWindow : Window
         App.Services.GetRequiredService<AccountService>(),
         App.Services.GetRequiredService<ContentRepository>(),
         App.Services.GetRequiredService<CalculatorSession>(),
-        App.Services.GetRequiredService<AppBuildInfo>())
+        App.Services.GetRequiredService<AppBuildInfo>(),
+        App.Services.GetRequiredService<AvaloniaTextClipboard>(),
+        App.Services.GetRequiredService<ExerciseScratchpadSession>())
     {
     }
 
     public MainWindow(AppViewModel viewModel, AccountService accounts, ContentRepository content, CalculatorSession calculatorSession)
-        : this(viewModel, accounts, content, calculatorSession, AppBuildInfo.Current)
+        : this(
+            viewModel,
+            accounts,
+            content,
+            calculatorSession,
+            AppBuildInfo.Current,
+            new AvaloniaTextClipboard(),
+            new ExerciseScratchpadSession())
     {
     }
 
@@ -52,17 +66,48 @@ public partial class MainWindow : Window
         ContentRepository content,
         CalculatorSession calculatorSession,
         AppBuildInfo buildInfo)
+        : this(
+            viewModel,
+            accounts,
+            content,
+            calculatorSession,
+            buildInfo,
+            new AvaloniaTextClipboard(),
+            new ExerciseScratchpadSession())
     {
-        _viewModel = viewModel;
-        _accounts = accounts;
-        _content = content;
-        _calculatorSession = calculatorSession;
-        _buildInfo = buildInfo;
+    }
+
+    public MainWindow(
+        AppViewModel viewModel,
+        AccountService accounts,
+        ContentRepository content,
+        CalculatorSession calculatorSession,
+        AppBuildInfo buildInfo,
+        AvaloniaTextClipboard textClipboard,
+        ExerciseScratchpadSession scratchpads)
+    {
+        _viewModel = viewModel ?? throw new ArgumentNullException(nameof(viewModel));
+        _accounts = accounts ?? throw new ArgumentNullException(nameof(accounts));
+        _content = content ?? throw new ArgumentNullException(nameof(content));
+        _calculatorSession = calculatorSession ?? throw new ArgumentNullException(nameof(calculatorSession));
+        _buildInfo = buildInfo ?? throw new ArgumentNullException(nameof(buildInfo));
+        _textClipboard = textClipboard ?? throw new ArgumentNullException(nameof(textClipboard));
+        _scratchpads = scratchpads ?? throw new ArgumentNullException(nameof(scratchpads));
+        _clipboardCoordinator = new CalculatorClipboardCoordinator(_calculatorSession, _textClipboard);
         InitializeComponent();
         _shellHost = this.FindControl<Border>("ShellHost") ?? throw new InvalidOperationException("Nie znaleziono ShellHost.");
+        _pipOverlayHost = this.FindControl<Border>("PipOverlayHost") ?? throw new InvalidOperationException("Nie znaleziono PipOverlayHost.");
+        _pipOverlayHost.ZIndex = 90;
         _themeButton = this.FindControl<Button>("ThemeButton") ?? throw new InvalidOperationException("Nie znaleziono ThemeButton.");
         _maximizeButton = this.FindControl<Button>("MaximizeButton") ?? throw new InvalidOperationException("Nie znaleziono MaximizeButton.");
         _resizeGrips = this.FindControl<Grid>("ResizeGrips") ?? throw new InvalidOperationException("Nie znaleziono ResizeGrips.");
+        _pipController = new CalculatorPipController(
+            this,
+            _pipOverlayHost,
+            _calculatorSession,
+            _content.UiCopy,
+            _clipboardCoordinator,
+            _viewModel.CalculatorPipMode);
         _themeManager = new AppThemeManager(Application.Current ?? throw new InvalidOperationException("Aplikacja nie została zainicjalizowana."));
         _themeManager.ModeChanged += ThemeManagerOnModeChanged;
         Opened += MainWindowOnOpened;
@@ -78,6 +123,10 @@ public partial class MainWindow : Window
 
     private void ViewModelOnPropertyChanged(object? sender, PropertyChangedEventArgs e)
     {
+        if (e.PropertyName == nameof(AppViewModel.ActiveProfile) && _viewModel.ActiveProfile is null)
+            _pipController.Close();
+        if (e.PropertyName == nameof(AppViewModel.CalculatorPipMode))
+            _pipController.ChangeMode(_viewModel.CalculatorPipMode);
         if (e.PropertyName is nameof(AppViewModel.CurrentPage) or
             nameof(AppViewModel.ActiveProfile) or
             nameof(AppViewModel.SelectedCourseLevel))
@@ -121,6 +170,7 @@ public partial class MainWindow : Window
         AddNav(nav, "Zadania", AppPage.Tasks);
         AddNav(nav, "Działy", AppPage.Chapters);
         AddNav(nav, "Kalkulator", AppPage.Calculator);
+        AddNav(nav, "Opcje", AppPage.Options);
         AddNav(nav, "Plan rozwoju", AppPage.Roadmap);
         AddNav(nav, "Profil", AppPage.Profile);
         AddNav(nav, "O programie", AppPage.About);
@@ -222,9 +272,17 @@ public partial class MainWindow : Window
             _viewModel.OpenCourseExercise,
             () => _viewModel.Navigate(AppPage.CourseArea),
             _content.Diagrams),
-        AppPage.Calculator => new CalculatorView(_content.UiCopy, _viewModel.OpenGeneralCalculator, OpenPlannedCalculator),
+        AppPage.Calculator => new CalculatorView(
+            _content.UiCopy,
+            _viewModel.OpenGeneralCalculator,
+            OpenCalculatorPip,
+            OpenPlannedCalculator),
         AppPage.GeneralCalculator => new GeneralCalculatorView(
-            _calculatorSession, _content.UiCopy, () => _viewModel.Navigate(AppPage.Calculator)),
+            _calculatorSession,
+            _content.UiCopy,
+            () => _viewModel.Navigate(AppPage.Calculator),
+            _clipboardCoordinator),
+        AppPage.Options => new OptionsView(_viewModel.CalculatorPipMode, SaveCalculatorPipModeAsync),
         AppPage.Roadmap => new RoadmapView(_content.Roadmap, _viewModel.SelectedRoadmapId),
         AppPage.About => new AboutView(_buildInfo),
         AppPage.Profile => new ProfileView(
@@ -299,8 +357,23 @@ public partial class MainWindow : Window
             courseExercise ? _viewModel.OpenCourseExercise : _viewModel.OpenExercise)
         {
             BackLabel = backLabel,
-            SourceUrl = courseExercise ? legalSource.DocumentUrl : null
+            SourceUrl = courseExercise ? legalSource.DocumentUrl : null,
+            Scratchpads = _scratchpads,
+            Clipboard = _textClipboard,
+            OpenCalculatorPip = OpenCalculatorPip
         };
+    }
+
+    private void OpenCalculatorPip() => _pipController.Open(_viewModel.CalculatorPipMode);
+
+    private async System.Threading.Tasks.Task<bool> SaveCalculatorPipModeAsync(CalculatorPipMode mode)
+    {
+        var profile = _viewModel.ActiveProfile;
+        if (profile is null) return false;
+
+        var saved = await _accounts.SetCalculatorPipModeAsync(profile.Id, mode);
+        if (saved) _viewModel.SetCalculatorPipMode(mode);
+        return saved;
     }
 
     private void OpenPlannedCalculator(string id)
@@ -309,12 +382,18 @@ public partial class MainWindow : Window
         _viewModel.OpenPlaceholder(placeholder);
     }
 
-    private void MainWindowOnOpened(object? sender, EventArgs e) =>
+    private void MainWindowOnOpened(object? sender, EventArgs e)
+    {
+        _textClipboard.Attach(Clipboard);
         _themeManager.AttachPlatformSettings(Application.Current?.TryGetFeature(typeof(IPlatformSettings)) as IPlatformSettings);
+    }
 
     private void MainWindowOnClosed(object? sender, EventArgs e)
     {
         _viewModel.PropertyChanged -= ViewModelOnPropertyChanged;
+        _pipController.Dispose();
+        _clipboardCoordinator.Dispose();
+        _textClipboard.Attach(null);
         _themeManager.ModeChanged -= ThemeManagerOnModeChanged;
         _themeManager.Dispose();
     }

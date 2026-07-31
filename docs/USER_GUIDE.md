@@ -12,9 +12,11 @@ Górna nawigacja po zalogowaniu zawiera:
 
 - **Start** - skróty do głównych funkcji;
 - **Wzory** - tablice matematyczne;
-- **Zadania** - arkusze i zadania według tematów;
+- **Matura** - pełny arkusz poprawkowy 2021 i archiwalne placeholdery;
+- **Zadania** - zadania według 17 tematów;
 - **Działy** - materiały edukacyjne;
 - **Kalkulator** - funkcja kwadratowa i kalkulator ogólny;
+- **Opcje** - sposób wyświetlania kalkulatora Picture in Picture;
 - **Plan rozwoju** - funkcje ukończone, zaplanowane i zastąpione;
 - **Profil** - postęp i zmiana hasła;
 - **O programie** - wersja, commit, licencja, autor i repozytorium.
@@ -116,7 +118,9 @@ Rozwiązuj zadanie samodzielnie, korzystaj z kolejnych podpowiedzi i kliknij „
 
 ### Brudnopis i nawigacja
 
-Brudnopis służy wyłącznie bieżącej pracy. Nie jest zapisywany po opuszczeniu zadania. Przyciski strzałek przechodzą do poprzedniego i następnego zadania w aktualnym kontekście, czyli w całym arkuszu albo w wybranym temacie.
+Brudnopis jest przechowywany osobno dla aktywnego profilu i zadania do czasu zamknięcia aplikacji. Możesz przejść do innego zadania lub modułu i wrócić bez utraty tekstu. Dane nie trafiają do bazy SQLite. `Ctrl+V` na Windows i Linuksie albo `Cmd+V` na macOS oraz prawoklik i polecenie „Wklej” wstawiają tekst w miejscu kursora lub zastępują zaznaczenie.
+
+Przycisk „Otwórz kalkulator PiP” obok nagłówka brudnopisu otwiera kompaktowy kalkulator bez opuszczania zadania. Przyciski strzałek przechodzą do poprzedniego i następnego zadania w aktualnym kontekście, czyli w całym arkuszu albo w wybranym temacie.
 
 Strona „Profil” pokazuje osobno postęp arkusza `x/35`, podstawy `x/219` oraz części rozszerzonej `x/138`. Postęp jest lokalny i oddzielny dla każdego profilu.
 
@@ -129,6 +133,14 @@ Kalkulator prezentuje wynik i kolejne elementy analizy, w tym wyróżnik, miejsc
 ## Kalkulator ogólny
 
 Kliknij „Kalkulator ogólny” na stronie kalkulatora funkcji kwadratowej. Wyrażenie można wpisać klawiaturą albo zbudować przyciskami ekranowymi.
+
+Na tej samej stronie znajduje się przycisk „Otwórz kalkulator PiP”. Ponowne użycie dowolnego przycisku otwierającego aktywuje istniejący kalkulator zamiast tworzyć duplikat. Strona „Opcje” udostępnia trzy tryby:
+
+1. „Nad Abiturią” - zwykłe przesuwalne okno należące do głównego okna aplikacji.
+2. „Zawsze na wierzchu” - okno pozostające także nad innymi aplikacjami.
+3. „Panel w aplikacji” - przewijalny panel w prawym dolnym rogu Abiturii.
+
+Zmiana trybu działa od razu i zachowuje wpisane wyrażenie oraz `Ans`.
 
 ### Obsługiwana składnia
 
@@ -161,6 +173,8 @@ Po obliczeniu `2+3` kolejne naciśnięcia `=` dają `8`, `11` i tak dalej. Dla w
 
 Historia przechowuje maksymalnie 20 poprawnych obliczeń, najnowsze na początku. Kliknięcie wpisu odtwarza wyrażenie wraz z historyczną wartością `Ans`, dlatego złożone obliczenie powinno dać ten sam wynik. Błędy nie zmieniają `Ans`, nie niszczą operacji powtarzanego `=` i nie trafiają do historii.
 
+Każdy poprawny wynik pełnego kalkulatora lub PiP jest automatycznie kopiowany do schowka dokładnie w postaci pokazanej na ekranie. Dotyczy to zwykłego obliczenia, kolejnego `=`, pierwiastka, odwrotności, kwadratu i odtworzenia historii. Błąd oraz wyczyszczenie kalkulatora nie zmieniają schowka. Jeżeli system odmówi dostępu, obliczenie pozostaje poprawne, a kalkulator pokazuje ostrzeżenie.
+
 „Wyczyść historię” usuwa także `Ans` i stan powtarzanego `=`. Historia nie jest zapisywana w SQLite i znika po zamknięciu aplikacji.
 
 Kalkulator normalizuje niekanoniczne zera wiodące, na przykład `000001` lub `0000,1`, i informuje o korekcie. Nie dopuszcza nieskończenie długiego ciągu zer z klawiatury ekranowej.
@@ -169,7 +183,7 @@ Kontrolowany komunikat zawiera opis i pozycję błędu między innymi dla pusteg
 
 ## Dane, kopia i aktualizacja
 
-Profile i postęp są zapisywane w `abituria.db` poza katalogiem programu. Historia kalkulatora i brudnopis nie są trwałe. Instrukcja wykonania kopii, aktualizacji bez utraty danych i odinstalowania znajduje się w [INSTALLATION.md](INSTALLATION.md#dane-użytkownika-i-kopia-zapasowa).
+Profile, postęp i wybrany tryb PiP są zapisywane w `abituria.db` poza katalogiem programu. Historia kalkulatora i brudnopis istnieją tylko do zamknięcia aplikacji. Instrukcja wykonania kopii, aktualizacji bez utraty danych i odinstalowania znajduje się w [INSTALLATION.md](INSTALLATION.md#dane-użytkownika-i-kopia-zapasowa).
 
 ## Pomoc
 
