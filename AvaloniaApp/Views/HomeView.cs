@@ -9,18 +9,22 @@ using Abituria.Ui;
 
 namespace Abituria.Views;
 
+public sealed record HomeNavigationActions(
+    Action ShowFormulas,
+    Action ShowMatura,
+    Action ShowTasks,
+    Action ShowCalculator,
+    Action ShowChapters,
+    Action ShowRoadmap);
+
 public sealed class HomeView : UserControl
 {
     public HomeView(
         string profileName,
         UiCopyCatalog copy,
-        Action showFormulas,
-        Action showMatura,
-        Action showTasks,
-        Action showCalculator,
-        Action showChapters,
-        Action showRoadmap)
+        HomeNavigationActions actions)
     {
+        ArgumentNullException.ThrowIfNull(actions);
         var root = new StackPanel { Spacing = 20 };
         root.Children.Add(UiFactory.PageTitle("Start", $"Cześć, {profileName}. Wybierz obszar nauki."));
 
@@ -34,12 +38,12 @@ public sealed class HomeView : UserControl
         };
         var tiles = new[]
         {
-            AddTile(grid, new HomeTile("Wzory", "18 pełnych tablic matematycznych", "📐", showFormulas)),
-            AddTile(grid, new HomeTile("Matura", "Arkusz poprawkowy 2021 i archiwalne zestawy", "🎓", showMatura)),
-            AddTile(grid, new HomeTile("Zadania", "35 zadań uporządkowanych w 17 tematach", "📝", showTasks)),
-            AddTile(grid, new HomeTile("Kalkulator", "Wyrażenia i pełna analiza funkcji kwadratowej", "🧮", showCalculator)),
-            AddTile(grid, new HomeTile("Działy", "13 obszarów: teoria, przykłady i 357 ćwiczeń", "📚", showChapters)),
-            AddTile(grid, new HomeTile("Plan rozwoju", "Przeniesione, zaplanowane i zastąpione elementy starych wersji", "🗺️", showRoadmap))
+            AddTile(grid, new HomeTile("Wzory", "18 pełnych tablic matematycznych", "📐", actions.ShowFormulas)),
+            AddTile(grid, new HomeTile("Matura", "Arkusz poprawkowy 2021 i archiwalne zestawy", "🎓", actions.ShowMatura)),
+            AddTile(grid, new HomeTile("Zadania", "35 zadań uporządkowanych w 17 tematach", "📝", actions.ShowTasks)),
+            AddTile(grid, new HomeTile("Kalkulator", "Wyrażenia i pełna analiza funkcji kwadratowej", "🧮", actions.ShowCalculator)),
+            AddTile(grid, new HomeTile("Działy", "13 obszarów: teoria, przykłady i 357 ćwiczeń", "📚", actions.ShowChapters)),
+            AddTile(grid, new HomeTile("Plan rozwoju", "Przeniesione, zaplanowane i zastąpione elementy starych wersji", "🗺️", actions.ShowRoadmap))
         };
 
         AdaptiveLayout.ObserveWidth(this, 780, isCompact => ApplyTileLayout(grid, tiles, isCompact));

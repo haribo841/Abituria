@@ -123,11 +123,12 @@ Widoki są zwykłymi kontrolkami Avalonia `UserControl`. Produkcyjny kod nie uż
 
 - obszaru przeciągania wywołującego `BeginMoveDrag`;
 - dwukliku przełączającego `WindowState` między `Normal` i `Maximized`;
-- przycisków motywu, minimalizacji, maksymalizacji lub przywrócenia i zamknięcia;
+- historycznych przycisków emoji po lewej: `🍓` zamyka, `🍋` maksymalizuje lub przywraca, a `🍏` minimalizuje okno;
+- wyśrodkowanej marki `🍀 Abituria` oraz przycisku motywu wyrównanego do prawej;
 - ośmiu przezroczystych uchwytów wywołujących `BeginResizeDrag` dla czterech krawędzi i czterech narożników;
-- aktualizacji nazwy automatyzacji i symbolu przycisku maksymalizacji po zmianie stanu okna.
+- aktualizacji tooltipu i nazwy automatyzacji przycisku `🍋` po zmianie stanu okna, bez zastępowania historycznego emoji standardowym glyphem.
 
-Uchwyty są aktywne tylko dla zwykłego, skalowalnego okna. Każdy widoczny przycisk chrome ma tooltip, `AutomationId`, opisową nazwę i jawny stan `focus-visible`.
+Emoji są znakami Unicode renderowanymi przez font platformy. Archiwalne `close.png`, `max.png` i `min.png` nie są zasobami uruchomieniowymi. Uchwyty są aktywne tylko dla zwykłego, skalowalnego okna. Każdy widoczny przycisk chrome ma tooltip z opóźnieniem `250 ms`, `AutomationId`, opisową nazwę i jawny stan `focus-visible`.
 
 ### Motywy i zasoby wizualne
 

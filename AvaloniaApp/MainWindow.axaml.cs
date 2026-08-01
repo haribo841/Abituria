@@ -219,12 +219,13 @@ public partial class MainWindow : Window
         AppPage.Home => new HomeView(
             _viewModel.ActiveProfile!.DisplayName,
             _content.UiCopy,
-            () => _viewModel.Navigate(AppPage.Formulas),
-            () => _viewModel.Navigate(AppPage.Matura),
-            () => _viewModel.Navigate(AppPage.Tasks),
-            () => _viewModel.Navigate(AppPage.Calculator),
-            () => _viewModel.Navigate(AppPage.Chapters),
-            () => _viewModel.OpenRoadmap()),
+            new HomeNavigationActions(
+                () => _viewModel.Navigate(AppPage.Formulas),
+                () => _viewModel.Navigate(AppPage.Matura),
+                () => _viewModel.Navigate(AppPage.Tasks),
+                () => _viewModel.Navigate(AppPage.Calculator),
+                () => _viewModel.Navigate(AppPage.Chapters),
+                () => _viewModel.OpenRoadmap())),
         AppPage.Formulas => new FormulaListView(_content.Formulas, _viewModel.OpenFormula),
         AppPage.FormulaDetail when _viewModel.SelectedFormula is not null => new ArticleView(
             _viewModel.SelectedFormula.Title, "Tablica matematyczna", _viewModel.SelectedFormula.Blocks,
@@ -492,7 +493,6 @@ public partial class MainWindow : Window
 
         var isMaximized = WindowState == WindowState.Maximized;
         _resizeGrips.IsVisible = WindowState == WindowState.Normal;
-        _maximizeButton.Content = isMaximized ? "❐" : "□";
         ToolTip.SetTip(_maximizeButton, isMaximized ? "Przywróć" : "Maksymalizuj");
         AutomationProperties.SetName(_maximizeButton, isMaximized ? "Przywróć okno" : "Maksymalizuj okno");
     }

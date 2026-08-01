@@ -354,12 +354,13 @@ public sealed class Issue35MathChaptersRegressionTests
             var home = new HomeView(
                 "Tester",
                 Read<UiCopyCatalog>("Content/ui-copy.json"),
-                () => { },
-                () => { },
-                () => { },
-                () => { },
-                () => { },
-                () => { });
+                new HomeNavigationActions(
+                    () => { },
+                    () => { },
+                    () => { },
+                    () => { },
+                    () => { },
+                    () => { }));
             window.Content = home;
             Dispatcher.UIThread.RunJobs();
             Assert.Contains(

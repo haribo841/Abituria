@@ -44,23 +44,52 @@ public static class DiagramCatalogValidator
 
     private static void ValidatePrimitive(string diagramId, DiagramPrimitive primitive)
     {
+        ValidatePrimitiveStyle(diagramId, primitive);
+        ValidatePrimitiveCoordinates(diagramId, primitive);
+        ValidatePrimitivePointList(diagramId, primitive);
+        ValidatePrimitiveRadii(diagramId, primitive);
+        ValidatePrimitiveArc(diagramId, primitive);
+        ValidatePrimitiveText(diagramId, primitive);
+    }
+
+    private static void ValidatePrimitiveStyle(string diagramId, DiagramPrimitive primitive)
+    {
         if (!PrimitiveTypes.Contains(primitive.Type))
             throw new InvalidOperationException($"Diagram '{diagramId}' zawiera nieznany prymityw '{primitive.Type}'.");
         if (!ColorTokens.Contains(primitive.Stroke) || !ColorTokens.Contains(primitive.Fill))
             throw new InvalidOperationException($"Diagram '{diagramId}' zawiera nieznany token koloru.");
         if (!IsPositiveFinite(primitive.StrokeThickness) || !IsPositiveFinite(primitive.FontSize))
             throw new InvalidOperationException($"Diagram '{diagramId}' zawiera nieprawidłowy rozmiar.");
+    }
+
+    private static void ValidatePrimitiveCoordinates(string diagramId, DiagramPrimitive primitive)
+    {
         if (!AllFinite(primitive.Points) || !AllFinite([
                 primitive.X, primitive.Y, primitive.X2, primitive.Y2,
                 primitive.RadiusX, primitive.RadiusY, primitive.StartAngle, primitive.SweepAngle]))
             throw new InvalidOperationException($"Diagram '{diagramId}' zawiera współrzędną NaN lub nieskończoność.");
+    }
 
+    private static void ValidatePrimitivePointList(string diagramId, DiagramPrimitive primitive)
+    {
         if (primitive.Type is "polyline" or "polygon" && (primitive.Points.Count < 4 || primitive.Points.Count % 2 != 0))
             throw new InvalidOperationException($"Diagram '{diagramId}' zawiera nieprawidłową listę punktów.");
+    }
+
+    private static void ValidatePrimitiveRadii(string diagramId, DiagramPrimitive primitive)
+    {
         if (primitive.Type is "ellipse" or "arc" && (!IsPositiveFinite(primitive.RadiusX) || !IsPositiveFinite(primitive.RadiusY)))
             throw new InvalidOperationException($"Diagram '{diagramId}' zawiera nieprawidłowy promień.");
+    }
+
+    private static void ValidatePrimitiveArc(string diagramId, DiagramPrimitive primitive)
+    {
         if (primitive.Type == "arc" && primitive.SweepAngle == 0)
             throw new InvalidOperationException($"Diagram '{diagramId}' zawiera pusty łuk.");
+    }
+
+    private static void ValidatePrimitiveText(string diagramId, DiagramPrimitive primitive)
+    {
         if (primitive.Type == "text" && string.IsNullOrWhiteSpace(primitive.Text))
             throw new InvalidOperationException($"Diagram '{diagramId}' zawiera pustą etykietę.");
     }

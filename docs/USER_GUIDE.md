@@ -23,12 +23,13 @@ Górna nawigacja po zalogowaniu zawiera:
 
 ## Okno, motywy i dostępność
 
-Abituria używa własnego paska tytułu. Jego prawa część zawiera kolejno:
+Abituria używa własnego paska tytułu inspirowanego historyczną wersją aplikacji. Po lewej znajdują się kolejno:
 
-- przycisk motywu;
-- minimalizację;
-- maksymalizację albo przywrócenie;
-- zamknięcie aplikacji.
+- `🍓` - zamknięcie aplikacji;
+- `🍋` - maksymalizacja albo przywrócenie;
+- `🍏` - minimalizacja.
+
+Marka `🍀 Abituria` jest wyśrodkowana, a przycisk motywu znajduje się po prawej. Najechanie na dowolną kontrolkę paska pokazuje opisowy tooltip po krótkim opóźnieniu. Symbol `🍋` pozostaje taki sam po maksymalizacji, natomiast tooltip zmienia się na „Przywróć”.
 
 Przeciągnięcie pustego obszaru paska przenosi okno, a dwuklik maksymalizuje je lub przywraca. Rozmiar zwykłego okna można zmieniać z każdej krawędzi i narożnika. Minimalny obsługiwany rozmiar to `720x520`.
 

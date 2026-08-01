@@ -16,12 +16,12 @@
         <Border x:Name="TitleBar"
                 Grid.Row="0"
                 Classes="title-bar">
-          <Grid ColumnDefinitions="*,Auto">
+          <Grid>
             <Border x:Name="TitleBarDragArea"
-                    Grid.Column="0"
                     Background="Transparent"
                     PointerPressed="TitleBarOnPointerPressed">
-              <StackPanel Margin="14,0,8,0"
+              <StackPanel x:Name="TitleBarBrand"
+                          HorizontalAlignment="Center"
                           Orientation="Horizontal"
                           Spacing="10"
                           AutomationProperties.Name="🍀 Abituria"
@@ -38,31 +38,40 @@
               </StackPanel>
             </Border>
 
-            <StackPanel Grid.Column="1"
+            <StackPanel x:Name="LegacyWindowControls"
+                        ZIndex="1"
+                        HorizontalAlignment="Left"
                         Orientation="Horizontal"
                         VerticalAlignment="Stretch">
-              <Button x:Name="ThemeButton"
-                      Classes="window-control theme"
-                      MinWidth="132"
-                      Content="Motyw: Systemowy"
-                      Click="ThemeButtonOnClick"
-                      ToolTip.Tip="Zmień motyw: systemowy, jasny, ciemny lub wysoki kontrast" />
-              <Button x:Name="MinimizeButton"
-                      Classes="window-control"
-                      Content="_"
-                      Click="MinimizeButtonOnClick"
-                      ToolTip.Tip="Minimalizuj" />
-              <Button x:Name="MaximizeButton"
-                      Classes="window-control"
-                      Content="□"
-                      Click="MaximizeButtonOnClick"
-                      ToolTip.Tip="Maksymalizuj" />
               <Button x:Name="CloseButton"
-                      Classes="window-control close"
-                      Content="×"
+                      Classes="window-control legacy-emoji close"
+                      Content="🍓"
                       Click="CloseButtonOnClick"
+                      ToolTip.ShowDelay="250"
                       ToolTip.Tip="Zamknij" />
+              <Button x:Name="MaximizeButton"
+                      Classes="window-control legacy-emoji"
+                      Content="🍋"
+                      Click="MaximizeButtonOnClick"
+                      ToolTip.ShowDelay="250"
+                      ToolTip.Tip="Maksymalizuj" />
+              <Button x:Name="MinimizeButton"
+                      Classes="window-control legacy-emoji"
+                      Content="🍏"
+                      Click="MinimizeButtonOnClick"
+                      ToolTip.ShowDelay="250"
+                      ToolTip.Tip="Minimalizuj" />
             </StackPanel>
+
+            <Button x:Name="ThemeButton"
+                    ZIndex="1"
+                    Classes="window-control theme"
+                    MinWidth="132"
+                    HorizontalAlignment="Right"
+                    Content="Motyw: Systemowy"
+                    Click="ThemeButtonOnClick"
+                    ToolTip.ShowDelay="250"
+                    ToolTip.Tip="Zmień motyw: systemowy, jasny, ciemny lub wysoki kontrast" />
           </Grid>
         </Border>
 

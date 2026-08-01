@@ -257,6 +257,11 @@
     <Setter Property="BorderBrush" Value="Transparent" />
     <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
   </Style>
+  <Style Selector="Button.window-control.legacy-emoji">
+    <Setter Property="FontFamily" Value="Default" />
+    <Setter Property="FontSize" Value="24" />
+    <Setter Property="Padding" Value="8,4" />
+  </Style>
   <Style Selector="Button.window-control:pointerover">
     <Setter Property="Background" Value="{DynamicResource GhostHoverBrush}" />
   </Style>

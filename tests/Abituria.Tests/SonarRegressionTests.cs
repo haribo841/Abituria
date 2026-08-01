@@ -103,6 +103,8 @@ public sealed class SonarRegressionTests
         Assert.Equal(typeof(List<>), tokenize.ReturnType.GetGenericTypeDefinition());
         Assert.All(typeof(ExerciseView).GetConstructors(), constructor =>
             Assert.InRange(constructor.GetParameters().Length, 0, 7));
+        Assert.All(typeof(HomeView).GetConstructors(), constructor =>
+            Assert.InRange(constructor.GetParameters().Length, 0, 7));
         Assert.Equal(typeof(Border), typeof(GeneralCalculatorView).GetMethod("BuildKeypad", privateInstance)?.ReturnType);
         Assert.Equal(typeof(Border), typeof(GeneralCalculatorView).GetMethod("BuildHistoryPanel", privateInstance)?.ReturnType);
         Assert.Equal(typeof(Border), typeof(MainWindow).GetMethod("BuildTopBar", privateInstance)?.ReturnType);

@@ -41,6 +41,7 @@ public sealed class Discussion49StyleRegressionTests
 
         var document = XDocument.Load(mainWindowPath);
         var window = Assert.IsType<XElement>(document.Root);
+        XNamespace avalonia = "https://github.com/avaloniaui";
         XNamespace x = "http://schemas.microsoft.com/winfx/2006/xaml";
         Assert.Equal("None", window.Attribute("WindowDecorations")?.Value);
         Assert.Null(window.Attribute("SystemDecorations"));
@@ -52,6 +53,29 @@ public sealed class Discussion49StyleRegressionTests
         Assert.Single(window.Descendants(), element => element.Attribute(x + "Name")?.Value == "MinimizeButton");
         Assert.Single(window.Descendants(), element => element.Attribute(x + "Name")?.Value == "MaximizeButton");
         Assert.Single(window.Descendants(), element => element.Attribute(x + "Name")?.Value == "CloseButton");
+        var legacyControls = window.Descendants(avalonia + "StackPanel")
+            .Single(element => element.Attribute(x + "Name")?.Value == "LegacyWindowControls");
+        var legacyButtons = legacyControls.Elements(avalonia + "Button").ToArray();
+        Assert.Equal(["CloseButton", "MaximizeButton", "MinimizeButton"],
+            legacyButtons.Select(element => element.Attribute(x + "Name")?.Value));
+        Assert.Equal(["🍓", "🍋", "🍏"], legacyButtons.Select(element => element.Attribute("Content")?.Value));
+        Assert.Equal(["Zamknij", "Maksymalizuj", "Minimalizuj"],
+            legacyButtons.Select(element => element.Attribute("ToolTip.Tip")?.Value));
+        Assert.All(legacyButtons, element =>
+        {
+            Assert.Equal("250", element.Attribute("ToolTip.ShowDelay")?.Value);
+            Assert.Contains("legacy-emoji", element.Attribute("Classes")?.Value, StringComparison.Ordinal);
+        });
+        Assert.DoesNotContain(
+            window.Descendants(avalonia + "Button"),
+            element => new[] { "_", "□", "❐", "×" }.Contains(element.Attribute("Content")?.Value, StringComparer.Ordinal));
+        var themeButton = window.Descendants(avalonia + "Button")
+            .Single(element => element.Attribute(x + "Name")?.Value == "ThemeButton");
+        Assert.Equal("250", themeButton.Attribute("ToolTip.ShowDelay")?.Value);
+        Assert.Single(
+            window.Descendants(avalonia + "StackPanel"),
+            element => element.Attribute(x + "Name")?.Value == "TitleBarBrand" &&
+                       element.Attribute("AutomationProperties.Name")?.Value == "🍀 Abituria");
         Assert.Equal(
             8,
             window.Descendants().Count(element =>
@@ -91,6 +115,10 @@ public sealed class Discussion49StyleRegressionTests
                      "Button.home-tile:pressed",
                      "Button.home-tile:focus",
                      "Button.home-tile:focus-visible",
+                     "Button.window-control:pointerover",
+                     "Button.window-control:pressed",
+                     "Button.window-control:focus",
+                     "Button.window-control:focus-visible",
                      "TextBox:pointerover",
                      "TextBox:pressed",
                      "TextBox:focus",
@@ -196,7 +224,7 @@ public sealed class Discussion49StyleRegressionTests
         var application = Assert.IsType<TestApplication>(Application.Current);
         using var manager = new AppThemeManager(application);
         var content = new ContentRepository();
-        var view = new HomeView("Tester", content.UiCopy, () => { }, () => { }, () => { }, () => { }, () => { }, () => { });
+        var view = new HomeView("Tester", content.UiCopy, EmptyHomeActions());
         var window = ShowInWindow(view, 960, 640);
 
         try
@@ -234,7 +262,7 @@ public sealed class Discussion49StyleRegressionTests
             var login = new LoginView(accounts, content.UiCopy, _ => { });
             AssertResponsiveColumns(login, "LoginLayoutRoot", 1100, 720, 2, 1);
 
-            var home = new HomeView("Tester", content.UiCopy, () => { }, () => { }, () => { }, () => { }, () => { }, () => { });
+            var home = new HomeView("Tester", content.UiCopy, EmptyHomeActions());
             AssertResponsiveColumns(home, "HomeLayoutRoot", 1100, 720, 2, 1);
 
             var calculator = new GeneralCalculatorView(
@@ -249,6 +277,9 @@ public sealed class Discussion49StyleRegressionTests
             if (Directory.Exists(directory)) Directory.Delete(directory, recursive: true);
         }
     }
+
+    private static HomeNavigationActions EmptyHomeActions() =>
+        new(() => { }, () => { }, () => { }, () => { }, () => { }, () => { });
 
     [AvaloniaFact]
     public async Task Login_logo_and_placeholders_remain_readable_in_dark_and_high_contrast_modes()
@@ -337,19 +368,39 @@ public sealed class Discussion49StyleRegressionTests
             var minimize = Assert.IsType<Button>(window.FindControl<Button>("MinimizeButton"));
             var maximize = Assert.IsType<Button>(window.FindControl<Button>("MaximizeButton"));
             var close = Assert.IsType<Button>(window.FindControl<Button>("CloseButton"));
+            var legacyControls = Assert.IsType<StackPanel>(window.FindControl<StackPanel>("LegacyWindowControls"));
             var grips = Assert.IsType<Grid>(window.FindControl<Grid>("ResizeGrips"));
+            Assert.Equal([close, maximize, minimize], legacyControls.Children.OfType<Button>());
+            Assert.Equal("🍓", close.Content);
+            Assert.Equal("🍋", maximize.Content);
+            Assert.Equal("🍏", minimize.Content);
+            Assert.Equal("Zamknij", ToolTip.GetTip(close));
+            Assert.Equal("Maksymalizuj", ToolTip.GetTip(maximize));
+            Assert.Equal("Minimalizuj", ToolTip.GetTip(minimize));
+            Assert.All(new[] { close, maximize, minimize }, button => Assert.Equal(250, ToolTip.GetShowDelay(button)));
             Assert.Equal("Minimalizuj okno", AutomationProperties.GetName(minimize));
             Assert.Equal("Maksymalizuj okno", AutomationProperties.GetName(maximize));
             Assert.Equal("Zamknij okno", AutomationProperties.GetName(close));
+            foreach (var button in new[] { close, maximize, minimize })
+            {
+                Assert.True(button.Focus(NavigationMethod.Tab));
+                Dispatcher.UIThread.RunJobs();
+                Assert.True(button.IsKeyboardFocusWithin);
+                Assert.Equal(new Thickness(3), button.BorderThickness);
+            }
 
             maximize.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
             Assert.Equal(WindowState.Maximized, window.WindowState);
             Assert.False(grips.IsVisible);
+            Assert.Equal("🍋", maximize.Content);
+            Assert.Equal("Przywróć", ToolTip.GetTip(maximize));
             Assert.Equal("Przywróć okno", AutomationProperties.GetName(maximize));
 
             maximize.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
             Assert.Equal(WindowState.Normal, window.WindowState);
             Assert.True(grips.IsVisible);
+            Assert.Equal("🍋", maximize.Content);
+            Assert.Equal("Maksymalizuj", ToolTip.GetTip(maximize));
 
             minimize.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
             Assert.Equal(WindowState.Minimized, window.WindowState);
@@ -362,6 +413,73 @@ public sealed class Discussion49StyleRegressionTests
         finally
         {
             if (window.IsVisible) window.Close();
+            SqliteConnection.ClearAllPools();
+            if (Directory.Exists(directory)) Directory.Delete(directory, recursive: true);
+        }
+    }
+
+    [AvaloniaFact]
+    public async Task Legacy_emoji_chrome_renders_without_overlap_in_every_theme_and_supported_window_size()
+    {
+        var directory = Path.Combine(Path.GetTempPath(), "Abituria.Tests", Guid.NewGuid().ToString("N"));
+        var accounts = new AccountService(
+            new AppDbContextFactory(Path.Combine(directory, "discussion49-legacy-chrome.db")),
+            new PasswordHasher(1_000));
+        await accounts.InitializeAsync(importLegacyProfiles: false);
+        var window = new MainWindow(
+            new AppViewModel(),
+            accounts,
+            new ContentRepository(),
+            new CalculatorSession(new ExpressionCalculator()),
+            AppBuildInfo.Current);
+
+        try
+        {
+            window.Show();
+            Dispatcher.UIThread.RunJobs();
+            var titleBar = Assert.IsType<Border>(window.FindControl<Border>("TitleBar"));
+            var legacyControls = Assert.IsType<StackPanel>(window.FindControl<StackPanel>("LegacyWindowControls"));
+            var themeButton = Assert.IsType<Button>(window.FindControl<Button>("ThemeButton"));
+            var brand = Assert.IsType<StackPanel>(window.FindControl<StackPanel>("TitleBarBrand"));
+
+            for (var themeIndex = 0; themeIndex < 4; themeIndex++)
+            {
+                foreach (var (width, height) in new[] { (720d, 520d), (960d, 640d), (1280d, 820d) })
+                {
+                    window.Width = width;
+                    window.Height = height;
+                    Dispatcher.UIThread.RunJobs();
+                    using var frame = Assert.IsType<WriteableBitmap>(window.CaptureRenderedFrame());
+                    Assert.True(frame.PixelSize.Width > 0);
+                    Assert.True(frame.PixelSize.Height > 0);
+
+                    var titleBounds = BoundsRelativeTo(titleBar, window);
+                    var controlsBounds = BoundsRelativeTo(legacyControls, window);
+                    var brandBounds = BoundsRelativeTo(brand, window);
+                    var themeBounds = BoundsRelativeTo(themeButton, window);
+                    Assert.True(titleBounds.Contains(controlsBounds));
+                    Assert.True(titleBounds.Contains(brandBounds));
+                    Assert.True(titleBounds.Contains(themeBounds));
+                    Assert.True(controlsBounds.Right <= brandBounds.Left);
+                    Assert.True(brandBounds.Right <= themeBounds.Left);
+                }
+
+                themeButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                Dispatcher.UIThread.RunJobs();
+            }
+        }
+        finally
+        {
+            var themeButton = window.FindControl<Button>("ThemeButton");
+            for (var attempt = 0;
+                 attempt < 4 && !((themeButton?.Content as string)?.Contains("Systemowy", StringComparison.Ordinal) ?? false);
+                 attempt++)
+            {
+                themeButton?.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                Dispatcher.UIThread.RunJobs();
+            }
+
+            window.Close();
             SqliteConnection.ClearAllPools();
             if (Directory.Exists(directory)) Directory.Delete(directory, recursive: true);
         }
@@ -486,6 +604,13 @@ public sealed class Discussion49StyleRegressionTests
         window.Show();
         Dispatcher.UIThread.RunJobs();
         return window;
+    }
+
+    private static Rect BoundsRelativeTo(Control control, Window window)
+    {
+        var position = control.TranslatePoint(default, window);
+        Assert.NotNull(position);
+        return new Rect(position.Value, control.Bounds.Size);
     }
 
     private static Dictionary<string, IReadOnlyDictionary<string, Color>> ReadPalettes()

@@ -183,6 +183,8 @@ public sealed record ExerciseViewContext(
 
 public sealed class ExerciseView : UserControl
 {
+    private const string GhostButtonClass = "ghost";
+
     private readonly TextBlock _status = new() { TextWrapping = TextWrapping.Wrap };
     private readonly Border _hintHost = UiFactory.Card(new TextBlock { Text = "Podpowiedź pojawi się tutaj.", Classes = { "muted" } }, new Thickness(16), "SurfaceAltBrush");
     private int _hintIndex;
@@ -208,7 +210,7 @@ public sealed class ExerciseView : UserControl
     private static StackPanel BuildNavigation(LearningExercise exercise, ExerciseViewContext context)
     {
         var topButtons = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8 };
-        var backButton = new Button { Content = $"← {context.BackLabel}", Classes = { "ghost" } };
+        var backButton = new Button { Content = $"← {context.BackLabel}", Classes = { GhostButtonClass } };
         backButton.Click += (_, _) => context.Back();
         topButtons.Children.Add(backButton);
         var currentIndex = context.Exercises.ToList().FindIndex(item => item.Id == exercise.Id);
@@ -227,7 +229,7 @@ public sealed class ExerciseView : UserControl
         LearningExercise target,
         Action<LearningExercise> openExercise)
     {
-        var button = new Button { Content = label, Classes = { "ghost" } };
+        var button = new Button { Content = label, Classes = { GhostButtonClass } };
         ToolTip.SetTip(button, target.Title);
         AutomationProperties.SetName(button, $"{actionName}: {target.Title}");
         AutomationProperties.SetHelpText(button, target.Title);
@@ -270,7 +272,7 @@ public sealed class ExerciseView : UserControl
         });
         if (context.OpenCalculatorPip is not null)
         {
-            var openCalculator = new Button { Content = "Otwórz kalkulator PiP", Classes = { "ghost" } };
+            var openCalculator = new Button { Content = "Otwórz kalkulator PiP", Classes = { GhostButtonClass } };
             AutomationProperties.SetName(openCalculator, "Otwórz kalkulator Picture in Picture");
             openCalculator.Click += (_, _) => context.OpenCalculatorPip();
             Grid.SetColumn(openCalculator, 1);
@@ -373,7 +375,7 @@ public sealed class ExerciseView : UserControl
 
     private void AddHintControls(StackPanel root, LearningExercise exercise)
     {
-        var hint = new Button { Content = "Następna podpowiedź", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Left };
+        var hint = new Button { Content = "Następna podpowiedź", Classes = { GhostButtonClass }, HorizontalAlignment = HorizontalAlignment.Left };
         hint.Click += (_, _) =>
         {
             if (_hintIndex >= exercise.Hints.Count) { ShowStatus("To była ostatnia podpowiedź.", true); return; }

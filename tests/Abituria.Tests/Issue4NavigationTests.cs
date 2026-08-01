@@ -25,12 +25,13 @@ public sealed class Issue4NavigationTests
         var home = new HomeView(
             "Tester",
             repository.UiCopy,
-            () => calls[0]++,
-            () => calls[1]++,
-            () => calls[2]++,
-            () => calls[3]++,
-            () => calls[4]++,
-            () => calls[5]++);
+            new HomeNavigationActions(
+                () => calls[0]++,
+                () => calls[1]++,
+                () => calls[2]++,
+                () => calls[3]++,
+                () => calls[4]++,
+                () => calls[5]++));
         var window = new Window { Width = 960, Height = 640, Content = home };
 
         try

@@ -67,20 +67,22 @@ public sealed class DiagramView : UserControl
 
     private static void AddLine(Canvas canvas, double x1, double y1, double x2, double y2, DiagramPrimitive primitive)
     {
-        var line = new Line { StartPoint = new Point(x1, y1), EndPoint = new Point(x2, y2) };
+        var start = new Point(x1, y1);
+        var end = new Point(x2, y2);
+        var line = new Line { StartPoint = start, EndPoint = end };
         StyleShape(line, primitive);
         canvas.Children.Add(line);
-        if (primitive.ArrowStart) AddArrowHead(canvas, x2, y2, x1, y1, primitive);
-        if (primitive.ArrowEnd) AddArrowHead(canvas, x1, y1, x2, y2, primitive);
+        if (primitive.ArrowStart) AddArrowHead(canvas, end, start, primitive);
+        if (primitive.ArrowEnd) AddArrowHead(canvas, start, end, primitive);
     }
 
-    private static void AddArrowHead(Canvas canvas, double x1, double y1, double x2, double y2, DiagramPrimitive primitive)
+    private static void AddArrowHead(Canvas canvas, Point from, Point tip, DiagramPrimitive primitive)
     {
-        var angle = Math.Atan2(y2 - y1, x2 - x1);
+        var angle = Math.Atan2(tip.Y - from.Y, tip.X - from.X);
         const double length = 14;
         const double spread = 0.55;
-        AddArrowSegment(canvas, x2, y2, angle + Math.PI - spread, length, primitive);
-        AddArrowSegment(canvas, x2, y2, angle + Math.PI + spread, length, primitive);
+        AddArrowSegment(canvas, tip.X, tip.Y, angle + Math.PI - spread, length, primitive);
+        AddArrowSegment(canvas, tip.X, tip.Y, angle + Math.PI + spread, length, primitive);
     }
 
     private static void AddArrowSegment(Canvas canvas, double x, double y, double angle, double length, DiagramPrimitive primitive)

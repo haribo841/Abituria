@@ -2,9 +2,9 @@
 
 Wersja dokumentu: `0.9.0-beta.1`.
 
-Data ostatniego lokalnego wykonania: 30 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
+Data ostatniego lokalnego wykonania: 31 lipca 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
 
-Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `494/494 PASS` w czasie `15 s`. OpenCover wykazał `95,49%` pokrycia linii i `86,90%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,22%` pokrycia łącznego i `86,96%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
+Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `495/495 PASS` w czasie `15 s`. OpenCover wykazał `95,52%` pokrycia linii i `86,88%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,25%` pokrycia łącznego i `86,95%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
 
 Dokument rozróżnia wyniki automatyczne, retrospektywne poświadczenie historycznych testów uczestników oraz czynności bieżącego procesu wydawniczego. Brak szczegółowej karty sesji nie jest uzupełniany przez domysł, a poświadczenie historyczne nie jest przedstawiane jako test bieżącej paczki.
 
@@ -34,7 +34,7 @@ Celem testów końcowych jest potwierdzenie, że Abituria spełnia aktualny zakr
 | UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests`, `Issue4NavigationTests`, `Issue5CalculatorPipTests` | osiągalne ścieżki użytkownika, osobne trasy Matury i Zadań, wszystkie trasy shella, edycję kalkulatora, kontrolowany pojedynczy PiP, wklejanie, losowanie i kontekst zadania |
 | Dostępność kontrolek | `AccessibilityRegressionTests` | nazwy pól i symbolicznych przycisków oraz dynamiczne regiony wyników |
 | Wizualne | `Discussion10VisualRegressionTests` | renderowanie list matematycznych i zachowanie przy minimalnym rozmiarze okna |
-| Styl, motywy i własny chrome | `Discussion49StyleRegressionTests` | Mulish, brak wymuszonego Light i Inter, cztery ustawienia motywu, stany interakcji, fokus, breakpointy, dialogi, sterowanie i skalowanie okna |
+| Styl, motywy i własny chrome | `Discussion49StyleRegressionTests` | Mulish, brak wymuszonego Light i Inter, historyczne emoji `🍓`/`🍋`/`🍏`, tooltipy, cztery ustawienia motywu, stany interakcji, fokus, breakpointy, dialogi, sterowanie i skalowanie okna |
 | Koszt renderowania UI | `Discussion49StyleRegressionTests` | rozgrzany render reprezentatywnego widoku w motywie jasnym, ciemnym i wysokiego kontrastu oraz budżet czasu i pamięci |
 | Wydanie | `ReleaseRuntimeTests`, `ReleaseContractTests`, `ReleaseValidationScriptTests`, `NuGetLicenseBundleTests` | izolowany smoke test, wersjonowanie, zawartość paczek, dowody licencji i działanie bramki pokrycia |
 | Python i PDF | `tests/python/test_new_commission_pdf.py` | generowanie, walidację struktury oraz błędy czcionek i obrazu wejściowego |
@@ -44,7 +44,13 @@ Celem testów końcowych jest potwierdzenie, że Abituria spełnia aktualny zakr
 
 30 lipca 2026 r. na Windows 11 x64 uruchomiono rzeczywistą aplikację z kompilacji Release. Profil gościa przeszedł migrację, PiP otworzył się jako pojedyncze okno należące do Abiturii, obliczenie `7*6` pokazało `42` i status udanego kopiowania, a `Ctrl+V` wkleił dokładnie `42` do brudnopisu zadania. Zmiana trybu na panel aplikacji i z powrotem do okna zachowała wyrażenie `7*6` i wynik. Po teście przywrócono ustawienie „Nad Abiturią” i zamknięto oba hosty.
 
+31 lipca 2026 r., po refaktorze usuwającym zgłoszenia Sonara, powtórzono na Windows 11 x64 przepływ rzeczywistego schowka. Kalkulator ogólny obliczył `7*6`, wyświetlił `42` i komunikat „Ans skopiowano do schowka.”, a `Ctrl+V` wkleił dokładnie `42` do brudnopisu Zadania 1. Nie wybrano odpowiedzi i nie zmieniono postępu profilu.
+
 Natywne zachowanie schowka oraz właściwości `Owned` i `Topmost` na Ubuntu 24.04 i macOS 15 pozostaje do potwierdzenia na odpowiednich systemach po autoryzowanym pushu. Testy Avalonia Headless sprawdzają wspólną logikę i wszystkie trzy tryby, ale nie są przedstawiane jako zamiennik tej kontroli platformowej.
+
+## Natywny smoke test Issue #6
+
+31 lipca 2026 r. na Windows 11 x64 uruchomiono rzeczywistą aplikację z kompilacji Release. Pasek pokazał po lewej kolorowe `🍓`, `🍋`, `🍏`, wyśrodkowane `🍀 Abituria` i przycisk motywu po prawej. Najechanie na każdą z czterech kontrolek wyświetliło po krótkim opóźnieniu tooltip: „Zamknij”, „Maksymalizuj”, „Minimalizuj” oraz opis zmiany motywu. `🍋` zmaksymalizował okno, zachował symbol i zmienił tooltip oraz nazwę automatyzacji na „Przywróć”, drugie użycie przywróciło zwykły rozmiar, `🍏` zminimalizował okno, a `🍓` zakończył aplikację.
 
 ## Regresje stylu i dostępności dyskusji #49
 
@@ -59,7 +65,7 @@ Nowy zestaw testów nie ocenia wyglądu wyłącznie przez obecność nazw klas. 
 | Znak aplikacji i placeholdery | w trybie ciemnym i wysokiego kontrastu placeholder ma kontrastowy `TextMutedBrush`, a tekstowa koniczyna korzysta z kolorów bieżącego motywu |
 | Stany interakcji | style zawierają i stosują `:pointerover`, `:pressed`, `:focus` oraz `:focus-visible` dla kontrolek używanych przez aplikację |
 | Widoczny fokus | render kontrolki przed i po fokusie klawiaturowym ma mierzalną zmianę ramki, a fokus nie jest sygnalizowany wyłącznie kolorem tekstu |
-| Własny chrome | `WindowDecorations=None`, obszar przeciągania, przyciski okna, zmiana `WindowState` oraz osiem krawędzi `BeginResizeDrag` pozostają obecne |
+| Własny chrome | `WindowDecorations=None`, historyczna kolejność `🍓`/`🍋`/`🍏`, wyśrodkowana marka, tooltipy `250 ms`, niezmienne `🍋` przy maksymalizacji i przywróceniu, zmiana `WindowState` oraz osiem krawędzi `BeginResizeDrag` pozostają obecne; render przy `720x520`, `960x640` i `1280x820` nie przepełnia paska w żadnym motywie |
 | Breakpointy | Login przy `860`, Start przy `780` i kalkulator przy `900` zmieniają liczbę kolumn oraz położenie paneli bez zmiany drzewa logicznego |
 | Dialogi | wspólna fabryka ustawia `CanResize=true`, granice wymiarów, środkowanie względem właściciela i pionowe przewijanie |
 | Wpływ stylu | rozgrzany render i nawigacja w trzech paletach mieszczą się w szerokim budżecie regresyjnym czasu i pamięci |
