@@ -68,6 +68,13 @@ public static class ExamCatalogValidator
         HashSet<string> topicIds,
         HashSet<string> allExerciseIds)
     {
+        ValidateExamMetadata(exam);
+        ValidateExamExercises(exam, topicIds, allExerciseIds);
+        ValidateOfficialTaskCount(exam);
+    }
+
+    private static void ValidateExamMetadata(ExamDefinition exam)
+    {
         if (string.IsNullOrWhiteSpace(exam.Id) || string.IsNullOrWhiteSpace(exam.Title) ||
             string.IsNullOrWhiteSpace(exam.Session) || string.IsNullOrWhiteSpace(exam.Formula) ||
             string.IsNullOrWhiteSpace(exam.Level))
@@ -80,7 +87,13 @@ public static class ExamCatalogValidator
         if (string.IsNullOrWhiteSpace(exam.Source.Publisher) || string.IsNullOrWhiteSpace(exam.Source.DocumentCode) ||
             string.IsNullOrWhiteSpace(exam.Source.QuestionPaperUrl) || string.IsNullOrWhiteSpace(exam.Source.AnswerKeyUrl))
             throw new InvalidOperationException($"Arkusz '{exam.Id}' ma niepełne źródło.");
+    }
 
+    private static void ValidateExamExercises(
+        ExamDefinition exam,
+        HashSet<string> topicIds,
+        HashSet<string> allExerciseIds)
+    {
         var orders = new HashSet<int>();
         foreach (var exercise in exam.Exercises)
         {
@@ -95,7 +108,10 @@ public static class ExamCatalogValidator
                 throw new InvalidOperationException($"Arkusz '{exam.Id}' zawiera powtórzoną kolejność zadania.");
             ValidateExercise(exercise);
         }
+    }
 
+    private static void ValidateOfficialTaskCount(ExamDefinition exam)
+    {
         var officialGroups = exam.Exercises.Select(item => string.IsNullOrWhiteSpace(item.GroupId) ? item.Id : item.GroupId);
         if (officialGroups.Distinct(StringComparer.Ordinal).Count() != exam.OfficialTaskCount)
             throw new InvalidOperationException($"Arkusz '{exam.Id}' nie ma oczekiwanej liczby oficjalnych zadań.");
@@ -127,21 +143,33 @@ public static class ExamCatalogValidator
             throw new InvalidOperationException($"Zadanie '{exercise.Id}' nie ma złożonej odpowiedzi.");
         RequireUnique(exercise.AnswerParts.Select(item => item.Id), "części odpowiedzi");
         foreach (var part in exercise.AnswerParts)
-        {
-            if (string.IsNullOrWhiteSpace(part.Id) || string.IsNullOrWhiteSpace(part.Prompt) ||
-                !SupportedPartModes.Contains(part.Mode))
-                throw new InvalidOperationException($"Zadanie '{exercise.Id}' ma niepełną część odpowiedzi.");
-            if (part.IsMultipleChoice &&
-                (part.Options.Count < 2 || part.CorrectOption is null ||
-                 part.CorrectOption < 1 || part.CorrectOption > part.Options.Count))
-                throw new InvalidOperationException($"Część '{part.Id}' ma niepoprawny wybór.");
-            if (part.IsNumeric &&
-                (part.ExpectedValue is not double expected || !double.IsFinite(expected)))
-                throw new InvalidOperationException($"Część '{part.Id}' ma niepoprawną wartość liczbową.");
-            if (part.IsText && (part.AcceptedAnswers.Count == 0 || part.AcceptedAnswers.Any(string.IsNullOrWhiteSpace)))
-                throw new InvalidOperationException($"Część '{part.Id}' nie ma akceptowanych odpowiedzi tekstowych.");
-        }
+            ValidateAnswerPart(exercise.Id, part);
     }
+
+    private static void ValidateAnswerPart(string exerciseId, LearningAnswerPart part)
+    {
+        if (string.IsNullOrWhiteSpace(part.Id) || string.IsNullOrWhiteSpace(part.Prompt) ||
+            !SupportedPartModes.Contains(part.Mode))
+            throw new InvalidOperationException($"Zadanie '{exerciseId}' ma niepełną część odpowiedzi.");
+        if (part.IsMultipleChoice && !IsValidChoicePart(part))
+            throw new InvalidOperationException($"Część '{part.Id}' ma niepoprawny wybór.");
+        if (part.IsNumeric && !IsValidNumericPart(part))
+            throw new InvalidOperationException($"Część '{part.Id}' ma niepoprawną wartość liczbową.");
+        if (part.IsText && !IsValidTextPart(part))
+            throw new InvalidOperationException($"Część '{part.Id}' nie ma akceptowanych odpowiedzi tekstowych.");
+    }
+
+    private static bool IsValidChoicePart(LearningAnswerPart part) =>
+        part.Options.Count >= 2 &&
+        part.CorrectOption is int correctOption &&
+        correctOption >= 1 &&
+        correctOption <= part.Options.Count;
+
+    private static bool IsValidNumericPart(LearningAnswerPart part) =>
+        part.ExpectedValue is double expected && double.IsFinite(expected);
+
+    private static bool IsValidTextPart(LearningAnswerPart part) =>
+        part.AcceptedAnswers.Count > 0 && !part.AcceptedAnswers.Any(string.IsNullOrWhiteSpace);
 
     private static void RequireUnique<T>(IEnumerable<T> values, string label)
         where T : notnull

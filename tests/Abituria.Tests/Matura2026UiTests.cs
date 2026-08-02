@@ -40,13 +40,12 @@ public sealed class Matura2026UiTests
             _ => { },
             (_, _) => { });
         var tasks = new TaskTopicsView(
-            repository.Exams,
-            repository.ExamTopics,
-            repository.ExamIndex.TopicIntroduction,
-            repository.Placeholders.Items,
-            openedTopics.Add,
-            _ => { },
-            (_, _) => { });
+            new TaskTopicsViewContent(
+                repository.Exams,
+                repository.ExamTopics,
+                repository.ExamIndex.TopicIntroduction,
+                repository.Placeholders.Items),
+            new TaskTopicsViewActions(openedTopics.Add, _ => { }, (_, _) => { }));
 
         var examTitles = matura.GetLogicalDescendants().OfType<TextBlock>()
             .Select(item => item.Text)
@@ -136,16 +135,15 @@ public sealed class Matura2026UiTests
         var exercises = repository.GetTopicExercises(topic.Id);
         var examTitles = repository.Exams.ToDictionary(item => item.Id, item => item.Title, StringComparer.Ordinal);
         var list = new ExerciseListView(
-            topic.Title,
-            "Zadania z aktywnych arkuszy.",
-            exercises,
-            examTitles,
-            true,
+            new ExerciseListViewContent(
+                topic.Title,
+                "Zadania z aktywnych arkuszy.",
+                exercises,
+                examTitles,
+                true),
             profile,
             accounts,
-            _ => { },
-            "Wróć",
-            () => { });
+            new ExerciseListViewActions(_ => { }, "Wróć", () => { }));
         var window = new Window { Width = 960, Height = 640, Content = list };
 
         try
@@ -241,13 +239,12 @@ public sealed class Matura2026UiTests
         {
             new MaturaView(repository.Exams, repository.Placeholders.Items, _ => { }, _ => { }, (_, _) => { }),
             new TaskTopicsView(
-                repository.Exams,
-                repository.ExamTopics,
-                repository.ExamIndex.TopicIntroduction,
-                repository.Placeholders.Items,
-                _ => { },
-                _ => { },
-                (_, _) => { })
+                new TaskTopicsViewContent(
+                    repository.Exams,
+                    repository.ExamTopics,
+                    repository.ExamIndex.TopicIntroduction,
+                    repository.Placeholders.Items),
+                new TaskTopicsViewActions(_ => { }, _ => { }, (_, _) => { }))
         };
 
         try

@@ -78,17 +78,15 @@ public sealed class ExerciseRandomizerTests
             Assert.Null(selectedTopicId);
 
             var tasksView = new TaskTopicsView(
-                [exam],
-                exam.Topics,
-                [],
-                [],
-                _ => { },
-                _ => { },
-                (exercise, topicId) =>
-                {
-                    opened = exercise;
-                    selectedTopicId = topicId;
-                },
+                new TaskTopicsViewContent([exam], exam.Topics, [], []),
+                new TaskTopicsViewActions(
+                    _ => { },
+                    _ => { },
+                    (exercise, topicId) =>
+                    {
+                        opened = exercise;
+                        selectedTopicId = topicId;
+                    }),
                 new ExerciseRandomizer(new FixedRandom(0)));
             window.Content = tasksView;
             Dispatcher.UIThread.RunJobs();

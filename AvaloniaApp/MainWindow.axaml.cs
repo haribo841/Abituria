@@ -240,13 +240,15 @@ public partial class MainWindow : Window
             _viewModel.OpenPlaceholder,
             _viewModel.OpenRandomExercise),
         AppPage.Tasks => new TaskTopicsView(
-            _content.Exams,
-            _content.ExamTopics,
-            _content.ExamIndex.TopicIntroduction,
-            _content.Placeholders.Items,
-            _viewModel.OpenTopic,
-            _viewModel.OpenPlaceholder,
-            _viewModel.OpenRandomExercise),
+            new TaskTopicsViewContent(
+                _content.Exams,
+                _content.ExamTopics,
+                _content.ExamIndex.TopicIntroduction,
+                _content.Placeholders.Items),
+            new TaskTopicsViewActions(
+                _viewModel.OpenTopic,
+                _viewModel.OpenPlaceholder,
+                _viewModel.OpenRandomExercise)),
         AppPage.ExerciseList => BuildExerciseListPage(),
         AppPage.Exercise when _viewModel.SelectedExercise is not null => new ExerciseView(
             _viewModel.SelectedExercise, CreateExerciseViewContext()),
@@ -311,32 +313,36 @@ public partial class MainWindow : Window
             var examSummary = $"{exam.OfficialTaskCount} zadań, {exam.ProgressItemCount} części ocenianych, " +
                 $"{exam.MaximumPoints} punktów, {exam.DurationMinutes} minut.";
             return new ExerciseListView(
-                exam.Title,
-                examSummary,
-                exam.Exercises.OrderBy(item => item.EffectiveOrder).ToArray(),
-                examTitles,
-                false,
+                new ExerciseListViewContent(
+                    exam.Title,
+                    examSummary,
+                    exam.Exercises.OrderBy(item => item.EffectiveOrder).ToArray(),
+                    examTitles,
+                    false),
                 _viewModel.ActiveProfile!,
                 _accounts,
-                _viewModel.OpenExercise,
-                "← Matura",
-                () => _viewModel.Navigate(AppPage.Matura));
+                new ExerciseListViewActions(
+                    _viewModel.OpenExercise,
+                    "← Matura",
+                    () => _viewModel.Navigate(AppPage.Matura)));
         }
 
         var topicId = _viewModel.SelectedTopicId
             ?? throw new InvalidOperationException("Nie wybrano tematu zadań.");
         var topic = _content.ExamTopics.Single(item => item.Id == topicId);
         return new ExerciseListView(
-            topic.Title,
-            "Zadania z aktywnych arkuszy, uporządkowane według źródła i numeru.",
-            _content.GetTopicExercises(topicId),
-            examTitles,
-            true,
+            new ExerciseListViewContent(
+                topic.Title,
+                "Zadania z aktywnych arkuszy, uporządkowane według źródła i numeru.",
+                _content.GetTopicExercises(topicId),
+                examTitles,
+                true),
             _viewModel.ActiveProfile!,
             _accounts,
-            _viewModel.OpenExercise,
-            "← Zadania",
-            () => _viewModel.Navigate(AppPage.Tasks));
+            new ExerciseListViewActions(
+                _viewModel.OpenExercise,
+                "← Zadania",
+                () => _viewModel.Navigate(AppPage.Tasks)));
     }
 
     private ExamDefinition SelectedExam()

@@ -79,13 +79,15 @@ public sealed class Issue4NavigationTests
             item => openedPlaceholders.Add(item.Id),
             (exercise, topicId) => randomized.Add((exercise.Id, topicId)));
         var tasks = new TaskTopicsView(
-            repository.Exams,
-            repository.ExamTopics,
-            repository.ExamIndex.TopicIntroduction,
-            repository.Placeholders.Items,
-            openedTopics.Add,
-            item => openedPlaceholders.Add(item.Id),
-            (exercise, topicId) => randomized.Add((exercise.Id, topicId)));
+            new TaskTopicsViewContent(
+                repository.Exams,
+                repository.ExamTopics,
+                repository.ExamIndex.TopicIntroduction,
+                repository.Placeholders.Items),
+            new TaskTopicsViewActions(
+                openedTopics.Add,
+                item => openedPlaceholders.Add(item.Id),
+                (exercise, topicId) => randomized.Add((exercise.Id, topicId))));
 
         Assert.Equal(2, repository.Exams.Count);
         Assert.Equal(17, repository.ExamTopics.Count);
