@@ -68,27 +68,29 @@ public sealed class Issue4NavigationTests
     public void Matura_and_tasks_have_independent_content_randomization_and_placeholder_categories()
     {
         var repository = new ContentRepository();
-        var openedExam = 0;
+        var openedExams = new List<string>();
         var openedTopics = new List<string>();
         var openedPlaceholders = new List<string>();
         var randomized = new List<(string ExerciseId, string? TopicId)>();
         var matura = new MaturaView(
-            repository.Exam,
+            repository.Exams,
             repository.Placeholders.Items,
-            () => openedExam++,
+            openedExams.Add,
             item => openedPlaceholders.Add(item.Id),
             (exercise, topicId) => randomized.Add((exercise.Id, topicId)));
         var tasks = new TaskTopicsView(
-            repository.Exam,
+            repository.Exams,
+            repository.ExamTopics,
+            repository.ExamIndex.TopicIntroduction,
             repository.Placeholders.Items,
             openedTopics.Add,
             item => openedPlaceholders.Add(item.Id),
             (exercise, topicId) => randomized.Add((exercise.Id, topicId)));
 
-        Assert.Equal(35, repository.Exam.Exercises.Count);
-        Assert.Equal(17, repository.Exam.Topics.Count);
+        Assert.Equal(2, repository.Exams.Count);
+        Assert.Equal(17, repository.ExamTopics.Count);
         Assert.Contains(matura.GetLogicalDescendants().OfType<Button>(), button =>
-            button.Content is string text && text.Contains("35 zadań", StringComparison.Ordinal));
+            button.Content is string text && text.Contains("33 zadania, 37 części ocenianych", StringComparison.Ordinal));
         Assert.Equal(3, matura.GetLogicalDescendants().OfType<Button>().Count(button =>
             button.Content is string text && repository.Placeholders.Items.Any(item =>
                 item.Category == "exam" && text.StartsWith(item.Title, StringComparison.Ordinal))));
@@ -101,15 +103,17 @@ public sealed class Issue4NavigationTests
         Assert.DoesNotContain(tasks.GetLogicalDescendants().OfType<Button>(), button =>
             button.Content is string text && text.StartsWith("Matura 2019", StringComparison.Ordinal));
 
-        Click(matura, $"{repository.Exam.Title} - 35 zadań");
-        Click(matura, "Losuj zadanie z tego arkusza");
+        var newestExam = repository.Exams[0];
+        Click(matura, "Otwórz arkusz - 33 zadania, 37 części ocenianych");
+        Click(matura, $"Losuj zadanie z arkusza {newestExam.Year}");
         Click(matura, "Matura 2019 - treść w przygotowaniu");
-        var firstTopic = repository.Exam.Topics[0];
-        Click(tasks, $"{firstTopic.Title} - {ExerciseCountLabel(firstTopic.ExerciseNumbers.Count)}");
+        var firstTopic = repository.ExamTopics[0];
+        var firstTopicCount = repository.GetTopicExercises(firstTopic.Id).Count;
+        Click(tasks, $"{firstTopic.Title} - {ExerciseCountLabel(firstTopicCount)}");
         Click(tasks, $"Losuj zadanie z tematu: {firstTopic.Title}");
         Click(tasks, "Zestaw E1-E35 - treść w przygotowaniu");
 
-        Assert.Equal(1, openedExam);
+        Assert.Equal([newestExam.Id], openedExams);
         Assert.Equal([firstTopic.Id], openedTopics);
         Assert.Equal(["matura-2019", "exercise-set-e"], openedPlaceholders);
         Assert.Null(randomized[0].TopicId);

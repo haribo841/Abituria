@@ -294,7 +294,7 @@ def build_pdf(
                 [
                     ["Obszar", "Zakres"],
                     ["Nauka", "18 tablic, 7 dostępnych działów, przykłady, zadania, podpowiedzi i odpowiedzi."],
-                    ["Zadania", "35 zadań z podziałem na tematy, zapis postępu, brudnopis oraz losowanie z całej puli lub tematu."],
+                    ["Zadania", "Matura 2026 PP: 33 zadania i 37 części; zachowane 35 zadań 2021, 17 wspólnych tematów, oddzielny postęp i losowanie kontekstowe."],
                     ["Kalkulatory", "Kalkulator funkcji kwadratowej oraz parser wyrażeń z potęgami, pierwiastkami, Ans i historią."],
                     ["Dane", "Profile gościa i konta lokalne, SQLite, hasła chronione PBKDF2-HMAC-SHA256."],
                     ["Wydanie", "Paczki self-contained x64 przygotowane dla Windows, Ubuntu i macOS Intel, z kontrolowanym smoke testem."],
@@ -427,7 +427,7 @@ def build_pdf(
                     ["Brama", "Stan", "Znaczenie"],
                     ["Build, testy, format i audyt", "PASS: e0afeea", "Build i SonarCloud zaliczone 18 lipca 2026 r.; lokalny retest 19 lipca."],
                     ["Instalacja niezależna i użyteczność", "PASS", "Natywne runnery Windows, Ubuntu i macOS zaliczone; właściciel potwierdził pomyślne testy z uczestnikami."],
-                    ["Pochodzenie zasobów", "PASS", "Manifest ma releaseEligible=true na podstawie oświadczenia właściciela z 19 lipca 2026 r.; autorstwo i źródła zachowano."],
+                    ["Pochodzenie zasobów", "BLOCKED", "Manifest ma releaseEligible=false: matura CKE 2026 i siedem diagramów oczekują na osobiste rozszerzenie deklaracji praw."],
                     ["GitHub Release", "nieopublikowany", "Brama prawna jest odblokowana; nadal wymagane są commit, tag i pełny workflow."],
                 ],
                 [4.1 * cm, 3.2 * cm, 9.9 * cm],
@@ -481,7 +481,7 @@ def build_pdf(
             table(
                 [
                     ["Wariant", "Stan", "Zakres"],
-                    ["A - publiczne wydanie", "READY / NOT PUBLISHED", "releaseEligible=true; wymagane są commit, tag i pełny workflow."],
+                    ["A - publiczne wydanie", "BLOCKED", "releaseEligible=false; przed commitem wydania wymagane są deklaracja użytkownika i ponowna pełna brama."],
                     ["B - uzgodnione przekazanie", "ACCEPTED HISTORYCZNIE", "Projekt przekazano w uzgodnionej formie i zatwierdzono na początku lutego 2022 r.; kanał nie zachował się."],
                     ["Bieżący kandydat dokumentacyjny", "PREPARED", "PDF, aktywne dokumenty, manifest i SHA-256; pakiet celowo nie zawiera aplikacji."],
                 ],

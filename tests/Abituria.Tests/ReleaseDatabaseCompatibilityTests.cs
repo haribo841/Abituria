@@ -45,6 +45,7 @@ public sealed class ReleaseDatabaseCompatibilityTests
             Assert.True((await firstRun.AuthenticateAsync(profile.Id, HistoricalPassword)).Success);
             Assert.Equal(["mp21-z7"], await firstRun.GetCompletedExerciseIdsAsync(profile.Id));
             await firstRun.MarkExerciseCompletedAsync(profile.Id, "mp21-z35");
+            await firstRun.MarkExerciseCompletedAsync(profile.Id, "mm26-p0-z12-1");
             Assert.True(await firstRun.SetCalculatorPipModeAsync(profile.Id, CalculatorPipMode.AlwaysOnTopWindow));
 
             SqliteConnection.ClearAllPools();
@@ -53,7 +54,7 @@ public sealed class ReleaseDatabaseCompatibilityTests
 
             Assert.True((await restarted.AuthenticateAsync(profile.Id, HistoricalPassword)).Success);
             Assert.Equal(
-                ["mp21-z35", "mp21-z7"],
+                ["mm26-p0-z12-1", "mp21-z35", "mp21-z7"],
                 (await restarted.GetCompletedExerciseIdsAsync(profile.Id)).Order(StringComparer.Ordinal));
             Assert.Equal(
                 CalculatorPipMode.AlwaysOnTopWindow,

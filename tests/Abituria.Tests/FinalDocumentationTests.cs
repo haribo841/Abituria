@@ -92,6 +92,7 @@ public sealed class FinalDocumentationTests
         Assert.Contains("commission-documentation-candidate", handoffScript, StringComparison.Ordinal);
         Assert.Contains("isRunnable = $false", handoffScript, StringComparison.Ordinal);
         Assert.Contains("cke-2021-correction-exam", handoffScript, StringComparison.Ordinal);
+        Assert.Contains("cke-2026-main-basic-exam", handoffScript, StringComparison.Ordinal);
         Assert.Contains("cke-formula-2023-transcription", handoffScript, StringComparison.Ordinal);
         Assert.Contains("runtime-vector-diagrams", handoffScript, StringComparison.Ordinal);
         Assert.Contains("application-icon", handoffScript, StringComparison.Ordinal);
@@ -116,8 +117,9 @@ public sealed class FinalDocumentationTests
         Assert.Contains("Publiczny GitHub Release `0.9.0-beta.1` nie istnieje", requirements, StringComparison.Ordinal);
 
         var provenance = File.ReadAllText(Absolute("Content/provenance.json"));
-        Assert.Contains("\"releaseEligible\": true", provenance, StringComparison.Ordinal);
-        Assert.DoesNotContain("\"distributionStatus\": \"blocked\"", provenance, StringComparison.Ordinal);
+        Assert.Contains("\"releaseEligible\": false", provenance, StringComparison.Ordinal);
+        Assert.Contains("\"id\": \"cke-2026-main-basic-exam\"", provenance, StringComparison.Ordinal);
+        Assert.Contains("\"distributionStatus\": \"blocked\"", provenance, StringComparison.Ordinal);
         Assert.True(File.Exists(Absolute("docs/ASSET_RIGHTS_DECLARATION.md")), "Brak deklaracji praw do zasobów.");
     }
 

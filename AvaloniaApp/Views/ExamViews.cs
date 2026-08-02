@@ -17,9 +17,9 @@ namespace Abituria.Views;
 public sealed class MaturaView : UserControl
 {
     public MaturaView(
-        ExamDefinition exam,
+        IReadOnlyList<ExamDefinition> exams,
         IEnumerable<PlaceholderItem> placeholders,
-        Action openExam,
+        Action<string> openExam,
         Action<PlaceholderItem> openPlaceholder,
         Action<LearningExercise, string?> openExercise,
         ExerciseRandomizer? randomizer = null)
@@ -27,13 +27,19 @@ public sealed class MaturaView : UserControl
         var exerciseRandomizer = randomizer ?? new ExerciseRandomizer();
         var root = new StackPanel { Spacing = 14 };
         root.Children.Add(UiFactory.PageTitle("Matura", "Pracuj z pełnym arkuszem albo wybierz archiwalny zestaw."));
-        if (exam.Introduction.Count > 0)
-            root.Children.Add(UiFactory.Card(new RichContentView(exam.Introduction)));
-        root.Children.Add(ExamOverviewControls.ListButton(
-            $"{exam.Title} - {ExamOverviewControls.ExerciseCountLabel(exam.Exercises.Count)}",
-            openExam));
-        root.Children.Add(ExamOverviewControls.RandomExerciseButton(
-            "Losuj zadanie z tego arkusza", exam.Exercises, null, exerciseRandomizer, openExercise));
+        foreach (var exam in exams)
+        {
+            var examPanel = new StackPanel { Spacing = 10 };
+            examPanel.Children.Add(new TextBlock { Text = exam.Title, Classes = { "h2" } });
+            if (exam.Introduction.Count > 0)
+                examPanel.Children.Add(new RichContentView(exam.Introduction));
+            examPanel.Children.Add(ExamOverviewControls.ListButton(
+                $"Otwórz arkusz - {ExamOverviewControls.ExamCountLabel(exam)}",
+                () => openExam(exam.Id)));
+            examPanel.Children.Add(ExamOverviewControls.RandomExerciseButton(
+                $"Losuj zadanie z arkusza {exam.Year}", exam.Exercises, null, exerciseRandomizer, openExercise));
+            root.Children.Add(UiFactory.Card(examPanel));
+        }
         foreach (var placeholder in placeholders.Where(item => item.Category == "exam"))
             root.Children.Add(ExamOverviewControls.ListButton(
                 $"{placeholder.Title} - treść w przygotowaniu", () => openPlaceholder(placeholder)));
@@ -44,7 +50,9 @@ public sealed class MaturaView : UserControl
 public sealed class TaskTopicsView : UserControl
 {
     public TaskTopicsView(
-        ExamDefinition exam,
+        IReadOnlyList<ExamDefinition> exams,
+        IReadOnlyList<ExerciseTopicDefinition> topics,
+        IReadOnlyList<ContentBlock> topicIntroduction,
         IEnumerable<PlaceholderItem> placeholders,
         Action<string> openTopic,
         Action<PlaceholderItem> openPlaceholder,
@@ -54,15 +62,16 @@ public sealed class TaskTopicsView : UserControl
         var exerciseRandomizer = randomizer ?? new ExerciseRandomizer();
         var root = new StackPanel { Spacing = 14 };
         root.Children.Add(UiFactory.PageTitle("Zadania", "Wybierz jeden z 17 tematów albo wylosuj zadanie tematyczne."));
-        if (exam.TopicIntroduction.Count > 0)
-            root.Children.Add(UiFactory.Card(new RichContentView(exam.TopicIntroduction)));
-        foreach (var topic in exam.Topics)
+        if (topicIntroduction.Count > 0)
+            root.Children.Add(UiFactory.Card(new RichContentView(topicIntroduction)));
+        var allExercises = exams.SelectMany(item => item.Exercises).ToArray();
+        foreach (var topic in topics.OrderBy(item => item.Order))
         {
-            var topicExercises = exam.Exercises.Where(item => item.TopicId == topic.Id).ToArray();
+            var topicExercises = allExercises.Where(item => item.TopicId == topic.Id).ToArray();
             root.Children.Add(ExamOverviewControls.RandomExerciseButton(
                 $"Losuj zadanie z tematu: {topic.Title}", topicExercises, topic.Id, exerciseRandomizer, openExercise));
             root.Children.Add(ExamOverviewControls.ListButton(
-                $"{topic.Title} - {ExamOverviewControls.ExerciseCountLabel(topic.ExerciseNumbers.Count)}",
+                $"{topic.Title} - {ExamOverviewControls.ExerciseCountLabel(topicExercises.Length)}",
                 () => openTopic(topic.Id)));
         }
         foreach (var placeholder in placeholders.Where(item => item.Category == "exercise"))
@@ -110,6 +119,11 @@ internal static class ExamOverviewControls
         if (lastTwoDigits is >= 12 and <= 14) return $"{count} zadań";
         return count % 10 is >= 2 and <= 4 ? $"{count} zadania" : $"{count} zadań";
     }
+
+    public static string ExamCountLabel(ExamDefinition exam) =>
+        exam.OfficialTaskCount == exam.ProgressItemCount
+            ? ExerciseCountLabel(exam.OfficialTaskCount)
+            : $"{ExerciseCountLabel(exam.OfficialTaskCount)}, {exam.ProgressItemCount} części ocenianych";
 }
 
 public sealed class ExerciseListView : UserControl
@@ -117,8 +131,11 @@ public sealed class ExerciseListView : UserControl
     private readonly StackPanel _list = new() { Spacing = 8 };
 
     public ExerciseListView(
-        ExamDefinition exam,
-        string? topicId,
+        string title,
+        string subtitle,
+        IReadOnlyList<LearningExercise> exercises,
+        IReadOnlyDictionary<string, string> examTitles,
+        bool showExamSource,
         LocalProfile profile,
         AccountService accounts,
         Action<LearningExercise> open,
@@ -129,31 +146,32 @@ public sealed class ExerciseListView : UserControl
         var backButton = new Button { Content = backLabel, Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Left };
         backButton.Click += (_, _) => back();
         root.Children.Add(backButton);
-        var topic = exam.Topics.SingleOrDefault(item => item.Id == topicId);
-        var title = topic is null ? exam.Title : topic.Title;
-        var subtitle = topic is null
-            ? "Zadania 1–28 są zamknięte; zadania 29–35 prowadzą przez rozwiązanie otwarte."
-            : $"Zadania z arkusza {exam.Title.ToLowerInvariant()} przypisane do wybranego zagadnienia.";
         root.Children.Add(UiFactory.PageTitle(title, subtitle));
         root.Children.Add(_list);
         Content = UiFactory.PageScroll(root);
-        AttachedToVisualTree += async (_, _) => await LoadAsync(exam, topic, profile, accounts, open);
+        AttachedToVisualTree += async (_, _) =>
+            await LoadAsync(exercises, examTitles, showExamSource, profile, accounts, open);
     }
 
-    private async Task LoadAsync(ExamDefinition exam, ExerciseTopicDefinition? topic, LocalProfile profile, AccountService accounts, Action<LearningExercise> open)
+    private async Task LoadAsync(
+        IReadOnlyList<LearningExercise> exercises,
+        IReadOnlyDictionary<string, string> examTitles,
+        bool showExamSource,
+        LocalProfile profile,
+        AccountService accounts,
+        Action<LearningExercise> open)
     {
         var completed = await accounts.GetCompletedExerciseIdsAsync(profile.Id);
         _list.Children.Clear();
-        var exercises = topic is null
-            ? exam.Exercises
-            : exam.Exercises.Where(item => item.TopicId == topic.Id);
-        foreach (var exercise in exercises.OrderBy(item => item.Number))
+        foreach (var exercise in exercises)
         {
             var done = completed.Contains(exercise.Id) ? " ✓" : string.Empty;
-            var type = exercise.IsMultipleChoice ? "A–D" : "otwarte";
+            var source = showExamSource && examTitles.TryGetValue(exercise.ExamId, out var examTitle)
+                ? $" · {examTitle}"
+                : string.Empty;
             var button = new Button
             {
-                Content = $"{exercise.Title} · {type}{done}",
+                Content = $"{exercise.Title} · {AnswerTypeLabel(exercise)}{source}{done}",
                 Classes = { "list" },
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 HorizontalContentAlignment = HorizontalAlignment.Left
@@ -161,6 +179,14 @@ public sealed class ExerciseListView : UserControl
             button.Click += (_, _) => open(exercise);
             _list.Children.Add(button);
         }
+    }
+
+    private static string AnswerTypeLabel(LearningExercise exercise)
+    {
+        if (exercise.IsMultipleChoice) return "wybór A-D";
+        if (exercise.IsCompound) return "odpowiedź złożona";
+        if (exercise.IsNumeric) return "wynik liczbowy";
+        return "rozwiązanie otwarte";
     }
 }
 
@@ -187,6 +213,7 @@ public sealed class ExerciseView : UserControl
 
     private readonly TextBlock _status = new() { TextWrapping = TextWrapping.Wrap };
     private readonly Border _hintHost = UiFactory.Card(new TextBlock { Text = "Podpowiedź pojawi się tutaj.", Classes = { "muted" } }, new Thickness(16), "SurfaceAltBrush");
+    private readonly Dictionary<string, string?> _compoundAnswers = new(StringComparer.Ordinal);
     private int _hintIndex;
     private int? _selectedOption;
 
@@ -289,6 +316,8 @@ public sealed class ExerciseView : UserControl
             AddMultipleChoiceControls(root, exercise, context);
         else if (exercise.IsNumeric)
             AddNumericControls(root, exercise, context);
+        else if (exercise.IsCompound)
+            AddCompoundControls(root, exercise, context);
         else
             AddRevealControl(root, exercise, context);
     }
@@ -319,6 +348,7 @@ public sealed class ExerciseView : UserControl
             if (_selectedOption == exercise.CorrectOption)
             {
                 await context.Accounts.MarkExerciseCompletedAsync(context.Profile.Id, exercise.Id);
+                ShowSolution(exercise);
                 ShowStatus("Poprawna odpowiedź. Zadanie zapisano jako ukończone.", true);
             }
             else ShowStatus("To nie jest poprawna odpowiedź. Skorzystaj z podpowiedzi i spróbuj ponownie.", false);
@@ -347,10 +377,82 @@ public sealed class ExerciseView : UserControl
         {
             var result = new NumericAnswerEvaluator(new ExpressionCalculator()).Evaluate(exercise, answer.Text);
             if (result.IsCorrect)
+            {
                 await context.Accounts.MarkExerciseCompletedAsync(context.Profile.Id, exercise.Id);
+                ShowSolution(exercise);
+            }
             ShowStatus(result.Message, result.IsCorrect);
         };
         root.Children.Add(check);
+    }
+
+    private void AddCompoundControls(StackPanel root, LearningExercise exercise, ExerciseViewContext context)
+    {
+        var answerPanel = new StackPanel { Spacing = 14 };
+        foreach (var part in exercise.AnswerParts)
+            answerPanel.Children.Add(BuildCompoundPart(exercise, part, context));
+        root.Children.Add(UiFactory.Card(answerPanel));
+
+        var check = new Button
+        {
+            Content = "Sprawdź wszystkie odpowiedzi",
+            Classes = { "primary" },
+            HorizontalAlignment = HorizontalAlignment.Left
+        };
+        AutomationProperties.SetHelpText(
+            check,
+            "Wszystkie części muszą być uzupełnione poprawnie, aby zadanie zostało zapisane jako ukończone.");
+        check.Click += async (_, _) =>
+        {
+            var numeric = new NumericAnswerEvaluator(new ExpressionCalculator());
+            var result = new CompoundAnswerEvaluator(numeric).Evaluate(exercise, _compoundAnswers);
+            if (result.IsCorrect)
+            {
+                await context.Accounts.MarkExerciseCompletedAsync(context.Profile.Id, exercise.Id);
+                ShowSolution(exercise);
+            }
+            ShowStatus(result.Message, result.IsCorrect);
+        };
+        root.Children.Add(check);
+    }
+
+    private StackPanel BuildCompoundPart(
+        LearningExercise exercise,
+        LearningAnswerPart part,
+        ExerciseViewContext context)
+    {
+        var panel = new StackPanel { Spacing = 8 };
+        panel.Children.Add(RichContentView.CreateText(part.Prompt));
+        if (part.IsMultipleChoice)
+        {
+            for (var index = 0; index < part.Options.Count; index++)
+            {
+                var optionNumber = index + 1;
+                var radio = new RadioButton
+                {
+                    GroupName = $"{exercise.Id}-{part.Id}",
+                    Content = RichContentView.CreateText(part.Options[index])
+                };
+                radio.IsCheckedChanged += (_, _) =>
+                {
+                    if (radio.IsChecked == true)
+                        _compoundAnswers[part.Id] = optionNumber.ToString(CultureInfo.InvariantCulture);
+                };
+                panel.Children.Add(radio);
+            }
+            return panel;
+        }
+
+        var answer = new TextBox
+        {
+            PlaceholderText = part.IsNumeric ? "Wpisz liczbę lub proste wyrażenie" : "Wpisz odpowiedź"
+        };
+        AutomationProperties.SetName(answer, $"Odpowiedź do części: {part.Prompt}");
+        answer.TextChanged += (_, _) => _compoundAnswers[part.Id] = answer.Text;
+        if (context.Clipboard is not null)
+            TextBoxClipboardBehavior.Attach(answer, context.Clipboard, message => ShowStatus(message, false));
+        panel.Children.Add(answer);
+        return panel;
     }
 
     private void AddRevealControl(StackPanel root, LearningExercise exercise, ExerciseViewContext context)
@@ -366,7 +468,7 @@ public sealed class ExerciseView : UserControl
             "Akcja ujawni odpowiedź i zapisze zadanie w lokalnym profilu jako ukończone.");
         reveal.Click += async (_, _) =>
         {
-            _hintHost.Child = RichContentView.CreateText(exercise.RevealedAnswer ?? "Brak zapisanej odpowiedzi.");
+            ShowSolution(exercise);
             await context.Accounts.MarkExerciseCompletedAsync(context.Profile.Id, exercise.Id);
             ShowStatus("Odpowiedź została ujawniona. Zadanie zapisano jako ukończone.", true);
         };
@@ -375,14 +477,28 @@ public sealed class ExerciseView : UserControl
 
     private void AddHintControls(StackPanel root, LearningExercise exercise)
     {
-        var hint = new Button { Content = "Następna podpowiedź", Classes = { GhostButtonClass }, HorizontalAlignment = HorizontalAlignment.Left };
-        hint.Click += (_, _) =>
+        if (exercise.Hints.Count > 0)
         {
-            if (_hintIndex >= exercise.Hints.Count) { ShowStatus("To była ostatnia podpowiedź.", true); return; }
-            _hintHost.Child = RichContentView.CreateText(exercise.Hints[_hintIndex++]);
-        };
-        root.Children.Add(hint);
+            var hint = new Button { Content = "Następna podpowiedź", Classes = { GhostButtonClass }, HorizontalAlignment = HorizontalAlignment.Left };
+            hint.Click += (_, _) =>
+            {
+                if (_hintIndex >= exercise.Hints.Count) { ShowStatus("To była ostatnia podpowiedź.", true); return; }
+                _hintHost.Child = RichContentView.CreateText(exercise.Hints[_hintIndex++]);
+            };
+            root.Children.Add(hint);
+        }
         root.Children.Add(_hintHost);
+    }
+
+    private void ShowSolution(LearningExercise exercise)
+    {
+        var solution = exercise.EffectiveSolution;
+        if (string.IsNullOrWhiteSpace(solution))
+            return;
+        var scoring = string.IsNullOrWhiteSpace(exercise.ScoringCriteria)
+            ? string.Empty
+            : $"\n\nKryteria punktowania:\n{exercise.ScoringCriteria}";
+        _hintHost.Child = RichContentView.CreateText($"Pełne rozwiązanie:\n{solution}{scoring}");
     }
 
     private void ShowStatus(string message, bool success)
@@ -402,6 +518,8 @@ public sealed class ExerciseView : UserControl
             return "Wybierz jedną odpowiedź.";
         if (exercise.IsNumeric)
             return "Oblicz wynik. Możesz wpisać liczbę albo bezpieczne wyrażenie matematyczne.";
+        if (exercise.IsCompound)
+            return "Uzupełnij wszystkie części odpowiedzi i sprawdź je łącznie.";
         return "Rozwiązuj samodzielnie i świadomie ujawnij pełne rozwiązanie.";
     }
 

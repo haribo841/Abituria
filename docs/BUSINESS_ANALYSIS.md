@@ -70,7 +70,7 @@ Użytkownik otrzymuje bezpłatny dostęp do lokalnej aplikacji, połączenie mat
 
 ### 4.3. Stan dystrybucji
 
-Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, ale publiczne prerelease `v0.9.0-beta.1` nie zostało jeszcze opublikowane. Po oświadczeniu właściciela projektu z 19 lipca 2026 r. brama `releaseEligible` w `Content/provenance.json` potwierdza prawo do redystrybucji ewidencjonowanych zasobów jako części Abiturii. Pozostałe kroki to zatwierdzenie commita, tag i pełny workflow. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md) i [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
+Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, ale publiczne prerelease `v0.9.0-beta.1` nie zostało jeszcze opublikowane. Po dodaniu matury 2026 brama `releaseEligible` w `Content/provenance.json` ma wartość `false`: arkusz, zasady oceniania i siedem diagramów oczekują na osobiste rozszerzenie deklaracji praw przez użytkownika. Dopiero potem można wykonać zatwierdzony commit, tag i pełny workflow. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), [macierz matury 2026](MATURA_2026_COVERAGE.md) i [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
 
 Koszty bieżącego wariantu obejmują przede wszystkim czas przygotowania treści, implementacji, testów, dokumentacji i utrzymania repozytorium. Aplikacja działa lokalnie, dlatego nie wymaga serwera aplikacyjnego ani przechowywania danych użytkowników przez zewnętrznego operatora.
 
@@ -83,12 +83,14 @@ Zakres bieżącej implementacji jest zdefiniowany normatywnie w [REQUIREMENTS.md
 - profile gościa i lokalne konta z zapisem postępu w SQLite;
 - tablice matematyczne oraz pełny kurs Formuły 2023 obejmujący 4 grupy, 13 obszarów, 119 wymagań, 238 przykładów i 357 ćwiczeń;
 - sprawdzanie odpowiedzi zamkniętych, ujawnianie odpowiedzi otwartych oraz podpowiedzi;
+- matura główna 2026 PP z 33 zadaniami, 37 jednostkami postępu i 50 punktami oraz zachowany arkusz poprawkowy 2021 z 35 zadaniami;
+- odpowiedzi złożone dla tabel P/F i zadań wielopolowych oraz agregacja obu arkuszy według 17 tematów;
 - kalkulator funkcji kwadratowej;
 - kalkulator ogólny z parserem wyrażeń, nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią i powtarzanym `=`;
 - losowanie zadań z całego arkusza albo wybranego tematu;
 - dokumentację, bramy jakości, diagnostyczny smoke test artefaktu i automatyzację przygotowania paczek.
 
-Kurs odpowiada podstawie programowej z 2024 r. stosowanej dla matury 2026. Filtr podstawowy pokazuje 73 wymagania i 219 ćwiczeń, a rozszerzony dodaje 46 wymagań i 138 ćwiczeń. Niezależny katalog obejmuje 35 zadań matury poprawkowej 2021. Prawo do redystrybucji ewidencjonowanych treści i ilustracji jako części Abiturii zostało potwierdzone oświadczeniem właściciela, przy zachowaniu ich rzeczywistego autorstwa i źródła.
+Kurs odpowiada podstawie programowej z 2024 r. stosowanej dla matury 2026. Filtr podstawowy pokazuje 73 wymagania i 219 ćwiczeń, a rozszerzony dodaje 46 wymagań oraz 138 ćwiczeń. Katalog egzaminów obejmuje 37 jednostek postępu matury głównej 2026 PP i 35 zadań matury poprawkowej 2021. Wcześniejsze zasoby zachowują zatwierdzone przypisania, natomiast nowa transkrypcja CKE 2026 i jej diagramy pozostają zablokowane do czasu rozszerzenia deklaracji użytkownika.
 
 ### 5.2. Poza zakresem beta
 
@@ -114,10 +116,10 @@ Rzeczywiste daty najwcześniejszych weryfikowalnych stanów technicznych I-IV bi
 | Tydzień 3 | M2 - architektura i nawigacja | autor implementacji | zrealizowane: AvaloniaUI, jedno `MainWindow`, `AppViewModel`, testy architektury |
 | Tydzień 4-5 | M3a - ekran startowy i nawigacja | autor implementacji | zrealizowane: shell, widoki i routing |
 | Tydzień 6-7 | M3b - kalkulatory | autor implementacji | zrealizowane: kalkulator ogólny i funkcji kwadratowej z regresjami |
-| Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | zrealizowane lokalnie: pełny kurs `119/238/357`, 35 zadań arkusza, tablice i postęp; Issue #3 czeka na pełne bramki i autoryzowaną publikację zmian |
+| Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | zrealizowane: pełny kurs `119/238/357`, dwa aktywne arkusze z 72 jednostkami postępu, tablice i oddzielny postęp |
 | Tydzień 12 | M5a - testy i regresje | autor implementacji | zrealizowane ciągle: testy jednostkowe, integracyjne, UI i CI |
 | Tydzień 13 | M5b - dokumentacja i pakowanie | autor implementacji | technicznie zrealizowane: dokumentacja, workflow, paczki portable i smoke test |
-| Tydzień 14 | M6 - publiczne prerelease | autor implementacji | prawnie odblokowane i technicznie przygotowane; wymaga jeszcze zatwierdzonego commita, tagu, natywnych workflow i publikacji GitHub Release |
+| Tydzień 14 | M6 - publiczne prerelease | autor implementacji, właściciel praw | technicznie przygotowane, ale obecnie zablokowane prawnie przez brak rozszerzenia deklaracji dla matury CKE 2026; po odblokowaniu wymaga zatwierdzonego commita, tagu, natywnych workflow i publikacji GitHub Release |
 | 17 stycznia 2022 r. | M7 - publiczna obrona projektu historycznego | Adam Kubiś i komisja | osiągnięte: pokaz działającej aplikacji, pytania i odpowiedzi, decyzja pozytywna, wynik bardzo dobry; dowód w `DEFENSE_PROTOCOL.md` |
 
 M6 w tej tabeli dotyczy przyszłego prerelease bieżącej migracji `0.9.0-beta.1`, natomiast M7 dokumentuje rzeczywistą obronę historycznej wersji projektu w 2022 r. Osiągnięcie M7 nie jest dowodem opublikowania obecnej migracji.
@@ -195,9 +197,11 @@ Szczegóły odpowiedzialności warstw, modułów, danych i automatyzacji zawiera
 | Brak testów wydania na platformie docelowej | nieuruchamialna paczka | natywne workflow Windows, Ubuntu i macOS oraz smoke test finalnego archiwum |
 | Brak zasobów utrzymaniowych | spowolnienie rozwoju | ograniczony zakres beta, dokumentacja i transparentne zgłoszenia GitHub |
 
-## 12. Śledzenie Issue #38
+## 12. Śledzenie Issue #9
 
-| Wymaganie historycznego issue | Aktywny dowód |
+Bieżącym zgłoszeniem analizy biznesowej jest [haribo841/Abituria#9](https://github.com/haribo841/Abituria/issues/9). Historyczny kontekst pozostaje wyłącznie pod pełnym adresem [Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski#38](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38). W starym repozytorium nie są wykonywane żadne zmiany.
+
+| Wymaganie analizy | Aktywny dowód |
 | --- | --- |
 | cele klienta, potrzeby użytkownika i model biznesowy | sekcje 2-4 tego dokumentu |
 | zakres, harmonogram, kamienie milowe i kryteria akceptacji | sekcje 5-7 oraz `REQUIREMENTS.md` |
@@ -205,4 +209,4 @@ Szczegóły odpowiedzialności warstw, modułów, danych i automatyzacji zawiera
 | zebranie wymagań według metodyki | sekcja 9 i macierz wymagań |
 | architektura oraz technologie | sekcja 10 i `ARCHITECTURE.md` |
 
-Zamknięcie historycznego issue nie oznacza automatycznie, że spełniono warunek publicznego wydania. Status publikacji jest oceniany wyłącznie przez wymagania, pochodzenie zasobów i procedurę wydawniczą aktualnego repozytorium.
+Zamknięcie Issue #9 nie oznacza automatycznie, że spełniono warunek publicznego wydania. Status publikacji jest oceniany wyłącznie przez wymagania, pochodzenie zasobów i procedurę wydawniczą aktualnego repozytorium.

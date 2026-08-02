@@ -6,7 +6,7 @@ Ten dokument opisuje przygotowanie, walidację i publikację Abiturii. Przykład
 
 Build techniczny, artefakt workflow i GitHub Release to trzy różne stany. Publiczne wydanie istnieje dopiero po ręcznym opublikowaniu zweryfikowanego draftu prerelease. Issue #36 można zamknąć dopiero po publikacji prerelease, wdrożeniu GitHub Pages i dodaniu komentarza z linkami do wydania, workflow oraz checklisty.
 
-Aktualny inwentarz ma `releaseEligible=true`. Właściciel projektu 19 lipca 2026 r. potwierdził prawa lub upoważnienia wymagane do publicznej redystrybucji materiałów CKE oraz odziedziczonych grafik jako części Abiturii. Zakres oświadczenia i zachowane przypisanie źródeł opisują [CONTENT_PROVENANCE.md](CONTENT_PROVENANCE.md) i [ASSET_RIGHTS_DECLARATION.md](ASSET_RIGHTS_DECLARATION.md). GitHub Release nadal nie istnieje i może zostać utworzony dopiero po przejściu całej procedury dla zatwierdzonego commita.
+Aktualny inwentarz ma `releaseEligible=false`. Wcześniejsze oświadczenie właściciela nie obejmuje matury CKE 2026 ani siedmiu nowych diagramów pochodnych. Przed wydaniem użytkownik musi osobiście rozszerzyć [ASSET_RIGHTS_DECLARATION.md](ASSET_RIGHTS_DECLARATION.md) o arkusz, zasady oceniania, oba adresy, obie sumy SHA-256, zakres redystrybucji w Abiturii i diagramy, a następnie zmienić oba statusy wyłącznie po ponownej ocenie. Szczegóły opisują [CONTENT_PROVENANCE.md](CONTENT_PROVENANCE.md) i [MATURA_2026_COVERAGE.md](MATURA_2026_COVERAGE.md). GitHub Release nadal nie istnieje i może zostać utworzony dopiero po przejściu całej procedury dla zatwierdzonego commita.
 
 Pakiet dokumentacyjny dla komisji nie jest wydaniem aplikacji. Jego zawartość i wyłączenia opisuje [DELIVERY_PROTOCOL.md](DELIVERY_PROTOCOL.md).
 

@@ -23,8 +23,11 @@ public sealed class ContentInventoryTests
         var formulas = Read<FormulaCatalog>("Content/formulas.json");
         var course = Read<MathCourseCatalog>("Content/chapters.json");
         var courseExercises = Read<CourseExerciseCatalog>("Content/course-exercises.json");
+        var examIndex = Read<ExamIndexCatalog>("Content/exams.json");
         var examCatalog = Read<ExamCatalog>("Content/exam-2021-correction.json");
         var exam = examCatalog.Exam;
+        var currentExamCatalog = Read<ExamCatalog>("Content/exam-2026-main-basic.json");
+        var currentExam = currentExamCatalog.Exam;
         var placeholders = Read<PlaceholderCatalog>("Content/placeholders.json");
         var roadmap = Read<RoadmapCatalog>("Content/roadmap.json");
 
@@ -35,6 +38,12 @@ public sealed class ContentInventoryTests
         Assert.Equal(4, formulas.SchemaVersion);
         Assert.Equal(4, course.SchemaVersion);
         Assert.Equal(3, examCatalog.SchemaVersion);
+        Assert.Equal(4, currentExamCatalog.SchemaVersion);
+        Assert.Equal(1, examIndex.SchemaVersion);
+        Assert.Equal(17, examIndex.Topics.Count);
+        Assert.Equal(
+            ["matura-maj-2026-podstawowa", "matura-poprawkowa-2021"],
+            examIndex.Exams.OrderBy(item => item.Order).Select(item => item.Id));
         Assert.Equal(4, course.Groups.Count);
         Assert.Equal(13, course.Areas.Count);
         Assert.Equal(34, course.Lessons.Count);
@@ -59,6 +68,9 @@ public sealed class ContentInventoryTests
         Assert.Equal(28, exam.Exercises.Count(item => item.IsMultipleChoice));
         Assert.Equal(7, exam.Exercises.Count(item => !item.IsMultipleChoice));
         Assert.Equal(Enumerable.Range(1, 35), exam.Exercises.Select(item => item.Number));
+        Assert.Equal(37, currentExam.Exercises.Count);
+        Assert.Equal(33, currentExam.OfficialTaskCount);
+        Assert.Equal(50, currentExam.MaximumPoints);
         Assert.Contains(roadmap.Items, item => item.Status == RoadmapStatus.Migrated);
         Assert.Contains(roadmap.Items, item => item.Status == RoadmapStatus.Planned);
         Assert.Contains(roadmap.Items, item => item.Status == RoadmapStatus.Superseded);
@@ -74,8 +86,8 @@ public sealed class ContentInventoryTests
 
         var diagrams = Read<DiagramCatalog>("Content/diagrams.json");
         Assert.Equal(1, diagrams.SchemaVersion);
-        Assert.Equal(57, diagrams.Diagrams.Count);
-        Assert.Equal(57, diagrams.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(64, diagrams.Diagrams.Count);
+        Assert.Equal(64, diagrams.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
     }
 
     [Fact]
@@ -183,12 +195,14 @@ public sealed class ContentInventoryTests
         var course = Read<MathCourseCatalog>("Content/chapters.json");
         var courseExercises = Read<CourseExerciseCatalog>("Content/course-exercises.json");
         var exam = Read<ExamCatalog>("Content/exam-2021-correction.json").Exam;
+        var currentExam = Read<ExamCatalog>("Content/exam-2026-main-basic.json").Exam;
         var diagrams = Read<DiagramCatalog>("Content/diagrams.json");
         var referencedDiagramIds = formulas.Articles.SelectMany(item => item.Blocks)
             .Concat(course.Lessons.SelectMany(item => item.Blocks))
             .Where(block => block.Type == "diagram")
             .Select(block => block.DiagramId!)
             .Concat(exam.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(currentExam.Exercises.SelectMany(item => item.DiagramIds))
             .Concat(courseExercises.Exercises.SelectMany(item => item.DiagramIds))
             .Distinct(StringComparer.Ordinal)
             .Order(StringComparer.Ordinal)
@@ -242,13 +256,19 @@ public sealed class ContentInventoryTests
         var formulas = Read<FormulaCatalog>("Content/formulas.json");
         var course = Read<MathCourseCatalog>("Content/chapters.json");
         var courseExercises = Read<CourseExerciseCatalog>("Content/course-exercises.json");
-        var exam = Read<ExamCatalog>("Content/exam-2021-correction.json").Exam;
+        var exams = new[]
+        {
+            Read<ExamCatalog>("Content/exam-2026-main-basic.json").Exam,
+            Read<ExamCatalog>("Content/exam-2021-correction.json").Exam
+        };
         var placeholders = Read<PlaceholderCatalog>("Content/placeholders.json");
         var roadmap = Read<RoadmapCatalog>("Content/roadmap.json");
-        var exercises = exam.Exercises.Concat(courseExercises.Exercises);
+        var examExercises = exams.SelectMany(item => item.Exercises);
+        var exercises = examExercises.Concat(courseExercises.Exercises);
         foreach (var text in formulas.Introduction.Concat(formulas.Articles.SelectMany(item => item.Blocks))
                      .Concat(course.Introduction).Concat(course.Lessons.SelectMany(item => item.Blocks))
-                     .Concat(exam.Introduction).Concat(exam.TopicIntroduction)
+                     .Concat(exams.SelectMany(item => item.Introduction))
+                     .Concat(exams.SelectMany(item => item.TopicIntroduction))
                      .Concat(placeholders.Items.SelectMany(item => item.Blocks))
                      .Concat(roadmap.Introduction)
                      .Select(block => block.Text).Where(text => !string.IsNullOrWhiteSpace(text)))
@@ -266,6 +286,13 @@ public sealed class ContentInventoryTests
             foreach (var option in exercise.Options) yield return option;
             foreach (var hint in exercise.Hints) yield return hint;
             if (!string.IsNullOrWhiteSpace(exercise.RevealedAnswer)) yield return exercise.RevealedAnswer;
+            if (!string.IsNullOrWhiteSpace(exercise.Solution)) yield return exercise.Solution;
+            if (!string.IsNullOrWhiteSpace(exercise.ScoringCriteria)) yield return exercise.ScoringCriteria;
+            foreach (var part in exercise.AnswerParts)
+            {
+                yield return part.Prompt;
+                foreach (var option in part.Options) yield return option;
+            }
         }
     }
 

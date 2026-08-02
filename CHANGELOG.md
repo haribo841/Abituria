@@ -12,6 +12,7 @@ Pierwsza wersja przygotowana do publicznego wydania. Planowana data zostanie wpi
 - samowystarczalne paczki x64: ZIP dla Windows, `tar.gz` dla Ubuntu i ZIP z `Abituria.app` dla macOS Intel;
 - lokalne profile gościa i konta chronione hasłem, odzyskiwanie konta oraz trwały postęp w SQLite;
 - 18 tablic matematycznych, 7 dostępnych działów i 35 zadań matury poprawkowej 2021;
+- maturę główną 2026 na poziomie podstawowym: 33 oficjalne zadania, 37 jednostek postępu, 50 punktów, rozwiązania, kryteria oceniania i siedem dostępnych diagramów wektorowych;
 - kalkulator ogólny z parserem złożonych wyrażeń, historią, `Ans`, potęgami, pierwiastkami, notacją naukową i powtarzanym `=`;
 - kalkulator funkcji kwadratowej;
 - losowanie zadań z całego arkusza albo z wybranego tematu, z zachowaniem kontekstu nawigacji;
@@ -36,6 +37,7 @@ Pierwsza wersja przygotowana do publicznego wydania. Planowana data zostanie wpi
 - wersjonowanie tak, aby assembly, paczki, tag, changelog, ekran „O programie” i strona używały `0.9.0-beta.1`;
 - przechowywanie bazy poza katalogiem programu, aby aktualizacja portable nie usuwała danych użytkownika.
 - nazwy automatyzacji symbolicznych przycisków i pól oraz dynamiczne regiony wyników dla technologii asystujących.
+- obsługę wielu aktywnych arkuszy, odpowiedzi złożonych, agregację zadań w 17 tematach oraz osobny licznik postępu dla każdego arkusza.
 
 ### Bezpieczeństwo łańcucha dostaw
 

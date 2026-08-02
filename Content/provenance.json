@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "releaseEligible": true,
+  "releaseEligible": false,
   "policy": {
     "approvedStatus": "approved",
     "blockingStatus": "blocked",
@@ -13,6 +13,7 @@
         "Content/placeholders.json",
         "Content/roadmap.json",
         "Content/ui-copy.json",
+        "Content/exams.json",
         "Content/provenance.json"
       ],
       "author": "Adam Kubiś",
@@ -69,16 +70,34 @@
       ]
     },
     {
+      "id": "cke-2026-main-basic-exam",
+      "paths": [
+        "Content/exam-2026-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMAP-P0-100-A-2605, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2026/Matematyka/poziom_podstawowy/MMAP-P0-100-A-2605-arkusz.pdf, SHA-256 B7BD89434CA5CCFA33824B0CF063FF7CDDFF47B353059ECF225418E29BEEE71D; zasady oceniania CKE MMAP-P0-100-2605, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2026/Matematyka/poziom_podstawowy/MMAP-P0-100-2605-zasady.pdf, SHA-256 A982890CF5EA17206266E4A64B7BFDF96F46FAB08C7435B022CCE5B3908A65AC; weryfikacja 2026-08-02",
+      "license": "Oczekuje na osobistą deklarację użytkownika dotyczącą redystrybucji arkusza, zasad oceniania i transkrypcji w ramach Abiturii",
+      "distributionStatus": "blocked",
+      "blockedReason": "docs/ASSET_RIGHTS_DECLARATION.md nie obejmuje jeszcze matury CKE 2026 ani wynikających z niej treści.",
+      "evidence": [
+        "docs/MATURA_2026_COVERAGE.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
       "id": "runtime-vector-diagrams",
       "paths": [
         "Content/diagrams.json"
       ],
-      "author": "Adam Kubiś - nowe definicje kursu; Centralna Komisja Egzaminacyjna - źródłowa treść tablic i arkusza; historyczni autorzy projektu Ich Troje - źródła zachowanych diagramów",
-      "source": "Deterministyczne definicje wektorowe opracowane na podstawie przypisanych źródeł; bez dołączania historycznych rastrów do aplikacji",
-      "license": "MIT dla definicji autorskich i odziedziczonych; materiały CKE z przypisaniem źródła zgodnie z deklaracją praw",
-      "distributionStatus": "approved",
+      "author": "Adam Kubiś - nowe definicje kursu; Centralna Komisja Egzaminacyjna - źródłowa treść tablic i arkuszy; historyczni autorzy projektu Ich Troje - źródła zachowanych diagramów",
+      "source": "Deterministyczne definicje wektorowe opracowane na podstawie przypisanych źródeł, w tym siedem figur z arkusza CKE MMAP-P0-100-A-2605; bez dołączania historycznych rastrów do aplikacji",
+      "license": "MIT dla definicji autorskich i odziedziczonych; zakres pochodny od matury CKE 2026 oczekuje na osobistą deklarację użytkownika",
+      "distributionStatus": "blocked",
+      "blockedReason": "Obecna deklaracja praw obejmuje 57 wcześniejszych diagramów, ale nie obejmuje siedmiu nowych definicji pochodnych od matury CKE 2026.",
       "evidence": [
         "docs/ASSET_RIGHTS_DECLARATION.md",
+        "docs/MATURA_2026_COVERAGE.md",
+        "docs/CONTENT_PROVENANCE.md",
         "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",
         "docs/MIGRATION_INVENTORY.md",
         "docs/MATH_COURSE_2023_COVERAGE.md"

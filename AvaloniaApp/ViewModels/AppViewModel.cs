@@ -48,6 +48,7 @@ public sealed class AppViewModel : ObservableObject
     private CourseLevelFilter _selectedCourseLevel = CourseLevelFilter.Basic;
     private ExamNavigationOrigin _examNavigationOrigin = ExamNavigationOrigin.Matura;
     private CalculatorPipMode _calculatorPipMode = CalculatorPipMode.OwnedWindow;
+    private string? _selectedExamId;
     private string? _selectedTopicId;
     private string? _selectedRoadmapId;
     private PlaceholderItem? _selectedPlaceholder;
@@ -71,6 +72,7 @@ public sealed class AppViewModel : ObservableObject
     public CourseLevelFilter SelectedCourseLevel { get => _selectedCourseLevel; private set => SetProperty(ref _selectedCourseLevel, value); }
     public ExamNavigationOrigin ExamNavigationOrigin { get => _examNavigationOrigin; private set => SetProperty(ref _examNavigationOrigin, value); }
     public CalculatorPipMode CalculatorPipMode { get => _calculatorPipMode; private set => SetProperty(ref _calculatorPipMode, value); }
+    public string? SelectedExamId { get => _selectedExamId; private set => SetProperty(ref _selectedExamId, value); }
     public string? SelectedTopicId { get => _selectedTopicId; private set => SetProperty(ref _selectedTopicId, value); }
     public string? SelectedRoadmapId { get => _selectedRoadmapId; private set => SetProperty(ref _selectedRoadmapId, value); }
     public PlaceholderItem? SelectedPlaceholder { get => _selectedPlaceholder; private set => SetProperty(ref _selectedPlaceholder, value); }
@@ -108,6 +110,7 @@ public sealed class AppViewModel : ObservableObject
     public void OpenExercise(LearningExercise exercise)
     {
         SelectedCourseLesson = null;
+        if (!string.IsNullOrWhiteSpace(exercise.ExamId)) SelectedExamId = exercise.ExamId;
         SelectedExercise = exercise;
         CurrentPage = AppPage.Exercise;
     }
@@ -120,16 +123,20 @@ public sealed class AppViewModel : ObservableObject
 
     public void OpenRandomExercise(LearningExercise exercise, string? topicId)
     {
+        if (!string.IsNullOrWhiteSpace(exercise.ExamId)) SelectedExamId = exercise.ExamId;
         SelectedTopicId = topicId;
         ExamNavigationOrigin = topicId is null ? ExamNavigationOrigin.Matura : ExamNavigationOrigin.Tasks;
         OpenExercise(exercise);
     }
-    public void OpenExam()
+    public void OpenExam(string examId)
     {
+        ArgumentException.ThrowIfNullOrWhiteSpace(examId);
+        SelectedExamId = examId;
         SelectedTopicId = null;
         ExamNavigationOrigin = ExamNavigationOrigin.Matura;
         CurrentPage = AppPage.ExerciseList;
     }
+    public void OpenExam() => OpenExam("matura-poprawkowa-2021");
     public void OpenTopic(string topicId)
     {
         SelectedTopicId = topicId;

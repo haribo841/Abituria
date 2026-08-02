@@ -24,7 +24,8 @@
 | Wektory | `pages/chapters/WektoryPage.xaml` | Pełny artykuł i 8 ilustracji |
 | Matura poprawkowa 2021 | `Z1Page`–`Z35Page` | 35 zadań, 169 zweryfikowanych podpowiedzi i 9 obrazów |
 | Weryfikacja arkusza | CKE `EMAP-P0-100-2108` | Klucz 1–28, treści, odpowiedzi otwarte i strony źródłowe zapisane w danych |
-| Zadania według tematów | `ZadaniaPage.xaml` | 17 kategorii obejmujących każde z 35 zadań dokładnie raz |
+| Matura główna 2026 PP | nowe źródła CKE `MMAP-P0-100-A-2605` i `MMAP-P0-100-2605` | 33 zadania, 37 jednostek postępu, 50 punktów, rozwiązania, kryteria i 7 diagramów wektorowych; nie pochodzi ze starego repozytorium |
+| Zadania według tematów | `ZadaniaPage.xaml` oraz nowy indeks arkuszy | 17 kategorii agregujących zachowane zadania 2021 i nowe części 2026 |
 | Brudnopis | pola tekstowe ekranów zadań | Wielowierszowe pole robocze przechowywane osobno dla profilu i zadania do zamknięcia aplikacji, z `Ctrl+V` lub `Cmd+V` i menu `Wklej` |
 | Zadania 1–28 | checkboxy i `correctAnsw` | Cztery opcje, sprawdzanie i zapis po poprawnej odpowiedzi |
 | Zadania 29–35 | `ShowAnsBtn`/`ConfirmBtn` | Tryb `revealOnly`; zapis po ujawnieniu odpowiedzi |
@@ -63,15 +64,16 @@ Testy automatyczne wymagają:
 - dokładnie 91 kątów od 0 do 90 stopni w tekstowej tabeli trygonometrycznej,
 - dokładnie 4 grupy, 13 obszarów, 73 wymagania podstawowe, 46 dodatkowych wymagań rozszerzonych, 238 przykładów i 357 ćwiczeń kursowych,
 - dokładnie 219 ćwiczeń podstawowych i 138 rozszerzonych, po 3 unikalne ćwiczenia i 2 rozwiązane przykłady dla każdego wymagania,
-- dokładnie 35 kolejnych zadań: 28 zamkniętych i 7 otwartych,
+- zachowania dokładnie 35 kolejnych zadań 2021: 28 zamkniętych i 7 otwartych, wraz z identyfikatorami `mp21-*`,
+- dokładnie 33 oficjalnych zadań, 37 jednostek postępu i 50 punktów matury 2026,
 - czterech niepustych opcji i klucza 1–4 dla każdego zadania zamkniętego,
 - niepustej odpowiedzi ujawnianej dla każdego zadania otwartego,
 - co najmniej jednej podpowiedzi dla każdego zadania,
-- istnienia każdego obrazu wskazanego przez treść,
+- istnienia każdego diagramu wskazanego przez treść, niepustego opisu alternatywnego i strony dla figur matury 2026,
 - braku znanych uszkodzonych komend LaTeX,
 - poprawnego parsowania każdego wyrażenia matematycznego przez renderer CSharpMath.
 
-Bezpośrednia regresja issue #35 wymaga wszystkich wskazanych sekcji, 24 liter alfabetu greckiego, przykładów, wskazówek i odpowiedzi, poprawnego przypadku `\(\Delta{}<0\)` oraz zachowania historycznych identyfikatorów lekcji. Regresja kursu wymaga także rozdzielonych seedów czterech etapów, deterministycznego generatora, filtra poziomu, trzech trybów odpowiedzi, 12 diagramów kursu z opisami alternatywnymi oraz zgodności macierzy `119/238/357`. Testy wymagają ponadto pełnego klucza CKE dla zadań 1-28 oraz jednoznacznego przypisania wszystkich zadań do tematów.
+Bezpośrednia regresja issue #35 wymaga wszystkich wskazanych sekcji, 24 liter alfabetu greckiego, przykładów, wskazówek i odpowiedzi, poprawnego przypadku `\(\Delta{}<0\)` oraz zachowania historycznych identyfikatorów lekcji. Regresja kursu wymaga także rozdzielonych seedów czterech etapów, deterministycznego generatora, filtra poziomu, trzech trybów odpowiedzi, 12 diagramów kursu z opisami alternatywnymi oraz zgodności macierzy `119/238/357`. Testy wymagają ponadto pełnego klucza CKE dla zadań 2021, kontraktu `33/37/50` dla matury 2026 i jednoznacznego przypisania obu arkuszy do wspólnych tematów.
 
 Drugi audyt przed usunięciem snapshotów potwierdził `276/276` zgodnych wystąpień zasobów bez braków i różnic. Ujawnił dwa brakujące placeholdery kalkulatorów oraz brak dokładnych kopii dokumentów planistycznych; oba problemy zostały usunięte.
 

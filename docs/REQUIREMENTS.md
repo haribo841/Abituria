@@ -2,7 +2,7 @@
 
 Status: aktualny dokument wymagań dla bieżącej implementacji AvaloniaUI.
 
-Źródło uzupełnienia: issue #34 "Uzupełnić: Dokument wymagań projektowych", issue #35 "Uzupełnić: Treść działów matematyki", issue #36 "Implementacja i wdrożenie", issue #38 "Analiza biznesowa" oraz aktualny stan repozytorium `haribo841/Abituria`.
+Źródło uzupełnienia: issue #34 "Uzupełnić: Dokument wymagań projektowych", issue #35 "Uzupełnić: Treść działów matematyki", issue #36 "Implementacja i wdrożenie", bieżące [Issue #9](https://github.com/haribo841/Abituria/issues/9), historyczne zgłoszenie [Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski#38](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38) oraz aktualny stan repozytorium `haribo841/Abituria`.
 
 Dokument zastępuje pusty historyczny szablon wymagań. Historyczne notatki pozostają w `docs/legacy`, ale nie są już jedyną podstawą oceny zakresu projektu. Uzasadnienie biznesowe, interesariusze, ryzyka, model udostępniania i kamienie milowe opisuje [analiza biznesowa](BUSINESS_ANALYSIS.md).
 
@@ -47,7 +47,8 @@ Zakres bieżącej implementacji obejmuje:
 - ekran startowy z kaflami głównych obszarów,
 - 18 tablic matematycznych obejmujących kompletny zakres dokumentu CKE dla Formuły 2023,
 - pełny kurs Formuły 2023: 4 grupy, 13 obszarów, 73 wymagania podstawowe, 46 dodatkowych wymagań rozszerzonych, 238 rozwiązanych przykładów i 357 ćwiczeń,
-- 35 zadań matury poprawkowej 2021,
+- matura główna 2026 PP: 33 oficjalnie numerowane zadania, 37 jednostek postępu i 50 punktów,
+- zachowane 35 zadań matury poprawkowej 2021,
 - przeglądanie zadań według arkusza i tematów,
 - sprawdzanie odpowiedzi w zadaniach zamkniętych,
 - ujawnianie odpowiedzi w zadaniach otwartych,
@@ -85,9 +86,9 @@ Poza bieżącym zakresem pozostają:
 | F-05 | System importuje historyczne profile gościa z `users.txt` idempotentnie. | Średni | Zaimplementowane | `AccountService`, `InitialLocalAccounts`, `AccountServiceTests` |
 | F-06 | System pokazuje 18 tablic matematycznych obejmujących wszystkie 17 sekcji i podpunkty dokumentu CKE dla Formuły 2023, z jawnym źródłem i sumą SHA-256. | Wysoki | Zaimplementowane | `Content/formulas.json`, `FORMULA_2023_COVERAGE.md`, `ContentInventoryTests` |
 | F-07 | System pokazuje pełny kurs Formuły 2023 w 4 grupach i 13 obszarach, obejmujący 73 wymagania podstawowe i 46 rozszerzonych. | Wysoki | Zaimplementowane | `Content/chapters.json`, `MATH_COURSE_2023_COVERAGE.md`, `MathCourse2023ContentTests` |
-| F-08 | System pokazuje 35 zadań matury poprawkowej 2021. | Wysoki | Zaimplementowane | `Content/exam-2021-correction.json`, `ContentInventoryTests` |
-| F-09 | System umożliwia wybór zadań według arkusza lub tematu. | Wysoki | Zaimplementowane | `ExerciseListView`, `ContentInventoryTests` |
-| F-10 | System sprawdza odpowiedzi A-D w zadaniach zamkniętych i zapisuje postęp po poprawnej odpowiedzi. | Wysoki | Zaimplementowane | `ExerciseView`, `ExerciseAndRoutingCoverageTests`, `MathCourse2023ContentTests` |
+| F-08 | System pokazuje maturę główną 2026 PP jako 33 zadania, 37 jednostek postępu i 50 punktów oraz zachowuje 35 zadań matury poprawkowej 2021. | Wysoki | Zaimplementowane | `Content/exams.json`, `Content/exam-2026-main-basic.json`, `Content/exam-2021-correction.json`, `Matura2026ContentTests` |
+| F-09 | System umożliwia wybór arkusza, losowanie tylko z wybranego arkusza oraz agregację obu arkuszy według 17 tematów. | Wysoki | Zaimplementowane | `MaturaView`, `TaskTopicsView`, `ContentRepository`, `Matura2026UiTests` |
+| F-10 | System sprawdza odpowiedzi A-D oraz złożone tabele P/F lub zadania wielopolowe i zapisuje postęp po poprawnej odpowiedzi. | Wysoki | Zaimplementowane | `ExerciseView`, `CompoundAnswerEvaluator`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` |
 | F-11 | System ujawnia pełne rozwiązania zadań otwartych i zapisuje postęp dopiero po świadomym ujawnieniu. | Wysoki | Zaimplementowane | `ExerciseView`, `ExerciseAndRoutingCoverageTests`, `MathCourse2023ContentTests` |
 | F-12 | System udostępnia podpowiedzi krokowe dla zadań. | Wysoki | Zaimplementowane | `ExerciseView`, `ContentInventoryTests` |
 | F-13 | System przechowuje brudnopis osobno dla profilu i zadania podczas całej sesji aplikacji. | Średni | Zaimplementowane | `ExerciseScratchpadSession`, `ExerciseView`, `Issue5CalculatorPipTests` |
@@ -101,7 +102,7 @@ Poza bieżącym zakresem pozostają:
 | F-21 | Opublikowany plik wykonywalny obsługuje `--release-smoke-test --data-directory <katalog>` bez otwierania UI i bez dostępu do prawdziwych danych użytkownika. | Wysoki | Zaimplementowane | `ReleaseSmokeTest`, `ReleaseRuntimeTests` |
 | F-22 | System pozwala wylosować zadanie z całego arkusza albo z aktywnego tematu, zachowując kontekst poprzedniego i następnego zadania. | Średni | Zaimplementowane | `ExerciseRandomizer`, `MaturaView`, `TaskTopicsView`, `ExerciseRandomizerTests` |
 | F-23 | System sprawdza odpowiedzi liczbowe bezpiecznym parserem, akceptuje przecinek i kropkę oraz stosuje tolerancję bezwzględną i względną `1e-9`. | Wysoki | Zaimplementowane | `NumericAnswerEvaluator`, `ExpressionCalculator`, `MathCourse2023ContentTests` |
-| F-24 | Profil pokazuje osobno postęp arkusza `x/35`, podstawy `x/219` i części rozszerzonej `x/138` bez zmiany schematu SQLite. | Wysoki | Zaimplementowane | `ProfileView`, `AccountService`, `MathCourse2023ContentTests` |
+| F-24 | Profil pokazuje osobno postęp matury 2026 PP `x/37`, matury poprawkowej 2021 `x/35`, podstawy `x/219` i części rozszerzonej `x/138` bez zmiany schematu SQLite. | Wysoki | Zaimplementowane | `ProfileView`, `AccountService`, `Matura2026UiTests`, `MathCourse2023ContentTests` |
 | F-25 | Start pokazuje sześć kafelków, a niezależne strony `Matura` i `Zadania` rozdzielają pełny arkusz, 17 tematów, losowanie i placeholdery z właściwym kontekstem powrotu. | Wysoki | Zaimplementowane | `HomeView`, `MaturaView`, `TaskTopicsView`, `Issue4NavigationTests` |
 | F-26 | System udostępnia pojedynczy kalkulator Picture in Picture i przenosi tę samą sesję bez utraty wyrażenia między oknem nad Abiturią, oknem zawsze na wierzchu i panelem aplikacji. Wybrany tryb jest zapisywany osobno dla profilu. | Wysoki | Zaimplementowane | `CalculatorPipController`, `OptionsView`, migracja `202607310001_AddProfilePipPreference`, `Issue5CalculatorPipTests` |
 | F-27 | Każdy poprawny wynik kalkulatora ogólnego trafia dokładnie do schowka systemowego, a brudnopis i odpowiedź liczbowa obsługują `Ctrl+V` lub `Cmd+V` oraz menu `Wklej` w miejscu kursora albo zaznaczenia. | Wysoki | Zaimplementowane | `CalculatorClipboardCoordinator`, `TextBoxClipboardBehavior`, `Issue5CalculatorPipTests` |
@@ -131,7 +132,7 @@ Poza bieżącym zakresem pozostają:
 | NF-19 | Login, Start i kalkulator ogólny zmieniają strukturę układu odpowiednio przy szerokościach `860`, `780` i `900`, bez utraty logicznej kolejności kontrolek. | Wysoki | Zaimplementowane | `AdaptiveLayout`, testy breakpointów Avalonia Headless |
 | NF-20 | Dialogi aplikacji są skalowalne, mają bezpieczne granice wymiarów i przewijanie dla treści wykraczającej poza obszar klienta. | Wysoki | Zaimplementowane | `AdaptiveLayout.CreateDialog`, test właściwości dialogu |
 | NF-21 | Wszystkie kryteria WCAG 2.2 A/AA są przeglądane i śledzone, z jawnym rozdzieleniem dowodów automatycznych, kontroli manualnych i kryteriów nieodpowiednich dla aplikacji desktopowej. | Wysoki | Audyt wykonany, kontrole manualne pozostają jawne | `docs/ACCESSIBILITY_WCAG_AUDIT.md`, `AccessibilityRegressionTests`, `Discussion49StyleRegressionTests` |
-| NF-22 | Aktywne treści używają dokładnie 57 skalowalnych diagramów z opisami alternatywnymi i nie ładują rastrów; `img/icon.ico` pozostaje jedynym statycznym wyjątkiem jako ikona aplikacji. | Wysoki | Zaimplementowane | `Content/diagrams.json`, `DiagramView`, `DiagramCatalogTests`, `LegacyImageArchiveTests` |
+| NF-22 | Aktywne treści używają dokładnie 64 skalowalnych diagramów z opisami alternatywnymi i nie ładują rastrów; `img/icon.ico` pozostaje jedynym statycznym wyjątkiem jako ikona aplikacji. | Wysoki | Zaimplementowane | `Content/diagrams.json`, `DiagramView`, `DiagramCatalogTests`, `LegacyImageArchiveTests` |
 
 ## 6. Opis użytkowników systemu
 
@@ -154,7 +155,7 @@ System nie zakłada kont administratora, ról sieciowych ani synchronizacji wiel
 | Dane lokalne | SQLite, encje, migracje i import legacy | `AppDbContext.cs`, `InitialLocalAccounts.cs` |
 | Treści edukacyjne | Ładowanie i renderowanie JSON, wzorów i obrazów | `ContentRepository.cs`, `RichContentView.cs`, `UiFactory.cs` |
 | Tablice i działy | Lista wzorów oraz hierarchia grupa - obszar - lekcja - ćwiczenie z filtrem poziomu | `ContentViews.cs`, `Content/formulas.json`, `Content/chapters.json`, `Content/course-exercises.json` |
-| Zadania maturalne | Lista zadań, tematy, podpowiedzi, odpowiedzi, postęp | `ExamViews.cs`, `Content/exam-2021-correction.json` |
+| Zadania maturalne | Indeks arkuszy, lista zadań, tematy, odpowiedzi proste i złożone, rozwiązania, punktacja oraz postęp | `ExamViews.cs`, `Content/exams.json`, `Content/exam-2026-main-basic.json`, `Content/exam-2021-correction.json` |
 | Kalkulator kwadratowy | Delta, miejsca zerowe, wierzchołek, postacie funkcji | `CalculatorView.cs`, `QuadraticSolver.cs` |
 | Kalkulator ogólny | Parser wyrażeń, historia, `Ans`, wejście ekranowe | `GeneralCalculatorView.cs`, `ExpressionCalculator.cs`, `CalculatorSession.cs`, `CalculatorInputState.cs` |
 | Dokumentacja i jakość | Architektura, wymagania, roadmapa, Sonar, testy | `docs`, `tests/Abituria.Tests`, `.github/workflows` |
@@ -223,9 +224,9 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 4. `dotnet format whitespace Abituria.sln --verify-no-changes --no-restore` nie zgłasza zmian.
 5. `git diff --check` nie zgłasza błędów.
 6. SonarQube Cloud nie raportuje otwartych problemów po analizie aktualnego commita.
-7. Inwentarz treści potwierdza 18 tablic, kompletne odwzorowanie 17 sekcji CKE, 91 kątów w tabeli trygonometrycznej, 4 grupy i 13 obszarów kursu, kontrakt `119/238/357`, 17 tematów oraz 35 zadań arkusza.
-8. Wszystkie identyfikatory diagramów wskazane przez treści istnieją, są używane i mają niepuste opisy alternatywne.
-9. Każde zadanie ma kompletną umowę odpowiedzi: opcje i klucz, oczekiwany wynik z tolerancją albo pełne rozwiązanie ujawniane na żądanie.
+7. Inwentarz treści potwierdza 18 tablic, kompletne odwzorowanie 17 sekcji CKE, 91 kątów w tabeli trygonometrycznej, 4 grupy i 13 obszarów kursu, kontrakt `119/238/357`, 17 tematów oraz arkusze `33/37/50` i `35/35/45`.
+8. Wszystkie 64 identyfikatory diagramów wskazane przez treści istnieją, są używane i mają niepuste opisy alternatywne; siedem figur matury 2026 ma stronę i źródło.
+9. Każde zadanie ma kompletną umowę odpowiedzi: opcje i klucz, oczekiwany wynik z tolerancją, części odpowiedzi złożonej albo pełne rozwiązanie ujawniane na żądanie.
 10. Kalkulator ogólny przechodzi regresje dla issues #1-#9 oraz powiązanych dyskusji.
 11. Widoki architektury nie używają WPF `Page`, `Frame`, `NavigationWindow` ani nie otwierają nieograniczonych niemodalnych okien.
 12. Dokumenty `README.md`, `docs/BUSINESS_ANALYSIS.md`, `docs/ARCHITECTURE.md`, `docs/REQUIREMENTS.md`, `docs/ACCESSIBILITY_WCAG_AUDIT.md`, `docs/MIGRATION_INVENTORY.md`, `docs/ROADMAP.md` i `docs/SONARQUBE.md` są dostępne z repozytorium.
@@ -248,9 +249,10 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 29. Testy breakpointów potwierdzają zmianę Login przy `860`, Start przy `780` i kalkulatora ogólnego przy `900`, a główne okno zachowuje minimum `720x520`.
 30. Test wpływu stylowania na renderowanie i nawigację mieści się w zapisanym budżecie czasu i pamięci oraz przechodzi dla wariantu jasnego, ciemnego i wysokiego kontrastu.
 31. `ACCESSIBILITY_WCAG_AUDIT.md` zawiera wszystkie 55 obowiązujących kryteriów A/AA WCAG 2.2, nie przedstawia testów headless jako certyfikatu i jawnie wskazuje kontrole wymagające technologii asystującej lub użytkownika.
-32. Kryteria Issue #4 wymagają sześciu kafelków, osobnych tras `Matura` i `Zadania`, zachowania 35 identyfikatorów arkusza i istniejącego postępu, dokładnie 57 używanych diagramów, 75 zgodnych sum archiwum oraz braku aktywnych PNG/JPG, `Bitmap`, `Image` i `AssetImage` poza ikoną `img/icon.ico` używaną tylko jako `ApplicationIcon`.
+32. Kryteria Issue #4 wymagają sześciu kafelków, osobnych tras `Matura` i `Zadania`, zachowania 35 identyfikatorów arkusza i istniejącego postępu, wyłącznie używanych diagramów, 75 zgodnych sum archiwum oraz braku aktywnych PNG/JPG, `Bitmap`, `Image` i `AssetImage` poza ikoną `img/icon.ico` używaną tylko jako `ApplicationIcon`.
 33. Kryteria Issue #5 wymagają pojedynczego PiP w trzech trybach, zachowania sesji przy zmianie hosta, ustawienia per profil, dokładnego i uporządkowanego kopiowania `DisplayValue`, wklejania w brudnopisie i odpowiedzi liczbowej oraz izolacji brudnopisu między profilami i zadaniami.
 34. Kryteria Issue #6 wymagają własnego paska bez dekoracji systemowych, historycznej kolejności `🍓` zamknij, `🍋` maksymalizuj lub przywróć, `🍏` minimalizuj po lewej, wyśrodkowanej marki `🍀 Abituria`, motywu po prawej, fontu Mulish oraz tooltipów i nazw automatyzacji wszystkich kontrolek.
+35. Kryteria Issues #7-#9 wymagają źródeł i SHA-256 matury CKE 2026, kontraktu `33/37/50`, zachowania `mp21-*`, dwóch oddzielnych liczników postępu, odpowiedzi `compound`, 64 diagramów, bieżącego odnośnika `haribo841/Abituria#9` oraz proweniencji zablokowanej do osobistej deklaracji użytkownika.
 
 ## Macierz zgodności wymagań z implementacją
 
@@ -277,11 +279,11 @@ Lokalna implementacja obejmuje pełny kontrakt `119/238/357`, filtr poziomu, ćw
 
 ## Status issue #36
 
-Repozytorium zawiera implementację procesu przygotowania wersji `0.9.0-beta.1`: jedno źródło wersji, .NET 10 LTS, lockfile, audyt, paczki portable dla trzech systemów, diagnostyczny smoke test, ekran "O programie", dokumentację, sumy, SBOM i atestacje. Zakończenie techniczne nie jest równoznaczne z publicznym wydaniem. Deklaracja praw jest zapisana w `ASSET_RIGHTS_DECLARATION.md`, dowody przypisano do grup w `Content/provenance.json`, manifest ma `releaseEligible=true`, a brama proweniencji przeszła 19 lipca 2026 r. Issue #36 nadal można zamknąć dopiero po utworzeniu tagu, wykonaniu workflow, publicznym prerelease, weryfikacji Pages i komentarzu z linkami oraz checklistą.
+Repozytorium zawiera implementację procesu przygotowania wersji `0.9.0-beta.1`: jedno źródło wersji, .NET 10 LTS, lockfile, audyt, paczki portable dla trzech systemów, diagnostyczny smoke test, ekran "O programie", dokumentację, sumy, SBOM i atestacje. Zakończenie techniczne nie jest równoznaczne z publicznym wydaniem. Po dodaniu matury CKE 2026 manifest ma `releaseEligible=false`; wymagane jest osobiste rozszerzenie deklaracji, a następnie ponowne przejście bramy proweniencji. Issue #36 nadal można zamknąć dopiero po odblokowaniu praw, utworzeniu tagu, wykonaniu workflow, publicznym prerelease, weryfikacji Pages i komentarzu z linkami oraz checklistą.
 
-## Status issue #38
+## Status Issue #9
 
-Historyczne issue #38 wymagało analizy biznesowej obejmującej cele, użytkowników, model udostępniania, zakres, harmonogram, licencję, metodykę wymagań i architekturę. Aktywny dokument [BUSINESS_ANALYSIS.md](BUSINESS_ANALYSIS.md) zastępuje historyczną checklistę i odsyła do weryfikowalnych wymagań, testów oraz bramy pochodzenia zasobów. `releaseEligible=true` i proweniencja jest zatwierdzona, ale dokument nie deklaruje publicznego wydania, dopóki tag, workflow i GitHub Release nie zostaną rzeczywiście wykonane.
+Bieżące [haribo841/Abituria#9](https://github.com/haribo841/Abituria/issues/9) wymaga utrzymania kompletnej analizy biznesowej obejmującej cele, użytkowników, model udostępniania, zakres, harmonogram, licencję, metodykę wymagań i architekturę. Aktywny dokument [BUSINESS_ANALYSIS.md](BUSINESS_ANALYSIS.md) zawiera weryfikowalne wymagania, testy i bramę pochodzenia zasobów. Historyczny kontekst pozostaje wyłącznie pod pełnym adresem [Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski#38](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38), bez zmian w starym repozytorium. `releaseEligible=false` pozostaje prawidłowym stanem do czasu osobistego rozszerzenia deklaracji dla matury 2026.
 
 ## Status issue #43
 

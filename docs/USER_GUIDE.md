@@ -12,8 +12,8 @@ Górna nawigacja po zalogowaniu zawiera:
 
 - **Start** - skróty do głównych funkcji;
 - **Wzory** - tablice matematyczne;
-- **Matura** - pełny arkusz poprawkowy 2021 i archiwalne placeholdery;
-- **Zadania** - zadania według 17 tematów;
+- **Matura** - wybór pełnej matury głównej 2026 PP albo arkusza poprawkowego 2021 oraz archiwalne placeholdery;
+- **Zadania** - zadania z obu aktywnych arkuszy pogrupowane według 17 tematów;
 - **Działy** - materiały edukacyjne;
 - **Kalkulator** - funkcja kwadratowa i kalkulator ogólny;
 - **Opcje** - sposób wyświetlania kalkulatora Picture in Picture;
@@ -102,18 +102,29 @@ Nawigacja prowadzi kolejno przez obszar, lekcję i ćwiczenie. Przyciski poprzed
 
 Dokładne wymagania pochodzą z aktu urzędowego. Przykłady, ćwiczenia, rozwiązania i diagramy są autorskie i przypisane Adamowi Kubisiowi. Zadania ani rozwiązania z informatorów CKE nie zostały przepisane. Źródła, sumy SHA-256 i pełną macierz opisuje [pokrycie kursu matematyki](MATH_COURSE_2023_COVERAGE.md).
 
-## Zadania
+## Matura i Zadania
 
-Strona „Zadania” pozwala przejść do całego arkusza matury poprawkowej 2021 albo wybrać jeden z 17 tematów. Lista oznacza ukończone zadania znakiem wyboru. Przycisk „Losuj zadanie z tego arkusza” wybiera jedno zadanie z całej puli, a przycisk pod wybranym tematem losuje wyłącznie z tego tematu. Po losowaniu strzałki poprzedniego i następnego zadania pozostają w odpowiedniej puli.
+Strona „Matura” pokazuje najpierw maturę główną 2026 na poziomie podstawowym, a następnie arkusz poprawkowy 2021. Wybierz arkusz, aby zobaczyć jego pełną listę. Losowanie w tym widoku korzysta wyłącznie z aktualnie wybranego arkusza.
 
-### Zadania 1-28
+Strona „Zadania” agreguje oba aktywne arkusze według 17 tematów. Każdy wpis na liście pokazuje źródłowy arkusz. Losowanie tematyczne nie wychodzi poza wybrany temat, ale może zwrócić zadanie z 2026 albo 2021. Strzałki poprzedniego i następnego zadania pozostają w puli wynikającej z drogi wejścia, a przycisk powrotu prowadzi odpowiednio do „Matury” lub „Zadań”.
+
+Lista oznacza ukończone zadania znakiem wyboru. Matura 2026 ma 33 oficjalnie numerowane zadania podzielone na 37 osobno ocenianych części i łącznie 50 punktów. Szczegóły źródeł i liczników zawiera [macierz matury 2026](MATURA_2026_COVERAGE.md).
+
+### Tryby odpowiedzi
+
+- W zadaniu pojedynczego wyboru wskaż jedną odpowiedź i kliknij „Sprawdź odpowiedź”.
+- W zadaniu liczbowym wpisz liczbę albo proste wyrażenie. Możesz użyć przecinka lub kropki dziesiętnej.
+- W zadaniu złożonym uzupełnij wszystkie pola lub wiersze P/F, a następnie kliknij „Sprawdź wszystkie odpowiedzi”. Ukończenie następuje dopiero po poprawnym wypełnieniu całego zestawu.
+- W dowodzie albo odpowiedzi symbolicznej rozwiąż zadanie samodzielnie i świadomie ujawnij pełne rozwiązanie wraz z kryteriami punktowania.
+
+### Arkusz poprawkowy 2021: zadania 1-28
 
 1. Wybierz odpowiedź A-D.
 2. Kliknij „Sprawdź odpowiedź”.
 3. Poprawna odpowiedź zapisuje zadanie jako ukończone.
 4. Przy błędnej odpowiedzi możesz spróbować ponownie lub odsłaniać podpowiedzi.
 
-### Zadania 29-35
+### Arkusz poprawkowy 2021: zadania 29-35
 
 Rozwiązuj zadanie samodzielnie, korzystaj z kolejnych podpowiedzi i kliknij „Pokaż odpowiedź”, gdy chcesz porównać rozwiązanie. Ujawnienie odpowiedzi oznacza zadanie jako ukończone.
 
@@ -123,7 +134,7 @@ Brudnopis jest przechowywany osobno dla aktywnego profilu i zadania do czasu zam
 
 Przycisk „Otwórz kalkulator PiP” obok nagłówka brudnopisu otwiera kompaktowy kalkulator bez opuszczania zadania. Przyciski strzałek przechodzą do poprzedniego i następnego zadania w aktualnym kontekście, czyli w całym arkuszu albo w wybranym temacie.
 
-Strona „Profil” pokazuje osobno postęp arkusza `x/35`, podstawy `x/219` oraz części rozszerzonej `x/138`. Postęp jest lokalny i oddzielny dla każdego profilu.
+Strona „Profil” pokazuje osobno `Matura maj 2026 PP: x/37`, `Matura poprawkowa 2021: x/35`, podstawę `x/219` oraz część rozszerzoną `x/138`. Postęp jest lokalny i oddzielny dla każdego profilu. Nowe liczniki używają istniejącego zapisu identyfikatorów ukończonych zadań, więc aktualizacja nie zmienia schematu bazy i nie usuwa wcześniejszego postępu `mp21-*`.
 
 ## Kalkulator funkcji kwadratowej
 

@@ -4,6 +4,7 @@
     {
       "id": "formula-w9a",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Układ współrzędnych z odcinkiem łączącym punkty A i B.",
       "width": 1000,
       "height": 650,
@@ -135,6 +136,7 @@
     {
       "id": "formula-w9b",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Prosta y równa się ax plus b oraz kąt nachylenia alfa.",
       "width": 1000,
       "height": 650,
@@ -231,6 +233,7 @@
     {
       "id": "formula-w10e",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Trójkąt z bokami a, b, c i wysokością h.",
       "width": 1000,
       "height": 650,
@@ -357,6 +360,7 @@
     {
       "id": "formula-w10f",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Trójkąt równoramienny z opuszczoną wysokością.",
       "width": 1000,
       "height": 650,
@@ -483,6 +487,7 @@
     {
       "id": "formula-w10g",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Dwie proste równoległe przecięte sieczną.",
       "width": 1000,
       "height": 650,
@@ -552,6 +557,7 @@
     {
       "id": "formula-w10a",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Dwa trójkąty używane do porównania cech przystawania.",
       "width": 1000,
       "height": 650,
@@ -647,6 +653,7 @@
     {
       "id": "formula-w10b",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Dwa odpowiadające sobie trójkąty.",
       "width": 1000,
       "height": 650,
@@ -742,6 +749,7 @@
     {
       "id": "formula-w10c",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Para trójkątów o odpowiadających bokach i kątach.",
       "width": 1000,
       "height": 650,
@@ -837,6 +845,7 @@
     {
       "id": "formula-w10d",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Trójkąt ABC z oznaczonymi bokami i kątami.",
       "width": 1000,
       "height": 650,
@@ -928,6 +937,7 @@
     {
       "id": "formula-w10h",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Konfiguracja prostych do twierdzenia Talesa.",
       "width": 1000,
       "height": 650,
@@ -1009,6 +1019,7 @@
     {
       "id": "formula-w10i",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Trapez o podstawach a i b oraz wysokości h.",
       "width": 1000,
       "height": 650,
@@ -1071,6 +1082,7 @@
     {
       "id": "formula-w10m",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Koło o środku O i promieniu r.",
       "width": 1000,
       "height": 650,
@@ -1119,6 +1131,7 @@
     {
       "id": "formula-w10n",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Wycinek koła o kącie środkowym alfa.",
       "width": 1000,
       "height": 650,
@@ -1206,6 +1219,7 @@
     {
       "id": "formula-w10o",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Kąt środkowy i kąt wpisany oparte na tym samym łuku.",
       "width": 1000,
       "height": 650,
@@ -1344,6 +1358,7 @@
     {
       "id": "formula-w10p",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Kąt między styczną i cięciwą okręgu.",
       "width": 1000,
       "height": 650,
@@ -1420,6 +1435,7 @@
     {
       "id": "formula-w10r",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Styczna do okręgu i promień poprowadzony do punktu styczności.",
       "width": 1000,
       "height": 650,
@@ -1496,6 +1512,7 @@
     {
       "id": "formula-w10s",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Dwie styczne poprowadzone z punktu P do okręgu.",
       "width": 1000,
       "height": 650,
@@ -1572,6 +1589,7 @@
     {
       "id": "formula-w10t",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Sieczna i styczna poprowadzone z punktu zewnętrznego.",
       "width": 1000,
       "height": 650,
@@ -1656,6 +1674,7 @@
     {
       "id": "formula-w10j",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Trapez z zaznaczoną wysokością.",
       "width": 1000,
       "height": 650,
@@ -1718,6 +1737,7 @@
     {
       "id": "formula-w10k",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Równoległobok z przekątnymi.",
       "width": 1000,
       "height": 650,
@@ -1800,6 +1820,7 @@
     {
       "id": "formula-w10l",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Romb z prostopadłymi przekątnymi.",
       "width": 1000,
       "height": 650,
@@ -1867,6 +1888,7 @@
     {
       "id": "formula-w10u",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Czworokąt wpisany w okrąg.",
       "width": 1000,
       "height": 650,
@@ -1952,6 +1974,7 @@
     {
       "id": "formula-w10w",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Czworokąt opisany na okręgu.",
       "width": 1000,
       "height": 650,
@@ -2029,6 +2052,7 @@
     {
       "id": "formula-w11a",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Proste k, l i m względem płaszczyzny i punktu P.",
       "width": 1000,
       "height": 650,
@@ -2123,6 +2147,7 @@
     {
       "id": "formula-w11b",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Prostopadłościan z oznaczonymi krawędziami.",
       "width": 1000,
       "height": 650,
@@ -2238,6 +2263,7 @@
     {
       "id": "formula-w11c",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Graniastosłup prosty z wysokością h.",
       "width": 1000,
       "height": 650,
@@ -2315,6 +2341,7 @@
     {
       "id": "formula-w11d",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Ostrosłup z wysokością h.",
       "width": 1000,
       "height": 650,
@@ -2417,6 +2444,7 @@
     {
       "id": "formula-w11e",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Walec o promieniu r i wysokości h.",
       "width": 1000,
       "height": 650,
@@ -2500,6 +2528,7 @@
     {
       "id": "formula-w11f",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Stożek o promieniu r, wysokości h i tworzącej l.",
       "width": 1000,
       "height": 650,
@@ -2592,6 +2621,7 @@
     {
       "id": "formula-w11g",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Kula o środku O i promieniu r.",
       "width": 1000,
       "height": 650,
@@ -2651,6 +2681,7 @@
     {
       "id": "formula-w12a",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Trójkąt prostokątny z bokami a, b, c i kątem alfa.",
       "width": 1000,
       "height": 650,
@@ -2742,6 +2773,7 @@
     {
       "id": "formula-w12b",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Punkt M w układzie współrzędnych i kąt alfa.",
       "width": 1000,
       "height": 650,
@@ -2858,6 +2890,7 @@
     {
       "id": "formula-w12c",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Wykres funkcji sinus.",
       "width": 1000,
       "height": 650,
@@ -2946,6 +2979,7 @@
     {
       "id": "formula-w12d",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Wykres funkcji cosinus.",
       "width": 1000,
       "height": 650,
@@ -3034,6 +3068,7 @@
     {
       "id": "formula-w12e",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Wykres funkcji tangens z asymptotami.",
       "width": 1000,
       "height": 650,
@@ -3138,6 +3173,7 @@
     {
       "id": "formula-w12f",
       "sourceId": "cke-formula-2023",
+      "sourcePage": 0,
       "alternativeText": "Tabela wartości funkcji trygonometrycznych dla wybranych kątów.",
       "width": 1000,
       "height": 650,
@@ -3356,6 +3392,7 @@
     {
       "id": "exam-mp21-z9",
       "sourceId": "cke-2021-correction",
+      "sourcePage": 0,
       "alternativeText": "Układ współrzędnych z prostą k nachyloną pod kątem 45 stopni.",
       "width": 1000,
       "height": 650,
@@ -3452,6 +3489,7 @@
     {
       "id": "exam-mp21-z12",
       "sourceId": "cke-2021-correction",
+      "sourcePage": 0,
       "alternativeText": "Wykres paraboli skierowanej ramionami w dół.",
       "width": 1000,
       "height": 650,
@@ -3536,6 +3574,7 @@
     {
       "id": "exam-mp21-z17",
       "sourceId": "cke-2021-correction",
+      "sourcePage": 0,
       "alternativeText": "Okrąg z czworokątem ABCD i kątem 20 stopni.",
       "width": 1000,
       "height": 650,
@@ -3674,6 +3713,7 @@
     {
       "id": "exam-mp21-z18",
       "sourceId": "cke-2021-correction",
+      "sourcePage": 0,
       "alternativeText": "Okrąg wpisany w trójkąt ABC i kąt środkowy 100 stopni.",
       "width": 1000,
       "height": 650,
@@ -3804,6 +3844,7 @@
     {
       "id": "exam-mp21-z19",
       "sourceId": "cke-2021-correction",
+      "sourcePage": 0,
       "alternativeText": "Okrąg z przecinającymi się cięciwami oraz kątami 55 i 140 stopni.",
       "width": 1000,
       "height": 650,
@@ -3892,6 +3933,7 @@
     {
       "id": "exam-mp21-z20",
       "sourceId": "cke-2021-correction",
+      "sourcePage": 0,
       "alternativeText": "Kwadrat ABCD z odcinkami wewnętrznymi.",
       "width": 1000,
       "height": 650,
@@ -3974,6 +4016,7 @@
     {
       "id": "exam-mp21-z24",
       "sourceId": "cke-2021-correction",
+      "sourcePage": 0,
       "alternativeText": "Graniastosłup o krawędziach długości 2.",
       "width": 1000,
       "height": 650,
@@ -4075,6 +4118,7 @@
     {
       "id": "exam-mp21-z32",
       "sourceId": "cke-2021-correction",
+      "sourcePage": 0,
       "alternativeText": "Trójkąt z podstawą podzieloną odcinkiem długości 6 i kątami 60 oraz 30 stopni.",
       "width": 1000,
       "height": 650,
@@ -4225,6 +4269,7 @@
     {
       "id": "exam-mp21-z33",
       "sourceId": "cke-2021-correction",
+      "sourcePage": 0,
       "alternativeText": "Trapez ABCD z przekątnymi przecinającymi się w punkcie S.",
       "width": 1000,
       "height": 650,
@@ -4317,8 +4362,1744 @@
       ]
     },
     {
+      "id": "exam-mm26-z12",
+      "sourceId": "cke-2026-main-basic",
+      "sourcePage": 12,
+      "alternativeText": "Wykres funkcji f złożony z odcinka od domkniętego punktu minus 4, minus 2 do domkniętego punktu 2, 4 oraz odcinka od otwartego punktu 2, 3 do otwartego punktu 5, 0.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 100.0,
+          "y": 390.0,
+          "x2": 920.0,
+          "y2": 390.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 570.0,
+          "x2": 500.0,
+          "y2": 70.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 925.0,
+          "y": 382.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 23.0
+        },
+        {
+          "type": "text",
+          "x": 515.0,
+          "y": 65.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 23.0
+        },
+        {
+          "type": "line",
+          "x": 220.0,
+          "y": 390.0,
+          "x2": 220.0,
+          "y2": 405.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 360.0,
+          "y": 390.0,
+          "x2": 360.0,
+          "y2": 405.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 640.0,
+          "y": 390.0,
+          "x2": 640.0,
+          "y2": 405.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 780.0,
+          "y": 390.0,
+          "x2": 780.0,
+          "y2": 405.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 485.0,
+          "y": 510.0,
+          "x2": 500.0,
+          "y2": 510.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 485.0,
+          "y": 270.0,
+          "x2": 500.0,
+          "y2": 270.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 485.0,
+          "y": 150.0,
+          "x2": 500.0,
+          "y2": 150.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 202.0,
+          "y": 430.0,
+          "text": "-4",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 342.0,
+          "y": 430.0,
+          "text": "-2",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 632.0,
+          "y": 430.0,
+          "text": "2",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 772.0,
+          "y": 430.0,
+          "text": "4",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 455.0,
+          "y": 515.0,
+          "text": "-1",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 275.0,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 155.0,
+          "text": "2",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "line",
+          "x": 220.0,
+          "y": 510.0,
+          "x2": 640.0,
+          "y2": 150.0,
+          "stroke": "accent",
+          "strokeThickness": 5.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "ellipse",
+          "x": 220.0,
+          "y": 510.0,
+          "radiusX": 8.0,
+          "radiusY": 8.0,
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 640.0,
+          "y": 150.0,
+          "radiusX": 8.0,
+          "radiusY": 8.0,
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 640.0,
+          "y": 210.0,
+          "x2": 850.0,
+          "y2": 390.0,
+          "stroke": "danger",
+          "strokeThickness": 5.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "ellipse",
+          "x": 640.0,
+          "y": 210.0,
+          "radiusX": 10.0,
+          "radiusY": 10.0,
+          "stroke": "danger",
+          "fill": "surface",
+          "strokeThickness": 3.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 850.0,
+          "y": 390.0,
+          "radiusX": 10.0,
+          "radiusY": 10.0,
+          "stroke": "danger",
+          "fill": "surface",
+          "strokeThickness": 3.0,
+          "dashed": false
+        }
+      ]
+    },
+    {
+      "id": "exam-mm26-z13",
+      "sourceId": "cke-2026-main-basic",
+      "sourcePage": 14,
+      "alternativeText": "Układ współrzędnych z malejącą prostą przecinającą oś x w punkcie minus 2, 0 i oś y w punkcie 0, minus 3 oraz z zaznaczonym kątem alfa.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 105.0,
+          "y": 390.0,
+          "x2": 920.0,
+          "y2": 390.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 570.0,
+          "x2": 500.0,
+          "y2": 65.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 925.0,
+          "y": 382.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 23.0
+        },
+        {
+          "type": "text",
+          "x": 515.0,
+          "y": 60.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 23.0
+        },
+        {
+          "type": "line",
+          "x": 220.0,
+          "y": 390.0,
+          "x2": 220.0,
+          "y2": 405.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 360.0,
+          "y": 390.0,
+          "x2": 360.0,
+          "y2": 405.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 640.0,
+          "y": 390.0,
+          "x2": 640.0,
+          "y2": 405.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 780.0,
+          "y": 390.0,
+          "x2": 780.0,
+          "y2": 405.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 485.0,
+          "y": 510.0,
+          "x2": 500.0,
+          "y2": 510.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 485.0,
+          "y": 270.0,
+          "x2": 500.0,
+          "y2": 270.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 485.0,
+          "y": 150.0,
+          "x2": 500.0,
+          "y2": 150.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 202.0,
+          "y": 430.0,
+          "text": "-2",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 350.0,
+          "y": 430.0,
+          "text": "-1",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 635.0,
+          "y": 430.0,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 775.0,
+          "y": 430.0,
+          "text": "2",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 455.0,
+          "y": 515.0,
+          "text": "-4",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 455.0,
+          "y": 275.0,
+          "text": "-2",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 155.0,
+          "text": "2",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "line",
+          "x": 220.0,
+          "y": 210.0,
+          "x2": 516.0,
+          "y2": 590.0,
+          "stroke": "accent",
+          "strokeThickness": 5.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "arc",
+          "x": 360.0,
+          "y": 390.0,
+          "radiusX": 105.0,
+          "radiusY": 105.0,
+          "startAngle": -128.0,
+          "sweepAngle": 128.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 395.0,
+          "y": 320.0,
+          "text": "α",
+          "stroke": "danger",
+          "fontSize": 25.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm26-z18",
+      "sourceId": "cke-2026-main-basic",
+      "sourcePage": 20,
+      "alternativeText": "Trójkąt prostokątny ABC z kątem prostym przy B, bokiem BC długości 2, przeciwprostokątną AC długości 2 pierwiastki z 10 i kątem gamma przy C.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            170.0,
+            500.0,
+            790.0,
+            500.0,
+            790.0,
+            145.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 5.0,
+          "dashed": false
+        },
+        {
+          "type": "polyline",
+          "points": [
+            755.0,
+            500.0,
+            755.0,
+            465.0,
+            790.0,
+            465.0
+          ],
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "arc",
+          "x": 790.0,
+          "y": 145.0,
+          "radiusX": 88.0,
+          "radiusY": 88.0,
+          "startAngle": 90.0,
+          "sweepAngle": 61.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 135.0,
+          "y": 510.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 805.0,
+          "y": 510.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 805.0,
+          "y": 115.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 765.0,
+          "y": 245.0,
+          "text": "γ",
+          "stroke": "accent",
+          "fontSize": 26.0
+        },
+        {
+          "type": "text",
+          "x": 810.0,
+          "y": 330.0,
+          "text": "2",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 440.0,
+          "y": 280.0,
+          "text": "2√10",
+          "stroke": "muted",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm26-z19",
+      "sourceId": "cke-2026-main-basic",
+      "sourcePage": 21,
+      "alternativeText": "Okrąg z punktami A, B, C i D na okręgu, środkiem O, kątem CDA równym 50 stopni i kątem COB równym 30 stopni.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 230.0,
+          "radiusY": 230.0,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 95.0,
+          "x2": 300.0,
+          "y2": 445.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 95.0,
+          "x2": 690.0,
+          "y2": 455.0,
+          "stroke": "accent",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 300.0,
+          "y2": 445.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 545.0,
+          "y2": 550.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 690.0,
+          "y2": 455.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "arc",
+          "x": 500.0,
+          "y": 95.0,
+          "radiusX": 72.0,
+          "radiusY": 72.0,
+          "startAngle": 61.0,
+          "sweepAngle": 58.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "arc",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 82.0,
+          "radiusY": 82.0,
+          "startAngle": 34.0,
+          "sweepAngle": 30.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 490.0,
+          "y": 55.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 270.0,
+          "y": 470.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 535.0,
+          "y": 585.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 705.0,
+          "y": 470.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 475.0,
+          "y": 315.0,
+          "text": "O",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 170.0,
+          "text": "50°",
+          "stroke": "danger",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 555.0,
+          "y": 390.0,
+          "text": "30°",
+          "stroke": "danger",
+          "fontSize": 22.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm26-z20",
+      "sourceId": "cke-2026-main-basic",
+      "sourcePage": 22,
+      "alternativeText": "Równoległe proste k i l przecięte prostymi m i n w punktach A, B, C i D; odcinki AC i BD przecinają się w O, a OA, OB i OC mają długości 12, 6 i 8.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 330.0,
+          "y": 65.0,
+          "x2": 255.0,
+          "y2": 585.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 750.0,
+          "y": 65.0,
+          "x2": 675.0,
+          "y2": 585.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 125.0,
+          "y": 560.0,
+          "x2": 870.0,
+          "y2": 95.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 130.0,
+          "y": 100.0,
+          "x2": 890.0,
+          "y2": 550.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "ellipse",
+          "x": 280.0,
+          "y": 465.0,
+          "radiusX": 6.0,
+          "radiusY": 6.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 700.0,
+          "y": 205.0,
+          "radiusX": 6.0,
+          "radiusY": 6.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 300.0,
+          "y": 200.0,
+          "radiusX": 6.0,
+          "radiusY": 6.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 690.0,
+          "y": 430.0,
+          "radiusX": 6.0,
+          "radiusY": 6.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 505.0,
+          "y": 325.0,
+          "radiusX": 6.0,
+          "radiusY": 6.0,
+          "stroke": "danger",
+          "fill": "danger",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 245.0,
+          "y": 500.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 710.0,
+          "y": 195.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 265.0,
+          "y": 175.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 705.0,
+          "y": 465.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 515.0,
+          "y": 305.0,
+          "text": "O",
+          "stroke": "danger",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 365.0,
+          "y": 410.0,
+          "text": "12",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 590.0,
+          "y": 260.0,
+          "text": "8",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 600.0,
+          "y": 390.0,
+          "text": "6",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 305.0,
+          "y": 55.0,
+          "text": "k",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 730.0,
+          "y": 55.0,
+          "text": "l",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 115.0,
+          "y": 585.0,
+          "text": "m",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 870.0,
+          "y": 575.0,
+          "text": "n",
+          "stroke": "muted",
+          "fontSize": 22.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm26-z21",
+      "sourceId": "cke-2026-main-basic",
+      "sourcePage": 23,
+      "alternativeText": "Trójkąt KLM z punktem N na boku KL i dwusieczną MN kąta przy wierzchołku M; boki MK i ML opisano jako a i b.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            150.0,
+            500.0,
+            855.0,
+            500.0,
+            540.0,
+            105.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 5.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 150.0,
+          "y": 500.0,
+          "x2": 655.0,
+          "y2": 500.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 540.0,
+          "y": 105.0,
+          "x2": 655.0,
+          "y2": 500.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "arc",
+          "x": 540.0,
+          "y": 105.0,
+          "radiusX": 88.0,
+          "radiusY": 88.0,
+          "startAngle": 51.0,
+          "sweepAngle": 24.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "arc",
+          "x": 540.0,
+          "y": 105.0,
+          "radiusX": 105.0,
+          "radiusY": 105.0,
+          "startAngle": 75.0,
+          "sweepAngle": 24.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 115.0,
+          "y": 510.0,
+          "text": "K",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 870.0,
+          "y": 510.0,
+          "text": "L",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 530.0,
+          "y": 70.0,
+          "text": "M",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 645.0,
+          "y": 535.0,
+          "text": "N",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 330.0,
+          "y": 300.0,
+          "text": "a",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 720.0,
+          "y": 300.0,
+          "text": "b",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 575.0,
+          "y": 205.0,
+          "text": "α",
+          "stroke": "danger",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 535.0,
+          "y": 220.0,
+          "text": "α",
+          "stroke": "danger",
+          "fontSize": 22.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm26-z31",
+      "sourceId": "cke-2026-main-basic",
+      "sourcePage": 30,
+      "alternativeText": "Dwa wykresy słupkowe przedstawiające liczby ocen od 1 do 6 w klasach IV A i IV B.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "text",
+          "x": 190.0,
+          "y": 55.0,
+          "text": "Klasa IV A",
+          "stroke": "primary",
+          "fontSize": 26.0
+        },
+        {
+          "type": "text",
+          "x": 670.0,
+          "y": 55.0,
+          "text": "Klasa IV B",
+          "stroke": "primary",
+          "fontSize": 26.0
+        },
+        {
+          "type": "line",
+          "x": 90.0,
+          "y": 510.0,
+          "x2": 455.0,
+          "y2": 510.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 90.0,
+          "y": 510.0,
+          "x2": 90.0,
+          "y2": 100.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 545.0,
+          "y": 510.0,
+          "x2": 910.0,
+          "y2": 510.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 545.0,
+          "y": 510.0,
+          "x2": 545.0,
+          "y2": 100.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "polygon",
+          "points": [
+            115.0,
+            510.0,
+            149.0,
+            510.0,
+            149.0,
+            455.0,
+            115.0,
+            455.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            570.0,
+            510.0,
+            604.0,
+            510.0,
+            604.0,
+            455.0,
+            570.0,
+            455.0
+          ],
+          "stroke": "success",
+          "fill": "success",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 123.0,
+          "y": 545.0,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 578.0,
+          "y": 545.0,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "polygon",
+          "points": [
+            168.0,
+            510.0,
+            202.0,
+            510.0,
+            202.0,
+            180.0,
+            168.0,
+            180.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            623.0,
+            510.0,
+            657.0,
+            510.0,
+            657.0,
+            345.0,
+            623.0,
+            345.0
+          ],
+          "stroke": "success",
+          "fill": "success",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 176.0,
+          "y": 545.0,
+          "text": "2",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 631.0,
+          "y": 545.0,
+          "text": "2",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "polygon",
+          "points": [
+            221.0,
+            510.0,
+            255.0,
+            510.0,
+            255.0,
+            345.0,
+            221.0,
+            345.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            676.0,
+            510.0,
+            710.0,
+            510.0,
+            710.0,
+            180.0,
+            676.0,
+            180.0
+          ],
+          "stroke": "success",
+          "fill": "success",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 229.0,
+          "y": 545.0,
+          "text": "3",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 684.0,
+          "y": 545.0,
+          "text": "3",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "polygon",
+          "points": [
+            274.0,
+            510.0,
+            308.0,
+            510.0,
+            308.0,
+            345.0,
+            274.0,
+            345.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            729.0,
+            510.0,
+            763.0,
+            510.0,
+            763.0,
+            180.0,
+            729.0,
+            180.0
+          ],
+          "stroke": "success",
+          "fill": "success",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 282.0,
+          "y": 545.0,
+          "text": "4",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 737.0,
+          "y": 545.0,
+          "text": "4",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "polygon",
+          "points": [
+            327.0,
+            510.0,
+            361.0,
+            510.0,
+            361.0,
+            180.0,
+            327.0,
+            180.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            782.0,
+            510.0,
+            816.0,
+            510.0,
+            816.0,
+            345.0,
+            782.0,
+            345.0
+          ],
+          "stroke": "success",
+          "fill": "success",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 335.0,
+          "y": 545.0,
+          "text": "5",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 790.0,
+          "y": 545.0,
+          "text": "5",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "polygon",
+          "points": [
+            380.0,
+            510.0,
+            414.0,
+            510.0,
+            414.0,
+            455.0,
+            380.0,
+            455.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            835.0,
+            510.0,
+            869.0,
+            510.0,
+            869.0,
+            455.0,
+            835.0,
+            455.0
+          ],
+          "stroke": "success",
+          "fill": "success",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 388.0,
+          "y": 545.0,
+          "text": "6",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 843.0,
+          "y": 545.0,
+          "text": "6",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "line",
+          "x": 82.0,
+          "y": 455.0,
+          "x2": 90.0,
+          "y2": 455.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 537.0,
+          "y": 455.0,
+          "x2": 545.0,
+          "y2": 455.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 58.0,
+          "y": 462.0,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "text",
+          "x": 513.0,
+          "y": 462.0,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "line",
+          "x": 82.0,
+          "y": 400.0,
+          "x2": 90.0,
+          "y2": 400.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 537.0,
+          "y": 400.0,
+          "x2": 545.0,
+          "y2": 400.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 58.0,
+          "y": 407.0,
+          "text": "2",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "text",
+          "x": 513.0,
+          "y": 407.0,
+          "text": "2",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "line",
+          "x": 82.0,
+          "y": 345.0,
+          "x2": 90.0,
+          "y2": 345.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 537.0,
+          "y": 345.0,
+          "x2": 545.0,
+          "y2": 345.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 58.0,
+          "y": 352.0,
+          "text": "3",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "text",
+          "x": 513.0,
+          "y": 352.0,
+          "text": "3",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "line",
+          "x": 82.0,
+          "y": 290.0,
+          "x2": 90.0,
+          "y2": 290.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 537.0,
+          "y": 290.0,
+          "x2": 545.0,
+          "y2": 290.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 58.0,
+          "y": 297.0,
+          "text": "4",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "text",
+          "x": 513.0,
+          "y": 297.0,
+          "text": "4",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "line",
+          "x": 82.0,
+          "y": 235.0,
+          "x2": 90.0,
+          "y2": 235.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 537.0,
+          "y": 235.0,
+          "x2": 545.0,
+          "y2": 235.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 58.0,
+          "y": 242.0,
+          "text": "5",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "text",
+          "x": 513.0,
+          "y": 242.0,
+          "text": "5",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "line",
+          "x": 82.0,
+          "y": 180.0,
+          "x2": 90.0,
+          "y2": 180.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 537.0,
+          "y": 180.0,
+          "x2": 545.0,
+          "y2": 180.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 58.0,
+          "y": 187.0,
+          "text": "6",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "text",
+          "x": 513.0,
+          "y": 187.0,
+          "text": "6",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "line",
+          "x": 82.0,
+          "y": 125.0,
+          "x2": 90.0,
+          "y2": 125.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 537.0,
+          "y": 125.0,
+          "x2": 545.0,
+          "y2": 125.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 58.0,
+          "y": 132.0,
+          "text": "7",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "text",
+          "x": 513.0,
+          "y": 132.0,
+          "text": "7",
+          "stroke": "muted",
+          "fontSize": 17.0
+        }
+      ]
+    },
+    {
       "id": "course-right-triangle",
       "sourceId": "adam-course",
+      "sourcePage": 0,
       "alternativeText": "Trójkąt prostokątny z przyprostokątnymi a i b, przeciwprostokątną c oraz kątem alfa.",
       "width": 1000,
       "height": 650,
@@ -4410,6 +6191,7 @@
     {
       "id": "course-circle-angles",
       "sourceId": "adam-course",
+      "sourcePage": 0,
       "alternativeText": "Okrąg z kątem środkowym AOB i kątem wpisanym ACB opartymi na tym samym łuku.",
       "width": 1000,
       "height": 650,
@@ -4548,6 +6330,7 @@
     {
       "id": "course-coordinate-vector",
       "sourceId": "adam-course",
+      "sourcePage": 0,
       "alternativeText": "Układ współrzędnych z punktami A i B oraz składowymi wektora od A do B.",
       "width": 1000,
       "height": 650,
@@ -4679,6 +6462,7 @@
     {
       "id": "course-cube-section",
       "sourceId": "adam-course",
+      "sourcePage": 0,
       "alternativeText": "Sześcian z zaznaczoną płaszczyzną przekroju przechodzącą przez trzy wierzchołki.",
       "width": 1000,
       "height": 650,
@@ -4773,6 +6557,7 @@
     {
       "id": "course-vector-1",
       "sourceId": "legacy-vectors",
+      "sourcePage": 0,
       "alternativeText": "Wektor AB z początkiem, końcem, długością, kierunkiem i zwrotem.",
       "width": 1000,
       "height": 650,
@@ -4845,6 +6630,7 @@
     {
       "id": "course-vector-2",
       "sourceId": "legacy-vectors",
+      "sourcePage": 0,
       "alternativeText": "Trzy wektory o różnych kierunkach i zwrotach.",
       "width": 1000,
       "height": 650,
@@ -4914,6 +6700,7 @@
     {
       "id": "course-vector-3",
       "sourceId": "legacy-vectors",
+      "sourcePage": 0,
       "alternativeText": "Równoległobok z wektorami AD i BC oraz AB.",
       "width": 1000,
       "height": 650,
@@ -4987,6 +6774,7 @@
     {
       "id": "course-vector-4",
       "sourceId": "legacy-vectors",
+      "sourcePage": 0,
       "alternativeText": "Wektor o składowych 3 i 4 w układzie współrzędnych.",
       "width": 1000,
       "height": 650,
@@ -5104,6 +6892,7 @@
     {
       "id": "course-vector-5",
       "sourceId": "legacy-vectors",
+      "sourcePage": 0,
       "alternativeText": "Wektor AB o współrzędnych 8 i minus 6.",
       "width": 1000,
       "height": 650,
@@ -5205,6 +6994,7 @@
     {
       "id": "course-vector-6",
       "sourceId": "legacy-vectors",
+      "sourcePage": 0,
       "alternativeText": "Dwa równe wektory przesunięte równolegle.",
       "width": 1000,
       "height": 650,
@@ -5278,6 +7068,7 @@
     {
       "id": "course-vector-7",
       "sourceId": "legacy-vectors",
+      "sourcePage": 0,
       "alternativeText": "Dodawanie wektorów v i w metodą trójkąta.",
       "width": 1000,
       "height": 650,
@@ -5347,6 +7138,7 @@
     {
       "id": "course-vector-8",
       "sourceId": "legacy-vectors",
+      "sourcePage": 0,
       "alternativeText": "Różnica wektorów v i w przedstawiona geometrycznie.",
       "width": 1000,
       "height": 650,

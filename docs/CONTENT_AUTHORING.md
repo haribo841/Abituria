@@ -5,8 +5,10 @@ Kod C# odpowiada za wczytanie, walidację i wyświetlenie treści. Długie opisy
 - `Content/formulas.json` - kuratorowana transkrypcja tablic CKE dla Formuły 2023,
 - `Content/chapters.json` - wygenerowany katalog kursu Formuły 2023 w schemacie 4,
 - `Content/course-exercises.json` - wygenerowane ćwiczenia kursowe,
-- `Content/exam-2021-correction.json` - zadania, odpowiedzi, podpowiedzi i identyfikatory diagramów w schemacie 3,
-- `Content/diagrams.json` - 57 aktywnych definicji wektorowych w schemacie 1,
+- `Content/exams.json` - indeks aktywnych arkuszy i 17 wspólnych tematów w schemacie 1,
+- `Content/exam-2026-main-basic.json` - matura główna 2026 PP w schemacie 4,
+- `Content/exam-2021-correction.json` - zgodny wstecznie arkusz poprawkowy 2021 w schemacie 3,
+- `Content/diagrams.json` - 64 aktywne definicje wektorowe w schemacie 1,
 - `Content/placeholders.json` - treść ekranów zaplanowanych lub zastąpionych,
 - `Content/roadmap.json` - opis planu rozwoju,
 - `Content/ui-copy.json` - dłuższe statyczne objaśnienia interfejsu.
@@ -23,13 +25,21 @@ pwsh -NoProfile -File tools/Sync-Issue35Content.ps1
 pwsh -NoProfile -File tools/New-MathCourseContent.ps1
 ```
 
-Skrypt wymaga dokładnie `4/13/73/46/238/357`, sprawdza unikalność i długość identyfikatorów oraz zapisuje deterministyczny wynik do `Content/chapters.json`, `Content/course-exercises.json` i `docs/MATH_COURSE_2023_COVERAGE.md`. Aktywny katalog 57 diagramów jest odtwarzany deterministycznie poleceniem:
+Skrypt wymaga dokładnie `4/13/73/46/238/357`, sprawdza unikalność i długość identyfikatorów oraz zapisuje deterministyczny wynik do `Content/chapters.json`, `Content/course-exercises.json` i `docs/MATH_COURSE_2023_COVERAGE.md`. Aktywny katalog 64 diagramów jest odtwarzany deterministycznie poleceniem:
 
 ```powershell
 pwsh -NoProfile -File tools/New-DiagramCatalog.ps1
 ```
 
 Generator zapisuje wyłącznie dane prymitywów wektorowych i nie tworzy PNG. Historyczne rastry znajdują się poza aplikacją w `docs/legacy/originals/images/`; ich mapowanie i sumy odtwarza `tools/New-LegacyImageArchiveManifest.ps1`.
+
+## Arkusze maturalne
+
+`Content/exams.json` określa kolejność, aktywność, ścieżkę pliku i wspólne tematy. Każdy aktywny arkusz musi mieć unikalny identyfikator, a każdy `LearningExercise` musi wskazywać ten sam `ExamId`, jeden z 17 tematów i globalnie unikalny identyfikator krótszy niż 80 znaków. Nie wolno zmieniać istniejących identyfikatorów `mp21-*`.
+
+Schemat 4 arkusza 2026 przechowuje formułę, poziom, czas, maksimum punktów, oficjalną liczbę zadań i liczbę jednostek postępu. `DisplayNumber` zachowuje oznaczenia takie jak `12.1`, `GroupId` łączy części jednego oficjalnego zadania, a `Points`, `Solution`, `ScoringCriteria` i `SolutionSourcePage` odtwarzają umowę oceniania. Tryb `compound` zawiera co najmniej dwie części `multipleChoice`, `numeric` lub `text`.
+
+Źródła i liczniki matury 2026 opisuje [MATURA_2026_COVERAGE.md](MATURA_2026_COVERAGE.md). Przed dodaniem lub zmianą treści źródłowej trzeba zweryfikować pliki, adresy i SHA-256, zaktualizować testy kontraktu oraz ocenić `Content/provenance.json`. Brak osobistej podstawy redystrybucji oznacza status `blocked`; nie wolno zmieniać go na `approved` na podstawie samego przejścia testów technicznych.
 
 Test end-to-end generuje katalog do pustego katalogu i wymaga semantycznej zgodności z aktywnymi plikami, więc rozbieżność seedów, generatora i aplikacji blokuje testy. Nie należy ręcznie edytować plików wygenerowanych.
 

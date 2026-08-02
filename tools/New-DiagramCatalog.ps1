@@ -351,6 +351,171 @@ function Get-VectorScene {
     }
 }
 
+function Get-Exam2026Scene {
+    param([string]$Kind)
+    switch ($Kind) {
+        'piecewise' {
+            @(
+                New-Line 100 390 920 390 'primary' 3 $false $false $true
+                New-Line 500 570 500 70 'primary' 3 $false $false $true
+                New-Text 925 382 'x' 'primary' 23
+                New-Text 515 65 'y' 'primary' 23
+                New-Line 220 390 220 405 'muted' 2
+                New-Line 360 390 360 405 'muted' 2
+                New-Line 640 390 640 405 'muted' 2
+                New-Line 780 390 780 405 'muted' 2
+                New-Line 485 510 500 510 'muted' 2
+                New-Line 485 270 500 270 'muted' 2
+                New-Line 485 150 500 150 'muted' 2
+                New-Text 202 430 '-4' 'muted' 18
+                New-Text 342 430 '-2' 'muted' 18
+                New-Text 632 430 '2' 'muted' 18
+                New-Text 772 430 '4' 'muted' 18
+                New-Text 455 515 '-1' 'muted' 18
+                New-Text 470 275 '1' 'muted' 18
+                New-Text 470 155 '2' 'muted' 18
+                New-Line 220 510 640 150 'accent' 5
+                New-Ellipse 220 510 8 8 'accent' 'accent' 2
+                New-Ellipse 640 150 8 8 'accent' 'accent' 2
+                New-Line 640 210 850 390 'danger' 5
+                New-Ellipse 640 210 10 10 'danger' 'surface' 3
+                New-Ellipse 850 390 10 10 'danger' 'surface' 3
+            )
+        }
+        'linear' {
+            @(
+                New-Line 105 390 920 390 'primary' 3 $false $false $true
+                New-Line 500 570 500 65 'primary' 3 $false $false $true
+                New-Text 925 382 'x' 'primary' 23
+                New-Text 515 60 'y' 'primary' 23
+                New-Line 220 390 220 405 'muted' 2
+                New-Line 360 390 360 405 'muted' 2
+                New-Line 640 390 640 405 'muted' 2
+                New-Line 780 390 780 405 'muted' 2
+                New-Line 485 510 500 510 'muted' 2
+                New-Line 485 270 500 270 'muted' 2
+                New-Line 485 150 500 150 'muted' 2
+                New-Text 202 430 '-2' 'muted' 18
+                New-Text 350 430 '-1' 'muted' 18
+                New-Text 635 430 '1' 'muted' 18
+                New-Text 775 430 '2' 'muted' 18
+                New-Text 455 515 '-4' 'muted' 18
+                New-Text 455 275 '-2' 'muted' 18
+                New-Text 470 155 '2' 'muted' 18
+                New-Line 220 210 516 590 'accent' 5
+                New-Arc 360 390 105 105 -128 128 'danger' 4
+                New-Text 395 320 'α' 'danger' 25
+            )
+        }
+        'right-triangle' {
+            @(
+                New-Polygon @(170,500, 790,500, 790,145) 'primary' 'none' 5
+                New-Polyline @(755,500, 755,465, 790,465) 'muted' 3
+                New-Arc 790 145 88 88 90 61 'accent' 4
+                New-Text 135 510 'A'
+                New-Text 805 510 'B'
+                New-Text 805 115 'C'
+                New-Text 765 245 'γ' 'accent' 26
+                New-Text 810 330 '2' 'muted' 24
+                New-Text 440 280 '2√10' 'muted' 24
+            )
+        }
+        'circle-angles' {
+            @(
+                New-Ellipse 500 325 230 230 'primary' 'none' 4
+                New-Line 500 95 300 445 'accent' 3
+                New-Line 500 95 690 455 'accent' 3
+                New-Line 500 325 300 445 'muted' 3
+                New-Line 500 325 545 550 'muted' 3
+                New-Line 500 325 690 455 'muted' 3
+                New-Arc 500 95 72 72 61 58 'danger' 4
+                New-Arc 500 325 82 82 34 30 'danger' 4
+                New-Text 490 55 'D'
+                New-Text 270 470 'A'
+                New-Text 535 585 'B'
+                New-Text 705 470 'C'
+                New-Text 475 315 'O'
+                New-Text 470 170 '50°' 'danger' 22
+                New-Text 555 390 '30°' 'danger' 22
+            )
+        }
+        'parallel-segments' {
+            @(
+                New-Line 330 65 255 585 'primary' 4
+                New-Line 750 65 675 585 'primary' 4
+                New-Line 125 560 870 95 'accent' 4
+                New-Line 130 100 890 550 'accent' 4
+                New-Ellipse 280 465 6 6 'primary' 'primary' 2
+                New-Ellipse 700 205 6 6 'primary' 'primary' 2
+                New-Ellipse 300 200 6 6 'primary' 'primary' 2
+                New-Ellipse 690 430 6 6 'primary' 'primary' 2
+                New-Ellipse 505 325 6 6 'danger' 'danger' 2
+                New-Text 245 500 'A'
+                New-Text 710 195 'C'
+                New-Text 265 175 'D'
+                New-Text 705 465 'B'
+                New-Text 515 305 'O' 'danger'
+                New-Text 365 410 '12' 'muted' 22
+                New-Text 590 260 '8' 'muted' 22
+                New-Text 600 390 '6' 'muted' 22
+                New-Text 305 55 'k' 'muted' 22
+                New-Text 730 55 'l' 'muted' 22
+                New-Text 115 585 'm' 'muted' 22
+                New-Text 870 575 'n' 'muted' 22
+            )
+        }
+        'angle-bisector' {
+            @(
+                New-Polygon @(150,500, 855,500, 540,105) 'primary' 'none' 5
+                New-Line 150 500 655 500 'accent' 4
+                New-Line 540 105 655 500 'accent' 4
+                New-Arc 540 105 88 88 51 24 'danger' 4
+                New-Arc 540 105 105 105 75 24 'danger' 4
+                New-Text 115 510 'K'
+                New-Text 870 510 'L'
+                New-Text 530 70 'M'
+                New-Text 645 535 'N'
+                New-Text 330 300 'a' 'muted' 24
+                New-Text 720 300 'b' 'muted' 24
+                New-Text 575 205 'α' 'danger' 22
+                New-Text 535 220 'α' 'danger' 22
+            )
+        }
+        'statistics' {
+            $items = @(
+                New-Text 190 55 'Klasa IV A' 'primary' 26
+                New-Text 670 55 'Klasa IV B' 'primary' 26
+                New-Line 90 510 455 510 'primary' 3 $false $false $true
+                New-Line 90 510 90 100 'primary' 3 $false $false $true
+                New-Line 545 510 910 510 'primary' 3 $false $false $true
+                New-Line 545 510 545 100 'primary' 3 $false $false $true
+            )
+            $left = @(1, 6, 3, 3, 6, 1)
+            $right = @(1, 3, 6, 6, 3, 1)
+            foreach ($index in 0..5) {
+                $leftX = 115 + 53 * $index
+                $rightX = 570 + 53 * $index
+                $leftRight = $leftX + 34
+                $rightRight = $rightX + 34
+                $leftTop = 510 - 55 * $left[$index]
+                $rightTop = 510 - 55 * $right[$index]
+                $items += New-Polygon @($leftX,510, $leftRight,510, $leftRight,$leftTop, $leftX,$leftTop) 'accent' 'accent' 2
+                $items += New-Polygon @($rightX,510, $rightRight,510, $rightRight,$rightTop, $rightX,$rightTop) 'success' 'success' 2
+                $items += New-Text ($leftX+8) 545 ([string]($index+1)) 'muted' 18
+                $items += New-Text ($rightX+8) 545 ([string]($index+1)) 'muted' 18
+            }
+            foreach ($value in 1..7) {
+                $y = 510 - 55 * $value
+                $items += New-Line 82 $y 90 $y 'muted' 2
+                $items += New-Line 537 $y 545 $y 'muted' 2
+                $items += New-Text 58 ($y+7) ([string]$value) 'muted' 17
+                $items += New-Text 513 ($y+7) ([string]$value) 'muted' 17
+            }
+            $items
+        }
+    }
+}
+
 function Get-TemplatePrimitives {
     param([string]$Template)
     switch ($Template) {
@@ -496,15 +661,29 @@ function Get-TemplatePrimitives {
         'vector-equal' { Get-VectorScene 'equal' }
         'vector-sum' { Get-VectorScene 'sum' }
         'vector-difference' { Get-VectorScene 'difference' }
+        'exam-2026-piecewise' { Get-Exam2026Scene 'piecewise' }
+        'exam-2026-linear' { Get-Exam2026Scene 'linear' }
+        'exam-2026-right-triangle' { Get-Exam2026Scene 'right-triangle' }
+        'exam-2026-circle-angles' { Get-Exam2026Scene 'circle-angles' }
+        'exam-2026-parallel-segments' { Get-Exam2026Scene 'parallel-segments' }
+        'exam-2026-angle-bisector' { Get-Exam2026Scene 'angle-bisector' }
+        'exam-2026-statistics' { Get-Exam2026Scene 'statistics' }
         default { throw "Nieznany szablon diagramu: $Template" }
     }
 }
 
 function New-Definition {
-    param([string]$Id, [string]$SourceId, [string]$AlternativeText, [string]$Template)
+    param(
+        [string]$Id,
+        [string]$SourceId,
+        [string]$AlternativeText,
+        [string]$Template,
+        [int]$SourcePage = 0
+    )
     [ordered]@{
         id = $Id
         sourceId = $SourceId
+        sourcePage = $SourcePage
         alternativeText = $AlternativeText
         width = 1000
         height = 650
@@ -560,6 +739,14 @@ $definitions = @(
     New-Definition 'exam-mp21-z32' 'cke-2021-correction' 'Trójkąt z podstawą podzieloną odcinkiem długości 6 i kątami 60 oraz 30 stopni.' 'exam-triangle'
     New-Definition 'exam-mp21-z33' 'cke-2021-correction' 'Trapez ABCD z przekątnymi przecinającymi się w punkcie S.' 'trapezoid-diagonals'
 
+    New-Definition 'exam-mm26-z12' 'cke-2026-main-basic' 'Wykres funkcji f złożony z odcinka od domkniętego punktu minus 4, minus 2 do domkniętego punktu 2, 4 oraz odcinka od otwartego punktu 2, 3 do otwartego punktu 5, 0.' 'exam-2026-piecewise' 12
+    New-Definition 'exam-mm26-z13' 'cke-2026-main-basic' 'Układ współrzędnych z malejącą prostą przecinającą oś x w punkcie minus 2, 0 i oś y w punkcie 0, minus 3 oraz z zaznaczonym kątem alfa.' 'exam-2026-linear' 14
+    New-Definition 'exam-mm26-z18' 'cke-2026-main-basic' 'Trójkąt prostokątny ABC z kątem prostym przy B, bokiem BC długości 2, przeciwprostokątną AC długości 2 pierwiastki z 10 i kątem gamma przy C.' 'exam-2026-right-triangle' 20
+    New-Definition 'exam-mm26-z19' 'cke-2026-main-basic' 'Okrąg z punktami A, B, C i D na okręgu, środkiem O, kątem CDA równym 50 stopni i kątem COB równym 30 stopni.' 'exam-2026-circle-angles' 21
+    New-Definition 'exam-mm26-z20' 'cke-2026-main-basic' 'Równoległe proste k i l przecięte prostymi m i n w punktach A, B, C i D; odcinki AC i BD przecinają się w O, a OA, OB i OC mają długości 12, 6 i 8.' 'exam-2026-parallel-segments' 22
+    New-Definition 'exam-mm26-z21' 'cke-2026-main-basic' 'Trójkąt KLM z punktem N na boku KL i dwusieczną MN kąta przy wierzchołku M; boki MK i ML opisano jako a i b.' 'exam-2026-angle-bisector' 23
+    New-Definition 'exam-mm26-z31' 'cke-2026-main-basic' 'Dwa wykresy słupkowe przedstawiające liczby ocen od 1 do 6 w klasach IV A i IV B.' 'exam-2026-statistics' 30
+
     New-Definition 'course-right-triangle' 'adam-course' 'Trójkąt prostokątny z przyprostokątnymi a i b, przeciwprostokątną c oraz kątem alfa.' 'right-triangle'
     New-Definition 'course-circle-angles' 'adam-course' 'Okrąg z kątem środkowym AOB i kątem wpisanym ACB opartymi na tym samym łuku.' 'circle-angles'
     New-Definition 'course-coordinate-vector' 'adam-course' 'Układ współrzędnych z punktami A i B oraz składowymi wektora od A do B.' 'coordinate-segment'
@@ -574,8 +761,8 @@ $definitions = @(
     New-Definition 'course-vector-8' 'legacy-vectors' 'Różnica wektorów v i w przedstawiona geometrycznie.' 'vector-difference'
 )
 
-if ($definitions.Count -ne 57) {
-    throw "Katalog musi zawierać dokładnie 57 diagramów, a zawiera $($definitions.Count)."
+if ($definitions.Count -ne 64) {
+    throw "Katalog musi zawierać dokładnie 64 diagramy, a zawiera $($definitions.Count)."
 }
 
 $catalog = [ordered]@{ schemaVersion = 1; diagrams = $definitions }
@@ -584,4 +771,4 @@ $normalized = $json.Replace("`r`n", "`n") + "`n"
 $target = [IO.Path]::GetFullPath($OutputPath)
 [IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($target)) | Out-Null
 [IO.File]::WriteAllText($target, $normalized, [Text.UTF8Encoding]::new($false))
-Write-Host "Wygenerowano 57 diagramów wektorowych: $target"
+Write-Host "Wygenerowano 64 diagramy wektorowe: $target"

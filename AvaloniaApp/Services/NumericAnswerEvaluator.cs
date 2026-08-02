@@ -19,7 +19,24 @@ public sealed class NumericAnswerEvaluator
         ArgumentNullException.ThrowIfNull(exercise);
         if (!exercise.IsNumeric || exercise.ExpectedValue is not double expected || !double.IsFinite(expected))
             return new NumericAnswerResult(false, false, "Zadanie nie ma poprawnie skonfigurowanej odpowiedzi liczbowej.");
-        if (!ValidTolerance(exercise.AbsoluteTolerance) || !ValidTolerance(exercise.RelativeTolerance))
+        return Evaluate(expected, exercise.AbsoluteTolerance, exercise.RelativeTolerance, answer);
+    }
+
+    public NumericAnswerResult EvaluatePart(LearningAnswerPart part, string? answer)
+    {
+        ArgumentNullException.ThrowIfNull(part);
+        if (!part.IsNumeric || part.ExpectedValue is not double expected || !double.IsFinite(expected))
+            return new NumericAnswerResult(false, false, "Część zadania nie ma poprawnie skonfigurowanej odpowiedzi liczbowej.");
+        return Evaluate(expected, part.AbsoluteTolerance, part.RelativeTolerance, answer);
+    }
+
+    private NumericAnswerResult Evaluate(
+        double expected,
+        double absoluteTolerance,
+        double relativeTolerance,
+        string? answer)
+    {
+        if (!ValidTolerance(absoluteTolerance) || !ValidTolerance(relativeTolerance))
             return new NumericAnswerResult(false, false, "Zadanie ma niepoprawnie skonfigurowaną tolerancję.");
 
         var calculation = _calculator.Evaluate(answer);
@@ -28,8 +45,8 @@ public sealed class NumericAnswerEvaluator
 
         var difference = Math.Abs(actual - expected);
         var tolerance = Math.Max(
-            exercise.AbsoluteTolerance,
-            exercise.RelativeTolerance * Math.Abs(expected));
+            absoluteTolerance,
+            relativeTolerance * Math.Abs(expected));
         return difference <= tolerance
             ? new NumericAnswerResult(true, true, "Poprawny wynik. Zadanie zapisano jako ukończone.")
             : new NumericAnswerResult(true, false, "Wynik nie mieści się w dopuszczalnej tolerancji. Sprawdź obliczenia.");

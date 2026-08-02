@@ -129,7 +129,10 @@ public partial class MainWindow : Window
             _pipController.ChangeMode(_viewModel.CalculatorPipMode);
         if (e.PropertyName is nameof(AppViewModel.CurrentPage) or
             nameof(AppViewModel.ActiveProfile) or
-            nameof(AppViewModel.SelectedCourseLevel))
+            nameof(AppViewModel.SelectedCourseLevel) or
+            nameof(AppViewModel.SelectedExercise) or
+            nameof(AppViewModel.SelectedExamId) or
+            nameof(AppViewModel.SelectedTopicId))
             Render();
     }
 
@@ -231,26 +234,20 @@ public partial class MainWindow : Window
             _viewModel.SelectedFormula.Title, "Tablica matematyczna", _viewModel.SelectedFormula.Blocks,
             () => _viewModel.Navigate(AppPage.Formulas), _content.Diagrams),
         AppPage.Matura => new MaturaView(
-            _content.Exam,
+            _content.Exams,
             _content.Placeholders.Items,
             _viewModel.OpenExam,
             _viewModel.OpenPlaceholder,
             _viewModel.OpenRandomExercise),
         AppPage.Tasks => new TaskTopicsView(
-            _content.Exam,
+            _content.Exams,
+            _content.ExamTopics,
+            _content.ExamIndex.TopicIntroduction,
             _content.Placeholders.Items,
             _viewModel.OpenTopic,
             _viewModel.OpenPlaceholder,
             _viewModel.OpenRandomExercise),
-        AppPage.ExerciseList => new ExerciseListView(
-            _content.Exam,
-            _viewModel.SelectedTopicId,
-            _viewModel.ActiveProfile!,
-            _accounts,
-            _viewModel.OpenExercise,
-            _viewModel.ExamNavigationOrigin == ExamNavigationOrigin.Matura ? "← Matura" : "← Zadania",
-            () => _viewModel.Navigate(
-                _viewModel.ExamNavigationOrigin == ExamNavigationOrigin.Matura ? AppPage.Matura : AppPage.Tasks)),
+        AppPage.ExerciseList => BuildExerciseListPage(),
         AppPage.Exercise when _viewModel.SelectedExercise is not null => new ExerciseView(
             _viewModel.SelectedExercise, CreateExerciseViewContext()),
         AppPage.Chapters => new ChapterListView(
@@ -289,6 +286,7 @@ public partial class MainWindow : Window
         AppPage.Profile => new ProfileView(
             _viewModel.ActiveProfile!,
             _accounts,
+            _content.Exams,
             _content.CourseExercises,
             _viewModel.Logout),
         AppPage.Placeholder when _viewModel.SelectedPlaceholder is not null => new PlaceholderView(
@@ -304,6 +302,49 @@ public partial class MainWindow : Window
         _ => new TextBlock { Text = "Nie udało się otworzyć strony.", Margin = new Thickness(30) }
     };
 
+    private ExerciseListView BuildExerciseListPage()
+    {
+        var examTitles = _content.Exams.ToDictionary(item => item.Id, item => item.Title, StringComparer.Ordinal);
+        if (_viewModel.ExamNavigationOrigin == ExamNavigationOrigin.Matura)
+        {
+            var exam = SelectedExam();
+            var examSummary = $"{exam.OfficialTaskCount} zadań, {exam.ProgressItemCount} części ocenianych, " +
+                $"{exam.MaximumPoints} punktów, {exam.DurationMinutes} minut.";
+            return new ExerciseListView(
+                exam.Title,
+                examSummary,
+                exam.Exercises.OrderBy(item => item.EffectiveOrder).ToArray(),
+                examTitles,
+                false,
+                _viewModel.ActiveProfile!,
+                _accounts,
+                _viewModel.OpenExercise,
+                "← Matura",
+                () => _viewModel.Navigate(AppPage.Matura));
+        }
+
+        var topicId = _viewModel.SelectedTopicId
+            ?? throw new InvalidOperationException("Nie wybrano tematu zadań.");
+        var topic = _content.ExamTopics.Single(item => item.Id == topicId);
+        return new ExerciseListView(
+            topic.Title,
+            "Zadania z aktywnych arkuszy, uporządkowane według źródła i numeru.",
+            _content.GetTopicExercises(topicId),
+            examTitles,
+            true,
+            _viewModel.ActiveProfile!,
+            _accounts,
+            _viewModel.OpenExercise,
+            "← Zadania",
+            () => _viewModel.Navigate(AppPage.Tasks));
+    }
+
+    private ExamDefinition SelectedExam()
+    {
+        var examId = _viewModel.SelectedExamId ?? _content.Exams[0].Id;
+        return _content.GetExam(examId);
+    }
+
     private List<LearningExercise> CurrentExerciseContext()
     {
         if (_viewModel.SelectedExercise?.IsCourseExercise == true && _viewModel.SelectedCourseLesson is not null)
@@ -315,17 +356,19 @@ public partial class MainWindow : Window
                 .ToList();
         }
 
+        if (_viewModel.ExamNavigationOrigin == ExamNavigationOrigin.Matura)
+            return SelectedExam().Exercises.OrderBy(item => item.EffectiveOrder).ToList();
+
         return _viewModel.SelectedTopicId is null
-            ? _content.Exam.Exercises.OrderBy(item => item.Number).ToList()
-            : _content.Exam.Exercises
-                .Where(item => item.TopicId == _viewModel.SelectedTopicId)
-                .OrderBy(item => item.Number)
-                .ToList();
+            ? []
+            : _content.GetTopicExercises(_viewModel.SelectedTopicId).ToList();
     }
 
     private ExerciseViewContext CreateExerciseViewContext()
     {
         var courseExercise = _viewModel.SelectedExercise?.IsCourseExercise == true;
+        var selectedExercise = _viewModel.SelectedExercise
+            ?? throw new InvalidOperationException("Nie wybrano zadania.");
         var legalSource = _content.MathCourse.Sources.Single(source => source.Id == "legal-basis-2024");
         Action back;
         string backLabel;
@@ -349,7 +392,7 @@ public partial class MainWindow : Window
             CurrentExerciseContext(),
             courseExercise
                 ? new SourceDocument { VerifiedOn = legalSource.VerifiedOn }
-                : _content.Exam.Source,
+                : _content.GetExam(selectedExercise.ExamId).Source,
             _content.UiCopy,
             _viewModel.ActiveProfile!,
             _accounts,

@@ -12,7 +12,7 @@ Na podstawie tego poświadczenia historyczne przekazanie było autoryzowane prze
 
 Stan bieżącego procesu publikacji jest odrębny. Techniczna wersja `0.9.0-beta.1` przeszła build, testy, SonarCloud, dokumentację i instalacyjny smoke test na trzech systemach, ale nie istnieje jeszcze tag ani publiczny GitHub Release tej wersji.
 
-Deklaracja właściciela została zapisana w `ASSET_RIGHTS_DECLARATION.md` i przypisana jako dowód do trzech wcześniej nierozstrzygniętych grup w `Content/provenance.json`. Manifest ma obecnie `releaseEligible=true`, wszystkie paczkowane grupy mają status `approved`, a walidator zwykły oraz `Test-ContentProvenance.ps1 -RequireReleaseEligible` zakończyły się powodzeniem 19 lipca 2026 r.
+Deklaracja właściciela została zapisana w `ASSET_RIGHTS_DECLARATION.md` i 19 lipca 2026 r. odblokowała ówczesny zakres. Po dodaniu matury CKE 2026 manifest ma obecnie `releaseEligible=false`; grupa arkusza oraz wspólny katalog diagramów są `blocked` do czasu osobistego rozszerzenia deklaracji. Zwykły walidator ma potwierdzać kompletność wpisów, natomiast `Test-ContentProvenance.ps1 -RequireReleaseEligible` musi obecnie zakończyć się błędem.
 
 Techniczna i formalna blokada proweniencji została więc usunięta. Nie oznacza to automatycznego utworzenia tagu ani publikacji GitHub Release.
 
@@ -35,7 +35,7 @@ Przed utworzeniem tagu albo GitHub Release bieżącej wersji muszą przejść ws
 pwsh -NoProfile -File tools/Test-ContentProvenance.ps1 -RequireReleaseEligible
 ```
 
-Dowód praw został przypisany do odpowiednich grup, `releaseEligible=true`, a oba warianty walidatora przeszły 19 lipca 2026 r. Przed publikacją należy powtórzyć pełną bramę na dokładnym commicie przeznaczonym do tagowania i zachować log workflow. Nie wolno omijać tej kontroli przez ręczne pakowanie.
+Dowód praw dla wcześniejszego zakresu został przypisany do odpowiednich grup, a oba warianty walidatora przeszły 19 lipca 2026 r. Bieżący zakres wymaga dodatkowej deklaracji dla matury 2026, ponownej zmiany statusów po ocenie i pełnej bramy na dokładnym commicie przeznaczonym do tagowania. Nie wolno omijać tej kontroli przez ręczne pakowanie.
 
 Publiczne wydanie `0.9.0-beta.1` ma status `PENDING`. Ten protokół nie twierdzi, że GitHub Release istnieje.
 

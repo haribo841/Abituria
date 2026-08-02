@@ -69,6 +69,7 @@ public sealed class DiagramDefinition
 {
     public string Id { get; set; } = string.Empty;
     public string SourceId { get; set; } = string.Empty;
+    public int SourcePage { get; set; }
     public string AlternativeText { get; set; } = string.Empty;
     public double Width { get; set; }
     public double Height { get; set; }
@@ -197,12 +198,36 @@ public sealed class ExamCatalog
     public ExamDefinition Exam { get; set; } = new();
 }
 
+public sealed class ExamIndexCatalog
+{
+    public int SchemaVersion { get; set; }
+    public List<ContentBlock> TopicIntroduction { get; set; } = [];
+    public List<ExerciseTopicDefinition> Topics { get; set; } = [];
+    public List<ExamIndexEntry> Exams { get; set; } = [];
+}
+
+public sealed class ExamIndexEntry
+{
+    public string Id { get; set; } = string.Empty;
+    public string ContentPath { get; set; } = string.Empty;
+    public string Level { get; set; } = string.Empty;
+    public int Order { get; set; }
+    public bool IsActive { get; set; }
+}
+
 public sealed class ExamDefinition
 {
     public string Id { get; set; } = string.Empty;
     public string Title { get; set; } = string.Empty;
+    public string ProgressLabel { get; set; } = string.Empty;
     public int Year { get; set; }
     public string Session { get; set; } = string.Empty;
+    public string Formula { get; set; } = string.Empty;
+    public string Level { get; set; } = string.Empty;
+    public int DurationMinutes { get; set; }
+    public int MaximumPoints { get; set; }
+    public int OfficialTaskCount { get; set; }
+    public int ProgressItemCount { get; set; }
     public List<ContentBlock> Introduction { get; set; } = [];
     public List<ContentBlock> TopicIntroduction { get; set; } = [];
     public SourceDocument Source { get; set; } = new();
@@ -216,13 +241,16 @@ public sealed class SourceDocument
     public string DocumentCode { get; set; } = string.Empty;
     public string ExamDate { get; set; } = string.Empty;
     public string QuestionPaperUrl { get; set; } = string.Empty;
+    public string QuestionPaperSha256 { get; set; } = string.Empty;
     public string AnswerKeyUrl { get; set; } = string.Empty;
+    public string AnswerKeySha256 { get; set; } = string.Empty;
     public string VerifiedOn { get; set; } = string.Empty;
 }
 
 public sealed class ExerciseTopicDefinition
 {
     public string Id { get; set; } = string.Empty;
+    public int Order { get; set; }
     public string Title { get; set; } = string.Empty;
     public List<int> ExerciseNumbers { get; set; } = [];
 }
@@ -232,10 +260,15 @@ public sealed class LearningExercise
     public string Id { get; set; } = string.Empty;
     public string ExamId { get; set; } = string.Empty;
     public int Number { get; set; }
+    public string DisplayNumber { get; set; } = string.Empty;
+    public int Order { get; set; }
+    public string? GroupId { get; set; }
+    public int Points { get; set; }
     public string Title { get; set; } = string.Empty;
     public string? Author { get; set; }
     public string TopicId { get; set; } = string.Empty;
     public int SourcePage { get; set; }
+    public int SolutionSourcePage { get; set; }
     public string VerificationSource { get; set; } = string.Empty;
     public string Mode { get; set; } = string.Empty;
     public string Prompt { get; set; } = string.Empty;
@@ -243,6 +276,9 @@ public sealed class LearningExercise
     public int? CorrectOption { get; set; }
     public List<string> Hints { get; set; } = [];
     public string? RevealedAnswer { get; set; }
+    public string? Solution { get; set; }
+    public string? ScoringCriteria { get; set; }
+    public List<LearningAnswerPart> AnswerParts { get; set; } = [];
     public List<string> DiagramIds { get; set; } = [];
     public string? RequirementId { get; set; }
     public string? Level { get; set; }
@@ -252,7 +288,29 @@ public sealed class LearningExercise
     public bool IsMultipleChoice => string.Equals(Mode, "multipleChoice", StringComparison.OrdinalIgnoreCase);
     public bool IsNumeric => string.Equals(Mode, "numeric", StringComparison.OrdinalIgnoreCase);
     public bool IsRevealOnly => string.Equals(Mode, "revealOnly", StringComparison.OrdinalIgnoreCase);
+    public bool IsCompound => string.Equals(Mode, "compound", StringComparison.OrdinalIgnoreCase);
     public bool IsCourseExercise => Id.StartsWith("course-", StringComparison.Ordinal);
+    public string EffectiveDisplayNumber => string.IsNullOrWhiteSpace(DisplayNumber)
+        ? Number.ToString(CultureInfo.InvariantCulture)
+        : DisplayNumber;
+    public int EffectiveOrder => Order > 0 ? Order : Number;
+    public string? EffectiveSolution => string.IsNullOrWhiteSpace(Solution) ? RevealedAnswer : Solution;
+}
+
+public sealed class LearningAnswerPart
+{
+    public string Id { get; set; } = string.Empty;
+    public string Prompt { get; set; } = string.Empty;
+    public string Mode { get; set; } = string.Empty;
+    public List<string> Options { get; set; } = [];
+    public int? CorrectOption { get; set; }
+    public double? ExpectedValue { get; set; }
+    public double AbsoluteTolerance { get; set; } = 1e-9;
+    public double RelativeTolerance { get; set; } = 1e-9;
+    public List<string> AcceptedAnswers { get; set; } = [];
+    public bool IsMultipleChoice => string.Equals(Mode, "multipleChoice", StringComparison.OrdinalIgnoreCase);
+    public bool IsNumeric => string.Equals(Mode, "numeric", StringComparison.OrdinalIgnoreCase);
+    public bool IsText => string.Equals(Mode, "text", StringComparison.OrdinalIgnoreCase);
 }
 
 public sealed class CourseExerciseCatalog

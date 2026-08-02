@@ -444,14 +444,15 @@ public sealed class MathCourse2023ContentTests
 
             await accounts.MarkExerciseCompletedAsync(profile.Id, extended.Id);
             await accounts.MarkExerciseCompletedAsync(profile.Id, "mp21-z1");
-            var profileView = new ProfileView(profile, accounts, repository.CourseExercises, () => { });
+            var profileView = new ProfileView(profile, accounts, repository.Exams, repository.CourseExercises, () => { });
             window.Content = profileView;
             Render();
             await WaitUntilAsync(() => Task.FromResult(profileView.GetLogicalDescendants().OfType<TextBlock>()
                 .Any(text => text.Text?.Contains("Podstawa: 1 / 219", StringComparison.Ordinal) == true)));
             var progress = profileView.GetLogicalDescendants().OfType<TextBlock>()
                 .Single(text => AutomationProperties.GetName(text) == "Postęp w zadaniach");
-            Assert.Contains("Arkusz: 1 / 35", progress.Text, StringComparison.Ordinal);
+            Assert.Contains("Matura maj 2026 PP: 0 / 37", progress.Text, StringComparison.Ordinal);
+            Assert.Contains("Matura poprawkowa 2021: 1 / 35", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Podstawa: 1 / 219", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Część rozszerzona: 1 / 138", progress.Text, StringComparison.Ordinal);
 

@@ -36,6 +36,9 @@ public sealed class ProjectRequirementsDocumentationTests
         Assert.Contains("UC-11", text, StringComparison.Ordinal);
         Assert.Contains("4 grupy i 13 obszarów kursu", text, StringComparison.Ordinal);
         Assert.Contains("119/238/357", text, StringComparison.Ordinal);
+        Assert.Contains("33/37/50", text, StringComparison.Ordinal);
+        Assert.Contains("## Status Issue #9", text, StringComparison.Ordinal);
+        Assert.Contains("releaseEligible=false", text, StringComparison.Ordinal);
         Assert.Contains("Issue35MathChaptersRegressionTests", text, StringComparison.Ordinal);
         Assert.Contains("tools/seeds/issue-35-content.json", text, StringComparison.Ordinal);
         Assert.Contains("1280x820", text, StringComparison.Ordinal);

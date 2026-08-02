@@ -292,6 +292,9 @@ public sealed class ReleaseContractTests
         Assert.Contains(
             root.GetProperty("allowedHosts").EnumerateArray(),
             item => item.GetString() == "bip.cke.gov.pl");
+        Assert.Contains(
+            root.GetProperty("allowedHosts").EnumerateArray(),
+            item => item.GetString() == "cke.gov.pl");
         var onlineCheckExclusions = root.GetProperty("onlineCheckExclusions");
         Assert.Contains(
             onlineCheckExclusions.EnumerateArray(),
@@ -315,6 +318,22 @@ public sealed class ReleaseContractTests
                 item.GetProperty("reason").GetString()!.Contains(
                     "SHA-256",
                     StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() ==
+                    "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2026/Matematyka/poziom_podstawowy/MMAP-P0-100-A-2605-arkusz.pdf" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "SHA-256",
+                    StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() ==
+                    "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2026/Matematyka/poziom_podstawowy/MMAP-P0-100-2605-zasady.pdf" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "SHA-256",
+                    StringComparison.Ordinal));
         Assert.All(
             onlineCheckExclusions.EnumerateArray(),
             item =>
@@ -332,6 +351,22 @@ public sealed class ReleaseContractTests
         Assert.Contains(
             "-RequirePublishedReleaseLinks",
             File.ReadAllText(Absolute("docs/RELEASE_PROCESS.md")),
+            StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void Avalonia_headless_tests_are_serialized_by_the_xunit_runner()
+    {
+        using var configuration = JsonDocument.Parse(File.ReadAllText(
+            Absolute("tests/Abituria.Tests/xunit.runner.json")));
+        var root = configuration.RootElement;
+        var project = File.ReadAllText(Absolute("tests/Abituria.Tests/Abituria.Tests.csproj"));
+
+        Assert.False(root.GetProperty("parallelizeTestCollections").GetBoolean());
+        Assert.Equal(1, root.GetProperty("maxParallelThreads").GetInt32());
+        Assert.Contains(
+            "<Content Include=\"xunit.runner.json\" CopyToOutputDirectory=\"PreserveNewest\" />",
+            project,
             StringComparison.Ordinal);
     }
 

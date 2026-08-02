@@ -40,6 +40,11 @@ public sealed class ExerciseRandomizerTests
         var geometry = CreateExercise("geometry", "geometry");
         var exam = new ExamDefinition
         {
+            Id = "test-exam",
+            Title = "Arkusz testowy",
+            Year = 2026,
+            OfficialTaskCount = 2,
+            ProgressItemCount = 2,
             Exercises = [algebra, geometry],
             Topics =
             [
@@ -50,9 +55,9 @@ public sealed class ExerciseRandomizerTests
         LearningExercise? opened = null;
         string? selectedTopicId = "previous-topic";
         var maturaView = new MaturaView(
-            exam,
+            [exam],
             [],
-            () => { },
+            _ => { },
             _ => { },
             (exercise, topicId) =>
             {
@@ -67,13 +72,15 @@ public sealed class ExerciseRandomizerTests
             window.Show();
             Dispatcher.UIThread.RunJobs();
 
-            ClickButton(maturaView, "Losuj zadanie z tego arkusza");
+            ClickButton(maturaView, "Losuj zadanie z arkusza 2026");
 
             Assert.Same(geometry, opened);
             Assert.Null(selectedTopicId);
 
             var tasksView = new TaskTopicsView(
-                exam,
+                [exam],
+                exam.Topics,
+                [],
                 [],
                 _ => { },
                 _ => { },
@@ -100,15 +107,15 @@ public sealed class ExerciseRandomizerTests
     public void Matura_disables_randomization_for_an_empty_pool()
     {
         var view = new MaturaView(
-            new ExamDefinition(),
+            [new ExamDefinition { Year = 2026 }],
             [],
-            () => { },
+            _ => { },
             _ => { },
             (_, _) => { });
 
         var button = view.GetLogicalDescendants()
             .OfType<Button>()
-            .Single(control => string.Equals(control.Content as string, "Losuj zadanie z tego arkusza", StringComparison.Ordinal));
+            .Single(control => string.Equals(control.Content as string, "Losuj zadanie z arkusza 2026", StringComparison.Ordinal));
 
         Assert.False(button.IsEnabled);
     }

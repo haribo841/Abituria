@@ -5,7 +5,7 @@ Abituria to działająca offline aplikacja desktopowa wspierająca naukę matema
 Planowane pierwsze publiczne wydanie: `0.9.0-beta.1`.
 
 > [!IMPORTANT]
-> Inwentarz pochodzenia ma `releaseEligible=true` na podstawie oświadczenia właściciela projektu z 19 lipca 2026 r. o prawie do publicznej redystrybucji zasobów jako części Abiturii. Nie oznacza to jeszcze, że GitHub Release został opublikowany - nadal wymagane są commit, tag i pełny workflow wydawniczy.
+> Inwentarz pochodzenia ma obecnie `releaseEligible=false`. Matura CKE 2026 i siedem nowych diagramów pozostają zablokowane do czasu osobistego rozszerzenia deklaracji praw przez użytkownika. Nie wolno publikować GitHub Release przed przejściem bramy proweniencji, pełnego workflow i checklisty wydawniczej.
 
 ## Pobieranie
 
@@ -29,8 +29,9 @@ Paczki są samowystarczalne i nie wymagają instalacji środowiska .NET. Są to 
 - jednorazowe kody odzyskiwania i postęp zapisywany osobno dla każdego profilu;
 - 18 tablic matematycznych zgodnych zakresem z oficjalnym dokumentem CKE dla Formuły 2023;
 - pełny kurs Formuły 2023: 4 grupy, 13 obszarów, 119 wymagań, 238 rozwiązanych przykładów i 357 ćwiczeń;
-- filtr poziomu podstawowego i rozszerzonego oraz trzy tryby odpowiedzi: wybór, wynik liczbowy i ujawnienie rozwiązania;
-- 35 zadań z matury poprawkowej 2021, dostępnych według arkusza lub 17 tematów;
+- filtr poziomu podstawowego i rozszerzonego oraz tryby odpowiedzi: wybór, wynik liczbowy, odpowiedź złożona i ujawnienie rozwiązania;
+- matura główna 2026 PP z 33 zadaniami, 37 jednostkami postępu i 50 punktami oraz zachowane 35 zadań matury poprawkowej 2021;
+- wybór arkusza, losowanie w obrębie wybranego arkusza i agregacja obu arkuszy według 17 tematów;
 - sprawdzanie odpowiedzi A-D, podpowiedzi, ujawnianie odpowiedzi i brudnopis przechowywany osobno dla profilu i zadania do zamknięcia aplikacji;
 - kalkulator ogólny z nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią, powtarzaniem `=` i automatycznym kopiowaniem wyniku;
 - pojedynczy kalkulator Picture in Picture w oknie nad Abiturią, oknie zawsze na wierzchu albo panelu aplikacji;
@@ -112,13 +113,14 @@ Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalneg
 | [Przekazanie](docs/DELIVERY_PROTOCOL.md) | publiczne wydanie albo ograniczona, prawnie dopuszczalna forma przekazania |
 | [Zależności](docs/DEPENDENCIES.md) | dokładnie rozwiązane pakiety produkcyjne i testowe |
 | [Pochodzenie treści](docs/CONTENT_PROVENANCE.md) | zasady dopuszczania treści, fontów i obrazów do paczek oraz oświadczenie o prawach |
+| [Matura maj 2026 PP](docs/MATURA_2026_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 33/37/50, diagramy i status proweniencji |
 | [Znane ograniczenia](docs/KNOWN_LIMITATIONS.md) | jawny zakres wersji beta |
 | [Historia zmian](CHANGELOG.md) | pierwsze rzeczywiste wydanie i dalsze zmiany |
 | [Współtworzenie](CONTRIBUTING.md) | przygotowanie zmian, testy, SonarQube Cloud i wymagania pull requestu |
 | [Wsparcie](SUPPORT.md) | zgłaszanie błędów i wymagane dane diagnostyczne |
 | [Bezpieczeństwo](SECURITY.md) | prywatne zgłoszenia podatności i wspierane wersje |
 
-Kompletność kursu rozwijanego w ramach Issue #3, zachowanie treści historycznego Issue #35 oraz regresje opisują [macierz kursu](docs/MATH_COURSE_2023_COVERAGE.md) i [inwentarz migracji](docs/MIGRATION_INVENTORY.md).
+Kompletność kursu rozwijanego w ramach Issue #3, zachowanie treści historycznego Issue #35 oraz regresje opisują [macierz kursu](docs/MATH_COURSE_2023_COVERAGE.md) i [inwentarz migracji](docs/MIGRATION_INVENTORY.md). Zakres nowego arkusza opisuje [macierz matury 2026](docs/MATURA_2026_COVERAGE.md).
 
 ## Autor i licencje
 

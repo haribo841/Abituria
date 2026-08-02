@@ -66,7 +66,7 @@ Nagranie bezpośrednio potwierdza prezentację, demonstrację oraz sesję pytań
 | Obszar Issue #45 | HISTORYCZNY 2022 | BIEŻĄCA MIGRACJA | Uzasadnienie |
 | --- | --- | --- | --- |
 | 1. Prezentacja projektu i produktu | PASS | NOT APPLICABLE | nagranie potwierdza omówienie projektu, demonstrację i Q&A; bieżąca migracja nie była przedmiotem komisji z 2022 r. |
-| 2. Uzyskany produkt | PASS RETROSPEKTYWNY | PASS techniczny | komisja zaakceptowała historyczny produkt; bieżący zakres obejmuje konta, SQLite, pełny kurs Formuły 2023 `119/238/357`, 35 zadań arkusza, podpowiedzi, losowanie i dwa kalkulatory |
+| 2. Uzyskany produkt | PASS RETROSPEKTYWNY | PASS techniczny | komisja zaakceptowała historyczny produkt; bieżący zakres obejmuje konta, SQLite, pełny kurs Formuły 2023 `119/238/357`, dwa arkusze z 72 jednostkami postępu, podpowiedzi, losowanie i dwa kalkulatory |
 | 2a. Innowacyjność | PARTIAL | PARTIAL | integracja nauki, zadań, podpowiedzi i narzędzi jest udokumentowana, ale nie zachowano osobnej punktacji ani porównawczej analizy innowacyjności |
 | 3. Dokumentacja projektu | PARTIAL historyczny | PASS lokalny | historyczne wydanie nie zachowało pełnego zestawu według obecnego standardu; bieżący pakiet obejmuje wymagania, architekturę, instalację, testy, licencje, autorstwo, wersje i ograniczenia |
 | 4. Testowanie produktu | PASS RETROSPEKTYWNY | PASS | właściciel potwierdził pomyślne testy historyczne; bieżący zestaw obejmuje testy jednostkowe, integracyjne, funkcjonalne, regresyjne, UI, instalacyjne, wydajnościowe, pamięciowe i obciążeniowe |

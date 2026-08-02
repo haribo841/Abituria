@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "topicIntroduction": [
+    {
+      "type": "richText",
+      "text": "W tym segmencie możesz rozwiązywać zadania z aktywnych arkuszy maturalnych według zagadnienia. Przy każdym zadaniu widoczne jest jego źródło."
+    }
+  ],
+  "topics": [
+    { "id": "powers", "order": 1, "title": "Potęgi", "exerciseNumbers": [] },
+    { "id": "logarithms", "order": 2, "title": "Logarytmy", "exerciseNumbers": [] },
+    { "id": "percentages", "order": 3, "title": "Procenty", "exerciseNumbers": [] },
+    { "id": "identities", "order": 4, "title": "Wzory skróconego mnożenia", "exerciseNumbers": [] },
+    { "id": "equations", "order": 5, "title": "Równania", "exerciseNumbers": [] },
+    { "id": "inequalities", "order": 6, "title": "Nierówności", "exerciseNumbers": [] },
+    { "id": "linear-function", "order": 7, "title": "Funkcja liniowa", "exerciseNumbers": [] },
+    { "id": "quadratic-function", "order": 8, "title": "Funkcja kwadratowa", "exerciseNumbers": [] },
+    { "id": "sequences", "order": 9, "title": "Ciągi", "exerciseNumbers": [] },
+    { "id": "trigonometry", "order": 10, "title": "Trygonometria", "exerciseNumbers": [] },
+    { "id": "plane-geometry", "order": 11, "title": "Planimetria", "exerciseNumbers": [] },
+    { "id": "lines-and-segments", "order": 12, "title": "Proste i odcinki", "exerciseNumbers": [] },
+    { "id": "solid-geometry", "order": 13, "title": "Stereometria", "exerciseNumbers": [] },
+    { "id": "combinatorics", "order": 14, "title": "Kombinatoryka", "exerciseNumbers": [] },
+    { "id": "probability", "order": 15, "title": "Prawdopodobieństwo", "exerciseNumbers": [] },
+    { "id": "statistics", "order": 16, "title": "Statystyka", "exerciseNumbers": [] },
+    { "id": "proofs", "order": 17, "title": "Zadania dowodowe", "exerciseNumbers": [] }
+  ],
+  "exams": [
+    {
+      "id": "matura-maj-2026-podstawowa",
+      "contentPath": "Content/exam-2026-main-basic.json",
+      "level": "basic",
+      "order": 1,
+      "isActive": true
+    },
+    {
+      "id": "matura-poprawkowa-2021",
+      "contentPath": "Content/exam-2021-correction.json",
+      "level": "basic",
+      "order": 2,
+      "isActive": true
+    }
+  ]
+}

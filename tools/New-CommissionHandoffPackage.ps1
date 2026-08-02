@@ -110,8 +110,9 @@ try {
         generatedAtUtc = [DateTime]::UtcNow.ToString("o")
         purpose = "Ocena dokumentacji i dowodów technicznych przez komisję. Pakiet nie jest wydaniem aplikacji."
         releaseEligibilityAtGeneration = $releaseEligibility
-        approvedAssetGroupsNotIncludedBecausePackageIsDocumentationOnly = @(
+        packagedAssetGroupsNotIncludedBecausePackageIsDocumentationOnly = @(
             "cke-2021-correction-exam",
+            "cke-2026-main-basic-exam",
             "cke-formula-2023-transcription",
             "runtime-vector-diagrams",
             "application-icon"
@@ -120,6 +121,7 @@ try {
             "aplikacja i biblioteki wykonywalne - poza zakresem pakietu dokumentacyjnego",
             "kod źródłowy i testy - poza zakresem pakietu dokumentacyjnego",
             "Content/exam-2021-correction.json - poza zakresem pakietu dokumentacyjnego",
+            "Content/exam-2026-main-basic.json - poza zakresem pakietu dokumentacyjnego",
             "Content/diagrams.json - poza zakresem pakietu dokumentacyjnego",
             "img/icon.ico - poza zakresem pakietu dokumentacyjnego",
             "tools/Import-LegacyContent.ps1",
@@ -147,6 +149,7 @@ try {
                 $normalized -match '(^|/)docs/legacy/' -or
                 $normalized -match '(^|/)img/' -or
                 $normalized -match '(^|/)Content/exam-2021-correction\.json$' -or
+                $normalized -match '(^|/)Content/exam-2026-main-basic\.json$' -or
                 $normalized -match '(^|/)\.git/' -or
                 $normalized -match '\.(exe|dll|pdb|ico|icns|png|cs|axaml)$'
             }

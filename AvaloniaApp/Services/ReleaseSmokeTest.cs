@@ -20,6 +20,7 @@ public sealed record ReleaseSmokeTestReport(
     int CourseAreaCount,
     int CourseRequirementCount,
     int CourseExerciseCount,
+    int ExamCount,
     int ExamExerciseCount,
     string QuadraticSummary);
 
@@ -91,7 +92,7 @@ public static class ReleaseSmokeTestCommand
                 $"Abituria {report.Version}: smoke test zakończony powodzeniem " +
                 $"({report.FormulaCount} tablic, {report.CourseAreaCount} obszarów, " +
                 $"{report.CourseRequirementCount} wymagań, {report.CourseExerciseCount} ćwiczeń kursu, " +
-                $"{report.ExamExerciseCount} zadań arkusza).");
+                $"{report.ExamExerciseCount} jednostek postępu w {report.ExamCount} arkuszach).");
             return SuccessExitCode;
         }
         catch (Exception exception)
@@ -136,7 +137,8 @@ public static class ReleaseSmokeTestRunner
             content.MathCourse.Areas.Count,
             content.MathCourse.Requirements.Count,
             content.CourseExercises.Exercises.Count,
-            content.Exam.Exercises.Count,
+            content.Exams.Count,
+            content.Exams.Sum(exam => exam.Exercises.Count),
             quadraticSummary);
     }
 
@@ -172,7 +174,10 @@ public static class ReleaseSmokeTestRunner
             content.MathCourse.Requirements.Count != 119 ||
             content.MathCourse.Lessons.SelectMany(lesson => lesson.WorkedExamples).Count() != 238 ||
             content.CourseExercises.Exercises.Count != 357 ||
-            content.Exam.Exercises.Count != 35 ||
+            content.Exams.Count != 2 ||
+            content.GetExam("matura-maj-2026-podstawowa").Exercises.Count != 37 ||
+            content.GetExam("matura-poprawkowa-2021").Exercises.Count != 35 ||
+            content.ExamTopics.Count != 17 ||
             content.UiCopy.Entries.Count == 0)
         {
             throw new InvalidDataException("Nie załadowano kompletu podstawowych treści aplikacji.");
@@ -181,6 +186,7 @@ public static class ReleaseSmokeTestRunner
         if (!content.Formulas.Articles.Any(article => article.Id == "formula-2") ||
             !content.MathCourse.Requirements.Any(requirement => requirement.Id == "I.B.1") ||
             !content.CourseExercises.Exercises.Any(exercise => exercise.Id == "course-i-b01-1") ||
+            !content.GetExam("matura-maj-2026-podstawowa").Exercises.Any(exercise => exercise.Id == "mm26-p0-z12-1") ||
             !content.Exam.Exercises.Any(exercise => exercise.Id == "mp21-z9"))
         {
             throw new InvalidDataException("Nie załadowano reprezentatywnych materiałów wydania.");
@@ -189,10 +195,10 @@ public static class ReleaseSmokeTestRunner
 
     private static void EnsureApplicationDiagramsAreAvailable(ContentRepository content)
     {
-        if (content.Diagrams.Diagrams.Count != 57)
+        if (content.Diagrams.Diagrams.Count != 64)
             throw new InvalidDataException("Katalog diagramów aplikacji jest niekompletny.");
 
-        foreach (var diagramId in new[] { "formula-w9a", "exam-mp21-z9", "course-right-triangle" })
+        foreach (var diagramId in new[] { "formula-w9a", "exam-mp21-z9", "exam-mm26-z12", "course-right-triangle" })
             _ = content.Diagrams.GetRequired(diagramId);
     }
 

@@ -21,7 +21,7 @@ public sealed class BusinessAnalysisDocumentationTests
             "## 9. Metodyka wymagań i kontrola zmian",
             "## 10. Architektura i ograniczenia technologiczne",
             "## 11. Ryzyka biznesowe i projektowe",
-            "## 12. Śledzenie Issue #38"
+            "## 12. Śledzenie Issue #9"
         };
 
         Assert.All(requiredHeadings, heading => Assert.Contains(heading, text, StringComparison.Ordinal));
@@ -30,6 +30,13 @@ public sealed class BusinessAnalysisDocumentationTests
         Assert.Contains("SQLite", text, StringComparison.Ordinal);
         Assert.Contains("licencją MIT", text, StringComparison.Ordinal);
         Assert.Contains("releaseEligible", text, StringComparison.Ordinal);
+        Assert.Contains("https://github.com/haribo841/Abituria/issues/9", text, StringComparison.Ordinal);
+        Assert.Contains(
+            "https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38",
+            text,
+            StringComparison.Ordinal);
+        Assert.DoesNotContain("Issue #38", text, StringComparison.Ordinal);
+        Assert.Contains("33 zadaniami, 37 jednostkami postępu i 50 punktami", text, StringComparison.Ordinal);
         Assert.Contains("publiczne prerelease `v0.9.0-beta.1` nie zostało jeszcze opublikowane", text, StringComparison.Ordinal);
         Assert.DoesNotContain("interfejs użytkownika: WPF", text, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("kalkulator może działać jako osobne okno", text, StringComparison.OrdinalIgnoreCase);

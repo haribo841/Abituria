@@ -33,6 +33,8 @@ public static class DiagramCatalogValidator
             throw new InvalidOperationException("Diagram musi mieć identyfikator i źródło.");
         if (string.IsNullOrWhiteSpace(diagram.AlternativeText))
             throw new InvalidOperationException($"Diagram '{diagram.Id}' nie ma opisu alternatywnego.");
+        if (diagram.SourcePage < 0)
+            throw new InvalidOperationException($"Diagram '{diagram.Id}' ma nieprawidłową stronę źródłową.");
         if (!IsPositiveFinite(diagram.Width) || !IsPositiveFinite(diagram.Height))
             throw new InvalidOperationException($"Diagram '{diagram.Id}' ma nieprawidłowy obszar rysowania.");
         if (diagram.Primitives.Count == 0)

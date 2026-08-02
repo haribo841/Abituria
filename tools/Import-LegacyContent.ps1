@@ -441,8 +441,10 @@ $chapters = @(
     @($issue35Seed.chapters)
 )
 $exam = [ordered]@{
-    id = 'matura-poprawkowa-2021'; title = 'Matura poprawkowa 2021'; year = 2021
+    id = 'matura-poprawkowa-2021'; title = 'Matura poprawkowa 2021'; progressLabel = 'Matura poprawkowa 2021'; year = 2021
     session = 'poprawkowa'
+    formula = '2015'; level = 'basic'; durationMinutes = 170; maximumPoints = 45
+    officialTaskCount = 35; progressItemCount = 35
     introduction = @(
         [ordered]@{ type = 'richText'; text = 'Matura poprawkowa przysługuje osobom, które przystąpiły do wszystkich egzaminów obowiązkowych i nie zdały dokładnie jednego z nich. Ten historyczny arkusz zawiera 28 zadań zamkniętych i 7 otwartych. Można w nim zdobyć 45 punktów, czas pracy wynosił 170 minut, a próg zdania egzaminu obowiązkowego wynosił 30%.' }
         [ordered]@{ type = 'richText'; text = 'Dane historyczne z 2021 roku: maturę zdało 74,5% zdających, 25,5% jej nie zdało, a 7,8% zdających nie spełniało warunków przystąpienia do poprawki.' }
@@ -496,4 +498,4 @@ try {
     }
 }
 
-Write-Host "Wygenerowano: $($formulas.Count) tablic, 34 lekcje kursu, 57 diagramów i $($exam.exercises.Count) zadań."
+Write-Host "Wygenerowano: $($formulas.Count) tablic, 34 lekcje kursu, 64 diagramy i $($exam.exercises.Count) zadań historycznego arkusza."

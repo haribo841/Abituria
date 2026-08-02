@@ -19,19 +19,23 @@ public sealed class DiagramCatalogTests
     private static readonly AppThemeMode[] SupportedThemes =
         [AppThemeMode.Light, AppThemeMode.Dark, AppThemeMode.HighContrast];
 
-    [Fact]
+    [AvaloniaFact]
     public void Catalog_contains_exactly_the_required_unique_and_used_primitive_inventory()
     {
         var catalog = new ContentRepository().Diagrams;
 
         DiagramCatalogValidator.Validate(catalog);
         Assert.Equal(1, catalog.SchemaVersion);
-        Assert.Equal(57, catalog.Diagrams.Count);
-        Assert.Equal(57, catalog.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(64, catalog.Diagrams.Count);
+        Assert.Equal(64, catalog.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
         Assert.Equal(36, catalog.Diagrams.Count(item => item.SourceId == "cke-formula-2023"));
         Assert.Equal(9, catalog.Diagrams.Count(item => item.SourceId == "cke-2021-correction"));
+        Assert.Equal(7, catalog.Diagrams.Count(item => item.SourceId == "cke-2026-main-basic"));
         Assert.Equal(4, catalog.Diagrams.Count(item => item.SourceId == "adam-course"));
         Assert.Equal(8, catalog.Diagrams.Count(item => item.SourceId == "legacy-vectors"));
+        Assert.All(
+            catalog.Diagrams.Where(item => item.SourceId == "cke-2026-main-basic"),
+            item => Assert.InRange(item.SourcePage, 1, 35));
         Assert.Equal(
             ["arc", "ellipse", "line", "polygon", "polyline", "text"],
             catalog.Diagrams.SelectMany(item => item.Primitives)
@@ -52,6 +56,7 @@ public sealed class DiagramCatalogTests
         AssertInvalidDiagram(diagram => diagram.Id = "");
         AssertInvalidDiagram(diagram => diagram.SourceId = " ");
         AssertInvalidDiagram(diagram => diagram.AlternativeText = "");
+        AssertInvalidDiagram(diagram => diagram.SourcePage = -1);
         AssertInvalidDiagram(diagram => diagram.Width = 0);
         AssertInvalidDiagram(diagram => diagram.Height = double.PositiveInfinity);
         AssertInvalidDiagram(diagram => diagram.Primitives.Clear());

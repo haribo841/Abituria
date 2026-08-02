@@ -33,7 +33,7 @@ Data ostatniej aktualizacji: 19 lipca 2026 r.
 | instrukcja użytkownika i uruchomienia | `USER_GUIDE.md`, `INSTALLATION.md` | PASS |
 | testy funkcjonalne, regresyjne, wydajnościowe i pamięciowe | `TESTING.md`, testy projektu | PASS po pełnej bramie automatycznej |
 | użyteczność, instalacja niezależna i końcowy odbiór | `USABILITY_TEST_PROTOCOL.md`, `USABILITY_TEST_RESULTS.md`, ten dokument | PASS RETROSPEKTYWNY dla historycznych testów uczestników i odbioru; formalny test instalacji PASS na trzech niezależnych, natywnych runnerach |
-| ograniczenia i status prawny zasobów | `KNOWN_LIMITATIONS.md`, `CONTENT_PROVENANCE.md`, `ASSET_RIGHTS_DECLARATION.md` | PASS - wszystkie grupy `approved`, `releaseEligible=true` i walidatory proweniencji PASS |
+| ograniczenia i status prawny zasobów | `KNOWN_LIMITATIONS.md`, `CONTENT_PROVENANCE.md`, `ASSET_RIGHTS_DECLARATION.md` | PASS retrospektywny dla stanu z 19 lipca 2026 r.; bieżąca matura 2026 i jej diagramy mają status `blocked`, `releaseEligible=false` |
 | autor, licencja i historia zmian | `AUTHORS.md`, `LICENSE`, `CHANGELOG.md` | PASS |
 | PDF dla komisji | `output/pdf/Abituria-Technical-Documentation-0.9.0-beta.1.pdf` | PASS po wygenerowaniu i kontroli wizualnej |
 | zatwierdzenie i przekazanie komisji | decyzja poniżej i `DELIVERY_PROTOCOL.md` | PASS RETROSPEKTYWNY - projekt zaakceptowany przez prowadzącego na początku lutego 2022 r.; dokładny dzień i podpis nie zostały zachowane |
@@ -92,7 +92,7 @@ Nagranie kończy się po zapowiedzi narady, przed ogłoszeniem wyniku. Pozytywna
 | późniejsze poprawki dostępności | H-01-H-03 wykonane i zweryfikowane 19 lipca 2026 r. | wynik przeglądu heurystycznego, nie badania uczestników |
 | decyzja prowadzącego | projekt zaakceptowany na początku lutego 2022 r. | dokładny dzień, nazwisko i podpis nie zostały zachowane w repozytorium |
 | forma przekazania | końcowa wersja projektu została przekazana prowadzącemu w uzgodnionej formie i przyjęta | kanał, dokładna rewizja i hash pakietu nie zostały zachowane |
-| prawa do zasobów | właściciel poświadczył posiadanie praw do zasobów projektu | `ASSET_RIGHTS_DECLARATION.md`, `releaseEligible=true` i oba warianty walidatora PASS 19 lipca 2026 r. |
+| prawa do zasobów | właściciel poświadczył prawa do ówczesnego zakresu zasobów projektu | `ASSET_RIGHTS_DECLARATION.md` i oba warianty walidatora PASS 19 lipca 2026 r.; rozszerzenie o maturę 2026 pozostaje wymagane |
 
 ## Automatyczny test instalacji na niezależnych komputerach
 
@@ -125,7 +125,7 @@ Poniższa tabela jest opcjonalnym uzupełnieniem dla sesji prowadzonej przez cz�
 
 ## Warunek publikacji
 
-Właściciel poświadczył posiadanie praw do zasobów projektu. Deklarację zapisano w `ASSET_RIGHTS_DECLARATION.md`, wszystkie grupy w `Content/provenance.json` mają status `approved`, `releaseEligible=true`, a oba warianty walidatora proweniencji przeszły 19 lipca 2026 r. Historyczne przekazanie prowadzącemu zostało uzgodnione i zaakceptowane, dlatego spełnia formalny wariant przekazania dla Issue #43.
+Właściciel poświadczył posiadanie praw do zakresu zasobów ocenianego 19 lipca 2026 r., a oba warianty walidatora wtedy przeszły. Historyczne przekazanie prowadzącemu zostało uzgodnione i zaakceptowane, dlatego spełnia formalny wariant przekazania dla Issue #43. Późniejsze dodanie matury 2026 nie zmienia tej decyzji retrospektywnej, ale bieżący manifest ma `releaseEligible=false` i nie pozwala opublikować nowego pakietu przed rozszerzeniem deklaracji.
 
 Publiczne wydanie bieżącej wersji jest osobnym działaniem. Nie wolno twierdzić, że GitHub Release istnieje, ponieważ tag i workflow wydania nie zostały wykonane. Przed publikacją należy ponowić `tools/Test-ContentProvenance.ps1 -RequireReleaseEligible` oraz pozostałe bramy na dokładnym commicie przeznaczonym do wydania, skontrolować draft i dopiero potem opublikować prerelease.
 
