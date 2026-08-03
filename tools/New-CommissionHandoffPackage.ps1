@@ -113,6 +113,7 @@ try {
         packagedAssetGroupsNotIncludedBecausePackageIsDocumentationOnly = @(
             "cke-2021-correction-exam",
             "cke-2026-main-basic-exam",
+            "cke-2026-main-extended-exam",
             "cke-formula-2023-transcription",
             "runtime-vector-diagrams",
             "application-icon"
@@ -122,6 +123,7 @@ try {
             "kod źródłowy i testy - poza zakresem pakietu dokumentacyjnego",
             "Content/exam-2021-correction.json - poza zakresem pakietu dokumentacyjnego",
             "Content/exam-2026-main-basic.json - poza zakresem pakietu dokumentacyjnego",
+            "Content/exam-2026-main-extended.json - poza zakresem pakietu dokumentacyjnego",
             "Content/diagrams.json - poza zakresem pakietu dokumentacyjnego",
             "img/icon.ico - poza zakresem pakietu dokumentacyjnego",
             "tools/Import-LegacyContent.ps1",
@@ -150,6 +152,7 @@ try {
                 $normalized -match '(^|/)img/' -or
                 $normalized -match '(^|/)Content/exam-2021-correction\.json$' -or
                 $normalized -match '(^|/)Content/exam-2026-main-basic\.json$' -or
+                $normalized -match '(^|/)Content/exam-2026-main-extended\.json$' -or
                 $normalized -match '(^|/)\.git/' -or
                 $normalized -match '\.(exe|dll|pdb|ico|icns|png|cs|axaml)$'
             }

@@ -41,6 +41,14 @@
       "reason": "The exact CKE 2026 marking guide is pinned by SHA-256 in the exam catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
     },
     {
+      "urlPrefix": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2026/Matematyka/poziom_rozszerzony/MMAP-R0-100-A-2605-arkusz.pdf",
+      "reason": "The exact CKE 2026 extended question paper is pinned by SHA-256 in the exam catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
+    },
+    {
+      "urlPrefix": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2026/Matematyka/poziom_rozszerzony/MMAP-R0-100-2605-zasady.pdf",
+      "reason": "The exact CKE 2026 extended marking guide is pinned by SHA-256 in the exam catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
+    },
+    {
       "urlPrefix": "https://eli.gov.pl/api/acts/DU/2024/1019/text/O/D20241019.pdf",
       "reason": "The official legal basis is pinned by SHA-256 in the course catalog; transient document-host availability is not a content-integrity check."
     },

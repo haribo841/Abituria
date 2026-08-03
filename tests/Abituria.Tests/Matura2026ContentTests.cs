@@ -157,7 +157,7 @@ public sealed class Matura2026ContentTests
             .ToArray();
 
         Assert.Equal(17, topicIds.Count);
-        Assert.All(index.Exams, item => Assert.Equal("basic", item.Level));
+        Assert.Equal(["basic", "extended", "basic"], index.Exams.OrderBy(item => item.Order).Select(item => item.Level));
         Assert.Equal(topicIds.Order(), exam.Exercises.Select(item => item.TopicId).Distinct(StringComparer.Ordinal).Order());
         Assert.All(exam.Exercises, item => Assert.Contains(item.TopicId, topicIds));
         Assert.Equal(7, referenced.Length);
@@ -175,15 +175,17 @@ public sealed class Matura2026ContentTests
     {
         var index = Read<ExamIndexCatalog>("Content/exams.json");
         var current = Read<ExamCatalog>("Content/exam-2026-main-basic.json").Exam;
+        var extended = Read<ExamCatalog>("Content/exam-2026-main-extended.json").Exam;
         var legacy = Read<ExamCatalog>("Content/exam-2021-correction.json").Exam;
-        var exams = new[] { current, legacy };
+        var exams = new[] { current, extended, legacy };
 
         Assert.Equal(
-            [ExamId, "matura-poprawkowa-2021"],
+            [ExamId, "matura-maj-2026-rozszerzona", "matura-poprawkowa-2021"],
             index.Exams.Where(item => item.IsActive).OrderBy(item => item.Order).Select(item => item.Id));
         Assert.Equal(35, legacy.Exercises.Count);
         Assert.Equal(Enumerable.Range(1, 35).Select(number => $"mp21-z{number}"), legacy.Exercises.Select(item => item.Id));
         Assert.Equal(37, current.Exercises.Count);
+        Assert.Equal(13, extended.Exercises.Count);
         Assert.Equal(17, index.Topics.Count);
 
         foreach (var topic in index.Topics.OrderBy(item => item.Order))
@@ -196,7 +198,7 @@ public sealed class Matura2026ContentTests
     }
 
     [Fact]
-    public void New_cke_assets_remain_blocked_until_the_user_extends_the_rights_declaration()
+    public void New_cke_assets_are_approved_by_the_extended_rights_declaration()
     {
         using var provenance = JsonDocument.Parse(File.ReadAllText(Absolute("Content/provenance.json")));
         var root = provenance.RootElement;
@@ -207,14 +209,13 @@ public sealed class Matura2026ContentTests
         var coverage = File.ReadAllText(Absolute("docs/MATURA_2026_COVERAGE.md"));
         var toc = File.ReadAllText(Absolute("docs/toc.yml"));
 
-        Assert.False(root.GetProperty("releaseEligible").GetBoolean());
-        Assert.Equal("blocked", groups["cke-2026-main-basic-exam"].GetProperty("distributionStatus").GetString());
-        Assert.Equal("blocked", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
-        Assert.False(string.IsNullOrWhiteSpace(
-            groups["cke-2026-main-basic-exam"].GetProperty("blockedReason").GetString()));
-        Assert.False(string.IsNullOrWhiteSpace(
-            groups["runtime-vector-diagrams"].GetProperty("blockedReason").GetString()));
-        Assert.DoesNotContain("MMAP-P0-100-A-2605", rights, StringComparison.Ordinal);
+        Assert.True(root.GetProperty("releaseEligible").GetBoolean());
+        Assert.Equal("approved", groups["cke-2026-main-basic-exam"].GetProperty("distributionStatus").GetString());
+        Assert.Equal("approved", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
+        Assert.Contains("MMAP-P0-100-A-2605", rights, StringComparison.Ordinal);
+        Assert.Contains(PaperHash, rights, StringComparison.Ordinal);
+        Assert.Contains(RulesHash, rights, StringComparison.Ordinal);
+        Assert.Contains("autorskich implementacji wektorowych Avalonia", rights, StringComparison.Ordinal);
         Assert.Contains(PaperHash, coverage, StringComparison.Ordinal);
         Assert.Contains(RulesHash, coverage, StringComparison.Ordinal);
         Assert.Contains("MATURA_2026_COVERAGE.md", toc, StringComparison.Ordinal);

@@ -13,6 +13,7 @@ Pierwsza wersja przygotowana do publicznego wydania. Planowana data zostanie wpi
 - lokalne profile gościa i konta chronione hasłem, odzyskiwanie konta oraz trwały postęp w SQLite;
 - 18 tablic matematycznych, 7 dostępnych działów i 35 zadań matury poprawkowej 2021;
 - maturę główną 2026 na poziomie podstawowym: 33 oficjalne zadania, 37 jednostek postępu, 50 punktów, rozwiązania, kryteria oceniania i siedem dostępnych diagramów wektorowych;
+- maturę główną 2026 na poziomie rozszerzonym: 12 oficjalnych zadań, 13 jednostek postępu, 50 punktów, rozwiązania, kryteria oceniania i trzy dostępne diagramy wektorowe;
 - kalkulator ogólny z parserem złożonych wyrażeń, historią, `Ans`, potęgami, pierwiastkami, notacją naukową i powtarzanym `=`;
 - kalkulator funkcji kwadratowej;
 - losowanie zadań z całego arkusza albo z wybranego tematu, z zachowaniem kontekstu nawigacji;

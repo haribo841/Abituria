@@ -26,16 +26,20 @@ public sealed class DiagramCatalogTests
 
         DiagramCatalogValidator.Validate(catalog);
         Assert.Equal(1, catalog.SchemaVersion);
-        Assert.Equal(64, catalog.Diagrams.Count);
-        Assert.Equal(64, catalog.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(67, catalog.Diagrams.Count);
+        Assert.Equal(67, catalog.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
         Assert.Equal(36, catalog.Diagrams.Count(item => item.SourceId == "cke-formula-2023"));
         Assert.Equal(9, catalog.Diagrams.Count(item => item.SourceId == "cke-2021-correction"));
         Assert.Equal(7, catalog.Diagrams.Count(item => item.SourceId == "cke-2026-main-basic"));
+        Assert.Equal(3, catalog.Diagrams.Count(item => item.SourceId == "cke-2026-main-extended"));
         Assert.Equal(4, catalog.Diagrams.Count(item => item.SourceId == "adam-course"));
         Assert.Equal(8, catalog.Diagrams.Count(item => item.SourceId == "legacy-vectors"));
         Assert.All(
             catalog.Diagrams.Where(item => item.SourceId == "cke-2026-main-basic"),
             item => Assert.InRange(item.SourcePage, 1, 35));
+        Assert.All(
+            catalog.Diagrams.Where(item => item.SourceId == "cke-2026-main-extended"),
+            item => Assert.InRange(item.SourcePage, 1, 33));
         Assert.Equal(
             ["arc", "ellipse", "line", "polygon", "polyline", "text"],
             catalog.Diagrams.SelectMany(item => item.Primitives)
@@ -155,6 +159,25 @@ public sealed class DiagramCatalogTests
             Height = 10,
             Primitives = [new DiagramPrimitive { Type = "line", X2 = 1, Y2 = 1, Stroke = "unknown" }]
         }));
+    }
+
+    [AvaloniaFact]
+    public void Matura_2026_figures_use_only_Avalonia_vector_controls()
+    {
+        var definitions = new ContentRepository().Diagrams.Diagrams
+            .Where(item => item.SourceId is "cke-2026-main-basic" or "cke-2026-main-extended")
+            .ToArray();
+
+        Assert.Equal(10, definitions.Length);
+        foreach (var definition in definitions)
+        {
+            var view = new DiagramView(definition);
+            var canvas = Assert.Single(view.GetLogicalDescendants().OfType<Canvas>());
+            Assert.NotEmpty(canvas.Children);
+            Assert.All(canvas.Children, child =>
+                Assert.True(child is Shape or TextBlock, $"{definition.Id} zawiera kontrolkę rastrową {child.GetType().Name}."));
+            Assert.Empty(view.GetLogicalDescendants().OfType<Image>());
+        }
     }
 
     [AvaloniaFact]

@@ -37,7 +37,7 @@ public sealed class MaturaView : UserControl
                 $"Otwórz arkusz - {ExamOverviewControls.ExamCountLabel(exam)}",
                 () => openExam(exam.Id)));
             examPanel.Children.Add(ExamOverviewControls.RandomExerciseButton(
-                $"Losuj zadanie z arkusza {exam.Year}", exam.Exercises, null, exerciseRandomizer, openExercise));
+                $"Losuj zadanie z arkusza: {exam.Title}", exam.Exercises, null, exerciseRandomizer, openExercise));
             root.Children.Add(UiFactory.Card(examPanel));
         }
         foreach (var placeholder in placeholders.Where(item => item.Category == "exam"))

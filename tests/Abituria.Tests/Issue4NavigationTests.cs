@@ -89,10 +89,12 @@ public sealed class Issue4NavigationTests
                 item => openedPlaceholders.Add(item.Id),
                 (exercise, topicId) => randomized.Add((exercise.Id, topicId))));
 
-        Assert.Equal(2, repository.Exams.Count);
+        Assert.Equal(3, repository.Exams.Count);
         Assert.Equal(17, repository.ExamTopics.Count);
         Assert.Contains(matura.GetLogicalDescendants().OfType<Button>(), button =>
             button.Content is string text && text.Contains("33 zadania, 37 części ocenianych", StringComparison.Ordinal));
+        Assert.Contains(matura.GetLogicalDescendants().OfType<Button>(), button =>
+            button.Content is string text && text.Contains("12 zadań, 13 części ocenianych", StringComparison.Ordinal));
         Assert.Equal(3, matura.GetLogicalDescendants().OfType<Button>().Count(button =>
             button.Content is string text && repository.Placeholders.Items.Any(item =>
                 item.Category == "exam" && text.StartsWith(item.Title, StringComparison.Ordinal))));
@@ -107,7 +109,7 @@ public sealed class Issue4NavigationTests
 
         var newestExam = repository.Exams[0];
         Click(matura, "Otwórz arkusz - 33 zadania, 37 części ocenianych");
-        Click(matura, $"Losuj zadanie z arkusza {newestExam.Year}");
+        Click(matura, $"Losuj zadanie z arkusza: {newestExam.Title}");
         Click(matura, "Matura 2019 - treść w przygotowaniu");
         var firstTopic = repository.ExamTopics[0];
         var firstTopicCount = repository.GetTopicExercises(firstTopic.Id).Count;

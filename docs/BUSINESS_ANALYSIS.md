@@ -70,7 +70,7 @@ Użytkownik otrzymuje bezpłatny dostęp do lokalnej aplikacji, połączenie mat
 
 ### 4.3. Stan dystrybucji
 
-Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, ale publiczne prerelease `v0.9.0-beta.1` nie zostało jeszcze opublikowane. Po dodaniu matury 2026 brama `releaseEligible` w `Content/provenance.json` ma wartość `false`: arkusz, zasady oceniania i siedem diagramów oczekują na osobiste rozszerzenie deklaracji praw przez użytkownika. Dopiero potem można wykonać zatwierdzony commit, tag i pełny workflow. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), [macierz matury 2026](MATURA_2026_COVERAGE.md) i [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
+Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, ale publiczne prerelease `v0.9.0-beta.1` nie zostało jeszcze opublikowane. Deklaracja z 3 sierpnia 2026 r. obejmuje oba arkusze, obie zasady oceniania i dziesięć autorskich implementacji wektorowych Avalonia, dlatego brama `releaseEligible` w `Content/provenance.json` ma wartość `true`. Nadal wymagane są zatwierdzony commit, tag i pełny workflow wydania. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), macierze matur [podstawowej](MATURA_2026_COVERAGE.md) i [rozszerzonej](MATURA_2026_EXTENDED_COVERAGE.md) oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
 
 Koszty bieżącego wariantu obejmują przede wszystkim czas przygotowania treści, implementacji, testów, dokumentacji i utrzymania repozytorium. Aplikacja działa lokalnie, dlatego nie wymaga serwera aplikacyjnego ani przechowywania danych użytkowników przez zewnętrznego operatora.
 
@@ -90,7 +90,7 @@ Zakres bieżącej implementacji jest zdefiniowany normatywnie w [REQUIREMENTS.md
 - losowanie zadań z całego arkusza albo wybranego tematu;
 - dokumentację, bramy jakości, diagnostyczny smoke test artefaktu i automatyzację przygotowania paczek.
 
-Kurs odpowiada podstawie programowej z 2024 r. stosowanej dla matury 2026. Filtr podstawowy pokazuje 73 wymagania i 219 ćwiczeń, a rozszerzony dodaje 46 wymagań oraz 138 ćwiczeń. Katalog egzaminów obejmuje 37 jednostek postępu matury głównej 2026 PP i 35 zadań matury poprawkowej 2021. Wcześniejsze zasoby zachowują zatwierdzone przypisania, natomiast nowa transkrypcja CKE 2026 i jej diagramy pozostają zablokowane do czasu rozszerzenia deklaracji użytkownika.
+Kurs odpowiada podstawie programowej z 2024 r. stosowanej dla matury 2026. Filtr podstawowy pokazuje 73 wymagania i 219 ćwiczeń, a rozszerzony dodaje 46 wymagań oraz 138 ćwiczeń. Katalog egzaminów obejmuje 37 jednostek postępu matury głównej 2026 PP, 13 jednostek matury głównej 2026 PR i 35 zadań matury poprawkowej 2021. Transkrypcje i autorskie implementacje wektorowe Avalonia mają zatwierdzone przypisania w manifeście pochodzenia.
 
 ### 5.2. Poza zakresem beta
 
@@ -116,10 +116,10 @@ Rzeczywiste daty najwcześniejszych weryfikowalnych stanów technicznych I-IV bi
 | Tydzień 3 | M2 - architektura i nawigacja | autor implementacji | zrealizowane: AvaloniaUI, jedno `MainWindow`, `AppViewModel`, testy architektury |
 | Tydzień 4-5 | M3a - ekran startowy i nawigacja | autor implementacji | zrealizowane: shell, widoki i routing |
 | Tydzień 6-7 | M3b - kalkulatory | autor implementacji | zrealizowane: kalkulator ogólny i funkcji kwadratowej z regresjami |
-| Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | zrealizowane: pełny kurs `119/238/357`, dwa aktywne arkusze z 72 jednostkami postępu, tablice i oddzielny postęp |
+| Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | zrealizowane: pełny kurs `119/238/357`, trzy aktywne arkusze z 85 jednostkami postępu, tablice i oddzielny postęp |
 | Tydzień 12 | M5a - testy i regresje | autor implementacji | zrealizowane ciągle: testy jednostkowe, integracyjne, UI i CI |
 | Tydzień 13 | M5b - dokumentacja i pakowanie | autor implementacji | technicznie zrealizowane: dokumentacja, workflow, paczki portable i smoke test |
-| Tydzień 14 | M6 - publiczne prerelease | autor implementacji, właściciel praw | technicznie przygotowane, ale obecnie zablokowane prawnie przez brak rozszerzenia deklaracji dla matury CKE 2026; po odblokowaniu wymaga zatwierdzonego commita, tagu, natywnych workflow i publikacji GitHub Release |
+| Tydzień 14 | M6 - publiczne prerelease | autor implementacji, właściciel praw | proweniencja zatwierdzona; nadal wymaga zatwierdzonego commita, tagu, natywnych workflow i publikacji GitHub Release |
 | 17 stycznia 2022 r. | M7 - publiczna obrona projektu historycznego | Adam Kubiś i komisja | osiągnięte: pokaz działającej aplikacji, pytania i odpowiedzi, decyzja pozytywna, wynik bardzo dobry; dowód w `DEFENSE_PROTOCOL.md` |
 
 M6 w tej tabeli dotyczy przyszłego prerelease bieżącej migracji `0.9.0-beta.1`, natomiast M7 dokumentuje rzeczywistą obronę historycznej wersji projektu w 2022 r. Osiągnięcie M7 nie jest dowodem opublikowania obecnej migracji.
@@ -141,7 +141,7 @@ Kryteria dzielą się na odbiór produktu i odbiór publicznego wydania:
 | Publiczne wydanie | istnieją tag, prerelease, działająca strona Pages i kontrola po publikacji | `RELEASE_PROCESS.md` |
 | Historyczna ocena projektu | siedem obszarów oceny i dziesięć warunków akceptacji jest odwzorowanych bez mieszania wersji WPF z migracją AvaloniaUI | `EVALUATION_PROTOCOL.md` |
 
-Spełnienie kryteriów technicznych nie zastępuje kryterium prawa do publicznej dystrybucji. Aktualny manifest nie zawiera zasobów `blocked`, lecz publiczne wydanie jest zaakceptowane dopiero po utworzeniu i zweryfikowaniu rzeczywistego GitHub Release.
+Spełnienie kryteriów technicznych nie zastępuje kryterium prawa do publicznej dystrybucji. Aktualny manifest nie zawiera grup `blocked`, ma `releaseEligible=true` i przechodzi twardą bramę proweniencji. Publiczne wydanie jest możliwe dopiero po zaliczeniu pozostałych bramek oraz utworzeniu i zweryfikowaniu rzeczywistego GitHub Release.
 
 Historyczny projekt został zaakceptowany i uzyskał wynik bardzo dobry. Zakres oraz ograniczenia tego dowodu opisuje `EVALUATION_PROTOCOL.md`. Wynik z 2022 r. nie jest oceną bieżącej migracji i nie zastępuje jej przyszłego procesu wydawniczego.
 

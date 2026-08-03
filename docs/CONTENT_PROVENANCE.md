@@ -58,13 +58,15 @@ Nie wolno usuwać parametru bramy, ręcznie zmieniać `releaseEligible` ani wył
 
 ## Aktualny stan
 
-`releaseEligible` ma wartość `false`. Wcześniejsze zasoby zachowują zatwierdzone podstawy, ale matura CKE 2026 oraz siedem wynikających z niej diagramów nie są objęte obecną [deklaracją praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md). Grupy `cke-2026-main-basic-exam` i `runtime-vector-diagrams` pozostają `blocked` do czasu osobistego rozszerzenia deklaracji przez użytkownika. Nie wolno przedstawiać zwykłej walidacji kompletności manifestu jako pozytywnej bramy publicznego wydania.
+`releaseEligible` ma wartość `true`. Rozszerzenie [deklaracji praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 3 sierpnia 2026 r. obejmuje matury CKE 2026, zasady oceniania i dziesięć autorskich implementacji wektorowych Avalonia. Grupy `cke-2026-main-basic-exam`, `cke-2026-main-extended-exam` i `runtime-vector-diagrams` mają status `approved`. Zwykła walidacja kompletności oraz osobna brama `-RequireReleaseEligible` muszą przechodzić niezależnie.
 
 ### Materiały CKE
 
 Grupa `cke-2021-correction-exam` obejmuje wyłącznie `Content/exam-2021-correction.json`. Autorem źródłowego arkusza i zasad oceniania `EMAP-P0-100-2108` pozostaje Centralna Komisja Egzaminacyjna, a adaptację i weryfikację wykonał Adam Kubiś. Diagramy używane przez zadania są osobnymi definicjami w katalogu `runtime-vector-diagrams`.
 
-Grupa `cke-2026-main-basic-exam` obejmuje `Content/exam-2026-main-basic.json`. Transkrypcja korzysta z arkusza `MMAP-P0-100-A-2605` i zasad oceniania `MMAP-P0-100-2605`; oba adresy, sumy SHA-256 i data weryfikacji znajdują się w [macierzy matury 2026](MATURA_2026_COVERAGE.md). Grupa ma status `blocked`, ponieważ deklaracja użytkownika nie obejmuje jeszcze tych dwóch dokumentów, transkrypcji ani zakresu redystrybucji w Abiturii.
+Grupa `cke-2026-main-basic-exam` obejmuje `Content/exam-2026-main-basic.json`. Transkrypcja korzysta z arkusza `MMAP-P0-100-A-2605` i zasad oceniania `MMAP-P0-100-2605`; oba adresy, sumy SHA-256 i data weryfikacji znajdują się w [macierzy matury 2026](MATURA_2026_COVERAGE.md). Grupa ma status `approved` na podstawie rozszerzenia deklaracji z 3 sierpnia 2026 r.
+
+Grupa `cke-2026-main-extended-exam` obejmuje `Content/exam-2026-main-extended.json`. Transkrypcja korzysta z arkusza `MMAP-R0-100-A-2605` i zasad oceniania `MMAP-R0-100-2605`; oba adresy, sumy SHA-256 i data weryfikacji znajdują się w [macierzy matury 2026 PR](MATURA_2026_EXTENDED_COVERAGE.md). Grupa ma status `approved` na podstawie rozszerzenia deklaracji z 3 sierpnia 2026 r.
 
 Grupa `cke-formula-2023-transcription` obejmuje `Content/formulas.json`. Dokument źródłowy CKE jest wskazany dokładnym adresem i sumą SHA-256 w katalogu treści oraz w [macierzy pokrycia tablic](FORMULA_2023_COVERAGE.md). Transkrypcję i weryfikację wykonał Adam Kubiś, natomiast autorem dokumentu źródłowego pozostaje Centralna Komisja Egzaminacyjna. Status `approved` wynika z rozszerzenia deklaracji z 27 lipca 2026 r.
 
@@ -76,26 +78,21 @@ Przykłady, ćwiczenia, podpowiedzi, pełne rozwiązania i cztery nowe definicje
 
 ### Diagramy i archiwum historyczne
 
-Grupa `runtime-vector-diagrams` obejmuje `Content/diagrams.json` z dokładnie 64 definicjami wektorowymi: 36 dla tablic wzorów, 9 dla arkusza poprawkowego 2021, 7 dla matury głównej 2026 i 12 dla kursu. Każda definicja ma stabilny identyfikator, źródło i opis alternatywny, a siedem nowych figur ma również stronę arkusza. Aplikacja renderuje wyłącznie te dane, bez ładowania rastrów. Cała grupa pozostaje `blocked`, ponieważ jeden paczkowany plik zawiera nowe diagramy pochodne, których nie obejmuje obecna deklaracja.
+Grupa `runtime-vector-diagrams` obejmuje `Content/diagrams.json` z dokładnie 67 definicjami wektorowymi: 36 dla tablic wzorów, 9 dla arkusza poprawkowego 2021, 7 dla matury podstawowej 2026, 3 dla matury rozszerzonej 2026 i 12 dla kursu. Każda definicja ma stabilny identyfikator, źródło i opis alternatywny, a dziesięć nowych figur ma również stronę arkusza. `DiagramView` materializuje je wyłącznie jako `Line`, `Polyline`, `Polygon`, `Ellipse`, łuki i `TextBlock` Avalonia, bez ładowania rastrów, `Image` lub `Bitmap`. Dziesięć implementacji dla matur 2026 jest autorskim kodem Adama Kubisia na licencji MIT, a grupa ma status `approved` na podstawie rozszerzenia deklaracji z 3 sierpnia 2026 r.
 
 Siedemdziesiąt pięć historycznych obrazów znajduje się w `docs/legacy/originals/images/`. Pliki zachowano bajt w bajt, udokumentowano mapowaniem `PATH-MAPPING.csv` i sumami `SHA256SUMS`, ale nie są paczkowane ani publikowane przez DocFX. Jedynym statycznym wyjątkiem jest `img/icon.ico` w grupie `application-icon`, używany wyłącznie jako `ApplicationIcon`.
 
 ## Grupy i statusy
 
-Manifest nadal oznacza jako `approved`:
+Manifest oznacza jako `approved`:
 
 - aktualne treści techniczne i inwentarz autorstwa Adama Kubisia na licencji MIT;
 - autorskie przykłady, ćwiczenia, rozwiązania i diagramy kursu Formuły 2023 wraz z przypisanym urzędowym źródłem dokładnego brzmienia wymagań;
 - zmigrowane treści matematyczne, dla których dowodem jest zachowana historyczna licencja MIT i inwentarz migracji;
-- arkusz CKE 2021, transkrypcję tablic CKE dla Formuły 2023 oraz ikonę aplikacji objęte wcześniejszą deklaracją praw lub upoważnienia do publicznej redystrybucji wyłącznie jako części Abiturii;
+- arkusze CKE 2021 i 2026, transkrypcję tablic CKE dla Formuły 2023, katalog wektorów Avalonia oraz ikonę aplikacji objęte deklaracją praw lub upoważnienia do publicznej redystrybucji wyłącznie jako części Abiturii;
 - font Mulish na licencji SIL Open Font License 1.1, potwierdzonej przez `fonts/OFL.txt` i `fonts/README.txt`.
 
-Status `blocked` mają:
-
-- transkrypcja matury CKE 2026 wraz z odpowiedziami, rozwiązaniami i kryteriami punktowania;
-- wspólny katalog diagramów, ponieważ zawiera siedem nowych definicji pochodnych od figur z tego arkusza.
-
-Rozszerzenie deklaracji musi wskazać arkusz, zasady oceniania, oba adresy, obie sumy SHA-256, zakres redystrybucji w Abiturii i diagramy pochodne. Po dodaniu deklaracji należy ponownie ocenić obie grupy, uruchomić zwykły walidator i osobno bramę `-RequireReleaseEligible`.
+Manifest nie zawiera obecnie grup `blocked`. Każda zmiana źródeł, zakresu redystrybucji lub sposobu renderowania wymaga ponownej oceny, uruchomienia zwykłego walidatora i osobnej bramy `-RequireReleaseEligible`.
 
 Status zatwierdzony należy ponownie ocenić po każdej zmianie źródła, zakresu plików albo sposobu pakowania.
 

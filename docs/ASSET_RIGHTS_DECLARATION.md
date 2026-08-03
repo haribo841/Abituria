@@ -35,3 +35,22 @@ Rozszerzenie obejmuje publiczną redystrybucję transkrypcji wyłącznie jako in
 ## Archiwizacja rastrów z 29 lipca 2026 r.
 
 Siedemdziesiąt pięć historycznych obrazów przeniesiono bez zmiany bajtów do `docs/legacy/originals/images/`. Nie są one zasobami działania aplikacji, nie trafiają do paczek i są wyłączone z DocFX. `PATH-MAPPING.csv` zachowuje mapowanie dawnych ścieżek, a `SHA256SUMS` pozwala zweryfikować każdy oryginał. Katalog diagramów jest aktywną reprezentacją wizualną, natomiast archiwum pozostaje wyłącznie dowodem historycznym.
+
+## Rozszerzenie deklaracji z 3 sierpnia 2026 r.
+
+Adam Kubiś rozszerza deklarację na publiczną redystrybucję w ramach Abiturii następujących grup:
+
+- `cke-2026-main-basic-exam`: strukturalna transkrypcja arkusza `MMAP-P0-100-A-2605` i zasad oceniania `MMAP-P0-100-2605` w `Content/exam-2026-main-basic.json`;
+- `cke-2026-main-extended-exam`: strukturalna transkrypcja arkusza `MMAP-R0-100-A-2605` i zasad oceniania `MMAP-R0-100-2605` w `Content/exam-2026-main-extended.json`;
+- `runtime-vector-diagrams`: katalog `Content/diagrams.json` rozszerzony do 67 deterministycznych definicji, w tym o dziesięć autorskich implementacji wektorowych Avalonia dla zadań maturalnych 2026.
+
+Źródła CKE objęte rozszerzeniem:
+
+- arkusz podstawowy: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2026/Matematyka/poziom_podstawowy/MMAP-P0-100-A-2605-arkusz.pdf`, SHA-256 `B7BD89434CA5CCFA33824B0CF063FF7CDDFF47B353059ECF225418E29BEEE71D`;
+- zasady oceniania poziomu podstawowego: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2026/Matematyka/poziom_podstawowy/MMAP-P0-100-2605-zasady.pdf`, SHA-256 `A982890CF5EA17206266E4A64B7BFDF96F46FAB08C7435B022CCE5B3908A65AC`;
+- arkusz rozszerzony: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2026/Matematyka/poziom_rozszerzony/MMAP-R0-100-A-2605-arkusz.pdf`, SHA-256 `DEC5F06020C35DCDABAB5747942BEDFC49CF7307B27F0AD105FAA93741D03964`;
+- zasady oceniania poziomu rozszerzonego: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2026/Matematyka/poziom_rozszerzony/MMAP-R0-100-2605-zasady.pdf`, SHA-256 `D7C014240AF16885DBDD1711D923AFF24951B2F514B7C5659E0B6F16508878BD`.
+
+Dziesięć nowych diagramów nie jest kopiami ani osadzonymi rastrami arkuszy. Adam Kubiś zaimplementował ich matematyczną treść jako własne, deterministyczne zestawy kontrolek i kształtów Avalonia: `Line`, `Polyline`, `Polygon`, `Ellipse`, łuki aproksymowane polilinią oraz `TextBlock`. Definicje są objęte licencją MIT kodu Abiturii, zachowują przypisanie kontekstu i stron źródłowych CKE oraz nie przypisują Adamowi Kubisiowi autorstwa arkuszy.
+
+Rozszerzenie zachowuje wszystkie ograniczenia pierwotnej deklaracji. Nie udziela samodzielnej licencji na źródłowe pliki PDF ani na wyodrębnianie transkrypcji poza Abiturią.

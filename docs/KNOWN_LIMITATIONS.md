@@ -4,8 +4,8 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 
 ## Status publikacji
 
-- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=false`. Matura CKE 2026 i siedem jej diagramów pozostają `blocked`, ponieważ nie obejmuje ich jeszcze osobista deklaracja użytkownika.
-- Wcześniejsza podstawa redystrybucji materiałów CKE i odziedziczonych grafik pozostaje zapisana w `ASSET_RIGHTS_DECLARATION.md`; rzeczywiste autorstwo i źródła są przypisane w `Content/provenance.json`. Przed tagiem trzeba rozszerzyć deklarację o oba dokumenty matury 2026, ich adresy i SHA-256, zakres redystrybucji oraz diagramy pochodne, a następnie przejść bramę `-RequireReleaseEligible`.
+- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=true`. Rozszerzenie `ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r. obejmuje oba arkusze CKE 2026, zasady oceniania oraz dziesięć autorskich implementacji wektorowych Avalonia.
+- Rzeczywiste autorstwo i źródła są przypisane w `Content/provenance.json`. Przed tagiem trzeba ponownie przejść bramę `-RequireReleaseEligible` na dokładnym commicie wydania.
 - Lokalnie zbudowany artefakt nie jest oficjalnym wydaniem, nawet jeśli przechodzi testy techniczne.
 
 ## Platformy i dystrybucja

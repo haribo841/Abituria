@@ -134,7 +134,7 @@ Brudnopis jest przechowywany osobno dla aktywnego profilu i zadania do czasu zam
 
 Przycisk „Otwórz kalkulator PiP” obok nagłówka brudnopisu otwiera kompaktowy kalkulator bez opuszczania zadania. Przyciski strzałek przechodzą do poprzedniego i następnego zadania w aktualnym kontekście, czyli w całym arkuszu albo w wybranym temacie.
 
-Strona „Profil” pokazuje osobno `Matura maj 2026 PP: x/37`, `Matura poprawkowa 2021: x/35`, podstawę `x/219` oraz część rozszerzoną `x/138`. Postęp jest lokalny i oddzielny dla każdego profilu. Nowe liczniki używają istniejącego zapisu identyfikatorów ukończonych zadań, więc aktualizacja nie zmienia schematu bazy i nie usuwa wcześniejszego postępu `mp21-*`.
+Strona „Profil” pokazuje osobno `Matura maj 2026 PP: x/37`, `Matura maj 2026 PR: x/13`, `Matura poprawkowa 2021: x/35`, podstawę `x/219` oraz część rozszerzoną `x/138`. Postęp jest lokalny i oddzielny dla każdego profilu. Nowe liczniki używają istniejącego zapisu identyfikatorów ukończonych zadań, więc aktualizacja nie zmienia schematu bazy i nie usuwa wcześniejszego postępu `mp21-*`.
 
 ## Kalkulator funkcji kwadratowej
 

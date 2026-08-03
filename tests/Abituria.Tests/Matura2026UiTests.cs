@@ -28,7 +28,8 @@ public sealed class Matura2026UiTests
         var openedExams = new List<string>();
         var openedTopics = new List<string>();
         Assert.Same(repository.Exams[0], repository.GetExam("matura-maj-2026-podstawowa"));
-        Assert.Same(repository.Exams[1], repository.Exam);
+        Assert.Same(repository.Exams[1], repository.GetExam("matura-maj-2026-rozszerzona"));
+        Assert.Same(repository.Exams[2], repository.Exam);
         Assert.Throws<ArgumentException>(() => repository.GetExam(" "));
         Assert.Throws<KeyNotFoundException>(() => repository.GetExam("missing"));
         Assert.Throws<ArgumentException>(() => repository.GetTopicExercises(""));
@@ -57,13 +58,16 @@ public sealed class Matura2026UiTests
             button => Equals(button.Content, "Otwórz arkusz - 33 zadania, 37 części ocenianych"));
         Assert.Contains(
             matura.GetLogicalDescendants().OfType<Button>(),
+            button => Equals(button.Content, "Otwórz arkusz - 12 zadań, 13 części ocenianych"));
+        Assert.Contains(
+            matura.GetLogicalDescendants().OfType<Button>(),
             button => Equals(button.Content, "Otwórz arkusz - 35 zadań"));
 
         var topicButtons = tasks.GetLogicalDescendants().OfType<Button>()
             .Where(button => button.Content is string text && text.StartsWith("Losuj zadanie z tematu:", StringComparison.Ordinal))
             .ToArray();
         Assert.Equal(17, topicButtons.Length);
-        Assert.Equal(72, repository.ExamTopics.Sum(topic => repository.GetTopicExercises(topic.Id).Count));
+        Assert.Equal(85, repository.ExamTopics.Sum(topic => repository.GetTopicExercises(topic.Id).Count));
         Assert.All(repository.ExamTopics, topic =>
         {
             var topicExercises = repository.GetTopicExercises(topic.Id);
@@ -88,7 +92,7 @@ public sealed class Matura2026UiTests
     {
         var repository = new ContentRepository();
         var current = repository.Exams[0];
-        var legacy = repository.Exams[1];
+        var legacy = repository.Exams[2];
         var viewModel = new AppViewModel();
 
         viewModel.OpenExam(current.Id);
@@ -159,8 +163,8 @@ public sealed class Matura2026UiTests
                 labels,
                 label => label!.Contains(examTitles[exercise.ExamId], StringComparison.Ordinal)));
 
-            await accounts.MarkExerciseCompletedAsync(profile.Id, repository.Exams[0].Exercises[0].Id);
-            await accounts.MarkExerciseCompletedAsync(profile.Id, repository.Exams[1].Exercises[0].Id);
+            foreach (var exam in repository.Exams)
+                await accounts.MarkExerciseCompletedAsync(profile.Id, exam.Exercises[0].Id);
             var profileView = new ProfileView(profile, accounts, repository.Exams, repository.CourseExercises, () => { });
             window.Content = profileView;
             Render();
@@ -169,6 +173,7 @@ public sealed class Matura2026UiTests
             var progress = profileView.GetLogicalDescendants().OfType<TextBlock>()
                 .Single(text => AutomationProperties.GetName(text) == "Postęp w zadaniach");
             Assert.Contains("Matura maj 2026 PP: 1 / 37", progress.Text, StringComparison.Ordinal);
+            Assert.Contains("Matura maj 2026 PR: 1 / 13", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Matura poprawkowa 2021: 1 / 35", progress.Text, StringComparison.Ordinal);
         }
         finally
@@ -189,37 +194,39 @@ public sealed class Matura2026UiTests
         await accounts.InitializeAsync();
         var profile = (await accounts.GetProfilesAsync()).Single(item => item.Kind == ProfileKind.Guest);
         var repository = new ContentRepository();
-        var exam = repository.Exams[0];
         var window = new Window { Width = 720, Height = 520 };
 
         try
         {
             window.Show();
-            foreach (var exercise in exam.Exercises.Where(item => item.IsCompound))
+            foreach (var exam in repository.Exams)
             {
-                var context = new ExerciseViewContext(
-                    exam.Exercises,
-                    exam.Source,
-                    repository.UiCopy,
-                    profile,
-                    accounts,
-                    repository.Diagrams,
-                    () => { },
-                    _ => { });
-                var view = new ExerciseView(exercise, context);
-                window.Content = view;
-                Render();
-                FillCompoundAnswer(view, exercise);
-                var check = view.GetLogicalDescendants().OfType<Button>()
-                    .Single(button => Equals(button.Content, "Sprawdź wszystkie odpowiedzi"));
-                Assert.True(check.Focusable);
-                Assert.False(string.IsNullOrWhiteSpace(AutomationProperties.GetHelpText(check)));
-                Click(check);
-                await WaitUntilAsync(async () =>
-                    (await accounts.GetCompletedExerciseIdsAsync(profile.Id)).Contains(exercise.Id));
-                Assert.Contains(
-                    view.GetLogicalDescendants().OfType<TextBlock>(),
-                    text => text.Text == "Wszystkie części odpowiedzi są poprawne. Zadanie zapisano jako ukończone.");
+                foreach (var exercise in exam.Exercises.Where(item => item.IsCompound))
+                {
+                    var context = new ExerciseViewContext(
+                        exam.Exercises,
+                        exam.Source,
+                        repository.UiCopy,
+                        profile,
+                        accounts,
+                        repository.Diagrams,
+                        () => { },
+                        _ => { });
+                    var view = new ExerciseView(exercise, context);
+                    window.Content = view;
+                    Render();
+                    FillCompoundAnswer(view, exercise);
+                    var check = view.GetLogicalDescendants().OfType<Button>()
+                        .Single(button => Equals(button.Content, "Sprawdź wszystkie odpowiedzi"));
+                    Assert.True(check.Focusable);
+                    Assert.False(string.IsNullOrWhiteSpace(AutomationProperties.GetHelpText(check)));
+                    Click(check);
+                    await WaitUntilAsync(async () =>
+                        (await accounts.GetCompletedExerciseIdsAsync(profile.Id)).Contains(exercise.Id));
+                    Assert.Contains(
+                        view.GetLogicalDescendants().OfType<TextBlock>(),
+                        text => text.Text == "Wszystkie części odpowiedzi są poprawne. Zadanie zapisano jako ukończone.");
+                }
             }
         }
         finally

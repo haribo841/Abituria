@@ -6097,6 +6097,390 @@
       ]
     },
     {
+      "id": "exam-mm26-r0-z04",
+      "sourceId": "cke-2026-main-extended",
+      "sourcePage": 8,
+      "alternativeText": "Kwadrat ABCD z punktami K i L w środkach boków AB i BC, punktem M na boku BC oraz odcinkami DK, DM, KM i AL przecinającymi się w punktach P i Q.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            300.0,
+            160.0,
+            660.0,
+            160.0,
+            660.0,
+            520.0,
+            300.0,
+            520.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 5.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 160.0,
+          "x2": 480.0,
+          "y2": 520.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 160.0,
+          "x2": 660.0,
+          "y2": 430.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 520.0,
+          "x2": 660.0,
+          "y2": 340.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 480.0,
+          "y": 520.0,
+          "x2": 660.0,
+          "y2": 430.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "polyline",
+          "points": [
+            465.0,
+            490.0,
+            493.0,
+            476.0,
+            507.0,
+            504.0
+          ],
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "ellipse",
+          "x": 444.0,
+          "y": 448.0,
+          "radiusX": 7.0,
+          "radiusY": 7.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 588.0,
+          "y": 376.0,
+          "radiusX": 7.0,
+          "radiusY": 7.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 270.0,
+          "y": 535.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 675.0,
+          "y": 535.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 675.0,
+          "y": 135.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 270.0,
+          "y": 135.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 465.0,
+          "y": 555.0,
+          "text": "K",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 680.0,
+          "y": 330.0,
+          "text": "L",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 680.0,
+          "y": 445.0,
+          "text": "M",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 415.0,
+          "y": 465.0,
+          "text": "P",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 590.0,
+          "y": 350.0,
+          "text": "Q",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 250.0,
+          "y": 350.0,
+          "text": "a",
+          "stroke": "muted",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm26-r0-z11",
+      "sourceId": "cke-2026-main-extended",
+      "sourcePage": 24,
+      "alternativeText": "Czworokąt ABCD wpisany w okrąg i opisany na drugim okręgu, z bokami AB równym 9 i AD równym 10 oraz kątem BAD równym 60 stopni.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 330.0,
+          "radiusX": 235.0,
+          "radiusY": 235.0,
+          "stroke": "accent",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 530.0,
+          "y": 370.0,
+          "radiusX": 120.0,
+          "radiusY": 120.0,
+          "stroke": "accent",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            315.0,
+            485.0,
+            650.0,
+            485.0,
+            695.0,
+            285.0,
+            510.0,
+            105.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 5.0,
+          "dashed": false
+        },
+        {
+          "type": "arc",
+          "x": 315.0,
+          "y": 485.0,
+          "radiusX": 82.0,
+          "radiusY": 82.0,
+          "startAngle": -60.0,
+          "sweepAngle": 60.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 285.0,
+          "y": 510.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 660.0,
+          "y": 510.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 710.0,
+          "y": 285.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 505.0,
+          "y": 75.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 420.0,
+          "y": 525.0,
+          "text": "9",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 390.0,
+          "y": 280.0,
+          "text": "10",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 350.0,
+          "y": 445.0,
+          "text": "60°",
+          "stroke": "danger",
+          "fontSize": 22.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm26-r0-z12",
+      "sourceId": "cke-2026-main-extended",
+      "sourcePage": 28,
+      "alternativeText": "Trójkątny równoramienny kwietnik o podstawie x z wpisaną okrągłą fontanną o średnicy 4 metrów.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 190.0,
+          "y": 545.0,
+          "x2": 810.0,
+          "y2": 545.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            315.0,
+            510.0,
+            685.0,
+            510.0,
+            500.0,
+            110.0
+          ],
+          "stroke": "primary",
+          "fill": "surface",
+          "strokeThickness": 5.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 400.0,
+          "radiusX": 90.0,
+          "radiusY": 90.0,
+          "stroke": "accent",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": true
+        },
+        {
+          "type": "line",
+          "x": 315.0,
+          "y": 510.0,
+          "x2": 685.0,
+          "y2": 510.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 490.0,
+          "y": 545.0,
+          "text": "x",
+          "stroke": "danger",
+          "fontSize": 26.0
+        },
+        {
+          "type": "text",
+          "x": 470.0,
+          "y": 395.0,
+          "text": "4 m",
+          "stroke": "accent",
+          "fontSize": 22.0
+        }
+      ]
+    },
+    {
       "id": "course-right-triangle",
       "sourceId": "adam-course",
       "sourcePage": 0,

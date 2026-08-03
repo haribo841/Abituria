@@ -513,6 +513,53 @@ function Get-Exam2026Scene {
             }
             $items
         }
+        'extended-square' {
+            @(
+                New-Polygon @(300,160, 660,160, 660,520, 300,520) 'primary' 'none' 5
+                New-Line 300 160 480 520 'accent' 4
+                New-Line 300 160 660 430 'accent' 4
+                New-Line 300 520 660 340 'danger' 4
+                New-Line 480 520 660 430 'danger' 4
+                New-Polyline @(465,490, 493,476, 507,504) 'muted' 3
+                New-Ellipse 444 448 7 7 'primary' 'primary' 2
+                New-Ellipse 588 376 7 7 'primary' 'primary' 2
+                New-Text 270 535 'A'
+                New-Text 675 535 'B'
+                New-Text 675 135 'C'
+                New-Text 270 135 'D'
+                New-Text 465 555 'K'
+                New-Text 680 330 'L'
+                New-Text 680 445 'M'
+                New-Text 415 465 'P'
+                New-Text 590 350 'Q'
+                New-Text 250 350 'a' 'muted' 24
+            )
+        }
+        'extended-cyclic-tangential' {
+            @(
+                New-Ellipse 500 330 235 235 'accent' 'none' 4
+                New-Ellipse 530 370 120 120 'accent' 'none' 4
+                New-Polygon @(315,485, 650,485, 695,285, 510,105) 'primary' 'none' 5
+                New-Arc 315 485 82 82 -60 60 'danger' 4
+                New-Text 285 510 'A'
+                New-Text 660 510 'B'
+                New-Text 710 285 'C'
+                New-Text 505 75 'D'
+                New-Text 420 525 '9' 'muted' 24
+                New-Text 390 280 '10' 'muted' 24
+                New-Text 350 445 '60°' 'danger' 22
+            )
+        }
+        'extended-flowerbed' {
+            @(
+                New-Line 190 545 810 545 'primary' 4
+                New-Polygon @(315,510, 685,510, 500,110) 'primary' 'surface' 5
+                New-Ellipse 500 400 90 90 'accent' 'none' 4 $true
+                New-Line 315 510 685 510 'danger' 4
+                New-Text 490 545 'x' 'danger' 26
+                New-Text 470 395 '4 m' 'accent' 22
+            )
+        }
     }
 }
 
@@ -668,6 +715,9 @@ function Get-TemplatePrimitives {
         'exam-2026-parallel-segments' { Get-Exam2026Scene 'parallel-segments' }
         'exam-2026-angle-bisector' { Get-Exam2026Scene 'angle-bisector' }
         'exam-2026-statistics' { Get-Exam2026Scene 'statistics' }
+        'exam-2026-extended-square' { Get-Exam2026Scene 'extended-square' }
+        'exam-2026-extended-cyclic-tangential' { Get-Exam2026Scene 'extended-cyclic-tangential' }
+        'exam-2026-extended-flowerbed' { Get-Exam2026Scene 'extended-flowerbed' }
         default { throw "Nieznany szablon diagramu: $Template" }
     }
 }
@@ -747,6 +797,10 @@ $definitions = @(
     New-Definition 'exam-mm26-z21' 'cke-2026-main-basic' 'Trójkąt KLM z punktem N na boku KL i dwusieczną MN kąta przy wierzchołku M; boki MK i ML opisano jako a i b.' 'exam-2026-angle-bisector' 23
     New-Definition 'exam-mm26-z31' 'cke-2026-main-basic' 'Dwa wykresy słupkowe przedstawiające liczby ocen od 1 do 6 w klasach IV A i IV B.' 'exam-2026-statistics' 30
 
+    New-Definition 'exam-mm26-r0-z04' 'cke-2026-main-extended' 'Kwadrat ABCD z punktami K i L w środkach boków AB i BC, punktem M na boku BC oraz odcinkami DK, DM, KM i AL przecinającymi się w punktach P i Q.' 'exam-2026-extended-square' 8
+    New-Definition 'exam-mm26-r0-z11' 'cke-2026-main-extended' 'Czworokąt ABCD wpisany w okrąg i opisany na drugim okręgu, z bokami AB równym 9 i AD równym 10 oraz kątem BAD równym 60 stopni.' 'exam-2026-extended-cyclic-tangential' 24
+    New-Definition 'exam-mm26-r0-z12' 'cke-2026-main-extended' 'Trójkątny równoramienny kwietnik o podstawie x z wpisaną okrągłą fontanną o średnicy 4 metrów.' 'exam-2026-extended-flowerbed' 28
+
     New-Definition 'course-right-triangle' 'adam-course' 'Trójkąt prostokątny z przyprostokątnymi a i b, przeciwprostokątną c oraz kątem alfa.' 'right-triangle'
     New-Definition 'course-circle-angles' 'adam-course' 'Okrąg z kątem środkowym AOB i kątem wpisanym ACB opartymi na tym samym łuku.' 'circle-angles'
     New-Definition 'course-coordinate-vector' 'adam-course' 'Układ współrzędnych z punktami A i B oraz składowymi wektora od A do B.' 'coordinate-segment'
@@ -761,8 +815,8 @@ $definitions = @(
     New-Definition 'course-vector-8' 'legacy-vectors' 'Różnica wektorów v i w przedstawiona geometrycznie.' 'vector-difference'
 )
 
-if ($definitions.Count -ne 64) {
-    throw "Katalog musi zawierać dokładnie 64 diagramy, a zawiera $($definitions.Count)."
+if ($definitions.Count -ne 67) {
+    throw "Katalog musi zawierać dokładnie 67 diagramów, a zawiera $($definitions.Count)."
 }
 
 $catalog = [ordered]@{ schemaVersion = 1; diagrams = $definitions }
@@ -771,4 +825,4 @@ $normalized = $json.Replace("`r`n", "`n") + "`n"
 $target = [IO.Path]::GetFullPath($OutputPath)
 [IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($target)) | Out-Null
 [IO.File]::WriteAllText($target, $normalized, [Text.UTF8Encoding]::new($false))
-Write-Host "Wygenerowano 64 diagramy wektorowe: $target"
+Write-Host "Wygenerowano 67 diagramów wektorowych: $target"

@@ -11,8 +11,9 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - dział Wektory z ośmioma ilustracjami,
 - materiały issue #35: liczby naturalne i indukcja, alfabet grecki, liczby rzeczywiste i zbiory, algebra, równania i nierówności, funkcja kwadratowa oraz logarytmy,
 - matura główna 2026 PP zweryfikowana z arkuszem i zasadami oceniania CKE: 33 zadania, 37 jednostek postępu i 50 punktów,
+- matura główna 2026 PR zweryfikowana z arkuszem i zasadami oceniania CKE: 12 zadań, 13 jednostek postępu i 50 punktów,
 - 35 zadań matury poprawkowej 2021 zachowanych z identyfikatorami `mp21-*`,
-- wybór dwóch arkuszy i agregacja ich zadań według 17 tematów,
+- wybór trzech arkuszy i agregacja ich zadań według 17 tematów,
 - kalkulator ogólny z parserem wyrażeń, notacją naukową, Ans i historią sesji,
 - kalkulator funkcji kwadratowej,
 - losowanie zadań z całego arkusza i w obrębie wybranego tematu,
@@ -32,7 +33,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - podpisywanie kodu i paczek,
 - paczka macOS dla Apple Silicon.
 
-Manifest `Content/provenance.json` nie zawiera już zasobów o statusie `blocked`, ale publiczne paczki portable pozostają nieopublikowane do czasu wykonania kompletnej checklisty, utworzenia tagu i pomyślnego zakończenia workflow wydania.
+Manifest `Content/provenance.json` nie zawiera grup o statusie `blocked`, a `releaseEligible=true` potwierdza przejście bramy proweniencji. Oba arkusze CKE 2026, zasady oceniania i dziesięć autorskich implementacji wektorowych Avalonia obejmuje rozszerzenie deklaracji z 3 sierpnia 2026 r. Publiczne paczki portable nadal wymagają wykonania kompletnej checklisty wydania.
 
 ## Zastąpione
 

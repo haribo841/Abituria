@@ -4,7 +4,7 @@
 
 Aktywny arkusz `matura-maj-2026-podstawowa` odwzorowuje główny egzamin maturalny z matematyki na poziomie podstawowym z 5 maja 2026 r., kod `MMAP-P0-100-A-2605`. Okładka, puste strony i karta odpowiedzi nie są treścią aplikacji.
 
-Transkrypcja zachowuje 33 oficjalnie numerowane zadania jako 37 osobno ocenianych części, 180 minut pracy i 50 punktów. W aplikacji arkusz występuje przed zachowanym arkuszem poprawkowym 2021.
+Transkrypcja zachowuje 33 oficjalnie numerowane zadania jako 37 osobno ocenianych części, 180 minut pracy i 50 punktów. W aplikacji arkusz występuje przed arkuszem rozszerzonym 2026 i zachowanym arkuszem poprawkowym 2021.
 
 ## Przypięte źródła
 
@@ -53,14 +53,14 @@ Każdy diagram ma stabilny identyfikator, `sourceId` równy `cke-2026-main-basic
 
 ## Proweniencja
 
-Treść arkusza i siedem diagramów pozostają `blocked` w `Content/provenance.json`. Obecna deklaracja `docs/ASSET_RIGHTS_DECLARATION.md` obejmuje wcześniejsze zasoby, ale nie maturę 2026. `releaseEligible=false` pozostaje prawidłowym stanem do czasu osobistego rozszerzenia deklaracji przez użytkownika.
+Treść arkusza ma status `approved` w `Content/provenance.json` na podstawie rozszerzenia `docs/ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r. Siedem figur jest autorskimi implementacjami wektorowymi Avalonia, bez aktywnych rastrów, `Image` lub `Bitmap`. `releaseEligible=true` potwierdza brak grup blokujących.
 
-Rozszerzenie deklaracji musi jednoznacznie wskazać oba pliki CKE, oba adresy, obie sumy SHA-256, zakres redystrybucji w Abiturii oraz siedem diagramów pochodnych. Dopiero wtedy można osobno zmienić statusy `cke-2026-main-basic-exam` i `runtime-vector-diagrams` na `approved`.
+Deklaracja wskazuje źródła obu matur 2026, ich adresy i sumy SHA-256, zakres redystrybucji w Abiturii oraz dziesięć autorskich implementacji wektorowych Avalonia. Grupy `cke-2026-main-basic-exam`, `cke-2026-main-extended-exam` i `runtime-vector-diagrams` mają status `approved`.
 
 ## Testy
 
 - `Matura2026ContentTests` sprawdza kontrakt `33/37/50`, źródła, sumy, etykiety, klucze, tryby, tematy, identyfikatory i diagramy.
 - `Matura2026UiTests` sprawdza wybór arkusza, agregację 17 tematów, kontekst nawigacji, osobny postęp, odpowiedzi złożone, dostępność i trzy rozmiary okna.
 - `CompoundAnswerEvaluatorTests` sprawdza wybór, wynik liczbowy, zapis tekstowy przedziału, przecinek lub kropkę i niepoprawne dane.
-- `DiagramCatalogTests` renderuje wszystkie 64 diagramy w trzech motywach i przy rozmiarach `720x520`, `960x640` oraz `1280x820`.
-- `ReleaseRuntimeTests` wymaga dwóch arkuszy i 72 jednostek postępu, zachowując 35 historycznych zadań 2021.
+- `DiagramCatalogTests` renderuje wszystkie 67 diagramów w trzech motywach i przy rozmiarach `720x520`, `960x640` oraz `1280x820`.
+- `ReleaseRuntimeTests` wymaga trzech arkuszy i 85 jednostek postępu, zachowując 35 historycznych zadań 2021.

@@ -132,7 +132,7 @@ Poza bieżącym zakresem pozostają:
 | NF-19 | Login, Start i kalkulator ogólny zmieniają strukturę układu odpowiednio przy szerokościach `860`, `780` i `900`, bez utraty logicznej kolejności kontrolek. | Wysoki | Zaimplementowane | `AdaptiveLayout`, testy breakpointów Avalonia Headless |
 | NF-20 | Dialogi aplikacji są skalowalne, mają bezpieczne granice wymiarów i przewijanie dla treści wykraczającej poza obszar klienta. | Wysoki | Zaimplementowane | `AdaptiveLayout.CreateDialog`, test właściwości dialogu |
 | NF-21 | Wszystkie kryteria WCAG 2.2 A/AA są przeglądane i śledzone, z jawnym rozdzieleniem dowodów automatycznych, kontroli manualnych i kryteriów nieodpowiednich dla aplikacji desktopowej. | Wysoki | Audyt wykonany, kontrole manualne pozostają jawne | `docs/ACCESSIBILITY_WCAG_AUDIT.md`, `AccessibilityRegressionTests`, `Discussion49StyleRegressionTests` |
-| NF-22 | Aktywne treści używają dokładnie 64 skalowalnych diagramów z opisami alternatywnymi i nie ładują rastrów; `img/icon.ico` pozostaje jedynym statycznym wyjątkiem jako ikona aplikacji. | Wysoki | Zaimplementowane | `Content/diagrams.json`, `DiagramView`, `DiagramCatalogTests`, `LegacyImageArchiveTests` |
+| NF-22 | Aktywne treści używają dokładnie 67 skalowalnych diagramów z opisami alternatywnymi i nie ładują rastrów; `img/icon.ico` pozostaje jedynym statycznym wyjątkiem jako ikona aplikacji. | Wysoki | Zaimplementowane | `Content/diagrams.json`, `DiagramView`, `DiagramCatalogTests`, `LegacyImageArchiveTests` |
 
 ## 6. Opis użytkowników systemu
 
@@ -224,8 +224,8 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 4. `dotnet format whitespace Abituria.sln --verify-no-changes --no-restore` nie zgłasza zmian.
 5. `git diff --check` nie zgłasza błędów.
 6. SonarQube Cloud nie raportuje otwartych problemów po analizie aktualnego commita.
-7. Inwentarz treści potwierdza 18 tablic, kompletne odwzorowanie 17 sekcji CKE, 91 kątów w tabeli trygonometrycznej, 4 grupy i 13 obszarów kursu, kontrakt `119/238/357`, 17 tematów oraz arkusze `33/37/50` i `35/35/45`.
-8. Wszystkie 64 identyfikatory diagramów wskazane przez treści istnieją, są używane i mają niepuste opisy alternatywne; siedem figur matury 2026 ma stronę i źródło.
+7. Inwentarz treści potwierdza 18 tablic, kompletne odwzorowanie 17 sekcji CKE, 91 kątów w tabeli trygonometrycznej, 4 grupy i 13 obszarów kursu, kontrakt `119/238/357`, 17 tematów oraz arkusze `33/37/50`, `12/13/50` i `35/35/45`.
+8. Wszystkie 67 identyfikatorów diagramów wskazane przez treści istnieją, są używane i mają niepuste opisy alternatywne; dziesięć figur matur 2026 ma stronę i źródło.
 9. Każde zadanie ma kompletną umowę odpowiedzi: opcje i klucz, oczekiwany wynik z tolerancją, części odpowiedzi złożonej albo pełne rozwiązanie ujawniane na żądanie.
 10. Kalkulator ogólny przechodzi regresje dla issues #1-#9 oraz powiązanych dyskusji.
 11. Widoki architektury nie używają WPF `Page`, `Frame`, `NavigationWindow` ani nie otwierają nieograniczonych niemodalnych okien.
@@ -252,7 +252,7 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 32. Kryteria Issue #4 wymagają sześciu kafelków, osobnych tras `Matura` i `Zadania`, zachowania 35 identyfikatorów arkusza i istniejącego postępu, wyłącznie używanych diagramów, 75 zgodnych sum archiwum oraz braku aktywnych PNG/JPG, `Bitmap`, `Image` i `AssetImage` poza ikoną `img/icon.ico` używaną tylko jako `ApplicationIcon`.
 33. Kryteria Issue #5 wymagają pojedynczego PiP w trzech trybach, zachowania sesji przy zmianie hosta, ustawienia per profil, dokładnego i uporządkowanego kopiowania `DisplayValue`, wklejania w brudnopisie i odpowiedzi liczbowej oraz izolacji brudnopisu między profilami i zadaniami.
 34. Kryteria Issue #6 wymagają własnego paska bez dekoracji systemowych, historycznej kolejności `🍓` zamknij, `🍋` maksymalizuj lub przywróć, `🍏` minimalizuj po lewej, wyśrodkowanej marki `🍀 Abituria`, motywu po prawej, fontu Mulish oraz tooltipów i nazw automatyzacji wszystkich kontrolek.
-35. Kryteria Issues #7-#9 wymagają źródeł i SHA-256 matury CKE 2026, kontraktu `33/37/50`, zachowania `mp21-*`, dwóch oddzielnych liczników postępu, odpowiedzi `compound`, 64 diagramów, bieżącego odnośnika `haribo841/Abituria#9` oraz proweniencji zablokowanej do osobistej deklaracji użytkownika.
+35. Kryteria Issues #7-#9 wymagają źródeł i SHA-256 matur CKE 2026, kontraktów `33/37/50` i `12/13/50`, zachowania `mp21-*`, trzech oddzielnych liczników postępu, odpowiedzi `compound`, 67 diagramów, bieżącego odnośnika `haribo841/Abituria#9` oraz zatwierdzonej proweniencji opartej na deklaracji właściciela.
 
 ## Macierz zgodności wymagań z implementacją
 
@@ -277,13 +277,17 @@ Historyczne zgłoszenie wymagało uzupełnienia treści działów matematyki. Je
 
 Lokalna implementacja obejmuje pełny kontrakt `119/238/357`, filtr poziomu, ćwiczenia kursowe, postęp i macierz pokrycia. Issue #3 pozostaje otwarte do czasu przejścia wszystkich bramek lokalnych, autoryzowanego pushu, zdalnego wyniku SonarCloud bez nowych Issues i końcowego komentarza z odnośnikami do commita oraz workflow.
 
+## Status Issue #7
+
+Techniczny inwentarz licencji i proweniencji obejmuje matury CKE 2026 na poziomie podstawowym i rozszerzonym, ich zasady oceniania oraz dziesięć autorskich implementacji wektorowych Avalonia. Rozszerzenie deklaracji właściciela z 3 sierpnia 2026 r. wskazuje cztery dokumenty, adresy, sumy SHA-256 i zakres redystrybucji w Abiturii. Grupy `cke-2026-main-basic-exam`, `cke-2026-main-extended-exam` i `runtime-vector-diagrams` mają status `approved`, a `Test-ContentProvenance.ps1 -RequireReleaseEligible` przechodzi. Issue #7 spełnia kryteria zamknięcia.
+
 ## Status issue #36
 
-Repozytorium zawiera implementację procesu przygotowania wersji `0.9.0-beta.1`: jedno źródło wersji, .NET 10 LTS, lockfile, audyt, paczki portable dla trzech systemów, diagnostyczny smoke test, ekran "O programie", dokumentację, sumy, SBOM i atestacje. Zakończenie techniczne nie jest równoznaczne z publicznym wydaniem. Po dodaniu matury CKE 2026 manifest ma `releaseEligible=false`; wymagane jest osobiste rozszerzenie deklaracji, a następnie ponowne przejście bramy proweniencji. Issue #36 nadal można zamknąć dopiero po odblokowaniu praw, utworzeniu tagu, wykonaniu workflow, publicznym prerelease, weryfikacji Pages i komentarzu z linkami oraz checklistą.
+Repozytorium zawiera implementację procesu przygotowania wersji `0.9.0-beta.1`: jedno źródło wersji, .NET 10 LTS, lockfile, audyt, paczki portable dla trzech systemów, diagnostyczny smoke test, ekran "O programie", dokumentację, sumy, SBOM i atestacje. Zakończenie techniczne nie jest równoznaczne z publicznym wydaniem. Po rozszerzeniu deklaracji dla matur CKE 2026 manifest ma `releaseEligible=true`. Issue #36 nadal można zamknąć dopiero po utworzeniu tagu, wykonaniu workflow, publicznym prerelease, weryfikacji Pages i komentarzu z linkami oraz checklistą.
 
 ## Status Issue #9
 
-Bieżące [haribo841/Abituria#9](https://github.com/haribo841/Abituria/issues/9) wymaga utrzymania kompletnej analizy biznesowej obejmującej cele, użytkowników, model udostępniania, zakres, harmonogram, licencję, metodykę wymagań i architekturę. Aktywny dokument [BUSINESS_ANALYSIS.md](BUSINESS_ANALYSIS.md) zawiera weryfikowalne wymagania, testy i bramę pochodzenia zasobów. Historyczny kontekst pozostaje wyłącznie pod pełnym adresem [Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski#38](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38), bez zmian w starym repozytorium. `releaseEligible=false` pozostaje prawidłowym stanem do czasu osobistego rozszerzenia deklaracji dla matury 2026.
+Bieżące [haribo841/Abituria#9](https://github.com/haribo841/Abituria/issues/9) wymaga utrzymania kompletnej analizy biznesowej obejmującej cele, użytkowników, model udostępniania, zakres, harmonogram, licencję, metodykę wymagań i architekturę. Aktywny dokument [BUSINESS_ANALYSIS.md](BUSINESS_ANALYSIS.md) zawiera weryfikowalne wymagania, testy i bramę pochodzenia zasobów. Historyczny kontekst pozostaje wyłącznie pod pełnym adresem [Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski#38](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38), bez zmian w starym repozytorium. `releaseEligible=true` potwierdza zatwierdzenie proweniencji dla bieżącego zakresu.
 
 ## Status issue #43
 

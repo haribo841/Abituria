@@ -5,7 +5,7 @@ Abituria to działająca offline aplikacja desktopowa wspierająca naukę matema
 Planowane pierwsze publiczne wydanie: `0.9.0-beta.1`.
 
 > [!IMPORTANT]
-> Inwentarz pochodzenia ma obecnie `releaseEligible=false`. Matura CKE 2026 i siedem nowych diagramów pozostają zablokowane do czasu osobistego rozszerzenia deklaracji praw przez użytkownika. Nie wolno publikować GitHub Release przed przejściem bramy proweniencji, pełnego workflow i checklisty wydawniczej.
+> Inwentarz pochodzenia ma obecnie `releaseEligible=true`. Deklaracja właściciela obejmuje oba arkusze CKE 2026, zasady oceniania i dziesięć autorskich implementacji wektorowych Avalonia. GitHub Release nadal wymaga przejścia pełnego workflow i checklisty wydawniczej.
 
 ## Pobieranie
 
@@ -114,13 +114,14 @@ Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalneg
 | [Zależności](docs/DEPENDENCIES.md) | dokładnie rozwiązane pakiety produkcyjne i testowe |
 | [Pochodzenie treści](docs/CONTENT_PROVENANCE.md) | zasady dopuszczania treści, fontów i obrazów do paczek oraz oświadczenie o prawach |
 | [Matura maj 2026 PP](docs/MATURA_2026_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 33/37/50, diagramy i status proweniencji |
+| [Matura maj 2026 PR](docs/MATURA_2026_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 12/13/50, diagramy i status proweniencji |
 | [Znane ograniczenia](docs/KNOWN_LIMITATIONS.md) | jawny zakres wersji beta |
 | [Historia zmian](CHANGELOG.md) | pierwsze rzeczywiste wydanie i dalsze zmiany |
 | [Współtworzenie](CONTRIBUTING.md) | przygotowanie zmian, testy, SonarQube Cloud i wymagania pull requestu |
 | [Wsparcie](SUPPORT.md) | zgłaszanie błędów i wymagane dane diagnostyczne |
 | [Bezpieczeństwo](SECURITY.md) | prywatne zgłoszenia podatności i wspierane wersje |
 
-Kompletność kursu rozwijanego w ramach Issue #3, zachowanie treści historycznego Issue #35 oraz regresje opisują [macierz kursu](docs/MATH_COURSE_2023_COVERAGE.md) i [inwentarz migracji](docs/MIGRATION_INVENTORY.md). Zakres nowego arkusza opisuje [macierz matury 2026](docs/MATURA_2026_COVERAGE.md).
+Kompletność kursu rozwijanego w ramach Issue #3, zachowanie treści historycznego Issue #35 oraz regresje opisują [macierz kursu](docs/MATH_COURSE_2023_COVERAGE.md) i [inwentarz migracji](docs/MIGRATION_INVENTORY.md). Zakres arkuszy 2026 opisują [macierz matury podstawowej](docs/MATURA_2026_COVERAGE.md) i [macierz matury rozszerzonej](docs/MATURA_2026_EXTENDED_COVERAGE.md).
 
 ## Autor i licencje
 

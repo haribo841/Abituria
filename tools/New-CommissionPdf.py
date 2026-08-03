@@ -427,8 +427,8 @@ def build_pdf(
                     ["Brama", "Stan", "Znaczenie"],
                     ["Build, testy, format i audyt", "PASS: e0afeea", "Build i SonarCloud zaliczone 18 lipca 2026 r.; lokalny retest 19 lipca."],
                     ["Instalacja niezależna i użyteczność", "PASS", "Natywne runnery Windows, Ubuntu i macOS zaliczone; właściciel potwierdził pomyślne testy z uczestnikami."],
-                    ["Pochodzenie zasobów", "BLOCKED", "Manifest ma releaseEligible=false: matura CKE 2026 i siedem diagramów oczekują na osobiste rozszerzenie deklaracji praw."],
-                    ["GitHub Release", "nieopublikowany", "Brama prawna jest odblokowana; nadal wymagane są commit, tag i pełny workflow."],
+                    ["Pochodzenie zasobów", "PASS", "Manifest ma releaseEligible=true: deklaracja obejmuje matury CKE 2026 i dziesięć autorskich wektorów Avalonia."],
+                    ["GitHub Release", "nieopublikowany", "Brama proweniencji jest odblokowana; nadal wymagane są commit, tag i pełny workflow."],
                 ],
                 [4.1 * cm, 3.2 * cm, 9.9 * cm],
                 st,
@@ -481,7 +481,7 @@ def build_pdf(
             table(
                 [
                     ["Wariant", "Stan", "Zakres"],
-                    ["A - publiczne wydanie", "BLOCKED", "releaseEligible=false; przed commitem wydania wymagane są deklaracja użytkownika i ponowna pełna brama."],
+                    ["A - publiczne wydanie", "READY", "releaseEligible=true; przed tagiem i publikacją wymagane są ponowna pełna brama oraz workflow wydania."],
                     ["B - uzgodnione przekazanie", "ACCEPTED HISTORYCZNIE", "Projekt przekazano w uzgodnionej formie i zatwierdzono na początku lutego 2022 r.; kanał nie zachował się."],
                     ["Bieżący kandydat dokumentacyjny", "PREPARED", "PDF, aktywne dokumenty, manifest i SHA-256; pakiet celowo nie zawiera aplikacji."],
                 ],

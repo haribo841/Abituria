@@ -73,7 +73,7 @@ Testy automatyczne wymagają:
 - braku znanych uszkodzonych komend LaTeX,
 - poprawnego parsowania każdego wyrażenia matematycznego przez renderer CSharpMath.
 
-Bezpośrednia regresja issue #35 wymaga wszystkich wskazanych sekcji, 24 liter alfabetu greckiego, przykładów, wskazówek i odpowiedzi, poprawnego przypadku `\(\Delta{}<0\)` oraz zachowania historycznych identyfikatorów lekcji. Regresja kursu wymaga także rozdzielonych seedów czterech etapów, deterministycznego generatora, filtra poziomu, trzech trybów odpowiedzi, 12 diagramów kursu z opisami alternatywnymi oraz zgodności macierzy `119/238/357`. Testy wymagają ponadto pełnego klucza CKE dla zadań 2021, kontraktu `33/37/50` dla matury 2026 i jednoznacznego przypisania obu arkuszy do wspólnych tematów.
+Bezpośrednia regresja issue #35 wymaga wszystkich wskazanych sekcji, 24 liter alfabetu greckiego, przykładów, wskazówek i odpowiedzi, poprawnego przypadku `\(\Delta{}<0\)` oraz zachowania historycznych identyfikatorów lekcji. Regresja kursu wymaga także rozdzielonych seedów czterech etapów, deterministycznego generatora, filtra poziomu, trzech trybów odpowiedzi, 12 diagramów kursu z opisami alternatywnymi oraz zgodności macierzy `119/238/357`. Testy wymagają ponadto pełnego klucza CKE dla zadań 2021, kontraktów `33/37/50` i `12/13/50` dla matur 2026 oraz jednoznacznego przypisania trzech arkuszy do wspólnych tematów.
 
 Drugi audyt przed usunięciem snapshotów potwierdził `276/276` zgodnych wystąpień zasobów bez braków i różnic. Ujawnił dwa brakujące placeholdery kalkulatorów oraz brak dokładnych kopii dokumentów planistycznych; oba problemy zostały usunięte.
 

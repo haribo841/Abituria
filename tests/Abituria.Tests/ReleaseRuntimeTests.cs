@@ -241,8 +241,8 @@ public sealed class ReleaseRuntimeTests
             Assert.Equal(13, report.CourseAreaCount);
             Assert.Equal(119, report.CourseRequirementCount);
             Assert.Equal(357, report.CourseExerciseCount);
-            Assert.Equal(2, report.ExamCount);
-            Assert.Equal(72, report.ExamExerciseCount);
+            Assert.Equal(3, report.ExamCount);
+            Assert.Equal(85, report.ExamExerciseCount);
             Assert.Equal("Dwa miejsca zerowe: x₁ = 1, x₂ = 2", report.QuadraticSummary);
 
             var profiles = await services.GetRequiredService<AccountService>().GetProfilesAsync();

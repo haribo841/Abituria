@@ -2,9 +2,9 @@
 
 Wersja dokumentu: `0.9.0-beta.1`.
 
-Data ostatniego lokalnego wykonania: 2 sierpnia 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
+Data ostatniego lokalnego wykonania: 3 sierpnia 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
 
-Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` zakończył się wynikiem `518/518 PASS` w czasie `51,3 s`. OpenCover wykazał `95,85%` pokrycia linii i `87,89%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,64%` pokrycia łącznego i `87,94%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
+Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` z raportem OpenCover zakończył się wynikiem `524/524 PASS` w czasie `34 s`. OpenCover wykazał `95,87%` pokrycia linii i `87,86%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,65%` pokrycia łącznego i `87,91%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
 
 Dokument rozróżnia wyniki automatyczne, retrospektywne poświadczenie historycznych testów uczestników oraz czynności bieżącego procesu wydawniczego. Brak szczegółowej karty sesji nie jest uzupełniany przez domysł, a poświadczenie historyczne nie jest przedstawiane jako test bieżącej paczki.
 
@@ -32,8 +32,8 @@ Testy `[AvaloniaFact]` tworzą izolowane aplikacje, dispatchery i renderery Skia
 | --- | --- | --- |
 | Kalkulator | `ExpressionCalculatorTests`, `ExpressionCalculatorRobustnessTests`, `CalculatorSessionTests`, `RepeatedEqualsTests`, `QuadraticSolverTests`, `Issue5CalculatorPipTests` | poprawność obliczeń, błędy wejścia, granice, historia, PiP i schowek `Ans` |
 | Konta i dane | `AccountServiceTests`, `Issue14RegistrationRegressionTests`, `ReleaseDatabaseCompatibilityTests`, `ExerciseScratchpadSessionTests` | profil gościa, hasła, odzyskiwanie, postęp, preferencję PiP, brudnopis sesji i kompatybilność bazy |
-| Treści | `ContentInventoryTests`, `ContentSeparationTests`, `Issue35MathChaptersRegressionTests`, `Formula2023ContentTests`, `MathCourse2023ContentTests`, `Matura2026ContentTests`, `DiagramCatalogTests`, `LegacyImageArchiveTests` | kompletność tablic i kursu Formuły 2023, kontrakty `4/13/73/46/238/357` i `33/37/50`, zachowanie 35 zadań 2021, 64 aktywne diagramy, zgodność archiwum 75 obrazów, źródła, SHA-256, format JSON i renderowanie treści |
-| UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests`, `Issue4NavigationTests`, `Issue5CalculatorPipTests`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` | osiągalne ścieżki użytkownika, dwa arkusze, agregację 17 tematów, oddzielny postęp, odpowiedzi złożone, wszystkie trasy shella, kontrolowany pojedynczy PiP, wklejanie, losowanie i kontekst zadania |
+| Treści | `ContentInventoryTests`, `ContentSeparationTests`, `Issue35MathChaptersRegressionTests`, `Formula2023ContentTests`, `MathCourse2023ContentTests`, `Matura2026ContentTests`, `Matura2026ExtendedContentTests`, `DiagramCatalogTests`, `LegacyImageArchiveTests` | kompletność tablic i kursu Formuły 2023, kontrakty `4/13/73/46/238/357`, `33/37/50` i `12/13/50`, zachowanie 35 zadań 2021, 67 aktywnych diagramów, zgodność archiwum 75 obrazów, źródła, SHA-256, format JSON i renderowanie treści |
+| UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests`, `Issue4NavigationTests`, `Issue5CalculatorPipTests`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` | osiągalne ścieżki użytkownika, trzy arkusze, agregację 17 tematów, oddzielny postęp, odpowiedzi złożone, wszystkie trasy shella, kontrolowany pojedynczy PiP, wklejanie, losowanie i kontekst zadania |
 | Dostępność kontrolek | `AccessibilityRegressionTests` | nazwy pól i symbolicznych przycisków oraz dynamiczne regiony wyników |
 | Wizualne | `Discussion10VisualRegressionTests` | renderowanie list matematycznych i zachowanie przy minimalnym rozmiarze okna |
 | Styl, motywy i własny chrome | `Discussion49StyleRegressionTests` | Mulish, brak wymuszonego Light i Inter, historyczne emoji `🍓`/`🍋`/`🍏`, tooltipy, cztery ustawienia motywu, stany interakcji, fokus, breakpointy, dialogi, sterowanie i skalowanie okna |
@@ -150,7 +150,7 @@ Historyczny odbiór Issue #43 jest zaliczony na podstawie łącznie udokumentowa
 3. historyczna forma przekazania została uzgodniona i przyjęta;
 4. brakujące szczegóły sesji, podpisu, kanału i hasha są ujawnione jako ograniczenia archiwalne, a nie uzupełnione fikcyjnymi danymi.
 
-Publiczne wydanie `0.9.0-beta.1` jest osobnym procesem. Zwykły walidator proweniencji ma potwierdzać kompletność manifestu, ale brama wydawnicza jest obecnie celowo czerwona: `releaseEligible=false`, a grupy matury CKE 2026 i wspólnego katalogu diagramów pozostają `blocked`. Po osobistym rozszerzeniu `ASSET_RIGHTS_DECLARATION.md` trzeba zaktualizować statusy i ponownie uruchomić oba warianty walidatora.
+Publiczne wydanie `0.9.0-beta.1` jest osobnym procesem. Zwykły walidator proweniencji i brama `-RequireReleaseEligible` przechodzą po rozszerzeniu `ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r.; manifest ma `releaseEligible=true` i nie zawiera grup `blocked`. Oba warianty walidatora trzeba ponowić na dokładnym commicie przeznaczonym do wydania.
 
 Do wykonania pozostają:
 

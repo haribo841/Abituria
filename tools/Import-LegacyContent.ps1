@@ -498,4 +498,4 @@ try {
     }
 }
 
-Write-Host "Wygenerowano: $($formulas.Count) tablic, 34 lekcje kursu, 64 diagramy i $($exam.exercises.Count) zadań historycznego arkusza."
+Write-Host "Wygenerowano: $($formulas.Count) tablic, 34 lekcje kursu, 67 diagramów i $($exam.exercises.Count) zadań historycznego arkusza."

@@ -72,7 +72,7 @@ public sealed class ExerciseRandomizerTests
             window.Show();
             Dispatcher.UIThread.RunJobs();
 
-            ClickButton(maturaView, "Losuj zadanie z arkusza 2026");
+            ClickButton(maturaView, $"Losuj zadanie z arkusza: {exam.Title}");
 
             Assert.Same(geometry, opened);
             Assert.Null(selectedTopicId);
@@ -104,8 +104,9 @@ public sealed class ExerciseRandomizerTests
     [AvaloniaFact]
     public void Matura_disables_randomization_for_an_empty_pool()
     {
+        var exam = new ExamDefinition { Title = "Pusty arkusz", Year = 2026 };
         var view = new MaturaView(
-            [new ExamDefinition { Year = 2026 }],
+            [exam],
             [],
             _ => { },
             _ => { },
@@ -113,7 +114,10 @@ public sealed class ExerciseRandomizerTests
 
         var button = view.GetLogicalDescendants()
             .OfType<Button>()
-            .Single(control => string.Equals(control.Content as string, "Losuj zadanie z arkusza 2026", StringComparison.Ordinal));
+            .Single(control => string.Equals(
+                control.Content as string,
+                $"Losuj zadanie z arkusza: {exam.Title}",
+                StringComparison.Ordinal));
 
         Assert.False(button.IsEnabled);
     }
