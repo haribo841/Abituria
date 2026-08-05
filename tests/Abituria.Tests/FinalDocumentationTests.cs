@@ -92,6 +92,8 @@ public sealed class FinalDocumentationTests
         Assert.Contains("commission-documentation-candidate", handoffScript, StringComparison.Ordinal);
         Assert.Contains("isRunnable = $false", handoffScript, StringComparison.Ordinal);
         Assert.Contains("cke-2021-correction-exam", handoffScript, StringComparison.Ordinal);
+        Assert.Contains("cke-2025-main-basic-exam", handoffScript, StringComparison.Ordinal);
+        Assert.Contains("cke-2025-main-extended-exam", handoffScript, StringComparison.Ordinal);
         Assert.Contains("cke-2026-main-basic-exam", handoffScript, StringComparison.Ordinal);
         Assert.Contains("cke-2026-main-extended-exam", handoffScript, StringComparison.Ordinal);
         Assert.Contains("cke-formula-2023-transcription", handoffScript, StringComparison.Ordinal);
@@ -100,7 +102,7 @@ public sealed class FinalDocumentationTests
     }
 
     [Fact]
-    public void Issue_43_retrospective_evidence_is_honest_and_publication_remains_separate()
+    public void Issue_43_retrospective_evidence_is_honest_and_publication_is_separate()
     {
         var usabilityProtocol = File.ReadAllText(Absolute("docs/USABILITY_TEST_PROTOCOL.md"));
         var usabilityResults = File.ReadAllText(Absolute("docs/USABILITY_TEST_RESULTS.md"));
@@ -114,13 +116,15 @@ public sealed class FinalDocumentationTests
         Assert.Contains("początek lutego 2022 r.; dokładny dzień nie został zachowany", acceptance, StringComparison.Ordinal);
         Assert.Contains("ACCEPTED - READY TO CLOSE", acceptance, StringComparison.Ordinal);
         Assert.Contains("Właściciel projektu poświadczył", delivery, StringComparison.Ordinal);
-        Assert.Contains("Nie utworzono tagu ani GitHub Release", delivery, StringComparison.Ordinal);
-        Assert.Contains("Publiczny GitHub Release `0.9.0-beta.1` nie istnieje", requirements, StringComparison.Ordinal);
+        Assert.Contains("releases/tag/v0.9.0-beta.1", delivery, StringComparison.Ordinal);
+        Assert.Contains("Publiczny GitHub Release `0.9.0-beta.1` pozostaje odrębnym, ukończonym działaniem", requirements, StringComparison.Ordinal);
 
         var provenance = File.ReadAllText(Absolute("Content/provenance.json"));
         Assert.Contains("\"releaseEligible\": true", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2026-main-basic-exam\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2026-main-extended-exam\"", provenance, StringComparison.Ordinal);
+        Assert.Contains("\"id\": \"cke-2025-main-basic-exam\"", provenance, StringComparison.Ordinal);
+        Assert.Contains("\"id\": \"cke-2025-main-extended-exam\"", provenance, StringComparison.Ordinal);
         Assert.DoesNotContain("\"distributionStatus\": \"blocked\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"distributionStatus\": \"approved\"", provenance, StringComparison.Ordinal);
         Assert.True(File.Exists(Absolute("docs/ASSET_RIGHTS_DECLARATION.md")), "Brak deklaracji praw do zasobów.");
@@ -167,7 +171,7 @@ public sealed class FinalDocumentationTests
     }
 
     [Fact]
-    public void Issue_45_evaluation_records_historical_acceptance_without_claiming_current_release()
+    public void Issue_45_evaluation_records_historical_acceptance_separately_from_current_release()
     {
         var evaluation = File.ReadAllText(Absolute("docs/EVALUATION_PROTOCOL.md"));
 
@@ -185,7 +189,7 @@ public sealed class FinalDocumentationTests
         Assert.Contains("Nie zawiera ogłoszenia formalnej decyzji ani oceny bardzo dobrej", evaluation, StringComparison.Ordinal);
         Assert.Contains("projekt i obrona uzyskały wynik bardzo dobry", evaluation, StringComparison.Ordinal);
         Assert.Contains("ACCEPTED - HISTORICAL CRITERIA SATISFIED - READY TO CLOSE AS COMPLETED", evaluation, StringComparison.Ordinal);
-        Assert.Contains("TECHNICALLY ACCEPTED - PUBLIC RELEASE PENDING", evaluation, StringComparison.Ordinal);
+        Assert.Contains("TECHNICALLY ACCEPTED - PUBLIC RELEASED", evaluation, StringComparison.Ordinal);
         Assert.DoesNotContain("- [ ]", evaluation, StringComparison.Ordinal);
     }
 

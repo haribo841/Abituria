@@ -112,6 +112,8 @@ try {
         releaseEligibilityAtGeneration = $releaseEligibility
         packagedAssetGroupsNotIncludedBecausePackageIsDocumentationOnly = @(
             "cke-2021-correction-exam",
+            "cke-2025-main-basic-exam",
+            "cke-2025-main-extended-exam",
             "cke-2026-main-basic-exam",
             "cke-2026-main-extended-exam",
             "cke-formula-2023-transcription",
@@ -122,6 +124,8 @@ try {
             "aplikacja i biblioteki wykonywalne - poza zakresem pakietu dokumentacyjnego",
             "kod źródłowy i testy - poza zakresem pakietu dokumentacyjnego",
             "Content/exam-2021-correction.json - poza zakresem pakietu dokumentacyjnego",
+            "Content/exam-2025-main-basic.json - poza zakresem pakietu dokumentacyjnego",
+            "Content/exam-2025-main-extended.json - poza zakresem pakietu dokumentacyjnego",
             "Content/exam-2026-main-basic.json - poza zakresem pakietu dokumentacyjnego",
             "Content/exam-2026-main-extended.json - poza zakresem pakietu dokumentacyjnego",
             "Content/diagrams.json - poza zakresem pakietu dokumentacyjnego",

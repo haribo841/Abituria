@@ -43,6 +43,6 @@ Na tej podstawie historyczny cel Issue #43 można uznać za spełniony i zgłosz
 
 ## Publiczne wydanie obecnej migracji
 
-Publiczne wydanie `0.9.0-beta.1` w GitHub Releases nie zostało wykonane. Nie istnieje obecnie publiczny tag ani Release tej wersji. Jest to osobne zadanie wydawnicze dla migracji z 2026 r. i nie zmienia retrospektywnego wyniku Issue #43 dotyczącego oryginalnego projektu.
+Publiczne wydanie migracji zostało ukończone jako [prerelease `v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1). Jest to osobne zadanie wydawnicze dla migracji z 2026 r. i nie zmienia retrospektywnego wyniku Issue #43 dotyczącego oryginalnego projektu.
 
-Oświadczenie o posiadaniu praw zostało zapisane w `../ASSET_RIGHTS_DECLARATION.md` i odzwierciedlone w bieżącym `Content/provenance.json`. Nie oznacza to, że publiczne wydanie już wykonano - tag, workflow wydawniczy i publikacja Release pozostają osobnym procesem.
+Oświadczenie o posiadaniu praw zostało zapisane w `../ASSET_RIGHTS_DECLARATION.md` i odzwierciedlone w bieżącym `Content/provenance.json`. Tag, workflow wydawniczy i publikacja Release pozostają procesem odrębnym od historycznego odbioru i zostały zweryfikowane zgodnie z `../RELEASE_PROCESS.md`.

@@ -266,13 +266,13 @@ def build_pdf(
             Spacer(1, 0.6 * cm),
             p("Wersja: <b>0.9.0-beta.1</b>", st["Subtitle"]),
             p(f"Data wygenerowania: <b>{(generated_on or date.today()).isoformat()}</b>", st["Subtitle"]),
-            p("Commit technicznej bazy: <b>e0afeeaee30ed700fa5b8dc873409c23081106d4</b>", st["Subtitle"]),
+            p("Wydanie technicznej bazy: <b>v0.9.0-beta.1</b>", st["Subtitle"]),
             p("Kod źródłowy: <b>github.com/haribo841/Abituria</b>", st["Subtitle"]),
             Spacer(1, 2.0 * cm),
             p(
                 "Status dokumentu: pakiet techniczny z zapisem publicznej obrony M7 z 17 stycznia 2022 r. oraz "
                 "retrospektywnym zapisem późniejszego zatwierdzenia projektu przez prowadzącego na początku lutego "
-                "2022 r. Publiczny GitHub Release bieżącej migracji nie został jeszcze opublikowany.",
+                "2022 r. Bieżąca migracja została opublikowana osobno jako publiczny prerelease v0.9.0-beta.1.",
                 st["Body"],
             ),
             PageBreak(),
@@ -294,7 +294,7 @@ def build_pdf(
                 [
                     ["Obszar", "Zakres"],
                     ["Nauka", "18 tablic, 7 dostępnych działów, przykłady, zadania, podpowiedzi i odpowiedzi."],
-                    ["Zadania", "Matura 2026 PP: 33 zadania i 37 części; zachowane 35 zadań 2021, 17 wspólnych tematów, oddzielny postęp i losowanie kontekstowe."],
+                    ["Zadania", "Matury główne 2025 i 2026 na obu poziomach oraz poprawkowa 2021: pięć arkuszy, 133 jednostki postępu, 17 wspólnych tematów i losowanie kontekstowe."],
                     ["Kalkulatory", "Kalkulator funkcji kwadratowej oraz parser wyrażeń z potęgami, pierwiastkami, Ans i historią."],
                     ["Dane", "Profile gościa i konta lokalne, SQLite, hasła chronione PBKDF2-HMAC-SHA256."],
                     ["Wydanie", "Paczki self-contained x64 przygotowane dla Windows, Ubuntu i macOS Intel, z kontrolowanym smoke testem."],
@@ -376,7 +376,7 @@ def build_pdf(
                 "Zestaw xUnit obejmuje testy jednostkowe, integracyjne, regresyjne, wizualne, headless UI, "
                 "systemowe i kontraktowe wydania. Automatyczna brama wykonuje restore z lockfile, build Release, "
                 "testy, formatowanie, audyt NuGet, walidację pochodzenia treści oraz analizę SonarQube. "
-                "Pełny lokalny przebieg 27 lipca 2026 r. zakończył się wynikiem 455/455.",
+                "Pełny lokalny przebieg 5 sierpnia 2026 r. zakończył się wynikiem 529/529.",
                 st["Body"],
             ),
             table(
@@ -425,18 +425,17 @@ def build_pdf(
             table(
                 [
                     ["Brama", "Stan", "Znaczenie"],
-                    ["Build, testy, format i audyt", "PASS: e0afeea", "Build i SonarCloud zaliczone 18 lipca 2026 r.; lokalny retest 19 lipca."],
+                    ["Build, testy, format i audyt", "PASS", "Lokalna pełna brama 529/529 i pokrycie ponad progami; workflow wydania obejmuje zdalny SonarQube."],
                     ["Instalacja niezależna i użyteczność", "PASS", "Natywne runnery Windows, Ubuntu i macOS zaliczone; właściciel potwierdził pomyślne testy z uczestnikami."],
-                    ["Pochodzenie zasobów", "PASS", "Manifest ma releaseEligible=true: deklaracja obejmuje matury CKE 2026 i dziesięć autorskich wektorów Avalonia."],
-                    ["GitHub Release", "nieopublikowany", "Brama proweniencji jest odblokowana; nadal wymagane są commit, tag i pełny workflow."],
+                    ["Pochodzenie zasobów", "PASS", "Manifest ma releaseEligible=true: deklaracja obejmuje matury CKE 2025 i 2026 oraz dziewiętnaście autorskich wektorów Avalonia."],
+                    ["GitHub Release", "PUBLISHED", "Publiczny prerelease v0.9.0-beta.1 zawiera zweryfikowane paczki, sumy, SBOM i atestacje."],
                 ],
                 [4.1 * cm, 3.2 * cm, 9.9 * cm],
                 st,
             ),
             p(
-                "Lokalnego artefaktu nadal nie można nazywać publicznym wydaniem. Brama praw do zasobów została "
-                "odblokowana oświadczeniem udokumentowanym w ASSET_RIGHTS_DECLARATION.md, ale faktyczna publikacja "
-                "wymaga jeszcze zatwierdzonego commita, tagu i pomyślnego workflow wydania.",
+                "Publiczny prerelease v0.9.0-beta.1 został utworzony z zatwierdzonego commita po przejściu bramy "
+                "praw do zasobów, pełnego workflow wydania oraz kontroli wygenerowanego draftu.",
                 st["Body"],
             ),
             PageBreak(),
@@ -481,7 +480,7 @@ def build_pdf(
             table(
                 [
                     ["Wariant", "Stan", "Zakres"],
-                    ["A - publiczne wydanie", "READY", "releaseEligible=true; przed tagiem i publikacją wymagane są ponowna pełna brama oraz workflow wydania."],
+                    ["A - publiczne wydanie", "PUBLISHED", "v0.9.0-beta.1; releaseEligible=true; pełna brama i workflow wydania zakończone powodzeniem."],
                     ["B - uzgodnione przekazanie", "ACCEPTED HISTORYCZNIE", "Projekt przekazano w uzgodnionej formie i zatwierdzono na początku lutego 2022 r.; kanał nie zachował się."],
                     ["Bieżący kandydat dokumentacyjny", "PREPARED", "PDF, aktywne dokumenty, manifest i SHA-256; pakiet celowo nie zawiera aplikacji."],
                 ],
@@ -492,7 +491,7 @@ def build_pdf(
             p(
                 "Historyczne uzgodnione przekazanie i zatwierdzenie zamyka formalną bramę Issue #43. Bieżący "
                 "kandydat dokumentacyjny nie jest uruchamialną Abiturią ani publicznym wydaniem. Publiczny GitHub "
-                "Release pozostaje osobnym, jeszcze niewykonanym działaniem opisanym w RELEASE_PROCESS.md.",
+                "Release v0.9.0-beta.1 pozostaje osobnym, ukończonym działaniem opisanym w RELEASE_PROCESS.md.",
                 st["Body"],
             ),
             p("10. Materiały przekazywane komisji", st["Heading"]),
@@ -564,8 +563,8 @@ def build_pdf(
                 st["Body"],
             ),
             p(
-                "Obrona dotyczyła historycznej wersji projektu. Jej pozytywny wynik nie oznacza, że bieżąca "
-                "migracja AvaloniaUI 0.9.0-beta.1 została opublikowana w GitHub Releases.",
+                "Obrona dotyczyła historycznej wersji projektu. Jej pozytywny wynik nie jest dowodem późniejszego, "
+                "odrębnego wydania migracji AvaloniaUI 0.9.0-beta.1 w GitHub Releases.",
                 st["Body"],
             ),
             PageBreak(),
@@ -582,8 +581,8 @@ def build_pdf(
                     ["1. Prezentacja", "PASS: prezentacja, demonstracja i Q&A na nagraniu", "NOT APPLICABLE"],
                     ["2. Produkt", "PASS RETROSPEKTYWNY", "PASS techniczny"],
                     ["3. Dokumentacja", "PARTIAL: ograniczony materiał archiwalny", "PASS lokalny"],
-                    ["4. Testowanie", "PASS RETROSPEKTYWNY", "PASS: 455/455"],
-                    ["5. Wdrożenie", "PASS: dwie publiczne paczki; niezależna instalacja retrospektywna", "PENDING publicznego Release"],
+                    ["4. Testowanie", "PASS RETROSPEKTYWNY", "PASS: 529/529"],
+                    ["5. Wdrożenie", "PASS: dwie publiczne paczki; niezależna instalacja retrospektywna", "PASS: publiczny prerelease"],
                     ["6. Praca zespołu", "PARTIAL: brak osobnej pisemnej opinii", "PASS dla pracy jednoosobowej"],
                     ["7. Wkład", "PARTIAL: brak ocen indywidualnych", "Adam Kubiś - autor bieżącej implementacji"],
                 ],
@@ -596,7 +595,7 @@ def build_pdf(
                     ["Warunki", "Projekt historyczny 2022", "Bieżąca migracja"],
                     ["1-4: zakres, funkcje, brak błędów krytycznych, testy", "PASS lub PASS RETROSPEKTYWNY", "PASS lokalny"],
                     ["5-8: dokumentacja, niezależne uruchomienie, komisja, uzasadnienie", "PASS; ograniczenia archiwalne ujawnione", "PASS techniczny; komisja NOT APPLICABLE"],
-                    ["9-10: wdrożenie i odbiór przyrostów", "PASS lub PASS RETROSPEKTYWNY", "Release PENDING; odbiór komisji NOT APPLICABLE"],
+                    ["9-10: wdrożenie i odbiór przyrostów", "PASS lub PASS RETROSPEKTYWNY", "Release PASS; odbiór komisji NOT APPLICABLE"],
                 ],
                 [4.6 * cm, 6.2 * cm, 6.4 * cm],
                 st,
@@ -610,7 +609,7 @@ def build_pdf(
             p("Decyzja dla Issue #45", st["Subheading"]),
             p(
                 "ACCEPTED - HISTORICAL CRITERIA SATISFIED - READY TO CLOSE AS COMPLETED. Publiczne wydanie "
-                "0.9.0-beta.1 pozostaje osobnym procesem i ma status PUBLIC RELEASE PENDING.",
+                "0.9.0-beta.1 pozostaje osobnym procesem i ma status PUBLIC RELEASED.",
                 st["Body"],
             ),
         ]

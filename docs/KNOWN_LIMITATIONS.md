@@ -4,7 +4,7 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 
 ## Status publikacji
 
-- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=true`. Rozszerzenie `ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r. obejmuje oba arkusze CKE 2026, zasady oceniania oraz dziesięć autorskich implementacji wektorowych Avalonia.
+- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=true`. Rozszerzenia `ASSET_RIGHTS_DECLARATION.md` z 3 i 5 sierpnia 2026 r. obejmują arkusze CKE 2025 i 2026 na obu poziomach, zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia.
 - Rzeczywiste autorstwo i źródła są przypisane w `Content/provenance.json`. Przed tagiem trzeba ponownie przejść bramę `-RequireReleaseEligible` na dokładnym commicie wydania.
 - Lokalnie zbudowany artefakt nie jest oficjalnym wydaniem, nawet jeśli przechodzi testy techniczne.
 
@@ -33,7 +33,7 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 
 - Kurs matematyki obejmuje Formułę 2023 na poziomie podstawowym i rozszerzonym; nie zawiera osobnego kursu Formuły 2015.
 - Ćwiczenia kursowe są autorskie i nie odtwarzają zadań ani rozwiązań z informatorów CKE.
-- Dostępne są matura główna 2026 na poziomie podstawowym oraz arkusz poprawkowy 2021. Arkusze 2019, 2020 i zwykła matura podstawowa 2021 pozostają w przygotowaniu.
+- Dostępne są matury główne 2025 i 2026 na poziomie podstawowym i rozszerzonym oraz arkusz poprawkowy 2021. Arkusze 2019, 2020 i zwykła matura podstawowa 2021 pozostają w przygotowaniu.
 - Generator wykresów i kalkulator funkcji trygonometrycznych pozostają placeholderami.
 - Renderer CSharpMath obsługuje używany podzbiór zapisu matematycznego, ale nie jest pełnym silnikiem TeX. Treści muszą przechodzić walidację delimitera i regresje renderowania.
 - Materiały edukacyjne nie zastępują nauczyciela, oficjalnego informatora egzaminacyjnego ani aktualnych komunikatów CKE.

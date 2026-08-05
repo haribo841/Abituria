@@ -4,7 +4,7 @@
 
 Aktywny arkusz `matura-maj-2026-rozszerzona` odwzorowuje główny egzamin maturalny z matematyki na poziomie rozszerzonym z 11 maja 2026 r., kod `MMAP-R0-100-A-2605`. Okładka, puste strony i karta odpowiedzi nie są treścią aplikacji.
 
-Transkrypcja zachowuje 12 oficjalnie numerowanych zadań jako 13 osobno ocenianych części, 180 minut pracy i 50 punktów. Zadania `12.1` i `12.2` mają wspólny identyfikator grupy, lecz oddzielny postęp i punktację. Arkusz rozszerzony występuje między arkuszem podstawowym 2026 a zachowanym arkuszem poprawkowym 2021.
+Transkrypcja zachowuje 12 oficjalnie numerowanych zadań jako 13 osobno ocenianych części, 180 minut pracy i 50 punktów. Zadania `12.1` i `12.2` mają wspólny identyfikator grupy, lecz oddzielny postęp i punktację. Arkusz rozszerzony występuje po arkuszu podstawowym 2026 i przed arkuszami 2025 oraz zachowanym arkuszem poprawkowym 2021.
 
 ## Przypięte źródła
 
@@ -60,6 +60,6 @@ Deklaracja wskazuje oba arkusze 2026, oba zestawy zasad oceniania, cztery adresy
 
 - `Matura2026ExtendedContentTests` sprawdza kontrakt `12/13/50`, źródła, sumy, etykiety, strony, punktację, tryby odpowiedzi, wyniki i trzy diagramy.
 - `Matura2026ContentTests` zachowuje kontrakt `33/37/50` poziomu podstawowego oraz komplet 35 zadań `mp21-*`.
-- `Matura2026UiTests` sprawdza trzy arkusze, 85 jednostek postępu, agregację 17 tematów, kontekst nawigacji, osobne liczniki i odpowiedzi złożone.
-- `DiagramCatalogTests` renderuje wszystkie 67 diagramów w trzech motywach i przy rozmiarach `720x520`, `960x640` oraz `1280x820`.
-- `ReleaseRuntimeTests` wymaga trzech arkuszy i 85 jednostek postępu.
+- `Matura2026UiTests` sprawdza pięć arkuszy, 133 jednostki postępu, agregację 17 tematów, kontekst nawigacji, osobne liczniki i odpowiedzi złożone.
+- `DiagramCatalogTests` renderuje wszystkie 76 diagramów w trzech motywach i przy rozmiarach `720x520`, `960x640` oraz `1280x820`.
+- `ReleaseRuntimeTests` wymaga pięciu arkuszy i 133 jednostek postępu.

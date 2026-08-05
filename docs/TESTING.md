@@ -2,9 +2,9 @@
 
 Wersja dokumentu: `0.9.0-beta.1`.
 
-Data ostatniego lokalnego wykonania: 3 sierpnia 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
+Data ostatniego lokalnego wykonania: 5 sierpnia 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
 
-Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` z raportem OpenCover zakończył się wynikiem `524/524 PASS` w czasie `34 s`. OpenCover wykazał `95,87%` pokrycia linii i `87,86%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,65%` pokrycia łącznego i `87,91%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
+Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` z raportem OpenCover zakończył się wynikiem `529/529 PASS` w czasie `29 s`. OpenCover wykazał `95,88%` pokrycia linii i `87,70%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,60%` pokrycia łącznego i `87,75%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
 
 Dokument rozróżnia wyniki automatyczne, retrospektywne poświadczenie historycznych testów uczestników oraz czynności bieżącego procesu wydawniczego. Brak szczegółowej karty sesji nie jest uzupełniany przez domysł, a poświadczenie historyczne nie jest przedstawiane jako test bieżącej paczki.
 
@@ -19,7 +19,7 @@ Celem testów końcowych jest potwierdzenie, że Abituria spełnia aktualny zakr
 | Funkcjonalne i nawigacyjne | Avalonia Headless: logowanie, routing, zadania, podpowiedzi, odpowiedzi i postęp | wykonywane w `dotnet test` |
 | Regresyjne i wizualne | klasy `*RegressionTests`, obrazy wzorcowe treści oraz render motywów i fokusu | wykonywane w `dotnet test` |
 | Wydajnościowe, pamięciowe i obciążeniowe | `PerformanceMemoryAndLoadTests` | wykonane lokalnie w konfiguracji Release |
-| Systemowe wydania | smoke test wyodrębnionej paczki na natywnych runnerach Windows, Ubuntu i macOS | PASS - [`platform-installation-smoke` dla `e0afeea`](https://github.com/haribo841/Abituria/actions/runs/29646667838); proweniencja PASS, ale publiczne wydanie nie zostało wykonane |
+| Systemowe wydania | smoke test wyodrębnionej paczki na natywnych runnerach Windows, Ubuntu i macOS | PASS - [`platform-installation-smoke` dla `e0afeea`](https://github.com/haribo841/Abituria/actions/runs/29646667838) oraz wieloplatformowy workflow publicznego prerelease `v0.9.0-beta.1` |
 | Instalacyjne na niezależnych komputerach | workflow na hostowanych natywnych runnerach oraz procedura w `ACCEPTANCE_PROTOCOL.md` | PASS formalny na trzech niezależnych komputerach CI; ręczna sesja człowieka jest opcjonalnym uzupełnieniem |
 | Użyteczności i dostępności | automatyczne scenariusze UI, poświadczenie historycznych testów uczestników oraz protokół powtórzenia | PASS RETROSPEKTYWNY dla historycznych uczestników; bieżąca część automatyczna PASS; szczegółowe karty historyczne nie zostały zachowane |
 | Akceptacyjne | śledzenie kryteriów w `REQUIREMENTS.md` i protokół końcowego odbioru | historyczny projekt zaakceptowany przez prowadzącego na początku lutego 2022 r.; publiczna publikacja bieżącej wersji ma osobną bramę |
@@ -32,8 +32,8 @@ Testy `[AvaloniaFact]` tworzą izolowane aplikacje, dispatchery i renderery Skia
 | --- | --- | --- |
 | Kalkulator | `ExpressionCalculatorTests`, `ExpressionCalculatorRobustnessTests`, `CalculatorSessionTests`, `RepeatedEqualsTests`, `QuadraticSolverTests`, `Issue5CalculatorPipTests` | poprawność obliczeń, błędy wejścia, granice, historia, PiP i schowek `Ans` |
 | Konta i dane | `AccountServiceTests`, `Issue14RegistrationRegressionTests`, `ReleaseDatabaseCompatibilityTests`, `ExerciseScratchpadSessionTests` | profil gościa, hasła, odzyskiwanie, postęp, preferencję PiP, brudnopis sesji i kompatybilność bazy |
-| Treści | `ContentInventoryTests`, `ContentSeparationTests`, `Issue35MathChaptersRegressionTests`, `Formula2023ContentTests`, `MathCourse2023ContentTests`, `Matura2026ContentTests`, `Matura2026ExtendedContentTests`, `DiagramCatalogTests`, `LegacyImageArchiveTests` | kompletność tablic i kursu Formuły 2023, kontrakty `4/13/73/46/238/357`, `33/37/50` i `12/13/50`, zachowanie 35 zadań 2021, 67 aktywnych diagramów, zgodność archiwum 75 obrazów, źródła, SHA-256, format JSON i renderowanie treści |
-| UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests`, `Issue4NavigationTests`, `Issue5CalculatorPipTests`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` | osiągalne ścieżki użytkownika, trzy arkusze, agregację 17 tematów, oddzielny postęp, odpowiedzi złożone, wszystkie trasy shella, kontrolowany pojedynczy PiP, wklejanie, losowanie i kontekst zadania |
+| Treści | `ContentInventoryTests`, `ContentSeparationTests`, `Issue35MathChaptersRegressionTests`, `Formula2023ContentTests`, `MathCourse2023ContentTests`, `Matura2025ContentTests`, `Matura2026ContentTests`, `Matura2026ExtendedContentTests`, `DiagramCatalogTests`, `LegacyImageArchiveTests` | kompletność tablic i kursu Formuły 2023, kontrakty `4/13/73/46/238/357`, matury 2025 `31/35/50` i `12/13/50`, matury 2026 `33/37/50` i `12/13/50`, zachowanie 35 zadań 2021, 76 aktywnych diagramów, zgodność archiwum 75 obrazów, źródła, SHA-256, format JSON i renderowanie treści |
+| UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests`, `Issue4NavigationTests`, `Issue5CalculatorPipTests`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` | osiągalne ścieżki użytkownika, pięć arkuszy, agregację 17 tematów, oddzielny postęp, odpowiedzi złożone, wszystkie trasy shella, kontrolowany pojedynczy PiP, wklejanie, losowanie i kontekst zadania |
 | Dostępność kontrolek | `AccessibilityRegressionTests` | nazwy pól i symbolicznych przycisków oraz dynamiczne regiony wyników |
 | Wizualne | `Discussion10VisualRegressionTests` | renderowanie list matematycznych i zachowanie przy minimalnym rozmiarze okna |
 | Styl, motywy i własny chrome | `Discussion49StyleRegressionTests` | Mulish, brak wymuszonego Light i Inter, historyczne emoji `🍓`/`🍋`/`🍏`, tooltipy, cztery ustawienia motywu, stany interakcji, fokus, breakpointy, dialogi, sterowanie i skalowanie okna |
@@ -150,14 +150,12 @@ Historyczny odbiór Issue #43 jest zaliczony na podstawie łącznie udokumentowa
 3. historyczna forma przekazania została uzgodniona i przyjęta;
 4. brakujące szczegóły sesji, podpisu, kanału i hasha są ujawnione jako ograniczenia archiwalne, a nie uzupełnione fikcyjnymi danymi.
 
-Publiczne wydanie `0.9.0-beta.1` jest osobnym procesem. Zwykły walidator proweniencji i brama `-RequireReleaseEligible` przechodzą po rozszerzeniu `ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r.; manifest ma `releaseEligible=true` i nie zawiera grup `blocked`. Oba warianty walidatora trzeba ponowić na dokładnym commicie przeznaczonym do wydania.
+Publiczne wydanie `0.9.0-beta.1` jest osobnym procesem. Zwykły walidator proweniencji i brama `-RequireReleaseEligible` przeszły po rozszerzeniach `ASSET_RIGHTS_DECLARATION.md` z 3 i 5 sierpnia 2026 r.; manifest ma `releaseEligible=true` i nie zawiera grup `blocked`. Oba warianty walidatora ponowiono na dokładnym commicie wydania.
 
-Do wykonania pozostają:
+Publiczny prerelease [`v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1) został opublikowany po wykonaniu następujących czynności:
 
-1. ponowienie pełnych bram na dokładnym commicie wydania;
-2. utworzenie tagu i uruchomienie workflow wydania;
-3. kontrola wygenerowanego draftu, sum, SBOM i atestacji;
-4. ręczna kontrola artefaktów i instalacji zgodnie z `RELEASE_PROCESS.md`;
-5. opublikowanie prerelease.
-
-Raport nie twierdzi, że GitHub Release już istnieje.
+1. ponowiono pełne bramy na dokładnym commicie wydania;
+2. utworzono tag i uruchomiono workflow wydania;
+3. skontrolowano wygenerowany draft, sumy, SBOM i atestacje;
+4. zweryfikowano artefakty i instalację zgodnie z `RELEASE_PROCESS.md`;
+5. opublikowano prerelease.

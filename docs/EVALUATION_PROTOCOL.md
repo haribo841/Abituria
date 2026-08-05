@@ -9,9 +9,9 @@ Data sporządzenia protokołu retrospektywnego: 19 lipca 2026 r.
 Protokół formalizuje kryteria opisane w [Issue #45 - Kryteria akceptacji](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/45) oraz rozdziela dwa różne przedmioty oceny:
 
 - `HISTORYCZNY 2022` - projekt WPF przedstawiony komisji 17 stycznia 2022 r., historycznie przetestowany, wdrożony i oceniony;
-- `BIEŻĄCA MIGRACJA` - implementacja AvaloniaUI `0.9.0-beta.1`, rozwijana i weryfikowana w repozytorium `haribo841/Abituria`, ale jeszcze nieopublikowana w GitHub Releases.
+- `BIEŻĄCA MIGRACJA` - implementacja AvaloniaUI `0.9.0-beta.1`, rozwijana i weryfikowana w repozytorium `haribo841/Abituria`, opublikowana jako [prerelease `v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1).
 
-Pozytywny wynik historycznej obrony nie jest przedstawiany jako ocena bieżącej migracji. Brak publicznego wydania bieżącej migracji nie unieważnia historycznej decyzji komisji.
+Pozytywny wynik historycznej obrony nie jest przedstawiany jako ocena bieżącej migracji. Późniejsze publiczne wydanie migracji nie zmienia historycznej decyzji komisji.
 
 ## Statusy
 
@@ -31,7 +31,7 @@ Pozytywny wynik historycznej obrony nie jest przedstawiany jako ocena bieżącej
 | [prerelease `v1.0.0`](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/releases/tag/v1.0.0) | paczka wdrożeniowa dostępna przed obroną | brak zachowanego protokołu wskazującego ją jako formalną kopię zapasową |
 | [release `v1.0.1`](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/releases/tag/v1.0.1) | publiczne archiwum aplikacji z 18 stycznia 2022 r. | aplikacja zależy od Windows Desktop Runtime 3.1; historyczna instrukcja instalacji i raport testów nie zachowały się |
 | poświadczenie właściciela z 19 lipca 2026 r. | pozytywna decyzja komisji, wynik bardzo dobry, historyczne testy uczestników i późniejszy odbiór prowadzącego | brak podpisanej karty oceny, indywidualnych ocen i osobnej opinii prowadzącego |
-| aktywny kod, dokumentacja i testy | stan techniczny bieżącej migracji | lokalne zmiany nie są jeszcze wersjonowanym wydaniem ani wynikiem komisji |
+| aktywny kod, dokumentacja i testy | stan techniczny bieżącej migracji | publiczne wydanie jest wersjonowane osobno i nie stanowi wyniku komisji |
 
 ### Zachowane artefakty wdrożeniowe
 
@@ -66,11 +66,11 @@ Nagranie bezpośrednio potwierdza prezentację, demonstrację oraz sesję pytań
 | Obszar Issue #45 | HISTORYCZNY 2022 | BIEŻĄCA MIGRACJA | Uzasadnienie |
 | --- | --- | --- | --- |
 | 1. Prezentacja projektu i produktu | PASS | NOT APPLICABLE | nagranie potwierdza omówienie projektu, demonstrację i Q&A; bieżąca migracja nie była przedmiotem komisji z 2022 r. |
-| 2. Uzyskany produkt | PASS RETROSPEKTYWNY | PASS techniczny | komisja zaakceptowała historyczny produkt; bieżący zakres obejmuje konta, SQLite, pełny kurs Formuły 2023 `119/238/357`, trzy arkusze z 85 jednostkami postępu, podpowiedzi, losowanie i dwa kalkulatory |
+| 2. Uzyskany produkt | PASS RETROSPEKTYWNY | PASS techniczny | komisja zaakceptowała historyczny produkt; bieżący zakres obejmuje konta, SQLite, pełny kurs Formuły 2023 `119/238/357`, pięć arkuszy ze 133 jednostkami postępu, podpowiedzi, losowanie i dwa kalkulatory |
 | 2a. Innowacyjność | PARTIAL | PARTIAL | integracja nauki, zadań, podpowiedzi i narzędzi jest udokumentowana, ale nie zachowano osobnej punktacji ani porównawczej analizy innowacyjności |
 | 3. Dokumentacja projektu | PARTIAL historyczny | PASS lokalny | historyczne wydanie nie zachowało pełnego zestawu według obecnego standardu; bieżący pakiet obejmuje wymagania, architekturę, instalację, testy, licencje, autorstwo, wersje i ograniczenia |
 | 4. Testowanie produktu | PASS RETROSPEKTYWNY | PASS | właściciel potwierdził pomyślne testy historyczne; bieżący zestaw obejmuje testy jednostkowe, integracyjne, funkcjonalne, regresyjne, UI, instalacyjne, wydajnościowe, pamięciowe i obciążeniowe |
-| 5. Wdrożenie | PASS | PENDING publicznego wydania | `v1.0.0` było dostępne przed obroną, a `v1.0.1` opublikowano dzień po niej; obecna migracja ma zielone smoke testy trzech systemów, ale nie ma tagu ani GitHub Release |
+| 5. Wdrożenie | PASS | PASS - publiczny prerelease | `v1.0.0` było dostępne przed obroną, `v1.0.1` opublikowano dzień po niej, a bieżącą migrację wydano osobno jako `v0.9.0-beta.1` po zielonych smoke testach trzech systemów |
 | 6. Przebieg pracy zespołu | PARTIAL | PASS dla pracy jednoosobowej | stare repozytorium zachowuje Issues, Project, przepływ kolumn i PR-y, lecz brak osobnej pisemnej opinii prowadzącego; bieżącą implementację rozwija Adam Kubiś |
 | 7. Ocena zespołowa i indywidualny wkład | PARTIAL | PASS dla autorstwa bieżącego | poświadczono wynik projektu i obrony, ale nie zachowano rozdziału ocen indywidualnych; `AUTHORS.md` prawidłowo przypisuje bieżącą implementację Adamowi Kubisiowi |
 
@@ -88,19 +88,19 @@ Zakres i jakość bieżącej migracji są oceniane względem zatwierdzonego, jaw
 | 6 | można go uruchomić poza środowiskiem autorów | PASS RETROSPEKTYWNY | PASS techniczny | zachowane paczki, demonstracja i pozytywny odbiór historyczny; brak osobnego protokołu niezależnej instalacji; natywne runnery Windows, Ubuntu i macOS dla bieżącej migracji |
 | 7 | został zaprezentowany przed komisją | PASS | NOT APPLICABLE | nagranie obrony 17 stycznia 2022 r. |
 | 8 | decyzje projektowe i techniczne zostały uzasadnione | PASS | PASS dokumentacyjny | Q&A na nagraniu oraz aktualna dokumentacja architektury i ograniczeń |
-| 9 | ukończono obowiązkowe elementy wdrożenia | PASS | PENDING | historyczne wydania istnieją; bieżące `0.9.0-beta.1` nie zostało opublikowane |
+| 9 | ukończono obowiązkowe elementy wdrożenia | PASS | PASS | historyczne wydania istnieją; bieżące `v0.9.0-beta.1` opublikowano jako prerelease |
 | 10 | prowadzący potwierdził realizację przyrostów | PASS RETROSPEKTYWNY | NOT APPLICABLE | poświadczony odbiór na początku lutego 2022 r.; szczegółowe decyzje I-III nie zostały zachowane |
 
 Wynik historyczny: `ACCEPTED`.
 
-Wynik bieżącej migracji: `TECHNICALLY ACCEPTED - PUBLIC RELEASE PENDING`.
+Wynik bieżącej migracji: `TECHNICALLY ACCEPTED - PUBLIC RELEASED`.
 
 ## Warunki uzyskania oceny bardzo dobrej
 
 | Warunek | HISTORYCZNY 2022 | BIEŻĄCA MIGRACJA |
 | --- | --- | --- |
 | pełne testowanie | PASS RETROSPEKTYWNY | PASS |
-| skuteczne wdrożenie | PASS | PENDING |
+| skuteczne wdrożenie | PASS | PASS |
 | zatwierdzone wymagania | PASS RETROSPEKTYWNY | PASS w uzgodnionym zakresie |
 | wysoka jakość techniczna | PASS RETROSPEKTYWNY | PASS lokalny; zdalna baza jakości dotyczy `e0afeea` |
 | kompletna i spójna dokumentacja | PARTIAL historyczny | PASS lokalny |
@@ -128,7 +128,7 @@ Historyczne kryteria zostały zastosowane podczas obrony i zakończyły się akc
 
 Decyzja: `ACCEPTED - HISTORICAL CRITERIA SATISFIED - READY TO CLOSE AS COMPLETED`.
 
-Bieżące publiczne wydanie `0.9.0-beta.1` pozostaje osobnym zadaniem i nie jest warunkiem retrospektywnego zamknięcia Issue #45.
+Bieżące publiczne wydanie `0.9.0-beta.1` pozostaje osobnym zadaniem od retrospektywnego zamknięcia Issue #45 i zostało ukończone niezależnie.
 
 ## Checklista formalnego zamknięcia
 
@@ -140,7 +140,7 @@ Bieżące publiczne wydanie `0.9.0-beta.1` pozostaje osobnym zadaniem i nie jest
 - [x] wskazano historyczne paczki wdrożeniowe;
 - [x] ujawniono brak podpisanej karty oceny i osobnej opinii prowadzącego;
 - [x] rozdzielono autorstwo bieżącej implementacji od historycznej pracy zespołu;
-- [x] rozdzielono historyczne wdrożenie od nieopublikowanej migracji;
+- [x] rozdzielono historyczne wdrożenie od publicznego wydania migracji;
 - [x] przygotowano treść komentarza zamykającego.
 
 ## Treść komentarza zamykającego
@@ -153,7 +153,7 @@ Issue #45 zostało spełnione dla historycznego projektu Abituria.
 - Wydanie v1.0.1 opublikowano 18 stycznia 2022 r.: https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/releases/tag/v1.0.1
 - Komisja zaakceptowała projekt, a wynik projektu i obrony był bardzo dobry. Wynik jest poświadczeniem właściciela; zachowane nagranie kończy się przed jego formalnym ogłoszeniem.
 - Historyczne testy uczestników zakończyły się powodzeniem według poświadczenia właściciela. Brakujące karty sesji, oceny cząstkowe i osobna opinia prowadzącego nie są rekonstruowane.
-- Bieżąca migracja AvaloniaUI 0.9.0-beta.1 oraz jej przyszłe publiczne wydanie są odrębnym zakresem i nie zmieniają historycznej decyzji komisji.
+- Bieżąca migracja AvaloniaUI 0.9.0-beta.1 oraz jej publiczne wydanie są odrębnym zakresem i nie zmieniają historycznej decyzji komisji.
 - Pełna macierz i ograniczenia dowodowe znajdują się w `docs/EVALUATION_PROTOCOL.md`.
 
 Decyzja: completed.

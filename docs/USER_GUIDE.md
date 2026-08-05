@@ -12,8 +12,8 @@ Górna nawigacja po zalogowaniu zawiera:
 
 - **Start** - skróty do głównych funkcji;
 - **Wzory** - tablice matematyczne;
-- **Matura** - wybór pełnej matury głównej 2026 PP albo arkusza poprawkowego 2021 oraz archiwalne placeholdery;
-- **Zadania** - zadania z obu aktywnych arkuszy pogrupowane według 17 tematów;
+- **Matura** - wybór matur głównych 2025 i 2026 na poziomie podstawowym lub rozszerzonym, arkusza poprawkowego 2021 oraz archiwalnych placeholderów;
+- **Zadania** - zadania z pięciu aktywnych arkuszy pogrupowane według 17 tematów;
 - **Działy** - materiały edukacyjne;
 - **Kalkulator** - funkcja kwadratowa i kalkulator ogólny;
 - **Opcje** - sposób wyświetlania kalkulatora Picture in Picture;
@@ -104,11 +104,11 @@ Dokładne wymagania pochodzą z aktu urzędowego. Przykłady, ćwiczenia, rozwi�
 
 ## Matura i Zadania
 
-Strona „Matura” pokazuje najpierw maturę główną 2026 na poziomie podstawowym, a następnie arkusz poprawkowy 2021. Wybierz arkusz, aby zobaczyć jego pełną listę. Losowanie w tym widoku korzysta wyłącznie z aktualnie wybranego arkusza.
+Strona „Matura” pokazuje kolejno matury 2026 PP i PR, matury 2025 PP i PR oraz arkusz poprawkowy 2021. Wybierz arkusz, aby zobaczyć jego pełną listę. Losowanie w tym widoku korzysta wyłącznie z aktualnie wybranego arkusza.
 
-Strona „Zadania” agreguje oba aktywne arkusze według 17 tematów. Każdy wpis na liście pokazuje źródłowy arkusz. Losowanie tematyczne nie wychodzi poza wybrany temat, ale może zwrócić zadanie z 2026 albo 2021. Strzałki poprzedniego i następnego zadania pozostają w puli wynikającej z drogi wejścia, a przycisk powrotu prowadzi odpowiednio do „Matury” lub „Zadań”.
+Strona „Zadania” agreguje pięć aktywnych arkuszy według 17 tematów. Każdy wpis na liście pokazuje źródłowy arkusz. Losowanie tematyczne nie wychodzi poza wybrany temat, ale może zwrócić zadanie z 2026, 2025 albo 2021. Strzałki poprzedniego i następnego zadania pozostają w puli wynikającej z drogi wejścia, a przycisk powrotu prowadzi odpowiednio do „Matury” lub „Zadań”.
 
-Lista oznacza ukończone zadania znakiem wyboru. Matura 2026 ma 33 oficjalnie numerowane zadania podzielone na 37 osobno ocenianych części i łącznie 50 punktów. Szczegóły źródeł i liczników zawiera [macierz matury 2026](MATURA_2026_COVERAGE.md).
+Lista oznacza ukończone zadania znakiem wyboru. Arkusze mają odpowiednio: 2026 PP `33/37/50`, 2026 PR `12/13/50`, 2025 PP `31/35/50`, 2025 PR `12/13/50` i poprawkowa 2021 `35/35/45`. Szczegóły źródeł i liczników zawierają osobne macierze pokrycia matur 2025 i 2026.
 
 ### Tryby odpowiedzi
 
@@ -134,7 +134,7 @@ Brudnopis jest przechowywany osobno dla aktywnego profilu i zadania do czasu zam
 
 Przycisk „Otwórz kalkulator PiP” obok nagłówka brudnopisu otwiera kompaktowy kalkulator bez opuszczania zadania. Przyciski strzałek przechodzą do poprzedniego i następnego zadania w aktualnym kontekście, czyli w całym arkuszu albo w wybranym temacie.
 
-Strona „Profil” pokazuje osobno `Matura maj 2026 PP: x/37`, `Matura maj 2026 PR: x/13`, `Matura poprawkowa 2021: x/35`, podstawę `x/219` oraz część rozszerzoną `x/138`. Postęp jest lokalny i oddzielny dla każdego profilu. Nowe liczniki używają istniejącego zapisu identyfikatorów ukończonych zadań, więc aktualizacja nie zmienia schematu bazy i nie usuwa wcześniejszego postępu `mp21-*`.
+Strona „Profil” pokazuje osobno `Matura maj 2026 PP: x/37`, `Matura maj 2026 PR: x/13`, `Matura maj 2025 PP: x/35`, `Matura maj 2025 PR: x/13`, `Matura poprawkowa 2021: x/35`, podstawę `x/219` oraz część rozszerzoną `x/138`. Postęp jest lokalny i oddzielny dla każdego profilu. Nowe liczniki używają istniejącego zapisu identyfikatorów ukończonych zadań, więc aktualizacja nie zmienia schematu bazy i nie usuwa wcześniejszego postępu `mp21-*`.
 
 ## Kalkulator funkcji kwadratowej
 

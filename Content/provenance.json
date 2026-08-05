@@ -85,6 +85,36 @@
       ]
     },
     {
+      "id": "cke-2025-main-basic-exam",
+      "paths": [
+        "Content/exam-2025-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMAP-P0-100-A-2505, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2025/Matematyka/poziom_podstawowy/MMAP-P0-100-A-2505-arkusz.pdf, SHA-256 C5F8AFDE91393BEA3E5980560ADA103389679473DBD0C11A7485040F06631C85; zasady oceniania CKE MMAP-P0-100-2505, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2025/zasady_oceniania/MMAP-P0-100-2505-zasady.pdf, SHA-256 D272201B35AD7829315C6897500F036A8619BBEE42B38291037DF952F9F150E5; weryfikacja 2026-08-05",
+      "license": "Deklaracja uprawnienia do publicznej redystrybucji w ramach Abiturii rozszerzona 2026-08-05",
+      "distributionStatus": "approved",
+      "evidence": [
+        "docs/ASSET_RIGHTS_DECLARATION.md",
+        "docs/MATURA_2025_COVERAGE.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2025-main-extended-exam",
+      "paths": [
+        "Content/exam-2025-main-extended.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMAP-R0-100-A-2505, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2025/Matematyka/poziom_rozszerzony/MMAP-R0-100-A-2505-arkusz.pdf, SHA-256 457B057602D81CF93A9688E7F4CB74103F4579B37C2B1A2A9AACE28C891CD4AD; zasady oceniania CKE MMAP-R0-100-2505, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2025/zasady_oceniania/MMAP-R0-100-2505-zasady.pdf, SHA-256 B196084F2B9505D14C66E3CBE0064BBA7E4BA0F3FFA613500ED701A97724E523; weryfikacja 2026-08-05",
+      "license": "Deklaracja uprawnienia do publicznej redystrybucji w ramach Abiturii rozszerzona 2026-08-05",
+      "distributionStatus": "approved",
+      "evidence": [
+        "docs/ASSET_RIGHTS_DECLARATION.md",
+        "docs/MATURA_2025_EXTENDED_COVERAGE.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
       "id": "cke-2026-main-extended-exam",
       "paths": [
         "Content/exam-2026-main-extended.json"
@@ -105,13 +135,15 @@
         "Content/diagrams.json"
       ],
       "author": "Adam Kubiś - implementacje wektorowe Avalonia i nowe definicje kursu; Centralna Komisja Egzaminacyjna - źródłowa treść tablic i arkuszy; historyczni autorzy projektu Ich Troje - źródła zachowanych diagramów",
-      "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym siedem figur dla arkusza CKE MMAP-P0-100-A-2605 i trzy figury dla arkusza CKE MMAP-R0-100-A-2605; bez aktywnych rastrów, Image ani Bitmap",
-      "license": "MIT dla implementacji wektorowych i definicji autorskich lub odziedziczonych; deklaracja redystrybucji w ramach Abiturii rozszerzona 2026-08-03",
+      "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym dziewięć figur dla arkusza CKE MMAP-P0-100-A-2505, siedem figur dla MMAP-P0-100-A-2605 i trzy figury dla MMAP-R0-100-A-2605; bez aktywnych rastrów, Image ani Bitmap",
+      "license": "MIT dla implementacji wektorowych i definicji autorskich lub odziedziczonych; deklaracja redystrybucji w ramach Abiturii rozszerzona 2026-08-05",
       "distributionStatus": "approved",
       "evidence": [
         "docs/ASSET_RIGHTS_DECLARATION.md",
         "docs/MATURA_2026_COVERAGE.md",
         "docs/MATURA_2026_EXTENDED_COVERAGE.md",
+        "docs/MATURA_2025_COVERAGE.md",
+        "docs/MATURA_2025_EXTENDED_COVERAGE.md",
         "docs/CONTENT_PROVENANCE.md",
         "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",
         "docs/MIGRATION_INVENTORY.md",

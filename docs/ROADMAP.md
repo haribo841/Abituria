@@ -10,10 +10,12 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - pełny kurs matematyki Formuły 2023: 4 grupy, 13 obszarów, 119 wymagań, 238 rozwiązanych przykładów i 357 ćwiczeń z filtrem poziomu oraz osobnym postępem,
 - dział Wektory z ośmioma ilustracjami,
 - materiały issue #35: liczby naturalne i indukcja, alfabet grecki, liczby rzeczywiste i zbiory, algebra, równania i nierówności, funkcja kwadratowa oraz logarytmy,
+- matura główna 2025 PP zweryfikowana z arkuszem i zasadami oceniania CKE: 31 zadań, 35 jednostek postępu i 50 punktów,
+- matura główna 2025 PR zweryfikowana z arkuszem i zasadami oceniania CKE: 12 zadań, 13 jednostek postępu i 50 punktów,
 - matura główna 2026 PP zweryfikowana z arkuszem i zasadami oceniania CKE: 33 zadania, 37 jednostek postępu i 50 punktów,
 - matura główna 2026 PR zweryfikowana z arkuszem i zasadami oceniania CKE: 12 zadań, 13 jednostek postępu i 50 punktów,
 - 35 zadań matury poprawkowej 2021 zachowanych z identyfikatorami `mp21-*`,
-- wybór trzech arkuszy i agregacja ich zadań według 17 tematów,
+- wybór pięciu arkuszy i agregacja ich 133 jednostek postępu według 17 tematów,
 - kalkulator ogólny z parserem wyrażeń, notacją naukową, Ans i historią sesji,
 - kalkulator funkcji kwadratowej,
 - losowanie zadań z całego arkusza i w obrębie wybranego tematu,
@@ -33,7 +35,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - podpisywanie kodu i paczek,
 - paczka macOS dla Apple Silicon.
 
-Manifest `Content/provenance.json` nie zawiera grup o statusie `blocked`, a `releaseEligible=true` potwierdza przejście bramy proweniencji. Oba arkusze CKE 2026, zasady oceniania i dziesięć autorskich implementacji wektorowych Avalonia obejmuje rozszerzenie deklaracji z 3 sierpnia 2026 r. Publiczne paczki portable nadal wymagają wykonania kompletnej checklisty wydania.
+Manifest `Content/provenance.json` nie zawiera grup o statusie `blocked`, a `releaseEligible=true` potwierdza przejście bramy proweniencji. Arkusze CKE 2025 i 2026 na obu poziomach, zasady oceniania i dziewiętnaście autorskich implementacji wektorowych Avalonia obejmują rozszerzenia deklaracji z 3 i 5 sierpnia 2026 r. Publiczne paczki portable wersji `0.9.0-beta.1` powstają wyłącznie po wykonaniu kompletnej checklisty wydania.
 
 ## Zastąpione
 

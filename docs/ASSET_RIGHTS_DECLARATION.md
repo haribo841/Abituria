@@ -54,3 +54,22 @@ Adam Kubiś rozszerza deklarację na publiczną redystrybucję w ramach Abiturii
 Dziesięć nowych diagramów nie jest kopiami ani osadzonymi rastrami arkuszy. Adam Kubiś zaimplementował ich matematyczną treść jako własne, deterministyczne zestawy kontrolek i kształtów Avalonia: `Line`, `Polyline`, `Polygon`, `Ellipse`, łuki aproksymowane polilinią oraz `TextBlock`. Definicje są objęte licencją MIT kodu Abiturii, zachowują przypisanie kontekstu i stron źródłowych CKE oraz nie przypisują Adamowi Kubisiowi autorstwa arkuszy.
 
 Rozszerzenie zachowuje wszystkie ograniczenia pierwotnej deklaracji. Nie udziela samodzielnej licencji na źródłowe pliki PDF ani na wyodrębnianie transkrypcji poza Abiturią.
+
+## Rozszerzenie deklaracji z 5 sierpnia 2026 r.
+
+Na podstawie bezpośredniego polecenia wdrożenia i publikacji wydania Adam Kubiś rozszerza deklarację na publiczną redystrybucję w ramach Abiturii następujących grup:
+
+- `cke-2025-main-basic-exam`: strukturalna transkrypcja arkusza `MMAP-P0-100-A-2505` i zasad oceniania `MMAP-P0-100-2505` w `Content/exam-2025-main-basic.json`;
+- `cke-2025-main-extended-exam`: strukturalna transkrypcja arkusza `MMAP-R0-100-A-2505` i zasad oceniania `MMAP-R0-100-2505` w `Content/exam-2025-main-extended.json`;
+- `runtime-vector-diagrams`: katalog `Content/diagrams.json` rozszerzony do 76 deterministycznych definicji, w tym o dziewięć autorskich implementacji wektorowych Avalonia dla zadań matury podstawowej 2025.
+
+Źródła CKE objęte rozszerzeniem:
+
+- arkusz podstawowy: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2025/Matematyka/poziom_podstawowy/MMAP-P0-100-A-2505-arkusz.pdf`, SHA-256 `C5F8AFDE91393BEA3E5980560ADA103389679473DBD0C11A7485040F06631C85`;
+- zasady oceniania poziomu podstawowego: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2025/zasady_oceniania/MMAP-P0-100-2505-zasady.pdf`, SHA-256 `D272201B35AD7829315C6897500F036A8619BBEE42B38291037DF952F9F150E5`;
+- arkusz rozszerzony: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2025/Matematyka/poziom_rozszerzony/MMAP-R0-100-A-2505-arkusz.pdf`, SHA-256 `457B057602D81CF93A9688E7F4CB74103F4579B37C2B1A2A9AACE28C891CD4AD`;
+- zasady oceniania poziomu rozszerzonego: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2025/zasady_oceniania/MMAP-R0-100-2505-zasady.pdf`, SHA-256 `B196084F2B9505D14C66E3CBE0064BBA7E4BA0F3FFA613500ED701A97724E523`.
+
+Dziewięć nowych diagramów nie jest kopiami ani osadzonymi rastrami arkusza. Adam Kubiś zaimplementował ich matematyczną treść jako własne, deterministyczne zestawy kontrolek i kształtów Avalonia. Definicje są objęte licencją MIT kodu Abiturii, zachowują przypisanie kontekstu i stron źródłowych CKE oraz nie przypisują Adamowi Kubisiowi autorstwa arkusza.
+
+Rozszerzenie zachowuje wszystkie ograniczenia pierwotnej deklaracji. Nie udziela samodzielnej licencji na źródłowe pliki PDF ani na wyodrębnianie transkrypcji poza Abiturią.

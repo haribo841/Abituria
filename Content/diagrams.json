@@ -6481,6 +6481,1605 @@
       ]
     },
     {
+      "id": "exam-mm25-z06",
+      "sourceId": "cke-2025-main-basic",
+      "sourcePage": 7,
+      "alternativeText": "Cztery osie liczbowe przedstawiające odpowiedzi x mniejsze lub równe 3, x większe lub równe 3, x mniejsze lub równe minus 9 oraz x większe lub równe minus 9.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "text",
+          "x": 75.0,
+          "y": 128.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 150.0,
+          "y": 120.0,
+          "x2": 895.0,
+          "y2": 120.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "polygon",
+          "points": [
+            150.0,
+            86.0,
+            690.0,
+            86.0,
+            690.0,
+            120.0,
+            150.0,
+            120.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 1.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 690.0,
+          "y": 120.0,
+          "radiusX": 8.0,
+          "radiusY": 8.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 680.0,
+          "y": 158.0,
+          "text": "3",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 595.0,
+          "y": 158.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 625.0,
+          "y": 158.0,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 75.0,
+          "y": 263.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 150.0,
+          "y": 255.0,
+          "x2": 895.0,
+          "y2": 255.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "polygon",
+          "points": [
+            690.0,
+            221.0,
+            880.0,
+            221.0,
+            880.0,
+            255.0,
+            690.0,
+            255.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 1.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 690.0,
+          "y": 255.0,
+          "radiusX": 8.0,
+          "radiusY": 8.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 680.0,
+          "y": 293.0,
+          "text": "3",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 595.0,
+          "y": 293.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 625.0,
+          "y": 293.0,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 75.0,
+          "y": 398.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 150.0,
+          "y": 390.0,
+          "x2": 895.0,
+          "y2": 390.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "polygon",
+          "points": [
+            150.0,
+            356.0,
+            330.0,
+            356.0,
+            330.0,
+            390.0,
+            150.0,
+            390.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 1.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 330.0,
+          "y": 390.0,
+          "radiusX": 8.0,
+          "radiusY": 8.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 320.0,
+          "y": 428.0,
+          "text": "-9",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 595.0,
+          "y": 428.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 625.0,
+          "y": 428.0,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 75.0,
+          "y": 533.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "line",
+          "x": 150.0,
+          "y": 525.0,
+          "x2": 895.0,
+          "y2": 525.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "polygon",
+          "points": [
+            330.0,
+            491.0,
+            880.0,
+            491.0,
+            880.0,
+            525.0,
+            330.0,
+            525.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 1.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 330.0,
+          "y": 525.0,
+          "radiusX": 8.0,
+          "radiusY": 8.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 320.0,
+          "y": 563.0,
+          "text": "-9",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 595.0,
+          "y": 563.0,
+          "text": "0",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 625.0,
+          "y": 563.0,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 18.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm25-z11",
+      "sourceId": "cke-2025-main-basic",
+      "sourcePage": 11,
+      "alternativeText": "Wykres funkcji przedziałowej z odcinkiem rosnącym od minus 4 do minus 2, poziomym od minus 2 do 2 i malejącym od 2 do 4.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 105.0,
+          "y": 390.0,
+          "x2": 920.0,
+          "y2": 390.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 575.0,
+          "x2": 500.0,
+          "y2": 70.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 925.0,
+          "y": 382.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 23.0
+        },
+        {
+          "type": "text",
+          "x": 515.0,
+          "y": 65.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 23.0
+        },
+        {
+          "type": "polyline",
+          "points": [
+            220.0,
+            330.0,
+            360.0,
+            210.0,
+            640.0,
+            210.0,
+            780.0,
+            510.0
+          ],
+          "stroke": "accent",
+          "strokeThickness": 5.0,
+          "dashed": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "ellipse",
+          "x": 220.0,
+          "y": 330.0,
+          "radiusX": 8.0,
+          "radiusY": 8.0,
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 360.0,
+          "y": 210.0,
+          "radiusX": 8.0,
+          "radiusY": 8.0,
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 640.0,
+          "y": 210.0,
+          "radiusX": 8.0,
+          "radiusY": 8.0,
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 780.0,
+          "y": 510.0,
+          "radiusX": 10.0,
+          "radiusY": 10.0,
+          "stroke": "accent",
+          "fill": "surface",
+          "strokeThickness": 3.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 195.0,
+          "y": 425.0,
+          "text": "-4",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 335.0,
+          "y": 425.0,
+          "text": "-2",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 630.0,
+          "y": 425.0,
+          "text": "2",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 770.0,
+          "y": 425.0,
+          "text": "4",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 455.0,
+          "y": 335.0,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 455.0,
+          "y": 215.0,
+          "text": "3",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 650.0,
+          "y": 175.0,
+          "text": "y = f(x)",
+          "stroke": "accent",
+          "fontSize": 22.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm25-z12",
+      "sourceId": "cke-2025-main-basic",
+      "sourcePage": 12,
+      "alternativeText": "Parabola skierowana ramionami w dół z wierzchołkiem w punkcie 3, 6 i punktem 0, 3 na osi y.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 105.0,
+          "y": 500.0,
+          "x2": 920.0,
+          "y2": 500.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 260.0,
+          "y": 585.0,
+          "x2": 260.0,
+          "y2": 65.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 925.0,
+          "y": 492.0,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 23.0
+        },
+        {
+          "type": "text",
+          "x": 275.0,
+          "y": 60.0,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 23.0
+        },
+        {
+          "type": "polyline",
+          "points": [
+            130.0,
+            610.0,
+            180.0,
+            525.0,
+            260.0,
+            350.0,
+            340.0,
+            225.0,
+            420.0,
+            150.0,
+            500.0,
+            125.0,
+            580.0,
+            150.0,
+            660.0,
+            225.0,
+            740.0,
+            350.0,
+            820.0,
+            525.0,
+            870.0,
+            610.0
+          ],
+          "stroke": "accent",
+          "strokeThickness": 5.0,
+          "dashed": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 125.0,
+          "radiusX": 8.0,
+          "radiusY": 8.0,
+          "stroke": "danger",
+          "fill": "danger",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 260.0,
+          "y": 350.0,
+          "radiusX": 8.0,
+          "radiusY": 8.0,
+          "stroke": "danger",
+          "fill": "danger",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 125.0,
+          "x2": 500.0,
+          "y2": 500.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 535.0,
+          "text": "3",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 220.0,
+          "y": 355.0,
+          "text": "3",
+          "stroke": "muted",
+          "fontSize": 18.0
+        },
+        {
+          "type": "text",
+          "x": 460.0,
+          "y": 105.0,
+          "text": "(3,6)",
+          "stroke": "danger",
+          "fontSize": 20.0
+        },
+        {
+          "type": "text",
+          "x": 625.0,
+          "y": 185.0,
+          "text": "y = f(x)",
+          "stroke": "accent",
+          "fontSize": 22.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm25-z18",
+      "sourceId": "cke-2025-main-basic",
+      "sourcePage": 18,
+      "alternativeText": "Trójkąt prostokątny ABC z przyprostokątną AB długości 6, środkiem D boku AB, środkową CD długości 5 oraz kątami alfa i beta.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            150.0,
+            510.0,
+            850.0,
+            510.0,
+            150.0,
+            105.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 5.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 510.0,
+          "x2": 150.0,
+          "y2": 105.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "polyline",
+          "points": [
+            150.0,
+            475.0,
+            185.0,
+            475.0,
+            185.0,
+            510.0
+          ],
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "arc",
+          "x": 500.0,
+          "y": 510.0,
+          "radiusX": 75.0,
+          "radiusY": 75.0,
+          "startAngle": -135.0,
+          "sweepAngle": 45.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "arc",
+          "x": 850.0,
+          "y": 510.0,
+          "radiusX": 95.0,
+          "radiusY": 95.0,
+          "startAngle": -150.0,
+          "sweepAngle": 30.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 115.0,
+          "y": 530.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 865.0,
+          "y": 530.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 115.0,
+          "y": 80.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 485.0,
+          "y": 545.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 285.0,
+          "y": 285.0,
+          "text": "5",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 280.0,
+          "y": 545.0,
+          "text": "6",
+          "stroke": "muted",
+          "fontSize": 22.0
+        },
+        {
+          "type": "text",
+          "x": 460.0,
+          "y": 455.0,
+          "text": "α",
+          "stroke": "danger",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 800.0,
+          "y": 455.0,
+          "text": "β",
+          "stroke": "accent",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm25-z19",
+      "sourceId": "cke-2025-main-basic",
+      "sourcePage": 19,
+      "alternativeText": "Okrąg z punktami A, B i C, środkiem O, trójkątem ABC oraz kątem BCA równym 50 stopni.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "ellipse",
+          "x": 500.0,
+          "y": 325.0,
+          "radiusX": 230.0,
+          "radiusY": 230.0,
+          "stroke": "accent",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 435.0,
+          "x2": 700.0,
+          "y2": 455.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 435.0,
+          "x2": 545.0,
+          "y2": 95.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 700.0,
+          "y": 455.0,
+          "x2": 545.0,
+          "y2": 95.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 300.0,
+          "y2": 435.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 500.0,
+          "y": 325.0,
+          "x2": 700.0,
+          "y2": 455.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "arc",
+          "x": 545.0,
+          "y": 95.0,
+          "radiusX": 78.0,
+          "radiusY": 78.0,
+          "startAngle": 74.0,
+          "sweepAngle": 48.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 265.0,
+          "y": 460.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 715.0,
+          "y": 475.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 535.0,
+          "y": 60.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 480.0,
+          "y": 315.0,
+          "text": "O",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 535.0,
+          "y": 165.0,
+          "text": "50°",
+          "stroke": "danger",
+          "fontSize": 22.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm25-z20",
+      "sourceId": "cke-2025-main-basic",
+      "sourcePage": 20,
+      "alternativeText": "Trójkąt równoramienny ABC o bokach AC i BC długości 4, podstawie AB długości 3 oraz punkcie D na boku BC połączonym z A.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            210.0,
+            520.0,
+            790.0,
+            520.0,
+            565.0,
+            105.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 5.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 210.0,
+          "y": 520.0,
+          "x2": 675.0,
+          "y2": 310.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "ellipse",
+          "x": 675.0,
+          "y": 310.0,
+          "radiusX": 7.0,
+          "radiusY": 7.0,
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 175.0,
+          "y": 535.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 805.0,
+          "y": 535.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 560.0,
+          "y": 70.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 690.0,
+          "y": 300.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 430.0,
+          "y": 555.0,
+          "text": "3",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 350.0,
+          "y": 300.0,
+          "text": "4",
+          "stroke": "muted",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm25-z21",
+      "sourceId": "cke-2025-main-basic",
+      "sourcePage": 21,
+      "alternativeText": "Trójkąt ABC z bokami AB długości 11 i BC długości 12 oraz kątem ABC równym 60 stopni.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            170.0,
+            520.0,
+            830.0,
+            520.0,
+            620.0,
+            95.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 5.0,
+          "dashed": false
+        },
+        {
+          "type": "arc",
+          "x": 830.0,
+          "y": 520.0,
+          "radiusX": 90.0,
+          "radiusY": 90.0,
+          "startAngle": -116.0,
+          "sweepAngle": 26.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0
+        },
+        {
+          "type": "text",
+          "x": 135.0,
+          "y": 540.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 845.0,
+          "y": 540.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 615.0,
+          "y": 60.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 465.0,
+          "y": 555.0,
+          "text": "11",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 750.0,
+          "y": 300.0,
+          "text": "12",
+          "stroke": "muted",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 760.0,
+          "y": 470.0,
+          "text": "60°",
+          "stroke": "danger",
+          "fontSize": 22.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm25-z30",
+      "sourceId": "cke-2025-main-basic",
+      "sourcePage": 27,
+      "alternativeText": "Wykres słupkowy liczebności ocen od 1 do 6, z wartościami odpowiednio 1, 3, 4, 4, 5 i 7.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 145.0,
+          "y": 535.0,
+          "x2": 900.0,
+          "y2": 535.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 145.0,
+          "y": 535.0,
+          "x2": 145.0,
+          "y2": 85.0,
+          "stroke": "primary",
+          "strokeThickness": 3.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": true
+        },
+        {
+          "type": "text",
+          "x": 905.0,
+          "y": 527.0,
+          "text": "ocena",
+          "stroke": "primary",
+          "fontSize": 20.0
+        },
+        {
+          "type": "text",
+          "x": 70.0,
+          "y": 70.0,
+          "text": "liczba uczniów",
+          "stroke": "primary",
+          "fontSize": 20.0
+        },
+        {
+          "type": "polygon",
+          "points": [
+            190.0,
+            535.0,
+            250.0,
+            535.0,
+            250.0,
+            480.0,
+            190.0,
+            480.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 210.0,
+          "y": 575.0,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "polygon",
+          "points": [
+            295.0,
+            535.0,
+            355.0,
+            535.0,
+            355.0,
+            370.0,
+            295.0,
+            370.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 315.0,
+          "y": 575.0,
+          "text": "2",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "polygon",
+          "points": [
+            400.0,
+            535.0,
+            460.0,
+            535.0,
+            460.0,
+            315.0,
+            400.0,
+            315.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 420.0,
+          "y": 575.0,
+          "text": "3",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "polygon",
+          "points": [
+            505.0,
+            535.0,
+            565.0,
+            535.0,
+            565.0,
+            315.0,
+            505.0,
+            315.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 525.0,
+          "y": 575.0,
+          "text": "4",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "polygon",
+          "points": [
+            610.0,
+            535.0,
+            670.0,
+            535.0,
+            670.0,
+            260.0,
+            610.0,
+            260.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 630.0,
+          "y": 575.0,
+          "text": "5",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "polygon",
+          "points": [
+            715.0,
+            535.0,
+            775.0,
+            535.0,
+            775.0,
+            150.0,
+            715.0,
+            150.0
+          ],
+          "stroke": "accent",
+          "fill": "accent",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 735.0,
+          "y": 575.0,
+          "text": "6",
+          "stroke": "muted",
+          "fontSize": 20.0
+        },
+        {
+          "type": "line",
+          "x": 137.0,
+          "y": 480.0,
+          "x2": 145.0,
+          "y2": 480.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 110.0,
+          "y": 487.0,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "line",
+          "x": 137.0,
+          "y": 425.0,
+          "x2": 145.0,
+          "y2": 425.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 110.0,
+          "y": 432.0,
+          "text": "2",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "line",
+          "x": 137.0,
+          "y": 370.0,
+          "x2": 145.0,
+          "y2": 370.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 110.0,
+          "y": 377.0,
+          "text": "3",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "line",
+          "x": 137.0,
+          "y": 315.0,
+          "x2": 145.0,
+          "y2": 315.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 110.0,
+          "y": 322.0,
+          "text": "4",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "line",
+          "x": 137.0,
+          "y": 260.0,
+          "x2": 145.0,
+          "y2": 260.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 110.0,
+          "y": 267.0,
+          "text": "5",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "line",
+          "x": 137.0,
+          "y": 205.0,
+          "x2": 145.0,
+          "y2": 205.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 110.0,
+          "y": 212.0,
+          "text": "6",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "line",
+          "x": 137.0,
+          "y": 150.0,
+          "x2": 145.0,
+          "y2": 150.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 110.0,
+          "y": 157.0,
+          "text": "7",
+          "stroke": "muted",
+          "fontSize": 17.0
+        },
+        {
+          "type": "line",
+          "x": 137.0,
+          "y": 95.0,
+          "x2": 145.0,
+          "y2": 95.0,
+          "stroke": "muted",
+          "strokeThickness": 2.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 110.0,
+          "y": 102.0,
+          "text": "8",
+          "stroke": "muted",
+          "fontSize": 17.0
+        }
+      ]
+    },
+    {
+      "id": "exam-mm25-z31",
+      "sourceId": "cke-2025-main-basic",
+      "sourcePage": 28,
+      "alternativeText": "Prostopadłościan ABCDEFGH z krawędzią AB oznaczoną x i krawędzią BC długości 4.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            250.0,
+            540.0,
+            650.0,
+            540.0,
+            650.0,
+            180.0,
+            250.0,
+            180.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            250.0,
+            180.0,
+            430.0,
+            80.0,
+            830.0,
+            80.0,
+            650.0,
+            180.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "polygon",
+          "points": [
+            650.0,
+            540.0,
+            830.0,
+            440.0,
+            830.0,
+            80.0,
+            650.0,
+            180.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 250.0,
+          "y": 540.0,
+          "x2": 430.0,
+          "y2": 440.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 430.0,
+          "y": 440.0,
+          "x2": 830.0,
+          "y2": 440.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 430.0,
+          "y": 440.0,
+          "x2": 430.0,
+          "y2": 80.0,
+          "stroke": "muted",
+          "strokeThickness": 3.0,
+          "dashed": true,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "text",
+          "x": 215.0,
+          "y": 565.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 655.0,
+          "y": 570.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 845.0,
+          "y": 455.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 395.0,
+          "y": 465.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 215.0,
+          "y": 175.0,
+          "text": "E",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 665.0,
+          "y": 175.0,
+          "text": "F",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 845.0,
+          "y": 60.0,
+          "text": "G",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 400.0,
+          "y": 60.0,
+          "text": "H",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 440.0,
+          "y": 585.0,
+          "text": "x",
+          "stroke": "danger",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 755.0,
+          "y": 515.0,
+          "text": "4",
+          "stroke": "accent",
+          "fontSize": 24.0
+        }
+      ]
+    },
+    {
       "id": "course-right-triangle",
       "sourceId": "adam-course",
       "sourcePage": 0,

@@ -37,6 +37,22 @@
       "reason": "The exact CKE 2026 question paper is pinned by SHA-256 in the exam catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
     },
     {
+      "urlPrefix": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2025/Matematyka/poziom_podstawowy/MMAP-P0-100-A-2505-arkusz.pdf",
+      "reason": "The exact CKE 2025 question paper is pinned by SHA-256 in the exam catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
+    },
+    {
+      "urlPrefix": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2025/zasady_oceniania/MMAP-P0-100-2505-zasady.pdf",
+      "reason": "The exact CKE 2025 marking guide is pinned by SHA-256 in the exam catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
+    },
+    {
+      "urlPrefix": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2025/Matematyka/poziom_rozszerzony/MMAP-R0-100-A-2505-arkusz.pdf",
+      "reason": "The exact CKE 2025 extended question paper is pinned by SHA-256 in the exam catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
+    },
+    {
+      "urlPrefix": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2025/zasady_oceniania/MMAP-R0-100-2505-zasady.pdf",
+      "reason": "The exact CKE 2025 extended marking guide is pinned by SHA-256 in the exam catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
+    },
+    {
       "urlPrefix": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2026/Matematyka/poziom_podstawowy/MMAP-P0-100-2605-zasady.pdf",
       "reason": "The exact CKE 2026 marking guide is pinned by SHA-256 in the exam catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
     },
@@ -62,7 +78,7 @@
     },
     {
       "urlPrefix": "https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1",
-      "reason": "The gated prerelease remains a non-public draft until the final checklist is approved."
+      "reason": "The release page is created after tag preflight, so its existence is verified by the release workflow rather than by the earlier documentation-link step."
     }
   ]
 }

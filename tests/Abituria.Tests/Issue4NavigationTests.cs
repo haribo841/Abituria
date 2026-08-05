@@ -89,7 +89,7 @@ public sealed class Issue4NavigationTests
                 item => openedPlaceholders.Add(item.Id),
                 (exercise, topicId) => randomized.Add((exercise.Id, topicId))));
 
-        Assert.Equal(3, repository.Exams.Count);
+        Assert.Equal(5, repository.Exams.Count);
         Assert.Equal(17, repository.ExamTopics.Count);
         Assert.Contains(matura.GetLogicalDescendants().OfType<Button>(), button =>
             button.Content is string text && text.Contains("33 zadania, 37 części ocenianych", StringComparison.Ordinal));

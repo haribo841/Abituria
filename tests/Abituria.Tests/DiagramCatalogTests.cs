@@ -26,12 +26,13 @@ public sealed class DiagramCatalogTests
 
         DiagramCatalogValidator.Validate(catalog);
         Assert.Equal(1, catalog.SchemaVersion);
-        Assert.Equal(67, catalog.Diagrams.Count);
-        Assert.Equal(67, catalog.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(76, catalog.Diagrams.Count);
+        Assert.Equal(76, catalog.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
         Assert.Equal(36, catalog.Diagrams.Count(item => item.SourceId == "cke-formula-2023"));
         Assert.Equal(9, catalog.Diagrams.Count(item => item.SourceId == "cke-2021-correction"));
         Assert.Equal(7, catalog.Diagrams.Count(item => item.SourceId == "cke-2026-main-basic"));
         Assert.Equal(3, catalog.Diagrams.Count(item => item.SourceId == "cke-2026-main-extended"));
+        Assert.Equal(9, catalog.Diagrams.Count(item => item.SourceId == "cke-2025-main-basic"));
         Assert.Equal(4, catalog.Diagrams.Count(item => item.SourceId == "adam-course"));
         Assert.Equal(8, catalog.Diagrams.Count(item => item.SourceId == "legacy-vectors"));
         Assert.All(
@@ -40,6 +41,9 @@ public sealed class DiagramCatalogTests
         Assert.All(
             catalog.Diagrams.Where(item => item.SourceId == "cke-2026-main-extended"),
             item => Assert.InRange(item.SourcePage, 1, 33));
+        Assert.All(
+            catalog.Diagrams.Where(item => item.SourceId == "cke-2025-main-basic"),
+            item => Assert.InRange(item.SourcePage, 1, 28));
         Assert.Equal(
             ["arc", "ellipse", "line", "polygon", "polyline", "text"],
             catalog.Diagrams.SelectMany(item => item.Primitives)

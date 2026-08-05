@@ -2,16 +2,18 @@
 
 W tym pliku są opisywane wyłącznie rzeczywiste wydania repozytorium `haribo841/Abituria`. Nie rekonstruujemy fikcyjnych wersji `0.1.0` ani `0.2.0` na podstawie historycznych snapshotów.
 
-## [0.9.0-beta.1] - oczekuje na publikację
+## [0.9.0-beta.1] - 2026-08-05
 
-Pierwsza wersja przygotowana do publicznego wydania. Planowana data zostanie wpisana bezpośrednio przed utworzeniem tagu, po zaliczeniu poprzedzającej go części checklisty wydania.
+Pierwsze publiczne wydanie beta Abiturii po migracji do AvaloniaUI.
 
 ### Dodano
 
 - jeden przenośny kod AvaloniaUI dla Windows, Ubuntu i macOS;
 - samowystarczalne paczki x64: ZIP dla Windows, `tar.gz` dla Ubuntu i ZIP z `Abituria.app` dla macOS Intel;
 - lokalne profile gościa i konta chronione hasłem, odzyskiwanie konta oraz trwały postęp w SQLite;
-- 18 tablic matematycznych, 7 dostępnych działów i 35 zadań matury poprawkowej 2021;
+- 18 tablic matematycznych, pełny kurs Formuły 2023 w 13 obszarach i 35 zadań matury poprawkowej 2021;
+- maturę główną 2025 na poziomie podstawowym: 31 oficjalnych zadań, 35 jednostek postępu, 50 punktów, rozwiązania, kryteria oceniania i dziewięć dostępnych diagramów wektorowych;
+- maturę główną 2025 na poziomie rozszerzonym: 12 oficjalnych zadań, 13 jednostek postępu, 50 punktów, rozwiązania i kryteria oceniania;
 - maturę główną 2026 na poziomie podstawowym: 33 oficjalne zadania, 37 jednostek postępu, 50 punktów, rozwiązania, kryteria oceniania i siedem dostępnych diagramów wektorowych;
 - maturę główną 2026 na poziomie rozszerzonym: 12 oficjalnych zadań, 13 jednostek postępu, 50 punktów, rozwiązania, kryteria oceniania i trzy dostępne diagramy wektorowe;
 - kalkulator ogólny z parserem złożonych wyrażeń, historią, `Ans`, potęgami, pierwiastkami, notacją naukową i powtarzanym `=`;
@@ -38,7 +40,7 @@ Pierwsza wersja przygotowana do publicznego wydania. Planowana data zostanie wpi
 - wersjonowanie tak, aby assembly, paczki, tag, changelog, ekran „O programie” i strona używały `0.9.0-beta.1`;
 - przechowywanie bazy poza katalogiem programu, aby aktualizacja portable nie usuwała danych użytkownika.
 - nazwy automatyzacji symbolicznych przycisków i pól oraz dynamiczne regiony wyników dla technologii asystujących.
-- obsługę wielu aktywnych arkuszy, odpowiedzi złożonych, agregację zadań w 17 tematach oraz osobny licznik postępu dla każdego arkusza.
+- obsługę pięciu aktywnych arkuszy i 133 jednostek postępu, odpowiedzi złożonych, agregację zadań w 17 tematach oraz osobny licznik postępu dla każdego arkusza.
 
 ### Bezpieczeństwo łańcucha dostaw
 
@@ -49,6 +51,6 @@ Pierwsza wersja przygotowana do publicznego wydania. Planowana data zostanie wpi
 - tag musi wskazywać dokładny commit `origin/main`, a finalny smoke test potwierdza wersję i commit rzeczywistego pliku wykonywalnego;
 - walidator odrzuca dodatkowe korzenie archiwum, niebezpieczne ścieżki i niespójne dowody licencyjne;
 - zgodność danych jest sprawdzana na niezmiennej bazie utworzonej przez rzeczywisty kod .NET 9 i EF Core 9;
-- każdy paczkowany zasób ma pozytywny wpis pochodzenia i podstawę dystrybucji, a twarda brama `releaseEligible` jest gotowa do kontroli przed tagiem; samo publiczne wydanie pozostaje nieopublikowane.
+- każdy paczkowany zasób ma pozytywny wpis pochodzenia i podstawę dystrybucji, a twarda brama `releaseEligible` jest obowiązkowo kontrolowana przed tagiem.
 
 [0.9.0-beta.1]: https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1

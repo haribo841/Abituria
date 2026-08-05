@@ -47,7 +47,7 @@ Zakres bieżącej implementacji obejmuje:
 - ekran startowy z kaflami głównych obszarów,
 - 18 tablic matematycznych obejmujących kompletny zakres dokumentu CKE dla Formuły 2023,
 - pełny kurs Formuły 2023: 4 grupy, 13 obszarów, 73 wymagania podstawowe, 46 dodatkowych wymagań rozszerzonych, 238 rozwiązanych przykładów i 357 ćwiczeń,
-- matura główna 2026 PP: 33 oficjalnie numerowane zadania, 37 jednostek postępu i 50 punktów,
+- matury główne 2025 i 2026 na poziomie podstawowym i rozszerzonym - łącznie 98 jednostek postępu,
 - zachowane 35 zadań matury poprawkowej 2021,
 - przeglądanie zadań według arkusza i tematów,
 - sprawdzanie odpowiedzi w zadaniach zamkniętych,
@@ -86,8 +86,8 @@ Poza bieżącym zakresem pozostają:
 | F-05 | System importuje historyczne profile gościa z `users.txt` idempotentnie. | Średni | Zaimplementowane | `AccountService`, `InitialLocalAccounts`, `AccountServiceTests` |
 | F-06 | System pokazuje 18 tablic matematycznych obejmujących wszystkie 17 sekcji i podpunkty dokumentu CKE dla Formuły 2023, z jawnym źródłem i sumą SHA-256. | Wysoki | Zaimplementowane | `Content/formulas.json`, `FORMULA_2023_COVERAGE.md`, `ContentInventoryTests` |
 | F-07 | System pokazuje pełny kurs Formuły 2023 w 4 grupach i 13 obszarach, obejmujący 73 wymagania podstawowe i 46 rozszerzonych. | Wysoki | Zaimplementowane | `Content/chapters.json`, `MATH_COURSE_2023_COVERAGE.md`, `MathCourse2023ContentTests` |
-| F-08 | System pokazuje maturę główną 2026 PP jako 33 zadania, 37 jednostek postępu i 50 punktów oraz zachowuje 35 zadań matury poprawkowej 2021. | Wysoki | Zaimplementowane | `Content/exams.json`, `Content/exam-2026-main-basic.json`, `Content/exam-2021-correction.json`, `Matura2026ContentTests` |
-| F-09 | System umożliwia wybór arkusza, losowanie tylko z wybranego arkusza oraz agregację obu arkuszy według 17 tematów. | Wysoki | Zaimplementowane | `MaturaView`, `TaskTopicsView`, `ContentRepository`, `Matura2026UiTests` |
+| F-08 | System pokazuje matury główne 2025 PP `31/35/50`, 2025 PR `12/13/50`, 2026 PP `33/37/50` i 2026 PR `12/13/50` oraz zachowuje 35 zadań matury poprawkowej 2021. | Wysoki | Zaimplementowane | `Content/exams.json`, `Content/exam-2025-main-*.json`, `Content/exam-2026-main-*.json`, `Content/exam-2021-correction.json`, `Matura2025ContentTests`, `Matura2026ContentTests` |
+| F-09 | System umożliwia wybór arkusza, losowanie tylko z wybranego arkusza oraz agregację pięciu arkuszy według 17 tematów. | Wysoki | Zaimplementowane | `MaturaView`, `TaskTopicsView`, `ContentRepository`, `Matura2026UiTests` |
 | F-10 | System sprawdza odpowiedzi A-D oraz złożone tabele P/F lub zadania wielopolowe i zapisuje postęp po poprawnej odpowiedzi. | Wysoki | Zaimplementowane | `ExerciseView`, `CompoundAnswerEvaluator`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` |
 | F-11 | System ujawnia pełne rozwiązania zadań otwartych i zapisuje postęp dopiero po świadomym ujawnieniu. | Wysoki | Zaimplementowane | `ExerciseView`, `ExerciseAndRoutingCoverageTests`, `MathCourse2023ContentTests` |
 | F-12 | System udostępnia podpowiedzi krokowe dla zadań. | Wysoki | Zaimplementowane | `ExerciseView`, `ContentInventoryTests` |
@@ -102,7 +102,7 @@ Poza bieżącym zakresem pozostają:
 | F-21 | Opublikowany plik wykonywalny obsługuje `--release-smoke-test --data-directory <katalog>` bez otwierania UI i bez dostępu do prawdziwych danych użytkownika. | Wysoki | Zaimplementowane | `ReleaseSmokeTest`, `ReleaseRuntimeTests` |
 | F-22 | System pozwala wylosować zadanie z całego arkusza albo z aktywnego tematu, zachowując kontekst poprzedniego i następnego zadania. | Średni | Zaimplementowane | `ExerciseRandomizer`, `MaturaView`, `TaskTopicsView`, `ExerciseRandomizerTests` |
 | F-23 | System sprawdza odpowiedzi liczbowe bezpiecznym parserem, akceptuje przecinek i kropkę oraz stosuje tolerancję bezwzględną i względną `1e-9`. | Wysoki | Zaimplementowane | `NumericAnswerEvaluator`, `ExpressionCalculator`, `MathCourse2023ContentTests` |
-| F-24 | Profil pokazuje osobno postęp matury 2026 PP `x/37`, matury poprawkowej 2021 `x/35`, podstawy `x/219` i części rozszerzonej `x/138` bez zmiany schematu SQLite. | Wysoki | Zaimplementowane | `ProfileView`, `AccountService`, `Matura2026UiTests`, `MathCourse2023ContentTests` |
+| F-24 | Profil pokazuje osobno postęp pięciu arkuszy: 2026 PP `x/37`, 2026 PR `x/13`, 2025 PP `x/35`, 2025 PR `x/13` i poprawkowej 2021 `x/35`, a także podstawy `x/219` i części rozszerzonej `x/138`, bez zmiany schematu SQLite. | Wysoki | Zaimplementowane | `ProfileView`, `AccountService`, `Matura2026UiTests`, `MathCourse2023ContentTests` |
 | F-25 | Start pokazuje sześć kafelków, a niezależne strony `Matura` i `Zadania` rozdzielają pełny arkusz, 17 tematów, losowanie i placeholdery z właściwym kontekstem powrotu. | Wysoki | Zaimplementowane | `HomeView`, `MaturaView`, `TaskTopicsView`, `Issue4NavigationTests` |
 | F-26 | System udostępnia pojedynczy kalkulator Picture in Picture i przenosi tę samą sesję bez utraty wyrażenia między oknem nad Abiturią, oknem zawsze na wierzchu i panelem aplikacji. Wybrany tryb jest zapisywany osobno dla profilu. | Wysoki | Zaimplementowane | `CalculatorPipController`, `OptionsView`, migracja `202607310001_AddProfilePipPreference`, `Issue5CalculatorPipTests` |
 | F-27 | Każdy poprawny wynik kalkulatora ogólnego trafia dokładnie do schowka systemowego, a brudnopis i odpowiedź liczbowa obsługują `Ctrl+V` lub `Cmd+V` oraz menu `Wklej` w miejscu kursora albo zaznaczenia. | Wysoki | Zaimplementowane | `CalculatorClipboardCoordinator`, `TextBoxClipboardBehavior`, `Issue5CalculatorPipTests` |
@@ -132,7 +132,7 @@ Poza bieżącym zakresem pozostają:
 | NF-19 | Login, Start i kalkulator ogólny zmieniają strukturę układu odpowiednio przy szerokościach `860`, `780` i `900`, bez utraty logicznej kolejności kontrolek. | Wysoki | Zaimplementowane | `AdaptiveLayout`, testy breakpointów Avalonia Headless |
 | NF-20 | Dialogi aplikacji są skalowalne, mają bezpieczne granice wymiarów i przewijanie dla treści wykraczającej poza obszar klienta. | Wysoki | Zaimplementowane | `AdaptiveLayout.CreateDialog`, test właściwości dialogu |
 | NF-21 | Wszystkie kryteria WCAG 2.2 A/AA są przeglądane i śledzone, z jawnym rozdzieleniem dowodów automatycznych, kontroli manualnych i kryteriów nieodpowiednich dla aplikacji desktopowej. | Wysoki | Audyt wykonany, kontrole manualne pozostają jawne | `docs/ACCESSIBILITY_WCAG_AUDIT.md`, `AccessibilityRegressionTests`, `Discussion49StyleRegressionTests` |
-| NF-22 | Aktywne treści używają dokładnie 67 skalowalnych diagramów z opisami alternatywnymi i nie ładują rastrów; `img/icon.ico` pozostaje jedynym statycznym wyjątkiem jako ikona aplikacji. | Wysoki | Zaimplementowane | `Content/diagrams.json`, `DiagramView`, `DiagramCatalogTests`, `LegacyImageArchiveTests` |
+| NF-22 | Aktywne treści używają dokładnie 76 skalowalnych diagramów z opisami alternatywnymi i nie ładują rastrów; `img/icon.ico` pozostaje jedynym statycznym wyjątkiem jako ikona aplikacji. | Wysoki | Zaimplementowane | `Content/diagrams.json`, `DiagramView`, `DiagramCatalogTests`, `LegacyImageArchiveTests` |
 
 ## 6. Opis użytkowników systemu
 
@@ -155,7 +155,7 @@ System nie zakłada kont administratora, ról sieciowych ani synchronizacji wiel
 | Dane lokalne | SQLite, encje, migracje i import legacy | `AppDbContext.cs`, `InitialLocalAccounts.cs` |
 | Treści edukacyjne | Ładowanie i renderowanie JSON, wzorów i obrazów | `ContentRepository.cs`, `RichContentView.cs`, `UiFactory.cs` |
 | Tablice i działy | Lista wzorów oraz hierarchia grupa - obszar - lekcja - ćwiczenie z filtrem poziomu | `ContentViews.cs`, `Content/formulas.json`, `Content/chapters.json`, `Content/course-exercises.json` |
-| Zadania maturalne | Indeks arkuszy, lista zadań, tematy, odpowiedzi proste i złożone, rozwiązania, punktacja oraz postęp | `ExamViews.cs`, `Content/exams.json`, `Content/exam-2026-main-basic.json`, `Content/exam-2021-correction.json` |
+| Zadania maturalne | Indeks arkuszy, lista zadań, tematy, odpowiedzi proste i złożone, rozwiązania, punktacja oraz postęp | `ExamViews.cs`, `Content/exams.json`, `Content/exam-2025-main-*.json`, `Content/exam-2026-main-*.json`, `Content/exam-2021-correction.json` |
 | Kalkulator kwadratowy | Delta, miejsca zerowe, wierzchołek, postacie funkcji | `CalculatorView.cs`, `QuadraticSolver.cs` |
 | Kalkulator ogólny | Parser wyrażeń, historia, `Ans`, wejście ekranowe | `GeneralCalculatorView.cs`, `ExpressionCalculator.cs`, `CalculatorSession.cs`, `CalculatorInputState.cs` |
 | Dokumentacja i jakość | Architektura, wymagania, roadmapa, Sonar, testy | `docs`, `tests/Abituria.Tests`, `.github/workflows` |
@@ -224,8 +224,8 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 4. `dotnet format whitespace Abituria.sln --verify-no-changes --no-restore` nie zgłasza zmian.
 5. `git diff --check` nie zgłasza błędów.
 6. SonarQube Cloud nie raportuje otwartych problemów po analizie aktualnego commita.
-7. Inwentarz treści potwierdza 18 tablic, kompletne odwzorowanie 17 sekcji CKE, 91 kątów w tabeli trygonometrycznej, 4 grupy i 13 obszarów kursu, kontrakt `119/238/357`, 17 tematów oraz arkusze `33/37/50`, `12/13/50` i `35/35/45`.
-8. Wszystkie 67 identyfikatorów diagramów wskazane przez treści istnieją, są używane i mają niepuste opisy alternatywne; dziesięć figur matur 2026 ma stronę i źródło.
+7. Inwentarz treści potwierdza 18 tablic, kompletne odwzorowanie 17 sekcji CKE, 91 kątów w tabeli trygonometrycznej, 4 grupy i 13 obszarów kursu, kontrakt `119/238/357`, 17 tematów oraz arkusze `31/35/50`, dwa razy `12/13/50`, `33/37/50` i `35/35/45`.
+8. Wszystkie 76 identyfikatorów diagramów wskazane przez treści istnieją, są używane i mają niepuste opisy alternatywne; dziewiętnaście figur matur 2025 i 2026 ma stronę i źródło.
 9. Każde zadanie ma kompletną umowę odpowiedzi: opcje i klucz, oczekiwany wynik z tolerancją, części odpowiedzi złożonej albo pełne rozwiązanie ujawniane na żądanie.
 10. Kalkulator ogólny przechodzi regresje dla issues #1-#9 oraz powiązanych dyskusji.
 11. Widoki architektury nie używają WPF `Page`, `Frame`, `NavigationWindow` ani nie otwierają nieograniczonych niemodalnych okien.
@@ -242,7 +242,7 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 22. `PerformanceMemoryAndLoadTests` przechodzi w konfiguracji Release, a metryki nie przekraczają opisanych budżetów.
 23. Losowanie z całego arkusza i z tematu otwiera zadanie należące do właściwej puli oraz zachowuje ten kontekst nawigacji.
 24. Wynik historycznych testów użyteczności z uczestnikami, ograniczenia zachowanego materiału oraz późniejsze poprawki heurystyczne są rozdzielone i udokumentowane zgodnie z `USABILITY_TEST_PROTOCOL.md`, `USABILITY_TEST_RESULTS.md` oraz `ACCEPTANCE_PROTOCOL.md`. Brakujące liczby, daty, komentarze i poprawki uczestników nie mogą być rekonstruowane przez domysł.
-25. Protokoły I-IV rozdzielają daty technicznej rekonstrukcji od poświadczonej końcowej decyzji prowadzącego z początku lutego 2022 r. Historyczna, uzgodniona forma przekazania i odrębny status nieistniejącego jeszcze publicznego GitHub Release są zapisane w `acceptance/README.md` i `DELIVERY_PROTOCOL.md`.
+25. Protokoły I-IV rozdzielają daty technicznej rekonstrukcji od poświadczonej końcowej decyzji prowadzącego z początku lutego 2022 r. Historyczna, uzgodniona forma przekazania i odrębne publiczne wydanie bieżącej migracji są zapisane w `acceptance/README.md` i `DELIVERY_PROTOCOL.md`.
 26. `DEFENSE_PROTOCOL.md` zapisuje rzeczywistą datę publicznej obrony, role i nazwiska członków komisji, demonstrację aplikacji, pytania i odpowiedzi, wynik oraz publiczny odnośnik do nagrania, bez utożsamiania historycznej wersji z bieżącą migracją.
 27. `EVALUATION_PROTOCOL.md` odwzorowuje wszystkie obszary i warunki Issue #45, rozdziela bezpośrednie dowody od poświadczeń retrospektywnych, nie przypisuje historycznej oceny bieżącej migracji i zawiera decyzję oraz komentarz zamykający.
 28. Testy dyskusji #49 potwierdzają własny chrome, pełny zestaw stanów interakcji, widoczny fokus, przełączenie czterech ustawień motywu i różne obrazy palet.
@@ -252,7 +252,8 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 32. Kryteria Issue #4 wymagają sześciu kafelków, osobnych tras `Matura` i `Zadania`, zachowania 35 identyfikatorów arkusza i istniejącego postępu, wyłącznie używanych diagramów, 75 zgodnych sum archiwum oraz braku aktywnych PNG/JPG, `Bitmap`, `Image` i `AssetImage` poza ikoną `img/icon.ico` używaną tylko jako `ApplicationIcon`.
 33. Kryteria Issue #5 wymagają pojedynczego PiP w trzech trybach, zachowania sesji przy zmianie hosta, ustawienia per profil, dokładnego i uporządkowanego kopiowania `DisplayValue`, wklejania w brudnopisie i odpowiedzi liczbowej oraz izolacji brudnopisu między profilami i zadaniami.
 34. Kryteria Issue #6 wymagają własnego paska bez dekoracji systemowych, historycznej kolejności `🍓` zamknij, `🍋` maksymalizuj lub przywróć, `🍏` minimalizuj po lewej, wyśrodkowanej marki `🍀 Abituria`, motywu po prawej, fontu Mulish oraz tooltipów i nazw automatyzacji wszystkich kontrolek.
-35. Kryteria Issues #7-#9 wymagają źródeł i SHA-256 matur CKE 2026, kontraktów `33/37/50` i `12/13/50`, zachowania `mp21-*`, trzech oddzielnych liczników postępu, odpowiedzi `compound`, 67 diagramów, bieżącego odnośnika `haribo841/Abituria#9` oraz zatwierdzonej proweniencji opartej na deklaracji właściciela.
+35. Kryteria Issues #7-#9 wymagają źródeł i SHA-256 matur CKE 2026, kontraktów `33/37/50` i `12/13/50`, zachowania `mp21-*`, oddzielnych liczników postępu, odpowiedzi `compound`, wektorowych diagramów, bieżącego odnośnika `haribo841/Abituria#9` oraz zatwierdzonej proweniencji opartej na deklaracji właściciela.
+36. Matury 2025 wymagają przypiętych arkuszy i zasad oceniania CKE z SHA-256, kontraktów `31/35/50` i `12/13/50`, stabilnych identyfikatorów, dziewięciu wektorowych diagramów poziomu podstawowego, agregacji w 17 tematach oraz zatwierdzonej proweniencji.
 
 ## Macierz zgodności wymagań z implementacją
 
@@ -279,11 +280,11 @@ Lokalna implementacja obejmuje pełny kontrakt `119/238/357`, filtr poziomu, ćw
 
 ## Status Issue #7
 
-Techniczny inwentarz licencji i proweniencji obejmuje matury CKE 2026 na poziomie podstawowym i rozszerzonym, ich zasady oceniania oraz dziesięć autorskich implementacji wektorowych Avalonia. Rozszerzenie deklaracji właściciela z 3 sierpnia 2026 r. wskazuje cztery dokumenty, adresy, sumy SHA-256 i zakres redystrybucji w Abiturii. Grupy `cke-2026-main-basic-exam`, `cke-2026-main-extended-exam` i `runtime-vector-diagrams` mają status `approved`, a `Test-ContentProvenance.ps1 -RequireReleaseEligible` przechodzi. Issue #7 spełnia kryteria zamknięcia.
+Techniczny inwentarz licencji i proweniencji obejmuje matury CKE 2025 i 2026 na poziomie podstawowym i rozszerzonym, ich zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Rozszerzenia deklaracji właściciela z 3 i 5 sierpnia 2026 r. wskazują osiem dokumentów, adresy, sumy SHA-256 i zakres redystrybucji w Abiturii. Grupy czterech arkuszy głównych i `runtime-vector-diagrams` mają status `approved`, a `Test-ContentProvenance.ps1 -RequireReleaseEligible` przechodzi. Issue #7 spełnia kryteria zamknięcia.
 
 ## Status issue #36
 
-Repozytorium zawiera implementację procesu przygotowania wersji `0.9.0-beta.1`: jedno źródło wersji, .NET 10 LTS, lockfile, audyt, paczki portable dla trzech systemów, diagnostyczny smoke test, ekran "O programie", dokumentację, sumy, SBOM i atestacje. Zakończenie techniczne nie jest równoznaczne z publicznym wydaniem. Po rozszerzeniu deklaracji dla matur CKE 2026 manifest ma `releaseEligible=true`. Issue #36 nadal można zamknąć dopiero po utworzeniu tagu, wykonaniu workflow, publicznym prerelease, weryfikacji Pages i komentarzu z linkami oraz checklistą.
+Repozytorium zawiera kompletny proces wydania wersji `0.9.0-beta.1`: jedno źródło wersji, .NET 10 LTS, lockfile, audyt, paczki portable dla trzech systemów, diagnostyczny smoke test, ekran "O programie", dokumentację, sumy, SBOM i atestacje. Manifest ma `releaseEligible=true`, a publiczny prerelease znajduje się pod adresem `https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1`.
 
 ## Status Issue #9
 
@@ -295,7 +296,7 @@ Issue #43 dotyczyło odbioru czterech przyrostów, prototypowania, testów użyt
 
 Nie zachowano dokładnego dnia odbioru, osobnych dat decyzji dla I-III przyrostu, liczby i danych uczestników, kart sesji, komentarzy, powiązania poprawek z uczestnikami, kanału przekazania ani hasha historycznego pakietu. Protokoły ujawniają te braki i nie zastępują ich fikcyjnymi danymi. Późniejsze poprawki H-01-H-03 są wynikiem przeglądu heurystycznego z 2026 r. i nie są przypisywane uczestnikom.
 
-Na tej podstawie historyczny odbiór ma status `ACCEPTED - READY TO CLOSE`. Publiczny GitHub Release `0.9.0-beta.1` nie istnieje i pozostaje osobnym działaniem. Dowody proweniencji oraz brama `-RequireReleaseEligible` są już pozytywne; pozostały tag, workflow, kontrola draftu i publikacja.
+Na tej podstawie historyczny odbiór ma status `ACCEPTED - READY TO CLOSE`. Publiczny GitHub Release `0.9.0-beta.1` pozostaje odrębnym, ukończonym działaniem bieżącej migracji i nie jest przedstawiany jako dowód historycznego odbioru.
 
 ## Status issue #44
 

@@ -2,7 +2,7 @@
 
 Wersja docelowa: `0.9.0-beta.1`.
 
-Data ostatniej aktualizacji: 19 lipca 2026 r.
+Data ostatniej aktualizacji: 5 sierpnia 2026 r.
 
 ## Statusy
 
@@ -22,7 +22,7 @@ Data ostatniej aktualizacji: 19 lipca 2026 r.
 | Instalacja lokalna | samowystarczalna publikacja uruchamia izolowany smoke test w nowym katalogu | `dotnet publish --self-contained true` oraz `Abituria.exe --release-smoke-test` | PASS - Windows 11 x64, 18 lipca 2026 r. |
 | Instalacja niezależna automatyczna | każda deklarowana platforma buduje, pakuje, rozpakowuje i uruchamia aplikację na innym, natywnym runnerze | [`platform-installation-smoke` 29646667838](https://github.com/haribo841/Abituria/actions/runs/29646667838) | PASS - Windows, Ubuntu i macOS dla `e0afeea`, 18 lipca 2026 r. |
 | Instalacja niezależna ręczna | osoba spoza środowiska budowania instaluje paczkę wydania i zapisuje wynik | opcjonalna tabela ręczna poniżej | NOT PERFORMED - dowód formalny niezależnych komputerów zapewniają trzy natywne, hostowane runnery; ręczna sesja jest uzupełniająca i nie blokuje odbioru |
-| Publiczne wydanie | tag, paczki, sumy, SBOM, atestacje, draft i publikacja w GitHub Releases | `RELEASE_PROCESS.md`, workflow `release` | PENDING - proweniencja i jej walidatory są PASS, ale tag, workflow wydania i GitHub Release nie zostały wykonane |
+| Publiczne wydanie | tag, paczki, sumy, SBOM, atestacje, draft i publikacja w GitHub Releases | [`v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1), `RELEASE_PROCESS.md`, workflow `release` | PASS - zweryfikowany draft opublikowano jako prerelease |
 
 ## Odbiór zakresu Issue #42
 
@@ -33,7 +33,7 @@ Data ostatniej aktualizacji: 19 lipca 2026 r.
 | instrukcja użytkownika i uruchomienia | `USER_GUIDE.md`, `INSTALLATION.md` | PASS |
 | testy funkcjonalne, regresyjne, wydajnościowe i pamięciowe | `TESTING.md`, testy projektu | PASS po pełnej bramie automatycznej |
 | użyteczność, instalacja niezależna i końcowy odbiór | `USABILITY_TEST_PROTOCOL.md`, `USABILITY_TEST_RESULTS.md`, ten dokument | PASS RETROSPEKTYWNY dla historycznych testów uczestników i odbioru; formalny test instalacji PASS na trzech niezależnych, natywnych runnerach |
-| ograniczenia i status prawny zasobów | `KNOWN_LIMITATIONS.md`, `CONTENT_PROVENANCE.md`, `ASSET_RIGHTS_DECLARATION.md` | PASS; rozszerzenie deklaracji z 3 sierpnia 2026 r. obejmuje matury 2026 i autorskie wektory Avalonia, `releaseEligible=true` |
+| ograniczenia i status prawny zasobów | `KNOWN_LIMITATIONS.md`, `CONTENT_PROVENANCE.md`, `ASSET_RIGHTS_DECLARATION.md` | PASS; rozszerzenia deklaracji z 3 i 5 sierpnia 2026 r. obejmują matury 2025 i 2026 oraz autorskie wektory Avalonia, `releaseEligible=true` |
 | autor, licencja i historia zmian | `AUTHORS.md`, `LICENSE`, `CHANGELOG.md` | PASS |
 | PDF dla komisji | `output/pdf/Abituria-Technical-Documentation-0.9.0-beta.1.pdf` | PASS po wygenerowaniu i kontroli wizualnej |
 | zatwierdzenie i przekazanie komisji | decyzja poniżej i `DELIVERY_PROTOCOL.md` | PASS RETROSPEKTYWNY - projekt zaakceptowany przez prowadzącego na początku lutego 2022 r.; dokładny dzień i podpis nie zostały zachowane |
@@ -77,9 +77,9 @@ Issue #45 określało siedem obszarów oceny, dziesięć warunków akceptacji or
 | produkt, wymagania i stabilność | PASS RETROSPEKTYWNY | PASS techniczny | historyczna akceptacja i obecne testy stanowią odrębne dowody |
 | dokumentacja | PARTIAL historyczny | PASS lokalny | obecny pakiet uzupełnia braki bez twierdzenia, że istniał w 2022 r. |
 | testowanie i użyteczność | PASS RETROSPEKTYWNY | PASS | historyczne sesje poświadczono, a obecny zestaw jest automatycznie weryfikowany |
-| wdrożenie | PASS - `v1.0.0` przed obroną i `v1.0.1` po obronie | PENDING publicznego wydania | brak obecnego tagu nie unieważnia historycznego wdrożenia |
+| wdrożenie | PASS - `v1.0.0` przed obroną i `v1.0.1` po obronie | PASS - publiczny prerelease `v0.9.0-beta.1` | bieżące wydanie pozostaje odrębne od historycznego wdrożenia |
 | praca zespołu i wkład | PARTIAL z powodu braków archiwalnych | PASS dla pracy jednoosobowej | nie rekonstruuje się opinii prowadzącego ani ocen indywidualnych |
-| wynik | ACCEPTED, bardzo dobry według poświadczenia właściciela | TECHNICALLY ACCEPTED - PUBLIC RELEASE PENDING | bieżącej migracji nie przypisuje się oceny komisji |
+| wynik | ACCEPTED, bardzo dobry według poświadczenia właściciela | TECHNICALLY ACCEPTED - PUBLIC RELEASED | bieżącej migracji nie przypisuje się oceny komisji |
 
 Nagranie kończy się po zapowiedzi narady, przed ogłoszeniem wyniku. Pozytywna decyzja i wynik bardzo dobry są zatem zapisane jako poświadczenie właściciela, a nie jako fakt wypowiedziany w zachowanym materiale. Decyzja formalna dla Issue #45: `ACCEPTED - HISTORICAL CRITERIA SATISFIED - READY TO CLOSE AS COMPLETED`.
 
@@ -92,7 +92,7 @@ Nagranie kończy się po zapowiedzi narady, przed ogłoszeniem wyniku. Pozytywna
 | późniejsze poprawki dostępności | H-01-H-03 wykonane i zweryfikowane 19 lipca 2026 r. | wynik przeglądu heurystycznego, nie badania uczestników |
 | decyzja prowadzącego | projekt zaakceptowany na początku lutego 2022 r. | dokładny dzień, nazwisko i podpis nie zostały zachowane w repozytorium |
 | forma przekazania | końcowa wersja projektu została przekazana prowadzącemu w uzgodnionej formie i przyjęta | kanał, dokładna rewizja i hash pakietu nie zostały zachowane |
-| prawa do zasobów | właściciel poświadczył prawa do ówczesnego zakresu zasobów projektu | `ASSET_RIGHTS_DECLARATION.md` i oba warianty walidatora PASS 19 lipca 2026 r.; rozszerzenie o maturę 2026 pozostaje wymagane |
+| prawa do zasobów | właściciel poświadczył prawa do ówczesnego zakresu zasobów projektu | `ASSET_RIGHTS_DECLARATION.md`; oba warianty walidatora PASS, a rozszerzenia z 3 i 5 sierpnia obejmują matury 2025 i 2026 |
 
 ## Automatyczny test instalacji na niezależnych komputerach
 
@@ -125,9 +125,9 @@ Poniższa tabela jest opcjonalnym uzupełnieniem dla sesji prowadzonej przez cz�
 
 ## Warunek publikacji
 
-Właściciel poświadczył posiadanie praw do zakresu zasobów ocenianego 19 lipca 2026 r., a 3 sierpnia 2026 r. rozszerzył deklarację na oba arkusze 2026, zasady oceniania i dziesięć autorskich implementacji wektorowych Avalonia. Historyczne przekazanie prowadzącemu zostało uzgodnione i zaakceptowane, dlatego spełnia formalny wariant przekazania dla Issue #43. Bieżący manifest ma `releaseEligible=true` i przechodzi oba warianty walidatora.
+Właściciel poświadczył posiadanie praw do zakresu zasobów ocenianego 19 lipca 2026 r., a 3 i 5 sierpnia 2026 r. rozszerzył deklarację na arkusze 2025 i 2026 na obu poziomach, zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Historyczne przekazanie prowadzącemu zostało uzgodnione i zaakceptowane, dlatego spełnia formalny wariant przekazania dla Issue #43. Bieżący manifest ma `releaseEligible=true` i przechodzi oba warianty walidatora.
 
-Publiczne wydanie bieżącej wersji jest osobnym działaniem. Nie wolno twierdzić, że GitHub Release istnieje, ponieważ tag i workflow wydania nie zostały wykonane. Przed publikacją należy ponowić `tools/Test-ContentProvenance.ps1 -RequireReleaseEligible` oraz pozostałe bramy na dokładnym commicie przeznaczonym do wydania, skontrolować draft i dopiero potem opublikować prerelease.
+Publiczne wydanie bieżącej wersji jest osobnym działaniem i zostało ukończone jako [prerelease `v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1). Dla dokładnego commita wydania ponowiono `tools/Test-ContentProvenance.ps1 -RequireReleaseEligible` oraz pozostałe bramy, po czym skontrolowano draft i opublikowano prerelease.
 
 Nieuruchamialny kandydat dokumentacyjny bieżącej wersji jest opisany w `DELIVERY_PROTOCOL.md`. Jest opcjonalnym artefaktem, a nie podstawą historycznej decyzji.
 
@@ -141,7 +141,7 @@ Nieuruchamialny kandydat dokumentacyjny bieżącej wersji jest opisany w `DELIVE
 - [x] końcowa decyzja prowadzącego: projekt zaakceptowany na początku lutego 2022 r.;
 - [x] historyczna, uzgodniona forma przekazania przyjęta przez prowadzącego;
 - [x] poświadczenie właściciela o posiadaniu praw do zasobów zapisane z rozdzieleniem od bieżącej bramy publikacji;
-- [x] publiczny GitHub Release oznaczony jako osobne działanie PENDING, a nie jako istniejący dowód.
+- [x] publiczny GitHub Release ukończony jako osobne działanie i nieużywany jako dowód historycznego odbioru.
 
 Decyzja formalna dla Issue #43: `ACCEPTED - READY TO CLOSE`. Ograniczenia archiwalne pozostają jawne, a publikacja `0.9.0-beta.1` jest śledzona niezależnie.
 
@@ -167,7 +167,7 @@ Decyzja formalna dla Issue #44: `ACCEPTED - M7 ACHIEVED - READY TO CLOSE AS COMP
 - [x] ujawniono, że nagranie nie obejmuje ogłoszenia decyzji;
 - [x] ujawniono brak podpisanej karty oceny, osobnej opinii prowadzącego i ocen indywidualnych;
 - [x] rozdzielono autorstwo bieżącej implementacji od historycznego procesu zespołowego;
-- [x] rozdzielono historyczną akceptację od nieopublikowanego wydania bieżącej migracji;
+- [x] rozdzielono historyczną akceptację od publicznego wydania bieżącej migracji;
 - [x] protokół `EVALUATION_PROTOCOL.md` dołączono do indeksu, PDF i pakietu dokumentacyjnego;
 - [x] przygotowano komentarz zamykający oparty na trwałych odnośnikach.
 

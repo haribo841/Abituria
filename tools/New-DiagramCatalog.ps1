@@ -563,6 +563,170 @@ function Get-Exam2026Scene {
     }
 }
 
+function Get-Exam2025Scene {
+    param([string]$Kind)
+    switch ($Kind) {
+        'number-lines' {
+            $items = @()
+            $rows = @(
+                @{ Label = 'A'; Y = 120; Boundary = 3; Left = $true },
+                @{ Label = 'B'; Y = 255; Boundary = 3; Left = $false },
+                @{ Label = 'C'; Y = 390; Boundary = -9; Left = $true },
+                @{ Label = 'D'; Y = 525; Boundary = -9; Left = $false }
+            )
+            foreach ($row in $rows) {
+                $items += New-Text 75 ($row.Y + 8) $row.Label 'primary' 24
+                $items += New-Line 150 $row.Y 895 $row.Y 'primary' 3 $false $false $true
+                $boundaryX = if ($row.Boundary -eq 3) { 690 } else { 330 }
+                $shadeStart = if ($row.Left) { 150 } else { $boundaryX }
+                $shadeEnd = if ($row.Left) { $boundaryX } else { 880 }
+                $items += New-Polygon @($shadeStart,($row.Y - 34), $shadeEnd,($row.Y - 34), $shadeEnd,$row.Y, $shadeStart,$row.Y) 'accent' 'accent' 1
+                $items += New-Ellipse $boundaryX $row.Y 8 8 'primary' 'primary' 2
+                $items += New-Text ($boundaryX - 10) ($row.Y + 38) ([string]$row.Boundary) 'muted' 18
+                $items += New-Text 595 ($row.Y + 38) '0' 'muted' 18
+                $items += New-Text 625 ($row.Y + 38) '1' 'muted' 18
+            }
+            $items
+        }
+        'piecewise' {
+            @(
+                New-Line 105 390 920 390 'primary' 3 $false $false $true
+                New-Line 500 575 500 70 'primary' 3 $false $false $true
+                New-Text 925 382 'x' 'primary' 23
+                New-Text 515 65 'y' 'primary' 23
+                New-Polyline @(220,330, 360,210, 640,210, 780,510) 'accent' 5
+                New-Ellipse 220 330 8 8 'accent' 'accent' 2
+                New-Ellipse 360 210 8 8 'accent' 'accent' 2
+                New-Ellipse 640 210 8 8 'accent' 'accent' 2
+                New-Ellipse 780 510 10 10 'accent' 'surface' 3
+                New-Text 195 425 '-4' 'muted' 18
+                New-Text 335 425 '-2' 'muted' 18
+                New-Text 630 425 '2' 'muted' 18
+                New-Text 770 425 '4' 'muted' 18
+                New-Text 455 335 '1' 'muted' 18
+                New-Text 455 215 '3' 'muted' 18
+                New-Text 650 175 'y = f(x)' 'accent' 22
+            )
+        }
+        'parabola' {
+            @(
+                New-Line 105 500 920 500 'primary' 3 $false $false $true
+                New-Line 260 585 260 65 'primary' 3 $false $false $true
+                New-Text 925 492 'x' 'primary' 23
+                New-Text 275 60 'y' 'primary' 23
+                New-Polyline @(130,610, 180,525, 260,350, 340,225, 420,150, 500,125, 580,150, 660,225, 740,350, 820,525, 870,610) 'accent' 5
+                New-Ellipse 500 125 8 8 'danger' 'danger' 2
+                New-Ellipse 260 350 8 8 'danger' 'danger' 2
+                New-Line 500 125 500 500 'muted' 2 $true
+                New-Text 485 535 '3' 'muted' 18
+                New-Text 220 355 '3' 'muted' 18
+                New-Text 460 105 '(3,6)' 'danger' 20
+                New-Text 625 185 'y = f(x)' 'accent' 22
+            )
+        }
+        'median-triangle' {
+            @(
+                New-Polygon @(150,510, 850,510, 150,105) 'primary' 'none' 5
+                New-Line 500 510 150 105 'accent' 4
+                New-Polyline @(150,475, 185,475, 185,510) 'muted' 3
+                New-Arc 500 510 75 75 -135 45 'danger' 4
+                New-Arc 850 510 95 95 -150 30 'accent' 4
+                New-Text 115 530 'A'
+                New-Text 865 530 'B'
+                New-Text 115 80 'C'
+                New-Text 485 545 'D'
+                New-Text 285 285 '5' 'muted' 22
+                New-Text 280 545 '6' 'muted' 22
+                New-Text 460 455 'α' 'danger' 24
+                New-Text 800 455 'β' 'accent' 24
+            )
+        }
+        'circle' {
+            @(
+                New-Ellipse 500 325 230 230 'accent' 'none' 4
+                New-Line 300 435 700 455 'primary' 4
+                New-Line 300 435 545 95 'primary' 4
+                New-Line 700 455 545 95 'primary' 4
+                New-Line 500 325 300 435 'muted' 3
+                New-Line 500 325 700 455 'muted' 3
+                New-Arc 545 95 78 78 74 48 'danger' 4
+                New-Text 265 460 'A'
+                New-Text 715 475 'B'
+                New-Text 535 60 'C'
+                New-Text 480 315 'O'
+                New-Text 535 165 '50°' 'danger' 22
+            )
+        }
+        'similar-triangles' {
+            @(
+                New-Polygon @(210,520, 790,520, 565,105) 'primary' 'none' 5
+                New-Line 210 520 675 310 'accent' 4
+                New-Ellipse 675 310 7 7 'accent' 'accent' 2
+                New-Text 175 535 'A'
+                New-Text 805 535 'B'
+                New-Text 560 70 'C'
+                New-Text 690 300 'D'
+                New-Text 430 555 '3' 'muted' 24
+                New-Text 350 300 '4' 'muted' 24
+            )
+        }
+        'cosine-triangle' {
+            @(
+                New-Polygon @(170,520, 830,520, 620,95) 'primary' 'none' 5
+                New-Arc 830 520 90 90 -116 26 'danger' 4
+                New-Text 135 540 'A'
+                New-Text 845 540 'B'
+                New-Text 615 60 'C'
+                New-Text 465 555 '11' 'muted' 24
+                New-Text 750 300 '12' 'muted' 24
+                New-Text 760 470 '60°' 'danger' 22
+            )
+        }
+        'statistics' {
+            $items = @(
+                New-Line 145 535 900 535 'primary' 3 $false $false $true
+                New-Line 145 535 145 85 'primary' 3 $false $false $true
+                New-Text 905 527 'ocena' 'primary' 20
+                New-Text 70 70 'liczba uczniów' 'primary' 20
+            )
+            $values = @(1, 3, 4, 4, 5, 7)
+            foreach ($index in 0..5) {
+                $left = 190 + 105 * $index
+                $right = $left + 60
+                $top = 535 - 55 * $values[$index]
+                $items += New-Polygon @($left,535, $right,535, $right,$top, $left,$top) 'accent' 'accent' 2
+                $items += New-Text ($left + 20) 575 ([string]($index + 1)) 'muted' 20
+            }
+            foreach ($value in 1..8) {
+                $y = 535 - 55 * $value
+                $items += New-Line 137 $y 145 $y 'muted' 2
+                $items += New-Text 110 ($y + 7) ([string]$value) 'muted' 17
+            }
+            $items
+        }
+        'cuboid' {
+            @(
+                New-Polygon @(250,540, 650,540, 650,180, 250,180) 'primary' 'none' 4
+                New-Polygon @(250,180, 430,80, 830,80, 650,180) 'primary' 'none' 4
+                New-Polygon @(650,540, 830,440, 830,80, 650,180) 'primary' 'none' 4
+                New-Line 250 540 430 440 'muted' 3 $true
+                New-Line 430 440 830 440 'muted' 3 $true
+                New-Line 430 440 430 80 'muted' 3 $true
+                New-Text 215 565 'A'
+                New-Text 655 570 'B'
+                New-Text 845 455 'C'
+                New-Text 395 465 'D'
+                New-Text 215 175 'E'
+                New-Text 665 175 'F'
+                New-Text 845 60 'G'
+                New-Text 400 60 'H'
+                New-Text 440 585 'x' 'danger' 24
+                New-Text 755 515 '4' 'accent' 24
+            )
+        }
+    }
+}
+
 function Get-TemplatePrimitives {
     param([string]$Template)
     switch ($Template) {
@@ -718,6 +882,15 @@ function Get-TemplatePrimitives {
         'exam-2026-extended-square' { Get-Exam2026Scene 'extended-square' }
         'exam-2026-extended-cyclic-tangential' { Get-Exam2026Scene 'extended-cyclic-tangential' }
         'exam-2026-extended-flowerbed' { Get-Exam2026Scene 'extended-flowerbed' }
+        'exam-2025-number-lines' { Get-Exam2025Scene 'number-lines' }
+        'exam-2025-piecewise' { Get-Exam2025Scene 'piecewise' }
+        'exam-2025-parabola' { Get-Exam2025Scene 'parabola' }
+        'exam-2025-median-triangle' { Get-Exam2025Scene 'median-triangle' }
+        'exam-2025-circle' { Get-Exam2025Scene 'circle' }
+        'exam-2025-similar-triangles' { Get-Exam2025Scene 'similar-triangles' }
+        'exam-2025-cosine-triangle' { Get-Exam2025Scene 'cosine-triangle' }
+        'exam-2025-statistics' { Get-Exam2025Scene 'statistics' }
+        'exam-2025-cuboid' { Get-Exam2025Scene 'cuboid' }
         default { throw "Nieznany szablon diagramu: $Template" }
     }
 }
@@ -801,6 +974,16 @@ $definitions = @(
     New-Definition 'exam-mm26-r0-z11' 'cke-2026-main-extended' 'Czworokąt ABCD wpisany w okrąg i opisany na drugim okręgu, z bokami AB równym 9 i AD równym 10 oraz kątem BAD równym 60 stopni.' 'exam-2026-extended-cyclic-tangential' 24
     New-Definition 'exam-mm26-r0-z12' 'cke-2026-main-extended' 'Trójkątny równoramienny kwietnik o podstawie x z wpisaną okrągłą fontanną o średnicy 4 metrów.' 'exam-2026-extended-flowerbed' 28
 
+    New-Definition 'exam-mm25-z06' 'cke-2025-main-basic' 'Cztery osie liczbowe przedstawiające odpowiedzi x mniejsze lub równe 3, x większe lub równe 3, x mniejsze lub równe minus 9 oraz x większe lub równe minus 9.' 'exam-2025-number-lines' 7
+    New-Definition 'exam-mm25-z11' 'cke-2025-main-basic' 'Wykres funkcji przedziałowej z odcinkiem rosnącym od minus 4 do minus 2, poziomym od minus 2 do 2 i malejącym od 2 do 4.' 'exam-2025-piecewise' 11
+    New-Definition 'exam-mm25-z12' 'cke-2025-main-basic' 'Parabola skierowana ramionami w dół z wierzchołkiem w punkcie 3, 6 i punktem 0, 3 na osi y.' 'exam-2025-parabola' 12
+    New-Definition 'exam-mm25-z18' 'cke-2025-main-basic' 'Trójkąt prostokątny ABC z przyprostokątną AB długości 6, środkiem D boku AB, środkową CD długości 5 oraz kątami alfa i beta.' 'exam-2025-median-triangle' 18
+    New-Definition 'exam-mm25-z19' 'cke-2025-main-basic' 'Okrąg z punktami A, B i C, środkiem O, trójkątem ABC oraz kątem BCA równym 50 stopni.' 'exam-2025-circle' 19
+    New-Definition 'exam-mm25-z20' 'cke-2025-main-basic' 'Trójkąt równoramienny ABC o bokach AC i BC długości 4, podstawie AB długości 3 oraz punkcie D na boku BC połączonym z A.' 'exam-2025-similar-triangles' 20
+    New-Definition 'exam-mm25-z21' 'cke-2025-main-basic' 'Trójkąt ABC z bokami AB długości 11 i BC długości 12 oraz kątem ABC równym 60 stopni.' 'exam-2025-cosine-triangle' 21
+    New-Definition 'exam-mm25-z30' 'cke-2025-main-basic' 'Wykres słupkowy liczebności ocen od 1 do 6, z wartościami odpowiednio 1, 3, 4, 4, 5 i 7.' 'exam-2025-statistics' 27
+    New-Definition 'exam-mm25-z31' 'cke-2025-main-basic' 'Prostopadłościan ABCDEFGH z krawędzią AB oznaczoną x i krawędzią BC długości 4.' 'exam-2025-cuboid' 28
+
     New-Definition 'course-right-triangle' 'adam-course' 'Trójkąt prostokątny z przyprostokątnymi a i b, przeciwprostokątną c oraz kątem alfa.' 'right-triangle'
     New-Definition 'course-circle-angles' 'adam-course' 'Okrąg z kątem środkowym AOB i kątem wpisanym ACB opartymi na tym samym łuku.' 'circle-angles'
     New-Definition 'course-coordinate-vector' 'adam-course' 'Układ współrzędnych z punktami A i B oraz składowymi wektora od A do B.' 'coordinate-segment'
@@ -815,8 +998,8 @@ $definitions = @(
     New-Definition 'course-vector-8' 'legacy-vectors' 'Różnica wektorów v i w przedstawiona geometrycznie.' 'vector-difference'
 )
 
-if ($definitions.Count -ne 67) {
-    throw "Katalog musi zawierać dokładnie 67 diagramów, a zawiera $($definitions.Count)."
+if ($definitions.Count -ne 76) {
+    throw "Katalog musi zawierać dokładnie 76 diagramów, a zawiera $($definitions.Count)."
 }
 
 $catalog = [ordered]@{ schemaVersion = 1; diagrams = $definitions }
@@ -825,4 +1008,4 @@ $normalized = $json.Replace("`r`n", "`n") + "`n"
 $target = [IO.Path]::GetFullPath($OutputPath)
 [IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($target)) | Out-Null
 [IO.File]::WriteAllText($target, $normalized, [Text.UTF8Encoding]::new($false))
-Write-Host "Wygenerowano 67 diagramów wektorowych: $target"
+Write-Host "Wygenerowano 76 diagramów wektorowych: $target"

@@ -88,7 +88,7 @@ Szczegółowa dokumentacja aktualnej implementacji jest dostępna w `BUSINESS_AN
 | dokumentacja techniczna bieżącej implementacji | PASS | indeks dokumentów i aktualny PDF znajdują się w `COMMISSION_PACKAGE.md` |
 | autor i odpowiedzialności bieżącej implementacji | PASS | zakres Adama Kubisia opisuje `AUTHORS.md`; historyczny podział prac nie jest rozszerzany o nieudokumentowane osoby |
 
-Publiczne paczki z 2022 r. potwierdzają dostępność wersji wdrożeniowej przed obroną i wydania bezpośrednio po niej. Nie są utożsamiane z nieopublikowaną wersją migracji `0.9.0-beta.1`.
+Publiczne paczki z 2022 r. potwierdzają dostępność wersji wdrożeniowej przed obroną i wydania bezpośrednio po niej. Nie są utożsamiane z opublikowaną później, odrębną wersją migracji `0.9.0-beta.1`.
 
 Nie zachowano osobnego zapisu, że dokładnie paczka `Pre-release.zip` została podczas obrony formalnie oznaczona jako kopia zapasowa. Jej publiczna data publikacji i zachowana zawartość wydania potwierdzają jednak dostępność kopii aplikacji pięć dni przed wydarzeniem.
 
