@@ -29,6 +29,7 @@ jobs:
     runs-on: ubuntu-24.04
     outputs:
       version: ${{ steps.version.outputs.version }}
+      commit: ${{ steps.commit.outputs.commit }}
     steps:
       - name: Checkout the release tag
         uses: actions/checkout@v5
@@ -41,6 +42,11 @@ jobs:
         id: version
         shell: pwsh
         run: ./tools/release/Test-ReleaseVersion.ps1 -Tag $env:RELEASE_TAG -WriteGitHubOutput
+      - name: Record the verified release commit
+        id: commit
+        shell: pwsh
+        run: |
+          "commit=$(git rev-parse HEAD)" >> $env:GITHUB_OUTPUT
       - name: Install pinned .NET SDK for documentation validation
         uses: actions/setup-dotnet@v5
         with:
@@ -152,67 +158,46 @@ jobs:
   sonar:
     name: SonarQube quality gate
     needs: preflight
-    runs-on: windows-2025
+    runs-on: ubuntu-24.04
+    permissions:
+      actions: read
+      contents: read
     env:
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      SONAR_PROJECT_KEY: ${{ vars.SONAR_PROJECT_KEY }}
-      SONAR_ORGANIZATION: ${{ vars.SONAR_ORGANIZATION }}
+      GH_TOKEN: ${{ github.token }}
     steps:
-      - name: Require SonarQube release configuration
+      - name: Require successful SonarQube analysis for the release commit
         shell: pwsh
         run: |
-          if (-not $env:SONAR_TOKEN) { throw "SONAR_TOKEN is required for a release." }
-          if (-not $env:SONAR_PROJECT_KEY) { throw "SONAR_PROJECT_KEY is required for a release." }
-          if (-not $env:SONAR_ORGANIZATION) { throw "SONAR_ORGANIZATION is required for a release." }
-      - name: Checkout the release tag
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-          ref: ${{ env.RELEASE_TAG }}
-      - name: Install .NET 8 tool runtime and pinned .NET 10 SDK
-        uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: |
-            8.0.x
-            10.0.302
-          cache: true
-          cache-dependency-path: |
-            packages.lock.json
-            tests/Abituria.Tests/packages.lock.json
-      - name: Install pinned SonarScanner for .NET
-        shell: pwsh
-        run: dotnet tool install dotnet-sonarscanner --tool-path ./.sonar/scanner --version 11.2.1
-      - name: Begin SonarQube analysis
-        shell: pwsh
-        run: |
-          ./.sonar/scanner/dotnet-sonarscanner.exe begin `
-            /k:"$env:SONAR_PROJECT_KEY" `
-            /o:"$env:SONAR_ORGANIZATION" `
-            /v:"${{ needs.preflight.outputs.version }}" `
-            /d:sonar.token="$env:SONAR_TOKEN" `
-            /d:sonar.projectBaseDir="$env:GITHUB_WORKSPACE" `
-            /d:sonar.qualitygate.wait=true `
-            /d:sonar.qualitygate.timeout=300 `
-            /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
-          if ($LASTEXITCODE -ne 0) { throw "SonarScanner begin failed." }
-      - name: Restore in locked mode
-        run: dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
-      - name: Build for analysis
-        run: dotnet build Abituria.sln --configuration Release --no-restore --no-incremental
-      - name: Test with OpenCover report
-        run: >-
-          dotnet test Abituria.sln
-          --configuration Release
-          --no-build
-          --no-restore
-          --collect:"XPlat Code Coverage"
-          --
-          DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
-      - name: Complete analysis and wait for quality gate
-        shell: pwsh
-        run: |
-          ./.sonar/scanner/dotnet-sonarscanner.exe end /d:sonar.token="$env:SONAR_TOKEN"
-          if ($LASTEXITCODE -ne 0) { throw "SonarQube quality gate failed." }
+          $commit = "${{ needs.preflight.outputs.commit }}"
+          $deadline = [DateTimeOffset]::UtcNow.AddMinutes(15)
+          $run = $null
+          do {
+            $runs = @(
+              gh run list `
+                --repo $env:GITHUB_REPOSITORY `
+                --workflow sonarcloud.yml `
+                --commit $commit `
+                --event push `
+                --limit 10 `
+                --json databaseId,headSha,status,conclusion,url |
+                ConvertFrom-Json
+            )
+            $run = $runs |
+              Where-Object { $_.headSha -eq $commit } |
+              Sort-Object databaseId -Descending |
+              Select-Object -First 1
+            if (-not $run) { Start-Sleep -Seconds 10 }
+          } while (-not $run -and [DateTimeOffset]::UtcNow -lt $deadline)
+
+          if (-not $run) {
+            throw "No SonarQube push workflow was found for release commit '$commit'."
+          }
+
+          gh run watch $run.databaseId --repo $env:GITHUB_REPOSITORY --exit-status
+          if ($LASTEXITCODE -ne 0) {
+            throw "SonarQube quality gate failed for release commit '$commit': $($run.url)"
+          }
+          Write-Host "Verified SonarQube quality gate for '$commit': $($run.url)"
 
   draft-release:
     name: Validate, attest and create draft prerelease

@@ -242,7 +242,7 @@ public sealed class Issue35MathChaptersRegressionTests
             Assert.NotEqual(0, guardedResult.ExitCode);
             Assert.Contains(
                 "poza aktywnym katalogiem Content",
-                guardedResult.StandardOutput + guardedResult.StandardError,
+                NormalizePowerShellDiagnostic(guardedResult.StandardOutput + guardedResult.StandardError),
                 StringComparison.Ordinal);
 
             var syncResult = await RunPowerShellAsync(
@@ -437,7 +437,7 @@ public sealed class Issue35MathChaptersRegressionTests
         CancellationToken cancellationToken,
         params string[] arguments)
     {
-        var startInfo = new ProcessStartInfo("powershell")
+        var startInfo = new ProcessStartInfo("pwsh")
         {
             RedirectStandardOutput = true,
             RedirectStandardError = true,
@@ -445,10 +445,15 @@ public sealed class Issue35MathChaptersRegressionTests
             CreateNoWindow = true
         };
         startInfo.ArgumentList.Add("-NoProfile");
-        startInfo.ArgumentList.Add("-ExecutionPolicy");
-        startInfo.ArgumentList.Add("Bypass");
+        if (OperatingSystem.IsWindows())
+        {
+            startInfo.ArgumentList.Add("-ExecutionPolicy");
+            startInfo.ArgumentList.Add("Bypass");
+        }
         startInfo.ArgumentList.Add("-File");
         startInfo.ArgumentList.Add(scriptPath);
+        startInfo.Environment["NO_COLOR"] = "1";
+        startInfo.Environment["TERM"] = "dumb";
         foreach (var argument in arguments) startInfo.ArgumentList.Add(argument);
 
         using var process = Process.Start(startInfo) ?? throw new InvalidOperationException("Nie uruchomiono PowerShell.");
@@ -457,6 +462,9 @@ public sealed class Issue35MathChaptersRegressionTests
         await process.WaitForExitAsync(cancellationToken);
         return new PowerShellResult(process.ExitCode, await outputTask, await errorTask);
     }
+
+    private static string NormalizePowerShellDiagnostic(string value) =>
+        string.Join(' ', value.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries));
 
     private static T Read<T>(string relativePath) => JsonSerializer.Deserialize<T>(
         File.ReadAllText(Path.Combine(RepositoryRoot, relativePath.Replace('/', Path.DirectorySeparatorChar))),

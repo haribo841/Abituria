@@ -131,7 +131,12 @@ public sealed class ReleaseContractTests
             workflow.IndexOf(
                 "Verify generated dependency and license documentation",
                 StringComparison.Ordinal));
-        Assert.Contains("sonar.qualitygate.wait=true", workflow, StringComparison.Ordinal);
+        Assert.Contains("--workflow sonarcloud.yml", workflow, StringComparison.Ordinal);
+        Assert.Contains("--commit $commit", workflow, StringComparison.Ordinal);
+        Assert.Contains("--event push", workflow, StringComparison.Ordinal);
+        Assert.Contains("gh run watch $run.databaseId", workflow, StringComparison.Ordinal);
+        Assert.Contains("needs.preflight.outputs.commit", workflow, StringComparison.Ordinal);
+        Assert.DoesNotContain("dotnet-sonarscanner.exe begin", workflow, StringComparison.Ordinal);
         Assert.Contains(
             "xvfb-run -a dotnet test Abituria.sln --configuration Release --no-build --no-restore",
             workflow,

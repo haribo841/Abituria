@@ -7,11 +7,10 @@ namespace Abituria.Tests;
 
 public sealed class NuGetLicenseBundleTests
 {
-    // Windows includes PowerShell 5.1 even when PowerShell 7 has not been installed.
-    // The release scripts intentionally remain compatible with both hosts, so the
-    // test suite must not require a separate development-machine installation.
-    private static readonly string PowerShellExecutable =
-        OperatingSystem.IsWindows() ? "powershell.exe" : "pwsh";
+    // Release jobs use PowerShell 7 on every supported operating system. Running
+    // these integration tests through the same host keeps stream and path behavior
+    // consistent with the packages that the release workflow actually builds.
+    private const string PowerShellExecutable = "pwsh";
     private static readonly string RepositoryRoot = FindRepositoryRoot();
 
     [Fact]
@@ -72,7 +71,10 @@ public sealed class NuGetLicenseBundleTests
         var result = RunScript(componentsPath, output, packageRoot);
 
         Assert.NotEqual(0, result.ExitCode);
-        Assert.Contains("does not provide license evidence", result.StandardError, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(
+            "does not provide license evidence",
+            NormalizePowerShellDiagnostic(result.StandardError),
+            StringComparison.OrdinalIgnoreCase);
         Assert.False(Directory.Exists(output));
         Assert.Empty(Directory.GetDirectories(fixture.Path, "bundle.tmp-*"));
     }
@@ -87,8 +89,9 @@ public sealed class NuGetLicenseBundleTests
         var result = RunScript(componentsPath, Path.Combine(fixture.Path, "bundle"), packageRoot);
 
         Assert.NotEqual(0, result.ExitCode);
-        Assert.Contains("Component id", result.StandardError, StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("unsafe", result.StandardError, StringComparison.OrdinalIgnoreCase);
+        var diagnostic = NormalizePowerShellDiagnostic(result.StandardError);
+        Assert.Contains("Component id", diagnostic, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("unsafe", diagnostic, StringComparison.OrdinalIgnoreCase);
     }
 
     [Fact]
@@ -117,7 +120,10 @@ public sealed class NuGetLicenseBundleTests
         }
 
         Assert.NotEqual(0, result.ExitCode);
-        Assert.Contains("reparse point", result.StandardError, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(
+            "reparse point",
+            NormalizePowerShellDiagnostic(result.StandardError),
+            StringComparison.OrdinalIgnoreCase);
     }
 
     [Fact]
@@ -177,7 +183,10 @@ public sealed class NuGetLicenseBundleTests
 
         var tampered = RunValidator(packageDirectory, publishedDirectory);
         Assert.NotEqual(0, tampered.ExitCode);
-        Assert.Contains("differ from the published dependency graph", tampered.StandardError, StringComparison.Ordinal);
+        Assert.Contains(
+            "differ from the published dependency graph",
+            NormalizePowerShellDiagnostic(tampered.StandardError),
+            StringComparison.Ordinal);
     }
 
     private static void CreatePackage(
@@ -339,6 +348,8 @@ public sealed class NuGetLicenseBundleTests
         }
         startInfo.ArgumentList.Add("-File");
         startInfo.ArgumentList.Add(Absolute(scriptPath));
+        startInfo.Environment["NO_COLOR"] = "1";
+        startInfo.Environment["TERM"] = "dumb";
         return startInfo;
     }
 
@@ -366,6 +377,9 @@ public sealed class NuGetLicenseBundleTests
             $"Script failed with exit code {result.ExitCode}.{Environment.NewLine}" +
             $"stdout: {result.StandardOutput}{Environment.NewLine}stderr: {result.StandardError}");
     }
+
+    private static string NormalizePowerShellDiagnostic(string value) =>
+        string.Join(' ', value.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries));
 
     private static void AssertBundlesEqual(string first, string second)
     {

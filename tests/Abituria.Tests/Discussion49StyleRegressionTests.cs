@@ -520,6 +520,18 @@ public sealed class Discussion49StyleRegressionTests
             var pages = new[] { AppPage.Home, AppPage.Formulas, AppPage.Matura, AppPage.Tasks, AppPage.Calculator, AppPage.About };
             var hashes = new HashSet<string>(StringComparer.Ordinal);
 
+            // Prime platform-specific text and control caches before measuring the
+            // repeatable navigation cost. CoreText performs substantially more
+            // one-time allocation than DirectWrite or Fontconfig.
+            foreach (var page in pages)
+            {
+                viewModel.Navigate(page);
+                Dispatcher.UIThread.RunJobs();
+                using var warmupFrame = Assert.IsType<WriteableBitmap>(window.CaptureRenderedFrame());
+            }
+            viewModel.Navigate(AppPage.Home);
+            Dispatcher.UIThread.RunJobs();
+
             GC.Collect();
             GC.WaitForPendingFinalizers();
             GC.Collect();
