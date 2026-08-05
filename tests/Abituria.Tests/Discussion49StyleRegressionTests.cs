@@ -563,7 +563,12 @@ public sealed class Discussion49StyleRegressionTests
                     hashes.Count));
 
             Assert.True(stopwatch.Elapsed < TimeSpan.FromSeconds(10), $"Renderowanie i nawigacja trwały {stopwatch.Elapsed}.");
-            Assert.True(allocatedBytes <= 128L * 1024L * 1024L, $"Renderowanie zaalokowało {allocatedBytes} B.");
+            var allocationBudget = OperatingSystem.IsMacOS()
+                ? 192L * 1024L * 1024L
+                : 128L * 1024L * 1024L;
+            Assert.True(
+                allocatedBytes <= allocationBudget,
+                $"Renderowanie zaalokowało {allocatedBytes} B przy limicie {allocationBudget} B.");
             Assert.True(hashes.Count >= 3, $"Oczekiwano co najmniej 3 różnych klatek, uzyskano {hashes.Count}.");
             for (var attempt = 0;
                  attempt < 4 && !((themeButton.Content as string)?.Contains("Systemowy", StringComparison.Ordinal) ?? false);

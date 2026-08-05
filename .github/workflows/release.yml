@@ -16,9 +16,6 @@ env:
   DOTNET_NOLOGO: true
   RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
 
-permissions:
-  contents: read
-
 concurrency:
   group: release-${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
   cancel-in-progress: false
@@ -27,6 +24,8 @@ jobs:
   preflight:
     name: Validate release contract
     runs-on: ubuntu-24.04
+    permissions:
+      contents: read
     outputs:
       version: ${{ steps.version.outputs.version }}
       commit: ${{ steps.commit.outputs.commit }}
@@ -78,6 +77,8 @@ jobs:
   package:
     name: Test and package ${{ matrix.rid }}
     needs: preflight
+    permissions:
+      contents: read
     strategy:
       fail-fast: false
       matrix:

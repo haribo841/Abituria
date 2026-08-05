@@ -137,6 +137,8 @@ public sealed class ReleaseContractTests
         Assert.Contains("gh run watch $run.databaseId", workflow, StringComparison.Ordinal);
         Assert.Contains("needs.preflight.outputs.commit", workflow, StringComparison.Ordinal);
         Assert.DoesNotContain("dotnet-sonarscanner.exe begin", workflow, StringComparison.Ordinal);
+        Assert.DoesNotContain("\npermissions:\n", workflow, StringComparison.Ordinal);
+        Assert.Equal(3, CountOccurrences(workflow, "contents: read"));
         Assert.Contains(
             "xvfb-run -a dotnet test Abituria.sln --configuration Release --no-build --no-restore",
             workflow,

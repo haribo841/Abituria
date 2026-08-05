@@ -563,31 +563,56 @@ function Get-Exam2026Scene {
     }
 }
 
+function Get-Exam2025NumberLinesScene {
+    $items = @()
+    $rows = @(
+        @{ Label = 'A'; Y = 120; Boundary = 3; Left = $true },
+        @{ Label = 'B'; Y = 255; Boundary = 3; Left = $false },
+        @{ Label = 'C'; Y = 390; Boundary = -9; Left = $true },
+        @{ Label = 'D'; Y = 525; Boundary = -9; Left = $false }
+    )
+    foreach ($row in $rows) {
+        $items += New-Text 75 ($row.Y + 8) $row.Label 'primary' 24
+        $items += New-Line 150 $row.Y 895 $row.Y 'primary' 3 $false $false $true
+        $boundaryX = if ($row.Boundary -eq 3) { 690 } else { 330 }
+        $shadeStart = if ($row.Left) { 150 } else { $boundaryX }
+        $shadeEnd = if ($row.Left) { $boundaryX } else { 880 }
+        $items += New-Polygon @($shadeStart,($row.Y - 34), $shadeEnd,($row.Y - 34), $shadeEnd,$row.Y, $shadeStart,$row.Y) 'accent' 'accent' 1
+        $items += New-Ellipse $boundaryX $row.Y 8 8 'primary' 'primary' 2
+        $items += New-Text ($boundaryX - 10) ($row.Y + 38) ([string]$row.Boundary) 'muted' 18
+        $items += New-Text 595 ($row.Y + 38) '0' 'muted' 18
+        $items += New-Text 625 ($row.Y + 38) '1' 'muted' 18
+    }
+    $items
+}
+
+function Get-Exam2025StatisticsScene {
+    $items = @(
+        New-Line 145 535 900 535 'primary' 3 $false $false $true
+        New-Line 145 535 145 85 'primary' 3 $false $false $true
+        New-Text 905 527 'ocena' 'primary' 20
+        New-Text 70 70 'liczba uczniów' 'primary' 20
+    )
+    $values = @(1, 3, 4, 4, 5, 7)
+    foreach ($index in 0..5) {
+        $left = 190 + 105 * $index
+        $right = $left + 60
+        $top = 535 - 55 * $values[$index]
+        $items += New-Polygon @($left,535, $right,535, $right,$top, $left,$top) 'accent' 'accent' 2
+        $items += New-Text ($left + 20) 575 ([string]($index + 1)) 'muted' 20
+    }
+    foreach ($value in 1..8) {
+        $y = 535 - 55 * $value
+        $items += New-Line 137 $y 145 $y 'muted' 2
+        $items += New-Text 110 ($y + 7) ([string]$value) 'muted' 17
+    }
+    $items
+}
+
 function Get-Exam2025Scene {
     param([string]$Kind)
     switch ($Kind) {
-        'number-lines' {
-            $items = @()
-            $rows = @(
-                @{ Label = 'A'; Y = 120; Boundary = 3; Left = $true },
-                @{ Label = 'B'; Y = 255; Boundary = 3; Left = $false },
-                @{ Label = 'C'; Y = 390; Boundary = -9; Left = $true },
-                @{ Label = 'D'; Y = 525; Boundary = -9; Left = $false }
-            )
-            foreach ($row in $rows) {
-                $items += New-Text 75 ($row.Y + 8) $row.Label 'primary' 24
-                $items += New-Line 150 $row.Y 895 $row.Y 'primary' 3 $false $false $true
-                $boundaryX = if ($row.Boundary -eq 3) { 690 } else { 330 }
-                $shadeStart = if ($row.Left) { 150 } else { $boundaryX }
-                $shadeEnd = if ($row.Left) { $boundaryX } else { 880 }
-                $items += New-Polygon @($shadeStart,($row.Y - 34), $shadeEnd,($row.Y - 34), $shadeEnd,$row.Y, $shadeStart,$row.Y) 'accent' 'accent' 1
-                $items += New-Ellipse $boundaryX $row.Y 8 8 'primary' 'primary' 2
-                $items += New-Text ($boundaryX - 10) ($row.Y + 38) ([string]$row.Boundary) 'muted' 18
-                $items += New-Text 595 ($row.Y + 38) '0' 'muted' 18
-                $items += New-Text 625 ($row.Y + 38) '1' 'muted' 18
-            }
-            $items
-        }
+        'number-lines' { Get-Exam2025NumberLinesScene }
         'piecewise' {
             @(
                 New-Line 105 390 920 390 'primary' 3 $false $false $true
@@ -682,28 +707,7 @@ function Get-Exam2025Scene {
                 New-Text 760 470 '60°' 'danger' 22
             )
         }
-        'statistics' {
-            $items = @(
-                New-Line 145 535 900 535 'primary' 3 $false $false $true
-                New-Line 145 535 145 85 'primary' 3 $false $false $true
-                New-Text 905 527 'ocena' 'primary' 20
-                New-Text 70 70 'liczba uczniów' 'primary' 20
-            )
-            $values = @(1, 3, 4, 4, 5, 7)
-            foreach ($index in 0..5) {
-                $left = 190 + 105 * $index
-                $right = $left + 60
-                $top = 535 - 55 * $values[$index]
-                $items += New-Polygon @($left,535, $right,535, $right,$top, $left,$top) 'accent' 'accent' 2
-                $items += New-Text ($left + 20) 575 ([string]($index + 1)) 'muted' 20
-            }
-            foreach ($value in 1..8) {
-                $y = 535 - 55 * $value
-                $items += New-Line 137 $y 145 $y 'muted' 2
-                $items += New-Text 110 ($y + 7) ([string]$value) 'muted' 17
-            }
-            $items
-        }
+        'statistics' { Get-Exam2025StatisticsScene }
         'cuboid' {
             @(
                 New-Polygon @(250,540, 650,540, 650,180, 250,180) 'primary' 'none' 4

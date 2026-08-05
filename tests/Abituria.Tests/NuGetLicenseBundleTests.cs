@@ -287,13 +287,14 @@ public sealed class NuGetLicenseBundleTests
 
     private static ProcessResult RunScript(string componentsPath, string output, string packageRoot)
     {
-        var startInfo = CreatePowerShellStartInfo("tools/release/New-NuGetLicenseBundle.ps1");
-        startInfo.ArgumentList.Add("-ComponentsPath");
-        startInfo.ArgumentList.Add(componentsPath);
-        startInfo.ArgumentList.Add("-OutputDirectory");
-        startInfo.ArgumentList.Add(output);
-        startInfo.ArgumentList.Add("-PackageRoot");
-        startInfo.ArgumentList.Add(packageRoot);
+        var startInfo = CreatePowerShellStartInfo(
+            "tools/release/New-NuGetLicenseBundle.ps1",
+            "-ComponentsPath",
+            componentsPath,
+            "-OutputDirectory",
+            output,
+            "-PackageRoot",
+            packageRoot);
 
         return RunProcess(startInfo);
     }
@@ -303,33 +304,37 @@ public sealed class NuGetLicenseBundleTests
         string output,
         string packageRoot)
     {
-        var startInfo = CreatePowerShellStartInfo("tools/release/New-NuGetLicenseBundle.ps1");
-        startInfo.ArgumentList.Add("-PublishedDirectory");
-        startInfo.ArgumentList.Add(publishedDirectory);
-        startInfo.ArgumentList.Add("-RuntimeIdentifier");
-        startInfo.ArgumentList.Add("win-x64");
-        startInfo.ArgumentList.Add("-OutputDirectory");
-        startInfo.ArgumentList.Add(output);
-        startInfo.ArgumentList.Add("-PackageRoot");
-        startInfo.ArgumentList.Add(packageRoot);
+        var startInfo = CreatePowerShellStartInfo(
+            "tools/release/New-NuGetLicenseBundle.ps1",
+            "-PublishedDirectory",
+            publishedDirectory,
+            "-RuntimeIdentifier",
+            "win-x64",
+            "-OutputDirectory",
+            output,
+            "-PackageRoot",
+            packageRoot);
 
         return RunProcess(startInfo);
     }
 
     private static ProcessResult RunValidator(string packageDirectory, string publishedDirectory)
     {
-        var startInfo = CreatePowerShellStartInfo("tools/release/Test-ReleaseAssets.ps1");
-        startInfo.ArgumentList.Add("-LicensePackageDirectory");
-        startInfo.ArgumentList.Add(packageDirectory);
-        startInfo.ArgumentList.Add("-LicensePublishedPayloadDirectory");
-        startInfo.ArgumentList.Add(publishedDirectory);
-        startInfo.ArgumentList.Add("-LicenseRuntimeIdentifier");
-        startInfo.ArgumentList.Add("win-x64");
+        var startInfo = CreatePowerShellStartInfo(
+            "tools/release/Test-ReleaseAssets.ps1",
+            "-LicensePackageDirectory",
+            packageDirectory,
+            "-LicensePublishedPayloadDirectory",
+            publishedDirectory,
+            "-LicenseRuntimeIdentifier",
+            "win-x64");
 
         return RunProcess(startInfo);
     }
 
-    private static ProcessStartInfo CreatePowerShellStartInfo(string scriptPath)
+    private static ProcessStartInfo CreatePowerShellStartInfo(
+        string scriptPath,
+        params string[] arguments)
     {
         var startInfo = new ProcessStartInfo
         {
@@ -346,8 +351,24 @@ public sealed class NuGetLicenseBundleTests
             startInfo.ArgumentList.Add("-ExecutionPolicy");
             startInfo.ArgumentList.Add("Bypass");
         }
-        startInfo.ArgumentList.Add("-File");
-        startInfo.ArgumentList.Add(Absolute(scriptPath));
+        startInfo.ArgumentList.Add("-Command");
+        startInfo.ArgumentList.Add(
+            "$ErrorActionPreference = 'Stop'; " +
+            "$scriptPath = $env:ABITURIA_TEST_SCRIPT; " +
+            "$scriptArguments = @($env:ABITURIA_TEST_ARGUMENTS | ConvertFrom-Json); " +
+            "$boundArguments = @{}; " +
+            "for ($index = 0; $index -lt $scriptArguments.Count; $index++) { " +
+            "$name = [string]$scriptArguments[$index]; " +
+            "if (-not $name.StartsWith('-')) { throw \"Unexpected positional test argument '$name'.\" }; " +
+            "$key = $name.TrimStart('-'); " +
+            "$hasValue = $index + 1 -lt $scriptArguments.Count -and " +
+            "-not ([string]$scriptArguments[$index + 1]).StartsWith('-'); " +
+            "if ($hasValue) { $boundArguments[$key] = $scriptArguments[++$index] } " +
+            "else { $boundArguments[$key] = $true } }; " +
+            "try { & $scriptPath @boundArguments } " +
+            "catch { [Console]::Error.WriteLine($_.Exception.Message); exit 1 }");
+        startInfo.Environment["ABITURIA_TEST_SCRIPT"] = Absolute(scriptPath);
+        startInfo.Environment["ABITURIA_TEST_ARGUMENTS"] = JsonSerializer.Serialize(arguments);
         startInfo.Environment["NO_COLOR"] = "1";
         startInfo.Environment["TERM"] = "dumb";
         return startInfo;

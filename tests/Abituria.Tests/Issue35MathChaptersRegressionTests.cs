@@ -450,11 +450,26 @@ public sealed class Issue35MathChaptersRegressionTests
             startInfo.ArgumentList.Add("-ExecutionPolicy");
             startInfo.ArgumentList.Add("Bypass");
         }
-        startInfo.ArgumentList.Add("-File");
-        startInfo.ArgumentList.Add(scriptPath);
+        startInfo.ArgumentList.Add("-Command");
+        startInfo.ArgumentList.Add(
+            "$ErrorActionPreference = 'Stop'; " +
+            "$scriptPath = $env:ABITURIA_TEST_SCRIPT; " +
+            "$scriptArguments = @($env:ABITURIA_TEST_ARGUMENTS | ConvertFrom-Json); " +
+            "$boundArguments = @{}; " +
+            "for ($index = 0; $index -lt $scriptArguments.Count; $index++) { " +
+            "$name = [string]$scriptArguments[$index]; " +
+            "if (-not $name.StartsWith('-')) { throw \"Unexpected positional test argument '$name'.\" }; " +
+            "$key = $name.TrimStart('-'); " +
+            "$hasValue = $index + 1 -lt $scriptArguments.Count -and " +
+            "-not ([string]$scriptArguments[$index + 1]).StartsWith('-'); " +
+            "if ($hasValue) { $boundArguments[$key] = $scriptArguments[++$index] } " +
+            "else { $boundArguments[$key] = $true } }; " +
+            "try { & $scriptPath @boundArguments } " +
+            "catch { [Console]::Error.WriteLine($_.Exception.Message); exit 1 }");
+        startInfo.Environment["ABITURIA_TEST_SCRIPT"] = scriptPath;
+        startInfo.Environment["ABITURIA_TEST_ARGUMENTS"] = JsonSerializer.Serialize(arguments);
         startInfo.Environment["NO_COLOR"] = "1";
         startInfo.Environment["TERM"] = "dumb";
-        foreach (var argument in arguments) startInfo.ArgumentList.Add(argument);
 
         using var process = Process.Start(startInfo) ?? throw new InvalidOperationException("Nie uruchomiono PowerShell.");
         var outputTask = process.StandardOutput.ReadToEndAsync(cancellationToken);
