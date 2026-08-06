@@ -33,7 +33,7 @@ Data ostatniej aktualizacji: 5 sierpnia 2026 r.
 | instrukcja użytkownika i uruchomienia | `USER_GUIDE.md`, `INSTALLATION.md` | PASS |
 | testy funkcjonalne, regresyjne, wydajnościowe i pamięciowe | `TESTING.md`, testy projektu | PASS po pełnej bramie automatycznej |
 | użyteczność, instalacja niezależna i końcowy odbiór | `USABILITY_TEST_PROTOCOL.md`, `USABILITY_TEST_RESULTS.md`, ten dokument | PASS RETROSPEKTYWNY dla historycznych testów uczestników i odbioru; formalny test instalacji PASS na trzech niezależnych, natywnych runnerach |
-| ograniczenia i status prawny zasobów | `KNOWN_LIMITATIONS.md`, `CONTENT_PROVENANCE.md`, `ASSET_RIGHTS_DECLARATION.md` | PASS; rozszerzenia deklaracji z 3 i 5 sierpnia 2026 r. obejmują matury 2025 i 2026 oraz autorskie wektory Avalonia, `releaseEligible=true` |
+| ograniczenia i status prawny zasobów | `KNOWN_LIMITATIONS.md`, `CONTENT_PROVENANCE.md`, `ASSET_RIGHTS_DECLARATION.md` | PASS dla odebranego zakresu i wydania `0.9.0-beta.1`; później dodana grupa przykładów CKE ma status `blocked`, dlatego bieżące `releaseEligible=false` |
 | autor, licencja i historia zmian | `AUTHORS.md`, `LICENSE`, `CHANGELOG.md` | PASS |
 | PDF dla komisji | `output/pdf/Abituria-Technical-Documentation-0.9.0-beta.1.pdf` | PASS po wygenerowaniu i kontroli wizualnej |
 | zatwierdzenie i przekazanie komisji | decyzja poniżej i `DELIVERY_PROTOCOL.md` | PASS RETROSPEKTYWNY - projekt zaakceptowany przez prowadzącego na początku lutego 2022 r.; dokładny dzień i podpis nie zostały zachowane |
@@ -125,7 +125,7 @@ Poniższa tabela jest opcjonalnym uzupełnieniem dla sesji prowadzonej przez cz�
 
 ## Warunek publikacji
 
-Właściciel poświadczył posiadanie praw do zakresu zasobów ocenianego 19 lipca 2026 r., a 3 i 5 sierpnia 2026 r. rozszerzył deklarację na arkusze 2025 i 2026 na obu poziomach, zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Historyczne przekazanie prowadzącemu zostało uzgodnione i zaakceptowane, dlatego spełnia formalny wariant przekazania dla Issue #43. Bieżący manifest ma `releaseEligible=true` i przechodzi oba warianty walidatora.
+Właściciel poświadczył posiadanie praw do zakresu zasobów ocenianego 19 lipca 2026 r., a 3 i 5 sierpnia 2026 r. rozszerzył deklarację na arkusze 2025 i 2026 na obu poziomach, zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Historyczne przekazanie prowadzącemu zostało uzgodnione i zaakceptowane, dlatego spełnia formalny wariant przekazania dla Issue #43. Manifest dokładnego commita wydania miał `releaseEligible=true` i przeszedł oba warianty walidatora. Bieżący manifest ma `releaseEligible=false` wyłącznie z powodu później dodanej warstwy przykładów z informatorów CKE.
 
 Publiczne wydanie bieżącej wersji jest osobnym działaniem i zostało ukończone jako [prerelease `v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1). Dla dokładnego commita wydania ponowiono `tools/Test-ContentProvenance.ps1 -RequireReleaseEligible` oraz pozostałe bramy, po czym skontrolowano draft i opublikowano prerelease.
 

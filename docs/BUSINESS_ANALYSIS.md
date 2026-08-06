@@ -70,7 +70,7 @@ Użytkownik otrzymuje bezpłatny dostęp do lokalnej aplikacji, połączenie mat
 
 ### 4.3. Stan dystrybucji
 
-Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, a publiczne prerelease [`v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1) stanowi kanał dystrybucji bieżącej bety. Deklaracje z 3 i 5 sierpnia 2026 r. obejmują arkusze 2025 i 2026 na obu poziomach, zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia, dlatego brama `releaseEligible` w `Content/provenance.json` ma wartość `true`. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), cztery macierze matur 2025 i 2026 oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
+Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, a publiczne prerelease [`v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1) stanowi kanał dystrybucji zatwierdzonej bety. Deklaracje z 3 i 5 sierpnia 2026 r. obejmują arkusze 2025 i 2026 na obu poziomach, zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Później dodana transkrypcja 97 przykładów z informatorów CKE nie jest jeszcze objęta deklaracją, dlatego bieżąca brama `releaseEligible` w `Content/provenance.json` ma wartość `false` i blokuje następne wydanie. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), cztery macierze matur 2025 i 2026 oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
 
 Koszty bieżącego wariantu obejmują przede wszystkim czas przygotowania treści, implementacji, testów, dokumentacji i utrzymania repozytorium. Aplikacja działa lokalnie, dlatego nie wymaga serwera aplikacyjnego ani przechowywania danych użytkowników przez zewnętrznego operatora.
 
@@ -141,7 +141,7 @@ Kryteria dzielą się na odbiór produktu i odbiór publicznego wydania:
 | Publiczne wydanie | istnieją tag, prerelease, działająca strona Pages i kontrola po publikacji | `RELEASE_PROCESS.md` |
 | Historyczna ocena projektu | siedem obszarów oceny i dziesięć warunków akceptacji jest odwzorowanych bez mieszania wersji WPF z migracją AvaloniaUI | `EVALUATION_PROTOCOL.md` |
 
-Spełnienie kryteriów technicznych nie zastępuje kryterium prawa do publicznej dystrybucji. Aktualny manifest nie zawiera grup `blocked`, ma `releaseEligible=true` i przechodzi twardą bramę proweniencji. Publiczne wydanie jest możliwe dopiero po zaliczeniu pozostałych bramek oraz utworzeniu i zweryfikowaniu rzeczywistego GitHub Release.
+Spełnienie kryteriów technicznych nie zastępuje kryterium prawa do publicznej dystrybucji. Aktualny manifest zawiera grupę `cke-formula-2023-guide-examples` o statusie `blocked` i ma `releaseEligible=false`. Publiczne wydanie jest możliwe dopiero po rozszerzeniu deklaracji właściciela, zaliczeniu twardej bramy proweniencji oraz pozostałych bramek i zweryfikowaniu rzeczywistego GitHub Release.
 
 Historyczny projekt został zaakceptowany i uzyskał wynik bardzo dobry. Zakres oraz ograniczenia tego dowodu opisuje `EVALUATION_PROTOCOL.md`. Wynik z 2022 r. nie jest oceną bieżącej migracji i nie zastępuje jej przyszłego procesu wydawniczego.
 

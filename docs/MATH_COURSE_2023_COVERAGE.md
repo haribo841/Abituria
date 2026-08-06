@@ -1,6 +1,6 @@
 # Pokrycie kursu matematyki - Formuła 2023
 
-Katalog obejmuje dokładne wymagania szczegółowe podstawy programowej z 2024 r., stosowanej na maturze 2026. Przykłady, ćwiczenia, rozwiązania i diagramy są autorskie; informatory CKE służą wyłącznie do kalibracji stylu egzaminu.
+Katalog obejmuje dokładne wymagania szczegółowe podstawy programowej z 2024 r., stosowanej na maturze 2026. Warstwa autorska zachowuje 238 przykładów, 357 ćwiczeń, rozwiązania i diagramy. Osobny katalog `Content/official-course-examples.json` dodaje 66 przykładów z informatora CKE dla poziomu podstawowego i 31 dla poziomu rozszerzonego, wraz z oficjalnymi wymaganiami, zasadami oceniania i rozwiązaniami.
 Każdy identyfikator wymagania ma osobny scenariusz dydaktyczny w jednym z czterech plików `learning-stage-*.json`; generator odrzuca brak, nadmiar, duplikat lub powtórzone polecenie w pakiecie.
 
 ## Przypięte źródła
@@ -25,8 +25,9 @@ Każdy identyfikator wymagania ma osobny scenariusz dydaktyczny w jednym z czter
 - wymagania podstawowe: 73 / 73;
 - wymagania rozszerzone: 46 / 46;
 - autorskie scenariusze wymagań: 119 / 119;
-- rozwiązane przykłady: 238 / 238;
+- autorskie rozwiązane przykłady: 238 / 238;
 - ćwiczenia: 357 / 357.
+- dodatkowe przykłady oficjalne CKE: 97 / 97 (66 podstawowych i 31 rozszerzonych).
 
 ## Macierz obszarów
 

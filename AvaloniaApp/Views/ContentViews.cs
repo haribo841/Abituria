@@ -188,7 +188,8 @@ public sealed class CourseLessonView : UserControl
         CourseLevelFilter level,
         Action<LearningExercise> openExercise,
         Action back,
-        DiagramCatalog? diagrams = null)
+        DiagramCatalog? diagrams = null,
+        OfficialCourseExampleCatalog? officialExamples = null)
     {
         var root = new StackPanel { Spacing = 16 };
         var backButton = new Button { Content = "← Lekcje", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Left };
@@ -202,6 +203,7 @@ public sealed class CourseLessonView : UserControl
         var visibleRequirementIds = VisibleRequirementIds(catalog, lesson, level);
         AddRequirements(root, catalog, visibleRequirementIds);
         AddWorkedExamples(root, lesson, visibleRequirementIds);
+        AddOfficialExamples(root, officialExamples, visibleRequirementIds, level);
         AddExercises(root, exerciseCatalog, lesson, visibleRequirementIds, openExercise);
         Content = UiFactory.PageScroll(root);
     }
@@ -249,7 +251,7 @@ public sealed class CourseLessonView : UserControl
         if (examples.Length == 0)
             return;
 
-        root.Children.Add(new TextBlock { Text = "Rozwiązane przykłady", Classes = { "h2" } });
+        root.Children.Add(new TextBlock { Text = "Autorskie rozwiązane przykłady", Classes = { "h2" } });
         foreach (var example in examples)
         {
             var panel = new StackPanel { Spacing = 8 };
@@ -264,6 +266,70 @@ public sealed class CourseLessonView : UserControl
             root.Children.Add(UiFactory.Card(panel, new Thickness(16)));
         }
     }
+
+    private static void AddOfficialExamples(
+        StackPanel root,
+        OfficialCourseExampleCatalog? catalog,
+        HashSet<string> requirementIds,
+        CourseLevelFilter level)
+    {
+        if (catalog is null)
+            return;
+
+        var examples = catalog.Examples
+            .Where(example => level == CourseLevelFilter.Extended || example.Level == "basic")
+            .Where(example => example.RequirementIds.Any(requirementIds.Contains))
+            .OrderBy(example => example.Level == "basic" ? 0 : 1)
+            .ThenBy(example => example.Order)
+            .ToArray();
+        if (examples.Length == 0)
+            return;
+
+        root.Children.Add(new TextBlock
+        {
+            Text = "Oficjalne przykłady CKE - warstwa źródłowa",
+            Classes = { "h2" }
+        });
+        root.Children.Add(UiFactory.InfoBand(
+            "Materiały dodatkowe",
+            "Poniższe transkrypcje pochodzą z informatorów CKE. Nie zastępują autorskich przykładów i ćwiczeń kursu."));
+
+        foreach (var example in examples)
+        {
+            var source = catalog.Sources.Single(item => item.Id == example.SourceId);
+            var levelLabel = example.Level == "basic" ? "poziom podstawowy" : "poziom rozszerzony";
+            var requirementLabel = string.Join(", ", example.RequirementIds.Where(requirementIds.Contains));
+            var panel = new StackPanel { Spacing = 8 };
+            panel.Children.Add(RichContentView.CreateText(
+                $"Źródło: {source.Publisher}, {source.Title}\n" +
+                $"Strony PDF: {FormatPages(example.SourcePages)}\n" +
+                $"Wymagania kursu: {requirementLabel}\n" +
+                $"Dokument: {source.DocumentUrl}#page={example.SourcePages[0]}"));
+            foreach (var visual in example.VisualReferences)
+            {
+                panel.Children.Add(UiFactory.InfoBand(
+                    $"Opis figury - s. {visual.SourcePage}",
+                    visual.AlternativeText));
+            }
+            panel.Children.Add(RichContentView.CreateText(example.Transcription));
+
+            var header = $"CKE - zadanie {example.OfficialNumber}, {levelLabel}, " +
+                $"0-{example.MaximumPoints} pkt";
+            var expander = new Expander
+            {
+                Header = header,
+                Content = panel,
+                IsExpanded = false,
+                HorizontalAlignment = HorizontalAlignment.Stretch
+            };
+            AutomationProperties.SetName(expander, $"Oficjalny przykład CKE: zadanie {example.OfficialNumber}, {levelLabel}");
+            root.Children.Add(UiFactory.Card(expander, new Thickness(16)));
+        }
+    }
+
+    private static string FormatPages(List<int> pages) =>
+        pages.Count == 1 ? pages[0].ToString(System.Globalization.CultureInfo.InvariantCulture) :
+        $"{pages[0]}-{pages[^1]}";
 
     private static void AddExercises(
         StackPanel root,

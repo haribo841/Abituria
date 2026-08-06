@@ -163,7 +163,6 @@ public sealed class Matura2025ContentTests
             Assert.False(string.IsNullOrWhiteSpace(item.AlternativeText));
             Assert.NotEmpty(item.Primitives);
         });
-        Assert.True(provenance.RootElement.GetProperty("releaseEligible").GetBoolean());
         Assert.Equal("approved", groups["cke-2025-main-basic-exam"].GetProperty("distributionStatus").GetString());
         Assert.Equal("approved", groups["cke-2025-main-extended-exam"].GetProperty("distributionStatus").GetString());
         Assert.Equal("approved", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());

@@ -35,7 +35,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - podpisywanie kodu i paczek,
 - paczka macOS dla Apple Silicon.
 
-Manifest `Content/provenance.json` nie zawiera grup o statusie `blocked`, a `releaseEligible=true` potwierdza przejście bramy proweniencji. Arkusze CKE 2025 i 2026 na obu poziomach, zasady oceniania i dziewiętnaście autorskich implementacji wektorowych Avalonia obejmują rozszerzenia deklaracji z 3 i 5 sierpnia 2026 r. Publiczne paczki portable wersji `0.9.0-beta.1` powstają wyłącznie po wykonaniu kompletnej checklisty wydania.
+Manifest `Content/provenance.json` ma obecnie `releaseEligible=false`, ponieważ nowa grupa `cke-formula-2023-guide-examples` pozostaje `blocked` do czasu rozszerzenia deklaracji właściciela. Arkusze CKE 2025 i 2026 na obu poziomach, zasady oceniania i dziewiętnaście autorskich implementacji wektorowych Avalonia pozostają zatwierdzone przez rozszerzenia deklaracji z 3 i 5 sierpnia 2026 r. Opublikowane paczki portable wersji `0.9.0-beta.1` powstały na wcześniejszym, zatwierdzonym commicie po wykonaniu kompletnej checklisty wydania.
 
 ## Zastąpione
 

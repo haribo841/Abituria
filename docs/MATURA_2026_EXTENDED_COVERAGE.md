@@ -48,11 +48,11 @@ Każda definicja ma `sourceId` równy `cke-2026-main-extended`, stronę źródł
 
 ## Kurs Formuły 2023
 
-Kurs pozostaje odrębnym katalogiem autorskim. Audyt potwierdza dokładnie 4 grupy, 13 obszarów, 73 wymagania podstawowe, 46 dodatkowych wymagań rozszerzonych, 238 przykładów i 357 ćwiczeń. Dokładne brzmienie wymagań zachowuje źródło urzędowe, natomiast przykłady, ćwiczenia, podpowiedzi, rozwiązania i diagramy kursu pozostają własnymi materiałami Adama Kubisia. Nie zastępuje się ich przykładami ani rozwiązaniami z informatorów CKE.
+Kurs zachowuje odrębną warstwę autorską. Audyt potwierdza dokładnie 4 grupy, 13 obszarów, 73 wymagania podstawowe, 46 dodatkowych wymagań rozszerzonych, 238 przykładów i 357 ćwiczeń Adama Kubisia. Żaden z tych materiałów nie został zastąpiony. Dodatkowy katalog zawiera osobno oznaczone 66 przykładów podstawowych i 31 rozszerzonych z informatorów CKE, wraz z oficjalnymi wymaganiami, zasadami oceniania, rozwiązaniami i stronami źródłowymi.
 
 ## Proweniencja i Issue #7
 
-Transkrypcja arkusza rozszerzonego ma status `approved` w `Content/provenance.json` na podstawie rozszerzenia `docs/ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r. Trzy figury są autorskimi implementacjami wektorowymi Avalonia, bez aktywnych rastrów, `Image` lub `Bitmap`. `releaseEligible=true` potwierdza brak grup blokujących.
+Transkrypcja arkusza rozszerzonego ma status `approved` w `Content/provenance.json` na podstawie rozszerzenia `docs/ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r. Trzy figury są autorskimi implementacjami wektorowymi Avalonia, bez aktywnych rastrów, `Image` lub `Bitmap`. Globalne `releaseEligible=false` wynika wyłącznie z później dodanej i jeszcze niezatwierdzonej grupy przykładów z informatorów CKE, a nie ze statusu arkusza 2026.
 
 Deklaracja wskazuje oba arkusze 2026, oba zestawy zasad oceniania, cztery adresy, cztery sumy SHA-256, zakres redystrybucji transkrypcji w Abiturii oraz dziesięć autorskich implementacji wektorowych Avalonia. Grupy `cke-2026-main-basic-exam`, `cke-2026-main-extended-exam` i `runtime-vector-diagrams` mają status `approved`; Issue #7 spełnia kryteria zamknięcia po przejściu pełnej bramy i autoryzowanym pushu.
 

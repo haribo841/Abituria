@@ -32,14 +32,14 @@ Narzędzia w tej tabeli nie są częścią grafu runtime ani paczek aplikacji. S
 
 ## Narzędzia Python
 
-Te pakiety nie są częścią paczek aplikacji. Generator dokumentacji PDF i jego testy instalują dokładnie wersje zapisane w `tools/requirements-test.txt`.
+Te pakiety nie są częścią paczek aplikacji. Generator dokumentacji PDF, importer informatorów CKE i ich testy instalują dokładnie wersje zapisane w `tools/requirements-test.txt`.
 
 | Pakiet | Wersja | Typ | Zastosowanie | Licencja |
 | --- | --- | --- | --- | --- |
 | `charset-normalizer` | `3.4.9` | przechodnia, jawnie przypięta | Dekodowanie tekstu wymagane przez ReportLab. | MIT |
 | `coverage` | `7.15.2` | bezpośrednia testowa | Pomiar pokrycia linii i gałęzi kodu Python. | Apache-2.0 |
 | `pillow` | `12.3.0` | przechodnia, jawnie przypięta | Obsługa obrazu wzorcowego wymagana przez ReportLab. | MIT-CMU |
-| `pypdf` | `6.10.0` | bezpośrednia testowa | Walidacja stron i treści wygenerowanego PDF. | BSD-3-Clause |
+| `pypdf` | `6.10.0` | bezpośrednia narzędziowa i testowa | Odczyt informatorów CKE oraz walidacja stron i treści wygenerowanego PDF. | BSD-3-Clause |
 | `reportlab` | `4.4.9` | bezpośrednia narzędziowa | Generowanie dokumentacji technicznej PDF. | BSD-3-Clause |
 
 ## Pełne rozwiązanie zależności

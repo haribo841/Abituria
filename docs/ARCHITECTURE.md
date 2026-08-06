@@ -173,6 +173,7 @@ Dane trwałe są zapisywane w SQLite w katalogu `LocalApplicationData/Abituria/a
 - `formulas.json` - tablice matematyczne,
 - `chapters.json` - hierarchiczny kurs Formuły 2023: źródła, grupy, obszary, wymagania, lekcje i przykłady,
 - `course-exercises.json` - ćwiczenia kursowe korzystające ze wspólnego modelu `LearningExercise`,
+- `official-course-examples.json` - 97 przykładów CKE w osobnej warstwie źródłowej z numerami, stronami, wymaganiami, rozwiązaniami i opisami figur,
 - `exams.json` - uporządkowany indeks aktywnych arkuszy i 17 wspólnych tematów,
 - `exam-2025-main-basic.json` - matura główna 2025 PP w schemacie 4: 31 zadań, 35 części, 50 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
 - `exam-2025-main-extended.json` - matura główna 2025 PR w schemacie 4: 12 zadań, 13 części, 50 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
@@ -187,7 +188,7 @@ Dane trwałe są zapisywane w SQLite w katalogu `LocalApplicationData/Abituria/a
 
 Kod produkcyjny odpowiada za wczytanie i wyświetlenie treści, a nie za przechowywanie długich materiałów edukacyjnych. `ContentRepository.Exams` zachowuje kolejność aktywnego indeksu, `GetExam(id)` wybiera arkusz, a `GetTopicExercises(topicId)` agreguje zadania z pięciu arkuszy bez zmiany identyfikatorów `mp21-*`. `ExamCatalogValidator` sprawdza indeks, metadane, globalną unikalność identyfikatorów, kolejność, tematy i umowy odpowiedzi.
 
-`MathCourseNavigation` realizuje filtr podstawowy/rozszerzony i hierarchię obszar - lekcja - ćwiczenie. `NumericAnswerEvaluator` przekazuje wyrażenia do bezpiecznego parsera kalkulatora, obsługuje przecinek lub kropkę, tolerancję bezwzględną i względną oraz odrzuca błędy i wartości niefinitywne. `CompoundAnswerEvaluator` łączy części wyboru, liczbowe i tekstowe; zadanie zostaje ukończone dopiero po poprawnym wypełnieniu wszystkich pól. Renderowanie treści miesza zwykłe `TextBlock`, skalowalne `DiagramView` oraz `MathView` z `Sylinko.CSharpMath.Avalonia`.
+`MathCourseNavigation` realizuje filtr podstawowy/rozszerzony i hierarchię obszar - lekcja - ćwiczenie. `OfficialCourseExampleCatalogValidator` porównuje źródła z przypiętymi źródłami kursu, sprawdza liczniki, strony, mapowania wymagań i opisy figur. `CourseLessonView` zachowuje autorskie przykłady jako pierwszą warstwę, a transkrypcje CKE prezentuje niżej w zwiniętych kartach bez wpływu na postęp i SQLite. `NumericAnswerEvaluator` przekazuje wyrażenia do bezpiecznego parsera kalkulatora, obsługuje przecinek lub kropkę, tolerancję bezwzględną i względną oraz odrzuca błędy i wartości niefinitywne. `CompoundAnswerEvaluator` łączy części wyboru, liczbowe i tekstowe; zadanie zostaje ukończone dopiero po poprawnym wypełnieniu wszystkich pól. Renderowanie treści miesza zwykłe `TextBlock`, skalowalne `DiagramView` oraz `MathView` z `Sylinko.CSharpMath.Avalonia`.
 
 Profil nadal zapisuje wyłącznie identyfikatory ukończonych ćwiczeń w istniejącej tabeli SQLite. Liczniki `x/37`, `x/35`, dwa liczniki `x/13` i historyczny `x/35` są wyliczane przez przecięcie tego zbioru z identyfikatorami każdego arkusza, dlatego nie jest potrzebna nowa migracja bazy.
 
@@ -225,6 +226,7 @@ Projekt ma testy dla głównych warstw:
 - `ReleaseRuntimeTests`, `AboutViewTests` - izolowany smoke test, metadane builda i ekran "O programie",
 - `ContentProvenanceTests` - kompletność i jednoznaczność pochodzenia paczkowanych zasobów,
 - `MathCourse2023ContentTests` - kontrakt `4/13/73/46/238/357`, generowanie, filtr, tryby odpowiedzi, postęp, opisy alternatywne i rozmiary UI,
+- `OfficialCourseExampleContentTests` i `test_import_cke_informer_examples.py` - kontrakt `66/31/97`, przypięte źródła, komplet transkrypcji, mapowania wymagań, opisy 53 figur, rozdzielenie warstw UI i deterministyczny importer,
 - `Matura2025ContentTests`, `Matura2026ContentTests`, `Matura2026ExtendedContentTests`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` - kontrakty `31/35/50`, dwa razy `12/13/50` i `33/37/50`, źródła i SHA-256, pięć arkuszy, agregacja tematów, odpowiedzi złożone i oddzielny postęp,
 - `Issue5CalculatorPipTests` - PiP, ustawienia profilu, kolejność schowka, wklejanie, sesyjny brudnopis, motywy i rozmiary UI.
 

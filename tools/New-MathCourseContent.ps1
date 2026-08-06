@@ -140,7 +140,7 @@ function New-CoverageDocument([object]$Catalog, [object[]]$Requirements, [object
     $builder = [System.Text.StringBuilder]::new()
     [void]$builder.AppendLine('# Pokrycie kursu matematyki - Formuła 2023')
     [void]$builder.AppendLine()
-    [void]$builder.AppendLine('Katalog obejmuje dokładne wymagania szczegółowe podstawy programowej z 2024 r., stosowanej na maturze 2026. Przykłady, ćwiczenia, rozwiązania i diagramy są autorskie; informatory CKE służą wyłącznie do kalibracji stylu egzaminu.')
+    [void]$builder.AppendLine('Katalog obejmuje dokładne wymagania szczegółowe podstawy programowej z 2024 r., stosowanej na maturze 2026. Warstwa autorska zachowuje 238 przykładów, 357 ćwiczeń, rozwiązania i diagramy. Osobny katalog `Content/official-course-examples.json` dodaje 66 przykładów z informatora CKE dla poziomu podstawowego i 31 dla poziomu rozszerzonego, wraz z oficjalnymi wymaganiami, zasadami oceniania i rozwiązaniami.')
     [void]$builder.AppendLine('Każdy identyfikator wymagania ma osobny scenariusz dydaktyczny w jednym z czterech plików `learning-stage-*.json`; generator odrzuca brak, nadmiar, duplikat lub powtórzone polecenie w pakiecie.')
     [void]$builder.AppendLine()
     [void]$builder.AppendLine('## Przypięte źródła')
@@ -159,8 +159,9 @@ function New-CoverageDocument([object]$Catalog, [object[]]$Requirements, [object
     [void]$builder.AppendLine("- wymagania podstawowe: $(@($Requirements | Where-Object level -eq 'basic').Count) / 73;")
     [void]$builder.AppendLine("- wymagania rozszerzone: $(@($Requirements | Where-Object level -eq 'extended').Count) / 46;")
     [void]$builder.AppendLine("- autorskie scenariusze wymagań: $($script:learningScenariosById.Count) / 119;")
-    [void]$builder.AppendLine("- rozwiązane przykłady: $exampleCount / 238;")
+    [void]$builder.AppendLine("- autorskie rozwiązane przykłady: $exampleCount / 238;")
     [void]$builder.AppendLine("- ćwiczenia: $($Exercises.Count) / 357.")
+    [void]$builder.AppendLine('- dodatkowe przykłady oficjalne CKE: 97 / 97 (66 podstawowych i 31 rozszerzonych).')
     [void]$builder.AppendLine()
     [void]$builder.AppendLine('## Macierz obszarów')
     [void]$builder.AppendLine()
@@ -459,7 +460,7 @@ $courseCatalog = [ordered]@{
     introduction = @(
         [ordered]@{
             type = 'richText'
-            text = "Kurs matematyki - Formuła 2023`n`nZakres odpowiada podstawie programowej z 2024 r. stosowanej na maturze 2026. Poziom podstawowy obejmuje 73 wymagania i 219 ćwiczeń. Filtr rozszerzony dodaje 46 wymagań i 138 ćwiczeń. Dokładne brzmienie wymagań pochodzi z aktu urzędowego; przykłady, ćwiczenia, rozwiązania i diagramy opracował Adam Kubiś. Zadania z informatorów CKE nie zostały skopiowane."
+            text = "Kurs matematyki - Formuła 2023`n`nZakres odpowiada podstawie programowej z 2024 r. stosowanej na maturze 2026. Poziom podstawowy obejmuje 73 wymagania i 219 ćwiczeń. Filtr rozszerzony dodaje 46 wymagań i 138 ćwiczeń. Warstwa autorska zachowuje 238 przykładów, 357 ćwiczeń, rozwiązania i diagramy Adama Kubisia. Dodatkowa, oddzielnie oznaczona warstwa zawiera 66 przykładów z informatora CKE dla poziomu podstawowego i 31 dla poziomu rozszerzonego, z oficjalnymi wymaganiami, zasadami oceniania, rozwiązaniami oraz odnośnikami do stron źródłowych."
         }
     )
     groups = @($catalogSeed.groups)

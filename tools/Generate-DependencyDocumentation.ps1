@@ -57,9 +57,9 @@ $pythonDependencyMetadata = @{
         Type = "przechodnia, jawnie przypięta"
     }
     "pypdf" = [pscustomobject]@{
-        Purpose = "Walidacja stron i treści wygenerowanego PDF."
+        Purpose = "Odczyt informatorów CKE oraz walidacja stron i treści wygenerowanego PDF."
         License = "BSD-3-Clause"
-        Type = "bezpośrednia testowa"
+        Type = "bezpośrednia narzędziowa i testowa"
     }
     "reportlab" = [pscustomobject]@{
         Purpose = "Generowanie dokumentacji technicznej PDF."
@@ -219,7 +219,7 @@ $dependencyLines.Add("| ``dotnet-sonarscanner`` | ``$($sonarVersions[0])`` | Ana
 $dependencyLines.Add("")
 $dependencyLines.Add("## Narzędzia Python")
 $dependencyLines.Add("")
-$dependencyLines.Add("Te pakiety nie są częścią paczek aplikacji. Generator dokumentacji PDF i jego testy instalują dokładnie wersje zapisane w ``tools/requirements-test.txt``.")
+$dependencyLines.Add("Te pakiety nie są częścią paczek aplikacji. Generator dokumentacji PDF, importer informatorów CKE i ich testy instalują dokładnie wersje zapisane w ``tools/requirements-test.txt``.")
 $dependencyLines.Add("")
 $dependencyLines.Add("| Pakiet | Wersja | Typ | Zastosowanie | Licencja |")
 $dependencyLines.Add("| --- | --- | --- | --- | --- |")

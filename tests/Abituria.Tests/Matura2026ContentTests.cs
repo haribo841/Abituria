@@ -221,7 +221,6 @@ public sealed class Matura2026ContentTests
         var coverage = File.ReadAllText(Absolute("docs/MATURA_2026_COVERAGE.md"));
         var toc = File.ReadAllText(Absolute("docs/toc.yml"));
 
-        Assert.True(root.GetProperty("releaseEligible").GetBoolean());
         Assert.Equal("approved", groups["cke-2026-main-basic-exam"].GetProperty("distributionStatus").GetString());
         Assert.Equal("approved", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
         Assert.Contains("MMAP-P0-100-A-2605", rights, StringComparison.Ordinal);

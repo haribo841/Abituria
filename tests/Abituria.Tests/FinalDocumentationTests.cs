@@ -120,12 +120,13 @@ public sealed class FinalDocumentationTests
         Assert.Contains("Publiczny GitHub Release `0.9.0-beta.1` pozostaje odrębnym, ukończonym działaniem", requirements, StringComparison.Ordinal);
 
         var provenance = File.ReadAllText(Absolute("Content/provenance.json"));
-        Assert.Contains("\"releaseEligible\": true", provenance, StringComparison.Ordinal);
+        Assert.Contains("\"releaseEligible\": false", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2026-main-basic-exam\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2026-main-extended-exam\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2025-main-basic-exam\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2025-main-extended-exam\"", provenance, StringComparison.Ordinal);
-        Assert.DoesNotContain("\"distributionStatus\": \"blocked\"", provenance, StringComparison.Ordinal);
+        Assert.Contains("\"id\": \"cke-formula-2023-guide-examples\"", provenance, StringComparison.Ordinal);
+        Assert.Contains("\"distributionStatus\": \"blocked\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"distributionStatus\": \"approved\"", provenance, StringComparison.Ordinal);
         Assert.True(File.Exists(Absolute("docs/ASSET_RIGHTS_DECLARATION.md")), "Brak deklaracji praw do zasobów.");
     }

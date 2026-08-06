@@ -85,7 +85,7 @@ Poza bieżącym zakresem pozostają:
 | F-04 | System umożliwia odzyskanie i zmianę hasła przez kod odzyskiwania. | Wysoki | Zaimplementowane | `LoginView`, `ProfileView`, `AccountServiceTests` |
 | F-05 | System importuje historyczne profile gościa z `users.txt` idempotentnie. | Średni | Zaimplementowane | `AccountService`, `InitialLocalAccounts`, `AccountServiceTests` |
 | F-06 | System pokazuje 18 tablic matematycznych obejmujących wszystkie 17 sekcji i podpunkty dokumentu CKE dla Formuły 2023, z jawnym źródłem i sumą SHA-256. | Wysoki | Zaimplementowane | `Content/formulas.json`, `FORMULA_2023_COVERAGE.md`, `ContentInventoryTests` |
-| F-07 | System pokazuje pełny kurs Formuły 2023 w 4 grupach i 13 obszarach, obejmujący 73 wymagania podstawowe i 46 rozszerzonych. | Wysoki | Zaimplementowane | `Content/chapters.json`, `MATH_COURSE_2023_COVERAGE.md`, `MathCourse2023ContentTests` |
+| F-07 | System pokazuje pełny kurs Formuły 2023 w 4 grupach i 13 obszarach, obejmujący 73 wymagania podstawowe i 46 rozszerzonych, 238 autorskich przykładów i 357 autorskich ćwiczeń. | Wysoki | Zaimplementowane | `Content/chapters.json`, `MATH_COURSE_2023_COVERAGE.md`, `MathCourse2023ContentTests` |
 | F-08 | System pokazuje matury główne 2025 PP `31/35/50`, 2025 PR `12/13/50`, 2026 PP `33/37/50` i 2026 PR `12/13/50` oraz zachowuje 35 zadań matury poprawkowej 2021. | Wysoki | Zaimplementowane | `Content/exams.json`, `Content/exam-2025-main-*.json`, `Content/exam-2026-main-*.json`, `Content/exam-2021-correction.json`, `Matura2025ContentTests`, `Matura2026ContentTests` |
 | F-09 | System umożliwia wybór arkusza, losowanie tylko z wybranego arkusza oraz agregację pięciu arkuszy według 17 tematów. | Wysoki | Zaimplementowane | `MaturaView`, `TaskTopicsView`, `ContentRepository`, `Matura2026UiTests` |
 | F-10 | System sprawdza odpowiedzi A-D oraz złożone tabele P/F lub zadania wielopolowe i zapisuje postęp po poprawnej odpowiedzi. | Wysoki | Zaimplementowane | `ExerciseView`, `CompoundAnswerEvaluator`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` |
@@ -106,6 +106,7 @@ Poza bieżącym zakresem pozostają:
 | F-25 | Start pokazuje sześć kafelków, a niezależne strony `Matura` i `Zadania` rozdzielają pełny arkusz, 17 tematów, losowanie i placeholdery z właściwym kontekstem powrotu. | Wysoki | Zaimplementowane | `HomeView`, `MaturaView`, `TaskTopicsView`, `Issue4NavigationTests` |
 | F-26 | System udostępnia pojedynczy kalkulator Picture in Picture i przenosi tę samą sesję bez utraty wyrażenia między oknem nad Abiturią, oknem zawsze na wierzchu i panelem aplikacji. Wybrany tryb jest zapisywany osobno dla profilu. | Wysoki | Zaimplementowane | `CalculatorPipController`, `OptionsView`, migracja `202607310001_AddProfilePipPreference`, `Issue5CalculatorPipTests` |
 | F-27 | Każdy poprawny wynik kalkulatora ogólnego trafia dokładnie do schowka systemowego, a brudnopis i odpowiedź liczbowa obsługują `Ctrl+V` lub `Cmd+V` oraz menu `Wklej` w miejscu kursora albo zaznaczenia. | Wysoki | Zaimplementowane | `CalculatorClipboardCoordinator`, `TextBoxClipboardBehavior`, `Issue5CalculatorPipTests` |
+| F-28 | System pokazuje obok warstwy autorskiej osobno oznaczone 66 przykładów podstawowych i 31 rozszerzonych z informatorów CKE, zachowując oficjalne wymagania, zasady oceniania, rozwiązania, strony i opisy figur. | Wysoki | Zaimplementowane technicznie, publikacja zablokowana do rozszerzenia deklaracji praw | `Content/official-course-examples.json`, `OfficialCourseExampleContentTests`, `test_import_cke_informer_examples.py` |
 
 ## 5. Wymagania niefunkcjonalne
 
@@ -224,7 +225,7 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 4. `dotnet format whitespace Abituria.sln --verify-no-changes --no-restore` nie zgłasza zmian.
 5. `git diff --check` nie zgłasza błędów.
 6. SonarQube Cloud nie raportuje otwartych problemów po analizie aktualnego commita.
-7. Inwentarz treści potwierdza 18 tablic, kompletne odwzorowanie 17 sekcji CKE, 91 kątów w tabeli trygonometrycznej, 4 grupy i 13 obszarów kursu, kontrakt `119/238/357`, 17 tematów oraz arkusze `31/35/50`, dwa razy `12/13/50`, `33/37/50` i `35/35/45`.
+7. Inwentarz treści potwierdza 18 tablic, kompletne odwzorowanie 17 sekcji CKE, 91 kątów w tabeli trygonometrycznej, 4 grupy i 13 obszarów kursu, autorski kontrakt `119/238/357`, dodatkowy kontrakt CKE `66/31/97`, 17 tematów oraz arkusze `31/35/50`, dwa razy `12/13/50`, `33/37/50` i `35/35/45`.
 8. Wszystkie 76 identyfikatorów diagramów wskazane przez treści istnieją, są używane i mają niepuste opisy alternatywne; dziewiętnaście figur matur 2025 i 2026 ma stronę i źródło.
 9. Każde zadanie ma kompletną umowę odpowiedzi: opcje i klucz, oczekiwany wynik z tolerancją, części odpowiedzi złożonej albo pełne rozwiązanie ujawniane na żądanie.
 10. Kalkulator ogólny przechodzi regresje dla issues #1-#9 oraz powiązanych dyskusji.
@@ -284,11 +285,11 @@ Techniczny inwentarz licencji i proweniencji obejmuje matury CKE 2025 i 2026 na 
 
 ## Status issue #36
 
-Repozytorium zawiera kompletny proces wydania wersji `0.9.0-beta.1`: jedno źródło wersji, .NET 10 LTS, lockfile, audyt, paczki portable dla trzech systemów, diagnostyczny smoke test, ekran "O programie", dokumentację, sumy, SBOM i atestacje. Manifest ma `releaseEligible=true`, a publiczny prerelease znajduje się pod adresem `https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1`.
+Repozytorium zawiera kompletny proces wydania wersji `0.9.0-beta.1`: jedno źródło wersji, .NET 10 LTS, lockfile, audyt, paczki portable dla trzech systemów, diagnostyczny smoke test, ekran "O programie", dokumentację, sumy, SBOM i atestacje. Manifest dokładnego commita wydania miał `releaseEligible=true`, a publiczny prerelease znajduje się pod adresem `https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1`. Bieżący manifest ma `releaseEligible=false` z powodu później dodanej warstwy przykładów CKE.
 
 ## Status Issue #9
 
-Bieżące [haribo841/Abituria#9](https://github.com/haribo841/Abituria/issues/9) wymaga utrzymania kompletnej analizy biznesowej obejmującej cele, użytkowników, model udostępniania, zakres, harmonogram, licencję, metodykę wymagań i architekturę. Aktywny dokument [BUSINESS_ANALYSIS.md](BUSINESS_ANALYSIS.md) zawiera weryfikowalne wymagania, testy i bramę pochodzenia zasobów. Historyczny kontekst pozostaje wyłącznie pod pełnym adresem [Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski#38](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38), bez zmian w starym repozytorium. `releaseEligible=true` potwierdza zatwierdzenie proweniencji dla bieżącego zakresu.
+Bieżące [haribo841/Abituria#9](https://github.com/haribo841/Abituria/issues/9) wymaga utrzymania kompletnej analizy biznesowej obejmującej cele, użytkowników, model udostępniania, zakres, harmonogram, licencję, metodykę wymagań i architekturę. Aktywny dokument [BUSINESS_ANALYSIS.md](BUSINESS_ANALYSIS.md) zawiera weryfikowalne wymagania, testy i bramę pochodzenia zasobów. Historyczny kontekst pozostaje wyłącznie pod pełnym adresem [Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski#38](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38), bez zmian w starym repozytorium. Bieżące `releaseEligible=false` jawnie sygnalizuje niezatwierdzoną jeszcze redystrybucję przykładów z informatorów CKE.
 
 ## Status issue #43
 

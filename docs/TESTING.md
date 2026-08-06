@@ -4,7 +4,7 @@ Wersja dokumentu: `0.9.0-beta.1`.
 
 Data ostatniego lokalnego wykonania: 5 sierpnia 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
 
-Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` z raportem OpenCover zakończył się wynikiem `529/529 PASS` w czasie `29 s`. OpenCover wykazał `95,88%` pokrycia linii i `87,70%` pokrycia gałęzi kodu C#. Cztery testy Python generatora PDF przeszły, a `coverage.py` wykazał `99,14%` linii i `93,75%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,60%` pokrycia łącznego i `87,75%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
+Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` z raportem OpenCover zakończył się wynikiem `534/534 PASS` w czasie `36 s`. OpenCover wykazał `95,76%` pokrycia linii i `86,83%` pokrycia gałęzi kodu C#. Dziewięć testów Python generatora PDF i importera przykładów CKE przeszło, a `coverage.py` wykazał `98,42%` linii i `90,00%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,30%` pokrycia łącznego i `86,92%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
 
 Dokument rozróżnia wyniki automatyczne, retrospektywne poświadczenie historycznych testów uczestników oraz czynności bieżącego procesu wydawniczego. Brak szczegółowej karty sesji nie jest uzupełniany przez domysł, a poświadczenie historyczne nie jest przedstawiane jako test bieżącej paczki.
 
@@ -32,14 +32,14 @@ Testy `[AvaloniaFact]` tworzą izolowane aplikacje, dispatchery i renderery Skia
 | --- | --- | --- |
 | Kalkulator | `ExpressionCalculatorTests`, `ExpressionCalculatorRobustnessTests`, `CalculatorSessionTests`, `RepeatedEqualsTests`, `QuadraticSolverTests`, `Issue5CalculatorPipTests` | poprawność obliczeń, błędy wejścia, granice, historia, PiP i schowek `Ans` |
 | Konta i dane | `AccountServiceTests`, `Issue14RegistrationRegressionTests`, `ReleaseDatabaseCompatibilityTests`, `ExerciseScratchpadSessionTests` | profil gościa, hasła, odzyskiwanie, postęp, preferencję PiP, brudnopis sesji i kompatybilność bazy |
-| Treści | `ContentInventoryTests`, `ContentSeparationTests`, `Issue35MathChaptersRegressionTests`, `Formula2023ContentTests`, `MathCourse2023ContentTests`, `Matura2025ContentTests`, `Matura2026ContentTests`, `Matura2026ExtendedContentTests`, `DiagramCatalogTests`, `LegacyImageArchiveTests` | kompletność tablic i kursu Formuły 2023, kontrakty `4/13/73/46/238/357`, matury 2025 `31/35/50` i `12/13/50`, matury 2026 `33/37/50` i `12/13/50`, zachowanie 35 zadań 2021, 76 aktywnych diagramów, zgodność archiwum 75 obrazów, źródła, SHA-256, format JSON i renderowanie treści |
+| Treści | `ContentInventoryTests`, `ContentSeparationTests`, `Issue35MathChaptersRegressionTests`, `Formula2023ContentTests`, `MathCourse2023ContentTests`, `OfficialCourseExampleContentTests`, `Matura2025ContentTests`, `Matura2026ContentTests`, `Matura2026ExtendedContentTests`, `DiagramCatalogTests`, `LegacyImageArchiveTests` | kompletność tablic i kursu Formuły 2023, autorski kontrakt `4/13/73/46/238/357`, dodatkowe przykłady CKE `66/31/97`, matury 2025 `31/35/50` i `12/13/50`, matury 2026 `33/37/50` i `12/13/50`, zachowanie 35 zadań 2021, 76 aktywnych diagramów, zgodność archiwum 75 obrazów, źródła, SHA-256, format JSON i renderowanie treści |
 | UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests`, `Issue4NavigationTests`, `Issue5CalculatorPipTests`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` | osiągalne ścieżki użytkownika, pięć arkuszy, agregację 17 tematów, oddzielny postęp, odpowiedzi złożone, wszystkie trasy shella, kontrolowany pojedynczy PiP, wklejanie, losowanie i kontekst zadania |
 | Dostępność kontrolek | `AccessibilityRegressionTests` | nazwy pól i symbolicznych przycisków oraz dynamiczne regiony wyników |
 | Wizualne | `Discussion10VisualRegressionTests` | renderowanie list matematycznych i zachowanie przy minimalnym rozmiarze okna |
 | Styl, motywy i własny chrome | `Discussion49StyleRegressionTests` | Mulish, brak wymuszonego Light i Inter, historyczne emoji `🍓`/`🍋`/`🍏`, tooltipy, cztery ustawienia motywu, stany interakcji, fokus, breakpointy, dialogi, sterowanie i skalowanie okna |
 | Koszt renderowania UI | `Discussion49StyleRegressionTests` | rozgrzany render reprezentatywnego widoku w motywie jasnym, ciemnym i wysokiego kontrastu oraz budżet czasu i pamięci |
 | Wydanie | `ReleaseRuntimeTests`, `ReleaseContractTests`, `ReleaseValidationScriptTests`, `NuGetLicenseBundleTests` | izolowany smoke test, wersjonowanie, zawartość paczek, dowody licencji i działanie bramki pokrycia |
-| Python i PDF | `tests/python/test_new_commission_pdf.py` | generowanie, walidację struktury oraz błędy czcionek i obrazu wejściowego |
+| Python i PDF | `tests/python/test_new_commission_pdf.py`, `tests/python/test_import_cke_informer_examples.py` | generowanie PDF, import 97 przykładów CKE, przypięte SHA-256, zakresy stron, mapowania wymagań, punktację, opisy figur oraz błędy wejścia |
 | Jakość | `Test-CoverageThreshold.ps1`, `dotnet format`, audyt NuGet, test pochodzenia zasobów, SonarQube Cloud, CodeQL | minimalne pokrycie `90%`/`85%`, formatowanie, podatności, kompletność manifestu, jakość kodu i code scanning |
 
 ## Natywny smoke test Issue #5
@@ -150,7 +150,7 @@ Historyczny odbiór Issue #43 jest zaliczony na podstawie łącznie udokumentowa
 3. historyczna forma przekazania została uzgodniona i przyjęta;
 4. brakujące szczegóły sesji, podpisu, kanału i hasha są ujawnione jako ograniczenia archiwalne, a nie uzupełnione fikcyjnymi danymi.
 
-Publiczne wydanie `0.9.0-beta.1` jest osobnym procesem. Zwykły walidator proweniencji i brama `-RequireReleaseEligible` przeszły po rozszerzeniach `ASSET_RIGHTS_DECLARATION.md` z 3 i 5 sierpnia 2026 r.; manifest ma `releaseEligible=true` i nie zawiera grup `blocked`. Oba warianty walidatora ponowiono na dokładnym commicie wydania.
+Publiczne wydanie `0.9.0-beta.1` jest osobnym procesem. Zwykły walidator proweniencji i brama `-RequireReleaseEligible` przeszły po rozszerzeniach `ASSET_RIGHTS_DECLARATION.md` z 3 i 5 sierpnia 2026 r.; manifest dokładnego commita wydania miał `releaseEligible=true` i nie zawierał grup `blocked`. Bieżący manifest ma `releaseEligible=false` z powodu później dodanej warstwy przykładów z informatorów CKE. Zwykły walidator musi nadal przechodzić, natomiast brama wydawnicza ma odrzucać ten stan do czasu rozszerzenia deklaracji.
 
 Publiczny prerelease [`v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1) został opublikowany po wykonaniu następujących czynności:
 

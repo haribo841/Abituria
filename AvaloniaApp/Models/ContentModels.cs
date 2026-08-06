@@ -185,6 +185,47 @@ public sealed class WorkedExample
     public string Solution { get; set; } = string.Empty;
 }
 
+public sealed class OfficialCourseExampleCatalog
+{
+    public int SchemaVersion { get; set; }
+    public List<OfficialCourseExampleSource> Sources { get; set; } = [];
+    public List<OfficialCourseExample> Examples { get; set; } = [];
+}
+
+public sealed class OfficialCourseExampleSource
+{
+    public string Id { get; set; } = string.Empty;
+    public string Level { get; set; } = string.Empty;
+    public string Title { get; set; } = string.Empty;
+    public string Publisher { get; set; } = string.Empty;
+    public string DocumentUrl { get; set; } = string.Empty;
+    public string DocumentSha256 { get; set; } = string.Empty;
+    public string VerifiedOn { get; set; } = string.Empty;
+    public int FirstExamplePage { get; set; }
+    public int LastExamplePage { get; set; }
+    public int ExampleCount { get; set; }
+}
+
+public sealed class OfficialCourseExample
+{
+    public string Id { get; set; } = string.Empty;
+    public string SourceId { get; set; } = string.Empty;
+    public string Level { get; set; } = string.Empty;
+    public string OfficialNumber { get; set; } = string.Empty;
+    public int Order { get; set; }
+    public int MaximumPoints { get; set; }
+    public List<int> SourcePages { get; set; } = [];
+    public List<string> RequirementIds { get; set; } = [];
+    public List<OfficialCourseVisualReference> VisualReferences { get; set; } = [];
+    public string Transcription { get; set; } = string.Empty;
+}
+
+public sealed class OfficialCourseVisualReference
+{
+    public int SourcePage { get; set; }
+    public string AlternativeText { get; set; } = string.Empty;
+}
+
 public sealed class ContentBlock
 {
     public string Type { get; set; } = string.Empty;

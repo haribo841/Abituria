@@ -21,6 +21,8 @@ public sealed class ContentRepository
         Diagrams = Load<DiagramCatalog>("Content/diagrams.json");
         DiagramCatalogValidator.Validate(Diagrams);
         MathCourse = Load<MathCourseCatalog>("Content/chapters.json");
+        OfficialCourseExamples = Load<OfficialCourseExampleCatalog>("Content/official-course-examples.json");
+        OfficialCourseExampleCatalogValidator.Validate(OfficialCourseExamples, MathCourse);
         CourseExercises = Load<CourseExerciseCatalog>("Content/course-exercises.json");
         ExamIndex = Load<ExamIndexCatalog>("Content/exams.json");
         Exams = ExamIndex.Exams
@@ -37,6 +39,7 @@ public sealed class ContentRepository
     public FormulaCatalog Formulas { get; }
     public DiagramCatalog Diagrams { get; }
     public MathCourseCatalog MathCourse { get; }
+    public OfficialCourseExampleCatalog OfficialCourseExamples { get; }
     public CourseExerciseCatalog CourseExercises { get; }
     public ExamIndexCatalog ExamIndex { get; }
     public IReadOnlyList<ExamDefinition> Exams { get; }

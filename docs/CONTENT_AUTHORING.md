@@ -5,6 +5,7 @@ Kod C# odpowiada za wczytanie, walidację i wyświetlenie treści. Długie opisy
 - `Content/formulas.json` - kuratorowana transkrypcja tablic CKE dla Formuły 2023,
 - `Content/chapters.json` - wygenerowany katalog kursu Formuły 2023 w schemacie 4,
 - `Content/course-exercises.json` - wygenerowane ćwiczenia kursowe,
+- `Content/official-course-examples.json` - osobna transkrypcja 97 przykładów z dwóch informatorów CKE,
 - `Content/exams.json` - indeks aktywnych arkuszy i 17 wspólnych tematów w schemacie 1,
 - `Content/exam-2025-main-basic.json` - matura główna 2025 PP w schemacie 4,
 - `Content/exam-2025-main-extended.json` - matura główna 2025 PR w schemacie 4,
@@ -28,7 +29,20 @@ pwsh -NoProfile -File tools/Sync-Issue35Content.ps1
 pwsh -NoProfile -File tools/New-MathCourseContent.ps1
 ```
 
-Skrypt wymaga dokładnie `4/13/73/46/238/357`, sprawdza unikalność i długość identyfikatorów oraz zapisuje deterministyczny wynik do `Content/chapters.json`, `Content/course-exercises.json` i `docs/MATH_COURSE_2023_COVERAGE.md`. Aktywny katalog 76 diagramów jest odtwarzany deterministycznie poleceniem:
+Skrypt wymaga dokładnie `4/13/73/46/238/357`, sprawdza unikalność i długość identyfikatorów oraz zapisuje deterministyczny wynik do `Content/chapters.json`, `Content/course-exercises.json` i `docs/MATH_COURSE_2023_COVERAGE.md`.
+
+Oficjalne przykłady nie należą do liczników autorskich. Importer wymaga oryginalnych plików PDF o przypiętych sumach SHA-256 i odrzuca plik innej wersji:
+
+```powershell
+python tools/Import-CkeInformerExamples.py `
+  --basic-pdf <informator-podstawowy.pdf> `
+  --extended-pdf <informator-rozszerzony.pdf> `
+  --output Content/official-course-examples.json
+```
+
+Importer pobiera wyłącznie główne zestawy przykładów: zadania 1-66 na stronach PDF 12-138 informatora podstawowego oraz zadania 1-31 na stronach 12-106 informatora rozszerzonego. Nie dubluje późniejszych powtórzeń przeznaczonych dla zdających ze specjalnymi potrzebami. Każdy rekord zachowuje numer, punktację, strony, mapowanie wymagań, pełną transkrypcję oraz opisy informacji wizualnej. Po zmianie katalogu trzeba osobno ocenić jego status w `Content/provenance.json`; test techniczny nie zastępuje deklaracji praw do publicznej redystrybucji.
+
+Aktywny katalog 76 diagramów jest odtwarzany deterministycznie poleceniem:
 
 ```powershell
 pwsh -NoProfile -File tools/New-DiagramCatalog.ps1

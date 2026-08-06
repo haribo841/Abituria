@@ -58,7 +58,7 @@ Nie wolno usuwać parametru bramy, ręcznie zmieniać `releaseEligible` ani wył
 
 ## Aktualny stan
 
-`releaseEligible` ma wartość `true`. Rozszerzenia [deklaracji praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 3 i 5 sierpnia 2026 r. obejmują matury CKE 2025 i 2026, zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Grupy arkuszy 2025 i 2026 oraz `runtime-vector-diagrams` mają status `approved`. Zwykła walidacja kompletności oraz osobna brama `-RequireReleaseEligible` muszą przechodzić niezależnie.
+`releaseEligible` ma wartość `false`. Rozszerzenia [deklaracji praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 3 i 5 sierpnia 2026 r. nadal obejmują matury CKE 2025 i 2026, zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Nie obejmują jeszcze nowej transkrypcji 97 przykładów z informatorów CKE. Z tego powodu grupa `cke-formula-2023-guide-examples` ma status `blocked`. Zwykła walidacja kompletności musi przechodzić, natomiast osobna brama `-RequireReleaseEligible` ma celowo blokować kolejne publiczne wydanie do czasu osobistego rozszerzenia deklaracji przez właściciela.
 
 ### Materiały CKE
 
@@ -76,9 +76,9 @@ Grupa `cke-formula-2023-transcription` obejmuje `Content/formulas.json`. Dokumen
 
 ### Kurs matematyki Formuły 2023
 
-Grupa `mathematics-course-formula-2023` obejmuje `Content/chapters.json` i `Content/course-exercises.json`. Dokładne wymagania pochodzą z podstawy programowej ogłoszonej w Dz.U. 2024 poz. 1019. Katalog przypina adres aktu, dwa informatory CKE, ich sumy SHA-256 i datę weryfikacji. Informatory służą do określenia kontekstu egzaminu; ich zadania, rozwiązania ani ilustracje nie zostały skopiowane.
+Grupa `mathematics-course-formula-2023` obejmuje `Content/chapters.json` i `Content/course-exercises.json`. Dokładne wymagania pochodzą z podstawy programowej ogłoszonej w Dz.U. 2024 poz. 1019. Katalog przypina adres aktu, dwa informatory CKE, ich sumy SHA-256 i datę weryfikacji.
 
-Przykłady, ćwiczenia, podpowiedzi, pełne rozwiązania i cztery nowe definicje diagramów kursu są materiałami autorskimi Adama Kubisia. Osiem zachowanych diagramów wektorowych nadal ma historyczne przypisanie. Maszynowa macierz [MATH_COURSE_2023_COVERAGE.md](MATH_COURSE_2023_COVERAGE.md) rozdziela te warstwy oraz dokumentuje kontrakt `119/238/357`.
+Warstwa autorska pozostaje niezmieniona: 238 przykładów, 357 ćwiczeń, podpowiedzi, pełne rozwiązania i cztery nowe definicje diagramów kursu są materiałami Adama Kubisia. Osiem zachowanych diagramów wektorowych nadal ma historyczne przypisanie. Osobna grupa `cke-formula-2023-guide-examples` obejmuje `Content/official-course-examples.json`: 66 przykładów podstawowych i 31 rozszerzonych wraz z oficjalnym brzmieniem wymagań wskazanych przy zadaniach, zasadami oceniania, rozwiązaniami, stronami PDF i 53 opisami informacji wizualnej. Autorem tych materiałów pozostaje CKE. Maszynowa macierz [MATH_COURSE_2023_COVERAGE.md](MATH_COURSE_2023_COVERAGE.md) rozdziela obie warstwy oraz dokumentuje kontrakty `119/238/357` i `66/31/97`.
 
 ### Diagramy i archiwum historyczne
 
@@ -96,7 +96,7 @@ Manifest oznacza jako `approved`:
 - arkusze CKE 2021, 2025 i 2026, transkrypcję tablic CKE dla Formuły 2023, katalog wektorów Avalonia oraz ikonę aplikacji objęte deklaracją praw lub upoważnienia do publicznej redystrybucji wyłącznie jako części Abiturii;
 - font Mulish na licencji SIL Open Font License 1.1, potwierdzonej przez `fonts/OFL.txt` i `fonts/README.txt`.
 
-Manifest nie zawiera obecnie grup `blocked`. Każda zmiana źródeł, zakresu redystrybucji lub sposobu renderowania wymaga ponownej oceny, uruchomienia zwykłego walidatora i osobnej bramy `-RequireReleaseEligible`.
+Manifest zawiera jedną grupę `blocked`: `cke-formula-2023-guide-examples`. Każda zmiana źródeł, zakresu redystrybucji lub sposobu renderowania wymaga ponownej oceny, uruchomienia zwykłego walidatora i osobnej bramy `-RequireReleaseEligible`.
 
 Status zatwierdzony należy ponownie ocenić po każdej zmianie źródła, zakresu plików albo sposobu pakowania.
 

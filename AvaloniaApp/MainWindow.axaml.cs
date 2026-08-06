@@ -271,7 +271,8 @@ public partial class MainWindow : Window
             _viewModel.SelectedCourseLevel,
             _viewModel.OpenCourseExercise,
             () => _viewModel.Navigate(AppPage.CourseArea),
-            _content.Diagrams),
+            _content.Diagrams,
+            _content.OfficialCourseExamples),
         AppPage.Calculator => new CalculatorView(
             _content.UiCopy,
             _viewModel.OpenGeneralCalculator,

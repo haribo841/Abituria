@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "releaseEligible": true,
+  "releaseEligible": false,
   "policy": {
     "approvedStatus": "approved",
     "blockingStatus": "blocked",
@@ -39,6 +39,21 @@
         "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",
         "docs/MIGRATION_INVENTORY.md",
         "docs/MATH_COURSE_2023_COVERAGE.md"
+      ]
+    },
+    {
+      "id": "cke-formula-2023-guide-examples",
+      "paths": [
+        "Content/official-course-examples.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i mapowanie: Adam Kubiś",
+      "source": "Informatory CKE Formuła 2023 dla poziomu podstawowego i rozszerzonego, https://bip.cke.gov.pl/attachments/download/10085, SHA-256 88A0EA8E2EE444506CCA5E89C860178E33B04F181650A36D9C9B4DC9BBE625B2; https://bip.cke.gov.pl/attachments/download/10088, SHA-256 BD408CDC8877E04EC79AAC3177FAB304E6F66C6B5FA152D8D3436D4ACFB2BC6F",
+      "license": "Status publicznej redystrybucji w ramach Abiturii wymaga osobnego rozszerzenia deklaracji właściciela",
+      "distributionStatus": "blocked",
+      "blockedReason": "docs/ASSET_RIGHTS_DECLARATION.md nie obejmuje jeszcze transkrypcji 97 przykładów z informatorów CKE ani ich opisów figur.",
+      "evidence": [
+        "docs/MATH_COURSE_2023_COVERAGE.md",
+        "docs/CONTENT_PROVENANCE.md"
       ]
     },
     {

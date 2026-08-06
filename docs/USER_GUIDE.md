@@ -90,7 +90,7 @@ Wzory są renderowane przez CSharpMath. Jeżeli konkretna formuła jest nieczyte
 
 ## Działy
 
-Sekcja zawiera pełny kurs dla Formuły 2023 według podstawy programowej z 2024 r. Kurs obejmuje cztery grupy, 13 oficjalnych obszarów, 73 wymagania podstawowe i 46 dodatkowych wymagań rozszerzonych. Każde wymaganie ma dwa rozwiązane przykłady oraz trzy ćwiczenia, razem 238 przykładów i 357 ćwiczeń.
+Sekcja zawiera pełny kurs dla Formuły 2023 według podstawy programowej z 2024 r. Kurs obejmuje cztery grupy, 13 oficjalnych obszarów, 73 wymagania podstawowe i 46 dodatkowych wymagań rozszerzonych. Każde wymaganie ma dwa autorskie rozwiązane przykłady oraz trzy autorskie ćwiczenia, razem 238 przykładów i 357 ćwiczeń. Dodatkowo dostępnych jest 97 osobno oznaczonych przykładów z informatorów CKE: 66 podstawowych i 31 rozszerzonych.
 
 Filtr „Podstawowy” jest domyślny. Pokazuje 73 wymagania i 219 ćwiczeń podstawowych. Filtr „Rozszerzony” zachowuje treści podstawowe i dodaje 46 wymagań oraz 138 ćwiczeń części rozszerzonej. Alfabet grecki i lekcja o liczbach pierwszych pozostają widoczne na obu poziomach jako materiały pomocnicze; nie zmieniają urzędowych liczników wymagań ani ćwiczeń.
 
@@ -100,7 +100,7 @@ Nawigacja prowadzi kolejno przez obszar, lekcję i ćwiczenie. Przyciski poprzed
 - `numeric` - obliczenie sprawdzane bezpiecznym parserem, z przecinkiem lub kropką dziesiętną;
 - `revealOnly` - dowód albo odpowiedź symboliczna oznaczana jako ukończona po świadomym ujawnieniu pełnego rozwiązania.
 
-Dokładne wymagania pochodzą z aktu urzędowego. Przykłady, ćwiczenia, rozwiązania i diagramy są autorskie i przypisane Adamowi Kubisiowi. Zadania ani rozwiązania z informatorów CKE nie zostały przepisane. Źródła, sumy SHA-256 i pełną macierz opisuje [pokrycie kursu matematyki](MATH_COURSE_2023_COVERAGE.md).
+Dokładne wymagania pochodzą z aktu urzędowego. Nagłówek „Autorskie rozwiązane przykłady” oznacza materiały Adama Kubisia i pozostaje niezależny od kart „Oficjalne przykłady CKE - warstwa źródłowa”. Karty CKE są domyślnie zwinięte; po rozwinięciu pokazują numer, punktację, strony PDF, wymagania wskazane w informatorze, zasady oceniania, rozwiązanie, adres dokumentu i opis figury, gdy zadanie zależy od rysunku. Filtr podstawowy pokazuje tylko przykłady podstawowe, a rozszerzony dodaje przykłady rozszerzone. Źródła, sumy SHA-256 i pełną macierz opisuje [pokrycie kursu matematyki](MATH_COURSE_2023_COVERAGE.md).
 
 ## Matura i Zadania
 
