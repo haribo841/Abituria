@@ -86,8 +86,8 @@ Poza bieżącym zakresem pozostają:
 | F-05 | System importuje historyczne profile gościa z `users.txt` idempotentnie. | Średni | Zaimplementowane | `AccountService`, `InitialLocalAccounts`, `AccountServiceTests` |
 | F-06 | System pokazuje 18 tablic matematycznych obejmujących wszystkie 17 sekcji i podpunkty dokumentu CKE dla Formuły 2023, z jawnym źródłem i sumą SHA-256. | Wysoki | Zaimplementowane | `Content/formulas.json`, `FORMULA_2023_COVERAGE.md`, `ContentInventoryTests` |
 | F-07 | System pokazuje pełny kurs Formuły 2023 w 4 grupach i 13 obszarach, obejmujący 73 wymagania podstawowe i 46 rozszerzonych, 238 autorskich przykładów i 357 autorskich ćwiczeń. | Wysoki | Zaimplementowane | `Content/chapters.json`, `MATH_COURSE_2023_COVERAGE.md`, `MathCourse2023ContentTests` |
-| F-08 | System pokazuje matury główne 2025 PP `31/35/50`, 2025 PR `12/13/50`, 2026 PP `33/37/50` i 2026 PR `12/13/50` oraz zachowuje 35 zadań matury poprawkowej 2021. | Wysoki | Zaimplementowane | `Content/exams.json`, `Content/exam-2025-main-*.json`, `Content/exam-2026-main-*.json`, `Content/exam-2021-correction.json`, `Matura2025ContentTests`, `Matura2026ContentTests` |
-| F-09 | System umożliwia wybór arkusza, losowanie tylko z wybranego arkusza oraz agregację pięciu arkuszy według 17 tematów. | Wysoki | Zaimplementowane | `MaturaView`, `TaskTopicsView`, `ContentRepository`, `Matura2026UiTests` |
+| F-08 | System pokazuje maturę główną 2024 PR `13/14/50`, matury główne 2025 PP `31/35/50`, 2025 PR `12/13/50`, 2026 PP `33/37/50` i 2026 PR `12/13/50` oraz zachowuje 35 zadań matury poprawkowej 2021. | Wysoki | Zaimplementowane technicznie, publiczna redystrybucja 2024 PR zablokowana do rozszerzenia deklaracji praw | `Content/exams.json`, `Content/exam-2024-main-extended.json`, `Content/exam-2025-main-*.json`, `Content/exam-2026-main-*.json`, `Content/exam-2021-correction.json`, `Matura2024ExtendedContentTests`, `Matura2025ContentTests`, `Matura2026ContentTests` |
+| F-09 | System umożliwia wybór arkusza, losowanie tylko z wybranego arkusza oraz agregację sześciu arkuszy według 17 tematów. | Wysoki | Zaimplementowane | `MaturaView`, `TaskTopicsView`, `ContentRepository`, `Matura2026UiTests` |
 | F-10 | System sprawdza odpowiedzi A-D oraz złożone tabele P/F lub zadania wielopolowe i zapisuje postęp po poprawnej odpowiedzi. | Wysoki | Zaimplementowane | `ExerciseView`, `CompoundAnswerEvaluator`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` |
 | F-11 | System ujawnia pełne rozwiązania zadań otwartych i zapisuje postęp dopiero po świadomym ujawnieniu. | Wysoki | Zaimplementowane | `ExerciseView`, `ExerciseAndRoutingCoverageTests`, `MathCourse2023ContentTests` |
 | F-12 | System udostępnia podpowiedzi krokowe dla zadań. | Wysoki | Zaimplementowane | `ExerciseView`, `ContentInventoryTests` |
@@ -102,7 +102,7 @@ Poza bieżącym zakresem pozostają:
 | F-21 | Opublikowany plik wykonywalny obsługuje `--release-smoke-test --data-directory <katalog>` bez otwierania UI i bez dostępu do prawdziwych danych użytkownika. | Wysoki | Zaimplementowane | `ReleaseSmokeTest`, `ReleaseRuntimeTests` |
 | F-22 | System pozwala wylosować zadanie z całego arkusza albo z aktywnego tematu, zachowując kontekst poprzedniego i następnego zadania. | Średni | Zaimplementowane | `ExerciseRandomizer`, `MaturaView`, `TaskTopicsView`, `ExerciseRandomizerTests` |
 | F-23 | System sprawdza odpowiedzi liczbowe bezpiecznym parserem, akceptuje przecinek i kropkę oraz stosuje tolerancję bezwzględną i względną `1e-9`. | Wysoki | Zaimplementowane | `NumericAnswerEvaluator`, `ExpressionCalculator`, `MathCourse2023ContentTests` |
-| F-24 | Profil pokazuje osobno postęp pięciu arkuszy: 2026 PP `x/37`, 2026 PR `x/13`, 2025 PP `x/35`, 2025 PR `x/13` i poprawkowej 2021 `x/35`, a także podstawy `x/219` i części rozszerzonej `x/138`, bez zmiany schematu SQLite. | Wysoki | Zaimplementowane | `ProfileView`, `AccountService`, `Matura2026UiTests`, `MathCourse2023ContentTests` |
+| F-24 | Profil pokazuje osobno postęp sześciu arkuszy: 2026 PP `x/37`, 2026 PR `x/13`, 2025 PP `x/35`, 2025 PR `x/13`, 2024 PR `x/14` i poprawkowej 2021 `x/35`, a także podstawy `x/219` i części rozszerzonej `x/138`, bez zmiany schematu SQLite. | Wysoki | Zaimplementowane | `ProfileView`, `AccountService`, `Matura2026UiTests`, `MathCourse2023ContentTests` |
 | F-25 | Start pokazuje sześć kafelków, a niezależne strony `Matura` i `Zadania` rozdzielają pełny arkusz, 17 tematów, losowanie i placeholdery z właściwym kontekstem powrotu. | Wysoki | Zaimplementowane | `HomeView`, `MaturaView`, `TaskTopicsView`, `Issue4NavigationTests` |
 | F-26 | System udostępnia pojedynczy kalkulator Picture in Picture i przenosi tę samą sesję bez utraty wyrażenia między oknem nad Abiturią, oknem zawsze na wierzchu i panelem aplikacji. Wybrany tryb jest zapisywany osobno dla profilu. | Wysoki | Zaimplementowane | `CalculatorPipController`, `OptionsView`, migracja `202607310001_AddProfilePipPreference`, `Issue5CalculatorPipTests` |
 | F-27 | Każdy poprawny wynik kalkulatora ogólnego trafia dokładnie do schowka systemowego, a brudnopis i odpowiedź liczbowa obsługują `Ctrl+V` lub `Cmd+V` oraz menu `Wklej` w miejscu kursora albo zaznaczenia. | Wysoki | Zaimplementowane | `CalculatorClipboardCoordinator`, `TextBoxClipboardBehavior`, `Issue5CalculatorPipTests` |
@@ -133,7 +133,7 @@ Poza bieżącym zakresem pozostają:
 | NF-19 | Login, Start i kalkulator ogólny zmieniają strukturę układu odpowiednio przy szerokościach `860`, `780` i `900`, bez utraty logicznej kolejności kontrolek. | Wysoki | Zaimplementowane | `AdaptiveLayout`, testy breakpointów Avalonia Headless |
 | NF-20 | Dialogi aplikacji są skalowalne, mają bezpieczne granice wymiarów i przewijanie dla treści wykraczającej poza obszar klienta. | Wysoki | Zaimplementowane | `AdaptiveLayout.CreateDialog`, test właściwości dialogu |
 | NF-21 | Wszystkie kryteria WCAG 2.2 A/AA są przeglądane i śledzone, z jawnym rozdzieleniem dowodów automatycznych, kontroli manualnych i kryteriów nieodpowiednich dla aplikacji desktopowej. | Wysoki | Audyt wykonany, kontrole manualne pozostają jawne | `docs/ACCESSIBILITY_WCAG_AUDIT.md`, `AccessibilityRegressionTests`, `Discussion49StyleRegressionTests` |
-| NF-22 | Aktywne treści używają dokładnie 76 skalowalnych diagramów z opisami alternatywnymi i nie ładują rastrów; `img/icon.ico` pozostaje jedynym statycznym wyjątkiem jako ikona aplikacji. | Wysoki | Zaimplementowane | `Content/diagrams.json`, `DiagramView`, `DiagramCatalogTests`, `LegacyImageArchiveTests` |
+| NF-22 | Aktywne treści używają dokładnie 77 skalowalnych diagramów z opisami alternatywnymi i nie ładują rastrów; `img/icon.ico` pozostaje jedynym statycznym wyjątkiem jako ikona aplikacji. | Wysoki | Zaimplementowane | `Content/diagrams.json`, `DiagramView`, `DiagramCatalogTests`, `LegacyImageArchiveTests` |
 
 ## 6. Opis użytkowników systemu
 
@@ -156,7 +156,7 @@ System nie zakłada kont administratora, ról sieciowych ani synchronizacji wiel
 | Dane lokalne | SQLite, encje, migracje i import legacy | `AppDbContext.cs`, `InitialLocalAccounts.cs` |
 | Treści edukacyjne | Ładowanie i renderowanie JSON, wzorów i obrazów | `ContentRepository.cs`, `RichContentView.cs`, `UiFactory.cs` |
 | Tablice i działy | Lista wzorów oraz hierarchia grupa - obszar - lekcja - ćwiczenie z filtrem poziomu | `ContentViews.cs`, `Content/formulas.json`, `Content/chapters.json`, `Content/course-exercises.json` |
-| Zadania maturalne | Indeks arkuszy, lista zadań, tematy, odpowiedzi proste i złożone, rozwiązania, punktacja oraz postęp | `ExamViews.cs`, `Content/exams.json`, `Content/exam-2025-main-*.json`, `Content/exam-2026-main-*.json`, `Content/exam-2021-correction.json` |
+| Zadania maturalne | Indeks arkuszy, lista zadań, tematy, odpowiedzi proste i złożone, rozwiązania, punktacja oraz postęp | `ExamViews.cs`, `Content/exams.json`, `Content/exam-2024-main-extended.json`, `Content/exam-2025-main-*.json`, `Content/exam-2026-main-*.json`, `Content/exam-2021-correction.json` |
 | Kalkulator kwadratowy | Delta, miejsca zerowe, wierzchołek, postacie funkcji | `CalculatorView.cs`, `QuadraticSolver.cs` |
 | Kalkulator ogólny | Parser wyrażeń, historia, `Ans`, wejście ekranowe | `GeneralCalculatorView.cs`, `ExpressionCalculator.cs`, `CalculatorSession.cs`, `CalculatorInputState.cs` |
 | Dokumentacja i jakość | Architektura, wymagania, roadmapa, Sonar, testy | `docs`, `tests/Abituria.Tests`, `.github/workflows` |
@@ -225,8 +225,8 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 4. `dotnet format whitespace Abituria.sln --verify-no-changes --no-restore` nie zgłasza zmian.
 5. `git diff --check` nie zgłasza błędów.
 6. SonarQube Cloud nie raportuje otwartych problemów po analizie aktualnego commita.
-7. Inwentarz treści potwierdza 18 tablic, kompletne odwzorowanie 17 sekcji CKE, 91 kątów w tabeli trygonometrycznej, 4 grupy i 13 obszarów kursu, autorski kontrakt `119/238/357`, dodatkowy kontrakt CKE `66/31/97`, 17 tematów oraz arkusze `31/35/50`, dwa razy `12/13/50`, `33/37/50` i `35/35/45`.
-8. Wszystkie 76 identyfikatorów diagramów wskazane przez treści istnieją, są używane i mają niepuste opisy alternatywne; dziewiętnaście figur matur 2025 i 2026 ma stronę i źródło.
+7. Inwentarz treści potwierdza 18 tablic, kompletne odwzorowanie 17 sekcji CKE, 91 kątów w tabeli trygonometrycznej, 4 grupy i 13 obszarów kursu, autorski kontrakt `119/238/357`, dodatkowy kontrakt CKE `66/31/97`, 17 tematów oraz arkusze `13/14/50`, `31/35/50`, dwa razy `12/13/50`, `33/37/50` i `35/35/45`.
+8. Wszystkie 77 identyfikatorów diagramów wskazane przez treści istnieją, są używane i mają niepuste opisy alternatywne; dwadzieścia figur matur 2024, 2025 i 2026 ma stronę i źródło.
 9. Każde zadanie ma kompletną umowę odpowiedzi: opcje i klucz, oczekiwany wynik z tolerancją, części odpowiedzi złożonej albo pełne rozwiązanie ujawniane na żądanie.
 10. Kalkulator ogólny przechodzi regresje dla issues #1-#9 oraz powiązanych dyskusji.
 11. Widoki architektury nie używają WPF `Page`, `Frame`, `NavigationWindow` ani nie otwierają nieograniczonych niemodalnych okien.
@@ -255,6 +255,7 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 34. Kryteria Issue #6 wymagają własnego paska bez dekoracji systemowych, historycznej kolejności `🍓` zamknij, `🍋` maksymalizuj lub przywróć, `🍏` minimalizuj po lewej, wyśrodkowanej marki `🍀 Abituria`, motywu po prawej, fontu Mulish oraz tooltipów i nazw automatyzacji wszystkich kontrolek.
 35. Kryteria Issues #7-#9 wymagają źródeł i SHA-256 matur CKE 2026, kontraktów `33/37/50` i `12/13/50`, zachowania `mp21-*`, oddzielnych liczników postępu, odpowiedzi `compound`, wektorowych diagramów, bieżącego odnośnika `haribo841/Abituria#9` oraz zatwierdzonej proweniencji opartej na deklaracji właściciela.
 36. Matury 2025 wymagają przypiętych arkuszy i zasad oceniania CKE z SHA-256, kontraktów `31/35/50` i `12/13/50`, stabilnych identyfikatorów, dziewięciu wektorowych diagramów poziomu podstawowego, agregacji w 17 tematach oraz zatwierdzonej proweniencji.
+37. Matura maj 2024 PR wymaga przypiętych arkusza i zasad oceniania CKE z SHA-256, kontraktu `13/14/50`, stabilnych identyfikatorów `mm24-r0-*`, jednego diagramu wektorowego, agregacji w 17 tematach, osobnego postępu oraz statusu proweniencji `blocked` do czasu osobistego rozszerzenia deklaracji praw.
 
 ## Macierz zgodności wymagań z implementacją
 
@@ -281,7 +282,7 @@ Lokalna implementacja obejmuje pełny kontrakt `119/238/357`, filtr poziomu, ćw
 
 ## Status Issue #7
 
-Techniczny inwentarz licencji i proweniencji obejmuje matury CKE 2025 i 2026 na poziomie podstawowym i rozszerzonym, ich zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Rozszerzenia deklaracji właściciela z 3 i 5 sierpnia 2026 r. wskazują osiem dokumentów, adresy, sumy SHA-256 i zakres redystrybucji w Abiturii. Grupy czterech arkuszy głównych i `runtime-vector-diagrams` mają status `approved`, a `Test-ContentProvenance.ps1 -RequireReleaseEligible` przechodzi. Issue #7 spełnia kryteria zamknięcia.
+Techniczny inwentarz licencji i proweniencji obejmuje matury CKE 2024, 2025 i 2026 na poziomie podstawowym lub rozszerzonym, ich zasady oceniania oraz dwadzieścia autorskich implementacji wektorowych Avalonia. Rozszerzenia deklaracji właściciela z 3 i 5 sierpnia 2026 r. obejmują nadal wyłącznie zatwierdzone arkusze 2025 i 2026. Grupa `cke-2024-main-extended-exam` ma status `blocked`, ponieważ `ASSET_RIGHTS_DECLARATION.md` nie obejmuje jeszcze arkusza MMAP-R0-100-A-2405 ani zasad MMAP-R0-100-2405. Zwykła walidacja proweniencji ma przechodzić, natomiast `Test-ContentProvenance.ps1 -RequireReleaseEligible` ma celowo blokować wydanie. Issue #7 nie może zostać zamknięte przed osobistym rozszerzeniem deklaracji przez właściciela.
 
 ## Status issue #36
 

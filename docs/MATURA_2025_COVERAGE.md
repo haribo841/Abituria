@@ -38,6 +38,6 @@ Dziewięć figur z zadań 6, 11, 12, 18, 19, 20, 21, 30 i 31 zapisano w `Content
 
 ## Walidacja
 
-`Matura2025ContentTests` wymaga kontraktu `31/35/50`, dokładnych etykiet, stron, punktacji, kluczy odpowiedzi, identyfikatorów źródeł, sum SHA-256 i dziewięciu używanych diagramów. Testy wspólnego repozytorium wymagają pięciu aktywnych arkuszy, 133 jednostek postępu, agregacji wszystkich zadań w 17 tematach i zachowania 35 identyfikatorów `mp21-*`.
+`Matura2025ContentTests` wymaga kontraktu `31/35/50`, dokładnych etykiet, stron, punktacji, kluczy odpowiedzi, identyfikatorów źródeł, sum SHA-256 i dziewięciu używanych diagramów. Testy wspólnego repozytorium wymagają sześciu aktywnych arkuszy, 147 jednostek postępu, agregacji wszystkich zadań w 17 tematach i zachowania 35 identyfikatorów `mp21-*`.
 
 Pochodzenie i podstawa redystrybucji są zapisane w [manifeście proweniencji](CONTENT_PROVENANCE.md) oraz w [deklaracji praw do zasobów](ASSET_RIGHTS_DECLARATION.md).

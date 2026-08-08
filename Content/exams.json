@@ -55,10 +55,17 @@
       "isActive": true
     },
     {
+      "id": "matura-maj-2024-rozszerzona",
+      "contentPath": "Content/exam-2024-main-extended.json",
+      "level": "extended",
+      "order": 5,
+      "isActive": true
+    },
+    {
       "id": "matura-poprawkowa-2021",
       "contentPath": "Content/exam-2021-correction.json",
       "level": "basic",
-      "order": 5,
+      "order": 6,
       "isActive": true
     }
   ]

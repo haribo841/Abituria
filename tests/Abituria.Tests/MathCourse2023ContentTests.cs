@@ -339,7 +339,7 @@ public sealed class MathCourse2023ContentTests
                 CourseLevelFilter.Basic,
                 openedExercises.Add,
                 () => { },
-                diagrams);
+                new CourseLessonResources(diagrams));
             window.Content = lessonView;
             Render();
             Assert.Equal(lesson.WorkedExamples.Count, lessonView.GetLogicalDescendants().OfType<TextBlock>()
@@ -388,7 +388,7 @@ public sealed class MathCourse2023ContentTests
                 CourseLevelFilter.Basic,
                 _ => { },
                 () => { },
-                diagrams);
+                new CourseLessonResources(diagrams));
             window.Content = diagramView;
             Render();
             Assert.Contains(diagramView.GetLogicalDescendants().OfType<DiagramView>(), diagram =>

@@ -112,8 +112,9 @@ public sealed class OfficialCourseExampleContentTests
             CourseLevelFilter.Basic,
             _ => { },
             () => { },
-            repository.Diagrams,
-            repository.OfficialCourseExamples);
+            new CourseLessonResources(
+                repository.Diagrams,
+                repository.OfficialCourseExamples));
         var window = new Window { Width = 960, Height = 640, Content = view };
 
         try
@@ -149,8 +150,9 @@ public sealed class OfficialCourseExampleContentTests
                 CourseLevelFilter.Basic,
                 _ => { },
                 () => { },
-                repository.Diagrams,
-                repository.OfficialCourseExamples);
+                new CourseLessonResources(
+                    repository.Diagrams,
+                    repository.OfficialCourseExamples));
             window.Content = visualView;
             Dispatcher.UIThread.RunJobs();
             Assert.Contains(visualView.GetLogicalDescendants().OfType<TextBlock>(), text =>
@@ -166,8 +168,9 @@ public sealed class OfficialCourseExampleContentTests
                 CourseLevelFilter.Extended,
                 _ => { },
                 () => { },
-                repository.Diagrams,
-                repository.OfficialCourseExamples);
+                new CourseLessonResources(
+                    repository.Diagrams,
+                    repository.OfficialCourseExamples));
             window.Content = extendedView;
             Dispatcher.UIThread.RunJobs();
             Assert.Equal(expectedExtended, extendedView.GetLogicalDescendants().OfType<Expander>().Count());

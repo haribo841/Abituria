@@ -9199,6 +9199,166 @@
           "fontSize": 24.0
         }
       ]
+    },
+    {
+      "id": "exam-mm24-r0-z09",
+      "sourceId": "cke-2024-main-extended",
+      "sourcePage": 14,
+      "alternativeText": "Kwadrat ABCD o boku a: A leży w lewym dolnym rogu, B w prawym dolnym, C w prawym górnym, a D w lewym górnym. E jest środkiem boku DC. Przekątna BD i odcinek AE przecinają się w F, a przekątne kwadratu przecinają się w G.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [
+            300.0,
+            140.0,
+            660.0,
+            140.0,
+            660.0,
+            500.0,
+            300.0,
+            500.0
+          ],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 5.0,
+          "dashed": false
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 140.0,
+          "x2": 660.0,
+          "y2": 500.0,
+          "stroke": "accent",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 500.0,
+          "x2": 660.0,
+          "y2": 140.0,
+          "stroke": "primary",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "line",
+          "x": 300.0,
+          "y": 500.0,
+          "x2": 480.0,
+          "y2": 140.0,
+          "stroke": "danger",
+          "strokeThickness": 4.0,
+          "dashed": false,
+          "arrowStart": false,
+          "arrowEnd": false
+        },
+        {
+          "type": "ellipse",
+          "x": 480.0,
+          "y": 140.0,
+          "radiusX": 7.0,
+          "radiusY": 7.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 420.0,
+          "y": 260.0,
+          "radiusX": 7.0,
+          "radiusY": 7.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "ellipse",
+          "x": 480.0,
+          "y": 320.0,
+          "radiusX": 7.0,
+          "radiusY": 7.0,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2.0,
+          "dashed": false
+        },
+        {
+          "type": "text",
+          "x": 270.0,
+          "y": 525.0,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 675.0,
+          "y": 525.0,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 675.0,
+          "y": 120.0,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 270.0,
+          "y": 120.0,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 475.0,
+          "y": 115.0,
+          "text": "E",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 395.0,
+          "y": 250.0,
+          "text": "F",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 495.0,
+          "y": 315.0,
+          "text": "G",
+          "stroke": "primary",
+          "fontSize": 24.0
+        },
+        {
+          "type": "text",
+          "x": 475.0,
+          "y": 540.0,
+          "text": "a",
+          "stroke": "muted",
+          "fontSize": 24.0
+        }
+      ]
     }
   ]
 }

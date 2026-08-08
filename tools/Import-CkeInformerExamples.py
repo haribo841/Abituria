@@ -126,7 +126,7 @@ def _clean_page(text: str) -> str:
 def _normalize_transcription(text: str) -> str:
     text = re.sub(r"\n<<<PAGE \d+>>>\n", "\n", text)
     text = text.replace("\u00ad", "")
-    text = re.sub(r"[ \t]+\n", "\n", text)
+    text = "\n".join(line.rstrip(" \t") for line in text.split("\n"))
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
 
@@ -138,29 +138,83 @@ def _source_pages(chunks: list[PageChunk], start: int, end: int) -> list[int]:
     return list(range(first_page, last_candidates[-1] + 1))
 
 
-def _requirement_ids(text: str) -> list[str]:
-    result: list[str] = []
+def _requirement_sections(text: str) -> Iterable[str]:
     for details in re.finditer(r"Wymagani[ea] szczegółow[ea]", text):
-        scoring = re.search(r"Zasady oceniania", text[details.end() :])
-        if scoring is None:
+        content = text[details.end() :]
+        scoring_start = content.find("Zasady oceniania")
+        if scoring_start >= 0:
+            yield content[:scoring_start]
+
+
+def _requirement_heading_roman(line: str) -> str | None:
+    heading = line.strip()
+    if not heading.endswith("Zdający:"):
+        return None
+
+    heading = heading.removesuffix("Zdający:").rstrip()
+    dot_index = heading.find(".")
+    if dot_index <= 0 or dot_index + 1 >= len(heading) or not heading[dot_index + 1].isspace():
+        return None
+
+    roman = heading[:dot_index]
+    if any(symbol not in "IVX" for symbol in roman):
+        return None
+
+    return roman.replace("IIII", "III")
+
+
+def _requirement_headings(section: str) -> list[tuple[str, int, int]]:
+    headings: list[tuple[str, int, int]] = []
+    offset = 0
+    for line in section.splitlines(keepends=True):
+        roman = _requirement_heading_roman(line)
+        if roman is not None:
+            headings.append((roman, offset, offset + len(line)))
+        offset += len(line)
+    return headings
+
+
+def _requirement_token(line: str) -> str | None:
+    token, separator, _ = line.lstrip().partition(")")
+    if not separator:
+        return None
+    if token == "R" or token.isdigit():
+        return token
+    if token.endswith("R") and token[:-1].isdigit():
+        return token
+    return None
+
+
+def _body_requirement_ids(roman: str, body: str) -> list[str]:
+    result: list[str] = []
+    for line in body.splitlines():
+        token = _requirement_token(line)
+        if token is None:
             continue
-        section = text[details.end() : details.end() + scoring.start()]
-        headings = list(
-            re.finditer(r"(?m)^\s*([IVX]+)\.\s+[^\n]*?Zdający:\s*$", section)
-        )
-        for index, heading in enumerate(headings):
-            roman = heading.group(1).replace("IIII", "III")
-            section_end = headings[index + 1].start() if index + 1 < len(headings) else len(section)
-            body = section[heading.end() : section_end]
-            for token in re.findall(r"(?m)^\s*(\d+R?|R)\)\s*", body):
-                extended = token == "R" or token.endswith("R")
-                number = "1" if token == "R" else token.rstrip("R")
-                requirement_id = f"{roman}.{'E' if extended else 'B'}.{number}"
-                if requirement_id not in result:
-                    result.append(requirement_id)
-    if not result and "XIII. Optymalizacja i rachunek różniczkowy" in text:
-        result.append("XIII.B.1")
+        extended = token == "R" or token.endswith("R")
+        number = "1" if token == "R" else token.rstrip("R")
+        result.append(f"{roman}.{'E' if extended else 'B'}.{number}")
     return result
+
+
+def _section_requirement_ids(section: str) -> list[str]:
+    headings = _requirement_headings(section)
+    result: list[str] = []
+    for index, (roman, _, body_start) in enumerate(headings):
+        next_start = headings[index + 1][1] if index + 1 < len(headings) else len(section)
+        result.extend(_body_requirement_ids(roman, section[body_start:next_start]))
+    return result
+
+
+def _requirement_ids(text: str) -> list[str]:
+    result = [
+        requirement_id
+        for section in _requirement_sections(text)
+        for requirement_id in _section_requirement_ids(section)
+    ]
+    if not result and "XIII. Optymalizacja i rachunek różniczkowy" in text:
+        return ["XIII.B.1"]
+    return list(dict.fromkeys(result))
 
 
 def _maximum_points(text: str, number: int) -> int:
@@ -175,6 +229,44 @@ def _maximum_points(text: str, number: int) -> int:
     if not parts:
         raise ValueError(f"Nie znaleziono punktacji zadania {number}.")
     return sum(int(value) for value in parts)
+
+
+def _is_task_points_suffix(text: str) -> bool:
+    if not text.startswith("(0") or not text.endswith(")"):
+        return False
+    maximum_points = text[2:-1]
+    return (
+        len(maximum_points) > 1
+        and maximum_points[0] in "–-"
+        and maximum_points[1:].isdigit()
+    )
+
+
+def _task_start_number(line: str) -> int | None:
+    text = line.strip()
+    prefix = "Zadanie"
+    if not text.startswith(prefix):
+        return None
+
+    remainder = text.removeprefix(prefix)
+    if not remainder or not remainder[0].isspace():
+        return None
+
+    number, separator, suffix = remainder.lstrip().partition(".")
+    if not separator or not number.isdigit():
+        return None
+
+    suffix = suffix.strip()
+    if suffix and not _is_task_points_suffix(suffix):
+        return None
+    return int(number)
+
+
+def _lines_with_offsets(text: str) -> Iterable[tuple[int, str]]:
+    offset = 0
+    for line in text.splitlines(keepends=True):
+        yield offset, line
+        offset += len(line)
 
 
 def _extract_examples(pdf_path: Path, source: dict[str, object]) -> list[dict[str, object]]:
@@ -201,13 +293,11 @@ def _extract_examples(pdf_path: Path, source: dict[str, object]) -> list[dict[st
 
     starts: list[tuple[int, int]] = []
     expected_number = 1
-    for match in re.finditer(
-        r"(?m)^Zadanie\s+(\d+)\.\s*(?:\(0[–-]\d+\))?\s*$", corpus
-    ):
-        number = int(match.group(1))
+    for start, line in _lines_with_offsets(corpus):
+        number = _task_start_number(line)
         if number != expected_number:
             continue
-        starts.append((number, match.start()))
+        starts.append((number, start))
         expected_number += 1
         if expected_number > int(source["exampleCount"]):
             break

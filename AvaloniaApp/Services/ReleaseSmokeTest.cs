@@ -174,11 +174,12 @@ public static class ReleaseSmokeTestRunner
             content.MathCourse.Requirements.Count != 119 ||
             content.MathCourse.Lessons.SelectMany(lesson => lesson.WorkedExamples).Count() != 238 ||
             content.CourseExercises.Exercises.Count != 357 ||
-            content.Exams.Count != 5 ||
+            content.Exams.Count != 6 ||
             content.GetExam("matura-maj-2026-podstawowa").Exercises.Count != 37 ||
             content.GetExam("matura-maj-2026-rozszerzona").Exercises.Count != 13 ||
             content.GetExam("matura-maj-2025-podstawowa").Exercises.Count != 35 ||
             content.GetExam("matura-maj-2025-rozszerzona").Exercises.Count != 13 ||
+            content.GetExam("matura-maj-2024-rozszerzona").Exercises.Count != 14 ||
             content.GetExam("matura-poprawkowa-2021").Exercises.Count != 35 ||
             content.ExamTopics.Count != 17 ||
             content.UiCopy.Entries.Count == 0)
@@ -193,6 +194,7 @@ public static class ReleaseSmokeTestRunner
             !content.GetExam("matura-maj-2026-rozszerzona").Exercises.Any(exercise => exercise.Id == "mm26-r0-z12-2") ||
             !content.GetExam("matura-maj-2025-podstawowa").Exercises.Any(exercise => exercise.Id == "mm25-p0-z12-1") ||
             !content.GetExam("matura-maj-2025-rozszerzona").Exercises.Any(exercise => exercise.Id == "mm25-r0-z12-2") ||
+            !content.GetExam("matura-maj-2024-rozszerzona").Exercises.Any(exercise => exercise.Id == "mm24-r0-z13-2") ||
             !content.Exam.Exercises.Any(exercise => exercise.Id == "mp21-z9"))
         {
             throw new InvalidDataException("Nie załadowano reprezentatywnych materiałów wydania.");
@@ -201,10 +203,10 @@ public static class ReleaseSmokeTestRunner
 
     private static void EnsureApplicationDiagramsAreAvailable(ContentRepository content)
     {
-        if (content.Diagrams.Diagrams.Count != 76)
+        if (content.Diagrams.Diagrams.Count != 77)
             throw new InvalidDataException("Katalog diagramów aplikacji jest niekompletny.");
 
-        foreach (var diagramId in new[] { "formula-w9a", "exam-mp21-z9", "exam-mm25-z06", "exam-mm26-z12", "exam-mm26-r0-z11", "course-right-triangle" })
+        foreach (var diagramId in new[] { "formula-w9a", "exam-mp21-z9", "exam-mm24-r0-z09", "exam-mm25-z06", "exam-mm26-z12", "exam-mm26-r0-z11", "course-right-triangle" })
             _ = content.Diagrams.GetRequired(diagramId);
     }
 

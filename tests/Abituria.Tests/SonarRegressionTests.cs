@@ -105,6 +105,11 @@ public sealed class SonarRegressionTests
             Assert.InRange(constructor.GetParameters().Length, 0, 7));
         Assert.All(typeof(HomeView).GetConstructors(), constructor =>
             Assert.InRange(constructor.GetParameters().Length, 0, 7));
+        var courseLessonConstructor = Assert.Single(typeof(CourseLessonView).GetConstructors());
+        Assert.Equal(7, courseLessonConstructor.GetParameters().Length);
+        Assert.Equal(
+            typeof(CourseLessonResources),
+            courseLessonConstructor.GetParameters()[^1].ParameterType);
         Assert.Equal(typeof(Border), typeof(GeneralCalculatorView).GetMethod("BuildKeypad", privateInstance)?.ReturnType);
         Assert.Equal(typeof(Border), typeof(GeneralCalculatorView).GetMethod("BuildHistoryPanel", privateInstance)?.ReturnType);
         Assert.Equal(typeof(Border), typeof(MainWindow).GetMethod("BuildTopBar", privateInstance)?.ReturnType);

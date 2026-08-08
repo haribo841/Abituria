@@ -63,4 +63,4 @@ Deklaracja wskazuje źródła obu matur 2026, ich adresy i sumy SHA-256, zakres 
 - `Matura2026UiTests` sprawdza wybór arkusza, agregację 17 tematów, kontekst nawigacji, osobny postęp, odpowiedzi złożone, dostępność i trzy rozmiary okna.
 - `CompoundAnswerEvaluatorTests` sprawdza wybór, wynik liczbowy, zapis tekstowy przedziału, przecinek lub kropkę i niepoprawne dane.
 - `DiagramCatalogTests` renderuje wszystkie 76 diagramów w trzech motywach i przy rozmiarach `720x520`, `960x640` oraz `1280x820`.
-- `ReleaseRuntimeTests` wymaga pięciu arkuszy i 133 jednostek postępu, zachowując 35 historycznych zadań 2021.
+- `ReleaseRuntimeTests` wymaga sześciu arkuszy i 147 jednostek postępu, zachowując 35 historycznych zadań 2021.

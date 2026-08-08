@@ -13,6 +13,11 @@ using Avalonia.Media;
 
 namespace Abituria.Views;
 
+internal static class CourseContentLevels
+{
+    public const string Basic = "basic";
+}
+
 public sealed class FormulaListView : UserControl
 {
     public FormulaListView(FormulaCatalog catalog, Action<FormulaArticle> open)
@@ -152,7 +157,7 @@ public sealed class CourseAreaView : UserControl
         {
             var requirementCount = lesson.RequirementIds.Count(id =>
                 catalog.Requirements.Any(requirement => requirement.Id == id &&
-                    (level == CourseLevelFilter.Extended || requirement.Level == "basic")));
+                    (level == CourseLevelFilter.Extended || requirement.Level == CourseContentLevels.Basic)));
             var suffix = lesson.AlwaysVisible
                 ? " - materiał pomocniczy"
                 : $" - {requirementCount} wymagań";
@@ -179,6 +184,10 @@ public sealed class CourseAreaView : UserControl
     }
 }
 
+public sealed record CourseLessonResources(
+    DiagramCatalog? Diagrams = null,
+    OfficialCourseExampleCatalog? OfficialExamples = null);
+
 public sealed class CourseLessonView : UserControl
 {
     public CourseLessonView(
@@ -188,8 +197,7 @@ public sealed class CourseLessonView : UserControl
         CourseLevelFilter level,
         Action<LearningExercise> openExercise,
         Action back,
-        DiagramCatalog? diagrams = null,
-        OfficialCourseExampleCatalog? officialExamples = null)
+        CourseLessonResources? resources = null)
     {
         var root = new StackPanel { Spacing = 16 };
         var backButton = new Button { Content = "← Lekcje", Classes = { "ghost" }, HorizontalAlignment = HorizontalAlignment.Left };
@@ -198,12 +206,12 @@ public sealed class CourseLessonView : UserControl
         root.Children.Add(UiFactory.PageTitle(lesson.Title, LevelLabel(lesson)));
 
         if (lesson.Blocks.Count > 0)
-            root.Children.Add(UiFactory.Card(new RichContentView(lesson.Blocks, diagrams)));
+            root.Children.Add(UiFactory.Card(new RichContentView(lesson.Blocks, resources?.Diagrams)));
 
         var visibleRequirementIds = VisibleRequirementIds(catalog, lesson, level);
         AddRequirements(root, catalog, visibleRequirementIds);
         AddWorkedExamples(root, lesson, visibleRequirementIds);
-        AddOfficialExamples(root, officialExamples, visibleRequirementIds, level);
+        AddOfficialExamples(root, resources?.OfficialExamples, visibleRequirementIds, level);
         AddExercises(root, exerciseCatalog, lesson, visibleRequirementIds, openExercise);
         Content = UiFactory.PageScroll(root);
     }
@@ -213,7 +221,7 @@ public sealed class CourseLessonView : UserControl
         MathCourseLesson lesson,
         CourseLevelFilter level) => lesson.RequirementIds
         .Where(id => catalog.Requirements.Any(requirement => requirement.Id == id &&
-            (level == CourseLevelFilter.Extended || requirement.Level == "basic")))
+            (level == CourseLevelFilter.Extended || requirement.Level == CourseContentLevels.Basic)))
         .ToHashSet(StringComparer.Ordinal);
 
     private static void AddRequirements(
@@ -227,7 +235,7 @@ public sealed class CourseLessonView : UserControl
         root.Children.Add(new TextBlock { Text = "Wymagania", Classes = { "h2" } });
         foreach (var requirement in catalog.Requirements.Where(item => requirementIds.Contains(item.Id)))
         {
-            var level = requirement.Level == "basic" ? "podstawowy" : "rozszerzony";
+            var level = requirement.Level == CourseContentLevels.Basic ? "podstawowy" : "rozszerzony";
             var panel = new StackPanel { Spacing = 6 };
             panel.Children.Add(new TextBlock
             {
@@ -277,9 +285,9 @@ public sealed class CourseLessonView : UserControl
             return;
 
         var examples = catalog.Examples
-            .Where(example => level == CourseLevelFilter.Extended || example.Level == "basic")
+            .Where(example => level == CourseLevelFilter.Extended || example.Level == CourseContentLevels.Basic)
             .Where(example => example.RequirementIds.Any(requirementIds.Contains))
-            .OrderBy(example => example.Level == "basic" ? 0 : 1)
+            .OrderBy(example => example.Level == CourseContentLevels.Basic ? 0 : 1)
             .ThenBy(example => example.Order)
             .ToArray();
         if (examples.Length == 0)
@@ -297,7 +305,7 @@ public sealed class CourseLessonView : UserControl
         foreach (var example in examples)
         {
             var source = catalog.Sources.Single(item => item.Id == example.SourceId);
-            var levelLabel = example.Level == "basic" ? "poziom podstawowy" : "poziom rozszerzony";
+            var levelLabel = example.Level == CourseContentLevels.Basic ? "poziom podstawowy" : "poziom rozszerzony";
             var requirementLabel = string.Join(", ", example.RequirementIds.Where(requirementIds.Contains));
             var panel = new StackPanel { Spacing = 8 };
             panel.Children.Add(RichContentView.CreateText(
@@ -366,7 +374,7 @@ public sealed class CourseLessonView : UserControl
         if (lesson.AlwaysVisible)
             return "Materiał pomocniczy widoczny na obu poziomach.";
 
-        if (lesson.Level == "basic")
+        if (lesson.Level == CourseContentLevels.Basic)
             return "Lekcja poziomu podstawowego.";
 
         return "Lekcja poziomu rozszerzonego.";

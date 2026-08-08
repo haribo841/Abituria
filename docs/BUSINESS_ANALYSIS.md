@@ -1,6 +1,6 @@
 # Analiza biznesowa projektu Abituria
 
-Status: aktywny dokument biznesowy dla bieżącej implementacji. Stan na 28 lipca 2026 r.
+Status: aktywny dokument biznesowy dla bieżącej implementacji. Stan na 8 sierpnia 2026 r.
 
 Ten dokument zastępuje historyczną checklistę `docs/legacy/analiza-biznesowa.md` jako podstawa oceny uzasadnienia, zakresu, ryzyk i warunków wydania. Nie zastępuje [wymagań projektowych](REQUIREMENTS.md), [architektury](ARCHITECTURE.md), [roadmapy](ROADMAP.md) ani [procesu wydania](RELEASE_PROCESS.md), lecz łączy ich perspektywę produktową.
 
@@ -70,7 +70,7 @@ Użytkownik otrzymuje bezpłatny dostęp do lokalnej aplikacji, połączenie mat
 
 ### 4.3. Stan dystrybucji
 
-Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, a publiczne prerelease [`v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1) stanowi kanał dystrybucji zatwierdzonej bety. Deklaracje z 3 i 5 sierpnia 2026 r. obejmują arkusze 2025 i 2026 na obu poziomach, zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Później dodana transkrypcja 97 przykładów z informatorów CKE nie jest jeszcze objęta deklaracją, dlatego bieżąca brama `releaseEligible` w `Content/provenance.json` ma wartość `false` i blokuje następne wydanie. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), cztery macierze matur 2025 i 2026 oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
+Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, a publiczne prerelease [`v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1) stanowi kanał dystrybucji zatwierdzonej bety. Deklaracje z 3 i 5 sierpnia 2026 r. obejmują arkusze 2025 i 2026 na obu poziomach, zasady oceniania oraz dziewiętnaście zatwierdzonych autorskich implementacji wektorowych Avalonia. Transkrypcja 97 przykładów z informatorów CKE i nowa transkrypcja matury 2024 PR nie są jeszcze objęte deklaracją, dlatego bieżąca brama `releaseEligible` w `Content/provenance.json` ma wartość `false` i blokuje następne wydanie. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), pięć macierzy matur 2024, 2025 i 2026 oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
 
 Koszty bieżącego wariantu obejmują przede wszystkim czas przygotowania treści, implementacji, testów, dokumentacji i utrzymania repozytorium. Aplikacja działa lokalnie, dlatego nie wymaga serwera aplikacyjnego ani przechowywania danych użytkowników przez zewnętrznego operatora.
 
@@ -83,14 +83,14 @@ Zakres bieżącej implementacji jest zdefiniowany normatywnie w [REQUIREMENTS.md
 - profile gościa i lokalne konta z zapisem postępu w SQLite;
 - tablice matematyczne oraz pełny kurs Formuły 2023 obejmujący 4 grupy, 13 obszarów, 119 wymagań, 238 przykładów i 357 ćwiczeń;
 - sprawdzanie odpowiedzi zamkniętych, ujawnianie odpowiedzi otwartych oraz podpowiedzi;
-- matury główne 2025 i 2026 na poziomie podstawowym i rozszerzonym oraz zachowany arkusz poprawkowy 2021 - razem 5 arkuszy i 133 jednostki postępu;
-- odpowiedzi złożone dla tabel P/F i zadań wielopolowych oraz agregacja pięciu arkuszy według 17 tematów;
+- maturę główną 2024 na poziomie rozszerzonym, matury główne 2025 i 2026 na poziomie podstawowym i rozszerzonym oraz zachowany arkusz poprawkowy 2021 - razem 6 arkuszy i 147 jednostek postępu;
+- odpowiedzi złożone dla tabel P/F i zadań wielopolowych oraz agregacja sześciu arkuszy według 17 tematów;
 - kalkulator funkcji kwadratowej;
 - kalkulator ogólny z parserem wyrażeń, nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią i powtarzanym `=`;
 - losowanie zadań z całego arkusza albo wybranego tematu;
 - dokumentację, bramy jakości, diagnostyczny smoke test artefaktu i automatyzację przygotowania paczek.
 
-Kurs odpowiada podstawie programowej z 2024 r. stosowanej dla matury 2026. Filtr podstawowy pokazuje 73 wymagania i 219 ćwiczeń, a rozszerzony dodaje 46 wymagań oraz 138 ćwiczeń. Katalog egzaminów obejmuje 35 i 13 jednostek postępu matury 2025, 37 i 13 jednostek matury 2026 oraz 35 zadań matury poprawkowej 2021. Transkrypcje i autorskie implementacje wektorowe Avalonia mają zatwierdzone przypisania w manifeście pochodzenia.
+Kurs odpowiada podstawie programowej z 2024 r. stosowanej dla matury 2026. Filtr podstawowy pokazuje 73 wymagania i 219 ćwiczeń, a rozszerzony dodaje 46 wymagań oraz 138 ćwiczeń. Katalog egzaminów obejmuje 14 jednostek postępu matury 2024 PR, 35 i 13 jednostek matury 2025, 37 i 13 jednostek matury 2026 oraz 35 zadań matury poprawkowej 2021. Transkrypcja matury 2024 PR ma status `blocked` w manifeście pochodzenia do czasu rozszerzenia deklaracji praw.
 
 ### 5.2. Poza zakresem beta
 
@@ -116,7 +116,7 @@ Rzeczywiste daty najwcześniejszych weryfikowalnych stanów technicznych I-IV bi
 | Tydzień 3 | M2 - architektura i nawigacja | autor implementacji | zrealizowane: AvaloniaUI, jedno `MainWindow`, `AppViewModel`, testy architektury |
 | Tydzień 4-5 | M3a - ekran startowy i nawigacja | autor implementacji | zrealizowane: shell, widoki i routing |
 | Tydzień 6-7 | M3b - kalkulatory | autor implementacji | zrealizowane: kalkulator ogólny i funkcji kwadratowej z regresjami |
-| Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | zrealizowane: pełny kurs `119/238/357`, pięć aktywnych arkuszy ze 133 jednostkami postępu, tablice i oddzielny postęp |
+| Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | zrealizowane: pełny kurs `119/238/357`, sześć aktywnych arkuszy ze 147 jednostkami postępu, tablice i oddzielny postęp |
 | Tydzień 12 | M5a - testy i regresje | autor implementacji | zrealizowane ciągle: testy jednostkowe, integracyjne, UI i CI |
 | Tydzień 13 | M5b - dokumentacja i pakowanie | autor implementacji | technicznie zrealizowane: dokumentacja, workflow, paczki portable i smoke test |
 | Tydzień 14 | M6 - publiczne prerelease | autor implementacji, właściciel praw | osiągnięte: zatwierdzona proweniencja, tag, natywne workflow i publiczny GitHub Release `v0.9.0-beta.1` |

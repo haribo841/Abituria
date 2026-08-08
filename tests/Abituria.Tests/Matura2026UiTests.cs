@@ -31,7 +31,8 @@ public sealed class Matura2026UiTests
         Assert.Same(repository.Exams[1], repository.GetExam("matura-maj-2026-rozszerzona"));
         Assert.Same(repository.Exams[2], repository.GetExam("matura-maj-2025-podstawowa"));
         Assert.Same(repository.Exams[3], repository.GetExam("matura-maj-2025-rozszerzona"));
-        Assert.Same(repository.Exams[4], repository.Exam);
+        Assert.Same(repository.Exams[4], repository.GetExam("matura-maj-2024-rozszerzona"));
+        Assert.Same(repository.Exams[5], repository.Exam);
         Assert.Throws<ArgumentException>(() => repository.GetExam(" "));
         Assert.Throws<KeyNotFoundException>(() => repository.GetExam("missing"));
         Assert.Throws<ArgumentException>(() => repository.GetTopicExercises(""));
@@ -63,6 +64,9 @@ public sealed class Matura2026UiTests
             button => Equals(button.Content, "Otwórz arkusz - 12 zadań, 13 części ocenianych"));
         Assert.Contains(
             matura.GetLogicalDescendants().OfType<Button>(),
+            button => Equals(button.Content, "Otwórz arkusz - 13 zadań, 14 części ocenianych"));
+        Assert.Contains(
+            matura.GetLogicalDescendants().OfType<Button>(),
             button => Equals(button.Content, "Otwórz arkusz - 31 zadań, 35 części ocenianych"));
         Assert.Contains(
             matura.GetLogicalDescendants().OfType<Button>(),
@@ -72,7 +76,7 @@ public sealed class Matura2026UiTests
             .Where(button => button.Content is string text && text.StartsWith("Losuj zadanie z tematu:", StringComparison.Ordinal))
             .ToArray();
         Assert.Equal(17, topicButtons.Length);
-        Assert.Equal(133, repository.ExamTopics.Sum(topic => repository.GetTopicExercises(topic.Id).Count));
+        Assert.Equal(147, repository.ExamTopics.Sum(topic => repository.GetTopicExercises(topic.Id).Count));
         Assert.All(repository.ExamTopics, topic =>
         {
             var topicExercises = repository.GetTopicExercises(topic.Id);
@@ -97,7 +101,7 @@ public sealed class Matura2026UiTests
     {
         var repository = new ContentRepository();
         var current = repository.Exams[0];
-        var legacy = repository.Exams[4];
+        var legacy = repository.Exams[5];
         var viewModel = new AppViewModel();
 
         viewModel.OpenExam(current.Id);
@@ -181,6 +185,7 @@ public sealed class Matura2026UiTests
             Assert.Contains("Matura maj 2026 PR: 1 / 13", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Matura maj 2025 PP: 1 / 35", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Matura maj 2025 PR: 1 / 13", progress.Text, StringComparison.Ordinal);
+            Assert.Contains("Matura maj 2024 PR: 1 / 14", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Matura poprawkowa 2021: 1 / 35", progress.Text, StringComparison.Ordinal);
         }
         finally

@@ -89,12 +89,14 @@ public sealed class Issue4NavigationTests
                 item => openedPlaceholders.Add(item.Id),
                 (exercise, topicId) => randomized.Add((exercise.Id, topicId))));
 
-        Assert.Equal(5, repository.Exams.Count);
+        Assert.Equal(6, repository.Exams.Count);
         Assert.Equal(17, repository.ExamTopics.Count);
         Assert.Contains(matura.GetLogicalDescendants().OfType<Button>(), button =>
             button.Content is string text && text.Contains("33 zadania, 37 części ocenianych", StringComparison.Ordinal));
         Assert.Contains(matura.GetLogicalDescendants().OfType<Button>(), button =>
             button.Content is string text && text.Contains("12 zadań, 13 części ocenianych", StringComparison.Ordinal));
+        Assert.Contains(matura.GetLogicalDescendants().OfType<Button>(), button =>
+            button.Content is string text && text.Contains("13 zadań, 14 części ocenianych", StringComparison.Ordinal));
         Assert.Equal(3, matura.GetLogicalDescendants().OfType<Button>().Count(button =>
             button.Content is string text && repository.Placeholders.Items.Any(item =>
                 item.Category == "exam" && text.StartsWith(item.Title, StringComparison.Ordinal))));
