@@ -26,10 +26,11 @@
 | Weryfikacja arkusza | CKE `EMAP-P0-100-2108` | Klucz 1–28, treści, odpowiedzi otwarte i strony źródłowe zapisane w danych |
 | Matura główna 2025 PP | nowe źródła CKE `MMAP-P0-100-A-2505` i `MMAP-P0-100-2505` | 31 zadań, 35 jednostek postępu, 50 punktów, rozwiązania, kryteria i 9 diagramów wektorowych; nie pochodzi ze starego repozytorium |
 | Matura główna 2025 PR | nowe źródła CKE `MMAP-R0-100-A-2505` i `MMAP-R0-100-2505` | 12 zadań, 13 jednostek postępu, 50 punktów, rozwiązania i kryteria; nie pochodzi ze starego repozytorium |
+| Matura główna 2024 PP | nowe źródła CKE `MMAP-P0-100-A-2405` i `MMAP-P0-100-2405` | 31 zadań, 35 jednostek postępu, 46 punktów, rozwiązania, kryteria i 11 diagramów wektorowych; nie pochodzi ze starego repozytorium, a publiczna redystrybucja jest zablokowana do rozszerzenia deklaracji praw |
 | Matura główna 2024 PR | nowe źródła CKE `MMAP-R0-100-A-2405` i `MMAP-R0-100-2405` | 13 zadań, 14 jednostek postępu, 50 punktów, rozwiązania, kryteria i 1 diagram wektorowy; nie pochodzi ze starego repozytorium, a publiczna redystrybucja jest zablokowana do rozszerzenia deklaracji praw |
 | Matura główna 2026 PP | nowe źródła CKE `MMAP-P0-100-A-2605` i `MMAP-P0-100-2605` | 33 zadania, 37 jednostek postępu, 50 punktów, rozwiązania, kryteria i 7 diagramów wektorowych; nie pochodzi ze starego repozytorium |
 | Matura główna 2026 PR | nowe źródła CKE `MMAP-R0-100-A-2605` i `MMAP-R0-100-2605` | 12 zadań, 13 jednostek postępu, 50 punktów, rozwiązania, kryteria i 3 diagramy wektorowe; nie pochodzi ze starego repozytorium |
-| Zadania według tematów | `ZadaniaPage.xaml` oraz nowy indeks arkuszy | 17 kategorii agregujących 147 jednostek postępu z sześciu arkuszy 2021, 2024, 2025 i 2026 |
+| Zadania według tematów | `ZadaniaPage.xaml` oraz nowy indeks arkuszy | 17 kategorii agregujących 182 jednostki postępu z siedmiu arkuszy 2021, 2024, 2025 i 2026 |
 | Brudnopis | pola tekstowe ekranów zadań | Wielowierszowe pole robocze przechowywane osobno dla profilu i zadania do zamknięcia aplikacji, z `Ctrl+V` lub `Cmd+V` i menu `Wklej` |
 | Zadania 1–28 | checkboxy i `correctAnsw` | Cztery opcje, sprawdzanie i zapis po poprawnej odpowiedzi |
 | Zadania 29–35 | `ShowAnsBtn`/`ConfirmBtn` | Tryb `revealOnly`; zapis po ujawnieniu odpowiedzi |
@@ -69,15 +70,15 @@ Testy automatyczne wymagają:
 - dokładnie 4 grupy, 13 obszarów, 73 wymagania podstawowe, 46 dodatkowych wymagań rozszerzonych, 238 przykładów i 357 ćwiczeń kursowych,
 - dokładnie 219 ćwiczeń podstawowych i 138 rozszerzonych, po 3 unikalne ćwiczenia i 2 rozwiązane przykłady dla każdego wymagania,
 - zachowania dokładnie 35 kolejnych zadań 2021: 28 zamkniętych i 7 otwartych, wraz z identyfikatorami `mp21-*`,
-- kontrakt `13/14/50` dla matury 2024 PR, kontrakty `31/35/50` i `12/13/50` dla matury 2025 oraz `33/37/50` i `12/13/50` dla matury 2026,
+- kontrakty `31/35/46` i `13/14/50` dla matur 2024, kontrakty `31/35/50` i `12/13/50` dla matury 2025 oraz `33/37/50` i `12/13/50` dla matury 2026,
 - czterech niepustych opcji i klucza 1–4 dla każdego zadania zamkniętego,
 - niepustej odpowiedzi ujawnianej dla każdego zadania otwartego,
 - co najmniej jednej podpowiedzi dla każdego zadania,
-- istnienia każdego diagramu wskazanego przez treść, niepustego opisu alternatywnego i strony dla dwudziestu figur matur 2024, 2025 i 2026,
+- istnienia każdego diagramu wskazanego przez treść, niepustego opisu alternatywnego i strony dla trzydziestu jeden figur matur 2024, 2025 i 2026,
 - braku znanych uszkodzonych komend LaTeX,
 - poprawnego parsowania każdego wyrażenia matematycznego przez renderer CSharpMath.
 
-Bezpośrednia regresja issue #35 wymaga wszystkich wskazanych sekcji, 24 liter alfabetu greckiego, przykładów, wskazówek i odpowiedzi, poprawnego przypadku `\(\Delta{}<0\)` oraz zachowania historycznych identyfikatorów lekcji. Regresja kursu wymaga także rozdzielonych seedów czterech etapów, deterministycznego generatora, filtra poziomu, trzech trybów odpowiedzi, 12 diagramów kursu z opisami alternatywnymi oraz zgodności macierzy `119/238/357`. Testy wymagają ponadto pełnego klucza CKE dla zadań 2021, kontraktu `13/14/50`, kontraktów `31/35/50`, dwóch `12/13/50` i `33/37/50` dla matur 2024, 2025 i 2026 oraz jednoznacznego przypisania sześciu arkuszy do wspólnych tematów.
+Bezpośrednia regresja issue #35 wymaga wszystkich wskazanych sekcji, 24 liter alfabetu greckiego, przykładów, wskazówek i odpowiedzi, poprawnego przypadku `\(\Delta{}<0\)` oraz zachowania historycznych identyfikatorów lekcji. Regresja kursu wymaga także rozdzielonych seedów czterech etapów, deterministycznego generatora, filtra poziomu, trzech trybów odpowiedzi, 12 diagramów kursu z opisami alternatywnymi oraz zgodności macierzy `119/238/357`. Testy wymagają ponadto pełnego klucza CKE dla zadań 2021, kontraktów `31/35/46` i `13/14/50`, kontraktów `31/35/50`, dwóch `12/13/50` i `33/37/50` dla matur 2024, 2025 i 2026 oraz jednoznacznego przypisania siedmiu arkuszy do wspólnych tematów.
 
 Drugi audyt przed usunięciem snapshotów potwierdził `276/276` zgodnych wystąpień zasobów bez braków i różnic. Ujawnił dwa brakujące placeholdery kalkulatorów oraz brak dokładnych kopii dokumentów planistycznych; oba problemy zostały usunięte.
 

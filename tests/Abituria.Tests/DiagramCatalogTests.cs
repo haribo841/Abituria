@@ -26,10 +26,11 @@ public sealed class DiagramCatalogTests
 
         DiagramCatalogValidator.Validate(catalog);
         Assert.Equal(1, catalog.SchemaVersion);
-        Assert.Equal(77, catalog.Diagrams.Count);
-        Assert.Equal(77, catalog.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(88, catalog.Diagrams.Count);
+        Assert.Equal(88, catalog.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
         Assert.Equal(36, catalog.Diagrams.Count(item => item.SourceId == "cke-formula-2023"));
         Assert.Equal(9, catalog.Diagrams.Count(item => item.SourceId == "cke-2021-correction"));
+        Assert.Equal(11, catalog.Diagrams.Count(item => item.SourceId == "cke-2024-main-basic"));
         Assert.Equal(1, catalog.Diagrams.Count(item => item.SourceId == "cke-2024-main-extended"));
         Assert.Equal(7, catalog.Diagrams.Count(item => item.SourceId == "cke-2026-main-basic"));
         Assert.Equal(3, catalog.Diagrams.Count(item => item.SourceId == "cke-2026-main-extended"));
@@ -44,6 +45,9 @@ public sealed class DiagramCatalogTests
             item => Assert.InRange(item.SourcePage, 1, 33));
         Assert.All(
             catalog.Diagrams.Where(item => item.SourceId == "cke-2025-main-basic"),
+            item => Assert.InRange(item.SourcePage, 1, 28));
+        Assert.All(
+            catalog.Diagrams.Where(item => item.SourceId == "cke-2024-main-basic"),
             item => Assert.InRange(item.SourcePage, 1, 28));
         Assert.All(
             catalog.Diagrams.Where(item => item.SourceId == "cke-2024-main-extended"),
@@ -173,10 +177,10 @@ public sealed class DiagramCatalogTests
     public void Main_exam_figures_use_only_Avalonia_vector_controls()
     {
         var definitions = new ContentRepository().Diagrams.Diagrams
-            .Where(item => item.SourceId is "cke-2024-main-extended" or "cke-2026-main-basic" or "cke-2026-main-extended")
+            .Where(item => item.SourceId is "cke-2024-main-basic" or "cke-2024-main-extended" or "cke-2026-main-basic" or "cke-2026-main-extended")
             .ToArray();
 
-        Assert.Equal(11, definitions.Length);
+        Assert.Equal(22, definitions.Length);
         foreach (var definition in definitions)
         {
             var view = new DiagramView(definition);

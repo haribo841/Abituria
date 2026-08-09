@@ -402,8 +402,15 @@ public sealed class ExerciseView : UserControl
     private void AddCompoundControls(StackPanel root, LearningExercise exercise, ExerciseViewContext context)
     {
         var answerPanel = new StackPanel { Spacing = 14 };
+        var choiceGroups = new List<(LearningAnswerPart Part, RadioButton[] Choices)>();
         foreach (var part in exercise.AnswerParts)
-            answerPanel.Children.Add(BuildCompoundPart(exercise, part, context));
+        {
+            var partView = BuildCompoundPart(exercise, part, context);
+            answerPanel.Children.Add(partView);
+            if (part.IsMultipleChoice)
+                choiceGroups.Add((part, partView.Children.OfType<RadioButton>().ToArray()));
+        }
+        ConfigureAlphabeticalChoiceOrder(choiceGroups);
         root.Children.Add(UiFactory.Card(answerPanel));
 
         var check = new Button
@@ -428,6 +435,66 @@ public sealed class ExerciseView : UserControl
         };
         root.Children.Add(check);
     }
+
+    private void ConfigureAlphabeticalChoiceOrder(
+        List<(LearningAnswerPart Part, RadioButton[] Choices)> choiceGroups)
+    {
+        if (choiceGroups.Count < 2 ||
+            choiceGroups.Any(group => group.Choices.Length != choiceGroups[0].Choices.Length) ||
+            choiceGroups.Any(group => !group.Part.Options.SequenceEqual(choiceGroups[0].Part.Options)) ||
+            !choiceGroups[0].Part.Options.SequenceEqual(choiceGroups[0].Part.Options.Order(StringComparer.Ordinal)) ||
+            !choiceGroups[0].Part.Options.All(IsAlphabeticalLetter))
+        {
+            return;
+        }
+
+        var updating = false;
+        void UpdateChoices()
+        {
+            if (updating) return;
+            updating = true;
+            try
+            {
+                var previousSelection = -1;
+                for (var groupIndex = 0; groupIndex < choiceGroups.Count; groupIndex++)
+                {
+                    var group = choiceGroups[groupIndex];
+                    var remainingGroups = choiceGroups.Count - groupIndex - 1;
+                    for (var optionIndex = 0; optionIndex < group.Choices.Length; optionIndex++)
+                    {
+                        var choice = group.Choices[optionIndex];
+                        var enabled = groupIndex == 0 || previousSelection >= 0;
+                        enabled &= groupIndex == 0 || optionIndex > previousSelection;
+                        enabled &= optionIndex <= group.Choices.Length - remainingGroups - 1;
+                        if (!enabled && choice.IsChecked == true)
+                        {
+                            choice.IsChecked = false;
+                            _compoundAnswers.Remove(group.Part.Id);
+                        }
+                        choice.IsEnabled = enabled;
+                    }
+
+                    previousSelection = Array.FindIndex(group.Choices, choice => choice.IsChecked == true);
+                    if (previousSelection < 0 && groupIndex > 0)
+                        break;
+                }
+            }
+            finally
+            {
+                updating = false;
+            }
+        }
+
+        foreach (var group in choiceGroups)
+        {
+            foreach (var choice in group.Choices)
+                choice.IsCheckedChanged += (_, _) => UpdateChoices();
+        }
+        UpdateChoices();
+    }
+
+    private static bool IsAlphabeticalLetter(string value) =>
+        value.Length == 1 && value[0] is >= 'A' and <= 'Z';
 
     private StackPanel BuildCompoundPart(
         LearningExercise exercise,

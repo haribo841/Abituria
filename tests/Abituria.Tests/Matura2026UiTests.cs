@@ -31,8 +31,9 @@ public sealed class Matura2026UiTests
         Assert.Same(repository.Exams[1], repository.GetExam("matura-maj-2026-rozszerzona"));
         Assert.Same(repository.Exams[2], repository.GetExam("matura-maj-2025-podstawowa"));
         Assert.Same(repository.Exams[3], repository.GetExam("matura-maj-2025-rozszerzona"));
-        Assert.Same(repository.Exams[4], repository.GetExam("matura-maj-2024-rozszerzona"));
-        Assert.Same(repository.Exams[5], repository.Exam);
+        Assert.Same(repository.Exams[4], repository.GetExam("matura-maj-2024-podstawowa"));
+        Assert.Same(repository.Exams[5], repository.GetExam("matura-maj-2024-rozszerzona"));
+        Assert.Same(repository.Exams[6], repository.Exam);
         Assert.Throws<ArgumentException>(() => repository.GetExam(" "));
         Assert.Throws<KeyNotFoundException>(() => repository.GetExam("missing"));
         Assert.Throws<ArgumentException>(() => repository.GetTopicExercises(""));
@@ -76,7 +77,7 @@ public sealed class Matura2026UiTests
             .Where(button => button.Content is string text && text.StartsWith("Losuj zadanie z tematu:", StringComparison.Ordinal))
             .ToArray();
         Assert.Equal(17, topicButtons.Length);
-        Assert.Equal(147, repository.ExamTopics.Sum(topic => repository.GetTopicExercises(topic.Id).Count));
+        Assert.Equal(182, repository.ExamTopics.Sum(topic => repository.GetTopicExercises(topic.Id).Count));
         Assert.All(repository.ExamTopics, topic =>
         {
             var topicExercises = repository.GetTopicExercises(topic.Id);
@@ -101,7 +102,7 @@ public sealed class Matura2026UiTests
     {
         var repository = new ContentRepository();
         var current = repository.Exams[0];
-        var legacy = repository.Exams[5];
+        var legacy = repository.Exams[6];
         var viewModel = new AppViewModel();
 
         viewModel.OpenExam(current.Id);
@@ -131,6 +132,41 @@ public sealed class Matura2026UiTests
         Assert.Equal(legacy.Id, viewModel.SelectedExamId);
         Assert.Equal(topic.Id, viewModel.SelectedTopicId);
         Assert.Equal(ExamNavigationOrigin.Tasks, viewModel.ExamNavigationOrigin);
+    }
+
+    [AvaloniaFact]
+    public void Topic_randomization_keeps_the_selected_category_and_includes_2024_basic_tasks()
+    {
+        var repository = new ContentRepository();
+        var topic = repository.ExamTopics.Single(item => item.Id == "inequalities");
+        LearningExercise? opened = null;
+        string? openedTopicId = null;
+        var tasks = new TaskTopicsView(
+            new TaskTopicsViewContent(
+                repository.Exams,
+                repository.ExamTopics,
+                repository.ExamIndex.TopicIntroduction,
+                repository.Placeholders.Items),
+            new TaskTopicsViewActions(
+                _ => { },
+                _ => { },
+                (exercise, topicId) =>
+                {
+                    opened = exercise;
+                    openedTopicId = topicId;
+                }),
+            new ExerciseRandomizer(new Random(20240809)));
+
+        var topicExercises = repository.GetTopicExercises(topic.Id);
+        Assert.Contains(topicExercises, item => item.Id == "mm24-p0-z01");
+        Assert.Contains(topicExercises, item => item.Id == "mm24-p0-z06");
+
+        Click(tasks, $"Losuj zadanie z tematu: {topic.Title}");
+
+        Assert.NotNull(opened);
+        Assert.Equal(topic.Id, openedTopicId);
+        Assert.Equal(topic.Id, opened!.TopicId);
+        Assert.Contains(opened, topicExercises);
     }
 
     [AvaloniaFact]
@@ -185,6 +221,7 @@ public sealed class Matura2026UiTests
             Assert.Contains("Matura maj 2026 PR: 1 / 13", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Matura maj 2025 PP: 1 / 35", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Matura maj 2025 PR: 1 / 13", progress.Text, StringComparison.Ordinal);
+            Assert.Contains("Matura maj 2024 PP: 1 / 35", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Matura maj 2024 PR: 1 / 14", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Matura poprawkowa 2021: 1 / 35", progress.Text, StringComparison.Ordinal);
         }
@@ -227,6 +264,8 @@ public sealed class Matura2026UiTests
                     var view = new ExerciseView(exercise, context);
                     window.Content = view;
                     Render();
+                    if (exercise.Id == "mm24-p0-z18")
+                        AssertAlphabeticalChoiceOrder(view, exercise);
                     FillCompoundAnswer(view, exercise);
                     var check = view.GetLogicalDescendants().OfType<Button>()
                         .Single(button => Equals(button.Content, "Sprawdź wszystkie odpowiedzi"));
@@ -309,6 +348,27 @@ public sealed class Matura2026UiTests
                 : part.AcceptedAnswers[0];
         }
         Render();
+    }
+
+    private static void AssertAlphabeticalChoiceOrder(Control view, LearningExercise exercise)
+    {
+        var firstChoices = view.GetLogicalDescendants().OfType<RadioButton>()
+            .Where(button => button.GroupName == $"{exercise.Id}-first")
+            .ToArray();
+        var secondChoices = view.GetLogicalDescendants().OfType<RadioButton>()
+            .Where(button => button.GroupName == $"{exercise.Id}-second")
+            .ToArray();
+
+        Assert.Equal(6, firstChoices.Length);
+        Assert.Equal(6, secondChoices.Length);
+        Assert.False(firstChoices[5].IsEnabled);
+        Assert.All(secondChoices, choice => Assert.False(choice.IsEnabled));
+
+        firstChoices[1].IsChecked = true;
+        Render();
+
+        Assert.All(secondChoices.Take(2), choice => Assert.False(choice.IsEnabled));
+        Assert.All(secondChoices.Skip(2), choice => Assert.True(choice.IsEnabled));
     }
 
     private static string ExerciseCountLabel(int count)

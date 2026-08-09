@@ -125,6 +125,7 @@ public sealed class FinalDocumentationTests
         Assert.Contains("\"id\": \"cke-2026-main-extended-exam\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2025-main-basic-exam\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2025-main-extended-exam\"", provenance, StringComparison.Ordinal);
+        Assert.Contains("\"id\": \"cke-2024-main-basic-exam\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2024-main-extended-exam\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-formula-2023-guide-examples\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"distributionStatus\": \"blocked\"", provenance, StringComparison.Ordinal);

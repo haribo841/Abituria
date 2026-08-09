@@ -12,7 +12,7 @@ Na podstawie tego poświadczenia historyczne przekazanie było autoryzowane prze
 
 Stan bieżącego procesu publikacji jest odrębny. Publiczny prerelease [`v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1) zawiera paczki Windows, Ubuntu i macOS zweryfikowane przez build, testy, SonarCloud, dokumentację oraz instalacyjny smoke test na trzech systemach.
 
-Deklaracja właściciela została zapisana w `ASSET_RIGHTS_DECLARATION.md`, a rozszerzenia z 3 i 5 sierpnia 2026 r. obejmują arkusze CKE 2025 i 2026 na obu poziomach, ich zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Manifest dokładnego commita wydania miał `releaseEligible=true`; zwykły walidator i `Test-ContentProvenance.ps1 -RequireReleaseEligible` zakończyły się wtedy powodzeniem. Bieżący stan z późniejszą warstwą przykładów CKE jest opisany osobno w `CONTENT_PROVENANCE.md`.
+Deklaracja właściciela została zapisana w `ASSET_RIGHTS_DECLARATION.md`, a rozszerzenia z 3 i 5 sierpnia 2026 r. obejmują arkusze CKE 2025 i 2026 na obu poziomach, ich zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Manifest dokładnego commita wydania miał `releaseEligible=true`; zwykły walidator i `Test-ContentProvenance.ps1 -RequireReleaseEligible` zakończyły się wtedy powodzeniem. Bieżący stan z późniejszą warstwą przykładów CKE i transkrypcjami matury 2024 PP i PR jest opisany osobno w `CONTENT_PROVENANCE.md`.
 
 Techniczna i formalna blokada proweniencji została usunięta. Publikacja nadal pozostaje procesem odrębnym od historycznego przekazania z 2022 r.
 

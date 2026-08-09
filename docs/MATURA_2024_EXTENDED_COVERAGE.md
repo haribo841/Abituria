@@ -42,7 +42,7 @@ Suma punktów w macierzy wynosi 50. Identyfikatory mają mniej niż 80 znaków i
 
 Content/exam-2024-main-extended.json zawiera tekst każdego zadania, wynik, pełne rozwiązanie, kryteria punktowania oraz strony obu dokumentów źródłowych. Tryby numeric, compound i revealOnly są istniejącymi mechanizmami katalogu matur i nie wymagają zmiany schematu bazy.
 
-Zadanie 9 odwołuje się do exam-mm24-r0-z09 w Content/diagrams.json. Jest to jedna autorska, deterministyczna definicja wektorowa Avalonia - kwadrat, punkt E, przekątne, odcinek AE oraz punkty F i G - z opisem alternatywnym i numerem strony 14. Katalog diagramów zawiera po tej zmianie 77 definicji; nie dodano aktywnego rastra.
+Zadanie 9 odwołuje się do exam-mm24-r0-z09 w Content/diagrams.json. Jest to jedna autorska, deterministyczna definicja wektorowa Avalonia - kwadrat, punkt E, przekątne, odcinek AE oraz punkty F i G - z opisem alternatywnym i numerem strony 14. Katalog diagramów zawiera po tej zmianie 88 definicji; nie dodano aktywnego rastra.
 
 ## Walidacja
 
@@ -54,7 +54,7 @@ Test Matura2024ExtendedContentTests sprawdza:
 - kompletność diagramu, opis alternatywny, źródło i renderowanie bez rastra;
 - blokadę proweniencji nowej transkrypcji.
 
-Matura2026UiTests dodatkowo obejmuje wybór sześciu arkuszy, losowanie ograniczone do wybranego arkusza, agregację 147 jednostek postępu według 17 tematów, kontekst powrotu oraz osobny licznik Matura maj 2024 PR: x / 14.
+Matura2026UiTests dodatkowo obejmuje wybór siedmiu arkuszy, losowanie ograniczone do wybranego arkusza, agregację 182 jednostek postępu według 17 tematów, kontekst powrotu oraz osobny licznik Matura maj 2024 PR: x / 14.
 
 ## Prawa i wydanie
 

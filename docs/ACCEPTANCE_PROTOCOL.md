@@ -125,7 +125,7 @@ Poniższa tabela jest opcjonalnym uzupełnieniem dla sesji prowadzonej przez cz�
 
 ## Warunek publikacji
 
-Właściciel poświadczył posiadanie praw do zakresu zasobów ocenianego 19 lipca 2026 r., a 3 i 5 sierpnia 2026 r. rozszerzył deklarację na arkusze 2025 i 2026 na obu poziomach, zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Historyczne przekazanie prowadzącemu zostało uzgodnione i zaakceptowane, dlatego spełnia formalny wariant przekazania dla Issue #43. Manifest dokładnego commita wydania miał `releaseEligible=true` i przeszedł oba warianty walidatora. Bieżący manifest ma `releaseEligible=false` wyłącznie z powodu później dodanej warstwy przykładów z informatorów CKE.
+Właściciel poświadczył posiadanie praw do zakresu zasobów ocenianego 19 lipca 2026 r., a 3 i 5 sierpnia 2026 r. rozszerzył deklarację na arkusze 2025 i 2026 na obu poziomach, zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Historyczne przekazanie prowadzącemu zostało uzgodnione i zaakceptowane, dlatego spełnia formalny wariant przekazania dla Issue #43. Manifest dokładnego commita wydania miał `releaseEligible=true` i przeszedł oba warianty walidatora. Bieżący manifest ma `releaseEligible=false` z powodu później dodanej warstwy przykładów z informatorów CKE oraz transkrypcji matury 2024 PP i PR.
 
 Publiczne wydanie bieżącej wersji jest osobnym działaniem i zostało ukończone jako [prerelease `v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1). Dla dokładnego commita wydania ponowiono `tools/Test-ContentProvenance.ps1 -RequireReleaseEligible` oraz pozostałe bramy, po czym skontrolowano draft i opublikowano prerelease.
 

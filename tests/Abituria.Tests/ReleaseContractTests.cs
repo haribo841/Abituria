@@ -329,6 +329,22 @@ public sealed class ReleaseContractTests
             onlineCheckExclusions.EnumerateArray(),
             item =>
                 item.GetProperty("urlPrefix").GetString() ==
+                    "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_podstawowy/MMAP-P0-100-A-2405-arkusz.pdf" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "SHA-256",
+                    StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() ==
+                    "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_podstawowy/MMAP-P0-100-2405-zasady.pdf" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "SHA-256",
+                    StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() ==
                     "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_rozszerzony/MMAP-R0-100-A-2405-arkusz.pdf" &&
                 item.GetProperty("reason").GetString()!.Contains(
                     "SHA-256",

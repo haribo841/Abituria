@@ -160,12 +160,27 @@
       ]
     },
     {
+      "id": "cke-2024-main-basic-exam",
+      "paths": [
+        "Content/exam-2024-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMAP-P0-100-A-2405, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_podstawowy/MMAP-P0-100-A-2405-arkusz.pdf, SHA-256 37BDABE139A83CDD128E35C5A37A6E17DE5C4423F7DB2C6B4887EC8ADD96B7A0; zasady oceniania CKE MMAP-P0-100-2405, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_podstawowy/MMAP-P0-100-2405-zasady.pdf, SHA-256 28D7232FBD3EB77CCF17AAEADE8F541564FBC4E9B59E4547BE4E67DB386D5202; weryfikacja 2026-08-09",
+      "license": "Status publicznej redystrybucji w ramach Abiturii wymaga osobnego rozszerzenia deklaracji właściciela",
+      "distributionStatus": "blocked",
+      "blockedReason": "docs/ASSET_RIGHTS_DECLARATION.md nie obejmuje jeszcze arkusza MMAP-P0-100-A-2405, zasad MMAP-P0-100-2405 ani ich transkrypcji w Abiturii.",
+      "evidence": [
+        "docs/MATURA_2024_BASIC_COVERAGE.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
       "id": "runtime-vector-diagrams",
       "paths": [
         "Content/diagrams.json"
       ],
       "author": "Adam Kubiś - implementacje wektorowe Avalonia i nowe definicje kursu; Centralna Komisja Egzaminacyjna - źródłowa treść tablic i arkuszy; historyczni autorzy projektu Ich Troje - źródła zachowanych diagramów",
-      "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym dziewięć figur dla arkusza CKE MMAP-P0-100-A-2505, siedem figur dla MMAP-P0-100-A-2605, trzy figury dla MMAP-R0-100-A-2605 i jedna autorska implementacja wektorowa figury z MMAP-R0-100-A-2405; bez aktywnych rastrów, Image ani Bitmap",
+      "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym jedenaście figur dla arkusza CKE MMAP-P0-100-A-2405, dziewięć figur dla MMAP-P0-100-A-2505, siedem figur dla MMAP-P0-100-A-2605, trzy figury dla MMAP-R0-100-A-2605 i jedna autorska implementacja wektorowa figury z MMAP-R0-100-A-2405; bez aktywnych rastrów, Image ani Bitmap",
       "license": "MIT dla implementacji wektorowych i definicji autorskich lub odziedziczonych; deklaracja redystrybucji w ramach Abiturii rozszerzona 2026-08-05",
       "distributionStatus": "approved",
       "evidence": [
@@ -174,6 +189,7 @@
         "docs/MATURA_2026_EXTENDED_COVERAGE.md",
         "docs/MATURA_2025_COVERAGE.md",
         "docs/MATURA_2025_EXTENDED_COVERAGE.md",
+        "docs/MATURA_2024_BASIC_COVERAGE.md",
         "docs/MATURA_2024_EXTENDED_COVERAGE.md",
         "docs/CONTENT_PROVENANCE.md",
         "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",

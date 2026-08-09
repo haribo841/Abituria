@@ -9,11 +9,12 @@ Kod C# odpowiada za wczytanie, walidację i wyświetlenie treści. Długie opisy
 - `Content/exams.json` - indeks aktywnych arkuszy i 17 wspólnych tematów w schemacie 1,
 - `Content/exam-2025-main-basic.json` - matura główna 2025 PP w schemacie 4,
 - `Content/exam-2025-main-extended.json` - matura główna 2025 PR w schemacie 4,
+- `Content/exam-2024-main-basic.json` - matura główna 2024 PP w schemacie 4,
 - `Content/exam-2024-main-extended.json` - matura główna 2024 PR w schemacie 4,
 - `Content/exam-2026-main-basic.json` - matura główna 2026 PP w schemacie 4,
 - `Content/exam-2026-main-extended.json` - matura główna 2026 PR w schemacie 4,
 - `Content/exam-2021-correction.json` - zgodny wstecznie arkusz poprawkowy 2021 w schemacie 3,
-- `Content/diagrams.json` - 77 aktywnych definicji wektorowych w schemacie 1,
+- `Content/diagrams.json` - 88 aktywnych definicji wektorowych w schemacie 1,
 - `Content/placeholders.json` - treść ekranów zaplanowanych lub zastąpionych,
 - `Content/roadmap.json` - opis planu rozwoju,
 - `Content/ui-copy.json` - dłuższe statyczne objaśnienia interfejsu.
@@ -43,7 +44,7 @@ python tools/Import-CkeInformerExamples.py `
 
 Importer pobiera wyłącznie główne zestawy przykładów: zadania 1-66 na stronach PDF 12-138 informatora podstawowego oraz zadania 1-31 na stronach 12-106 informatora rozszerzonego. Nie dubluje późniejszych powtórzeń przeznaczonych dla zdających ze specjalnymi potrzebami. Każdy rekord zachowuje numer, punktację, strony, mapowanie wymagań, pełną transkrypcję oraz opisy informacji wizualnej. Po zmianie katalogu trzeba osobno ocenić jego status w `Content/provenance.json`; test techniczny nie zastępuje deklaracji praw do publicznej redystrybucji.
 
-Aktywny katalog 77 diagramów jest odtwarzany deterministycznie poleceniem:
+Aktywny katalog 88 diagramów jest odtwarzany deterministycznie poleceniem:
 
 ```powershell
 pwsh -NoProfile -File tools/New-DiagramCatalog.ps1
@@ -57,7 +58,7 @@ Generator zapisuje wyłącznie dane prymitywów wektorowych i nie tworzy PNG. Hi
 
 Schemat 4 arkuszy 2024, 2025 i 2026 przechowuje formułę, poziom, czas, maksimum punktów, oficjalną liczbę zadań i liczbę jednostek postępu. `DisplayNumber` zachowuje oznaczenia takie jak `12.1` i `13.2`, `GroupId` łączy części jednego oficjalnego zadania, a `Points`, `Solution`, `ScoringCriteria` i `SolutionSourcePage` odtwarzają umowę oceniania. Tryb `compound` zawiera co najmniej dwie części `multipleChoice`, `numeric` lub `text`.
 
-Źródła i liczniki matur opisują pięć macierzy: `MATURA_2024_EXTENDED_COVERAGE.md`, `MATURA_2025*_COVERAGE.md` oraz `MATURA_2026*_COVERAGE.md`. Przed dodaniem lub zmianą treści źródłowej trzeba zweryfikować pliki, adresy i SHA-256, zaktualizować testy kontraktu oraz ocenić `Content/provenance.json`. Brak osobistej podstawy redystrybucji oznacza status `blocked`; nie wolno zmieniać go na `approved` na podstawie samego przejścia testów technicznych.
+Źródła i liczniki matur opisuje sześć macierzy: `MATURA_2024_BASIC_COVERAGE.md`, `MATURA_2024_EXTENDED_COVERAGE.md`, `MATURA_2025*_COVERAGE.md` oraz `MATURA_2026*_COVERAGE.md`. Przed dodaniem lub zmianą treści źródłowej trzeba zweryfikować pliki, adresy i SHA-256, zaktualizować testy kontraktu oraz ocenić `Content/provenance.json`. Brak osobistej podstawy redystrybucji oznacza status `blocked`; nie wolno zmieniać go na `approved` na podstawie samego przejścia testów technicznych.
 
 Test end-to-end generuje katalog do pustego katalogu i wymaga semantycznej zgodności z aktywnymi plikami, więc rozbieżność seedów, generatora i aplikacji blokuje testy. Nie należy ręcznie edytować plików wygenerowanych.
 

@@ -33,6 +33,14 @@
       "reason": "The extended-level CKE guide is pinned by SHA-256 in the course catalog; transient PDF-host availability is not a content-integrity check."
     },
     {
+      "urlPrefix": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_podstawowy/MMAP-P0-100-A-2405-arkusz.pdf",
+      "reason": "The exact CKE 2024 basic question paper is pinned by SHA-256 in the exam catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
+    },
+    {
+      "urlPrefix": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_podstawowy/MMAP-P0-100-2405-zasady.pdf",
+      "reason": "The exact CKE 2024 basic marking guide is pinned by SHA-256 in the exam catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
+    },
+    {
       "urlPrefix": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_rozszerzony/MMAP-R0-100-A-2405-arkusz.pdf",
       "reason": "The exact CKE 2024 extended question paper is pinned by SHA-256 in the exam catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
     },
