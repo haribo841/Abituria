@@ -1,10 +1,10 @@
 # Plan i raport testów końcowych
 
-Wersja dokumentu: `0.9.0-beta.1`.
+Wersja dokumentu: `0.9.1`.
 
-Data ostatniego lokalnego wykonania: 8 sierpnia 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
+Data ostatniego lokalnego wykonania: 10 sierpnia 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
 
-Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` z raportem OpenCover zakończył się wynikiem `538/538 PASS` w czasie `41 s`. OpenCover wykazał `95,77%` pokrycia linii i `86,79%` pokrycia gałęzi kodu C#. Dziewięć testów Python generatora PDF i importera przykładów CKE przeszło, a `coverage.py` wykazał `98,10%` linii i `92,05%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,32%` pokrycia łącznego i `87,01%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
+Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` z raportem OpenCover zakończył się wynikiem `552/552 PASS` w czasie `36 s`. OpenCover wykazał `95,90%` pokrycia linii i `86,87%` pokrycia gałęzi kodu C#. Dziewięć testów Python generatora PDF i importera przykładów CKE przeszło, a `coverage.py` wykazał `98,10%` linii i `92,05%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,42%` pokrycia łącznego i `87,08%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
 
 Dokument rozróżnia wyniki automatyczne, retrospektywne poświadczenie historycznych testów uczestników oraz czynności bieżącego procesu wydawniczego. Brak szczegółowej karty sesji nie jest uzupełniany przez domysł, a poświadczenie historyczne nie jest przedstawiane jako test bieżącej paczki.
 
@@ -33,10 +33,10 @@ Testy `[AvaloniaFact]` tworzą izolowane aplikacje, dispatchery i renderery Skia
 | Kalkulator | `ExpressionCalculatorTests`, `ExpressionCalculatorRobustnessTests`, `CalculatorSessionTests`, `RepeatedEqualsTests`, `QuadraticSolverTests`, `Issue5CalculatorPipTests` | poprawność obliczeń, błędy wejścia, granice, historia, PiP i schowek `Ans` |
 | Konta i dane | `AccountServiceTests`, `Issue14RegistrationRegressionTests`, `ReleaseDatabaseCompatibilityTests`, `ExerciseScratchpadSessionTests` | profil gościa, hasła, odzyskiwanie, postęp, preferencję PiP, brudnopis sesji i kompatybilność bazy |
 | Treści | `ContentInventoryTests`, `ContentSeparationTests`, `Issue35MathChaptersRegressionTests`, `Formula2023ContentTests`, `MathCourse2023ContentTests`, `OfficialCourseExampleContentTests`, `Matura2024BasicContentTests`, `Matura2024ExtendedContentTests`, `Matura2025ContentTests`, `Matura2026ContentTests`, `Matura2026ExtendedContentTests`, `DiagramCatalogTests`, `LegacyImageArchiveTests` | kompletność tablic i kursu Formuły 2023, autorski kontrakt `4/13/73/46/238/357`, dodatkowe przykłady CKE `66/31/97`, matury 2024 `31/35/46` i `13/14/50`, matury 2025 `31/35/50` i `12/13/50`, matury 2026 `33/37/50` i `12/13/50`, zachowanie 35 zadań 2021, 88 aktywnych diagramów, zgodność archiwum 75 obrazów, źródła, SHA-256, format JSON i renderowanie treści |
-| UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests`, `Issue4NavigationTests`, `Issue5CalculatorPipTests`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` | osiągalne ścieżki użytkownika, siedem arkuszy, agregację 17 tematów, oddzielny postęp, odpowiedzi złożone, wszystkie trasy shella, kontrolowany pojedynczy PiP, wklejanie, losowanie i kontekst zadania |
+| UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `ExerciseHintProviderTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests`, `Issue4NavigationTests`, `Issue5CalculatorPipTests`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` | osiągalne ścieżki użytkownika, siedem arkuszy, rzeczywiste podpowiedzi także dla transkrypcji CKE, przewijalne źródła przy `720x520`, agregację 17 tematów, oddzielny postęp, odpowiedzi złożone, wszystkie trasy shella, kontrolowany pojedynczy PiP, wklejanie, losowanie i kontekst zadania |
 | Dostępność kontrolek | `AccessibilityRegressionTests` | nazwy pól i symbolicznych przycisków oraz dynamiczne regiony wyników |
 | Wizualne | `Discussion10VisualRegressionTests` | renderowanie list matematycznych i zachowanie przy minimalnym rozmiarze okna |
-| Styl, motywy i własny chrome | `Discussion49StyleRegressionTests` | Mulish, brak wymuszonego Light i Inter, historyczne emoji `🍓`/`🍋`/`🍏`, tooltipy, cztery ustawienia motywu, stany interakcji, fokus, breakpointy, dialogi, sterowanie i skalowanie okna |
+| Styl, motywy i własny chrome | `Discussion49StyleRegressionTests` | Mulish, brak wymuszonego Light i Inter, historyczne emoji `🍓`/`🍋`/`🍏`, tooltipy, pełny ekran bez paska zadań, cztery ustawienia motywu, stany interakcji, fokus, breakpointy, dialogi, sterowanie i skalowanie okna |
 | Koszt renderowania UI | `Discussion49StyleRegressionTests` | rozgrzany render reprezentatywnego widoku w motywie jasnym, ciemnym i wysokiego kontrastu oraz budżet czasu i pamięci |
 | Wydanie | `ReleaseRuntimeTests`, `ReleaseContractTests`, `ReleaseValidationScriptTests`, `NuGetLicenseBundleTests` | izolowany smoke test, wersjonowanie, zawartość paczek, dowody licencji i działanie bramki pokrycia |
 | Python i PDF | `tests/python/test_new_commission_pdf.py`, `tests/python/test_import_cke_informer_examples.py` | generowanie PDF, import 97 przykładów CKE, przypięte SHA-256, zakresy stron, mapowania wymagań, punktację, opisy figur oraz błędy wejścia |
@@ -52,7 +52,7 @@ Natywne zachowanie schowka oraz właściwości `Owned` i `Topmost` na Ubuntu 24.
 
 ## Natywny smoke test Issue #6
 
-31 lipca 2026 r. na Windows 11 x64 uruchomiono rzeczywistą aplikację z kompilacji Release. Pasek pokazał po lewej kolorowe `🍓`, `🍋`, `🍏`, wyśrodkowane `🍀 Abituria` i przycisk motywu po prawej. Najechanie na każdą z czterech kontrolek wyświetliło po krótkim opóźnieniu tooltip: „Zamknij”, „Maksymalizuj”, „Minimalizuj” oraz opis zmiany motywu. `🍋` zmaksymalizował okno, zachował symbol i zmienił tooltip oraz nazwę automatyzacji na „Przywróć”, drugie użycie przywróciło zwykły rozmiar, `🍏` zminimalizował okno, a `🍓` zakończył aplikację.
+10 sierpnia 2026 r. na Windows 11 x64 uruchomiono rzeczywistą aplikację z kompilacji Release. Pasek pokazał po lewej kolorowe `🍓`, `🍋`, `🍏`, wyśrodkowane `🍀 Abituria` i przycisk motywu po prawej. `🍋` włączył `FullScreen`: systemowy pasek zadań nie pozostał widoczny nad aplikacją, symbol zachował się, a tooltip oraz nazwa automatyzacji zmieniły się na „Przywróć”. Drugie użycie przywróciło zwykły rozmiar oraz opis „Pełny ekran”, po czym `🍓` zakończył aplikację.
 
 ## Regresje stylu i dostępności dyskusji #49
 
@@ -67,7 +67,7 @@ Nowy zestaw testów nie ocenia wyglądu wyłącznie przez obecność nazw klas. 
 | Znak aplikacji i placeholdery | w trybie ciemnym i wysokiego kontrastu placeholder ma kontrastowy `TextMutedBrush`, a tekstowa koniczyna korzysta z kolorów bieżącego motywu |
 | Stany interakcji | style zawierają i stosują `:pointerover`, `:pressed`, `:focus` oraz `:focus-visible` dla kontrolek używanych przez aplikację |
 | Widoczny fokus | render kontrolki przed i po fokusie klawiaturowym ma mierzalną zmianę ramki, a fokus nie jest sygnalizowany wyłącznie kolorem tekstu |
-| Własny chrome | `WindowDecorations=None`, historyczna kolejność `🍓`/`🍋`/`🍏`, wyśrodkowana marka, tooltipy `250 ms`, niezmienne `🍋` przy maksymalizacji i przywróceniu, zmiana `WindowState` oraz osiem krawędzi `BeginResizeDrag` pozostają obecne; render przy `720x520`, `960x640` i `1280x820` nie przepełnia paska w żadnym motywie |
+| Własny chrome | `WindowDecorations=None`, historyczna kolejność `🍓`/`🍋`/`🍏`, wyśrodkowana marka, tooltipy `250 ms`, niezmienne `🍋` przy pełnym ekranie i przywróceniu, zmiana `WindowState.FullScreen` oraz osiem krawędzi `BeginResizeDrag` pozostają obecne; render przy `720x520`, `960x640` i `1280x820` nie przepełnia paska w żadnym motywie |
 | Breakpointy | Login przy `860`, Start przy `780` i kalkulator przy `900` zmieniają liczbę kolumn oraz położenie paneli bez zmiany drzewa logicznego |
 | Dialogi | wspólna fabryka ustawia `CanResize=true`, granice wymiarów, środkowanie względem właściciela i pionowe przewijanie |
 | Wpływ stylu | rozgrzany render i nawigacja w trzech paletach mieszczą się w szerokim budżecie regresyjnym czasu i pamięci |
@@ -150,7 +150,7 @@ Historyczny odbiór Issue #43 jest zaliczony na podstawie łącznie udokumentowa
 3. historyczna forma przekazania została uzgodniona i przyjęta;
 4. brakujące szczegóły sesji, podpisu, kanału i hasha są ujawnione jako ograniczenia archiwalne, a nie uzupełnione fikcyjnymi danymi.
 
-Publiczne wydanie `0.9.0-beta.1` jest osobnym procesem. Zwykły walidator proweniencji i brama `-RequireReleaseEligible` przeszły po rozszerzeniach `ASSET_RIGHTS_DECLARATION.md` z 3 i 5 sierpnia 2026 r.; manifest dokładnego commita wydania miał `releaseEligible=true` i nie zawierał grup `blocked`. Bieżący manifest ma `releaseEligible=false` z powodu później dodanej warstwy przykładów z informatorów CKE. Zwykły walidator musi nadal przechodzić, natomiast brama wydawnicza ma odrzucać ten stan do czasu rozszerzenia deklaracji.
+Publiczne wydanie `0.9.1` jest osobnym procesem. Zwykły walidator proweniencji i brama `-RequireReleaseEligible` muszą przechodzić po rozszerzeniach `ASSET_RIGHTS_DECLARATION.md` z 3, 5 i 10 sierpnia 2026 r.; bieżący manifest ma `releaseEligible=true` i nie zawiera grup wymagających blokady. Zmiana dowolnego źródła, zakresu redystrybucji lub implementacji diagramów wymaga ponownego uruchomienia obu bramek.
 
 Publiczny prerelease [`v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1) został opublikowany po wykonaniu następujących czynności:
 

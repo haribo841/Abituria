@@ -1,6 +1,6 @@
 # Audyt dostępności WCAG 2.2 A/AA
 
-Wersja aplikacji: `0.9.0-beta.1`.
+Wersja aplikacji: `0.9.1`.
 
 Data przeglądu: 24 lipca 2026 r.
 
@@ -45,8 +45,8 @@ Legenda statusów:
 - paleta jest oparta na zasobach dynamicznych, więc zmiana motywu aktualizuje istniejące widoki;
 - przyciski, pola tekstowe i pola wyboru mają jawne stany `:pointerover`, `:pressed`, `:focus` i `:focus-visible`;
 - stan fokusu ma kontrastową ramkę, a wynik renderowania jest chroniony testem headless;
-- własny pasek tytułu ma opisane przyciski motywu, minimalizacji, maksymalizacji lub przywrócenia oraz zamknięcia;
-- przenoszenie okna, dwuklik maksymalizujący i osiem uchwytów zmiany rozmiaru korzystają z natywnych operacji Avalonia;
+- własny pasek tytułu ma opisane przyciski motywu, minimalizacji, pełnego ekranu lub przywrócenia oraz zamknięcia;
+- przenoszenie okna, dwuklik przełączający pełny ekran i osiem uchwytów zmiany rozmiaru korzystają z natywnych operacji Avalonia;
 - układ logowania przechodzi do jednej kolumny poniżej `860`, ekran Start poniżej `780`, a kalkulator ogólny poniżej `900`;
 - dialogi kodu odzyskiwania są skalowalne, mają minimalne i maksymalne wymiary oraz przewijanie;
 - komunikaty konta, sprawdzania zadania i kalkulatorów mają nazwy automatyzacji oraz ustawienie live `Polite`;
@@ -122,7 +122,7 @@ Wartości dotyczą zdefiniowanych zasobów palety. Test renderowania pozostaje p
 | 2.4.11 Focus Not Obscured (Minimum) | AA | `M` | Widoki i dialogi przewijają zawartość, a pasek tytułu nie nakłada się na `ShellHost`. Należy ręcznie przejść wszystkie kontrolki przy minimalnym oknie i skalowaniu `200%`, aby potwierdzić automatyczne dosuwanie fokusu do widocznego obszaru. |
 | 2.5.1 Pointer Gestures | A | `N/D` | Nie ma gestów wielopunktowych ani gestów zależnych od rysowanego toru. |
 | 2.5.2 Pointer Cancellation | A | `P` | Akcje aplikacji korzystają ze standardowego zdarzenia aktywacji przycisku. Naciśnięcie paska lub uchwytu rozpoczyna wyłącznie odwracalną operację systemową przenoszenia albo zmiany rozmiaru. |
-| 2.5.3 Label in Name | A | `P` | Nazwy automatyzacji zawierają widoczną etykietę lub dokładniej ją rozwijają, na przykład `Poprzednie zadanie: <tytuł>` i `Maksymalizuj okno`. |
+| 2.5.3 Label in Name | A | `P` | Nazwy automatyzacji zawierają widoczną etykietę lub dokładniej ją rozwijają, na przykład `Poprzednie zadanie: <tytuł>` i `Włącz pełny ekran`. |
 | 2.5.4 Motion Actuation | A | `N/D` | Aplikacja nie wymaga ruchu urządzenia ani gestu kamery. |
 | 2.5.7 Dragging Movements | AA | `N/D` | Treść aplikacji nie wymaga przeciągania. Przenoszenie i skalowanie okna to operacje menedżera okien, dostępne również z klawiaturowego menu systemowego. |
 | 2.5.8 Target Size (Minimum) | AA | `M` | Kontrolki paska okna mają co najmniej `48x45`, a klawisze kalkulatora co najmniej `42` lub `46` pikseli wysokości. Należy wykonać końcowy pomiar wszystkich małych celów, w szczególności nawigacji zadań i pasków przewijania, na trzech backendach platformowych. |

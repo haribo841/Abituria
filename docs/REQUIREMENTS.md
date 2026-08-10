@@ -106,7 +106,7 @@ Poza bieżącym zakresem pozostają:
 | F-25 | Start pokazuje sześć kafelków, a niezależne strony `Matura` i `Zadania` rozdzielają pełny arkusz, 17 tematów, losowanie i placeholdery z właściwym kontekstem powrotu. | Wysoki | Zaimplementowane | `HomeView`, `MaturaView`, `TaskTopicsView`, `Issue4NavigationTests` |
 | F-26 | System udostępnia pojedynczy kalkulator Picture in Picture i przenosi tę samą sesję bez utraty wyrażenia między oknem nad Abiturią, oknem zawsze na wierzchu i panelem aplikacji. Wybrany tryb jest zapisywany osobno dla profilu. | Wysoki | Zaimplementowane | `CalculatorPipController`, `OptionsView`, migracja `202607310001_AddProfilePipPreference`, `Issue5CalculatorPipTests` |
 | F-27 | Każdy poprawny wynik kalkulatora ogólnego trafia dokładnie do schowka systemowego, a brudnopis i odpowiedź liczbowa obsługują `Ctrl+V` lub `Cmd+V` oraz menu `Wklej` w miejscu kursora albo zaznaczenia. | Wysoki | Zaimplementowane | `CalculatorClipboardCoordinator`, `TextBoxClipboardBehavior`, `Issue5CalculatorPipTests` |
-| F-28 | System pokazuje obok warstwy autorskiej osobno oznaczone 66 przykładów podstawowych i 31 rozszerzonych z informatorów CKE, zachowując oficjalne wymagania, zasady oceniania, rozwiązania, strony i opisy figur. | Wysoki | Zaimplementowane technicznie, publikacja zablokowana do rozszerzenia deklaracji praw | `Content/official-course-examples.json`, `OfficialCourseExampleContentTests`, `test_import_cke_informer_examples.py` |
+| F-28 | System pokazuje obok warstwy autorskiej osobno oznaczone 66 przykładów podstawowych i 31 rozszerzonych z informatorów CKE, zachowując oficjalne wymagania, zasady oceniania, rozwiązania, strony i opisy figur. | Wysoki | Zaimplementowane i zatwierdzone do redystrybucji jako część Abiturii 10 sierpnia 2026 r. | `Content/official-course-examples.json`, `OfficialCourseExampleContentTests`, `test_import_cke_informer_examples.py` |
 
 ## 5. Wymagania niefunkcjonalne
 
@@ -129,7 +129,7 @@ Poza bieżącym zakresem pozostają:
 | NF-15 | Interfejs używa paczkowanego kroju Mulish, a zależność od Avalonia Fonts Inter nie jest częścią grafu produkcyjnego. | Średni | Zaimplementowane | `AppStyles.axaml`, `Abituria.csproj`, test zależności i fontu |
 | NF-16 | Aplikacja udostępnia ustawienie systemowe oraz motyw jasny, ciemny i wysokiego kontrastu, bez wymuszania wariantu jasnego. | Wysoki | Zaimplementowane | `AppThemeManager`, `AppStyles.axaml`, testy renderowania motywów |
 | NF-17 | Interaktywne kontrolki mają rozróżnialne stany najechania, naciśnięcia, fokusu i fokusu klawiaturowego. | Wysoki | Zaimplementowane | selektory `:pointerover`, `:pressed`, `:focus`, `:focus-visible`, test widocznego fokusu |
-| NF-18 | Własny pasek tytułu zapewnia historyczne kontrolki `🍓`, `🍋`, `🍏`, opisowe tooltipy, minimalizację, maksymalizację, przywrócenie, zamknięcie, przeciąganie oraz zmianę rozmiaru z każdej krawędzi i narożnika. | Wysoki | Zaimplementowane | `MainWindow.axaml`, `MainWindow.axaml.cs`, test kontraktu i renderowania chrome |
+| NF-18 | Własny pasek tytułu zapewnia historyczne kontrolki `🍓`, `🍋`, `🍏`, opisowe tooltipy, minimalizację, pełny ekran bez paska zadań, przywrócenie, zamknięcie, przeciąganie oraz zmianę rozmiaru z każdej krawędzi i narożnika. | Wysoki | Zaimplementowane | `MainWindow.axaml`, `MainWindow.axaml.cs`, test kontraktu i renderowania chrome |
 | NF-19 | Login, Start i kalkulator ogólny zmieniają strukturę układu odpowiednio przy szerokościach `860`, `780` i `900`, bez utraty logicznej kolejności kontrolek. | Wysoki | Zaimplementowane | `AdaptiveLayout`, testy breakpointów Avalonia Headless |
 | NF-20 | Dialogi aplikacji są skalowalne, mają bezpieczne granice wymiarów i przewijanie dla treści wykraczającej poza obszar klienta. | Wysoki | Zaimplementowane | `AdaptiveLayout.CreateDialog`, test właściwości dialogu |
 | NF-21 | Wszystkie kryteria WCAG 2.2 A/AA są przeglądane i śledzone, z jawnym rozdzieleniem dowodów automatycznych, kontroli manualnych i kryteriów nieodpowiednich dla aplikacji desktopowej. | Wysoki | Audyt wykonany, kontrole manualne pozostają jawne | `docs/ACCESSIBILITY_WCAG_AUDIT.md`, `AccessibilityRegressionTests`, `Discussion49StyleRegressionTests` |
@@ -186,7 +186,7 @@ System nie zakłada kont administratora, ról sieciowych ani synchronizacji wiel
 - Zmiana motywu musi aktualizować otwarte widoki bez ponownego uruchamiania aplikacji.
 - Przyciski, pola tekstowe i pola wyboru muszą mieć widoczne stany najechania, naciśnięcia, fokusu i `focus-visible`.
 - Własne przyciski paska tytułu muszą być dostępne z klawiatury, mieć opisowe nazwy automatyzacji i zachowywać funkcje natywnego okna.
-- Okno musi dać się przenosić za pasek tytułu, maksymalizować dwuklikiem oraz skalować z czterech krawędzi i czterech narożników.
+- Okno musi dać się przenosić za pasek tytułu, przełączać dwuklikiem w pełny ekran lub zwykły rozmiar oraz skalować z czterech krawędzi i czterech narożników.
 - Dialogi kodów odzyskiwania muszą pozwalać na zmianę rozmiaru i przewijać zawartość zamiast ją ucinać.
 - Strona "Kalkulator" musi pozostawać aktywna także na ekranie kalkulatora ogólnego.
 - Widoki treści muszą obsługiwać przewijanie pionowe.
@@ -208,14 +208,14 @@ System nie zakłada kont administratora, ról sieciowych ani synchronizacji wiel
 - Testy UI: Avalonia Headless.
 - Analiza jakości: SonarQube Cloud przez workflow CI.
 - Aplikacja nie wymaga internetu do działania podstawowego.
-- Wydanie beta używa self-contained, nietrimowanych publikacji bez AOT, ReadyToRun i single-file.
+- Wydanie beta używa self-contained, nietrimowanych publikacji bez AOT i ReadyToRun. Windows oferuje pojedynczy plik EXE, a Linux i macOS zachowują natywne paczki wieloplikowe.
 - Deklarowane platformy beta to Windows 11 24H2 x64, Ubuntu 24.04 x64 i macOS 15 x64 na procesorach Intel.
 - Paczki są niepodpisane. Dokumentacja nie zaleca globalnego wyłączania SmartScreen ani Gatekeepera.
 - Stare snapshoty i prototypy nie są częścią aktywnego kodu i nie powinny być śledzone przez Git.
 
 ## 11. Kryteria akceptacji projektu
 
-Kryteria techniczne bieżącej wersji, publiczna obrona 17 stycznia 2022 r., późniejszy historyczny odbiór przez prowadzącego i publiczna publikacja bieżącej migracji są odrębnymi stanami. Obrona zakończyła się pozytywną decyzją komisji i wynikiem bardzo dobrym. Historyczny projekt został również zaakceptowany przez prowadzącego na początku lutego 2022 r. zgodnie z poświadczeniem właściciela zapisanym 19 lipca 2026 r. Kryteria dotyczące tagu, proweniencji i GitHub Release pozostają warunkami osobnej publikacji `0.9.0-beta.1`, a nie warunkami ponownego zatwierdzenia decyzji historycznych.
+Kryteria techniczne bieżącej wersji, publiczna obrona 17 stycznia 2022 r., późniejszy historyczny odbiór przez prowadzącego i publiczna publikacja bieżącej migracji są odrębnymi stanami. Obrona zakończyła się pozytywną decyzją komisji i wynikiem bardzo dobrym. Historyczny projekt został również zaakceptowany przez prowadzącego na początku lutego 2022 r. zgodnie z poświadczeniem właściciela zapisanym 19 lipca 2026 r. Kryteria dotyczące tagu, proweniencji i GitHub Release pozostają warunkami osobnej publikacji `0.9.1`, a nie warunkami ponownego zatwierdzenia decyzji historycznych.
 
 Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 
@@ -252,10 +252,10 @@ Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 31. `ACCESSIBILITY_WCAG_AUDIT.md` zawiera wszystkie 55 obowiązujących kryteriów A/AA WCAG 2.2, nie przedstawia testów headless jako certyfikatu i jawnie wskazuje kontrole wymagające technologii asystującej lub użytkownika.
 32. Kryteria Issue #4 wymagają sześciu kafelków, osobnych tras `Matura` i `Zadania`, zachowania 35 identyfikatorów arkusza i istniejącego postępu, wyłącznie używanych diagramów, 75 zgodnych sum archiwum oraz braku aktywnych PNG/JPG, `Bitmap`, `Image` i `AssetImage` poza ikoną `img/icon.ico` używaną tylko jako `ApplicationIcon`.
 33. Kryteria Issue #5 wymagają pojedynczego PiP w trzech trybach, zachowania sesji przy zmianie hosta, ustawienia per profil, dokładnego i uporządkowanego kopiowania `DisplayValue`, wklejania w brudnopisie i odpowiedzi liczbowej oraz izolacji brudnopisu między profilami i zadaniami.
-34. Kryteria Issue #6 wymagają własnego paska bez dekoracji systemowych, historycznej kolejności `🍓` zamknij, `🍋` maksymalizuj lub przywróć, `🍏` minimalizuj po lewej, wyśrodkowanej marki `🍀 Abituria`, motywu po prawej, fontu Mulish oraz tooltipów i nazw automatyzacji wszystkich kontrolek.
+34. Kryteria Issue #6 wymagają własnego paska bez dekoracji systemowych, historycznej kolejności `🍓` zamknij, `🍋` pełny ekran lub przywróć, `🍏` minimalizuj po lewej, wyśrodkowanej marki `🍀 Abituria`, motywu po prawej, fontu Mulish oraz tooltipów i nazw automatyzacji wszystkich kontrolek.
 35. Kryteria Issues #7-#9 wymagają źródeł i SHA-256 matur CKE 2026, kontraktów `33/37/50` i `12/13/50`, zachowania `mp21-*`, oddzielnych liczników postępu, odpowiedzi `compound`, wektorowych diagramów, bieżącego odnośnika `haribo841/Abituria#9` oraz zatwierdzonej proweniencji opartej na deklaracji właściciela.
 36. Matury 2025 wymagają przypiętych arkuszy i zasad oceniania CKE z SHA-256, kontraktów `31/35/50` i `12/13/50`, stabilnych identyfikatorów, dziewięciu wektorowych diagramów poziomu podstawowego, agregacji w 17 tematach oraz zatwierdzonej proweniencji.
-37. Matury maj 2024 PP i PR wymagają przypiętych arkuszy i zasad oceniania CKE z SHA-256, kontraktów `31/35/46` i `13/14/50`, stabilnych identyfikatorów `mm24-p0-*` i `mm24-r0-*`, jedenastu oraz jednego diagramu wektorowego, agregacji w 17 tematach, osobnego postępu oraz statusu proweniencji `blocked` do czasu osobistego rozszerzenia deklaracji praw.
+37. Matury maj 2024 PP i PR wymagają przypiętych arkuszy i zasad oceniania CKE z SHA-256, kontraktów `31/35/46` i `13/14/50`, stabilnych identyfikatorów `mm24-p0-*` i `mm24-r0-*`, jedenastu oraz jednego diagramu wektorowego, agregacji w 17 tematach, osobnego postępu oraz statusu proweniencji `approved` na podstawie osobistego rozszerzenia deklaracji praw z 10 sierpnia 2026 r.
 
 ## Macierz zgodności wymagań z implementacją
 
@@ -282,15 +282,15 @@ Lokalna implementacja obejmuje pełny kontrakt `119/238/357`, filtr poziomu, ćw
 
 ## Status Issue #7
 
-Techniczny inwentarz licencji i proweniencji obejmuje matury CKE 2024, 2025 i 2026 na poziomie podstawowym lub rozszerzonym, ich zasady oceniania oraz trzydzieści jeden autorskich implementacji wektorowych Avalonia. Rozszerzenia deklaracji właściciela z 3 i 5 sierpnia 2026 r. obejmują nadal wyłącznie zatwierdzone arkusze 2025 i 2026. Grupy `cke-2024-main-basic-exam` i `cke-2024-main-extended-exam` mają status `blocked`, ponieważ `ASSET_RIGHTS_DECLARATION.md` nie obejmuje jeszcze arkuszy MMAP-P0-100-A-2405 i MMAP-R0-100-A-2405 ani ich zasad oceniania. Zwykła walidacja proweniencji ma przechodzić, natomiast `Test-ContentProvenance.ps1 -RequireReleaseEligible` ma celowo blokować wydanie. Issue #7 nie może zostać zamknięte przed osobistym rozszerzeniem deklaracji przez właściciela.
+Techniczny inwentarz licencji i proweniencji obejmuje matury CKE 2024, 2025 i 2026 na poziomie podstawowym lub rozszerzonym, ich zasady oceniania oraz trzydzieści jeden autorskich implementacji wektorowych Avalonia. Rozszerzenia deklaracji właściciela z 3, 5 i 10 sierpnia 2026 r. obejmują zatwierdzone arkusze 2024, 2025 i 2026, 97 przykładów z informatorów CKE i wskazane diagramy. Grupy `cke-2024-main-basic-exam` oraz `cke-2024-main-extended-exam` mają status `approved`. Zwykła walidacja proweniencji i `Test-ContentProvenance.ps1 -RequireReleaseEligible` muszą przechodzić przed wydaniem. Issue #7 uzyskało wymagane rozszerzenie deklaracji.
 
 ## Status issue #36
 
-Repozytorium zawiera kompletny proces wydania wersji `0.9.0-beta.1`: jedno źródło wersji, .NET 10 LTS, lockfile, audyt, paczki portable dla trzech systemów, diagnostyczny smoke test, ekran "O programie", dokumentację, sumy, SBOM i atestacje. Manifest dokładnego commita wydania miał `releaseEligible=true`, a publiczny prerelease znajduje się pod adresem `https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1`. Bieżący manifest ma `releaseEligible=false` z powodu później dodanej warstwy przykładów CKE.
+Repozytorium zawiera kompletny proces wydania wersji `0.9.1`: jedno źródło wersji, .NET 10 LTS, lockfile, audyt, paczki portable dla trzech systemów, diagnostyczny smoke test, ekran "O programie", dokumentację, sumy, SBOM i atestacje. Bieżący manifest ma `releaseEligible=true` po rozszerzeniu deklaracji z 10 sierpnia 2026 r., a prerelease jest śledzony pod adresem `https://github.com/haribo841/Abituria/releases/tag/v0.9.1`.
 
 ## Status Issue #9
 
-Bieżące [haribo841/Abituria#9](https://github.com/haribo841/Abituria/issues/9) wymaga utrzymania kompletnej analizy biznesowej obejmującej cele, użytkowników, model udostępniania, zakres, harmonogram, licencję, metodykę wymagań i architekturę. Aktywny dokument [BUSINESS_ANALYSIS.md](BUSINESS_ANALYSIS.md) zawiera weryfikowalne wymagania, testy i bramę pochodzenia zasobów. Historyczny kontekst pozostaje wyłącznie pod pełnym adresem [Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski#38](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38), bez zmian w starym repozytorium. Bieżące `releaseEligible=false` jawnie sygnalizuje niezatwierdzoną jeszcze redystrybucję przykładów z informatorów CKE oraz transkrypcji matury 2024 PP i PR.
+Bieżące [haribo841/Abituria#9](https://github.com/haribo841/Abituria/issues/9) wymaga utrzymania kompletnej analizy biznesowej obejmującej cele, użytkowników, model udostępniania, zakres, harmonogram, licencję, metodykę wymagań i architekturę. Aktywny dokument [BUSINESS_ANALYSIS.md](BUSINESS_ANALYSIS.md) zawiera weryfikowalne wymagania, testy i bramę pochodzenia zasobów. Historyczny kontekst pozostaje wyłącznie pod pełnym adresem [Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski#38](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38), bez zmian w starym repozytorium. Bieżące `releaseEligible=true` odzwierciedla zatwierdzoną przez właściciela redystrybucję przykładów z informatorów CKE oraz transkrypcji matury 2024 PP i PR.
 
 ## Status issue #43
 
@@ -298,7 +298,7 @@ Issue #43 dotyczyło odbioru czterech przyrostów, prototypowania, testów użyt
 
 Nie zachowano dokładnego dnia odbioru, osobnych dat decyzji dla I-III przyrostu, liczby i danych uczestników, kart sesji, komentarzy, powiązania poprawek z uczestnikami, kanału przekazania ani hasha historycznego pakietu. Protokoły ujawniają te braki i nie zastępują ich fikcyjnymi danymi. Późniejsze poprawki H-01-H-03 są wynikiem przeglądu heurystycznego z 2026 r. i nie są przypisywane uczestnikom.
 
-Na tej podstawie historyczny odbiór ma status `ACCEPTED - READY TO CLOSE`. Publiczny GitHub Release `0.9.0-beta.1` pozostaje odrębnym, ukończonym działaniem bieżącej migracji i nie jest przedstawiany jako dowód historycznego odbioru.
+Na tej podstawie historyczny odbiór ma status `ACCEPTED - READY TO CLOSE`. Publiczny GitHub Release `0.9.1` pozostaje odrębnym działaniem bieżącej migracji i nie jest przedstawiany jako dowód historycznego odbioru.
 
 ## Status issue #44
 
@@ -314,4 +314,4 @@ Issue #45 definiowało siedem obszarów oceny, dziesięć warunków akceptacji o
 
 Historyczny produkt WPF został zaprezentowany 17 stycznia 2022 r., miał paczkę `v1.0.0` dostępną przed obroną i końcowe wydanie `v1.0.1` z 18 stycznia 2022 r. Komisja wydała decyzję pozytywną, a projekt i obrona uzyskały wynik bardzo dobry według poświadczenia właściciela. Nagranie dostępne przez link potwierdza prezentację, demonstrację i pytania, ale nie obejmuje ogłoszenia wyniku. Nie zachowano podpisanej karty oceny, pisemnej opinii prowadzącego ani ocen indywidualnych i dokumentacja nie rekonstruuje ich przez domysł.
 
-Bieżąca migracja AvaloniaUI `0.9.0-beta.1` ma osobne dowody techniczne i nie była przedmiotem komisji z 2022 r. Jej publiczny GitHub Release pozostaje niewykonany. Stan historycznego zakresu: `ACCEPTED - HISTORICAL CRITERIA SATISFIED - READY TO CLOSE AS COMPLETED`.
+Bieżąca migracja AvaloniaUI `0.9.1` ma osobne dowody techniczne i nie była przedmiotem komisji z 2022 r. Jej publiczny GitHub Release jest odrębnym procesem wydawniczym. Stan historycznego zakresu: `ACCEPTED - HISTORICAL CRITERIA SATISFIED - READY TO CLOSE AS COMPLETED`.

@@ -2,6 +2,28 @@
 
 W tym pliku są opisywane wyłącznie rzeczywiste wydania repozytorium `haribo841/Abituria`. Nie rekonstruujemy fikcyjnych wersji `0.1.0` ani `0.2.0` na podstawie historycznych snapshotów.
 
+## [0.9.1] - 2026-08-10
+
+Wydanie beta uzupełniające dostępność ćwiczeń, wydawanie pojedynczego pliku Windows i dokumentację produktu.
+
+### Dodano
+
+- podpowiedzi dla wszystkich trybów zadań, z bezpiecznym komunikatem zastępczym, gdy źródłowe dane zadania nie definiują własnych kroków;
+- pełne przechowywanie historii podpowiedzi w widoku ćwiczenia oraz testy zachowania dla zadań matur i kursu;
+- transkrypcję matury głównej CKE 2024 na poziomie podstawowym i rozszerzonym wraz z wektorowymi diagramami Avalonia;
+- pełną transkrypcję historycznej analizy biznesowej jako materiał archiwalny oraz aktywną analizę śledzącą Issue #9;
+- osobiste rozszerzenie deklaracji redystrybucji dla przykładów z informatorów CKE i matur 2024, opisane w `ASSET_RIGHTS_DECLARATION.md`.
+
+### Zmieniono
+
+- hasło lokalnego konta musi być niepuste, ale nie ma minimalnej długości;
+- Windows otrzymuje jeden uruchamialny plik EXE, a ZIP pozostaje wyłącznie pakietem audytowym;
+- widoki ćwiczeń i źródeł przewijają się do końca, a tryb pełnego ekranu ukrywa systemowy pasek zadań;
+- dokumentację proweniencji, instalacji, wymagań i procesu wydania dla publicznego prerelease `v0.9.1`;
+- manifest proweniencji ma `releaseEligible=true` po wskazanej deklaracji właściciela.
+
+[0.9.1]: https://github.com/haribo841/Abituria/releases/tag/v0.9.1
+
 ## [0.9.0-beta.1] - 2026-08-05
 
 Pierwsze publiczne wydanie beta Abiturii po migracji do AvaloniaUI.

@@ -3,11 +3,13 @@ using Abituria.Models;
 using Abituria.Services;
 using Abituria.ViewModels;
 using Abituria.Views;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Headless.XUnit;
 using Avalonia.Interactivity;
 using Avalonia.LogicalTree;
 using Avalonia.Threading;
+using Avalonia.VisualTree;
 using Microsoft.Data.Sqlite;
 
 namespace Abituria.Tests;
@@ -50,11 +52,10 @@ public sealed class ExerciseAndRoutingCoverageTests
             Assert.Equal(1, backCalls);
             Assert.Equal([exercises[0].Id, exercises[2].Id], opened);
 
-            ClickButtonContaining(view, "Nast");
-            ClickButtonContaining(view, "Nast");
+            ClickButtonContaining(view, "Pokaż");
             Assert.Contains(
                 view.GetLogicalDescendants().OfType<TextBlock>(),
-                control => control.Text == "To była ostatnia podpowiedź.");
+                control => control.Text == "Pierwsza wskazówka testowa.");
 
             var radio = view.GetLogicalDescendants().OfType<RadioButton>().ElementAt(1);
             radio.IsChecked = true;
@@ -73,6 +74,69 @@ public sealed class ExerciseAndRoutingCoverageTests
             Assert.Contains(
                 openView.GetLogicalDescendants().OfType<TextBlock>(),
                 control => control.Text == "Odpowiedź została ujawniona. Zadanie zapisano jako ukończone.");
+        }
+        finally
+        {
+            window.Close();
+            SqliteConnection.ClearAllPools();
+            if (Directory.Exists(directory)) Directory.Delete(directory, true);
+        }
+    }
+
+    [AvaloniaFact]
+    public async Task Active_exam_without_authored_hints_shows_guidance_and_its_source_can_be_scrolled_into_view()
+    {
+        var directory = Path.Combine(Path.GetTempPath(), "Abituria.Tests", Guid.NewGuid().ToString("N"));
+        var accounts = new AccountService(new AppDbContextFactory(Path.Combine(directory, "exam-hints.db")), new PasswordHasher(1_000));
+        await accounts.InitializeAsync();
+        var profile = (await accounts.GetProfilesAsync()).Single(item => item.Kind == ProfileKind.Guest);
+        var repository = new ContentRepository();
+        var exam = repository.GetExam("matura-maj-2024-podstawowa");
+        var exercise = exam.Exercises.First();
+        var expectedHints = ExerciseHintProvider.GetHints(exercise);
+        var context = new ExerciseViewContext(
+            exam.Exercises,
+            exam.Source,
+            repository.UiCopy,
+            profile,
+            accounts,
+            repository.Diagrams,
+            () => { },
+            _ => { });
+        var view = new ExerciseView(exercise, context);
+        var window = new Window { Width = 720, Height = 520, Content = view };
+
+        try
+        {
+            window.Show();
+            Dispatcher.UIThread.RunJobs();
+
+            var hint = view.GetLogicalDescendants().OfType<Button>()
+                .Single(control => control.Content is string content && content.StartsWith("Pokaż podpowiedź", StringComparison.Ordinal));
+            Click(hint);
+            Assert.Contains(view.GetLogicalDescendants().OfType<TextBlock>(), control => control.Text == expectedHints[0]);
+            Click(hint);
+            Assert.Contains(view.GetLogicalDescendants().OfType<TextBlock>(), control => control.Text == expectedHints[1]);
+            Assert.False(hint.IsEnabled);
+
+            var scroll = view.GetVisualDescendants().OfType<ScrollViewer>()
+                .Single(control => control.Content is Border { Child: StackPanel });
+            Assert.Equal(Avalonia.Controls.Primitives.ScrollBarVisibility.Auto, scroll.VerticalScrollBarVisibility);
+            Assert.True(scroll.Extent.Height > scroll.Viewport.Height);
+            scroll.Offset = new Vector(0d, scroll.Extent.Height - scroll.Viewport.Height);
+            Dispatcher.UIThread.RunJobs();
+
+            var source = view.GetVisualDescendants().OfType<Border>()
+                .Single(control => control.Name == "ExerciseSourceBand");
+            var sourceBounds = BoundsRelativeTo(source, window);
+            var scrollBounds = BoundsRelativeTo(scroll, window);
+            var sourceInScroll = source.TranslatePoint(default, scroll);
+            Assert.True(sourceBounds.Top >= scrollBounds.Top - 1d);
+            Assert.True(
+                sourceBounds.Bottom <= scrollBounds.Bottom + 1d,
+                $"Dolna krawędź źródła: {sourceBounds.Bottom}; dolna krawędź widoku: {scrollBounds.Bottom}; " +
+                $"pozycja źródła w ScrollViewer: {sourceInScroll}; offset: {scroll.Offset.Y}; " +
+                $"extent: {scroll.Extent.Height}; viewport: {scroll.Viewport.Height}.");
         }
         finally
         {
@@ -212,6 +276,13 @@ public sealed class ExerciseAndRoutingCoverageTests
     {
         button.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
         Dispatcher.UIThread.RunJobs();
+    }
+
+    private static Rect BoundsRelativeTo(Control control, Window window)
+    {
+        var position = control.TranslatePoint(default, window);
+        Assert.NotNull(position);
+        return new Rect(position.Value, control.Bounds.Size);
     }
 
     private static async Task WaitUntilAsync(Func<Task<bool>> condition)

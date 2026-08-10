@@ -1,6 +1,6 @@
 # Podręcznik użytkownika
 
-Podręcznik dotyczy Abiturii `0.9.0-beta.1`. Aplikacja działa lokalnie i nie wymaga połączenia z internetem do nauki, obliczeń ani zapisu postępu.
+Podręcznik dotyczy Abiturii `0.9.1`. Aplikacja działa lokalnie i nie wymaga połączenia z internetem do nauki, obliczeń ani zapisu postępu.
 
 ## Pierwsze uruchomienie
 
@@ -26,12 +26,12 @@ Górna nawigacja po zalogowaniu zawiera:
 Abituria używa własnego paska tytułu inspirowanego historyczną wersją aplikacji. Po lewej znajdują się kolejno:
 
 - `🍓` - zamknięcie aplikacji;
-- `🍋` - maksymalizacja albo przywrócenie;
+- `🍋` - pełny ekran albo przywrócenie;
 - `🍏` - minimalizacja.
 
-Marka `🍀 Abituria` jest wyśrodkowana, a przycisk motywu znajduje się po prawej. Najechanie na dowolną kontrolkę paska pokazuje opisowy tooltip po krótkim opóźnieniu. Symbol `🍋` pozostaje taki sam po maksymalizacji, natomiast tooltip zmienia się na „Przywróć”.
+Marka `🍀 Abituria` jest wyśrodkowana, a przycisk motywu znajduje się po prawej. Najechanie na dowolną kontrolkę paska pokazuje opisowy tooltip po krótkim opóźnieniu. Symbol `🍋` pozostaje taki sam po wejściu w pełny ekran, natomiast tooltip zmienia się na „Przywróć”. Pełny ekran wykorzystuje cały ekran Windows, bez widocznego nad aplikacją paska zadań.
 
-Przeciągnięcie pustego obszaru paska przenosi okno, a dwuklik maksymalizuje je lub przywraca. Rozmiar zwykłego okna można zmieniać z każdej krawędzi i narożnika. Minimalny obsługiwany rozmiar to `720x520`.
+Przeciągnięcie pustego obszaru paska przenosi okno, a dwuklik włącza pełny ekran albo przywraca zwykły rozmiar. Rozmiar zwykłego okna można zmieniać z każdej krawędzi i narożnika. Minimalny obsługiwany rozmiar to `720x520`.
 
 Przycisk motywu przełącza cyklicznie ustawienia:
 
@@ -63,7 +63,7 @@ Profil gościa zapisuje ukończone zadania w tej samej lokalnej bazie co konto c
 W sekcji „Nowe konto” podaj:
 
 - nazwę mającą od 1 do 30 znaków po usunięciu początkowych i końcowych spacji;
-- hasło mające od 15 do 128 znaków;
+- niepuste hasło mające najwyżej 128 znaków, bez wymaganej długości minimalnej;
 - identyczne powtórzenie hasła.
 
 Nazwa nie może składać się wyłącznie ze spacji. Po udanej rejestracji aplikacja pokazuje jednorazowy kod odzyskiwania. Skopiuj go i przechowuj poza aplikacją. Po zamknięciu okna nie można ponownie wyświetlić tego samego kodu.

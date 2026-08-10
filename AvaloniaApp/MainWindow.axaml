@@ -54,7 +54,7 @@
                       Content="🍋"
                       Click="MaximizeButtonOnClick"
                       ToolTip.ShowDelay="250"
-                      ToolTip.Tip="Maksymalizuj" />
+                      ToolTip.Tip="Pełny ekran" />
               <Button x:Name="MinimizeButton"
                       Classes="window-control legacy-emoji"
                       Content="🍏"

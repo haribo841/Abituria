@@ -59,7 +59,7 @@ public sealed class Discussion49StyleRegressionTests
         Assert.Equal(["CloseButton", "MaximizeButton", "MinimizeButton"],
             legacyButtons.Select(element => element.Attribute(x + "Name")?.Value));
         Assert.Equal(["🍓", "🍋", "🍏"], legacyButtons.Select(element => element.Attribute("Content")?.Value));
-        Assert.Equal(["Zamknij", "Maksymalizuj", "Minimalizuj"],
+        Assert.Equal(["Zamknij", "Pełny ekran", "Minimalizuj"],
             legacyButtons.Select(element => element.Attribute("ToolTip.Tip")?.Value));
         Assert.All(legacyButtons, element =>
         {
@@ -85,7 +85,8 @@ public sealed class Discussion49StyleRegressionTests
         Assert.Contains("BeginMoveDrag(e)", mainWindowSource, StringComparison.Ordinal);
         Assert.Contains("BeginResizeDrag(edge, e)", mainWindowSource, StringComparison.Ordinal);
         Assert.Contains("WindowState.Minimized", mainWindowSource, StringComparison.Ordinal);
-        Assert.Contains("WindowState.Maximized", mainWindowSource, StringComparison.Ordinal);
+        Assert.Contains("WindowState.FullScreen", mainWindowSource, StringComparison.Ordinal);
+        Assert.DoesNotContain("WindowState.Maximized", mainWindowSource, StringComparison.Ordinal);
 
         var appSource = File.ReadAllText(appPath);
         var styleSource = File.ReadAllText(stylesPath);
@@ -375,11 +376,11 @@ public sealed class Discussion49StyleRegressionTests
             Assert.Equal("🍋", maximize.Content);
             Assert.Equal("🍏", minimize.Content);
             Assert.Equal("Zamknij", ToolTip.GetTip(close));
-            Assert.Equal("Maksymalizuj", ToolTip.GetTip(maximize));
+            Assert.Equal("Pełny ekran", ToolTip.GetTip(maximize));
             Assert.Equal("Minimalizuj", ToolTip.GetTip(minimize));
             Assert.All(new[] { close, maximize, minimize }, button => Assert.Equal(250, ToolTip.GetShowDelay(button)));
             Assert.Equal("Minimalizuj okno", AutomationProperties.GetName(minimize));
-            Assert.Equal("Maksymalizuj okno", AutomationProperties.GetName(maximize));
+            Assert.Equal("Włącz pełny ekran", AutomationProperties.GetName(maximize));
             Assert.Equal("Zamknij okno", AutomationProperties.GetName(close));
             foreach (var button in new[] { close, maximize, minimize })
             {
@@ -390,7 +391,7 @@ public sealed class Discussion49StyleRegressionTests
             }
 
             maximize.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-            Assert.Equal(WindowState.Maximized, window.WindowState);
+            Assert.Equal(WindowState.FullScreen, window.WindowState);
             Assert.False(grips.IsVisible);
             Assert.Equal("🍋", maximize.Content);
             Assert.Equal("Przywróć", ToolTip.GetTip(maximize));
@@ -400,7 +401,7 @@ public sealed class Discussion49StyleRegressionTests
             Assert.Equal(WindowState.Normal, window.WindowState);
             Assert.True(grips.IsVisible);
             Assert.Equal("🍋", maximize.Content);
-            Assert.Equal("Maksymalizuj", ToolTip.GetTip(maximize));
+            Assert.Equal("Pełny ekran", ToolTip.GetTip(maximize));
 
             minimize.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
             Assert.Equal(WindowState.Minimized, window.WindowState);

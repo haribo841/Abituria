@@ -53,7 +53,7 @@ Każdy diagram ma stabilny identyfikator, `sourceId` równy `cke-2026-main-basic
 
 ## Proweniencja
 
-Treść arkusza ma status `approved` w `Content/provenance.json` na podstawie rozszerzenia `docs/ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r. Siedem figur jest autorskimi implementacjami wektorowymi Avalonia, bez aktywnych rastrów, `Image` lub `Bitmap`. Globalne `releaseEligible=false` wynika z innych, jeszcze niezatwierdzonych grup: przykładów z informatorów CKE oraz transkrypcji matury 2024 PP i PR, a nie ze statusu arkusza 2026.
+Treść arkusza ma status `approved` w `Content/provenance.json` na podstawie rozszerzenia `docs/ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r. Siedem figur jest autorskimi implementacjami wektorowymi Avalonia, bez aktywnych rastrów, `Image` lub `Bitmap`. Po rozszerzeniu deklaracji z 10 sierpnia 2026 r. wszystkie grupy paczkowanych zasobów mają status `approved`, a globalne `releaseEligible=true`.
 
 Deklaracja wskazuje źródła obu matur 2026, ich adresy i sumy SHA-256, zakres redystrybucji w Abiturii oraz dziesięć autorskich implementacji wektorowych Avalonia. Grupy `cke-2026-main-basic-exam`, `cke-2026-main-extended-exam` i `runtime-vector-diagrams` mają status `approved`.
 

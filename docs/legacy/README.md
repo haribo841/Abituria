@@ -7,11 +7,14 @@ Katalog `originals` zawiera niezmienione bajtowo kopie pięciu pierwotnych plik�
 | Dokument | Znaczenie dla obecnego projektu |
 | --- | --- |
 | `analiza-biznesowa.md` | Cele, wymagania, harmonogram i model licencyjny |
+| `analiza-biznesowa-pelna.md` | Pełna historyczna transkrypcja analizy przekazanej przy Issue #9; nie jest źródłem prawdy dla aktualnej aplikacji AvaloniaUI |
 | `definicja-projektu.md` | Wizja narzędzia edukacyjnego i kalkulatorów |
 | `implementacja.md` | Dystrybucja, dokumentacja i informacje o wydaniu |
 | `opis-struktury-systemu.md` | Pierwotna architektura WPF i lista planowanych funkcji |
 | `tresc-dzialow-matematyki.md` | Szkic przyszłych materiałów działowych |
 
 Wersje Markdown są uporządkowanymi streszczeniami. Przy sprawdzaniu dokładnego brzmienia należy używać kopii z `originals`.
+
+Plik `analiza-biznesowa-pelna.md` jest odrębną historyczną transkrypcją przekazaną przy bieżącym Issue #9, a nie kopią bajtową pliku z dawnych snapshotów. Jest jedynym dokumentem z tego katalogu celowo dostępnym przez DocFX, ponieważ aktywna analiza prowadzi do niego odnośnikiem i wyraźnie rozdziela stan historyczny od bieżącej implementacji. Pozostały katalog `legacy`, w tym `originals`, pozostaje wyłączony z publikacji DocFX.
 
 Aktywny stan prac opisują [plan rozwoju](../ROADMAP.md) i [inwentarz migracji](../MIGRATION_INVENTORY.md).

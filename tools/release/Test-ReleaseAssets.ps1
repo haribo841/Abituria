@@ -329,7 +329,9 @@ finally {
 
 $artifactsDirectory = (Resolve-Path -LiteralPath $ArtifactsDirectory).Path
 $runtimeIdentifiers = @("win-x64", "linux-x64", "osx-x64")
+$windowsExecutableName = Get-ReleaseWindowsExecutableName -Version $Version
 $expectedPayloadNames = @(
+    $windowsExecutableName
     foreach ($runtimeIdentifier in $runtimeIdentifiers) {
         Get-ReleaseArchiveName -Version $Version -RuntimeIdentifier $runtimeIdentifier
         Get-ReleaseSbomName -Version $Version -RuntimeIdentifier $runtimeIdentifier
@@ -425,8 +427,10 @@ try {
         if ($releaseMetadata.commit -cne $expectedCommit) {
             throw "Metadata in '$archiveName' is not bound to tag commit '$expectedCommit'."
         }
+        $expectedSingleFile = $runtimeIdentifier -eq "win-x64"
         if (-not $releaseMetadata.selfContained -or $releaseMetadata.trimmed -or
-            $releaseMetadata.aot -or $releaseMetadata.readyToRun -or $releaseMetadata.singleFile) {
+            $releaseMetadata.aot -or $releaseMetadata.readyToRun -or
+            ([bool]$releaseMetadata.singleFile -ne $expectedSingleFile)) {
             throw "Metadata in '$archiveName' does not match the publication contract."
         }
 
@@ -480,8 +484,17 @@ try {
 
         switch ($runtimeIdentifier) {
             "win-x64" {
-                if (-not (Test-Path -LiteralPath (Join-Path $packageDirectory "Abituria.exe") -PathType Leaf)) {
+                $packagedExecutablePath = Join-Path $packageDirectory "Abituria.exe"
+                if (-not (Test-Path -LiteralPath $packagedExecutablePath -PathType Leaf)) {
                     throw "Paczka win-x64 nie zawiera Abituria.exe."
+                }
+                $windowsExecutablePath = Join-Path $artifactsDirectory $windowsExecutableName
+                if (-not (Test-Path -LiteralPath $windowsExecutablePath -PathType Leaf) -or
+                    (Get-Item -LiteralPath $windowsExecutablePath).Length -eq 0) {
+                    throw "Wydanie nie zawiera pojedynczego pliku '$windowsExecutableName'."
+                }
+                if ((Get-Sha256 -Path $windowsExecutablePath) -cne (Get-Sha256 -Path $packagedExecutablePath)) {
+                    throw "Pojedynczy plik '$windowsExecutableName' nie jest identyczny z binarium zweryfikowanym w archiwum win-x64."
                 }
             }
             "linux-x64" {

@@ -122,13 +122,13 @@ Widoki są zwykłymi kontrolkami Avalonia `UserControl`. Produkcyjny kod nie uż
 `MainWindow` wyłącza dekoracje systemowe przez `WindowDecorations="None"`, czyli aktualny mechanizm Avalonia 12 zastępujący starsze `SystemDecorations`, i rozszerza obszar klienta na pasek tytułu. Własny chrome składa się z:
 
 - obszaru przeciągania wywołującego `BeginMoveDrag`;
-- dwukliku przełączającego `WindowState` między `Normal` i `Maximized`;
-- historycznych przycisków emoji po lewej: `🍓` zamyka, `🍋` maksymalizuje lub przywraca, a `🍏` minimalizuje okno;
+- dwukliku przełączającego `WindowState` między `Normal` i `FullScreen`;
+- historycznych przycisków emoji po lewej: `🍓` zamyka, `🍋` włącza pełny ekran lub przywraca okno, a `🍏` minimalizuje okno;
 - wyśrodkowanej marki `🍀 Abituria` oraz przycisku motywu wyrównanego do prawej;
 - ośmiu przezroczystych uchwytów wywołujących `BeginResizeDrag` dla czterech krawędzi i czterech narożników;
 - aktualizacji tooltipu i nazwy automatyzacji przycisku `🍋` po zmianie stanu okna, bez zastępowania historycznego emoji standardowym glyphem.
 
-Emoji są znakami Unicode renderowanymi przez font platformy. Archiwalne `close.png`, `max.png` i `min.png` nie są zasobami uruchomieniowymi. Uchwyty są aktywne tylko dla zwykłego, skalowalnego okna. Każdy widoczny przycisk chrome ma tooltip z opóźnieniem `250 ms`, `AutomationId`, opisową nazwę i jawny stan `focus-visible`.
+Emoji są znakami Unicode renderowanymi przez font platformy. Archiwalne `close.png`, `max.png` i `min.png` nie są zasobami uruchomieniowymi. `FullScreen` wykorzystuje pełny obszar ekranu, więc na Windows nie pozostawia systemowego paska zadań nad aplikacją. Uchwyty są aktywne tylko dla zwykłego, skalowalnego okna. Każdy widoczny przycisk chrome ma tooltip z opóźnieniem `250 ms`, `AutomationId`, opisową nazwę i jawny stan `focus-visible`.
 
 ### Motywy i zasoby wizualne
 

@@ -167,6 +167,15 @@ function Get-ReleaseArchiveName {
     return "Abituria-v$Version-$RuntimeIdentifier.$extension"
 }
 
+function Get-ReleaseWindowsExecutableName {
+    param(
+        [Parameter(Mandatory)]
+        [string]$Version
+    )
+
+    return "Abituria-v$Version-win-x64.exe"
+}
+
 function Get-ReleaseSbomName {
     param(
         [Parameter(Mandatory)]
@@ -413,6 +422,7 @@ Export-ModuleMember -Function @(
     "Reset-Directory",
     "Remove-TemporaryDirectory",
     "Get-ReleaseArchiveName",
+    "Get-ReleaseWindowsExecutableName",
     "Get-ReleaseSbomName",
     "Assert-ReleasePackageScope",
     "Get-PublishedNuGetComponents",

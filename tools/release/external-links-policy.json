@@ -95,6 +95,10 @@
     {
       "urlPrefix": "https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1",
       "reason": "The release page is created after tag preflight, so its existence is verified by the release workflow rather than by the earlier documentation-link step."
+    },
+    {
+      "urlPrefix": "https://github.com/haribo841/Abituria/releases/tag/v0.9.1",
+      "reason": "The release page is created after tag preflight, so its existence is verified by the release workflow rather than by the earlier documentation-link step."
     }
   ]
 }

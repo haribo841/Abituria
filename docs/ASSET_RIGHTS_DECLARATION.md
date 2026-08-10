@@ -73,3 +73,23 @@ Na podstawie bezpośredniego polecenia wdrożenia i publikacji wydania Adam Kubi
 Dziewięć nowych diagramów nie jest kopiami ani osadzonymi rastrami arkusza. Adam Kubiś zaimplementował ich matematyczną treść jako własne, deterministyczne zestawy kontrolek i kształtów Avalonia. Definicje są objęte licencją MIT kodu Abiturii, zachowują przypisanie kontekstu i stron źródłowych CKE oraz nie przypisują Adamowi Kubisiowi autorstwa arkusza.
 
 Rozszerzenie zachowuje wszystkie ograniczenia pierwotnej deklaracji. Nie udziela samodzielnej licencji na źródłowe pliki PDF ani na wyodrębnianie transkrypcji poza Abiturią.
+
+## Rozszerzenie deklaracji z 10 sierpnia 2026 r.
+
+Na podstawie bezpośredniej decyzji właściciela repozytorium Adam Kubiś rozszerza deklarację na publiczną redystrybucję wyłącznie jako integralnej części Abiturii następujących grup:
+
+- `cke-formula-2023-guide-examples`: `Content/official-course-examples.json`, zawierający 97 transkrybowanych przykładów, ich rozwiązania, kryteria, odwołania do wymagań i opisy informacji wizualnej;
+- `cke-2024-main-basic-exam`: `Content/exam-2024-main-basic.json`, obejmujący arkusz `MMAP-P0-100-A-2405` oraz zasady oceniania `MMAP-P0-100-2405`;
+- `cke-2024-main-extended-exam`: `Content/exam-2024-main-extended.json`, obejmujący arkusz `MMAP-R0-100-A-2405` oraz zasady oceniania `MMAP-R0-100-2405`;
+- `runtime-vector-diagrams`: rozszerzenie katalogu `Content/diagrams.json` do 88 deterministycznych definicji, w tym jedenastu własnych implementacji wektorowych figur matury 2024 PP i jednej figury matury 2024 PR.
+
+Źródła CKE objęte rozszerzeniem:
+
+- informator podstawowy Formuły 2023: `https://bip.cke.gov.pl/attachments/download/10085`, SHA-256 `88A0EA8E2EE444506CCA5E89C860178E33B04F181650A36D9C9B4DC9BBE625B2`;
+- informator rozszerzony Formuły 2023: `https://bip.cke.gov.pl/attachments/download/10088`, SHA-256 `BD408CDC8877E04EC79AAC3177FAB304E6F66C6B5FA152D8D3436D4ACFB2BC6F`;
+- arkusz podstawowy 2024: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_podstawowy/MMAP-P0-100-A-2405-arkusz.pdf`, SHA-256 `37BDABE139A83CDD128E35C5A37A6E17DE5C4423F7DB2C6B4887EC8ADD96B7A0`;
+- zasady oceniania poziomu podstawowego 2024: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_podstawowy/MMAP-P0-100-2405-zasady.pdf`, SHA-256 `28D7232FBD3EB77CCF17AAEADE8F541564FBC4E9B59E4547BE4E67DB386D5202`;
+- arkusz rozszerzony 2024: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_rozszerzony/MMAP-R0-100-A-2405-arkusz.pdf`, SHA-256 `873691F2E3740126D969AAC957CBC5666FCAD7D7FCF8499442781E18F6AD53D6`;
+- zasady oceniania poziomu rozszerzonego 2024: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_rozszerzony/MMAP-R0-100-2405-zasady.pdf`, SHA-256 `6535405993D0A9F3360759A2B2335BF7523E177144B207B4D8A6E3D8A3A8AB92`.
+
+Diagramy są autorską implementacją matematycznej treści w obsługiwanych prymitywach Avalonia i nie są kopiami rastrów ani samodzielnymi reprodukcjami plików PDF. Rozszerzenie nie przypisuje Adamowi Kubisiowi autorstwa materiałów CKE, nie przenosi praw na odbiorców i nie udziela samodzielnej licencji na źródłowe PDF-y lub wyodrębnione transkrypcje. Zachowuje wszystkie ograniczenia pierwotnej deklaracji, a jednocześnie stanowi podstawę statusu `approved` wymienionych grup w `Content/provenance.json`.

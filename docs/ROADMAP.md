@@ -37,7 +37,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - podpisywanie kodu i paczek,
 - paczka macOS dla Apple Silicon.
 
-Manifest `Content/provenance.json` ma obecnie `releaseEligible=false`, ponieważ grupy `cke-formula-2023-guide-examples`, `cke-2024-main-basic-exam` i `cke-2024-main-extended-exam` pozostają `blocked` do czasu rozszerzenia deklaracji właściciela. Arkusze CKE 2025 i 2026 na obu poziomach, zasady oceniania i dziewiętnaście zatwierdzonych autorskich implementacji wektorowych Avalonia pozostają objęte wcześniejszymi rozszerzeniami deklaracji z 3 i 5 sierpnia 2026 r. Opublikowane paczki portable wersji `0.9.0-beta.1` powstały na wcześniejszym, zatwierdzonym commicie po wykonaniu kompletnej checklisty wydania.
+Manifest `Content/provenance.json` ma obecnie `releaseEligible=true`. Rozszerzenia deklaracji właściciela z 3, 5 i 10 sierpnia 2026 r. obejmują arkusze CKE 2024, 2025 i 2026 na obu poziomach, zasady oceniania, przykłady z informatorów CKE oraz trzydzieści jeden autorskich implementacji wektorowych Avalonia. Publiczny prerelease `0.9.1` nadal wymaga pełnej checklisty wydania i zweryfikowanego workflow.
 
 ## Zastąpione
 

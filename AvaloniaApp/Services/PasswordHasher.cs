@@ -10,7 +10,6 @@ public sealed record PasswordCredential(byte[] Hash, byte[] Salt, int Iterations
 public sealed class PasswordHasher(int iterations = PasswordHasher.DefaultIterations)
 {
     public const int DefaultIterations = 600_000;
-    public const int MinimumPasswordLength = 15;
     public const int MaximumPasswordLength = 128;
     private const int SaltLength = 16;
     private const int HashLength = 32;
@@ -27,17 +26,17 @@ public sealed class PasswordHasher(int iterations = PasswordHasher.DefaultIterat
 
     public static bool VerifyPassword(string password, byte[] expectedHash, byte[] salt, int iterations)
     {
-        if (password.Length > MaximumPasswordLength) return false;
+        if (string.IsNullOrEmpty(password) || password.Length > MaximumPasswordLength) return false;
         var actual = Derive(password, salt, iterations);
         return CryptographicOperations.FixedTimeEquals(actual, expectedHash);
     }
 
     public static void ValidatePassword(string password)
     {
-        if (password.Length < MinimumPasswordLength || password.Length > MaximumPasswordLength)
-        {
-            throw new ArgumentException($"Hasło musi mieć od {MinimumPasswordLength} do {MaximumPasswordLength} znaków.");
-        }
+        if (string.IsNullOrEmpty(password))
+            throw new ArgumentException("Hasło nie może być puste.");
+        if (password.Length > MaximumPasswordLength)
+            throw new ArgumentException($"Hasło może mieć najwyżej {MaximumPasswordLength} znaków.");
     }
 
     public static string GenerateRecoveryCode()

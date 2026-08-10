@@ -120,7 +120,8 @@ public sealed class LoginView : UserControl
             MaxLength = AccountService.MaximumDisplayNameLength
         };
         AutomationProperties.SetName(name, "Nazwa nowego konta");
-        var newPassword = PasswordBox("Hasło (minimum 15 znaków)");
+        var newPassword = PasswordBox("Hasło");
+        newPassword.Name = "RegistrationPasswordBox";
         var confirmation = PasswordBox("Powtórz hasło");
         forms.Children.Add(name);
         forms.Children.Add(newPassword);

@@ -3,7 +3,7 @@
   "entries": {
     "account.registration.rules": {
       "title": "Zasady tworzenia konta",
-      "body": "Nazwa użytkownika musi mieć od 1 do 30 znaków. Początkowe i końcowe spacje są usuwane, a nazwa nie może składać się wyłącznie ze spacji. Hasło musi mieć od 15 do 128 znaków, a oba pola hasła muszą być identyczne."
+      "body": "Nazwa użytkownika musi mieć od 1 do 30 znaków. Początkowe i końcowe spacje są usuwane, a nazwa nie może składać się wyłącznie ze spacji. Hasło nie może być puste i może mieć najwyżej 128 znaków, a oba pola hasła muszą być identyczne."
     },
     "calculator.general.syntax": {
       "title": "Składnia",

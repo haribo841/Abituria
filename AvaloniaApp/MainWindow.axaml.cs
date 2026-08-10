@@ -144,9 +144,16 @@ public partial class MainWindow : Window
             return;
         }
 
-        var root = new Grid { RowDefinitions = new RowDefinitions("Auto,*"), Classes = { "app-shell" } };
+        var root = new Grid
+        {
+            RowDefinitions = new RowDefinitions("Auto,*"),
+            Classes = { "app-shell" },
+            MinHeight = 0
+        };
         root.Children.Add(BuildTopBar());
         var body = BuildPage();
+        body.MinHeight = 0;
+        body.VerticalAlignment = VerticalAlignment.Stretch;
         Grid.SetRow(body, 1);
         root.Children.Add(body);
         _shellHost.Child = root;
@@ -481,7 +488,7 @@ public partial class MainWindow : Window
 
     private void MinimizeButtonOnClick(object? sender, RoutedEventArgs e) => WindowState = WindowState.Minimized;
 
-    private void MaximizeButtonOnClick(object? sender, RoutedEventArgs e) => ToggleMaximize();
+    private void MaximizeButtonOnClick(object? sender, RoutedEventArgs e) => ToggleFullScreen();
 
     private void CloseButtonOnClick(object? sender, RoutedEventArgs e) => Close();
 
@@ -492,7 +499,7 @@ public partial class MainWindow : Window
 
         if (e.ClickCount == 2)
         {
-            ToggleMaximize();
+            ToggleFullScreen();
             e.Handled = true;
             return;
         }
@@ -501,8 +508,8 @@ public partial class MainWindow : Window
         e.Handled = true;
     }
 
-    private void ToggleMaximize() =>
-        WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
+    private void ToggleFullScreen() =>
+        WindowState = WindowState == WindowState.FullScreen ? WindowState.Normal : WindowState.FullScreen;
 
     private void ResizeNorthOnPointerPressed(object? sender, PointerPressedEventArgs e) => BeginResize(WindowEdge.North, e);
 
@@ -542,9 +549,9 @@ public partial class MainWindow : Window
         if (_maximizeButton is null || _resizeGrips is null)
             return;
 
-        var isMaximized = WindowState == WindowState.Maximized;
+        var isFullScreen = WindowState == WindowState.FullScreen;
         _resizeGrips.IsVisible = WindowState == WindowState.Normal;
-        ToolTip.SetTip(_maximizeButton, isMaximized ? "Przywróć" : "Maksymalizuj");
-        AutomationProperties.SetName(_maximizeButton, isMaximized ? "Przywróć okno" : "Maksymalizuj okno");
+        ToolTip.SetTip(_maximizeButton, isFullScreen ? "Przywróć" : "Pełny ekran");
+        AutomationProperties.SetName(_maximizeButton, isFullScreen ? "Przywróć okno" : "Włącz pełny ekran");
     }
 }

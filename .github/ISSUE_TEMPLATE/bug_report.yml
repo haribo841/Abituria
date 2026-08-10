@@ -17,7 +17,7 @@ body:
       label: Wersja aplikacji
       description: Wybierz wersję widoczną na ekranie O programie albo sposób uruchomienia.
       options:
-        - 0.9.0-beta.1
+        - 0.9.1
         - Build z gałęzi main
         - Inna wersja lub historyczny build
     validations:
@@ -47,7 +47,7 @@ body:
     attributes:
       label: Paczka lub sposób uruchomienia
       description: Podaj nazwę archiwum albo informację, że aplikacja została uruchomiona ze źródeł.
-      placeholder: Abituria-v0.9.0-beta.1-win-x64.zip
+      placeholder: Abituria-v0.9.1-win-x64.zip
     validations:
       required: true
 

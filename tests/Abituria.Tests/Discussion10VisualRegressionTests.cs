@@ -98,7 +98,8 @@ public sealed class Discussion10VisualRegressionTests
         var window = ShowInWindow(view, 960, 640);
         try
         {
-            var scroll = view.GetVisualDescendants().OfType<ScrollViewer>().Single(item => item.Content is StackPanel);
+            var scroll = view.GetVisualDescendants().OfType<ScrollViewer>()
+                .Single(item => item.Content is Border { Child: StackPanel });
 
             Assert.Equal(Avalonia.Controls.Primitives.ScrollBarVisibility.Auto, scroll.VerticalScrollBarVisibility);
             Assert.True(scroll.Extent.Height > scroll.Viewport.Height);

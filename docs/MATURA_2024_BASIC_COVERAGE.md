@@ -73,12 +73,12 @@ Matura2024BasicContentTests sprawdza:
 - przypięte URL-e, sumy SHA-256, datę weryfikacji, klucze odpowiedzi, wyniki liczbowe i tryby odpowiedzi;
 - zachowanie katalogów 2021, 2024 PR, 2025 i 2026, 17 tematów oraz niezmienionych identyfikatorów postępu;
 - kompletność 11 diagramów, opisów alternatywnych, źródeł i renderowania bez rastra;
-- blokadę proweniencji nowej transkrypcji.
+- zatwierdzoną proweniencję nowej transkrypcji.
 
 Testy interfejsu obejmują wybór siedmiu arkuszy, losowanie ograniczone do wybranego arkusza, agregację 182 jednostek postępu według 17 tematów, powrót do właściwego kontekstu oraz osobny licznik Matura maj 2024 PP: x/35.
 
 ## Prawa i wydanie
 
-Grupa cke-2024-main-basic-exam w Content/provenance.json ma status blocked. Nie zmieniono docs/ASSET_RIGHTS_DECLARATION.md, ponieważ nie zawiera jeszcze osobistego rozszerzenia prawa do publicznej redystrybucji arkusza MMAP-P0-100-A-2405, zasad MMAP-P0-100-2405 ani ich transkrypcji w Abiturii.
+Grupa `cke-2024-main-basic-exam` w `Content/provenance.json` ma status `approved`. Osobiste rozszerzenie `docs/ASSET_RIGHTS_DECLARATION.md` z 10 sierpnia 2026 r. obejmuje arkusz MMAP-P0-100-A-2405, zasady MMAP-P0-100-2405 i ich transkrypcję wyłącznie jako integralną część Abiturii.
 
-W rezultacie releaseEligible pozostaje false. Zwykła walidacja proweniencji ma przechodzić, natomiast Test-ContentProvenance.ps1 -RequireReleaseEligible ma celowo blokować publiczne wydanie do czasu wyraźnego rozszerzenia deklaracji przez właściciela.
+W rezultacie `releaseEligible` ma wartość `true`. Zwykła walidacja proweniencji oraz `Test-ContentProvenance.ps1 -RequireReleaseEligible` muszą przechodzić przed publicznym wydaniem.

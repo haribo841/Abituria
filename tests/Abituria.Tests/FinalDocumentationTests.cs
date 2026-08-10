@@ -117,10 +117,10 @@ public sealed class FinalDocumentationTests
         Assert.Contains("ACCEPTED - READY TO CLOSE", acceptance, StringComparison.Ordinal);
         Assert.Contains("Właściciel projektu poświadczył", delivery, StringComparison.Ordinal);
         Assert.Contains("releases/tag/v0.9.0-beta.1", delivery, StringComparison.Ordinal);
-        Assert.Contains("Publiczny GitHub Release `0.9.0-beta.1` pozostaje odrębnym, ukończonym działaniem", requirements, StringComparison.Ordinal);
+        Assert.Contains("Publiczny GitHub Release `0.9.1` pozostaje odrębnym działaniem", requirements, StringComparison.Ordinal);
 
         var provenance = File.ReadAllText(Absolute("Content/provenance.json"));
-        Assert.Contains("\"releaseEligible\": false", provenance, StringComparison.Ordinal);
+        Assert.Contains("\"releaseEligible\": true", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2026-main-basic-exam\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2026-main-extended-exam\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2025-main-basic-exam\"", provenance, StringComparison.Ordinal);
@@ -128,7 +128,6 @@ public sealed class FinalDocumentationTests
         Assert.Contains("\"id\": \"cke-2024-main-basic-exam\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2024-main-extended-exam\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-formula-2023-guide-examples\"", provenance, StringComparison.Ordinal);
-        Assert.Contains("\"distributionStatus\": \"blocked\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"distributionStatus\": \"approved\"", provenance, StringComparison.Ordinal);
         Assert.True(File.Exists(Absolute("docs/ASSET_RIGHTS_DECLARATION.md")), "Brak deklaracji praw do zasobów.");
     }

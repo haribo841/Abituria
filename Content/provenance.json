@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "releaseEligible": false,
+  "releaseEligible": true,
   "policy": {
     "approvedStatus": "approved",
     "blockingStatus": "blocked",
@@ -48,9 +48,8 @@
       ],
       "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i mapowanie: Adam Kubiś",
       "source": "Informatory CKE Formuła 2023 dla poziomu podstawowego i rozszerzonego, https://bip.cke.gov.pl/attachments/download/10085, SHA-256 88A0EA8E2EE444506CCA5E89C860178E33B04F181650A36D9C9B4DC9BBE625B2; https://bip.cke.gov.pl/attachments/download/10088, SHA-256 BD408CDC8877E04EC79AAC3177FAB304E6F66C6B5FA152D8D3436D4ACFB2BC6F",
-      "license": "Status publicznej redystrybucji w ramach Abiturii wymaga osobnego rozszerzenia deklaracji właściciela",
-      "distributionStatus": "blocked",
-      "blockedReason": "docs/ASSET_RIGHTS_DECLARATION.md nie obejmuje jeszcze transkrypcji 97 przykładów z informatorów CKE ani ich opisów figur.",
+      "license": "Deklaracja uprawnienia do publicznej redystrybucji w ramach Abiturii rozszerzona 2026-08-10",
+      "distributionStatus": "approved",
       "evidence": [
         "docs/MATH_COURSE_2023_COVERAGE.md",
         "docs/CONTENT_PROVENANCE.md"
@@ -151,9 +150,8 @@
       ],
       "author": "Centralna Komisja Egzaminacyjna, transkrypcja i weryfikacja: Adam Kubiś",
       "source": "Arkusz CKE MMAP-R0-100-A-2405, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_rozszerzony/MMAP-R0-100-A-2405-arkusz.pdf, SHA-256 873691F2E3740126D969AAC957CBC5666FCAD7D7FCF8499442781E18F6AD53D6; zasady oceniania CKE MMAP-R0-100-2405, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_rozszerzony/MMAP-R0-100-2405-zasady.pdf, SHA-256 6535405993D0A9F3360759A2B2335BF7523E177144B207B4D8A6E3D8A3A8AB92; weryfikacja 2026-08-08",
-      "license": "Status publicznej redystrybucji w ramach Abiturii wymaga osobnego rozszerzenia deklaracji właściciela",
-      "distributionStatus": "blocked",
-      "blockedReason": "docs/ASSET_RIGHTS_DECLARATION.md nie obejmuje jeszcze arkusza MMAP-R0-100-A-2405, zasad MMAP-R0-100-2405 ani ich transkrypcji w Abiturii.",
+      "license": "Deklaracja uprawnienia do publicznej redystrybucji w ramach Abiturii rozszerzona 2026-08-10",
+      "distributionStatus": "approved",
       "evidence": [
         "docs/MATURA_2024_EXTENDED_COVERAGE.md",
         "docs/CONTENT_PROVENANCE.md"
@@ -166,9 +164,8 @@
       ],
       "author": "Centralna Komisja Egzaminacyjna, transkrypcja i weryfikacja: Adam Kubiś",
       "source": "Arkusz CKE MMAP-P0-100-A-2405, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_podstawowy/MMAP-P0-100-A-2405-arkusz.pdf, SHA-256 37BDABE139A83CDD128E35C5A37A6E17DE5C4423F7DB2C6B4887EC8ADD96B7A0; zasady oceniania CKE MMAP-P0-100-2405, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_podstawowy/MMAP-P0-100-2405-zasady.pdf, SHA-256 28D7232FBD3EB77CCF17AAEADE8F541564FBC4E9B59E4547BE4E67DB386D5202; weryfikacja 2026-08-09",
-      "license": "Status publicznej redystrybucji w ramach Abiturii wymaga osobnego rozszerzenia deklaracji właściciela",
-      "distributionStatus": "blocked",
-      "blockedReason": "docs/ASSET_RIGHTS_DECLARATION.md nie obejmuje jeszcze arkusza MMAP-P0-100-A-2405, zasad MMAP-P0-100-2405 ani ich transkrypcji w Abiturii.",
+      "license": "Deklaracja uprawnienia do publicznej redystrybucji w ramach Abiturii rozszerzona 2026-08-10",
+      "distributionStatus": "approved",
       "evidence": [
         "docs/MATURA_2024_BASIC_COVERAGE.md",
         "docs/CONTENT_PROVENANCE.md"
@@ -181,7 +178,7 @@
       ],
       "author": "Adam Kubiś - implementacje wektorowe Avalonia i nowe definicje kursu; Centralna Komisja Egzaminacyjna - źródłowa treść tablic i arkuszy; historyczni autorzy projektu Ich Troje - źródła zachowanych diagramów",
       "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym jedenaście figur dla arkusza CKE MMAP-P0-100-A-2405, dziewięć figur dla MMAP-P0-100-A-2505, siedem figur dla MMAP-P0-100-A-2605, trzy figury dla MMAP-R0-100-A-2605 i jedna autorska implementacja wektorowa figury z MMAP-R0-100-A-2405; bez aktywnych rastrów, Image ani Bitmap",
-      "license": "MIT dla implementacji wektorowych i definicji autorskich lub odziedziczonych; deklaracja redystrybucji w ramach Abiturii rozszerzona 2026-08-05",
+      "license": "MIT dla implementacji wektorowych i definicji autorskich lub odziedziczonych; deklaracja redystrybucji w ramach Abiturii rozszerzona 2026-08-10",
       "distributionStatus": "approved",
       "evidence": [
         "docs/ASSET_RIGHTS_DECLARATION.md",

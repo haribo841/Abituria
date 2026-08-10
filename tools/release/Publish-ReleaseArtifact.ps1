@@ -64,35 +64,76 @@ finally {
 }
 
 $sourceRevisionArgument = "-p:SourceRevisionId=$commit"
+$publishSingleFile = $RuntimeIdentifier -eq "win-x64"
+$publishSingleFileArgument = "-p:PublishSingleFile=$($publishSingleFile.ToString().ToLowerInvariant())"
+$publishArguments = @(
+    "publish",
+    "Abituria.csproj",
+    "--configuration", "Release",
+    "--runtime", $RuntimeIdentifier,
+    "--self-contained", "true",
+    "--no-restore",
+    "--output", $publishedDirectory,
+    "-p:Version=$Version",
+    $sourceRevisionArgument,
+    "-p:PublishTrimmed=false",
+    "-p:PublishAot=false",
+    "-p:PublishReadyToRun=false",
+    $publishSingleFileArgument,
+    "-p:DebugSymbols=false",
+    "-p:DebugType=None"
+)
+if ($publishSingleFile) {
+    $publishArguments += "-p:IncludeNativeLibrariesForSelfExtract=true"
+}
 
 Push-Location $repositoryRoot
 try {
-    Invoke-ExternalCommand -FilePath "dotnet" -ArgumentList @(
-        "publish",
-        "Abituria.csproj",
-        "--configuration", "Release",
-        "--runtime", $RuntimeIdentifier,
-        "--self-contained", "true",
-        "--no-restore",
-        "--output", $publishedDirectory,
-        "-p:Version=$Version",
-        $sourceRevisionArgument,
-        "-p:PublishTrimmed=false",
-        "-p:PublishAot=false",
-        "-p:PublishReadyToRun=false",
-        "-p:PublishSingleFile=false",
-        "-p:DebugSymbols=false",
-        "-p:DebugType=None"
-    )
+    Invoke-ExternalCommand -FilePath "dotnet" -ArgumentList $publishArguments
 }
 finally {
     Pop-Location
+}
+
+$dependencyMetadataDirectory = $publishedDirectory
+if ($publishSingleFile) {
+    $dependencyMetadataDirectory = Join-Path $workDirectory "dependency-metadata"
+    $dependencyPublishArguments = [object[]]$publishArguments.Clone()
+    $outputArgumentIndex = [Array]::IndexOf($dependencyPublishArguments, "--output")
+    $singleFileArgumentIndex = [Array]::IndexOf($dependencyPublishArguments, $publishSingleFileArgument)
+    if ($outputArgumentIndex -lt 0 -or $singleFileArgumentIndex -lt 0) {
+        throw "Nie udało się przygotować publikacji metadanych zależności win-x64."
+    }
+    $dependencyPublishArguments[$outputArgumentIndex + 1] = $dependencyMetadataDirectory
+    $dependencyPublishArguments[$singleFileArgumentIndex] = "-p:PublishSingleFile=false"
+    $dependencyPublishArguments = @(
+        $dependencyPublishArguments |
+            Where-Object { $_ -cne "-p:IncludeNativeLibrariesForSelfExtract=true" }
+    )
+    Push-Location $repositoryRoot
+    try {
+        Invoke-ExternalCommand -FilePath "dotnet" -ArgumentList $dependencyPublishArguments
+    }
+    finally {
+        Pop-Location
+    }
 }
 
 Get-ChildItem -LiteralPath $publishedDirectory -Filter "*.pdb" -File -Recurse |
     Remove-Item -Force
 if (Get-ChildItem -LiteralPath $publishedDirectory -Filter "*.pdb" -File -Recurse) {
     throw "Publikacja zawiera pliki PDB."
+}
+
+if ($publishSingleFile) {
+    $publishedFiles = @(Get-ChildItem -LiteralPath $publishedDirectory -File -Recurse)
+    if ($publishedFiles.Count -ne 1 -or $publishedFiles[0].Name -cne "Abituria.exe") {
+        throw "Publikacja win-x64 single-file musi zawierać wyłącznie Abituria.exe."
+    }
+    $windowsExecutableName = Get-ReleaseWindowsExecutableName -Version $Version
+    Copy-Item `
+        -LiteralPath $publishedFiles[0].FullName `
+        -Destination (Join-Path $OutputDirectory $windowsExecutableName)
 }
 
 if ($RuntimeIdentifier -eq "osx-x64") {
@@ -103,6 +144,11 @@ if ($RuntimeIdentifier -eq "osx-x64") {
 }
 else {
     Copy-Item -Path (Join-Path $publishedDirectory "*") -Destination $packageDirectory -Recurse -Force
+}
+if ($publishSingleFile) {
+    Copy-Item `
+        -LiteralPath (Join-Path $dependencyMetadataDirectory "Abituria.deps.json") `
+        -Destination (Join-Path $packageDirectory "Abituria.deps.json")
 }
 
 Copy-Item -LiteralPath (Join-Path $repositoryRoot "LICENSE") -Destination $packageDirectory
@@ -117,7 +163,7 @@ Copy-Item -LiteralPath (Join-Path $repositoryRoot "docs/legacy/originals/LICENSE
     -Destination (Join-Path $licensesDirectory "LICENSE-2022-Ich-Troje.txt")
 
 $publishedComponents = Get-PublishedNuGetComponents `
-    -PublishedDirectory $publishedDirectory `
+    -PublishedDirectory $dependencyMetadataDirectory `
     -RuntimeIdentifier $RuntimeIdentifier
 $runtimePackId = "Microsoft.NETCore.App.Runtime.$RuntimeIdentifier"
 $runtimePack = @($publishedComponents | Where-Object { $_.Id -ceq $runtimePackId })
@@ -156,7 +202,7 @@ foreach ($runtimeNotice in @(
 
 $nugetLicenseDirectory = Join-Path $licensesDirectory "nuget"
 & (Join-Path $PSScriptRoot "New-NuGetLicenseBundle.ps1") `
-    -PublishedDirectory $publishedDirectory `
+    -PublishedDirectory $dependencyMetadataDirectory `
     -RuntimeIdentifier $RuntimeIdentifier `
     -OutputDirectory $nugetLicenseDirectory `
     -PackageRoot $nugetPackageRoot
@@ -170,7 +216,7 @@ $releaseMetadata = [ordered]@{
     trimmed = $false
     aot = $false
     readyToRun = $false
-    singleFile = $false
+    singleFile = $publishSingleFile
 }
 $metadataJson = $releaseMetadata | ConvertTo-Json
 $utf8WithoutBom = [Text.UTF8Encoding]::new($false)
@@ -188,7 +234,7 @@ $manifestOutputDirectory = Join-Path $packageDirectory "_manifest"
 $packageSupplier = [string]::Concat("Adam Kubi", [char]0x015B)
 $componentDirectory = Join-Path $workDirectory "components"
 New-ReleaseNuGetComponentManifest `
-    -PublishedDirectory $publishedDirectory `
+    -PublishedDirectory $dependencyMetadataDirectory `
     -RuntimeIdentifier $RuntimeIdentifier `
     -OutputDirectory $componentDirectory | Out-Null
 Push-Location $repositoryRoot
@@ -226,7 +272,7 @@ if (@($generatedSbom.packages).Count -le 1) {
 }
 Assert-ReleaseSbomScope `
     -SbomPath $manifestPath `
-    -PublishedDirectory $publishedDirectory `
+    -PublishedDirectory $dependencyMetadataDirectory `
     -RuntimeIdentifier $RuntimeIdentifier `
     -Version $Version
 

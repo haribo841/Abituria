@@ -20,7 +20,7 @@ public sealed class ReleaseRuntimeTests
             typeof(AppBuildInfo).Assembly,
             "0123456789abcdef0123456789abcdef01234567");
 
-        Assert.Equal("0.9.0-beta.1", buildInfo.Version);
+        Assert.Equal("0.9.1", buildInfo.Version);
         Assert.Equal("0123456789abcdef0123456789abcdef01234567", buildInfo.Commit);
         Assert.Equal("MIT", buildInfo.License);
         Assert.Equal("Adam Kubiś", buildInfo.Author);
@@ -38,11 +38,11 @@ public sealed class ReleaseRuntimeTests
             .GetConstructor([typeof(string)])!;
         assembly.SetCustomAttribute(new CustomAttributeBuilder(
             constructor,
-            [$"0.9.0-beta.1+{commit}"]));
+            [$"0.9.1+{commit}"]));
 
         var buildInfo = AppBuildInfo.FromAssembly(assembly);
 
-        Assert.Equal("0.9.0-beta.1", buildInfo.Version);
+        Assert.Equal("0.9.1", buildInfo.Version);
         Assert.Equal(commit, buildInfo.Commit);
     }
 
@@ -235,7 +235,7 @@ public sealed class ReleaseRuntimeTests
                 Path.Combine(Path.GetFullPath(directory), AppRuntimeOptions.ReleaseSmokeDatabaseFileName),
                 report.DatabasePath);
             Assert.True(File.Exists(report.DatabasePath));
-            Assert.Equal("0.9.0-beta.1", report.Version);
+            Assert.Equal("0.9.1", report.Version);
             Assert.Equal(AppBuildInfo.Current.Commit, report.Commit);
             Assert.Equal(18, report.FormulaCount);
             Assert.Equal(13, report.CourseAreaCount);
@@ -290,7 +290,7 @@ public sealed class ReleaseRuntimeTests
                 process.ExitCode == ReleaseSmokeTestCommand.SuccessExitCode,
                 $"Kod procesu: {process.ExitCode}. Standard output: {output}. Standard error: {error}");
             Assert.Contains("smoke test zakończony powodzeniem", output, StringComparison.Ordinal);
-            Assert.Contains("ABITURIA_RELEASE_SMOKE version=0.9.0-beta.1 commit=", output, StringComparison.Ordinal);
+            Assert.Contains("ABITURIA_RELEASE_SMOKE version=0.9.1 commit=", output, StringComparison.Ordinal);
             Assert.Empty(error);
 
             var databasePath = Path.Combine(directory, AppRuntimeOptions.ReleaseSmokeDatabaseFileName);

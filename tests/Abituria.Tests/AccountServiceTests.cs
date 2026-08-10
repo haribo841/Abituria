@@ -48,6 +48,18 @@ public sealed class AccountServiceTests : IAsyncLifetime
     }
 
     [Fact]
+    public async Task Registration_accepts_a_nonempty_password_without_a_minimum_length()
+    {
+        var registration = await _accounts.RegisterAsync("KrótkieHasło", "a", "a");
+        var empty = await _accounts.RegisterAsync("PusteHasło", string.Empty, string.Empty);
+
+        Assert.True(registration.Success, registration.Message);
+        Assert.True((await _accounts.AuthenticateAsync(registration.Profile!.Id, "a")).Success);
+        Assert.False(empty.Success);
+        Assert.Equal("Hasło nie może być puste.", empty.Message);
+    }
+
+    [Fact]
     public async Task Change_password_rejects_invalid_current_password()
     {
         var registration = await _accounts.RegisterAsync("ZmianaHasla", ValidPassword, ValidPassword);

@@ -1,6 +1,6 @@
 # Analiza biznesowa projektu Abituria
 
-Status: aktywny dokument biznesowy dla bieżącej implementacji. Stan na 8 sierpnia 2026 r.
+Status: aktywny dokument biznesowy dla bieżącej implementacji. Stan na 9 sierpnia 2026 r.
 
 Ten dokument zastępuje historyczną checklistę `docs/legacy/analiza-biznesowa.md` jako podstawa oceny uzasadnienia, zakresu, ryzyk i warunków wydania. Nie zastępuje [wymagań projektowych](REQUIREMENTS.md), [architektury](ARCHITECTURE.md), [roadmapy](ROADMAP.md) ani [procesu wydania](RELEASE_PROCESS.md), lecz łączy ich perspektywę produktową.
 
@@ -70,7 +70,7 @@ Użytkownik otrzymuje bezpłatny dostęp do lokalnej aplikacji, połączenie mat
 
 ### 4.3. Stan dystrybucji
 
-Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, a publiczne prerelease [`v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1) stanowi kanał dystrybucji zatwierdzonej bety. Deklaracje z 3 i 5 sierpnia 2026 r. obejmują arkusze 2025 i 2026 na obu poziomach, zasady oceniania oraz dziewiętnaście zatwierdzonych autorskich implementacji wektorowych Avalonia. Transkrypcja 97 przykładów z informatorów CKE oraz transkrypcje matury 2024 PP i PR nie są jeszcze objęte deklaracją, dlatego bieżąca brama `releaseEligible` w `Content/provenance.json` ma wartość `false` i blokuje następne wydanie. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), sześć macierzy matur 2024, 2025 i 2026 oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
+Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, a publiczne prerelease [`v0.9.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.1) stanowi kanał dystrybucji zatwierdzonej bety. Deklaracje z 3, 5 i 10 sierpnia 2026 r. obejmują arkusze 2024, 2025 i 2026 na obu poziomach, zasady oceniania, transkrypcję 97 przykładów z informatorów CKE oraz trzydzieści jeden zatwierdzonych autorskich implementacji wektorowych Avalonia. Bieżąca brama `releaseEligible` w `Content/provenance.json` ma wartość `true`; szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), macierze matur 2024, 2025 i 2026 oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
 
 Koszty bieżącego wariantu obejmują przede wszystkim czas przygotowania treści, implementacji, testów, dokumentacji i utrzymania repozytorium. Aplikacja działa lokalnie, dlatego nie wymaga serwera aplikacyjnego ani przechowywania danych użytkowników przez zewnętrznego operatora.
 
@@ -90,7 +90,7 @@ Zakres bieżącej implementacji jest zdefiniowany normatywnie w [REQUIREMENTS.md
 - losowanie zadań z całego arkusza albo wybranego tematu;
 - dokumentację, bramy jakości, diagnostyczny smoke test artefaktu i automatyzację przygotowania paczek.
 
-Kurs odpowiada podstawie programowej z 2024 r. stosowanej dla matury 2026. Filtr podstawowy pokazuje 73 wymagania i 219 ćwiczeń, a rozszerzony dodaje 46 wymagań oraz 138 ćwiczeń. Katalog egzaminów obejmuje 35 i 14 jednostek postępu matury 2024, 35 i 13 jednostek matury 2025, 37 i 13 jednostek matury 2026 oraz 35 zadań matury poprawkowej 2021. Transkrypcje matury 2024 PP i PR mają status `blocked` w manifeście pochodzenia do czasu rozszerzenia deklaracji praw.
+Kurs odpowiada podstawie programowej z 2024 r. stosowanej dla matury 2026. Filtr podstawowy pokazuje 73 wymagania i 219 ćwiczeń, a rozszerzony dodaje 46 wymagań oraz 138 ćwiczeń. Katalog egzaminów obejmuje 35 i 14 jednostek postępu matury 2024, 35 i 13 jednostek matury 2025, 37 i 13 jednostek matury 2026 oraz 35 zadań matury poprawkowej 2021. Transkrypcje matury 2024 PP i PR mają status `approved` w manifeście pochodzenia na podstawie rozszerzenia deklaracji praw z 10 sierpnia 2026 r.
 
 ### 5.2. Poza zakresem beta
 
@@ -119,10 +119,10 @@ Rzeczywiste daty najwcześniejszych weryfikowalnych stanów technicznych I-IV bi
 | Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | zrealizowane: pełny kurs `119/238/357`, siedem aktywnych arkuszy ze 182 jednostkami postępu, tablice i oddzielny postęp |
 | Tydzień 12 | M5a - testy i regresje | autor implementacji | zrealizowane ciągle: testy jednostkowe, integracyjne, UI i CI |
 | Tydzień 13 | M5b - dokumentacja i pakowanie | autor implementacji | technicznie zrealizowane: dokumentacja, workflow, paczki portable i smoke test |
-| Tydzień 14 | M6 - publiczne prerelease | autor implementacji, właściciel praw | osiągnięte: zatwierdzona proweniencja, tag, natywne workflow i publiczny GitHub Release `v0.9.0-beta.1` |
+| Tydzień 14 | M6 - publiczne prerelease | autor implementacji, właściciel praw | osiągnięte: zatwierdzona proweniencja, tag, natywne workflow i publiczny GitHub Release `v0.9.1` |
 | 17 stycznia 2022 r. | M7 - publiczna obrona projektu historycznego | Adam Kubiś i komisja | osiągnięte: pokaz działającej aplikacji, pytania i odpowiedzi, decyzja pozytywna, wynik bardzo dobry; dowód w `DEFENSE_PROTOCOL.md` |
 
-M6 w tej tabeli dotyczy prerelease bieżącej migracji `0.9.0-beta.1`, natomiast M7 dokumentuje rzeczywistą obronę historycznej wersji projektu w 2022 r. Są to odrębne zdarzenia i dowody.
+M6 w tej tabeli dotyczy prerelease bieżącej migracji `0.9.1`, natomiast M7 dokumentuje rzeczywistą obronę historycznej wersji projektu w 2022 r. Są to odrębne zdarzenia i dowody.
 
 Przed ustaleniem daty M6 należy potwierdzić wynik wszystkich bram dla dokładnego commita. Prawa do materiałów CKE, odziedziczonych grafik matematycznych oraz grafik aplikacji zostały odnotowane na podstawie oświadczenia właściciela z 19 lipca 2026 r.; nie zastępuje ono technicznego workflow publikacji.
 
@@ -141,7 +141,7 @@ Kryteria dzielą się na odbiór produktu i odbiór publicznego wydania:
 | Publiczne wydanie | istnieją tag, prerelease, działająca strona Pages i kontrola po publikacji | `RELEASE_PROCESS.md` |
 | Historyczna ocena projektu | siedem obszarów oceny i dziesięć warunków akceptacji jest odwzorowanych bez mieszania wersji WPF z migracją AvaloniaUI | `EVALUATION_PROTOCOL.md` |
 
-Spełnienie kryteriów technicznych nie zastępuje kryterium prawa do publicznej dystrybucji. Aktualny manifest zawiera grupy `cke-formula-2023-guide-examples`, `cke-2024-main-basic-exam` i `cke-2024-main-extended-exam` o statusie `blocked` i ma `releaseEligible=false`. Publiczne wydanie jest możliwe dopiero po rozszerzeniu deklaracji właściciela, zaliczeniu twardej bramy proweniencji oraz pozostałych bramek i zweryfikowaniu rzeczywistego GitHub Release.
+Spełnienie kryteriów technicznych nie zastępuje kryterium prawa do publicznej dystrybucji. Aktualny manifest zawiera grupy `cke-formula-2023-guide-examples`, `cke-2024-main-basic-exam` i `cke-2024-main-extended-exam` o statusie `approved` i ma `releaseEligible=true` na podstawie rozszerzenia deklaracji właściciela z 10 sierpnia 2026 r. Publiczne wydanie nadal wymaga zaliczenia twardej bramy proweniencji, pozostałych bramek i zweryfikowania rzeczywistego GitHub Release.
 
 Historyczny projekt został zaakceptowany i uzyskał wynik bardzo dobry. Zakres oraz ograniczenia tego dowodu opisuje `EVALUATION_PROTOCOL.md`. Wynik z 2022 r. nie jest oceną bieżącej migracji i nie zastępuje jej przyszłego procesu wydawniczego.
 
@@ -199,7 +199,7 @@ Szczegóły odpowiedzialności warstw, modułów, danych i automatyzacji zawiera
 
 ## 12. Śledzenie Issue #9
 
-Bieżącym zgłoszeniem analizy biznesowej jest [haribo841/Abituria#9](https://github.com/haribo841/Abituria/issues/9). Historyczny kontekst pozostaje wyłącznie pod pełnym adresem [Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski#38](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38). W starym repozytorium nie są wykonywane żadne zmiany.
+Bieżącym zgłoszeniem analizy biznesowej jest [haribo841/Abituria#9](https://github.com/haribo841/Abituria/issues/9). [Pełna transkrypcja historycznej analizy](legacy/analiza-biznesowa-pelna.md) pozostaje materiałem archiwalnym i nie jest źródłem prawdy dla bieżącej implementacji AvaloniaUI. Historyczny kontekst pozostaje wyłącznie pod pełnym adresem [Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski#38](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38). W starym repozytorium nie są wykonywane żadne zmiany.
 
 | Wymaganie analizy | Aktywny dowód |
 | --- | --- |

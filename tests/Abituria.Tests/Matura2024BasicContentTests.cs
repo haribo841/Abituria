@@ -150,7 +150,7 @@ public sealed class Matura2024BasicContentTests
     }
 
     [Fact]
-    public void New_cke_exam_is_documented_but_remains_blocked_without_a_rights_extension()
+    public void New_cke_exam_is_documented_and_approved_by_the_rights_extension()
     {
         using var provenance = JsonDocument.Parse(File.ReadAllText(Absolute("Content/provenance.json")));
         var root = provenance.RootElement;
@@ -161,13 +161,14 @@ public sealed class Matura2024BasicContentTests
         var coverage = File.ReadAllText(Absolute("docs/MATURA_2024_BASIC_COVERAGE.md"));
         var toc = File.ReadAllText(Absolute("docs/toc.yml"));
 
-        Assert.False(root.GetProperty("releaseEligible").GetBoolean());
-        Assert.Equal("blocked", groups["cke-2024-main-basic-exam"].GetProperty("distributionStatus").GetString());
+        Assert.True(root.GetProperty("releaseEligible").GetBoolean());
+        Assert.Equal("approved", groups["cke-2024-main-basic-exam"].GetProperty("distributionStatus").GetString());
         Assert.Equal("approved", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
         Assert.Contains(PaperHash, groups["cke-2024-main-basic-exam"].GetProperty("source").GetString(), StringComparison.Ordinal);
         Assert.Contains(RulesHash, groups["cke-2024-main-basic-exam"].GetProperty("source").GetString(), StringComparison.Ordinal);
-        Assert.DoesNotContain(PaperHash, rights, StringComparison.Ordinal);
-        Assert.DoesNotContain(RulesHash, rights, StringComparison.Ordinal);
+        Assert.Contains(PaperHash, rights, StringComparison.Ordinal);
+        Assert.Contains(RulesHash, rights, StringComparison.Ordinal);
+        Assert.Contains("Rozszerzenie deklaracji z 10 sierpnia 2026 r.", rights, StringComparison.Ordinal);
         Assert.Contains(PaperHash, coverage, StringComparison.Ordinal);
         Assert.Contains(RulesHash, coverage, StringComparison.Ordinal);
         Assert.Contains("MATURA_2024_BASIC_COVERAGE.md", toc, StringComparison.Ordinal);

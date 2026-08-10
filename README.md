@@ -2,22 +2,22 @@
 
 Abituria to działająca offline aplikacja desktopowa wspierająca naukę matematyki na poziomie szkoły średniej. Aktualna implementacja używa C#, .NET 10 LTS i AvaloniaUI 12. Dane profili oraz postęp są przechowywane lokalnie w SQLite.
 
-Pierwsze publiczne wydanie beta: [`0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1).
+Bieżące publiczne wydanie beta: [`0.9.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.1).
 
 > [!IMPORTANT]
-> Inwentarz pochodzenia ma `releaseEligible=true`. Deklaracja właściciela obejmuje arkusze CKE 2025 i 2026 na obu poziomach, zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Wydanie jest publikowane wyłącznie po przejściu pełnego workflow i checklisty wydawniczej.
+> Bieżący inwentarz pochodzenia ma `releaseEligible=true`. Osobiste rozszerzenie deklaracji z 10 sierpnia 2026 r. obejmuje transkrypcje 97 przykładów z informatorów CKE, arkusze CKE 2024 i ich wskazane implementacje wektorowe. Każde wydanie nadal wymaga przejścia pełnego workflow i checklisty wydawniczej.
 
 ## Pobieranie
 
-Zweryfikowane paczki są dostępne w [GitHub Releases](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1):
+Zweryfikowane paczki są dostępne w [GitHub Releases](https://github.com/haribo841/Abituria/releases/tag/v0.9.1):
 
 | System | Paczka | Deklarowane środowisko beta |
 | --- | --- | --- |
-| Windows | `Abituria-v0.9.0-beta.1-win-x64.zip` | Windows 11 24H2 x64 |
-| Ubuntu | `Abituria-v0.9.0-beta.1-linux-x64.tar.gz` | Ubuntu 24.04 x64 |
-| macOS | `Abituria-v0.9.0-beta.1-osx-x64.zip` | macOS 15 na komputerze Intel |
+| Windows | `Abituria-v0.9.1-win-x64.exe` | Windows 11 24H2 x64 |
+| Ubuntu | `Abituria-v0.9.1-linux-x64.tar.gz` | Ubuntu 24.04 x64 |
+| macOS | `Abituria-v0.9.1-osx-x64.zip` | macOS 15 na komputerze Intel |
 
-Paczki są samowystarczalne i nie wymagają instalacji środowiska .NET. Są to wydania portable, bez instalatora, automatycznej aktualizacji, podpisu kodu, AOT i trybu single-file. Przed uruchomieniem należy sprawdzić sumę SHA-256 oraz attestation artefaktu.
+Artefakty są samowystarczalne i nie wymagają instalacji środowiska .NET. Windows otrzymuje pojedynczy plik EXE, natomiast Ubuntu i macOS pozostają wydaniami portable w archiwach. Nie ma instalatora, automatycznej aktualizacji, podpisu kodu ani AOT. Dla Windows dodatkowe archiwum ZIP zachowuje pełne dowody licencyjne i SBOM. Przed uruchomieniem należy sprawdzić sumę SHA-256 oraz attestation artefaktu.
 
 - [Instrukcja instalacji, aktualizacji i odinstalowania](docs/INSTALLATION.md)
 - [Dokumentacja online](https://haribo841.github.io/Abituria/)
@@ -30,8 +30,8 @@ Paczki są samowystarczalne i nie wymagają instalacji środowiska .NET. Są to 
 - 18 tablic matematycznych zgodnych zakresem z oficjalnym dokumentem CKE dla Formuły 2023;
 - pełny kurs Formuły 2023: 4 grupy, 13 obszarów, 119 wymagań, 238 rozwiązanych przykładów i 357 ćwiczeń;
 - filtr poziomu podstawowego i rozszerzonego oraz tryby odpowiedzi: wybór, wynik liczbowy, odpowiedź złożona i ujawnienie rozwiązania;
-- matury główne 2025 i 2026 na poziomie podstawowym i rozszerzonym oraz zachowane 35 zadań matury poprawkowej 2021 - łącznie 5 arkuszy i 133 jednostki postępu;
-- wybór arkusza, losowanie w obrębie wybranego arkusza i agregacja pięciu arkuszy według 17 tematów;
+- matury główne 2024, 2025 i 2026 na poziomie podstawowym i rozszerzonym oraz zachowane 35 zadań matury poprawkowej 2021 - łącznie 7 arkuszy i 182 jednostki postępu;
+- wybór arkusza, losowanie w obrębie wybranego arkusza i agregacja siedmiu arkuszy według 17 tematów;
 - sprawdzanie odpowiedzi A-D, podpowiedzi, ujawnianie odpowiedzi i brudnopis przechowywany osobno dla profilu i zadania do zamknięcia aplikacji;
 - kalkulator ogólny z nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią, powtarzaniem `=` i automatycznym kopiowaniem wyniku;
 - pojedynczy kalkulator Picture in Picture w oknie nad Abiturią, oknie zawsze na wierzchu albo panelu aplikacji;
@@ -45,10 +45,10 @@ Szczegółową instrukcję korzystania z tych funkcji zawiera [podręcznik użyt
 
 ## Szybki start z paczki
 
-1. Pobierz paczkę przeznaczoną dla swojego systemu oraz `SHA256SUMS.txt` z tego samego wydania.
+1. Pobierz artefakt przeznaczony dla swojego systemu oraz `SHA256SUMS.txt` z tego samego wydania.
 2. Zweryfikuj sumę i attestation zgodnie z [instrukcją instalacji](docs/INSTALLATION.md#sprawdzenie-integralności-i-pochodzenia).
-3. Rozpakuj aplikację do nowego katalogu i wejdź do utworzonego podkatalogu `Abituria-v0.9.0-beta.1-<rid>`.
-4. Uruchom `Abituria.exe`, `Abituria` albo `Abituria.app`, zależnie od systemu.
+3. Na Windows zapisz pojedynczy plik EXE w nowym katalogu. Na Ubuntu i macOS rozpakuj aplikację do nowego katalogu i wejdź do utworzonego podkatalogu `Abituria-v0.9.1-<rid>`.
+4. Uruchom plik EXE Windows, `Abituria` albo `Abituria.app`, zależnie od systemu.
 5. Wybierz profil gościa lub utwórz lokalne konto.
 
 Wydanie beta jest niepodpisane. SmartScreen lub Gatekeeper może wyświetlić ostrzeżenie. Dokumentacja opisuje bezpieczną obsługę komunikatu dla konkretnej, zweryfikowanej paczki i nie zaleca globalnego wyłączania zabezpieczeń systemu.

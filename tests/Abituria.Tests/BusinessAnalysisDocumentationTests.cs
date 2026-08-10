@@ -1,11 +1,15 @@
+using System.Security.Cryptography;
+using System.Text;
+
 namespace Abituria.Tests;
 
 public sealed class BusinessAnalysisDocumentationTests
 {
+    private const string HistoricalAnalysisSha256 = "A25F986182E8E8CD82E00D0A1508B42E065CF0F454EFB985FCF10C9888684928";
     private static readonly string RepositoryRoot = FindRepositoryRoot();
 
     [Fact]
-    public void Business_analysis_covers_issue_38_with_current_product_facts()
+    public void Business_analysis_covers_issue_9_with_current_product_facts()
     {
         var text = File.ReadAllText(Absolute("docs/BUSINESS_ANALYSIS.md"));
         var requiredHeadings = new[]
@@ -35,11 +39,27 @@ public sealed class BusinessAnalysisDocumentationTests
             "https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38",
             text,
             StringComparison.Ordinal);
+        Assert.Contains("legacy/analiza-biznesowa-pelna.md", text, StringComparison.Ordinal);
         Assert.DoesNotContain("Issue #38", text, StringComparison.Ordinal);
         Assert.Contains("razem 7 arkuszy i 182 jednostki postępu", text, StringComparison.Ordinal);
-        Assert.Contains("releases/tag/v0.9.0-beta.1", text, StringComparison.Ordinal);
+        Assert.Contains("releases/tag/v0.9.1", text, StringComparison.Ordinal);
         Assert.DoesNotContain("interfejs użytkownika: WPF", text, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("kalkulator może działać jako osobne okno", text, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public void Full_historical_analysis_is_archived_separately_from_current_product_facts()
+    {
+        var text = File.ReadAllText(Absolute("docs/legacy/analiza-biznesowa-pelna.md"));
+        var legacyIndex = File.ReadAllText(Absolute("docs/legacy/README.md"));
+
+        Assert.StartsWith("# Historyczna analiza biznesowa", text, StringComparison.Ordinal);
+        Assert.Contains("nie jest źródłem prawdy dla bieżącej implementacji", text, StringComparison.Ordinal);
+        Assert.Contains("## 1. Cel analizy biznesowej", text, StringComparison.Ordinal);
+        Assert.Contains("# 16. Podsumowanie analizy biznesowej", text, StringComparison.Ordinal);
+        Assert.Contains("**WPF**", text, StringComparison.Ordinal);
+        Assert.Contains("analiza-biznesowa-pelna.md", legacyIndex, StringComparison.Ordinal);
+        Assert.Equal(HistoricalAnalysisSha256, HashNormalized(text));
     }
 
     [Fact]
@@ -59,6 +79,12 @@ public sealed class BusinessAnalysisDocumentationTests
     }
 
     private static string Absolute(string relativePath) => Path.Combine(RepositoryRoot, relativePath);
+
+    private static string HashNormalized(string text)
+    {
+        var normalized = text.Replace("\r\n", "\n", StringComparison.Ordinal);
+        return Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(normalized)));
+    }
 
     private static string FindRepositoryRoot()
     {

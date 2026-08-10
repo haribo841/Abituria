@@ -14,7 +14,7 @@ namespace Abituria.Tests;
 public sealed class Issue14RegistrationRegressionTests
 {
     [AvaloniaFact]
-    public async Task Failed_registration_keeps_login_available_and_explains_all_limits()
+    public async Task Failed_registration_keeps_login_available_and_explains_current_limits()
     {
         var directory = Path.Combine(Path.GetTempPath(), "Abituria.Tests", Guid.NewGuid().ToString("N"));
         var databasePath = Path.Combine(directory, "issue14.db");
@@ -42,8 +42,8 @@ public sealed class Issue14RegistrationRegressionTests
             Assert.Contains(controls.OfType<TextBlock>(), control => control.Text == rules.Body);
             Assert.Contains(AccountService.MinimumDisplayNameLength.ToString(), rules.Body, StringComparison.Ordinal);
             Assert.Contains(AccountService.MaximumDisplayNameLength.ToString(), rules.Body, StringComparison.Ordinal);
-            Assert.Contains(PasswordHasher.MinimumPasswordLength.ToString(), rules.Body, StringComparison.Ordinal);
             Assert.Contains(PasswordHasher.MaximumPasswordLength.ToString(), rules.Body, StringComparison.Ordinal);
+            Assert.DoesNotContain("minimum", rules.Body, StringComparison.OrdinalIgnoreCase);
             Assert.Equal(1, AccountService.MinimumDisplayNameLength);
             Assert.Equal(30, AccountService.MaximumDisplayNameLength);
             Assert.Equal(30, name.MaxLength);
@@ -85,7 +85,7 @@ public sealed class Issue14RegistrationRegressionTests
             var controls = view.GetLogicalDescendants().ToArray();
             var status = controls.OfType<TextBlock>().Single(control => control.Name == "AccountStatusText");
             var name = controls.OfType<TextBox>().Single(control => control.Name == "RegistrationNameBox");
-            var registrationPassword = controls.OfType<TextBox>().Single(control => control.PlaceholderText == "Hasło (minimum 15 znaków)");
+            var registrationPassword = controls.OfType<TextBox>().Single(control => control.Name == "RegistrationPasswordBox");
             var registrationConfirmation = controls.OfType<TextBox>().Single(control => control.PlaceholderText == "Powtórz hasło");
             var register = controls.OfType<Button>().Single(control => control.Name == "RegisterButton");
             var recoveryName = controls.OfType<TextBox>().Single(control => control.PlaceholderText == "Nazwa konta");
@@ -95,7 +95,7 @@ public sealed class Issue14RegistrationRegressionTests
             var recover = controls.OfType<Button>().Single(control => Equals(control.Content, "Ustaw nowe hasło"));
 
             name.Text = "Konto testowe";
-            registrationPassword.Text = "PrawidloweHaslo123";
+            registrationPassword.Text = "a";
             registrationConfirmation.Text = registrationPassword.Text;
             register.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
 

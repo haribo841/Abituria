@@ -81,6 +81,24 @@ public sealed class OfficialCourseExampleContentTests
     }
 
     [Fact]
+    public void Official_examples_are_approved_by_the_august_rights_extension()
+    {
+        using var provenance = JsonDocument.Parse(File.ReadAllText(Path.Combine(RepositoryRoot, "Content/provenance.json")));
+        var root = provenance.RootElement;
+        var group = root.GetProperty("assets").EnumerateArray().Single(item =>
+            item.GetProperty("id").GetString() == "cke-formula-2023-guide-examples");
+        var rights = File.ReadAllText(Path.Combine(RepositoryRoot, "docs/ASSET_RIGHTS_DECLARATION.md"));
+
+        Assert.True(root.GetProperty("releaseEligible").GetBoolean());
+        Assert.Equal("approved", group.GetProperty("distributionStatus").GetString());
+        Assert.Contains(BasicHash, group.GetProperty("source").GetString(), StringComparison.Ordinal);
+        Assert.Contains(ExtendedHash, group.GetProperty("source").GetString(), StringComparison.Ordinal);
+        Assert.Contains(BasicHash, rights, StringComparison.Ordinal);
+        Assert.Contains(ExtendedHash, rights, StringComparison.Ordinal);
+        Assert.Contains("Rozszerzenie deklaracji z 10 sierpnia 2026 r.", rights, StringComparison.Ordinal);
+    }
+
+    [Fact]
     public void Compound_official_examples_preserve_subtasks_pages_and_total_points()
     {
         var catalog = Read<OfficialCourseExampleCatalog>("Content/official-course-examples.json");

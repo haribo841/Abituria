@@ -369,6 +369,14 @@ public sealed class Matura2026UiTests
 
         Assert.All(secondChoices.Take(2), choice => Assert.False(choice.IsEnabled));
         Assert.All(secondChoices.Skip(2), choice => Assert.True(choice.IsEnabled));
+
+        secondChoices[2].IsChecked = true;
+        firstChoices[3].IsChecked = true;
+        Render();
+
+        Assert.NotEqual(true, secondChoices[2].IsChecked);
+        Assert.All(secondChoices.Take(4), choice => Assert.False(choice.IsEnabled));
+        Assert.All(secondChoices.Skip(4), choice => Assert.True(choice.IsEnabled));
     }
 
     private static string ExerciseCountLabel(int count)

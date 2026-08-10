@@ -21,6 +21,13 @@
         "exclude": [
           "legacy/**"
         ]
+      },
+      {
+        "files": [
+          "analiza-biznesowa-pelna.md"
+        ],
+        "src": "docs/legacy",
+        "dest": "docs/legacy"
       }
     ],
     "output": "artifacts/site",

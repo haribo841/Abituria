@@ -11,6 +11,8 @@ namespace Abituria.Ui;
 
 public static class UiFactory
 {
+    private static readonly Thickness PageScrollPadding = new(28, 28, 28, 56);
+
     public static T UseResource<T>(T element, AvaloniaProperty property, string resourceKey)
         where T : StyledElement
     {
@@ -56,14 +58,19 @@ public static class UiFactory
 
     public static Border InfoBand(UiCopyEntry content) => InfoBand(content.Title, content.Body);
 
-    public static ScrollViewer PageScroll(Control content)
+    public static ScrollViewer PageScroll(Control content, Thickness? padding = null)
     {
+        var contentContainer = new Border
+        {
+            Child = content,
+            Padding = padding ?? PageScrollPadding
+        };
         var scrollViewer = new ScrollViewer
         {
-            Content = content,
-            Padding = new Thickness(28),
+            Content = contentContainer,
             HorizontalScrollBarVisibility = Avalonia.Controls.Primitives.ScrollBarVisibility.Disabled,
-            VerticalScrollBarVisibility = Avalonia.Controls.Primitives.ScrollBarVisibility.Auto
+            VerticalScrollBarVisibility = Avalonia.Controls.Primitives.ScrollBarVisibility.Auto,
+            VerticalContentAlignment = VerticalAlignment.Top
         };
         UseResource(scrollViewer, ScrollViewer.BackgroundProperty, "AppBackgroundBrush");
         return scrollViewer;

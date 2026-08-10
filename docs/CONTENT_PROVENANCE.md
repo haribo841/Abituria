@@ -58,7 +58,7 @@ Nie wolno usuwać parametru bramy, ręcznie zmieniać `releaseEligible` ani wył
 
 ## Aktualny stan
 
-`releaseEligible` ma wartość `false`. Rozszerzenia [deklaracji praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 3 i 5 sierpnia 2026 r. nadal obejmują matury CKE 2025 i 2026, zasady oceniania oraz dziewiętnaście zatwierdzonych autorskich implementacji wektorowych Avalonia. Nie obejmują nowej transkrypcji 97 przykładów z informatorów CKE ani arkuszy 2024: podstawowego MMAP-P0-100-A-2405 z zasadami MMAP-P0-100-2405 oraz rozszerzonego MMAP-R0-100-A-2405 z zasadami MMAP-R0-100-2405. Z tego powodu grupy `cke-formula-2023-guide-examples`, `cke-2024-main-basic-exam` oraz `cke-2024-main-extended-exam` mają status `blocked`. Zwykła walidacja kompletności musi przechodzić, natomiast osobna brama `-RequireReleaseEligible` ma celowo blokować kolejne publiczne wydanie do czasu osobistego rozszerzenia deklaracji przez właściciela.
+`releaseEligible` ma wartość `true`. Rozszerzenia [deklaracji praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 3, 5 i 10 sierpnia 2026 r. obejmują matury CKE 2024, 2025 i 2026, zasady oceniania, transkrypcję 97 przykładów z informatorów CKE oraz trzydzieści jeden zatwierdzonych autorskich implementacji wektorowych Avalonia. Grupy `cke-formula-2023-guide-examples`, `cke-2024-main-basic-exam` oraz `cke-2024-main-extended-exam` mają status `approved` wyłącznie w zakresie zadeklarowanej redystrybucji jako części Abiturii. Zwykła walidacja kompletności i brama `-RequireReleaseEligible` muszą przechodzić przed publicznym wydaniem.
 
 ### Materiały CKE
 
@@ -72,9 +72,9 @@ Grupa `cke-2025-main-basic-exam` obejmuje `Content/exam-2025-main-basic.json`. T
 
 Grupa `cke-2025-main-extended-exam` obejmuje `Content/exam-2025-main-extended.json`. Transkrypcja korzysta z arkusza `MMAP-R0-100-A-2505` i zasad oceniania `MMAP-R0-100-2505`; oba adresy, sumy SHA-256 i data weryfikacji znajdują się w [macierzy matury 2025 PR](MATURA_2025_EXTENDED_COVERAGE.md). Grupa ma status `approved` na podstawie rozszerzenia deklaracji z 5 sierpnia 2026 r.
 
-Grupa `cke-2024-main-basic-exam` obejmuje `Content/exam-2024-main-basic.json`. Transkrypcja korzysta z arkusza `MMAP-P0-100-A-2405` i zasad oceniania `MMAP-P0-100-2405`; oba adresy, sumy SHA-256 i data weryfikacji znajdują się w [macierzy matury 2024 PP](MATURA_2024_BASIC_COVERAGE.md). Grupa ma status `blocked`, ponieważ bieżąca deklaracja właściciela nie obejmuje jeszcze publicznej redystrybucji tych dwóch dokumentów ani ich transkrypcji w Abiturii.
+Grupa `cke-2024-main-basic-exam` obejmuje `Content/exam-2024-main-basic.json`. Transkrypcja korzysta z arkusza `MMAP-P0-100-A-2405` i zasad oceniania `MMAP-P0-100-2405`; oba adresy, sumy SHA-256 i data weryfikacji znajdują się w [macierzy matury 2024 PP](MATURA_2024_BASIC_COVERAGE.md). Grupa ma status `approved` na podstawie rozszerzenia deklaracji właściciela z 10 sierpnia 2026 r., wyłącznie dla redystrybucji jako części Abiturii.
 
-Grupa `cke-2024-main-extended-exam` obejmuje `Content/exam-2024-main-extended.json`. Transkrypcja korzysta z arkusza `MMAP-R0-100-A-2405` i zasad oceniania `MMAP-R0-100-2405`; oba adresy, sumy SHA-256 i data weryfikacji znajdują się w [macierzy matury 2024 PR](MATURA_2024_EXTENDED_COVERAGE.md). Grupa ma status `blocked`, ponieważ bieżąca deklaracja właściciela nie obejmuje jeszcze publicznej redystrybucji tych dwóch dokumentów, ich transkrypcji ani pochodnej figury zadania 9.
+Grupa `cke-2024-main-extended-exam` obejmuje `Content/exam-2024-main-extended.json`. Transkrypcja korzysta z arkusza `MMAP-R0-100-A-2405` i zasad oceniania `MMAP-R0-100-2405`; oba adresy, sumy SHA-256 i data weryfikacji znajdują się w [macierzy matury 2024 PR](MATURA_2024_EXTENDED_COVERAGE.md). Grupa ma status `approved` na podstawie rozszerzenia deklaracji właściciela z 10 sierpnia 2026 r., wyłącznie dla redystrybucji jako części Abiturii.
 
 Grupa `cke-formula-2023-transcription` obejmuje `Content/formulas.json`. Dokument źródłowy CKE jest wskazany dokładnym adresem i sumą SHA-256 w katalogu treści oraz w [macierzy pokrycia tablic](FORMULA_2023_COVERAGE.md). Transkrypcję i weryfikację wykonał Adam Kubiś, natomiast autorem dokumentu źródłowego pozostaje Centralna Komisja Egzaminacyjna. Status `approved` wynika z rozszerzenia deklaracji z 27 lipca 2026 r.
 
@@ -100,7 +100,7 @@ Manifest oznacza jako `approved`:
 - arkusze CKE 2021, 2025 i 2026, transkrypcję tablic CKE dla Formuły 2023, katalog wektorów Avalonia oraz ikonę aplikacji objęte deklaracją praw lub upoważnienia do publicznej redystrybucji wyłącznie jako części Abiturii;
 - font Mulish na licencji SIL Open Font License 1.1, potwierdzonej przez `fonts/OFL.txt` i `fonts/README.txt`.
 
-Manifest zawiera trzy grupy `blocked`: `cke-formula-2023-guide-examples`, `cke-2024-main-basic-exam` i `cke-2024-main-extended-exam`. Każda zmiana źródeł, zakresu redystrybucji lub sposobu renderowania wymaga ponownej oceny, uruchomienia zwykłego walidatora i osobnej bramy `-RequireReleaseEligible`.
+Manifest nie zawiera obecnie grup `blocked`. Grupom `cke-formula-2023-guide-examples`, `cke-2024-main-basic-exam` i `cke-2024-main-extended-exam` przyznano status `approved` na podstawie rozszerzenia deklaracji z 10 sierpnia 2026 r. Każda zmiana źródeł, zakresu redystrybucji lub sposobu renderowania wymaga ponownej oceny, uruchomienia zwykłego walidatora i osobnej bramy `-RequireReleaseEligible`.
 
 Status zatwierdzony należy ponownie ocenić po każdej zmianie źródła, zakresu plików albo sposobu pakowania.
 

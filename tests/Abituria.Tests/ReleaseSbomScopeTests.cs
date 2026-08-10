@@ -5,7 +5,7 @@ namespace Abituria.Tests;
 
 public sealed class ReleaseSbomScopeTests
 {
-    private const string ReleaseVersion = "0.9.0-beta.1";
+    private const string ReleaseVersion = "0.9.1";
     private const string RuntimeIdentifier = "win-x64";
     private static readonly string RepositoryRoot = FindRepositoryRoot();
 

@@ -25,7 +25,7 @@ public sealed class ReleaseContractTests
             "docs/REQUIREMENTS.md"
         };
 
-        Assert.Equal("0.9.0-beta.1", version);
+        Assert.Equal("0.9.1", version);
         Assert.Empty(properties.Descendants("VersionPrefix"));
         Assert.Empty(properties.Descendants("VersionSuffix"));
         Assert.Equal(version, Services.AppBuildInfo.Current.Version);
@@ -146,12 +146,14 @@ public sealed class ReleaseContractTests
         Assert.Contains("artifact-metadata: write", draftJob, StringComparison.Ordinal);
         Assert.Contains("if (-not $existingRelease.isDraft)", draftJob, StringComparison.Ordinal);
         Assert.Contains("nie może zostać nadpisane ani cofnięte do draftu", draftJob, StringComparison.Ordinal);
-        Assert.Equal(7, CountOccurrences(draftJob, "uses: actions/attest@v4"));
-        Assert.Equal(3, CountOccurrences(draftJob, "sbom-path:"));
+        Assert.Equal(9, CountOccurrences(draftJob, "uses: actions/attest@v4"));
+        Assert.Equal(4, CountOccurrences(draftJob, "sbom-path:"));
         Assert.Equal(2, CountOccurrences(draftJob, "subject-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-win-x64.zip"));
+        Assert.Equal(2, CountOccurrences(draftJob, "subject-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-win-x64.exe"));
         Assert.Equal(2, CountOccurrences(draftJob, "subject-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-linux-x64.tar.gz"));
         Assert.Equal(2, CountOccurrences(draftJob, "subject-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-osx-x64.zip"));
         Assert.Contains("Attest Windows archive build provenance", draftJob, StringComparison.Ordinal);
+        Assert.Contains("Attest Windows single-file executable build provenance", draftJob, StringComparison.Ordinal);
         Assert.Contains("Attest Linux archive build provenance", draftJob, StringComparison.Ordinal);
         Assert.Contains("Attest macOS archive build provenance", draftJob, StringComparison.Ordinal);
     }
@@ -218,9 +220,9 @@ public sealed class ReleaseContractTests
         Assert.Contains("Ubuntu 24.04 x64", guide, StringComparison.Ordinal);
         Assert.Contains("macOS 15 Intel x64", guide, StringComparison.Ordinal);
         Assert.Contains("SHA-256", guide, StringComparison.Ordinal);
-        Assert.Contains("Abituria-v0.9.0-beta.1-win-x64", guide, StringComparison.Ordinal);
-        Assert.Contains("Abituria-v0.9.0-beta.1-linux-x64", guide, StringComparison.Ordinal);
-        Assert.Contains("Abituria-v0.9.0-beta.1-osx-x64", guide, StringComparison.Ordinal);
+        Assert.Contains("Abituria-v0.9.1-win-x64", guide, StringComparison.Ordinal);
+        Assert.Contains("Abituria-v0.9.1-linux-x64", guide, StringComparison.Ordinal);
+        Assert.Contains("Abituria-v0.9.1-osx-x64", guide, StringComparison.Ordinal);
         Assert.Contains("tools/release/RELEASE-README.md", packagingScript, StringComparison.Ordinal);
         Assert.Contains("dotnet-runtime-LICENSE.txt", packagingScript, StringComparison.Ordinal);
         Assert.Contains("dotnet-runtime-THIRD-PARTY-NOTICES.txt", packagingScript, StringComparison.Ordinal);
@@ -232,6 +234,24 @@ public sealed class ReleaseContractTests
         Assert.Contains("Start-Process", readme, StringComparison.Ordinal);
         Assert.Contains("-Wait -PassThru", readme, StringComparison.Ordinal);
         Assert.DoesNotContain("docs/INSTALLATION.md", packagingScript, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void Windows_release_offers_a_verified_single_file_executable()
+    {
+        var publisher = File.ReadAllText(Absolute("tools/release/Publish-ReleaseArtifact.ps1"));
+        var assetValidator = File.ReadAllText(Absolute("tools/release/Test-ReleaseAssets.ps1"));
+        var platformSmoke = File.ReadAllText(Absolute(".github/workflows/platform-installation-smoke.yml"));
+        var commonModule = File.ReadAllText(Absolute("tools/release/Release.Common.psm1"));
+
+        Assert.Contains("Get-ReleaseWindowsExecutableName", commonModule, StringComparison.Ordinal);
+        Assert.Contains("-p:IncludeNativeLibrariesForSelfExtract=true", publisher, StringComparison.Ordinal);
+        Assert.Contains("Publikacja win-x64 single-file musi zawierać wyłącznie Abituria.exe", publisher, StringComparison.Ordinal);
+        Assert.Contains("singleFile = $publishSingleFile", publisher, StringComparison.Ordinal);
+        Assert.Contains("$windowsExecutableName = Get-ReleaseWindowsExecutableName -Version $Version", assetValidator, StringComparison.Ordinal);
+        Assert.Contains("nie jest identyczny z binarium zweryfikowanym w archiwum win-x64", assetValidator, StringComparison.Ordinal);
+        Assert.Contains("-p:PublishSingleFile=$($singleFile.ToString().ToLowerInvariant())", platformSmoke, StringComparison.Ordinal);
+        Assert.Contains("Publikacja win-x64 musi zawierać wyłącznie pojedynczy plik Abituria.exe", platformSmoke, StringComparison.Ordinal);
     }
 
     [Fact]
@@ -324,6 +344,14 @@ public sealed class ReleaseContractTests
                     "https://bip.cke.gov.pl/attachments/download/9944" &&
                 item.GetProperty("reason").GetString()!.Contains(
                     "SHA-256",
+                    StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() ==
+                    "https://github.com/haribo841/Abituria/releases/tag/v0.9.1" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "tag preflight",
                     StringComparison.Ordinal));
         Assert.Contains(
             onlineCheckExclusions.EnumerateArray(),

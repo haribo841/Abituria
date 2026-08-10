@@ -1,10 +1,10 @@
-# Znane ograniczenia `0.9.0-beta.1`
+# Znane ograniczenia `0.9.1`
 
 Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest automatycznie błędem, ale każde zachowanie wykraczające poza poniższy opis należy zgłosić.
 
 ## Status publikacji
 
-- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=false`. Grupy `cke-formula-2023-guide-examples`, `cke-2024-main-basic-exam` i `cke-2024-main-extended-exam` pozostają `blocked`, ponieważ `ASSET_RIGHTS_DECLARATION.md` nie obejmuje jeszcze transkrypcji 97 przykładów z informatorów CKE ani arkuszy i zasad oceniania matury 2024 PP i PR. Stan ten nie zmienia zatwierdzenia opublikowanego wydania `0.9.0-beta.1`, ale blokuje kolejne publiczne wydanie.
+- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=true`. Rozszerzenie `ASSET_RIGHTS_DECLARATION.md` z 10 sierpnia 2026 r. zatwierdza grupy `cke-formula-2023-guide-examples`, `cke-2024-main-basic-exam` i `cke-2024-main-extended-exam` wyłącznie jako integralną część Abiturii. Każda przyszła zmiana źródeł, zakresu transkrypcji lub sposobu dystrybucji wymaga ponownej oceny przed wydaniem.
 - Rzeczywiste autorstwo i źródła są przypisane w `Content/provenance.json`. Przed tagiem trzeba ponownie przejść bramę `-RequireReleaseEligible` na dokładnym commicie wydania.
 - Lokalnie zbudowany artefakt nie jest oficjalnym wydaniem, nawet jeśli przechodzi testy techniczne.
 
@@ -13,7 +13,7 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 - Oficjalny zakres beta obejmuje wyłącznie Windows 11 24H2 x64, Ubuntu 24.04 x64 i macOS 15 Intel x64.
 - Apple Silicon, ARM64, 32-bit, inne dystrybucje Linuksa, aplikacja mobilna i wersja webowa nie są wspierane.
 - Paczki są portable i self-contained. Nie ma instalatora, integracji z menu systemu ani automatycznego aktualizatora.
-- Wydanie jest nietrimowane, bez AOT, ReadyToRun i single-file.
+- Wydanie jest nietrimowane, bez AOT i ReadyToRun. Windows otrzymuje pojedynczy plik EXE, ale Linux i macOS nadal wymagają natywnych paczek wieloplikowych.
 - Paczki nie są podpisane ani notaryzowane. SmartScreen i Gatekeeper mogą wyświetlać ostrzeżenia.
 - Na Ubuntu wymagane są zewnętrzne biblioteki `libx11-6`, `libice6`, `libsm6` i `libfontconfig1`.
 

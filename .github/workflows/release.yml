@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: Istniejący tag wydania, np. v0.9.0-beta.1
+        description: Istniejący tag wydania, np. v0.9.1
         required: true
         type: string
 
@@ -239,6 +239,11 @@ jobs:
         with:
           subject-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-win-x64.zip
           sbom-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-win-x64.spdx.json
+      - name: Attest Windows single-file executable with its SBOM
+        uses: actions/attest@v4
+        with:
+          subject-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-win-x64.exe
+          sbom-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-win-x64.spdx.json
       - name: Attest Linux archive with its SBOM
         uses: actions/attest@v4
         with:
@@ -253,6 +258,10 @@ jobs:
         uses: actions/attest@v4
         with:
           subject-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-win-x64.zip
+      - name: Attest Windows single-file executable build provenance
+        uses: actions/attest@v4
+        with:
+          subject-path: artifacts/release/Abituria-v${{ needs.preflight.outputs.version }}-win-x64.exe
       - name: Attest Linux archive build provenance
         uses: actions/attest@v4
         with:

@@ -225,7 +225,10 @@ public sealed class ExerciseView : UserControl
     private const string PrimaryButtonClass = "primary";
 
     private readonly TextBlock _status = new() { TextWrapping = TextWrapping.Wrap };
-    private readonly Border _hintHost = UiFactory.Card(new TextBlock { Text = "Podpowiedź pojawi się tutaj.", Classes = { "muted" } }, new Thickness(16), "SurfaceAltBrush");
+    private readonly Border _hintHost = UiFactory.Card(
+        new TextBlock { Text = "Kliknij „Pokaż podpowiedź”, aby odsłonić pierwszą wskazówkę.", Classes = { "muted" } },
+        new Thickness(16),
+        "SurfaceAltBrush");
     private readonly Dictionary<string, string?> _compoundAnswers = new(StringComparer.Ordinal);
     private int _hintIndex;
     private int? _selectedOption;
@@ -439,62 +442,108 @@ public sealed class ExerciseView : UserControl
     private void ConfigureAlphabeticalChoiceOrder(
         List<(LearningAnswerPart Part, RadioButton[] Choices)> choiceGroups)
     {
-        if (choiceGroups.Count < 2 ||
-            choiceGroups.Any(group => group.Choices.Length != choiceGroups[0].Choices.Length) ||
-            choiceGroups.Any(group => !group.Part.Options.SequenceEqual(choiceGroups[0].Part.Options)) ||
-            !choiceGroups[0].Part.Options.SequenceEqual(choiceGroups[0].Part.Options.Order(StringComparer.Ordinal)) ||
-            !choiceGroups[0].Part.Options.All(IsAlphabeticalLetter))
-        {
-            return;
-        }
+        if (!AlphabeticalChoiceOrder.IsApplicable(choiceGroups)) return;
 
-        var updating = false;
-        void UpdateChoices()
-        {
-            if (updating) return;
-            updating = true;
-            try
-            {
-                var previousSelection = -1;
-                for (var groupIndex = 0; groupIndex < choiceGroups.Count; groupIndex++)
-                {
-                    var group = choiceGroups[groupIndex];
-                    var remainingGroups = choiceGroups.Count - groupIndex - 1;
-                    for (var optionIndex = 0; optionIndex < group.Choices.Length; optionIndex++)
-                    {
-                        var choice = group.Choices[optionIndex];
-                        var enabled = groupIndex == 0 || previousSelection >= 0;
-                        enabled &= groupIndex == 0 || optionIndex > previousSelection;
-                        enabled &= optionIndex <= group.Choices.Length - remainingGroups - 1;
-                        if (!enabled && choice.IsChecked == true)
-                        {
-                            choice.IsChecked = false;
-                            _compoundAnswers.Remove(group.Part.Id);
-                        }
-                        choice.IsEnabled = enabled;
-                    }
-
-                    previousSelection = Array.FindIndex(group.Choices, choice => choice.IsChecked == true);
-                    if (previousSelection < 0 && groupIndex > 0)
-                        break;
-                }
-            }
-            finally
-            {
-                updating = false;
-            }
-        }
-
-        foreach (var group in choiceGroups)
-        {
-            foreach (var choice in group.Choices)
-                choice.IsCheckedChanged += (_, _) => UpdateChoices();
-        }
-        UpdateChoices();
+        var choiceOrder = new AlphabeticalChoiceOrder(choiceGroups, _compoundAnswers);
+        choiceOrder.Subscribe();
+        choiceOrder.Update();
     }
 
     private static bool IsAlphabeticalLetter(string value) =>
         value.Length == 1 && value[0] is >= 'A' and <= 'Z';
+
+    private sealed class AlphabeticalChoiceOrder
+    {
+        private readonly List<(LearningAnswerPart Part, RadioButton[] Choices)> _choiceGroups;
+        private readonly Dictionary<string, string?> _answers;
+        private bool _isUpdating;
+
+        public AlphabeticalChoiceOrder(
+            List<(LearningAnswerPart Part, RadioButton[] Choices)> choiceGroups,
+            Dictionary<string, string?> answers)
+        {
+            _choiceGroups = choiceGroups;
+            _answers = answers;
+        }
+
+        public static bool IsApplicable(List<(LearningAnswerPart Part, RadioButton[] Choices)> choiceGroups)
+        {
+            if (choiceGroups.Count < 2) return false;
+
+            var firstGroup = choiceGroups[0];
+            return choiceGroups.All(group =>
+                       group.Choices.Length == firstGroup.Choices.Length &&
+                       group.Part.Options.SequenceEqual(firstGroup.Part.Options)) &&
+                   firstGroup.Part.Options.SequenceEqual(firstGroup.Part.Options.Order(StringComparer.Ordinal)) &&
+                   firstGroup.Part.Options.All(IsAlphabeticalLetter);
+        }
+
+        public void Subscribe()
+        {
+            foreach (var group in _choiceGroups)
+            {
+                foreach (var choice in group.Choices)
+                    choice.IsCheckedChanged += (_, _) => Update();
+            }
+        }
+
+        public void Update()
+        {
+            if (_isUpdating) return;
+
+            _isUpdating = true;
+            try
+            {
+                UpdateChoiceGroups();
+            }
+            finally
+            {
+                _isUpdating = false;
+            }
+        }
+
+        private void UpdateChoiceGroups()
+        {
+            var previousSelection = -1;
+            for (var groupIndex = 0; groupIndex < _choiceGroups.Count; groupIndex++)
+            {
+                var group = _choiceGroups[groupIndex];
+                UpdateChoiceGroup(group, groupIndex, previousSelection);
+                previousSelection = Array.FindIndex(group.Choices, choice => choice.IsChecked == true);
+                if (previousSelection < 0 && groupIndex > 0) return;
+            }
+        }
+
+        private void UpdateChoiceGroup(
+            (LearningAnswerPart Part, RadioButton[] Choices) group,
+            int groupIndex,
+            int previousSelection)
+        {
+            var remainingGroups = _choiceGroups.Count - groupIndex - 1;
+            for (var optionIndex = 0; optionIndex < group.Choices.Length; optionIndex++)
+            {
+                var choice = group.Choices[optionIndex];
+                var isEnabled = IsChoiceEnabled(groupIndex, optionIndex, previousSelection, group.Choices.Length, remainingGroups);
+                if (!isEnabled && choice.IsChecked == true)
+                {
+                    choice.IsChecked = false;
+                    _answers.Remove(group.Part.Id);
+                }
+                choice.IsEnabled = isEnabled;
+            }
+        }
+
+        private static bool IsChoiceEnabled(
+            int groupIndex,
+            int optionIndex,
+            int previousSelection,
+            int choiceCount,
+            int remainingGroups)
+        {
+            if (optionIndex > choiceCount - remainingGroups - 1) return false;
+            return groupIndex == 0 || previousSelection >= 0 && optionIndex > previousSelection;
+        }
+    }
 
     private StackPanel BuildCompoundPart(
         LearningExercise exercise,
@@ -557,18 +606,35 @@ public sealed class ExerciseView : UserControl
 
     private void AddHintControls(StackPanel root, LearningExercise exercise)
     {
-        if (exercise.Hints.Count > 0)
+        var hints = ExerciseHintProvider.GetHints(exercise);
+        if (hints.Count > 0)
         {
-            var hint = new Button { Content = "Następna podpowiedź", Classes = { GhostButtonClass }, HorizontalAlignment = HorizontalAlignment.Left };
+            var hint = new Button
+            {
+                Content = HintButtonLabel(1, hints.Count),
+                Classes = { GhostButtonClass },
+                HorizontalAlignment = HorizontalAlignment.Left
+            };
+            AutomationProperties.SetName(hint, "Pokaż następną podpowiedź do zadania");
             hint.Click += (_, _) =>
             {
-                if (_hintIndex >= exercise.Hints.Count) { ShowStatus("To była ostatnia podpowiedź.", true); return; }
-                _hintHost.Child = RichContentView.CreateText(exercise.Hints[_hintIndex++]);
+                if (_hintIndex >= hints.Count) return;
+
+                _hintHost.Child = RichContentView.CreateText(hints[_hintIndex++]);
+                if (_hintIndex == hints.Count)
+                {
+                    hint.Content = "Wszystkie podpowiedzi pokazano";
+                    hint.IsEnabled = false;
+                }
+                else
+                    hint.Content = HintButtonLabel(_hintIndex + 1, hints.Count);
             };
             root.Children.Add(hint);
         }
         root.Children.Add(_hintHost);
     }
+
+    private static string HintButtonLabel(int number, int total) => $"Pokaż podpowiedź ({number} z {total})";
 
     private void ShowSolution(LearningExercise exercise)
     {
@@ -605,16 +671,18 @@ public sealed class ExerciseView : UserControl
 
     private static Border BuildSourceBand(LearningExercise exercise, ExerciseViewContext context)
     {
-        if (!exercise.IsCourseExercise)
-            return UiFactory.InfoBand(context.Copy.FormatRequired(
+        var sourceBand = !exercise.IsCourseExercise
+            ? UiFactory.InfoBand(context.Copy.FormatRequired(
                 "exam.source",
                 exercise.VerificationSource,
                 exercise.SourcePage,
-                FormatVerifiedOn(context.Source.VerifiedOn)));
-
-        var sourceUrl = string.IsNullOrWhiteSpace(context.SourceUrl) ? string.Empty : $"\n{context.SourceUrl}";
-        return UiFactory.InfoBand(
-            "Źródło wymagania",
-            $"{exercise.VerificationSource}. Weryfikacja: {FormatVerifiedOn(context.Source.VerifiedOn)}.{sourceUrl}");
+                FormatVerifiedOn(context.Source.VerifiedOn)))
+            : UiFactory.InfoBand(
+                "Źródło wymagania",
+                $"{exercise.VerificationSource}. Weryfikacja: {FormatVerifiedOn(context.Source.VerifiedOn)}." +
+                (string.IsNullOrWhiteSpace(context.SourceUrl) ? string.Empty : $"\n{context.SourceUrl}"));
+        sourceBand.Name = "ExerciseSourceBand";
+        AutomationProperties.SetName(sourceBand, "Źródło zadania");
+        return sourceBand;
     }
 }

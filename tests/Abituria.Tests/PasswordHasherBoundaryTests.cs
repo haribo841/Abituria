@@ -4,25 +4,20 @@ namespace Abituria.Tests;
 
 public sealed class PasswordHasherBoundaryTests
 {
-    [Theory]
-    [InlineData(PasswordHasher.MinimumPasswordLength - 1)]
-    [InlineData(PasswordHasher.MaximumPasswordLength + 1)]
-    public void Password_validation_rejects_both_length_boundaries(int length)
+    [Fact]
+    public void Password_validation_rejects_only_an_empty_password()
     {
-        var password = new string('a', length);
+        var error = Assert.Throws<ArgumentException>(() => PasswordHasher.ValidatePassword(string.Empty));
 
-        var error = Assert.Throws<ArgumentException>(() => PasswordHasher.ValidatePassword(password));
-
-        Assert.Contains(PasswordHasher.MinimumPasswordLength.ToString(), error.Message, StringComparison.Ordinal);
-        Assert.Contains(PasswordHasher.MaximumPasswordLength.ToString(), error.Message, StringComparison.Ordinal);
+        Assert.Equal("Hasło nie może być puste.", error.Message);
     }
 
     [Fact]
-    public void Password_validation_and_hashing_accept_exact_boundaries()
+    public void Password_validation_and_hashing_accept_one_character_and_the_technical_maximum()
     {
         var hasher = new PasswordHasher(iterations: 1_000);
 
-        foreach (var length in new[] { PasswordHasher.MinimumPasswordLength, PasswordHasher.MaximumPasswordLength })
+        foreach (var length in new[] { 1, PasswordHasher.MaximumPasswordLength })
         {
             var password = new string('a', length);
             PasswordHasher.ValidatePassword(password);
@@ -34,5 +29,15 @@ public sealed class PasswordHasherBoundaryTests
                 credential.Salt,
                 credential.Iterations));
         }
+    }
+
+    [Fact]
+    public void Password_validation_rejects_values_above_the_technical_maximum()
+    {
+        var password = new string('a', PasswordHasher.MaximumPasswordLength + 1);
+
+        var error = Assert.Throws<ArgumentException>(() => PasswordHasher.ValidatePassword(password));
+
+        Assert.Contains(PasswordHasher.MaximumPasswordLength.ToString(), error.Message, StringComparison.Ordinal);
     }
 }

@@ -75,9 +75,7 @@ public sealed class GeneralCalculatorView : UserControl
         root.Children.Add(BuildWorkArea(isPictureInPicture));
         if (!isPictureInPicture) RenderHistory();
 
-        var scrollViewer = UiFactory.PageScroll(root);
-        if (isPictureInPicture) scrollViewer.Padding = new Thickness(12);
-        return scrollViewer;
+        return UiFactory.PageScroll(root, isPictureInPicture ? new Thickness(12) : null);
     }
 
     private static void AddPageHeader(
