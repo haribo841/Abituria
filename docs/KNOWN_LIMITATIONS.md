@@ -1,4 +1,4 @@
-# Znane ograniczenia `0.9.1`
+# Znane ograniczenia `0.9.2`
 
 Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest automatycznie błędem, ale każde zachowanie wykraczające poza poniższy opis należy zgłosić.
 

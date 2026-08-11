@@ -115,4 +115,15 @@ public sealed class SonarRegressionTests
         Assert.Equal(typeof(Border), typeof(MainWindow).GetMethod("BuildTopBar", privateInstance)?.ReturnType);
         Assert.Equal(typeof(Grid), typeof(LoginView).GetMethod("Build", privateInstance)?.ReturnType);
     }
+
+    [Fact]
+    public void Alphabetical_choice_validation_remains_owned_by_its_ordering_helper()
+    {
+        const BindingFlags privateStatic = BindingFlags.NonPublic | BindingFlags.Static;
+        var orderingHelper = typeof(ExerciseView).GetNestedType("AlphabeticalChoiceOrder", BindingFlags.NonPublic);
+
+        Assert.NotNull(orderingHelper);
+        Assert.NotNull(orderingHelper.GetMethod("IsAlphabeticalLetter", privateStatic));
+        Assert.Null(typeof(ExerciseView).GetMethod("IsAlphabeticalLetter", privateStatic));
+    }
 }

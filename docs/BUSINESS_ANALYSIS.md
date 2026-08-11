@@ -70,7 +70,7 @@ Użytkownik otrzymuje bezpłatny dostęp do lokalnej aplikacji, połączenie mat
 
 ### 4.3. Stan dystrybucji
 
-Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, a publiczne prerelease [`v0.9.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.1) stanowi kanał dystrybucji zatwierdzonej bety. Deklaracje z 3, 5 i 10 sierpnia 2026 r. obejmują arkusze 2024, 2025 i 2026 na obu poziomach, zasady oceniania, transkrypcję 97 przykładów z informatorów CKE oraz trzydzieści jeden zatwierdzonych autorskich implementacji wektorowych Avalonia. Bieżąca brama `releaseEligible` w `Content/provenance.json` ma wartość `true`; szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), macierze matur 2024, 2025 i 2026 oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
+Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, a publiczne prerelease [`v0.9.2`](https://github.com/haribo841/Abituria/releases/tag/v0.9.2) stanowi kanał dystrybucji zatwierdzonej bety. Deklaracje z 3, 5 i 10 sierpnia 2026 r. obejmują arkusze 2024, 2025 i 2026 na obu poziomach, zasady oceniania, transkrypcję 97 przykładów z informatorów CKE oraz trzydzieści jeden zatwierdzonych autorskich implementacji wektorowych Avalonia. Bieżąca brama `releaseEligible` w `Content/provenance.json` ma wartość `true`; szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), macierze matur 2024, 2025 i 2026 oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
 
 Koszty bieżącego wariantu obejmują przede wszystkim czas przygotowania treści, implementacji, testów, dokumentacji i utrzymania repozytorium. Aplikacja działa lokalnie, dlatego nie wymaga serwera aplikacyjnego ani przechowywania danych użytkowników przez zewnętrznego operatora.
 
@@ -119,10 +119,10 @@ Rzeczywiste daty najwcześniejszych weryfikowalnych stanów technicznych I-IV bi
 | Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | zrealizowane: pełny kurs `119/238/357`, siedem aktywnych arkuszy ze 182 jednostkami postępu, tablice i oddzielny postęp |
 | Tydzień 12 | M5a - testy i regresje | autor implementacji | zrealizowane ciągle: testy jednostkowe, integracyjne, UI i CI |
 | Tydzień 13 | M5b - dokumentacja i pakowanie | autor implementacji | technicznie zrealizowane: dokumentacja, workflow, paczki portable i smoke test |
-| Tydzień 14 | M6 - publiczne prerelease | autor implementacji, właściciel praw | osiągnięte: zatwierdzona proweniencja, tag, natywne workflow i publiczny GitHub Release `v0.9.1` |
+| Tydzień 14 | M6 - publiczne prerelease | autor implementacji, właściciel praw | osiągnięte: zatwierdzona proweniencja, tag, natywne workflow i publiczny GitHub Release `v0.9.2` |
 | 17 stycznia 2022 r. | M7 - publiczna obrona projektu historycznego | Adam Kubiś i komisja | osiągnięte: pokaz działającej aplikacji, pytania i odpowiedzi, decyzja pozytywna, wynik bardzo dobry; dowód w `DEFENSE_PROTOCOL.md` |
 
-M6 w tej tabeli dotyczy prerelease bieżącej migracji `0.9.1`, natomiast M7 dokumentuje rzeczywistą obronę historycznej wersji projektu w 2022 r. Są to odrębne zdarzenia i dowody.
+M6 w tej tabeli dotyczy prerelease bieżącej migracji `0.9.2`, natomiast M7 dokumentuje rzeczywistą obronę historycznej wersji projektu w 2022 r. Są to odrębne zdarzenia i dowody.
 
 Przed ustaleniem daty M6 należy potwierdzić wynik wszystkich bram dla dokładnego commita. Prawa do materiałów CKE, odziedziczonych grafik matematycznych oraz grafik aplikacji zostały odnotowane na podstawie oświadczenia właściciela z 19 lipca 2026 r.; nie zastępuje ono technicznego workflow publikacji.
 

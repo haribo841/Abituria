@@ -37,7 +37,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - podpisywanie kodu i paczek,
 - paczka macOS dla Apple Silicon.
 
-Manifest `Content/provenance.json` ma obecnie `releaseEligible=true`. Rozszerzenia deklaracji właściciela z 3, 5 i 10 sierpnia 2026 r. obejmują arkusze CKE 2024, 2025 i 2026 na obu poziomach, zasady oceniania, przykłady z informatorów CKE oraz trzydzieści jeden autorskich implementacji wektorowych Avalonia. Publiczny prerelease `0.9.1` nadal wymaga pełnej checklisty wydania i zweryfikowanego workflow.
+Manifest `Content/provenance.json` ma obecnie `releaseEligible=true`. Rozszerzenia deklaracji właściciela z 3, 5 i 10 sierpnia 2026 r. obejmują arkusze CKE 2024, 2025 i 2026 na obu poziomach, zasady oceniania, przykłady z informatorów CKE oraz trzydzieści jeden autorskich implementacji wektorowych Avalonia. Każdy publiczny prerelease, w tym `0.9.2`, wymaga pełnej checklisty wydania i zweryfikowanego workflow.
 
 ## Zastąpione
 

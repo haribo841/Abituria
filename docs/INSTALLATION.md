@@ -1,6 +1,6 @@
 # Instalacja, aktualizacja i odinstalowanie
 
-Ta instrukcja dotyczy wersji `0.9.1`. Abituria jest publikowana jako samowystarczalna aplikacja portable. Nie wymaga osobnej instalacji .NET, ale nie zawiera natywnego instalatora ani automatycznej aktualizacji.
+Ta instrukcja dotyczy wersji `0.9.2`. Abituria jest publikowana jako samowystarczalna aplikacja portable. Nie wymaga osobnej instalacji .NET, ale nie zawiera natywnego instalatora ani automatycznej aktualizacji.
 
 > [!IMPORTANT]
 > Inwentarz pochodzenia treści, fontów i obrazów ma wynik pozytywny, w tym twardą bramę `releaseEligible=true`. Pobieraj wyłącznie paczki opublikowane w zweryfikowanym GitHub Release po wykonaniu kompletnej checklisty, utworzeniu tagu i publikacji prerelease. Nie udostępniaj artefaktów utworzonych lokalnie z pominięciem tej kontroli.
@@ -17,13 +17,13 @@ macOS na Apple Silicon, Windows ARM64, inne dystrybucje Linuksa, systemy mobilne
 
 ## Pobieranie
 
-Po zatwierdzeniu wydania pobierz z [GitHub Release `v0.9.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.1) dokładnie jeden artefakt uruchomieniowy:
+Po zatwierdzeniu wydania pobierz z [GitHub Release `v0.9.2`](https://github.com/haribo841/Abituria/releases/tag/v0.9.2) dokładnie jeden artefakt uruchomieniowy:
 
-- `Abituria-v0.9.1-win-x64.exe` dla Windows;
-- `Abituria-v0.9.1-linux-x64.tar.gz`;
-- `Abituria-v0.9.1-osx-x64.zip`.
+- `Abituria-v0.9.2-win-x64.exe` dla Windows;
+- `Abituria-v0.9.2-linux-x64.tar.gz`;
+- `Abituria-v0.9.2-osx-x64.zip`.
 
-Pobierz również `SHA256SUMS.txt`. Dla Windows archiwum `Abituria-v0.9.1-win-x64.zip` pozostaje opcjonalnym pakietem audytowym z licencjami, notices i SBOM. Każdemu artefaktowi uruchomieniowemu odpowiada SBOM SPDX oraz dwie atestacje wygenerowane przez workflow wydania: domyślna SLSA build provenance i atestacja dokumentu SBOM.
+Pobierz również `SHA256SUMS.txt`. Dla Windows archiwum `Abituria-v0.9.2-win-x64.zip` pozostaje opcjonalnym pakietem audytowym z licencjami, notices i SBOM. Każdemu artefaktowi uruchomieniowemu odpowiada SBOM SPDX oraz dwie atestacje wygenerowane przez workflow wydania: domyślna SLSA build provenance i atestacja dokumentu SBOM.
 
 ## Sprawdzenie integralności i pochodzenia
 
@@ -32,7 +32,7 @@ Nie uruchamiaj paczki, jeżeli suma nie zgadza się z `SHA256SUMS.txt` albo wery
 ### Windows PowerShell
 
 ```powershell
-$app = ".\Abituria-v0.9.1-win-x64.exe"
+$app = ".\Abituria-v0.9.2-win-x64.exe"
 (Get-FileHash $app -Algorithm SHA256).Hash
 Select-String -Path .\SHA256SUMS.txt -Pattern ([IO.Path]::GetFileName($app))
 gh attestation verify $app --repo haribo841/Abituria
@@ -50,24 +50,24 @@ gh attestation verify $app `
 ### Ubuntu
 
 ```bash
-sha256sum Abituria-v0.9.1-linux-x64.tar.gz
-grep 'Abituria-v0.9.1-linux-x64.tar.gz' SHA256SUMS.txt
-gh attestation verify Abituria-v0.9.1-linux-x64.tar.gz --repo haribo841/Abituria
+sha256sum Abituria-v0.9.2-linux-x64.tar.gz
+grep 'Abituria-v0.9.2-linux-x64.tar.gz' SHA256SUMS.txt
+gh attestation verify Abituria-v0.9.2-linux-x64.tar.gz --repo haribo841/Abituria
 ```
 
 ### macOS
 
 ```bash
-shasum -a 256 Abituria-v0.9.1-osx-x64.zip
-grep 'Abituria-v0.9.1-osx-x64.zip' SHA256SUMS.txt
-gh attestation verify Abituria-v0.9.1-osx-x64.zip --repo haribo841/Abituria
+shasum -a 256 Abituria-v0.9.2-osx-x64.zip
+grep 'Abituria-v0.9.2-osx-x64.zip' SHA256SUMS.txt
+gh attestation verify Abituria-v0.9.2-osx-x64.zip --repo haribo841/Abituria
 ```
 
 ## Windows
 
-1. Zweryfikuj pobrany plik `Abituria-v0.9.1-win-x64.exe`.
-2. Przenieś go do wybranego katalogu, na przykład `%LOCALAPPDATA%\Programs\Abituria-0.9.1`.
-3. Uruchom `Abituria-v0.9.1-win-x64.exe`. Rozpakowywanie nie jest potrzebne.
+1. Zweryfikuj pobrany plik `Abituria-v0.9.2-win-x64.exe`.
+2. Przenieś go do wybranego katalogu, na przykład `%LOCALAPPDATA%\Programs\Abituria-0.9.2`.
+3. Uruchom `Abituria-v0.9.2-win-x64.exe`. Rozpakowywanie nie jest potrzebne.
 
 Wydanie beta nie ma podpisu kodu. SmartScreen może zgłosić nierozpoznanego wydawcę. Po sprawdzeniu sumy i attestation konkretnej paczki można użyć opcji systemu pokazującej więcej informacji i zezwalającej na jednorazowe uruchomienie tego pliku. Nie wyłączaj globalnie SmartScreen ani programu antywirusowego.
 
@@ -75,7 +75,7 @@ Smoke test bez otwierania okna i bez używania prawdziwej bazy:
 
 ```powershell
 $data = Join-Path $env:TEMP "abituria-smoke-$([Guid]::NewGuid())"
-$app = Join-Path $env:LOCALAPPDATA "Programs\Abituria-0.9.1\Abituria-v0.9.1-win-x64.exe"
+$app = Join-Path $env:LOCALAPPDATA "Programs\Abituria-0.9.2\Abituria-v0.9.2-win-x64.exe"
 try {
     $process = Start-Process `
         -FilePath $app `
@@ -103,10 +103,10 @@ finally {
 3. Rozpakuj paczkę do nowego katalogu:
 
    ```bash
-   mkdir -p "$HOME/.local/opt/abituria-0.9.1"
-   tar -xzf Abituria-v0.9.1-linux-x64.tar.gz \
-     -C "$HOME/.local/opt/abituria-0.9.1"
-   cd "$HOME/.local/opt/abituria-0.9.1/Abituria-v0.9.1-linux-x64"
+   mkdir -p "$HOME/.local/opt/abituria-0.9.2"
+   tar -xzf Abituria-v0.9.2-linux-x64.tar.gz \
+     -C "$HOME/.local/opt/abituria-0.9.2"
+   cd "$HOME/.local/opt/abituria-0.9.2/Abituria-v0.9.2-linux-x64"
    chmod u+x ./Abituria
    ./Abituria
    ```
@@ -124,8 +124,8 @@ exit "$status"
 ## macOS Intel
 
 1. Zweryfikuj pobrany plik.
-2. Rozpakuj ZIP. Archiwum utworzy katalog `Abituria-v0.9.1-osx-x64`, wewnątrz którego znajduje się kompletne `Abituria.app`.
-3. Przenieś aplikację `Abituria-v0.9.1-osx-x64/Abituria.app` do katalogu `/Applications` albo uruchamiaj ją z rozpakowanego katalogu użytkownika.
+2. Rozpakuj ZIP. Archiwum utworzy katalog `Abituria-v0.9.2-osx-x64`, wewnątrz którego znajduje się kompletne `Abituria.app`.
+3. Przenieś aplikację `Abituria-v0.9.2-osx-x64/Abituria.app` do katalogu `/Applications` albo uruchamiaj ją z rozpakowanego katalogu użytkownika.
 4. Otwórz aplikację.
 
 Wydanie beta nie jest podpisane ani notaryzowane. Gatekeeper może zablokować pierwsze uruchomienie. Po zweryfikowaniu sumy i attestation użyj systemowej, jednorazowej procedury otwarcia konkretnej aplikacji, na przykład Control-click, „Open”, a następnie potwierdzenie, lub opcji „Open Anyway” dla Abiturii w ustawieniach Privacy & Security. Nie wyłączaj Gatekeepera globalnie.
@@ -136,7 +136,7 @@ Smoke test:
 data="$(mktemp -d)"
 app="/Applications/Abituria.app"
 # Jeśli aplikacja pozostała w rozpakowanym katalogu, ustaw zamiast tego:
-# app="$PWD/Abituria-v0.9.1-osx-x64/Abituria.app"
+# app="$PWD/Abituria-v0.9.2-osx-x64/Abituria.app"
 "$app/Contents/MacOS/Abituria" \
   --release-smoke-test --data-directory "$data"
 status=$?

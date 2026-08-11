@@ -2,6 +2,18 @@
 
 W tym pliku są opisywane wyłącznie rzeczywiste wydania repozytorium `haribo841/Abituria`. Nie rekonstruujemy fikcyjnych wersji `0.1.0` ani `0.2.0` na podstawie historycznych snapshotów.
 
+## [0.9.2] - 2026-08-11
+
+Wydanie beta usuwające zgłoszenia jakości SonarCloud bez zmiany zachowania ćwiczeń.
+
+### Naprawiono
+
+- usunięto zagnieżdżony operator warunkowy z budowania paska źródła zadania;
+- pomocnik sprawdzający kolejność liter odpowiedzi złożonej należy wyłącznie do klasy porządkującej;
+- dodano regresję chroniącą tę strukturę i zachowanie kolejności odpowiedzi.
+
+[0.9.2]: https://github.com/haribo841/Abituria/releases/tag/v0.9.2
+
 ## [0.9.1] - 2026-08-10
 
 Wydanie beta uzupełniające dostępność ćwiczeń, wydawanie pojedynczego pliku Windows i dokumentację produktu.

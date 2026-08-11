@@ -1,6 +1,6 @@
 # Podręcznik użytkownika
 
-Podręcznik dotyczy Abiturii `0.9.1`. Aplikacja działa lokalnie i nie wymaga połączenia z internetem do nauki, obliczeń ani zapisu postępu.
+Podręcznik dotyczy Abiturii `0.9.2`. Aplikacja działa lokalnie i nie wymaga połączenia z internetem do nauki, obliczeń ani zapisu postępu.
 
 ## Pierwsze uruchomienie
 

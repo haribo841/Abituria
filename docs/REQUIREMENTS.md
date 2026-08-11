@@ -215,7 +215,7 @@ System nie zakłada kont administratora, ról sieciowych ani synchronizacji wiel
 
 ## 11. Kryteria akceptacji projektu
 
-Kryteria techniczne bieżącej wersji, publiczna obrona 17 stycznia 2022 r., późniejszy historyczny odbiór przez prowadzącego i publiczna publikacja bieżącej migracji są odrębnymi stanami. Obrona zakończyła się pozytywną decyzją komisji i wynikiem bardzo dobrym. Historyczny projekt został również zaakceptowany przez prowadzącego na początku lutego 2022 r. zgodnie z poświadczeniem właściciela zapisanym 19 lipca 2026 r. Kryteria dotyczące tagu, proweniencji i GitHub Release pozostają warunkami osobnej publikacji `0.9.1`, a nie warunkami ponownego zatwierdzenia decyzji historycznych.
+Kryteria techniczne bieżącej wersji, publiczna obrona 17 stycznia 2022 r., późniejszy historyczny odbiór przez prowadzącego i publiczna publikacja bieżącej migracji są odrębnymi stanami. Obrona zakończyła się pozytywną decyzją komisji i wynikiem bardzo dobrym. Historyczny projekt został również zaakceptowany przez prowadzącego na początku lutego 2022 r. zgodnie z poświadczeniem właściciela zapisanym 19 lipca 2026 r. Kryteria dotyczące tagu, proweniencji i GitHub Release pozostają warunkami osobnej publikacji `0.9.2`, a nie warunkami ponownego zatwierdzenia decyzji historycznych.
 
 Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 
@@ -286,7 +286,7 @@ Techniczny inwentarz licencji i proweniencji obejmuje matury CKE 2024, 2025 i 20
 
 ## Status issue #36
 
-Repozytorium zawiera kompletny proces wydania wersji `0.9.1`: jedno źródło wersji, .NET 10 LTS, lockfile, audyt, paczki portable dla trzech systemów, diagnostyczny smoke test, ekran "O programie", dokumentację, sumy, SBOM i atestacje. Bieżący manifest ma `releaseEligible=true` po rozszerzeniu deklaracji z 10 sierpnia 2026 r., a prerelease jest śledzony pod adresem `https://github.com/haribo841/Abituria/releases/tag/v0.9.1`.
+Repozytorium zawiera kompletny proces wydania wersji `0.9.2`: jedno źródło wersji, .NET 10 LTS, lockfile, audyt, paczki portable dla trzech systemów, diagnostyczny smoke test, ekran "O programie", dokumentację, sumy, SBOM i atestacje. Bieżący manifest ma `releaseEligible=true` po rozszerzeniu deklaracji z 10 sierpnia 2026 r., a prerelease jest śledzony pod adresem `https://github.com/haribo841/Abituria/releases/tag/v0.9.2`.
 
 ## Status Issue #9
 
@@ -298,7 +298,7 @@ Issue #43 dotyczyło odbioru czterech przyrostów, prototypowania, testów użyt
 
 Nie zachowano dokładnego dnia odbioru, osobnych dat decyzji dla I-III przyrostu, liczby i danych uczestników, kart sesji, komentarzy, powiązania poprawek z uczestnikami, kanału przekazania ani hasha historycznego pakietu. Protokoły ujawniają te braki i nie zastępują ich fikcyjnymi danymi. Późniejsze poprawki H-01-H-03 są wynikiem przeglądu heurystycznego z 2026 r. i nie są przypisywane uczestnikom.
 
-Na tej podstawie historyczny odbiór ma status `ACCEPTED - READY TO CLOSE`. Publiczny GitHub Release `0.9.1` pozostaje odrębnym działaniem bieżącej migracji i nie jest przedstawiany jako dowód historycznego odbioru.
+Na tej podstawie historyczny odbiór ma status `ACCEPTED - READY TO CLOSE`. Publiczny GitHub Release `0.9.2` pozostaje odrębnym działaniem bieżącej migracji i nie jest przedstawiany jako dowód historycznego odbioru.
 
 ## Status issue #44
 
@@ -314,4 +314,4 @@ Issue #45 definiowało siedem obszarów oceny, dziesięć warunków akceptacji o
 
 Historyczny produkt WPF został zaprezentowany 17 stycznia 2022 r., miał paczkę `v1.0.0` dostępną przed obroną i końcowe wydanie `v1.0.1` z 18 stycznia 2022 r. Komisja wydała decyzję pozytywną, a projekt i obrona uzyskały wynik bardzo dobry według poświadczenia właściciela. Nagranie dostępne przez link potwierdza prezentację, demonstrację i pytania, ale nie obejmuje ogłoszenia wyniku. Nie zachowano podpisanej karty oceny, pisemnej opinii prowadzącego ani ocen indywidualnych i dokumentacja nie rekonstruuje ich przez domysł.
 
-Bieżąca migracja AvaloniaUI `0.9.1` ma osobne dowody techniczne i nie była przedmiotem komisji z 2022 r. Jej publiczny GitHub Release jest odrębnym procesem wydawniczym. Stan historycznego zakresu: `ACCEPTED - HISTORICAL CRITERIA SATISFIED - READY TO CLOSE AS COMPLETED`.
+Bieżąca migracja AvaloniaUI `0.9.2` ma osobne dowody techniczne i nie była przedmiotem komisji z 2022 r. Jej publiczny GitHub Release jest odrębnym procesem wydawniczym. Stan historycznego zakresu: `ACCEPTED - HISTORICAL CRITERIA SATISFIED - READY TO CLOSE AS COMPLETED`.

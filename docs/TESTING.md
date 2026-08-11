@@ -1,10 +1,10 @@
 # Plan i raport testów końcowych
 
-Wersja dokumentu: `0.9.1`.
+Wersja dokumentu: `0.9.2`.
 
-Data ostatniego lokalnego wykonania: 10 sierpnia 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
+Data ostatniego lokalnego wykonania: 11 sierpnia 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
 
-Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` z raportem OpenCover zakończył się wynikiem `552/552 PASS` w czasie `36 s`. OpenCover wykazał `95,90%` pokrycia linii i `86,87%` pokrycia gałęzi kodu C#. Dziewięć testów Python generatora PDF i importera przykładów CKE przeszło, a `coverage.py` wykazał `98,10%` linii i `92,05%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,42%` pokrycia łącznego i `87,08%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
+Pełny przebieg `dotnet test Abituria.sln --configuration Release --no-build --no-restore` z raportem OpenCover zakończył się wynikiem `553/553 PASS`. OpenCover wykazał `95,90%` pokrycia linii i `86,87%` pokrycia gałęzi kodu C#. Dziewięć testów Python generatora PDF i importera przykładów CKE przeszło, a `coverage.py` wykazał `98,10%` linii i `92,05%` gałęzi. Wspólna bramka zakończyła się wynikiem `93,42%` pokrycia łącznego i `87,08%` gałęzi, powyżej wymaganych progów `90%` i `85%`.
 
 Dokument rozróżnia wyniki automatyczne, retrospektywne poświadczenie historycznych testów uczestników oraz czynności bieżącego procesu wydawniczego. Brak szczegółowej karty sesji nie jest uzupełniany przez domysł, a poświadczenie historyczne nie jest przedstawiane jako test bieżącej paczki.
 
@@ -150,7 +150,7 @@ Historyczny odbiór Issue #43 jest zaliczony na podstawie łącznie udokumentowa
 3. historyczna forma przekazania została uzgodniona i przyjęta;
 4. brakujące szczegóły sesji, podpisu, kanału i hasha są ujawnione jako ograniczenia archiwalne, a nie uzupełnione fikcyjnymi danymi.
 
-Publiczne wydanie `0.9.1` jest osobnym procesem. Zwykły walidator proweniencji i brama `-RequireReleaseEligible` muszą przechodzić po rozszerzeniach `ASSET_RIGHTS_DECLARATION.md` z 3, 5 i 10 sierpnia 2026 r.; bieżący manifest ma `releaseEligible=true` i nie zawiera grup wymagających blokady. Zmiana dowolnego źródła, zakresu redystrybucji lub implementacji diagramów wymaga ponownego uruchomienia obu bramek.
+Publiczne wydanie `0.9.2` jest osobnym procesem. Zwykły walidator proweniencji i brama `-RequireReleaseEligible` muszą przechodzić po rozszerzeniach `ASSET_RIGHTS_DECLARATION.md` z 3, 5 i 10 sierpnia 2026 r.; bieżący manifest ma `releaseEligible=true` i nie zawiera grup wymagających blokady. Zmiana dowolnego źródła, zakresu redystrybucji lub implementacji diagramów wymaga ponownego uruchomienia obu bramek.
 
 Publiczny prerelease [`v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1) został opublikowany po wykonaniu następujących czynności:
 

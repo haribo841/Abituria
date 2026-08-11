@@ -25,14 +25,14 @@ public sealed class ReleaseContractTests
             "docs/REQUIREMENTS.md"
         };
 
-        Assert.Equal("0.9.1", version);
+        Assert.Equal("0.9.2", version);
         Assert.Empty(properties.Descendants("VersionPrefix"));
         Assert.Empty(properties.Descendants("VersionSuffix"));
         Assert.Equal(version, Services.AppBuildInfo.Current.Version);
         Assert.All(requiredDocuments, path =>
             Assert.Contains(version, File.ReadAllText(Absolute(path)), StringComparison.Ordinal));
         Assert.Contains(expectedTag, File.ReadAllText(Absolute("README.md")), StringComparison.Ordinal);
-        Assert.Contains(expectedTag, File.ReadAllText(Absolute(".github/workflows/release.yml")), StringComparison.Ordinal);
+        Assert.Contains("- \"v*\"", File.ReadAllText(Absolute(".github/workflows/release.yml")), StringComparison.Ordinal);
         Assert.Contains(
             $"Abituria-v{version}-<rid>",
             File.ReadAllText(Absolute("README.md")),
@@ -220,9 +220,9 @@ public sealed class ReleaseContractTests
         Assert.Contains("Ubuntu 24.04 x64", guide, StringComparison.Ordinal);
         Assert.Contains("macOS 15 Intel x64", guide, StringComparison.Ordinal);
         Assert.Contains("SHA-256", guide, StringComparison.Ordinal);
-        Assert.Contains("Abituria-v0.9.1-win-x64", guide, StringComparison.Ordinal);
-        Assert.Contains("Abituria-v0.9.1-linux-x64", guide, StringComparison.Ordinal);
-        Assert.Contains("Abituria-v0.9.1-osx-x64", guide, StringComparison.Ordinal);
+        Assert.Contains("Abituria-v0.9.2-win-x64", guide, StringComparison.Ordinal);
+        Assert.Contains("Abituria-v0.9.2-linux-x64", guide, StringComparison.Ordinal);
+        Assert.Contains("Abituria-v0.9.2-osx-x64", guide, StringComparison.Ordinal);
         Assert.Contains("tools/release/RELEASE-README.md", packagingScript, StringComparison.Ordinal);
         Assert.Contains("dotnet-runtime-LICENSE.txt", packagingScript, StringComparison.Ordinal);
         Assert.Contains("dotnet-runtime-THIRD-PARTY-NOTICES.txt", packagingScript, StringComparison.Ordinal);
@@ -349,7 +349,7 @@ public sealed class ReleaseContractTests
             onlineCheckExclusions.EnumerateArray(),
             item =>
                 item.GetProperty("urlPrefix").GetString() ==
-                    "https://github.com/haribo841/Abituria/releases/tag/v0.9.1" &&
+                    "https://github.com/haribo841/Abituria/releases/tag/v0.9.2" &&
                 item.GetProperty("reason").GetString()!.Contains(
                     "tag preflight",
                     StringComparison.Ordinal));

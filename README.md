@@ -2,20 +2,20 @@
 
 Abituria to działająca offline aplikacja desktopowa wspierająca naukę matematyki na poziomie szkoły średniej. Aktualna implementacja używa C#, .NET 10 LTS i AvaloniaUI 12. Dane profili oraz postęp są przechowywane lokalnie w SQLite.
 
-Bieżące publiczne wydanie beta: [`0.9.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.1).
+Bieżące publiczne wydanie beta: [`0.9.2`](https://github.com/haribo841/Abituria/releases/tag/v0.9.2).
 
 > [!IMPORTANT]
 > Bieżący inwentarz pochodzenia ma `releaseEligible=true`. Osobiste rozszerzenie deklaracji z 10 sierpnia 2026 r. obejmuje transkrypcje 97 przykładów z informatorów CKE, arkusze CKE 2024 i ich wskazane implementacje wektorowe. Każde wydanie nadal wymaga przejścia pełnego workflow i checklisty wydawniczej.
 
 ## Pobieranie
 
-Zweryfikowane paczki są dostępne w [GitHub Releases](https://github.com/haribo841/Abituria/releases/tag/v0.9.1):
+Zweryfikowane paczki są dostępne w [GitHub Releases](https://github.com/haribo841/Abituria/releases/tag/v0.9.2):
 
 | System | Paczka | Deklarowane środowisko beta |
 | --- | --- | --- |
-| Windows | `Abituria-v0.9.1-win-x64.exe` | Windows 11 24H2 x64 |
-| Ubuntu | `Abituria-v0.9.1-linux-x64.tar.gz` | Ubuntu 24.04 x64 |
-| macOS | `Abituria-v0.9.1-osx-x64.zip` | macOS 15 na komputerze Intel |
+| Windows | `Abituria-v0.9.2-win-x64.exe` | Windows 11 24H2 x64 |
+| Ubuntu | `Abituria-v0.9.2-linux-x64.tar.gz` | Ubuntu 24.04 x64 |
+| macOS | `Abituria-v0.9.2-osx-x64.zip` | macOS 15 na komputerze Intel |
 
 Artefakty są samowystarczalne i nie wymagają instalacji środowiska .NET. Windows otrzymuje pojedynczy plik EXE, natomiast Ubuntu i macOS pozostają wydaniami portable w archiwach. Nie ma instalatora, automatycznej aktualizacji, podpisu kodu ani AOT. Dla Windows dodatkowe archiwum ZIP zachowuje pełne dowody licencyjne i SBOM. Przed uruchomieniem należy sprawdzić sumę SHA-256 oraz attestation artefaktu.
 
@@ -47,7 +47,7 @@ Szczegółową instrukcję korzystania z tych funkcji zawiera [podręcznik użyt
 
 1. Pobierz artefakt przeznaczony dla swojego systemu oraz `SHA256SUMS.txt` z tego samego wydania.
 2. Zweryfikuj sumę i attestation zgodnie z [instrukcją instalacji](docs/INSTALLATION.md#sprawdzenie-integralności-i-pochodzenia).
-3. Na Windows zapisz pojedynczy plik EXE w nowym katalogu. Na Ubuntu i macOS rozpakuj aplikację do nowego katalogu i wejdź do utworzonego podkatalogu `Abituria-v0.9.1-<rid>`.
+3. Na Windows zapisz pojedynczy plik EXE w nowym katalogu. Na Ubuntu i macOS rozpakuj aplikację do nowego katalogu i wejdź do utworzonego podkatalogu `Abituria-v0.9.2-<rid>`.
 4. Uruchom plik EXE Windows, `Abituria` albo `Abituria.app`, zależnie od systemu.
 5. Wybierz profil gościa lub utwórz lokalne konto.
 

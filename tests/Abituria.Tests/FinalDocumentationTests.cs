@@ -117,7 +117,7 @@ public sealed class FinalDocumentationTests
         Assert.Contains("ACCEPTED - READY TO CLOSE", acceptance, StringComparison.Ordinal);
         Assert.Contains("Właściciel projektu poświadczył", delivery, StringComparison.Ordinal);
         Assert.Contains("releases/tag/v0.9.0-beta.1", delivery, StringComparison.Ordinal);
-        Assert.Contains("Publiczny GitHub Release `0.9.1` pozostaje odrębnym działaniem", requirements, StringComparison.Ordinal);
+        Assert.Contains("Publiczny GitHub Release `0.9.2` pozostaje odrębnym działaniem", requirements, StringComparison.Ordinal);
 
         var provenance = File.ReadAllText(Absolute("Content/provenance.json"));
         Assert.Contains("\"releaseEligible\": true", provenance, StringComparison.Ordinal);

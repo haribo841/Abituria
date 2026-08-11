@@ -449,9 +449,6 @@ public sealed class ExerciseView : UserControl
         choiceOrder.Update();
     }
 
-    private static bool IsAlphabeticalLetter(string value) =>
-        value.Length == 1 && value[0] is >= 'A' and <= 'Z';
-
     private sealed class AlphabeticalChoiceOrder
     {
         private readonly List<(LearningAnswerPart Part, RadioButton[] Choices)> _choiceGroups;
@@ -477,6 +474,9 @@ public sealed class ExerciseView : UserControl
                    firstGroup.Part.Options.SequenceEqual(firstGroup.Part.Options.Order(StringComparer.Ordinal)) &&
                    firstGroup.Part.Options.All(IsAlphabeticalLetter);
         }
+
+        private static bool IsAlphabeticalLetter(string value) =>
+            value.Length == 1 && value[0] is >= 'A' and <= 'Z';
 
         public void Subscribe()
         {
@@ -671,18 +671,29 @@ public sealed class ExerciseView : UserControl
 
     private static Border BuildSourceBand(LearningExercise exercise, ExerciseViewContext context)
     {
-        var sourceBand = !exercise.IsCourseExercise
-            ? UiFactory.InfoBand(context.Copy.FormatRequired(
+        Border sourceBand;
+        if (exercise.IsCourseExercise)
+        {
+            sourceBand = BuildCourseSourceBand(exercise, context);
+        }
+        else
+        {
+            sourceBand = UiFactory.InfoBand(context.Copy.FormatRequired(
                 "exam.source",
                 exercise.VerificationSource,
                 exercise.SourcePage,
-                FormatVerifiedOn(context.Source.VerifiedOn)))
-            : UiFactory.InfoBand(
-                "Źródło wymagania",
-                $"{exercise.VerificationSource}. Weryfikacja: {FormatVerifiedOn(context.Source.VerifiedOn)}." +
-                (string.IsNullOrWhiteSpace(context.SourceUrl) ? string.Empty : $"\n{context.SourceUrl}"));
+                FormatVerifiedOn(context.Source.VerifiedOn)));
+        }
         sourceBand.Name = "ExerciseSourceBand";
         AutomationProperties.SetName(sourceBand, "Źródło zadania");
         return sourceBand;
+    }
+
+    private static Border BuildCourseSourceBand(LearningExercise exercise, ExerciseViewContext context)
+    {
+        var body = $"{exercise.VerificationSource}. Weryfikacja: {FormatVerifiedOn(context.Source.VerifiedOn)}.";
+        if (!string.IsNullOrWhiteSpace(context.SourceUrl))
+            body += $"\n{context.SourceUrl}";
+        return UiFactory.InfoBand("Źródło wymagania", body);
     }
 }

@@ -1,12 +1,12 @@
 # Proces wydania
 
-Ten dokument opisuje przygotowanie, walidację i publikację Abiturii. Przykłady dotyczą bieżącego prerelease `v0.9.1`; wcześniejszy `v0.9.0-beta.1` pozostaje historycznym wydaniem.
+Ten dokument opisuje przygotowanie, walidację i publikację Abiturii. Przykłady dotyczą bieżącego prerelease `v0.9.2`; wcześniejszy `v0.9.0-beta.1` pozostaje historycznym wydaniem.
 
 ## Zasada nadrzędna
 
 Build techniczny, artefakt workflow i GitHub Release to trzy różne stany. Publiczne wydanie istnieje dopiero po ręcznym opublikowaniu zweryfikowanego draftu prerelease. Issue #36 można zamknąć dopiero po publikacji prerelease, wdrożeniu GitHub Pages i dodaniu komentarza z linkami do wydania, workflow oraz checklisty.
 
-Aktualny inwentarz ma `releaseEligible=true`. Rozszerzenia [ASSET_RIGHTS_DECLARATION.md](ASSET_RIGHTS_DECLARATION.md) z 3, 5 i 10 sierpnia 2026 r. obejmują arkusze CKE 2024, 2025 i 2026 na obu poziomach, zasady oceniania, transkrypcje 97 przykładów z informatorów CKE oraz trzydzieści jeden zatwierdzonych implementacji wektorowych Avalonia. Szczegóły opisują [CONTENT_PROVENANCE.md](CONTENT_PROVENANCE.md) i macierze matur 2024, 2025 oraz 2026. Publiczny prerelease [`v0.9.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.1) musi być wynikiem przejścia tej procedury dla dokładnie zatwierdzonego commita.
+Aktualny inwentarz ma `releaseEligible=true`. Rozszerzenia [ASSET_RIGHTS_DECLARATION.md](ASSET_RIGHTS_DECLARATION.md) z 3, 5 i 10 sierpnia 2026 r. obejmują arkusze CKE 2024, 2025 i 2026 na obu poziomach, zasady oceniania, transkrypcje 97 przykładów z informatorów CKE oraz trzydzieści jeden zatwierdzonych implementacji wektorowych Avalonia. Szczegóły opisują [CONTENT_PROVENANCE.md](CONTENT_PROVENANCE.md) i macierze matur 2024, 2025 oraz 2026. Publiczny prerelease [`v0.9.2`](https://github.com/haribo841/Abituria/releases/tag/v0.9.2) musi być wynikiem przejścia tej procedury dla dokładnie zatwierdzonego commita.
 
 Pakiet dokumentacyjny dla komisji nie jest wydaniem aplikacji. Jego zawartość i wyłączenia opisuje [DELIVERY_PROTOCOL.md](DELIVERY_PROTOCOL.md).
 
@@ -98,10 +98,10 @@ Tag musi wskazywać dokładnie zweryfikowany commit `main`. Data changelogu jest
 git switch main
 git pull --ff-only
 git status --short
-git tag -a v0.9.1 -m "Abituria v0.9.1"
+git tag -a v0.9.2 -m "Abituria v0.9.2"
 pwsh -NoProfile -File tools/release/Test-ReleaseVersion.ps1 `
-  -Tag v0.9.1
-git push origin v0.9.1
+-Tag v0.9.2
+git push origin v0.9.2
 ```
 
 Nie przesuwaj opublikowanego tagu. Jeśli tag wskazuje zły commit i workflow nie utworzył wydania, usuń go lokalnie i zdalnie tylko po sprawdzeniu stanu. Jeżeli draft lub attestation już istnieją, anuluj proces, opisz błąd i przygotuj nową wersję zamiast przepisywać historię.
@@ -115,9 +115,9 @@ Workflow `release` wykonuje:
 
    | RID | Runner | Artefakt |
    | --- | --- | --- |
-   | `win-x64` | `windows-2025` | `Abituria-v0.9.1-win-x64.exe` oraz archiwum audytowe `Abituria-v0.9.1-win-x64.zip` |
-   | `linux-x64` | `ubuntu-24.04` | `Abituria-v0.9.1-linux-x64.tar.gz` |
-   | `osx-x64` | `macos-15-intel` | `Abituria-v0.9.1-osx-x64.zip` |
+| `win-x64` | `windows-2025` | `Abituria-v0.9.2-win-x64.exe` oraz archiwum audytowe `Abituria-v0.9.2-win-x64.zip` |
+| `linux-x64` | `ubuntu-24.04` | `Abituria-v0.9.2-linux-x64.tar.gz` |
+| `osx-x64` | `macos-15-intel` | `Abituria-v0.9.2-osx-x64.zip` |
 
 3. Na każdym runnerze - restore narzędzi, locked restore rozwiązania i RID, build, pełne testy, format, audyt zależności, `git diff --check`, publikacja, kontrola architektury, utworzenie archiwum, ponowne rozpakowanie archiwum i smoke test pliku rzeczywiście przeznaczonego dla użytkownika. Windows generuje bezpośredni, pojedynczy EXE identyczny bajtowo z binarium smoke-testowanego archiwum. Dla macOS uruchamiany jest `Abituria.app/Contents/MacOS/Abituria`, a nie pośredni katalog `publish`.
 4. Dla macOS - utworzenie `Abituria.app` z `Info.plist`, identyfikatorem `io.github.haribo841.abituria`, wersją i ikoną `.icns`.
@@ -128,10 +128,10 @@ Workflow `release` wykonuje:
 
 Każde archiwum zawiera katalog główny nazwany jak paczka, aplikację, `LICENSE`, `RELEASE-README.md`, `THIRD-PARTY-NOTICES.md`, `release.json`, wewnętrzny SBOM oraz katalog `licenses/nuget`. Manifest zapisuje wersję i sposób obsługi każdego komponentu; dla pakietów obecnych w cache zapisuje także deklarację licencji, SHA-256 nuspec i zachowanych plików LICENSE, COPYING, NOTICE lub THIRD-PARTY. Pakiety .NET Runtime i Host są powiązane z pełnymi notices środowiska uruchomieniowego dołączonymi w `licenses`, również gdy apphost pochodzi bezpośrednio z przypiętego SDK i nie ma osobnego nuspec w cache. Pojedynczy EXE Windows jest wygodnym plikiem uruchomieniowym, a identyczne binarium i pełne dowody licencyjne zachowuje archiwum audytowe. Obok archiwów wydawane są:
 
-- `Abituria-v0.9.1-win-x64.exe`;
-- `Abituria-v0.9.1-win-x64.spdx.json`;
-- `Abituria-v0.9.1-linux-x64.spdx.json`;
-- `Abituria-v0.9.1-osx-x64.spdx.json`;
+- `Abituria-v0.9.2-win-x64.exe`;
+- `Abituria-v0.9.2-win-x64.spdx.json`;
+- `Abituria-v0.9.2-linux-x64.spdx.json`;
+- `Abituria-v0.9.2-osx-x64.spdx.json`;
 - `SHA256SUMS.txt`.
 
 ## 6. Kontrola draftu
@@ -144,7 +144,7 @@ Draft pozostaje prywatny. Pobierz wszystkie artefakty bez ich modyfikowania i od
 - zero podatności NuGet;
 - `releaseEligible=true` i pozytywny log walidatora;
 - poprawną nazwę, rozmiar i architekturę każdej paczki;
-- pojedynczy plik `Abituria-v0.9.1-win-x64.exe`, jego sumę, atestacje i zgodność bajtową z binarium w archiwum Windows;
+- pojedynczy plik `Abituria-v0.9.2-win-x64.exe`, jego sumę, atestacje i zgodność bajtową z binarium w archiwum Windows;
 - brak PDB, sekretów i snapshotów;
 - obecność `LICENSE`, instrukcji, notices oraz kompletnego `licenses/nuget/manifest.json` zgodnego z opublikowanym grafem;
 - poprawne `release.json`, assembly version, ekran „O programie” i commit;
@@ -161,14 +161,14 @@ Draft pozostaje prywatny. Pobierz wszystkie artefakty bez ich modyfikowania i od
 Przykładowa weryfikacja domyślnej atestacji SLSA build provenance:
 
 ```powershell
-gh attestation verify .\Abituria-v0.9.1-win-x64.zip `
+gh attestation verify .\Abituria-v0.9.2-win-x64.zip `
   --repo haribo841/Abituria
 ```
 
 GitHub CLI domyślnie wymaga predykatu `https://slsa.dev/provenance/v1`, dlatego powyższe polecenie nie może zostać zaliczone wyłącznie przez atestację SBOM. Atestację SPDX sprawdź niezależnie:
 
 ```powershell
-gh attestation verify .\Abituria-v0.9.1-win-x64.zip `
+gh attestation verify .\Abituria-v0.9.2-win-x64.zip `
   --repo haribo841/Abituria `
   --predicate-type https://spdx.dev/Document/v2.3
 ```
@@ -178,7 +178,7 @@ gh attestation verify .\Abituria-v0.9.1-win-x64.zip `
 Publikację wykonuje opiekun dopiero po podpisaniu checklisty. W interfejsie GitHub wybierz „Publish release” i upewnij się, że opcja prerelease pozostaje zaznaczona. Alternatywnie:
 
 ```powershell
-gh release edit v0.9.1 `
+gh release edit v0.9.2 `
   --repo haribo841/Abituria `
   --draft=false `
   --prerelease

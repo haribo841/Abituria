@@ -1,6 +1,6 @@
 # Informacje o komponentach zewnętrznych
 
-Abituria jest udostępniana na licencji MIT. Poniższe komponenty zachowują własne licencje i prawa autorskie. Dokładne wersje odpowiadają `packages.lock.json` dla wydania `0.9.1`.
+Abituria jest udostępniana na licencji MIT. Poniższe komponenty zachowują własne licencje i prawa autorskie. Dokładne wersje odpowiadają `packages.lock.json` dla wydania `0.9.2`.
 
 ## Rozwiązane zależności produkcyjne
 
