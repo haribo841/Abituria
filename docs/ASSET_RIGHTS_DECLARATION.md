@@ -93,3 +93,17 @@ Na podstawie bezpośredniej decyzji właściciela repozytorium Adam Kubiś rozsz
 - zasady oceniania poziomu rozszerzonego 2024: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2024/Matematyka/poziom_rozszerzony/MMAP-R0-100-2405-zasady.pdf`, SHA-256 `6535405993D0A9F3360759A2B2335BF7523E177144B207B4D8A6E3D8A3A8AB92`.
 
 Diagramy są autorską implementacją matematycznej treści w obsługiwanych prymitywach Avalonia i nie są kopiami rastrów ani samodzielnymi reprodukcjami plików PDF. Rozszerzenie nie przypisuje Adamowi Kubisiowi autorstwa materiałów CKE, nie przenosi praw na odbiorców i nie udziela samodzielnej licencji na źródłowe PDF-y lub wyodrębnione transkrypcje. Zachowuje wszystkie ograniczenia pierwotnej deklaracji, a jednocześnie stanowi podstawę statusu `approved` wymienionych grup w `Content/provenance.json`.
+
+## Rozszerzenie deklaracji z 12 sierpnia 2026 r.
+
+Na podstawie bezpośredniej decyzji właściciela repozytorium Adam Kubiś rozszerza deklarację na publiczną redystrybucję wyłącznie jako integralnej części Abiturii następujących grup:
+
+- `cke-2023-main-extended-exam`: `Content/exam-2023-main-extended.json`, obejmujący arkusz `MMAP-R0-100-2305` oraz zasady oceniania `MMAP-R0-100-2305`;
+- `runtime-vector-diagrams`: rozszerzenie katalogu `Content/diagrams.json` do 92 deterministycznych definicji, w tym czterech własnych implementacji wektorowych figur matury rozszerzonej 2023.
+
+Źródła CKE objęte rozszerzeniem:
+
+- arkusz rozszerzony 2023: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2023/Matematyka/poziom_rozszerzony/MMAP-R0-100-2305.pdf`, SHA-256 `24EC13FEA77323841A8538E85B816C7EE36199E64F5F756E30340489864EC207`;
+- zasady oceniania poziomu rozszerzonego 2023: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2023/Matematyka/poziom_rozszerzony/MMAP-R0-100-2305-zasady.pdf`, SHA-256 `B8FECD4D23811033E0DFF6C532A405F04ECE0CCC469A6D60412E353F1BBDBD2B`.
+
+Nowe diagramy są autorską implementacją matematycznej treści w obsługiwanych prymitywach Avalonia i nie są kopiami rastrów ani samodzielnymi reprodukcjami plików PDF. Rozszerzenie nie przypisuje Adamowi Kubisiowi autorstwa materiałów CKE, nie przenosi praw na odbiorców i nie udziela samodzielnej licencji na źródłowe PDF-y lub wyodrębnione transkrypcje. Zachowuje wszystkie ograniczenia pierwotnej deklaracji, a jednocześnie stanowi podstawę statusu `approved` wymienionych grup w `Content/provenance.json`.

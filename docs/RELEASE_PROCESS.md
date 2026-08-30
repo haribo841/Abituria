@@ -6,7 +6,7 @@ Ten dokument opisuje przygotowanie, walidację i publikację Abiturii. Przykład
 
 Build techniczny, artefakt workflow i GitHub Release to trzy różne stany. Publiczne wydanie istnieje dopiero po ręcznym opublikowaniu zweryfikowanego draftu prerelease. Issue #36 można zamknąć dopiero po publikacji prerelease, wdrożeniu GitHub Pages i dodaniu komentarza z linkami do wydania, workflow oraz checklisty.
 
-Aktualny inwentarz ma `releaseEligible=true`. Rozszerzenia [ASSET_RIGHTS_DECLARATION.md](ASSET_RIGHTS_DECLARATION.md) z 3, 5 i 10 sierpnia 2026 r. obejmują arkusze CKE 2024, 2025 i 2026 na obu poziomach, zasady oceniania, transkrypcje 97 przykładów z informatorów CKE oraz trzydzieści jeden zatwierdzonych implementacji wektorowych Avalonia. Szczegóły opisują [CONTENT_PROVENANCE.md](CONTENT_PROVENANCE.md) i macierze matur 2024, 2025 oraz 2026. Publiczny prerelease [`v0.9.2`](https://github.com/haribo841/Abituria/releases/tag/v0.9.2) musi być wynikiem przejścia tej procedury dla dokładnie zatwierdzonego commita.
+Aktualny worktree ma `releaseEligible=false`. Rozszerzenia [ASSET_RIGHTS_DECLARATION.md](ASSET_RIGHTS_DECLARATION.md) z 3, 5, 10 i 12 sierpnia 2026 r. nadal obejmują zatwierdzone arkusze i materiały, ale nie maturę podstawową 2023 ani osiem nowych figur. Szczegóły opisują [CONTENT_PROVENANCE.md](CONTENT_PROVENANCE.md) i macierze matur 2023, 2024, 2025 oraz 2026. Publiczny prerelease [`v0.9.2`](https://github.com/haribo841/Abituria/releases/tag/v0.9.2) odnosi się wyłącznie do wcześniej zatwierdzonego commita.
 
 Pakiet dokumentacyjny dla komisji nie jest wydaniem aplikacji. Jego zawartość i wyłączenia opisuje [DELIVERY_PROTOCOL.md](DELIVERY_PROTOCOL.md).
 

@@ -1,0 +1,915 @@
+{
+  "schemaVersion": 4,
+  "exam": {
+    "id": "matura-poprawkowa-2023-podstawowa",
+    "title": "Matura poprawkowa 2023 - poziom podstawowy",
+    "progressLabel": "Matura poprawkowa 2023 PP",
+    "year": 2023,
+    "session": "poprawkowa",
+    "formula": "2023",
+    "level": "basic",
+    "durationMinutes": 180,
+    "maximumPoints": 46,
+    "officialTaskCount": 33,
+    "progressItemCount": 36,
+    "introduction": [
+      {
+        "type": "richText",
+        "text": "Arkusz poprawkowy z matematyki na poziomie podstawowym z 22 sierpnia 2023 r. obejmuje 33 numerowane zadania, 36 jednostek postępu i 46 punktów."
+      },
+      {
+        "type": "richText",
+        "text": "Transkrypcja wykorzystuje arkusz CKE MMAP-P0-100-2308 i zasady oceniania o tym samym kodzie, utrwalone w publicznym archiwum PDF."
+      }
+    ],
+    "topicIntroduction": [],
+    "source": {
+      "publisher": "Centralna Komisja Egzaminacyjna; pliki pobrane z publicznego archiwum arkusze.pl",
+      "documentCode": "MMAP-P0-100-2308",
+      "examDate": "2023-08-22",
+      "questionPaperUrl": "https://arkusze.pl/maturalne/matematyka-2023-sierpien-poprawkowa-podstawowa.pdf",
+      "questionPaperSha256": "3085CCB0001B8A8576ABE1D5A292D13CB6D05045D5811BFE6247CDB955489216",
+      "answerKeyUrl": "https://arkusze.pl/maturalne/matematyka-2023-sierpien-poprawkowa-podstawowa-odpowiedzi.pdf",
+      "answerKeySha256": "4F47D38F9A29295647F88E8F6FBB607C80379E0979DB9AD365F11887D919D228",
+      "verifiedOn": "2026-08-30"
+    },
+    "topics": [],
+    "exercises": [
+      {
+        "id": "mm23-p0p-z01",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 1,
+        "displayNumber": "1",
+        "order": 1,
+        "points": 1,
+        "title": "Zadanie 1",
+        "topicId": "inequalities",
+        "sourcePage": 4,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 1. (0–1) Dana jest nierówność |𝑥 − 5| < 2 Na którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność? Wybierz właściwą odpowiedź spośród podanych. A. B. C. D.",
+        "hints": [
+          "Przekształć nierówność do postaci opisującej odległość od środka.",
+          "Zaznacz końce przedziału i sprawdź, czy należą do zbioru."
+        ],
+        "solution": "Zbiór rozwiązań nierówności |x-5|<2 to przedział (3, 7), co odpowiada odpowiedzi D.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+    "diagramIds": ["exam-mm23-p0p-z01"]
+      },
+      {
+        "id": "mm23-p0p-z02",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 2,
+        "displayNumber": "2",
+        "order": 2,
+        "points": 1,
+        "title": "Zadanie 2",
+        "topicId": "powers",
+        "sourcePage": 5,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 2. (0–1) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba 3√45 − √20 jest równa A. (7 ⋅ 5) 1 2 B. 5 1 2 C. 7 D. 7 ⋅ 5 1 2",
+        "hints": [
+          "Zapisz wszystkie liczby jako potęgi tej samej podstawy.",
+          "Stosuj wykładniki kolejno, bez zaokrągleń."
+        ],
+        "solution": "Po uproszczeniu wyrażenia otrzymujemy odpowiedź D.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z03",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 3,
+        "displayNumber": "3",
+        "order": 3,
+        "points": 1,
+        "title": "Zadanie 3",
+        "topicId": "logarithms",
+        "sourcePage": 5,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 3. (0–1) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log25 1 − 1 2 log25 5 jest równa A. (− 1 4) B. (− 1 2) C. 1 4 D. 1 2",
+        "hints": [
+          "Skorzystaj z definicji lub własności logarytmów.",
+          "Sprawdź wynik przez podstawienie do potęgi."
+        ],
+        "solution": "Z własności logarytmów wynika odpowiedź A.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z04",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 4,
+        "displayNumber": "4",
+        "order": 4,
+        "points": 2,
+        "title": "Zadanie 4",
+        "topicId": "proofs",
+        "sourcePage": 6,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 4. (0–2) Wykaż, że dla każdej liczby naturalnej 𝒏 ≥ 𝟏 liczba 𝟑𝒏𝟑 + 𝟏𝟖𝒏𝟐 + 𝟏𝟓𝒏 jest podzielna przez 𝟔.",
+        "hints": [
+          "Wyłącz wspólny czynnik i rozłóż wyrażenie.",
+          "Uzasadnij osobno podzielność przez 2 i przez 3."
+        ],
+        "solution": "3n³+18n²+15n = 3n(n+1)(n+5). Iloczyn n(n+1) jest parzysty, więc cały iloczyn jest podzielny przez 6.",
+        "scoringCriteria": "2 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z05",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 5,
+        "displayNumber": "5",
+        "order": 5,
+        "points": 1,
+        "title": "Zadanie 5",
+        "topicId": "powers",
+        "sourcePage": 7,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 5. (0–1) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia 3−1 (− 1 9 ) −2 ∙ 81 jest równa A. 1 3 B. (− 1 3) C. 3 D. (−3)",
+        "hints": [
+          "Zapisz wszystkie liczby jako potęgi tej samej podstawy.",
+          "Stosuj wykładniki kolejno, bez zaokrągleń."
+        ],
+        "solution": "Po zastosowaniu praw potęg otrzymujemy odpowiedź A.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z06",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 6,
+        "displayNumber": "6",
+        "order": 6,
+        "points": 1,
+        "title": "Zadanie 6",
+        "topicId": "identities",
+        "sourcePage": 7,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 6. (0–1) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia (2 − √3) 2 − (√3 − 2) 2 jest równa A. (−2√3) B. 0 C. 6 D. 8√3",
+        "hints": [
+          "Rozwiń oba kwadraty wzorem skróconego mnożenia.",
+          "Po redukcji wyrazów podobnych porównaj z odpowiedziami."
+        ],
+        "solution": "Rozwijamy oba kwadraty i odejmujemy. Otrzymujemy 0, czyli odpowiedź B.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z07",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 7,
+        "displayNumber": "7",
+        "order": 7,
+        "points": 1,
+        "title": "Zadanie 7",
+        "topicId": "equations",
+        "sourcePage": 8,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 7. (0–1) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej 𝑥 różnej od 0 wartość wyrażenia 1 2𝑥 − 𝑥 jest równa wartości wyrażenia A. 1 𝑥 B. 1−𝑥 2𝑥 C. 1−2𝑥2 2𝑥 D. − 1 2𝑥",
+        "hints": [
+          "Sprowadź równanie do iloczynu lub wspólnego mianownika.",
+          "Sprawdź ograniczenia dziedziny po znalezieniu rozwiązań."
+        ],
+        "solution": "Sprowadzamy wyrażenie do wspólnego mianownika. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z08",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 8,
+        "displayNumber": "8",
+        "order": 8,
+        "points": 1,
+        "title": "Zadanie 8",
+        "topicId": "equations",
+        "sourcePage": 8,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 8. (0–1) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie (𝑥2−3𝑥)(𝑥2+1) 𝑥2−25 = 0 w zbiorze liczb rzeczywistych ma dokładnie A. jedno rozwiązanie. B. dwa rozwiązania. C. trzy rozwiązania. D. cztery rozwiązania.",
+        "hints": [
+          "Sprowadź równanie do iloczynu lub wspólnego mianownika.",
+          "Sprawdź ograniczenia dziedziny po znalezieniu rozwiązań."
+        ],
+        "solution": "Miejsca zerowe licznika to 0 i 3, a mianownik wyklucza -5 i 5. Dokładnie dwa rozwiązania dają odpowiedź B.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z09",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 9,
+        "displayNumber": "9",
+        "order": 9,
+        "points": 3,
+        "title": "Zadanie 9",
+        "topicId": "equations",
+        "sourcePage": 9,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 9. (0–3) Rozwiąż równanie 𝟑𝒙𝟑 − 𝟐𝒙𝟐 − 𝟑𝒙 + 𝟐 = 𝟎 Zapisz obliczenia.",
+        "hints": [
+          "Sprowadź równanie do iloczynu lub wspólnego mianownika.",
+          "Sprawdź ograniczenia dziedziny po znalezieniu rozwiązań."
+        ],
+        "solution": "3x³-2x²-3x+2 = (3x-2)(x²-1) = (3x-2)(x-1)(x+1). Rozwiązania: -1, 2/3 i 1.",
+        "scoringCriteria": "3 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z10",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 10,
+        "displayNumber": "10",
+        "order": 10,
+        "points": 1,
+        "title": "Zadanie 10",
+        "topicId": "lines-and-segments",
+        "sourcePage": 10,
+        "solutionSourcePage": 7,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 10. (0–1) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. W kartezjańskim układzie współrzędnych (𝑥, 𝑦), punkt (−8, 6) jest punktem przecięcia prostych o równaniach A. 2𝑥 + 3𝑦 = 2 i −𝑥 + 𝑦 = −14. B. 3𝑥 + 2𝑦 = −12 i 2𝑥 + 𝑦 = 10. C. 𝑥 + 𝑦 = −2 i 𝑥 − 2𝑦 = 4. D. 𝑥 − 𝑦 = −14 i −2𝑥 + 𝑦 = 22.",
+        "hints": [
+          "Zapisz równania prostych lub współrzędne potrzebnych punktów.",
+          "Sprawdź wynik przez podstawienie do równania."
+        ],
+        "solution": "Podstawienie punktu (-8, 6) do obu równań wskazuje odpowiedź D.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z11",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 11,
+        "displayNumber": "11",
+        "order": 11,
+        "points": 1,
+        "title": "Zadanie 11",
+        "topicId": "linear-function",
+        "sourcePage": 10,
+        "solutionSourcePage": 7,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 11. (0–1) Miejscem zerowym funkcji liniowej 𝑓 jest liczba 1. Wykres tej funkcji przechodzi przez punkt (−1, 4). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wzór funkcji 𝑓 ma postać A. 𝑓(𝑥) = − 1 2 𝑥 + 1 B. 𝑓(𝑥) = − 1 3 𝑥 + 1 3 C. 𝑓(𝑥) = −2𝑥 + 2 D. 𝑓(𝑥) = −3𝑥 + 1",
+        "hints": [
+          "Wykorzystaj dwa punkty prostej albo warunek funkcji.",
+          "Po wyznaczeniu wzoru podstaw dane kontrolne."
+        ],
+        "solution": "Prosta przez (-1,4) i (1,0) ma współczynnik kierunkowy -2, zatem f(x)=-2x+2. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z12",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 12,
+        "displayNumber": "12",
+        "order": 12,
+        "points": 1,
+        "title": "Zadanie 12",
+        "topicId": "linear-function",
+        "sourcePage": 11,
+        "solutionSourcePage": 7,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 12. (0–1) Funkcja 𝑓 jest określona dla każdej liczby rzeczywistej 𝑥 wzorem 𝑓(𝑥) = 𝑥−𝑘 𝑥2+1 , gdzie 𝑘 jest pewną liczbą rzeczywistą. Ta funkcja spełnia warunek 𝑓(1) = 2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość współczynnika 𝑘 we wzorze tej funkcji jest równa A. (−3) B. 3 C. (−4) D. 4",
+        "hints": [
+          "Wykorzystaj dwa punkty prostej albo warunek funkcji.",
+          "Po wyznaczeniu wzoru podstaw dane kontrolne."
+        ],
+        "solution": "Z f(1)=(1-k)/2=2 dostajemy k=-3. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z13",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 13,
+        "displayNumber": "13",
+        "order": 13,
+        "points": 1,
+        "title": "Zadanie 13",
+        "topicId": "quadratic-function",
+        "sourcePage": 11,
+        "solutionSourcePage": 8,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 13. (0–1) Funkcja kwadratowa 𝑓 jest określona wzorem 𝑓(𝑥) = (𝑥 − 13)2 − 256. Jednym z miejsc zerowych tej funkcji jest liczba (−3). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Drugim miejscem zerowym funkcji 𝑓 jest liczba A. (−29) B. (−23) C. 23 D. 29",
+        "hints": [
+          "Zapisz warunek w postaci równania lub odczytaj własność wykresu.",
+          "Sprawdź miejsca zerowe albo wierzchołek funkcji."
+        ],
+        "solution": "Miejsca zerowe spełniają (x-13)²=256, więc x=13±16. Drugie miejsce zerowe to 29, odpowiedź D.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z14-1",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 14,
+        "displayNumber": "14.1",
+        "order": 14,
+        "points": 1,
+        "title": "Zadanie 14.1",
+        "topicId": "quadratic-function",
+        "sourcePage": 12,
+        "solutionSourcePage": 8,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 14. W kartezjańskim układzie współrzędnych (𝑥, 𝑦) narysowano wykres funkcji 𝑦 = 𝑓(𝑥) (zobacz rysunek). Zadanie 14.1. (0–1) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja 𝑓 jest rosnąca w przedziale A. [−5, 4] B. [5, 7] C. [1, 5] D. [−1, 5]",
+        "hints": [
+          "Zapisz warunek w postaci równania lub odczytaj własność wykresu.",
+          "Sprawdź miejsca zerowe albo wierzchołek funkcji."
+        ],
+        "solution": "Z odczytu wykresu funkcja rośnie tylko na [5, 7], więc odpowiedź B.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+    "diagramIds": ["exam-mm23-p0p-z14"],
+    "groupId": "mm23-p0p-z14"
+      },
+      {
+        "id": "mm23-p0p-z14-2",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 14,
+        "displayNumber": "14.2",
+        "order": 15,
+        "points": 1,
+        "title": "Zadanie 14.2",
+        "topicId": "quadratic-function",
+        "sourcePage": 12,
+        "solutionSourcePage": 8,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 14. W kartezjańskim układzie współrzędnych (𝑥, 𝑦) narysowano wykres funkcji 𝑦 = 𝑓(𝑥) (zobacz rysunek). Zadanie 14.2. (0–1) Zapisz poniżej w postaci sumy przedziałów zbiór wszystkich argumentów, dla których funkcja 𝒇 przyjmuje wartości większe od 𝟏. ................................ ................................ ................................ ................................ .................",
+        "hints": [
+          "Zapisz warunek w postaci równania lub odczytaj własność wykresu.",
+          "Sprawdź miejsca zerowe albo wierzchołek funkcji."
+        ],
+        "solution": "Z wykresu f(x)>1 dla [-7,-5] ∪ [-4,2) ∪ (5,7].",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+    "diagramIds": ["exam-mm23-p0p-z14"],
+    "groupId": "mm23-p0p-z14"
+      },
+      {
+        "id": "mm23-p0p-z14-3",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 14,
+        "displayNumber": "14.3",
+        "order": 16,
+        "points": 1,
+        "title": "Zadanie 14.3",
+        "topicId": "quadratic-function",
+        "sourcePage": 13,
+        "solutionSourcePage": 8,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 14. W kartezjańskim układzie współrzędnych (𝑥, 𝑦) narysowano wykres funkcji 𝑦 = 𝑓(𝑥) (zobacz rysunek). Zadanie 14.3. (0–1) Funkcja 𝑔 jest określona za pomocą funkcji 𝑓 następująco: 𝑔(𝑥) = 𝑓(−𝑥) dla każdego 𝑥 ∈ [−7, −5] ∪ [−4, 4] ∪ [5, 7]. Na jednym z rysunków A–D przedstawiono, w kartezjańskim układzie współrzędnych (𝑥, 𝑦), wykres funkcji 𝑦 = 𝑔(𝑥). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres funkcji 𝑦 = 𝑔(𝑥) przedstawiono na rysunku A. B. C. D.",
+        "hints": [
+          "Zapisz warunek w postaci równania lub odczytaj własność wykresu.",
+          "Sprawdź miejsca zerowe albo wierzchołek funkcji."
+        ],
+        "solution": "Wykres g(x)=f(-x) jest odbiciem wykresu f względem osi Oy. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+    "diagramIds": ["exam-mm23-p0p-z14"],
+    "groupId": "mm23-p0p-z14"
+      },
+      {
+        "id": "mm23-p0p-z15",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 15,
+        "displayNumber": "15",
+        "order": 17,
+        "points": 2,
+        "title": "Zadanie 15",
+        "topicId": "quadratic-function",
+        "sourcePage": 14,
+        "solutionSourcePage": 9,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "compound",
+        "prompt": "Zadanie 15. (0–2) Funkcje 𝐴, 𝐵, 𝐶, 𝐷, 𝐸 oraz 𝐹 są określone dla każdej liczby rzeczywistej 𝑥. Wzory tych funkcji podano poniżej. Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami A–F i wpisz te litery w wykropkowanych miejscach. Przedział (−∞, 2] jest zbiorem wartości funkcji ............. oraz ............. . A. 𝐴(𝑥) = −(𝑥 − 3)2 + 2 B. 𝐵(𝑥) = 𝑥2 + 2 C. 𝐶(𝑥) = −5(𝑥 − 2)2 D. 𝐷(𝑥) = (𝑥 − 2)2 E. 𝐸(𝑥) = 2𝑥2 − 8𝑥 + 10 F. 𝐹(𝑥) = −2𝑥2 + 4𝑥",
+        "hints": [
+          "Zapisz warunek w postaci równania lub odczytaj własność wykresu.",
+          "Sprawdź miejsca zerowe albo wierzchołek funkcji."
+        ],
+        "solution": "Zbiorem wartości (−∞,2] są funkcje A i F.",
+        "scoringCriteria": "2 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": [],
+        "answerParts": [
+          {
+            "id": "first",
+            "prompt": "Pierwsza poprawna litera.",
+            "mode": "multipleChoice",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ],
+            "correctOption": 1
+          },
+          {
+            "id": "second",
+            "prompt": "Druga poprawna litera.",
+            "mode": "multipleChoice",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ],
+            "correctOption": 6
+          }
+        ]
+      },
+      {
+    "id": "mm23-p0p-z16",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 16,
+        "displayNumber": "16",
+        "order": 18,
+        "points": 1,
+        "title": "Zadanie 16",
+        "topicId": "sequences",
+        "sourcePage": 15,
+        "solutionSourcePage": 9,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 16. (0–1) Ciąg (𝑎𝑛) jest określony wzorem 𝑎𝑛 = (−1)𝑛 ⋅ 𝑛+1 2 dla każdej liczby naturalnej 𝑛 ≥ 1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Trzeci wyraz tego ciągu jest równy A. 2 B. (−2) C. 3 D. (−1)",
+        "hints": [
+          "Wypisz wyrazy potrzebne w zadaniu.",
+          "Użyj definicji ciągu arytmetycznego albo geometrycznego."
+        ],
+        "solution": "a₃=(-1)³·(3+1)/2=-2. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+    "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z17",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 17,
+        "displayNumber": "17",
+        "order": 19,
+        "points": 1,
+        "title": "Zadanie 17",
+        "topicId": "sequences",
+        "sourcePage": 15,
+        "solutionSourcePage": 9,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "compound",
+        "prompt": "Zadanie 17. (0–1) Dany jest ciąg geometryczny (𝑎𝑛), określony dla każdej liczby naturalnej 𝑛 ≥ 1. Pierwszy wyraz tego ciągu jest równy 128, natomiast iloraz ciągu jest równy (− 1 2). Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Wyraz 𝑎2023 jest liczbą ujemną. P F Różnica 𝑎3 − 𝑎2 jest równa 96. P F",
+        "hints": [
+          "Wypisz wyrazy potrzebne w zadaniu.",
+          "Użyj definicji ciągu arytmetycznego albo geometrycznego."
+        ],
+        "solution": "a₂₀₂₃ jest dodatnie, natomiast a₃-a₂=-16-(-64)=48. Odpowiedzi: F, P.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": [],
+        "answerParts": [
+          {
+            "id": "a",
+            "prompt": "Wyraz a2023 jest liczbą ujemną.",
+            "mode": "multipleChoice",
+            "options": [
+              "P",
+              "F"
+            ],
+            "correctOption": 2
+          },
+          {
+            "id": "b",
+            "prompt": "Różnica a3-a2 jest równa 96.",
+            "mode": "multipleChoice",
+            "options": [
+              "P",
+              "F"
+            ],
+            "correctOption": 1
+          }
+        ]
+      },
+      {
+        "id": "mm23-p0p-z18",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 18,
+        "displayNumber": "18",
+        "order": 20,
+        "points": 2,
+        "title": "Zadanie 18",
+        "topicId": "sequences",
+        "sourcePage": 16,
+        "solutionSourcePage": 9,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "numeric",
+        "prompt": "Zadanie 18. (0–2) Ciąg (3𝑥2 + 5𝑥, 𝑥2, 20 − 𝑥2) jest arytmetyczny. Oblicz 𝒙. Zapisz obliczenia.",
+        "hints": [
+          "Wypisz wyrazy potrzebne w zadaniu.",
+          "Użyj definicji ciągu arytmetycznego albo geometrycznego."
+        ],
+        "solution": "Dla ciągu arytmetycznego 2x² = (3x²+5x)+(20-x²), więc 5x+20=0 i x=-4.",
+        "scoringCriteria": "2 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": [],
+        "expectedValue": -4
+      },
+      {
+        "id": "mm23-p0p-z19",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 19,
+        "displayNumber": "19",
+        "order": 21,
+        "points": 1,
+        "title": "Zadanie 19",
+        "topicId": "trigonometry",
+        "sourcePage": 17,
+        "solutionSourcePage": 10,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 19. (0–1) Kąt 𝛼 jest ostry i cos 𝛼 = 2√6 7 . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Sinus kąta 𝛼 jest równy A. 24 49 B. 5 7 C. 25 49 D. √6 7",
+        "hints": [
+          "Wykorzystaj tożsamość sin²α+cos²α=1.",
+          "Uwzględnij ćwiartkę kąta przy wyborze znaku."
+        ],
+        "solution": "sin²α=1-(2√6/7)²=25/49, a α jest ostry, więc sin α=5/7. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z20",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 20,
+        "displayNumber": "20",
+        "order": 22,
+        "points": 1,
+        "title": "Zadanie 20",
+        "topicId": "plane-geometry",
+        "sourcePage": 17,
+        "solutionSourcePage": 10,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 20. (0–1) Trapez 𝑇1 , o polu równym 52 i obwodzie 36, jest podobny do trapezu 𝑇2 . Pole trapezu 𝑇2 jest równe 13. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Obwód trapezu 𝑇2 jest równy A. 18 B. 9 C. 169 9 D. 52 3",
+        "hints": [
+          "Narysuj pomocniczy szkic i oznacz wszystkie znane długości.",
+          "Wybierz twierdzenie o kącie, łuku, podobieństwie lub polu."
+        ],
+        "solution": "Skala podobieństwa wynosi 1/2, zatem obwód drugiego trapezu wynosi 18. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z21",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 21,
+        "displayNumber": "21",
+        "order": 23,
+        "points": 1,
+        "title": "Zadanie 21",
+        "topicId": "plane-geometry",
+        "sourcePage": 18,
+        "solutionSourcePage": 10,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 21. (0–1) Koło ma promień równy 3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Obwód wycinka tego koła o kącie środkowym 30° jest równy A. 3 4 𝜋 B. 1 2 𝜋 C. 3 4 𝜋 + 6 D. 1 2 𝜋 + 6",
+        "hints": [
+          "Narysuj pomocniczy szkic i oznacz wszystkie znane długości.",
+          "Wybierz twierdzenie o kącie, łuku, podobieństwie lub polu."
+        ],
+        "solution": "Długość łuku to (30/360)·2π·3=π/2. Obwód wycinka to π/2+6, odpowiedź D.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z22",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 22,
+        "displayNumber": "22",
+        "order": 24,
+        "points": 1,
+        "title": "Zadanie 22",
+        "topicId": "plane-geometry",
+        "sourcePage": 18,
+        "solutionSourcePage": 11,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 22. (0–1) W okręgu 𝒪 kąt środkowy 𝛽 oraz kąt wpisany 𝛼 są oparte na tym samym łuku. Kąt 𝛽 ma miarę o 40° większą od kąta 𝛼. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta 𝛽 jest równa A. 40° B. 80° C. 100° D. 120°",
+        "hints": [
+          "Narysuj pomocniczy szkic i oznacz wszystkie znane długości.",
+          "Wybierz twierdzenie o kącie, łuku, podobieństwie lub polu."
+        ],
+        "solution": "Kąt środkowy jest dwa razy większy od wpisanego: β=2α i β=α+40°, więc β=80°. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z23",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 23,
+        "displayNumber": "23",
+        "order": 25,
+        "points": 1,
+        "title": "Zadanie 23",
+        "topicId": "plane-geometry",
+        "sourcePage": 19,
+        "solutionSourcePage": 11,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 23. (0–1) W trójkącie 𝐴𝐵𝐶 długość boku 𝐴𝐶 jest równa 3, a długość boku 𝐵𝐶 jest równa 4. Dwusieczna kąta 𝐴𝐶𝐵 przecina bok 𝐴𝐵 w punkcie 𝐷. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Stosunek |𝐴𝐷| ∶ |𝐷𝐵| jest równy A. 4 ∶ 3 B. 4 ∶ 7 C. 3 ∶ 4 D. 3 ∶ 7",
+        "hints": [
+          "Narysuj pomocniczy szkic i oznacz wszystkie znane długości.",
+          "Wybierz twierdzenie o kącie, łuku, podobieństwie lub polu."
+        ],
+        "solution": "Twierdzenie o dwusiecznej daje |AD|:|DB|=|AC|:|BC|=3:4. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+    "id": "mm23-p0p-z24",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 24,
+        "displayNumber": "24",
+        "order": 26,
+        "points": 2,
+        "title": "Zadanie 24",
+        "topicId": "plane-geometry",
+        "sourcePage": 20,
+        "solutionSourcePage": 11,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 24. (0–2) Dany jest trapez równoramienny 𝐴𝐵𝐶𝐷, w którym podstawa 𝐶𝐷 ma długość 6, ramię 𝐴𝐷 ma długość 4, a kąty 𝐵𝐴𝐷 oraz 𝐴𝐵𝐶 mają miarę 60° (zobacz rysunek). Oblicz pole tego trapezu. Zapisz obliczenia. 𝐶 𝐷 60° 6 4 𝐵 𝐴 60°",
+        "hints": [
+          "Narysuj pomocniczy szkic i oznacz wszystkie znane długości.",
+          "Wybierz twierdzenie o kącie, łuku, podobieństwie lub polu."
+        ],
+        "solution": "Wysokość trapezu wynosi 4 sin 60°=2√3, a druga podstawa ma długość 10. Pole wynosi ((10+6)/2)·2√3=16√3.",
+        "scoringCriteria": "2 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+    "diagramIds": ["exam-mm23-p0p-z24"]
+      },
+      {
+        "id": "mm23-p0p-z25",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 25,
+        "displayNumber": "25",
+        "order": 27,
+        "points": 1,
+        "title": "Zadanie 25",
+        "topicId": "lines-and-segments",
+        "sourcePage": 21,
+        "solutionSourcePage": 12,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 25. (0–1) W kartezjańskim układzie współrzędnych (𝑥, 𝑦) dane są prosta 𝑘 o równaniu 𝑦 = 3 4 𝑥 − 7 4 oraz punkt 𝑃 = (12, −1). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prosta przechodząca przez punkt 𝑃 i równoległa do prostej 𝑘 ma równanie A. 𝑦 = − 3 4 𝑥 + 8 B. 𝑦 = 3 4 𝑥 − 10 C. 𝑦 = 4 3 𝑥 − 17 D. 𝑦 = − 4 3 𝑥 + 15",
+        "hints": [
+          "Zapisz równania prostych lub współrzędne potrzebnych punktów.",
+          "Sprawdź wynik przez podstawienie do równania."
+        ],
+        "solution": "Prosta równoległa ma współczynnik 3/4. Po podstawieniu P=(12,-1) otrzymujemy y=(3/4)x-10. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z26",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 26,
+        "displayNumber": "26",
+        "order": 28,
+        "points": 1,
+        "title": "Zadanie 26",
+        "topicId": "lines-and-segments",
+        "sourcePage": 21,
+        "solutionSourcePage": 13,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 26. (0–1) W kartezjańskim układzie współrzędnych (𝑥, 𝑦) dany jest okrąg 𝒪 o środku 𝑆 = (−1, 2) i promieniu 3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Okrąg 𝒪 jest określony równaniem A. (𝑥 − 1)2 + (𝑦 + 2)2 = 9 B. (𝑥 − 1)2 + (𝑦 + 2)2 = 3 C. (𝑥 + 1)2 + (𝑦 − 2)2 = 9 D. (𝑥 + 1)2 + (𝑦 − 2)2 = 3",
+        "hints": [
+          "Zapisz równania prostych lub współrzędne potrzebnych punktów.",
+          "Sprawdź wynik przez podstawienie do równania."
+        ],
+        "solution": "Równanie okręgu o środku (-1,2) i promieniu 3 to (x+1)²+(y-2)²=9. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z27",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 27,
+        "displayNumber": "27",
+        "order": 29,
+        "points": 1,
+        "title": "Zadanie 27",
+        "topicId": "lines-and-segments",
+        "sourcePage": 22,
+        "solutionSourcePage": 13,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "compound",
+        "prompt": "Zadanie 27. (0–1) W kartezjańskim układzie współrzędnych (𝑥, 𝑦) proste o równaniach: • 𝑦 = √3𝑥 + 6 • 𝑦 = −√3𝑥 + 6 • 𝑦 = − 1 √3 𝑥 − 2, przecinają się w punktach, które są wierzchołkami trójkąta 𝐾𝐿𝑀. Dokończ zdanie tak, aby było prawdziwe. Wybierz odpowiedź A albo B oraz jej uzasadnienie 1., 2. albo 3. Trójkąt 𝐾𝐿𝑀 jest A. równoramienny, ponieważ 1. oś 𝑂𝑥 przechodzi przez jeden z wierzchołków tego trójkąta i środek jednego z boków tego trójkąta. 2. dwie z tych prostych są prostopadłe. B. prostokątny, 3. oś 𝑂𝑦 zawiera dwusieczną tego trójkąta.",
+        "hints": [
+          "Zapisz równania prostych lub współrzędne potrzebnych punktów.",
+          "Sprawdź wynik przez podstawienie do równania."
+        ],
+        "solution": "Trójkąt jest prostokątny, ponieważ dwie proste są prostopadłe. Odpowiedź B2.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": [],
+        "answerParts": [
+          {
+            "id": "choice",
+            "prompt": "Wybór A albo B.",
+            "mode": "multipleChoice",
+            "options": [
+              "A",
+              "B"
+            ],
+            "correctOption": 2
+          },
+          {
+            "id": "reason",
+            "prompt": "Numer uzasadnienia.",
+            "mode": "multipleChoice",
+            "options": [
+              "1",
+              "2",
+              "3"
+            ],
+            "correctOption": 2
+          }
+        ]
+      },
+      {
+        "id": "mm23-p0p-z28",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 28,
+        "displayNumber": "28",
+        "order": 30,
+        "points": 1,
+        "title": "Zadanie 28",
+        "topicId": "lines-and-segments",
+        "sourcePage": 22,
+        "solutionSourcePage": 13,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 28. (0–1) W kartezjańskim układzie współrzędnych (𝑥, 𝑦) punkt 𝐴 = (−1, −4) jest wierzchołkiem równoległoboku 𝐴𝐵𝐶𝐷. Punkt 𝑆 = (2, 2) jest środkiem symetrii tego równoległoboku. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej 𝐴𝐶 równoległoboku 𝐴𝐵𝐶𝐷 jest równa A. √5 B. 2√5 C. 3√5 D. 6√5",
+        "hints": [
+          "Zapisz równania prostych lub współrzędne potrzebnych punktów.",
+          "Sprawdź wynik przez podstawienie do równania."
+        ],
+        "solution": "S=(2,2) jest środkiem AC, więc C=(5,8). Długość AC wynosi √(6²+12²)=6√5. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z29-1",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 29,
+        "displayNumber": "29.1",
+        "order": 31,
+        "points": 1,
+        "title": "Zadanie 29.1",
+        "topicId": "solid-geometry",
+        "sourcePage": 23,
+        "solutionSourcePage": 13,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 29. Każda krawędź graniastosłupa prawidłowego sześciokątnego ma długość równą 6. Zadanie 29.1. (0–1) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole powierzchni całkowitej tego graniastosłupa jest równe A. 216 + 18√3 B. 216 + 54√3 C. 216 + 216√3 D. 216 + 108√3",
+        "hints": [
+          "Rozpatrz rzut odcinka na podstawę bryły.",
+          "Zastosuj wzór na pole podstawy oraz twierdzenie Pitagorasa."
+        ],
+        "solution": "Pole całkowite graniastosłupa wynosi 216+108√3. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+    "diagramIds": ["exam-mm23-p0p-z29"],
+    "groupId": "mm23-p0p-z29"
+      },
+      {
+        "id": "mm23-p0p-z29-2",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 29,
+        "displayNumber": "29.2",
+        "order": 32,
+        "points": 1,
+        "title": "Zadanie 29.2",
+        "topicId": "solid-geometry",
+        "sourcePage": 23,
+        "solutionSourcePage": 13,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "numeric",
+        "prompt": "Zadanie 29. Każda krawędź graniastosłupa prawidłowego sześciokątnego ma długość równą 6. Zadanie 29.2. (0–1) Oblicz cosinus kąta nachylenia dłuższej przekątnej tego graniastosłupa do płaszczyzny podstawy graniastosłupa. Zapisz obliczenia.",
+        "hints": [
+          "Rozpatrz rzut odcinka na podstawę bryły.",
+          "Zastosuj wzór na pole podstawy oraz twierdzenie Pitagorasa."
+        ],
+        "solution": "Rzut dłuższej przekątnej na podstawę ma długość 6√3, a przekątna ma długość 6√5, więc cosinus wynosi 2/√5.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+    "diagramIds": ["exam-mm23-p0p-z29"],
+    "groupId": "mm23-p0p-z29",
+        "expectedValue": 0.8944271909999159
+      },
+      {
+    "id": "mm23-p0p-z30",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 30,
+        "displayNumber": "30",
+        "order": 33,
+        "points": 1,
+        "title": "Zadanie 30",
+        "topicId": "combinatorics",
+        "sourcePage": 24,
+        "solutionSourcePage": 14,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 30. (0–1) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wszystkich liczb naturalnych czterocyfrowych, w których zapisie dziesiętnym cyfry się nie powtarzają, jest A. 9 ⋅ 10 ⋅ 10 ⋅ 10 ⋅ 10 B. 9 ⋅ 9 ⋅ 9 ⋅ 9 C. 10 ⋅ 9 ⋅ 8 ⋅ 7 D. 9 ⋅ 9 ⋅ 8 ⋅ 7",
+        "hints": [
+          "Wybieraj kolejne cyfry z uwzględnieniem zakazu powtórzeń.",
+          "Pomnóż liczbę możliwości na kolejnych miejscach."
+        ],
+        "solution": "Pierwsza cyfra ma 9 możliwości, kolejne 9, 8 i 7. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+    "diagramIds": []
+      },
+      {
+        "id": "mm23-p0p-z31",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 31,
+        "displayNumber": "31",
+        "order": 34,
+        "points": 2,
+        "title": "Zadanie 31",
+        "topicId": "probability",
+        "sourcePage": 24,
+        "solutionSourcePage": 14,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "numeric",
+        "prompt": "Zadanie 31. (0–2) Ze zbioru pięciu liczb {1, 2, 3, 4, 5} losujemy bez zwracania kolejno dwa razy po jednej liczbie. Oblicz prawdopodobieństwo zdarzenia 𝑨 polegającego na tym, że obie wylosowane liczby są nieparzyste. Zapisz obliczenia.",
+        "hints": [
+          "Policz wszystkie uporządkowane wyniki doświadczenia.",
+          "Policz wyniki sprzyjające i zbuduj iloraz."
+        ],
+        "solution": "Mamy 5·4=20 uporządkowanych wyników. Sprzyjających jest 3·2=6, więc P(A)=6/20=3/10.",
+        "scoringCriteria": "2 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": [],
+        "expectedValue": 0.3
+      },
+      {
+    "id": "mm23-p0p-z32",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 32,
+        "displayNumber": "32",
+        "order": 35,
+        "points": 1,
+        "title": "Zadanie 32",
+        "topicId": "statistics",
+        "sourcePage": 26,
+        "solutionSourcePage": 16,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 32. (0–1) Na diagramie przedstawiono rozkład wynagrodzenia brutto wszystkich stu pracowników pewnej firmy za styczeń 2023 roku. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Średnia wynagrodzenia brutto wszystkich pracowników tej firmy za styczeń 2023 roku jest równa A. 5 690 zł B. 5 280 zł C. 6 257 zł D. 5 900 zł",
+        "hints": [
+          "Odczytaj wartości i ich liczebności z diagramu.",
+          "Użyj średniej ważonej."
+        ],
+        "solution": "Średnia ważona z diagramu wynosi 5690 zł, czyli odpowiedź A.",
+        "scoringCriteria": "1 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+    "diagramIds": ["exam-mm23-p0p-z32"]
+      },
+      {
+        "id": "mm23-p0p-z33",
+        "examId": "matura-poprawkowa-2023-podstawowa",
+        "number": 33,
+        "displayNumber": "33",
+        "order": 36,
+        "points": 4,
+        "title": "Zadanie 33",
+        "topicId": "quadratic-function",
+        "sourcePage": 27,
+        "solutionSourcePage": 16,
+        "verificationSource": "CKE MMAP-P0-100-2308; publiczne archiwum PDF",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 33. (0–4) Zakład stolarski produkuje krzesła, które sprzedaje po 196 złotych za sztukę. Właściciel, na podstawie analizy rzeczywistych wpływów i wydatków, stwierdził, że: • przychód 𝑃 (w złotych) ze sprzedaży 𝑥 krzeseł można opisać funkcją 𝑃(𝑥) = 196𝑥 • koszt 𝐾 (w złotych) produkcji 𝑥 krzeseł dziennie można opisać funkcją 𝐾(𝑥) = 4𝑥2 + 4𝑥 + 240 Dziennie w zakładzie można wyprodukować co najwyżej 30 krzeseł. Oblicz, ile krzeseł powinien dziennie sprzedawać zakład, aby zysk ze sprzedaży krzeseł wyprodukowanych przez ten zakład w ciągu jednego dnia był możliwie największy. Oblicz ten największy zysk. Zapisz obliczenia. Wskazówka: przyjmij, że zysk jest różnicą przychodu i kosztów.",
+        "hints": [
+          "Zapisz warunek w postaci równania lub odczytaj własność wykresu.",
+          "Sprawdź miejsca zerowe albo wierzchołek funkcji."
+        ],
+        "solution": "Zysk Z(x)=196x-(4x²+4x+240)=-4x²+192x-240=-4(x-24)²+2064. Maksimum osiąga dla 24 krzeseł i wynosi 2064 zł.",
+        "scoringCriteria": "4 pkt - rozwiązanie zgodne z oficjalnymi zasadami oceniania CKE. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "diagramIds": []
+      }
+    ]
+  }
+}

@@ -69,10 +69,31 @@
       "isActive": true
     },
     {
+      "id": "matura-maj-2023-podstawowa",
+      "contentPath": "Content/exam-2023-main-basic.json",
+      "level": "basic",
+      "order": 7,
+      "isActive": true
+    },
+    {
+      "id": "matura-poprawkowa-2023-podstawowa",
+      "contentPath": "Content/exam-2023-correction-basic.json",
+      "level": "basic",
+      "order": 8,
+      "isActive": true
+    },
+    {
+      "id": "matura-maj-2023-rozszerzona",
+      "contentPath": "Content/exam-2023-main-extended.json",
+      "level": "extended",
+      "order": 9,
+      "isActive": true
+    },
+    {
       "id": "matura-poprawkowa-2021",
       "contentPath": "Content/exam-2021-correction.json",
       "level": "basic",
-      "order": 7,
+      "order": 10,
       "isActive": true
     }
   ]

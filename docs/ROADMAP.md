@@ -17,7 +17,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - matura główna 2026 PP zweryfikowana z arkuszem i zasadami oceniania CKE: 33 zadania, 37 jednostek postępu i 50 punktów,
 - matura główna 2026 PR zweryfikowana z arkuszem i zasadami oceniania CKE: 12 zadań, 13 jednostek postępu i 50 punktów,
 - 35 zadań matury poprawkowej 2021 zachowanych z identyfikatorami `mp21-*`,
-- wybór siedmiu arkuszy i agregacja ich 182 jednostek postępu według 17 tematów,
+- wybór dziewięciu arkuszy i agregacja ich 230 jednostek postępu według 17 tematów,
 - kalkulator ogólny z parserem wyrażeń, notacją naukową, Ans i historią sesji,
 - kalkulator funkcji kwadratowej,
 - losowanie zadań z całego arkusza i w obrębie wybranego tematu,
@@ -37,7 +37,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - podpisywanie kodu i paczek,
 - paczka macOS dla Apple Silicon.
 
-Manifest `Content/provenance.json` ma obecnie `releaseEligible=true`. Rozszerzenia deklaracji właściciela z 3, 5 i 10 sierpnia 2026 r. obejmują arkusze CKE 2024, 2025 i 2026 na obu poziomach, zasady oceniania, przykłady z informatorów CKE oraz trzydzieści jeden autorskich implementacji wektorowych Avalonia. Każdy publiczny prerelease, w tym `0.9.2`, wymaga pełnej checklisty wydania i zweryfikowanego workflow.
+Manifest `Content/provenance.json` ma obecnie `releaseEligible=false`. Rozszerzenia deklaracji właściciela z 3, 5, 10 i 12 sierpnia 2026 r. obejmują zatwierdzone arkusze i materiały CKE, ale nie maturę podstawową 2023 ani osiem nowych figur. Każdy przyszły publiczny prerelease wymaga pełnej checklisty wydania, zweryfikowanego workflow i uzupełnionej deklaracji praw.
 
 ## Zastąpione
 

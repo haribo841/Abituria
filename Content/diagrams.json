@@ -9644,6 +9644,904 @@
           "fontSize": 24.0
         }
       ]
+    },
+    {
+      "id": "exam-mm23-r0-z05",
+      "sourceId": "cke-2023-main-extended",
+      "sourcePage": 8,
+      "alternativeText": "Trójkąt prostokątny ABC z kątem prostym przy B i kątem 60 stopni przy A. Punkty K i L leżą odpowiednio na bokach AB i BC, odcinek KL przecina wysokość BD w punkcie N, a na odcinku AD zaznaczono długość 2.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [150, 550, 150, 150, 842, 550],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4
+        },
+        {
+          "type": "line",
+          "x": 150,
+          "y": 550,
+          "x2": 323,
+          "y2": 250,
+          "stroke": "accent",
+          "strokeThickness": 3,
+          "dashed": true
+        },
+        {
+          "type": "line",
+          "x": 150,
+          "y": 450,
+          "x2": 250,
+          "y2": 550,
+          "stroke": "danger",
+          "strokeThickness": 3
+        },
+        {
+          "type": "ellipse",
+          "x": 187,
+          "y": 487,
+          "radiusX": 7,
+          "radiusY": 7,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2
+        },
+        {
+          "type": "ellipse",
+          "x": 323,
+          "y": 250,
+          "radiusX": 7,
+          "radiusY": 7,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2
+        },
+        {
+          "type": "arc",
+          "x": 150,
+          "y": 150,
+          "radiusX": 52,
+          "radiusY": 52,
+          "startAngle": 30,
+          "sweepAngle": 60,
+          "stroke": "danger",
+          "strokeThickness": 3
+        },
+        {
+          "type": "text",
+          "x": 120,
+          "y": 135,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 120,
+          "y": 580,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 850,
+          "y": 580,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 330,
+          "y": 240,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 120,
+          "y": 450,
+          "text": "K",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 245,
+          "y": 585,
+          "text": "L",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 195,
+          "y": 480,
+          "text": "N",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 174,
+          "y": 190,
+          "text": "60°",
+          "stroke": "danger",
+          "fontSize": 22
+        },
+        {
+          "type": "text",
+          "x": 385,
+          "y": 285,
+          "text": "AD = 2",
+          "stroke": "muted",
+          "fontSize": 22
+        },
+        {
+          "type": "text",
+          "x": 105,
+          "y": 505,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 22
+        },
+        {
+          "type": "text",
+          "x": 205,
+          "y": 585,
+          "text": "1",
+          "stroke": "muted",
+          "fontSize": 22
+        }
+      ]
+    },
+    {
+      "id": "exam-mm23-r0-z07",
+      "sourceId": "cke-2023-main-extended",
+      "sourcePage": 11,
+      "alternativeText": "Sześcian ABCDEFGH o krawędzi 6 w perspektywie. Na ścianie bocznej ADHE zaznaczono przekątne AH i DE przecinające się w punkcie S oraz trójkąt SBH.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [280, 500, 650, 500, 650, 290, 280, 290],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4
+        },
+        {
+          "type": "polygon",
+          "points": [160, 350, 530, 350, 530, 140, 160, 140],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4
+        },
+        {
+          "type": "line",
+          "x": 280,
+          "y": 500,
+          "x2": 160,
+          "y2": 350,
+          "stroke": "primary",
+          "strokeThickness": 4
+        },
+        {
+          "type": "line",
+          "x": 650,
+          "y": 500,
+          "x2": 530,
+          "y2": 350,
+          "stroke": "primary",
+          "strokeThickness": 4
+        },
+        {
+          "type": "line",
+          "x": 650,
+          "y": 290,
+          "x2": 530,
+          "y2": 140,
+          "stroke": "primary",
+          "strokeThickness": 4
+        },
+        {
+          "type": "line",
+          "x": 280,
+          "y": 290,
+          "x2": 160,
+          "y2": 140,
+          "stroke": "primary",
+          "strokeThickness": 4,
+          "dashed": true
+        },
+        {
+          "type": "line",
+          "x": 280,
+          "y": 500,
+          "x2": 160,
+          "y2": 140,
+          "stroke": "accent",
+          "strokeThickness": 3,
+          "dashed": true
+        },
+        {
+          "type": "line",
+          "x": 280,
+          "y": 290,
+          "x2": 160,
+          "y2": 350,
+          "stroke": "accent",
+          "strokeThickness": 3,
+          "dashed": true
+        },
+        {
+          "type": "line",
+          "x": 220,
+          "y": 320,
+          "x2": 650,
+          "y2": 500,
+          "stroke": "danger",
+          "strokeThickness": 3
+        },
+        {
+          "type": "line",
+          "x": 220,
+          "y": 320,
+          "x2": 160,
+          "y2": 140,
+          "stroke": "danger",
+          "strokeThickness": 3
+        },
+        {
+          "type": "ellipse",
+          "x": 220,
+          "y": 320,
+          "radiusX": 7,
+          "radiusY": 7,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2
+        },
+        {
+          "type": "text",
+          "x": 260,
+          "y": 530,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 660,
+          "y": 530,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 660,
+          "y": 290,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 260,
+          "y": 290,
+          "text": "D",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 135,
+          "y": 370,
+          "text": "E",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 535,
+          "y": 370,
+          "text": "F",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 535,
+          "y": 135,
+          "text": "G",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 135,
+          "y": 135,
+          "text": "H",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 225,
+          "y": 310,
+          "text": "S",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 450,
+          "y": 530,
+          "text": "6",
+          "stroke": "muted",
+          "fontSize": 22
+        }
+      ]
+    },
+    {
+      "id": "exam-mm23-r0-z10",
+      "sourceId": "cke-2023-main-extended",
+      "sourcePage": 16,
+      "alternativeText": "Zagnieżdżone kwadraty K1, K2 i K3. Każdy kolejny kwadrat ma wierzchołki na bokach poprzedniego i jest obrócony względem niego, ilustrując podział boków w stosunku 1 do 3.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "polygon",
+          "points": [270, 100, 730, 100, 730, 560, 270, 560],
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 4
+        },
+        {
+          "type": "polygon",
+          "points": [270, 215, 615, 100, 730, 445, 385, 560],
+          "stroke": "accent",
+          "fill": "none",
+          "strokeThickness": 4
+        },
+        {
+          "type": "polygon",
+          "points": [356, 186, 644, 215, 615, 503, 327, 474],
+          "stroke": "danger",
+          "fill": "none",
+          "strokeThickness": 4
+        },
+        {
+          "type": "polygon",
+          "points": [428, 193, 637, 287, 543, 496, 334, 402],
+          "stroke": "success",
+          "fill": "none",
+          "strokeThickness": 3
+        },
+        {
+          "type": "text",
+          "x": 742,
+          "y": 560,
+          "text": "a",
+          "stroke": "muted",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 235,
+          "y": 340,
+          "text": "a",
+          "stroke": "muted",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 742,
+          "y": 130,
+          "text": "K₁",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 625,
+          "y": 155,
+          "text": "K₂",
+          "stroke": "accent",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 555,
+          "y": 240,
+          "text": "K₃",
+          "stroke": "danger",
+          "fontSize": 24
+        }
+      ]
+    },
+    {
+      "id": "exam-mm23-r0-z13",
+      "sourceId": "cke-2023-main-extended",
+      "sourcePage": 22,
+      "alternativeText": "Układ współrzędnych z parabolą y równe 4x kwadrat minus 7x plus 1, prostą x minus y minus 2 równe zero oraz okręgiem o średnicy AB. Punkt C leży na okręgu nad prostą.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        {
+          "type": "line",
+          "x": 125,
+          "y": 390,
+          "x2": 910,
+          "y2": 390,
+          "stroke": "primary",
+          "strokeThickness": 3,
+          "arrowEnd": true
+        },
+        {
+          "type": "line",
+          "x": 450,
+          "y": 575,
+          "x2": 450,
+          "y2": 80,
+          "stroke": "primary",
+          "strokeThickness": 3,
+          "arrowEnd": true
+        },
+        {
+          "type": "polyline",
+          "points": [250, 100, 275, 220, 300, 325, 325, 400, 350, 445, 375, 460, 400, 445, 425, 400, 450, 325, 475, 220, 500, 100],
+          "stroke": "accent",
+          "strokeThickness": 4
+        },
+        {
+          "type": "line",
+          "x": 190,
+          "y": 550,
+          "x2": 760,
+          "y2": 120,
+          "stroke": "danger",
+          "strokeThickness": 3
+        },
+        {
+          "type": "ellipse",
+          "x": 350,
+          "y": 420,
+          "radiusX": 105,
+          "radiusY": 105,
+          "stroke": "primary",
+          "fill": "none",
+          "strokeThickness": 3
+        },
+        {
+          "type": "line",
+          "x": 275,
+          "y": 475,
+          "x2": 425,
+          "y2": 365,
+          "stroke": "muted",
+          "strokeThickness": 2,
+          "dashed": true
+        },
+        {
+          "type": "ellipse",
+          "x": 275,
+          "y": 475,
+          "radiusX": 7,
+          "radiusY": 7,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2
+        },
+        {
+          "type": "ellipse",
+          "x": 425,
+          "y": 365,
+          "radiusX": 7,
+          "radiusY": 7,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2
+        },
+        {
+          "type": "ellipse",
+          "x": 350,
+          "y": 315,
+          "radiusX": 7,
+          "radiusY": 7,
+          "stroke": "primary",
+          "fill": "primary",
+          "strokeThickness": 2
+        },
+        {
+          "type": "text",
+          "x": 260,
+          "y": 505,
+          "text": "A",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 435,
+          "y": 360,
+          "text": "B",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 360,
+          "y": 305,
+          "text": "C",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 770,
+          "y": 130,
+          "text": "l",
+          "stroke": "danger",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 520,
+          "y": 190,
+          "text": "y = 4x² - 7x + 1",
+          "stroke": "accent",
+          "fontSize": 22
+        },
+        {
+          "type": "text",
+          "x": 535,
+          "y": 475,
+          "text": "okrąg O",
+          "stroke": "muted",
+          "fontSize": 22
+        },
+        {
+          "type": "text",
+          "x": 915,
+          "y": 380,
+          "text": "x",
+          "stroke": "primary",
+          "fontSize": 24
+        },
+        {
+          "type": "text",
+          "x": 462,
+          "y": 82,
+          "text": "y",
+          "stroke": "primary",
+          "fontSize": 24
+        }
+      ]
+    },
+    {
+      "id": "exam-mm23-p0-z01",
+      "sourceId": "cke-2023-main-basic",
+      "sourcePage": 4,
+      "alternativeText": "Oś liczbowa z dwoma domkniętymi promieniami: od lewej do minus 2 oraz od 5 w prawo.",
+      "width": 900,
+      "height": 360,
+      "primitives": [
+        { "type": "line", "x": 90, "y": 180, "x2": 830, "y2": 180, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 120, "y": 180, "x2": 340, "y2": 180, "stroke": "accent", "strokeThickness": 16 },
+        { "type": "line", "x": 590, "y": 180, "x2": 800, "y2": 180, "stroke": "accent", "strokeThickness": 16 },
+        { "type": "ellipse", "x": 340, "y": 180, "radiusX": 8, "radiusY": 8, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "ellipse", "x": 590, "y": 180, "radiusX": 8, "radiusY": 8, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "text", "x": 325, "y": 225, "text": "-2", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 582, "y": 225, "text": "5", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 840, "y": 175, "text": "x", "stroke": "primary", "fontSize": 26 }
+      ]
+    },
+    {
+      "id": "exam-mm23-p0-z10",
+      "sourceId": "cke-2023-main-basic",
+      "sourcePage": 10,
+      "alternativeText": "Układ współrzędnych z prostą malejącą y równe minus x plus 2 oraz prostą rosnącą y równe 2x minus 1.",
+      "width": 900,
+      "height": 620,
+      "primitives": [
+        { "type": "line", "x": 90, "y": 410, "x2": 835, "y2": 410, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 420, "y": 560, "x2": 420, "y2": 70, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 160, "y": 150, "x2": 740, "y2": 520, "stroke": "accent", "strokeThickness": 5 },
+        { "type": "line", "x": 260, "y": 540, "x2": 560, "y2": 100, "stroke": "danger", "strokeThickness": 5 },
+        { "type": "text", "x": 840, "y": 402, "text": "x", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 432, "y": 82, "text": "y", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 655, "y": 525, "text": "y = -x + 2", "stroke": "accent", "fontSize": 22 },
+        { "type": "text", "x": 560, "y": 130, "text": "y = 2x - 1", "stroke": "danger", "fontSize": 22 }
+      ]
+    },
+    {
+      "id": "exam-mm23-p0-z12",
+      "sourceId": "cke-2023-main-basic",
+      "sourcePage": 12,
+      "alternativeText": "Układ współrzędnych z łamaną przedstawiającą funkcję o dziedzinie od minus 6 do 5. Największa wartość na przedziale od minus 4 do 1 wynosi 2, a funkcja maleje od 2 do 5.",
+      "width": 1000,
+      "height": 680,
+      "primitives": [
+        { "type": "line", "x": 90, "y": 490, "x2": 925, "y2": 490, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 485, "y": 620, "x2": 485, "y2": 70, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "polyline", "points": [125, 480, 250, 360, 370, 390, 485, 260, 610, 180, 730, 270, 860, 510], "stroke": "accent", "strokeThickness": 5 },
+        { "type": "ellipse", "x": 125, "y": 480, "radiusX": 7, "radiusY": 7, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "ellipse", "x": 860, "y": 510, "radiusX": 7, "radiusY": 7, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "text", "x": 112, "y": 525, "text": "-6", "stroke": "muted", "fontSize": 22 },
+        { "type": "text", "x": 850, "y": 550, "text": "5", "stroke": "muted", "fontSize": 22 },
+        { "type": "text", "x": 925, "y": 480, "text": "x", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 500, "y": 88, "text": "y", "stroke": "primary", "fontSize": 24 }
+      ]
+    },
+    {
+      "id": "exam-mm23-p0-z13",
+      "sourceId": "cke-2023-main-basic",
+      "sourcePage": 13,
+      "alternativeText": "Układ współrzędnych z malejącą prostą, która przecina dodatnią półosie y i dodatnią półosie x.",
+      "width": 800,
+      "height": 560,
+      "primitives": [
+        { "type": "line", "x": 80, "y": 360, "x2": 735, "y2": 360, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 350, "y": 510, "x2": 350, "y2": 65, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 155, "y": 130, "x2": 640, "y2": 455, "stroke": "accent", "strokeThickness": 5 },
+        { "type": "text", "x": 742, "y": 352, "text": "x", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 362, "y": 75, "text": "y", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 555, "y": 455, "text": "y = f(x)", "stroke": "accent", "fontSize": 24 }
+      ]
+    },
+    {
+      "id": "exam-mm23-p0-z18",
+      "sourceId": "cke-2023-main-basic",
+      "sourcePage": 17,
+      "alternativeText": "Układ współrzędnych z kątem alfa, którego ramię końcowe przechodzi przez punkt minus 3, 1 w drugiej ćwiartce.",
+      "width": 850,
+      "height": 600,
+      "primitives": [
+        { "type": "line", "x": 95, "y": 400, "x2": 780, "y2": 400, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 500, "y": 540, "x2": 500, "y2": 70, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 500, "y": 400, "x2": 250, "y2": 315, "stroke": "accent", "strokeThickness": 5, "arrowEnd": true },
+        { "type": "line", "x": 250, "y": 315, "x2": 250, "y2": 400, "stroke": "muted", "strokeThickness": 2, "dashed": true },
+        { "type": "line", "x": 250, "y": 400, "x2": 500, "y2": 400, "stroke": "muted", "strokeThickness": 2, "dashed": true },
+        { "type": "arc", "x": 500, "y": 400, "radiusX": 75, "radiusY": 75, "startAngle": 180, "sweepAngle": -18, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "text", "x": 385, "y": 360, "text": "α", "stroke": "danger", "fontSize": 28 },
+        { "type": "text", "x": 225, "y": 295, "text": "P = (-3, 1)", "stroke": "primary", "fontSize": 22 },
+        { "type": "text", "x": 785, "y": 392, "text": "x", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 512, "y": 85, "text": "y", "stroke": "primary", "fontSize": 24 }
+      ]
+    },
+    {
+      "id": "exam-mm23-p0-z21",
+      "sourceId": "cke-2023-main-basic",
+      "sourcePage": 18,
+      "alternativeText": "Okrąg o środku O z punktami A, B i C na okręgu. Kąt ACO ma 70 stopni, a kąt wpisany ABC jest oparty na łuku AC.",
+      "width": 850,
+      "height": 620,
+      "primitives": [
+        { "type": "ellipse", "x": 430, "y": 320, "radiusX": 215, "radiusY": 215, "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 260, "y": 415, "x2": 560, "y2": 145, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 560, "y": 145, "x2": 625, "y2": 465, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 430, "y": 320, "x2": 260, "y2": 415, "stroke": "muted", "strokeThickness": 3 },
+        { "type": "line", "x": 430, "y": 320, "x2": 560, "y2": 145, "stroke": "muted", "strokeThickness": 3 },
+        { "type": "ellipse", "x": 430, "y": 320, "radiusX": 7, "radiusY": 7, "stroke": "primary", "fill": "primary", "strokeThickness": 2 },
+        { "type": "text", "x": 238, "y": 445, "text": "A", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 635, "y": 485, "text": "B", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 570, "y": 140, "text": "C", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 443, "y": 315, "text": "O", "stroke": "primary", "fontSize": 26 },
+        { "type": "arc", "x": 560, "y": 145, "radiusX": 43, "radiusY": 43, "startAngle": 77, "sweepAngle": 55, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "text", "x": 535, "y": 215, "text": "70°", "stroke": "danger", "fontSize": 22 }
+      ]
+    },
+    {
+      "id": "exam-mm23-p0-z26",
+      "sourceId": "cke-2023-main-basic",
+      "sourcePage": 22,
+      "alternativeText": "Ostrosłup prawidłowy czworokątny z wierzchołkiem S, kwadratową podstawą ABCD, środkiem O i punktem E na boku podstawy. Wysokość ściany bocznej SE ma długość 6 i tworzy z podstawą kąt 30 stopni.",
+      "width": 900,
+      "height": 660,
+      "primitives": [
+        { "type": "polygon", "points": [220, 480, 570, 555, 745, 410, 390, 345], "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 480, "y": 105, "x2": 220, "y2": 480, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 480, "y": 105, "x2": 570, "y2": 555, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 480, "y": 105, "x2": 745, "y2": 410, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 480, "y": 105, "x2": 390, "y2": 345, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 480, "y": 105, "x2": 480, "y2": 448, "stroke": "danger", "strokeThickness": 3, "dashed": true },
+        { "type": "line", "x": 480, "y": 105, "x2": 655, "y2": 483, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "arc", "x": 655, "y": 483, "radiusX": 45, "radiusY": 45, "startAngle": 185, "sweepAngle": -55, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "text", "x": 470, "y": 85, "text": "S", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 195, "y": 510, "text": "A", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 570, "y": 585, "text": "B", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 755, "y": 410, "text": "C", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 375, "y": 335, "text": "D", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 665, "y": 505, "text": "E", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 495, "y": 450, "text": "O", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 585, "y": 260, "text": "6", "stroke": "accent", "fontSize": 28 },
+        { "type": "text", "x": 692, "y": 455, "text": "30°", "stroke": "danger", "fontSize": 22 }
+      ]
+    },
+    {
+      "id": "exam-mm23-p0-z29",
+      "sourceId": "cke-2023-main-basic",
+      "sourcePage": 25,
+      "alternativeText": "Wykres słupkowy cen pomidorów 5,05, 5,60, 5,70, 6,00 i 6,30 zł. Słupki przedstawiają odpowiednio liczby sklepów 2, 4, 5, 3 i 2.",
+      "width": 1000,
+      "height": 620,
+      "primitives": [
+        { "type": "line", "x": 125, "y": 500, "x2": 900, "y2": 500, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 125, "y": 530, "x2": 125, "y2": 80, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "polygon", "points": [200, 500, 200, 350, 290, 350, 290, 500], "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "polygon", "points": [335, 500, 335, 230, 425, 230, 425, 500], "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "polygon", "points": [470, 500, 470, 160, 560, 160, 560, 500], "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "polygon", "points": [605, 500, 605, 290, 695, 290, 695, 500], "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "polygon", "points": [740, 500, 740, 350, 830, 350, 830, 500], "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "text", "x": 195, "y": 540, "text": "5,05", "stroke": "muted", "fontSize": 20 },
+        { "type": "text", "x": 330, "y": 540, "text": "5,60", "stroke": "muted", "fontSize": 20 },
+        { "type": "text", "x": 465, "y": 540, "text": "5,70", "stroke": "muted", "fontSize": 20 },
+        { "type": "text", "x": 600, "y": 540, "text": "6,00", "stroke": "muted", "fontSize": 20 },
+        { "type": "text", "x": 735, "y": 540, "text": "6,30", "stroke": "muted", "fontSize": 20 },
+        { "type": "text", "x": 910, "y": 490, "text": "cena", "stroke": "primary", "fontSize": 22 },
+        { "type": "text", "x": 135, "y": 85, "text": "liczba sklepów", "stroke": "primary", "fontSize": 22 }
+      ]
+    },
+    {
+      "id": "exam-mm23-p0p-z01",
+      "sourceId": "cke-2023-correction-basic",
+      "sourcePage": 4,
+      "alternativeText": "Cztery osie liczbowe A, B, C i D dla nierówności wartość bezwzględna z x minus 5 jest mniejsza od 2. Odpowiedź D przedstawia otwarty przedział od 3 do 7.",
+      "width": 1000,
+      "height": 650,
+      "primitives": [
+        { "type": "text", "x": 70, "y": 95, "text": "A", "stroke": "primary", "fontSize": 26 },
+        { "type": "line", "x": 140, "y": 100, "x2": 900, "y2": 100, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 155, "y": 100, "x2": 355, "y2": 100, "stroke": "accent", "strokeThickness": 14 },
+        { "type": "line", "x": 640, "y": 100, "x2": 875, "y2": 100, "stroke": "accent", "strokeThickness": 14 },
+        { "type": "ellipse", "x": 355, "y": 100, "radiusX": 8, "radiusY": 8, "stroke": "accent", "fill": "none", "strokeThickness": 3 },
+        { "type": "ellipse", "x": 640, "y": 100, "radiusX": 8, "radiusY": 8, "stroke": "accent", "fill": "none", "strokeThickness": 3 },
+        { "type": "text", "x": 338, "y": 140, "text": "-3", "stroke": "muted", "fontSize": 22 },
+        { "type": "text", "x": 632, "y": 140, "text": "7", "stroke": "muted", "fontSize": 22 },
+        { "type": "text", "x": 70, "y": 225, "text": "B", "stroke": "primary", "fontSize": 26 },
+        { "type": "line", "x": 140, "y": 230, "x2": 900, "y2": 230, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 355, "y": 230, "x2": 640, "y2": 230, "stroke": "accent", "strokeThickness": 14 },
+        { "type": "ellipse", "x": 355, "y": 230, "radiusX": 8, "radiusY": 8, "stroke": "accent", "fill": "none", "strokeThickness": 3 },
+        { "type": "ellipse", "x": 640, "y": 230, "radiusX": 8, "radiusY": 8, "stroke": "accent", "fill": "none", "strokeThickness": 3 },
+        { "type": "text", "x": 338, "y": 270, "text": "-3", "stroke": "muted", "fontSize": 22 },
+        { "type": "text", "x": 632, "y": 270, "text": "7", "stroke": "muted", "fontSize": 22 },
+        { "type": "text", "x": 70, "y": 355, "text": "C", "stroke": "primary", "fontSize": 26 },
+        { "type": "line", "x": 140, "y": 360, "x2": 900, "y2": 360, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 155, "y": 360, "x2": 500, "y2": 360, "stroke": "accent", "strokeThickness": 14 },
+        { "type": "line", "x": 640, "y": 360, "x2": 875, "y2": 360, "stroke": "accent", "strokeThickness": 14 },
+        { "type": "ellipse", "x": 500, "y": 360, "radiusX": 8, "radiusY": 8, "stroke": "accent", "fill": "none", "strokeThickness": 3 },
+        { "type": "ellipse", "x": 640, "y": 360, "radiusX": 8, "radiusY": 8, "stroke": "accent", "fill": "none", "strokeThickness": 3 },
+        { "type": "text", "x": 492, "y": 400, "text": "3", "stroke": "muted", "fontSize": 22 },
+        { "type": "text", "x": 632, "y": 400, "text": "7", "stroke": "muted", "fontSize": 22 },
+        { "type": "text", "x": 70, "y": 485, "text": "D", "stroke": "primary", "fontSize": 26 },
+        { "type": "line", "x": 140, "y": 490, "x2": 900, "y2": 490, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 500, "y": 490, "x2": 640, "y2": 490, "stroke": "accent", "strokeThickness": 14 },
+        { "type": "ellipse", "x": 500, "y": 490, "radiusX": 8, "radiusY": 8, "stroke": "accent", "fill": "none", "strokeThickness": 3 },
+        { "type": "ellipse", "x": 640, "y": 490, "radiusX": 8, "radiusY": 8, "stroke": "accent", "fill": "none", "strokeThickness": 3 },
+        { "type": "text", "x": 492, "y": 530, "text": "3", "stroke": "muted", "fontSize": 22 },
+        { "type": "text", "x": 632, "y": 530, "text": "7", "stroke": "muted", "fontSize": 22 },
+        { "type": "text", "x": 915, "y": 485, "text": "x", "stroke": "primary", "fontSize": 24 }
+      ]
+    },
+    {
+      "id": "exam-mm23-p0p-z14",
+      "sourceId": "cke-2023-correction-basic",
+      "sourcePage": 12,
+      "alternativeText": "Układ współrzędnych z wykresem funkcji f z trzema rozłącznymi fragmentami: poziomymi od minus 7 do minus 5 oraz od minus 4 do minus 1 na wysokości 4, malejącym od minus 1, 4 do 4, minus 1 i rosnącym od 5, 1 do 7, 6.",
+      "width": 900,
+      "height": 650,
+      "primitives": [
+        { "type": "line", "x": 100, "y": 335, "x2": 825, "y2": 335, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 450, "y": 575, "x2": 450, "y2": 65, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 205, "y": 160, "x2": 275, "y2": 160, "stroke": "accent", "strokeThickness": 5 },
+        { "type": "polyline", "points": [310, 160, 415, 160, 590, 335], "stroke": "accent", "strokeThickness": 5 },
+        { "type": "line", "x": 625, "y": 265, "x2": 695, "y2": 90, "stroke": "accent", "strokeThickness": 5 },
+        { "type": "ellipse", "x": 205, "y": 160, "radiusX": 6, "radiusY": 6, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "ellipse", "x": 275, "y": 160, "radiusX": 6, "radiusY": 6, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "ellipse", "x": 310, "y": 160, "radiusX": 6, "radiusY": 6, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "ellipse", "x": 590, "y": 335, "radiusX": 6, "radiusY": 6, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "ellipse", "x": 625, "y": 265, "radiusX": 6, "radiusY": 6, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "ellipse", "x": 695, "y": 90, "radiusX": 6, "radiusY": 6, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "text", "x": 188, "y": 370, "text": "-7", "stroke": "muted", "fontSize": 20 },
+        { "type": "text", "x": 258, "y": 370, "text": "-5", "stroke": "muted", "fontSize": 20 },
+        { "type": "text", "x": 293, "y": 370, "text": "-4", "stroke": "muted", "fontSize": 20 },
+        { "type": "text", "x": 580, "y": 370, "text": "4", "stroke": "muted", "fontSize": 20 },
+        { "type": "text", "x": 615, "y": 370, "text": "5", "stroke": "muted", "fontSize": 20 },
+        { "type": "text", "x": 688, "y": 370, "text": "7", "stroke": "muted", "fontSize": 20 },
+        { "type": "text", "x": 426, "y": 172, "text": "4", "stroke": "muted", "fontSize": 20 },
+        { "type": "text", "x": 430, "y": 345, "text": "0", "stroke": "muted", "fontSize": 20 },
+        { "type": "text", "x": 600, "y": 230, "text": "y = f(x)", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 835, "y": 328, "text": "x", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 462, "y": 80, "text": "y", "stroke": "primary", "fontSize": 24 }
+      ]
+    },
+    {
+      "id": "exam-mm23-p0p-z24",
+      "sourceId": "cke-2023-correction-basic",
+      "sourcePage": 20,
+      "alternativeText": "Trapez równoramienny ABCD. Dolna podstawa AB jest dłuższa, górna podstawa CD ma długość 6, ramię AD ma długość 4, a kąty przy A i B mają po 60 stopni.",
+      "width": 900,
+      "height": 620,
+      "primitives": [
+        { "type": "polygon", "points": [160, 440, 735, 440, 625, 205, 270, 205], "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "arc", "x": 160, "y": 440, "radiusX": 68, "radiusY": 68, "startAngle": 300, "sweepAngle": 60, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "arc", "x": 735, "y": 440, "radiusX": 68, "radiusY": 68, "startAngle": 180, "sweepAngle": 60, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "text", "x": 136, "y": 475, "text": "A", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 740, "y": 475, "text": "B", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 252, "y": 195, "text": "D", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 625, "y": 195, "text": "C", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 430, "y": 185, "text": "6", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 185, "y": 315, "text": "4", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 205, "y": 410, "text": "60°", "stroke": "danger", "fontSize": 22 },
+        { "type": "text", "x": 642, "y": 410, "text": "60°", "stroke": "danger", "fontSize": 22 }
+      ]
+    },
+    {
+      "id": "exam-mm23-p0p-z29",
+      "sourceId": "cke-2023-correction-basic",
+      "sourcePage": 23,
+      "alternativeText": "Graniastosłup prawidłowy sześciokątny o krawędziach długości 6. Widoczne są dwie równoległe podstawy w kształcie sześciokątów oraz krawędzie boczne.",
+      "width": 900,
+      "height": 640,
+      "primitives": [
+        { "type": "polygon", "points": [220, 290, 300, 220, 420, 220, 500, 290, 420, 360, 300, 360], "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "polygon", "points": [350, 440, 430, 370, 550, 370, 630, 440, 550, 510, 430, 510], "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 220, "y": 290, "x2": 350, "y2": 440, "stroke": "primary", "strokeThickness": 4 },
+        { "type": "line", "x": 300, "y": 220, "x2": 430, "y2": 370, "stroke": "primary", "strokeThickness": 4 },
+        { "type": "line", "x": 420, "y": 220, "x2": 550, "y2": 370, "stroke": "primary", "strokeThickness": 4 },
+        { "type": "line", "x": 500, "y": 290, "x2": 630, "y2": 440, "stroke": "primary", "strokeThickness": 4 },
+        { "type": "line", "x": 420, "y": 360, "x2": 550, "y2": 510, "stroke": "muted", "strokeThickness": 3, "dashed": true },
+        { "type": "line", "x": 300, "y": 360, "x2": 430, "y2": 510, "stroke": "muted", "strokeThickness": 3, "dashed": true },
+        { "type": "text", "x": 340, "y": 205, "text": "6", "stroke": "danger", "fontSize": 26 },
+        { "type": "text", "x": 505, "y": 340, "text": "6", "stroke": "danger", "fontSize": 26 },
+        { "type": "text", "x": 398, "y": 565, "text": "graniastosłup prawidłowy sześciokątny", "stroke": "primary", "fontSize": 20 }
+      ]
+    },
+    {
+      "id": "exam-mm23-p0p-z32",
+      "sourceId": "cke-2023-correction-basic",
+      "sourcePage": 26,
+      "alternativeText": "Wykres słupkowy wynagrodzeń brutto 100 pracowników. Dla wartości 4800, 5100, 5500, 5900, 6400, 7500 i 8600 zł liczebności wynoszą odpowiednio 10, 36, 5, 25, 18, 4 i 2.",
+      "width": 1000,
+      "height": 680,
+      "primitives": [
+        { "type": "line", "x": 145, "y": 540, "x2": 905, "y2": 540, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 145, "y": 570, "x2": 145, "y2": 90, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 135, "y": 420, "x2": 160, "y2": 420, "stroke": "muted", "strokeThickness": 2 },
+        { "type": "line", "x": 135, "y": 300, "x2": 160, "y2": 300, "stroke": "muted", "strokeThickness": 2 },
+        { "type": "line", "x": 135, "y": 180, "x2": 160, "y2": 180, "stroke": "muted", "strokeThickness": 2 },
+        { "type": "polygon", "points": [190, 540, 190, 420, 245, 420, 245, 540], "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "polygon", "points": [285, 540, 285, 108, 340, 108, 340, 540], "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "polygon", "points": [380, 540, 380, 480, 435, 480, 435, 540], "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "polygon", "points": [475, 540, 475, 240, 530, 240, 530, 540], "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "polygon", "points": [570, 540, 570, 324, 625, 324, 625, 540], "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "polygon", "points": [665, 540, 665, 492, 720, 492, 720, 540], "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "polygon", "points": [760, 540, 760, 516, 815, 516, 815, 540], "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "text", "x": 198, "y": 400, "text": "10", "stroke": "primary", "fontSize": 21 },
+        { "type": "text", "x": 292, "y": 88, "text": "36", "stroke": "primary", "fontSize": 21 },
+        { "type": "text", "x": 388, "y": 460, "text": "5", "stroke": "primary", "fontSize": 21 },
+        { "type": "text", "x": 483, "y": 220, "text": "25", "stroke": "primary", "fontSize": 21 },
+        { "type": "text", "x": 578, "y": 304, "text": "18", "stroke": "primary", "fontSize": 21 },
+        { "type": "text", "x": 675, "y": 472, "text": "4", "stroke": "primary", "fontSize": 21 },
+        { "type": "text", "x": 770, "y": 496, "text": "2", "stroke": "primary", "fontSize": 21 },
+        { "type": "text", "x": 183, "y": 580, "text": "4800", "stroke": "muted", "fontSize": 18 },
+        { "type": "text", "x": 278, "y": 580, "text": "5100", "stroke": "muted", "fontSize": 18 },
+        { "type": "text", "x": 373, "y": 580, "text": "5500", "stroke": "muted", "fontSize": 18 },
+        { "type": "text", "x": 468, "y": 580, "text": "5900", "stroke": "muted", "fontSize": 18 },
+        { "type": "text", "x": 563, "y": 580, "text": "6400", "stroke": "muted", "fontSize": 18 },
+        { "type": "text", "x": 658, "y": 580, "text": "7500", "stroke": "muted", "fontSize": 18 },
+        { "type": "text", "x": 753, "y": 580, "text": "8600", "stroke": "muted", "fontSize": 18 },
+        { "type": "text", "x": 540, "y": 640, "text": "wynagrodzenie brutto w zł", "stroke": "primary", "fontSize": 22 },
+        { "type": "text", "x": 155, "y": 80, "text": "liczba pracowników", "stroke": "primary", "fontSize": 22 }
+      ]
     }
   ]
 }

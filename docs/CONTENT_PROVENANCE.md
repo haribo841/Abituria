@@ -58,7 +58,7 @@ Nie wolno usuwać parametru bramy, ręcznie zmieniać `releaseEligible` ani wył
 
 ## Aktualny stan
 
-`releaseEligible` ma wartość `true`. Rozszerzenia [deklaracji praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 3, 5 i 10 sierpnia 2026 r. obejmują matury CKE 2024, 2025 i 2026, zasady oceniania, transkrypcję 97 przykładów z informatorów CKE oraz trzydzieści jeden zatwierdzonych autorskich implementacji wektorowych Avalonia. Grupy `cke-formula-2023-guide-examples`, `cke-2024-main-basic-exam` oraz `cke-2024-main-extended-exam` mają status `approved` wyłącznie w zakresie zadeklarowanej redystrybucji jako części Abiturii. Zwykła walidacja kompletności i brama `-RequireReleaseEligible` muszą przechodzić przed publicznym wydaniem.
+`releaseEligible` ma obecnie wartość `false`. Rozszerzenia [deklaracji praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 3, 5, 10 i 12 sierpnia 2026 r. nadal obejmują zatwierdzone arkusze i materiały CKE, ale nowa transkrypcja matury podstawowej 2023 oraz osiem jej figur wektorowych nie są objęte indywidualnym rozszerzeniem. Grupy `cke-2023-main-basic-exam` i `runtime-vector-diagrams` mają zatem status `blocked`. Zwykła walidacja kompletności musi przechodzić podczas pracy nad repozytorium, natomiast brama `-RequireReleaseEligible` celowo nie przejdzie do czasu uzupełnienia praw do tych zasobów.
 
 ### Materiały CKE
 
@@ -76,6 +76,10 @@ Grupa `cke-2024-main-basic-exam` obejmuje `Content/exam-2024-main-basic.json`. T
 
 Grupa `cke-2024-main-extended-exam` obejmuje `Content/exam-2024-main-extended.json`. Transkrypcja korzysta z arkusza `MMAP-R0-100-A-2405` i zasad oceniania `MMAP-R0-100-2405`; oba adresy, sumy SHA-256 i data weryfikacji znajdują się w [macierzy matury 2024 PR](MATURA_2024_EXTENDED_COVERAGE.md). Grupa ma status `approved` na podstawie rozszerzenia deklaracji właściciela z 10 sierpnia 2026 r., wyłącznie dla redystrybucji jako części Abiturii.
 
+Grupa `cke-2023-main-extended-exam` obejmuje `Content/exam-2023-main-extended.json`. Transkrypcja korzysta z arkusza `MMAP-R0-100-2305` i zasad oceniania `MMAP-R0-100-2305`; oba adresy, sumy SHA-256 i data weryfikacji znajdują się w [macierzy matury 2023 PR](MATURA_2023_EXTENDED_COVERAGE.md). Grupa ma status `approved` na podstawie rozszerzenia deklaracji właściciela z 12 sierpnia 2026 r., wyłącznie dla redystrybucji jako części Abiturii.
+
+Grupa `cke-2023-main-basic-exam` obejmuje `Content/exam-2023-main-basic.json`. Transkrypcja korzysta z arkusza `MMAP-P0-100-2305` i zasad oceniania `MMAP-P0-100-2305`; oba adresy, sumy SHA-256 i data weryfikacji znajdują się w [macierzy matury 2023 PP](MATURA_2023_BASIC_COVERAGE.md). Grupa ma status `blocked`, ponieważ deklaracja właściciela nie wskazuje jeszcze tego arkusza ani zasad oceniania.
+
 Grupa `cke-formula-2023-transcription` obejmuje `Content/formulas.json`. Dokument źródłowy CKE jest wskazany dokładnym adresem i sumą SHA-256 w katalogu treści oraz w [macierzy pokrycia tablic](FORMULA_2023_COVERAGE.md). Transkrypcję i weryfikację wykonał Adam Kubiś, natomiast autorem dokumentu źródłowego pozostaje Centralna Komisja Egzaminacyjna. Status `approved` wynika z rozszerzenia deklaracji z 27 lipca 2026 r.
 
 ### Kurs matematyki Formuły 2023
@@ -86,7 +90,7 @@ Warstwa autorska pozostaje niezmieniona: 238 przykładów, 357 ćwiczeń, podpow
 
 ### Diagramy i archiwum historyczne
 
-Grupa `runtime-vector-diagrams` obejmuje `Content/diagrams.json` z dokładnie 88 definicjami wektorowymi: 36 dla tablic wzorów, 9 dla arkusza poprawkowego 2021, 11 dla matury podstawowej 2024, 1 dla matury rozszerzonej 2024, 9 dla matury podstawowej 2025, 7 dla matury podstawowej 2026, 3 dla matury rozszerzonej 2026 i 12 dla kursu. Każda definicja ma stabilny identyfikator, źródło i opis alternatywny, a trzydzieści jeden figur maturalnych ma również stronę arkusza. `DiagramView` materializuje je wyłącznie jako `Line`, `Polyline`, `Polygon`, `Ellipse`, łuki i `TextBlock` Avalonia, bez ładowania rastrów, `Image` lub `Bitmap`. Implementacje figur MMAP-P0-100-A-2405 i MMAP-R0-100-A-2405 są autorskim kodem wektorowym Adama Kubisia, ale nie znoszą blokady publicznej redystrybucji źródłowych transkrypcji CKE.
+Grupa `runtime-vector-diagrams` obejmuje `Content/diagrams.json` z dokładnie 100 definicjami wektorowymi: 36 dla tablic wzorów, 9 dla arkusza poprawkowego 2021, 8 dla matury podstawowej 2023, 4 dla matury rozszerzonej 2023, 11 dla matury podstawowej 2024, 1 dla matury rozszerzonej 2024, 9 dla matury podstawowej 2025, 7 dla matury podstawowej 2026, 3 dla matury rozszerzonej 2026 i 12 dla kursu. Każda definicja ma stabilny identyfikator, źródło i opis alternatywny, a czterdzieści trzy figury maturalne mają również stronę arkusza. `DiagramView` materializuje je wyłącznie jako `Line`, `Polyline`, `Polygon`, `Ellipse`, łuki i `TextBlock` Avalonia, bez ładowania rastrów, `Image` lub `Bitmap`. Implementacje figur są autorskim kodem wektorowym Adama Kubisia, ale osiem nowych figur MMAP-P0-100-2305 pozostaje poza rozszerzeniem deklaracji z 12 sierpnia 2026 r., dlatego cała grupa runtime ma status `blocked`.
 
 Siedemdziesiąt pięć historycznych obrazów znajduje się w `docs/legacy/originals/images/`. Pliki zachowano bajt w bajt, udokumentowano mapowaniem `PATH-MAPPING.csv` i sumami `SHA256SUMS`, ale nie są paczkowane ani publikowane przez DocFX. Jedynym statycznym wyjątkiem jest `img/icon.ico` w grupie `application-icon`, używany wyłącznie jako `ApplicationIcon`.
 
@@ -97,10 +101,10 @@ Manifest oznacza jako `approved`:
 - aktualne treści techniczne i inwentarz autorstwa Adama Kubisia na licencji MIT;
 - autorskie przykłady, ćwiczenia, rozwiązania i diagramy kursu Formuły 2023 wraz z przypisanym urzędowym źródłem dokładnego brzmienia wymagań;
 - zmigrowane treści matematyczne, dla których dowodem jest zachowana historyczna licencja MIT i inwentarz migracji;
-- arkusze CKE 2021, 2025 i 2026, transkrypcję tablic CKE dla Formuły 2023, katalog wektorów Avalonia oraz ikonę aplikacji objęte deklaracją praw lub upoważnienia do publicznej redystrybucji wyłącznie jako części Abiturii;
+- zatwierdzone arkusze CKE 2021, 2023 PR, 2024, 2025 i 2026 oraz transkrypcję tablic CKE dla Formuły 2023, objęte deklaracją praw lub upoważnienia do publicznej redystrybucji wyłącznie jako części Abiturii;
 - font Mulish na licencji SIL Open Font License 1.1, potwierdzonej przez `fonts/OFL.txt` i `fonts/README.txt`.
 
-Manifest nie zawiera obecnie grup `blocked`. Grupom `cke-formula-2023-guide-examples`, `cke-2024-main-basic-exam` i `cke-2024-main-extended-exam` przyznano status `approved` na podstawie rozszerzenia deklaracji z 10 sierpnia 2026 r. Każda zmiana źródeł, zakresu redystrybucji lub sposobu renderowania wymaga ponownej oceny, uruchomienia zwykłego walidatora i osobnej bramy `-RequireReleaseEligible`.
+Manifest zawiera obecnie dwie grupy `blocked`: `cke-2023-main-basic-exam` i `runtime-vector-diagrams`. Pierwsza wymaga oświadczenia obejmującego arkusz MMAP-P0-100-2305 oraz jego zasady oceniania. Druga wymaga rozszerzenia zakresu deklaracji z 92 do 100 definicji, w tym o osiem figur pochodnych z tego arkusza. Każda zmiana źródeł, zakresu redystrybucji lub sposobu renderowania wymaga ponownej oceny, uruchomienia zwykłego walidatora i osobnej bramy `-RequireReleaseEligible`.
 
 Status zatwierdzony należy ponownie ocenić po każdej zmianie źródła, zakresu plików albo sposobu pakowania.
 

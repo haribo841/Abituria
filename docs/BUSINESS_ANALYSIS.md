@@ -70,7 +70,7 @@ Użytkownik otrzymuje bezpłatny dostęp do lokalnej aplikacji, połączenie mat
 
 ### 4.3. Stan dystrybucji
 
-Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, a publiczne prerelease [`v0.9.2`](https://github.com/haribo841/Abituria/releases/tag/v0.9.2) stanowi kanał dystrybucji zatwierdzonej bety. Deklaracje z 3, 5 i 10 sierpnia 2026 r. obejmują arkusze 2024, 2025 i 2026 na obu poziomach, zasady oceniania, transkrypcję 97 przykładów z informatorów CKE oraz trzydzieści jeden zatwierdzonych autorskich implementacji wektorowych Avalonia. Bieżąca brama `releaseEligible` w `Content/provenance.json` ma wartość `true`; szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), macierze matur 2024, 2025 i 2026 oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
+Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, a publiczne prerelease [`v0.9.2`](https://github.com/haribo841/Abituria/releases/tag/v0.9.2) stanowi kanał dystrybucji zatwierdzonej bety. Deklaracje z 3, 5, 10 i 12 sierpnia 2026 r. obejmują maturę rozszerzoną 2023, arkusze 2024, 2025 i 2026 na obu poziomach, zasady oceniania, transkrypcję 97 przykładów z informatorów CKE oraz trzydzieści pięć zatwierdzonych autorskich implementacji wektorowych Avalonia. Bieżący worktree ma jednak `releaseEligible=false`: matura podstawowa 2023 i osiem jej figur oczekują na osobiste rozszerzenie deklaracji. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), macierze matur 2023, 2024, 2025 i 2026 oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
 
 Koszty bieżącego wariantu obejmują przede wszystkim czas przygotowania treści, implementacji, testów, dokumentacji i utrzymania repozytorium. Aplikacja działa lokalnie, dlatego nie wymaga serwera aplikacyjnego ani przechowywania danych użytkowników przez zewnętrznego operatora.
 
@@ -83,8 +83,8 @@ Zakres bieżącej implementacji jest zdefiniowany normatywnie w [REQUIREMENTS.md
 - profile gościa i lokalne konta z zapisem postępu w SQLite;
 - tablice matematyczne oraz pełny kurs Formuły 2023 obejmujący 4 grupy, 13 obszarów, 119 wymagań, 238 przykładów i 357 ćwiczeń;
 - sprawdzanie odpowiedzi zamkniętych, ujawnianie odpowiedzi otwartych oraz podpowiedzi;
-- matury główne 2024, 2025 i 2026 na poziomie podstawowym i rozszerzonym oraz zachowany arkusz poprawkowy 2021 - razem 7 arkuszy i 182 jednostki postępu;
-- odpowiedzi złożone dla tabel P/F i zadań wielopolowych oraz agregacja siedmiu arkuszy według 17 tematów;
+- matury główne 2023 na poziomie podstawowym i rozszerzonym, matury główne 2024, 2025 i 2026 na poziomie podstawowym i rozszerzonym oraz zachowany arkusz poprawkowy 2021 - razem 9 arkuszy i 230 jednostek postępu;
+- odpowiedzi złożone dla tabel P/F i zadań wielopolowych oraz agregacja dziewięciu arkuszy według 17 tematów;
 - kalkulator funkcji kwadratowej;
 - kalkulator ogólny z parserem wyrażeń, nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią i powtarzanym `=`;
 - losowanie zadań z całego arkusza albo wybranego tematu;
@@ -116,7 +116,7 @@ Rzeczywiste daty najwcześniejszych weryfikowalnych stanów technicznych I-IV bi
 | Tydzień 3 | M2 - architektura i nawigacja | autor implementacji | zrealizowane: AvaloniaUI, jedno `MainWindow`, `AppViewModel`, testy architektury |
 | Tydzień 4-5 | M3a - ekran startowy i nawigacja | autor implementacji | zrealizowane: shell, widoki i routing |
 | Tydzień 6-7 | M3b - kalkulatory | autor implementacji | zrealizowane: kalkulator ogólny i funkcji kwadratowej z regresjami |
-| Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | zrealizowane: pełny kurs `119/238/357`, siedem aktywnych arkuszy ze 182 jednostkami postępu, tablice i oddzielny postęp |
+| Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | zrealizowane: pełny kurs `119/238/357`, dziewięć aktywnych arkuszy z 230 jednostkami postępu, tablice i oddzielny postęp |
 | Tydzień 12 | M5a - testy i regresje | autor implementacji | zrealizowane ciągle: testy jednostkowe, integracyjne, UI i CI |
 | Tydzień 13 | M5b - dokumentacja i pakowanie | autor implementacji | technicznie zrealizowane: dokumentacja, workflow, paczki portable i smoke test |
 | Tydzień 14 | M6 - publiczne prerelease | autor implementacji, właściciel praw | osiągnięte: zatwierdzona proweniencja, tag, natywne workflow i publiczny GitHub Release `v0.9.2` |
@@ -141,7 +141,7 @@ Kryteria dzielą się na odbiór produktu i odbiór publicznego wydania:
 | Publiczne wydanie | istnieją tag, prerelease, działająca strona Pages i kontrola po publikacji | `RELEASE_PROCESS.md` |
 | Historyczna ocena projektu | siedem obszarów oceny i dziesięć warunków akceptacji jest odwzorowanych bez mieszania wersji WPF z migracją AvaloniaUI | `EVALUATION_PROTOCOL.md` |
 
-Spełnienie kryteriów technicznych nie zastępuje kryterium prawa do publicznej dystrybucji. Aktualny manifest zawiera grupy `cke-formula-2023-guide-examples`, `cke-2024-main-basic-exam` i `cke-2024-main-extended-exam` o statusie `approved` i ma `releaseEligible=true` na podstawie rozszerzenia deklaracji właściciela z 10 sierpnia 2026 r. Publiczne wydanie nadal wymaga zaliczenia twardej bramy proweniencji, pozostałych bramek i zweryfikowania rzeczywistego GitHub Release.
+Spełnienie kryteriów technicznych nie zastępuje kryterium prawa do publicznej dystrybucji. Aktualny manifest ma `releaseEligible=false`, ponieważ grupa `cke-2023-main-basic-exam` i rozszerzony katalog `runtime-vector-diagrams` są `blocked`. Zatwierdzone grupy pozostają ważne w swoim zakresie, lecz publiczne wydanie wymaga indywidualnego rozszerzenia deklaracji oraz zaliczenia twardej bramy proweniencji, pozostałych bramek i zweryfikowania rzeczywistego GitHub Release.
 
 Historyczny projekt został zaakceptowany i uzyskał wynik bardzo dobry. Zakres oraz ograniczenia tego dowodu opisuje `EVALUATION_PROTOCOL.md`. Wynik z 2022 r. nie jest oceną bieżącej migracji i nie zastępuje jej przyszłego procesu wydawniczego.
 

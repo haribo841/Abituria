@@ -12,7 +12,7 @@ Górna nawigacja po zalogowaniu zawiera:
 
 - **Start** - skróty do głównych funkcji;
 - **Wzory** - tablice matematyczne;
-- **Matura** - wybór matur głównych 2024, 2025 i 2026 na poziomie podstawowym lub rozszerzonym, arkusza poprawkowego 2021 oraz archiwalnych placeholderów;
+- **Matura** - wybór matury głównej 2023 na poziomie rozszerzonym, matur głównych 2024, 2025 i 2026 na poziomie podstawowym lub rozszerzonym, arkusza poprawkowego 2021 oraz archiwalnych placeholderów;
 - **Zadania** - zadania z pięciu aktywnych arkuszy pogrupowane według 17 tematów;
 - **Działy** - materiały edukacyjne;
 - **Kalkulator** - funkcja kwadratowa i kalkulator ogólny;
@@ -108,7 +108,7 @@ Strona „Matura” pokazuje kolejno matury 2026 PP i PR, matury 2025 PP i PR, m
 
 Strona „Zadania” agreguje siedem aktywnych arkuszy według 17 tematów. Każdy wpis na liście pokazuje źródłowy arkusz. Losowanie tematyczne nie wychodzi poza wybrany temat, ale może zwrócić zadanie z 2026, 2025, 2024 albo 2021. Strzałki poprzedniego i następnego zadania pozostają w puli wynikającej z drogi wejścia, a przycisk powrotu prowadzi odpowiednio do „Matury” lub „Zadań”.
 
-Lista oznacza ukończone zadania znakiem wyboru. Arkusze mają odpowiednio: 2026 PP `33/37/50`, 2026 PR `12/13/50`, 2025 PP `31/35/50`, 2025 PR `12/13/50`, 2024 PP `31/35/46`, 2024 PR `13/14/50` i poprawkowa 2021 `35/35/45`. Szczegóły źródeł i liczników zawierają osobne macierze pokrycia matur 2024, 2025 i 2026.
+Lista oznacza ukończone zadania znakiem wyboru. Arkusze mają odpowiednio: 2026 PP `33/37/50`, 2026 PR `12/13/50`, 2025 PP `31/35/50`, 2025 PR `12/13/50`, 2024 PP `31/35/46`, 2024 PR `13/14/50`, 2023 PR `13/14/50` i poprawkowa 2021 `35/35/45`. Szczegóły źródeł i liczników zawierają osobne macierze pokrycia matur 2023, 2024, 2025 i 2026.
 
 ### Tryby odpowiedzi
 

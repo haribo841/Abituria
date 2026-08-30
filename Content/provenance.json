@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "releaseEligible": true,
+  "releaseEligible": false,
   "policy": {
     "approvedStatus": "approved",
     "blockingStatus": "blocked",
@@ -172,14 +172,62 @@
       ]
     },
     {
+      "id": "cke-2023-main-basic-exam",
+      "paths": [
+        "Content/exam-2023-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMAP-P0-100-2305, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2023/Matematyka/poziom_podstawowy/MMAP-P0-100-2305.pdf, SHA-256 FC5BD519FBF0D6D0D66993167121ABC01ADEC3466922E1678E42DFF565DA001C; zasady oceniania CKE MMAP-P0-100-2305, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2023/Matematyka/poziom_podstawowy/MMAP-P0-100-2305-zasady.pdf, SHA-256 811765BD8A860BAC1BC1745646FAC898EBF62464964EAA2E58FC70EDB2913BF9; weryfikacja 2026-08-30",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji tej transkrypcji",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji arkusza i zasad oceniania MMAP-P0-100-2305.",
+      "evidence": [
+        "docs/MATURA_2023_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2023-correction-basic-exam",
+      "paths": [
+        "Content/exam-2023-correction-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMAP-P0-100-2308 i zasady oceniania o tym samym kodzie, pobrane z publicznego archiwum arkusze.pl; SHA-256 arkusza 3085CCB0001B8A8576ABE1D5A292D13CB6D05045D5811BFE6247CDB955489216; SHA-256 zasad 4F47D38F9A29295647F88E8F6FBB607C80379E0979DB9AD365F11887D919D228; weryfikacja 2026-08-30",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji tej transkrypcji oraz brak bezpośredniego archiwalnego adresu CKE",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji arkusza i zasad oceniania MMAP-P0-100-2308.",
+      "evidence": [
+        "docs/MATURA_2023_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2023-main-extended-exam",
+      "paths": [
+        "Content/exam-2023-main-extended.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMAP-R0-100-2305, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2023/Matematyka/poziom_rozszerzony/MMAP-R0-100-2305.pdf, SHA-256 24EC13FEA77323841A8538E85B816C7EE36199E64F5F756E30340489864EC207; zasady oceniania CKE MMAP-R0-100-2305, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2023/Matematyka/poziom_rozszerzony/MMAP-R0-100-2305-zasady.pdf, SHA-256 B8FECD4D23811033E0DFF6C532A405F04ECE0CCC469A6D60412E353F1BBDBD2B; weryfikacja 2026-08-12",
+      "license": "Deklaracja uprawnienia do publicznej redystrybucji w ramach Abiturii rozszerzona 2026-08-12",
+      "distributionStatus": "approved",
+      "evidence": [
+        "docs/ASSET_RIGHTS_DECLARATION.md",
+        "docs/MATURA_2023_EXTENDED_COVERAGE.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
       "id": "runtime-vector-diagrams",
       "paths": [
         "Content/diagrams.json"
       ],
       "author": "Adam Kubiś - implementacje wektorowe Avalonia i nowe definicje kursu; Centralna Komisja Egzaminacyjna - źródłowa treść tablic i arkuszy; historyczni autorzy projektu Ich Troje - źródła zachowanych diagramów",
-      "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym jedenaście figur dla arkusza CKE MMAP-P0-100-A-2405, dziewięć figur dla MMAP-P0-100-A-2505, siedem figur dla MMAP-P0-100-A-2605, trzy figury dla MMAP-R0-100-A-2605 i jedna autorska implementacja wektorowa figury z MMAP-R0-100-A-2405; bez aktywnych rastrów, Image ani Bitmap",
-      "license": "MIT dla implementacji wektorowych i definicji autorskich lub odziedziczonych; deklaracja redystrybucji w ramach Abiturii rozszerzona 2026-08-10",
-      "distributionStatus": "approved",
+      "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym osiem figur dla arkusza CKE MMAP-P0-100-2305, cztery figury dla MMAP-R0-100-2305, jedenaście figur dla MMAP-P0-100-A-2405, jedna figura dla MMAP-R0-100-A-2405, dziewięć figur dla MMAP-P0-100-A-2505, siedem figur dla MMAP-P0-100-A-2605 i trzy figury dla MMAP-R0-100-A-2605; bez aktywnych rastrów, Image ani Bitmap",
+      "license": "MIT dla implementacji wektorowych i definicji autorskich lub odziedziczonych; deklaracja redystrybucji w ramach Abiturii rozszerzona 2026-08-12 dla 92 wcześniejszych definicji, bez rozszerzenia dla ośmiu nowych figur MMAP-P0-100-2305",
+      "distributionStatus": "blocked",
+      "blockedReason": "Katalog rozszerzono o osiem nowych diagramów pochodnych z MMAP-P0-100-2305, które nie są objęte dotychczasową deklaracją do 92 definicji.",
       "evidence": [
         "docs/ASSET_RIGHTS_DECLARATION.md",
         "docs/MATURA_2026_COVERAGE.md",
@@ -188,6 +236,8 @@
         "docs/MATURA_2025_EXTENDED_COVERAGE.md",
         "docs/MATURA_2024_BASIC_COVERAGE.md",
         "docs/MATURA_2024_EXTENDED_COVERAGE.md",
+        "docs/MATURA_2023_BASIC_COVERAGE.md",
+        "docs/MATURA_2023_EXTENDED_COVERAGE.md",
         "docs/CONTENT_PROVENANCE.md",
         "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",
         "docs/MIGRATION_INVENTORY.md",

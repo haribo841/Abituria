@@ -4,7 +4,7 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 
 ## Status publikacji
 
-- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=true`. Rozszerzenie `ASSET_RIGHTS_DECLARATION.md` z 10 sierpnia 2026 r. zatwierdza grupy `cke-formula-2023-guide-examples`, `cke-2024-main-basic-exam` i `cke-2024-main-extended-exam` wyłącznie jako integralną część Abiturii. Każda przyszła zmiana źródeł, zakresu transkrypcji lub sposobu dystrybucji wymaga ponownej oceny przed wydaniem.
+- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=false`. Nowe grupy `cke-2023-main-basic-exam` i `runtime-vector-diagrams` są `blocked`, ponieważ deklaracja nie obejmuje jeszcze arkusza MMAP-P0-100-2305, jego zasad ani ośmiu nowych figur. Zatwierdzone grupy zachowują swój status, lecz każde publiczne wydanie wymaga ponownej oceny.
 - Rzeczywiste autorstwo i źródła są przypisane w `Content/provenance.json`. Przed tagiem trzeba ponownie przejść bramę `-RequireReleaseEligible` na dokładnym commicie wydania.
 - Lokalnie zbudowany artefakt nie jest oficjalnym wydaniem, nawet jeśli przechodzi testy techniczne.
 
@@ -33,7 +33,7 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 
 - Kurs matematyki obejmuje Formułę 2023 na poziomie podstawowym i rozszerzonym; nie zawiera osobnego kursu Formuły 2015.
 - Warstwa 238 przykładów i 357 ćwiczeń kursowych pozostaje autorska. Obok niej działa osobny katalog 97 oficjalnych przykładów CKE - 66 podstawowych i 31 rozszerzonych - z jawnym źródłem, stronami, wymaganiami, zasadami oceniania, rozwiązaniami i opisami figur.
-- Dostępne są matury główne 2024, 2025 i 2026 na poziomie podstawowym i rozszerzonym oraz arkusz poprawkowy 2021. Arkusze 2019, 2020 i zwykła matura podstawowa 2021 pozostają w przygotowaniu.
+- Dostępna jest matura główna 2023 na poziomie rozszerzonym, matury główne 2024, 2025 i 2026 na poziomie podstawowym i rozszerzonym oraz arkusz poprawkowy 2021. Arkusze 2019, 2020 i zwykła matura podstawowa 2021 pozostają w przygotowaniu.
 - Generator wykresów i kalkulator funkcji trygonometrycznych pozostają placeholderami.
 - Renderer CSharpMath obsługuje używany podzbiór zapisu matematycznego, ale nie jest pełnym silnikiem TeX. Treści muszą przechodzić walidację delimitera i regresje renderowania.
 - Materiały edukacyjne nie zastępują nauczyciela, oficjalnego informatora egzaminacyjnego ani aktualnych komunikatów CKE.

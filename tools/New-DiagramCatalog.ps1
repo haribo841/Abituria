@@ -1010,6 +1010,10 @@ $catalog = [ordered]@{ schemaVersion = 1; diagrams = $definitions }
 $json = $catalog | ConvertTo-Json -Depth 100
 $normalized = $json.Replace("`r`n", "`n") + "`n"
 $target = [IO.Path]::GetFullPath($OutputPath)
+$activeCatalog = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\Content\diagrams.json'))
+if ([string]::Equals($target, $activeCatalog, [StringComparison]::OrdinalIgnoreCase)) {
+    throw "Generator obejmuje tylko 76 definicji bazowych i nie może nadpisać aktywnego katalogu zawierającego późniejsze diagramy. Podaj jawną ścieżkę tymczasową albo najpierw uzupełnij generator."
+}
 [IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($target)) | Out-Null
 [IO.File]::WriteAllText($target, $normalized, [Text.UTF8Encoding]::new($false))
-Write-Host "Wygenerowano 76 diagramów wektorowych: $target"
+Write-Host "Wygenerowano 76 bazowych diagramów wektorowych: $target"

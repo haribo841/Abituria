@@ -5,7 +5,7 @@ Abituria to działająca offline aplikacja desktopowa wspierająca naukę matema
 Bieżące publiczne wydanie beta: [`0.9.2`](https://github.com/haribo841/Abituria/releases/tag/v0.9.2).
 
 > [!IMPORTANT]
-> Bieżący inwentarz pochodzenia ma `releaseEligible=true`. Osobiste rozszerzenie deklaracji z 10 sierpnia 2026 r. obejmuje transkrypcje 97 przykładów z informatorów CKE, arkusze CKE 2024 i ich wskazane implementacje wektorowe. Każde wydanie nadal wymaga przejścia pełnego workflow i checklisty wydawniczej.
+> Bieżący worktree ma `releaseEligible=false`. Dodana transkrypcja matury maj 2023 PP i osiem nowych diagramów pozostają zablokowane do czasu osobistego rozszerzenia deklaracji praw. Opublikowane `0.9.2` zachowuje wcześniejszy, zatwierdzony zakres i nie obejmuje tych lokalnych zmian.
 
 ## Pobieranie
 
@@ -30,8 +30,8 @@ Artefakty są samowystarczalne i nie wymagają instalacji środowiska .NET. Wind
 - 18 tablic matematycznych zgodnych zakresem z oficjalnym dokumentem CKE dla Formuły 2023;
 - pełny kurs Formuły 2023: 4 grupy, 13 obszarów, 119 wymagań, 238 rozwiązanych przykładów i 357 ćwiczeń;
 - filtr poziomu podstawowego i rozszerzonego oraz tryby odpowiedzi: wybór, wynik liczbowy, odpowiedź złożona i ujawnienie rozwiązania;
-- matury główne 2024, 2025 i 2026 na poziomie podstawowym i rozszerzonym oraz zachowane 35 zadań matury poprawkowej 2021 - łącznie 7 arkuszy i 182 jednostki postępu;
-- wybór arkusza, losowanie w obrębie wybranego arkusza i agregacja siedmiu arkuszy według 17 tematów;
+- maturę główną 2023 na poziomie podstawowym i rozszerzonym, matury główne 2024, 2025 i 2026 na poziomie podstawowym i rozszerzonym oraz zachowane 35 zadań matury poprawkowej 2021 - łącznie 9 arkuszy i 230 jednostek postępu;
+- wybór arkusza, losowanie w obrębie wybranego arkusza i agregacja dziewięciu arkuszy według 17 tematów;
 - sprawdzanie odpowiedzi A-D, podpowiedzi, ujawnianie odpowiedzi i brudnopis przechowywany osobno dla profilu i zadania do zamknięcia aplikacji;
 - kalkulator ogólny z nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią, powtarzaniem `=` i automatycznym kopiowaniem wyniku;
 - pojedynczy kalkulator Picture in Picture w oknie nad Abiturią, oknie zawsze na wierzchu albo panelu aplikacji;
@@ -113,6 +113,9 @@ Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalneg
 | [Przekazanie](docs/DELIVERY_PROTOCOL.md) | publiczne wydanie albo ograniczona, prawnie dopuszczalna forma przekazania |
 | [Zależności](docs/DEPENDENCIES.md) | dokładnie rozwiązane pakiety produkcyjne i testowe |
 | [Pochodzenie treści](docs/CONTENT_PROVENANCE.md) | zasady dopuszczania treści, fontów i obrazów do paczek oraz oświadczenie o prawach |
+| [Plan archiwum matur 2026-2020](docs/MATURA_ARCHIVE_PLAN.md) | stan arkuszy na `origin/main` i lokalnie, braki oraz etapy uzupełnienia Formuł 2023 i 2015 |
+| [Matura maj 2023 PP](docs/MATURA_2023_BASIC_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 31/34/46, diagramy i blokada proweniencji |
+| [Matura maj 2023 PR](docs/MATURA_2023_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 13/14/50, diagramy i status proweniencji |
 | [Matura maj 2025 PP](docs/MATURA_2025_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 31/35/50, diagramy i status proweniencji |
 | [Matura maj 2025 PR](docs/MATURA_2025_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 12/13/50 i status proweniencji |
 | [Matura maj 2026 PP](docs/MATURA_2026_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 33/37/50, diagramy i status proweniencji |
@@ -123,7 +126,7 @@ Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalneg
 | [Wsparcie](SUPPORT.md) | zgłaszanie błędów i wymagane dane diagnostyczne |
 | [Bezpieczeństwo](SECURITY.md) | prywatne zgłoszenia podatności i wspierane wersje |
 
-Kompletność kursu rozwijanego w ramach Issue #3, zachowanie treści historycznego Issue #35 oraz regresje opisują [macierz kursu](docs/MATH_COURSE_2023_COVERAGE.md) i [inwentarz migracji](docs/MIGRATION_INVENTORY.md). Zakres arkuszy 2025 i 2026 opisują osobne macierze poziomu podstawowego i rozszerzonego wymienione powyżej.
+Kompletność kursu rozwijanego w ramach Issue #3, zachowanie treści historycznego Issue #35 oraz regresje opisują [macierz kursu](docs/MATH_COURSE_2023_COVERAGE.md) i [inwentarz migracji](docs/MIGRATION_INVENTORY.md). Stan pełnego archiwum matur 2026-2020, w tym rozróżnienie Formuł 2023 i 2015, opisuje [plan archiwum](docs/MATURA_ARCHIVE_PLAN.md). Zakres arkuszy 2023, 2024, 2025 i 2026 opisują osobne macierze poziomu podstawowego lub rozszerzonego wymienione powyżej. Matura 2023 PP jest lokalnie kompletna, ale nie jest jeszcze dopuszczona do publicznego wydania.
 
 ## Autor i licencje
 
