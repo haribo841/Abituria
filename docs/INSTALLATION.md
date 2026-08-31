@@ -3,7 +3,7 @@
 Ta instrukcja dotyczy wersji `0.9.2`. Abituria jest publikowana jako samowystarczalna aplikacja portable. Nie wymaga osobnej instalacji .NET, ale nie zawiera natywnego instalatora ani automatycznej aktualizacji.
 
 > [!IMPORTANT]
-> Opublikowane paczki należy pobierać wyłącznie ze zweryfikowanego GitHub Release. Bieżący worktree ma `releaseEligible=false`, więc nie wolno z niego tworzyć publicznej paczki przed osobistym rozszerzeniem deklaracji praw do matury podstawowej 2023 i jej diagramów.
+> Opublikowane paczki należy pobierać wyłącznie ze zweryfikowanego GitHub Release. Bieżący worktree ma `releaseEligible=false`, więc nie wolno z niego tworzyć publicznej paczki przed osobistym rozszerzeniem deklaracji praw do matury głównej i poprawkowej 2023 PP oraz ich diagramów.
 
 ## Obsługiwane środowiska beta
 

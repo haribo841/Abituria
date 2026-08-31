@@ -9,13 +9,20 @@ Kod C# odpowiada za wczytanie, walidację i wyświetlenie treści. Długie opisy
 - `Content/exams.json` - indeks aktywnych arkuszy i 17 wspólnych tematów w schemacie 1,
 - `Content/exam-2025-main-basic.json` - matura główna 2025 PP w schemacie 4,
 - `Content/exam-2025-main-extended.json` - matura główna 2025 PR w schemacie 4,
+- `Content/exam-2025-correction-basic.json` - matura poprawkowa 2025 PP w schemacie 4,
 - `Content/exam-2024-main-basic.json` - matura główna 2024 PP w schemacie 4,
 - `Content/exam-2024-main-extended.json` - matura główna 2024 PR w schemacie 4,
+- `Content/exam-2024-correction-basic.json` - matura poprawkowa 2024 PP w schemacie 4,
+- `Content/exam-2023-main-basic.json` - matura główna 2023 PP w schemacie 4,
+- `Content/exam-2023-correction-basic.json` - matura poprawkowa 2023 PP w schemacie 4,
 - `Content/exam-2023-main-extended.json` - matura główna 2023 PR w schemacie 4,
+- `Content/exam-2022-main-basic.json` - matura główna 2022 PP w Formule 2015 w schemacie 4,
+- `Content/exam-2022-main-extended.json` - matura główna 2022 PR w Formule 2015 w schemacie 4,
+- `Content/exam-2022-correction-basic.json` - matura poprawkowa 2022 PP w Formule 2015 w schemacie 4,
 - `Content/exam-2026-main-basic.json` - matura główna 2026 PP w schemacie 4,
 - `Content/exam-2026-main-extended.json` - matura główna 2026 PR w schemacie 4,
 - `Content/exam-2021-correction.json` - zgodny wstecznie arkusz poprawkowy 2021 w schemacie 3,
-- `Content/diagrams.json` - 100 aktywnych definicji wektorowych w schemacie 1,
+- `Content/diagrams.json` - 139 aktywnych definicji wektorowych w schemacie 1,
 - `Content/placeholders.json` - treść ekranów zaplanowanych lub zastąpionych,
 - `Content/roadmap.json` - opis planu rozwoju,
 - `Content/ui-copy.json` - dłuższe statyczne objaśnienia interfejsu.
@@ -45,7 +52,7 @@ python tools/Import-CkeInformerExamples.py `
 
 Importer pobiera wyłącznie główne zestawy przykładów: zadania 1-66 na stronach PDF 12-138 informatora podstawowego oraz zadania 1-31 na stronach 12-106 informatora rozszerzonego. Nie dubluje późniejszych powtórzeń przeznaczonych dla zdających ze specjalnymi potrzebami. Każdy rekord zachowuje numer, punktację, strony, mapowanie wymagań, pełną transkrypcję oraz opisy informacji wizualnej. Po zmianie katalogu trzeba osobno ocenić jego status w `Content/provenance.json`; test techniczny nie zastępuje deklaracji praw do publicznej redystrybucji.
 
-Aktywny katalog 100 diagramów jest kanonicznym plikiem `Content/diagrams.json` i jest walidowany przez testy kontraktu. `tools/New-DiagramCatalog.ps1` odtwarza starszy bazowy zestaw 76 definicji. Skrypt odmawia nadpisania aktywnego katalogu, aby nie usunąć później dodanych diagramów. Pełna konsolidacja jego źródeł pozostaje osobnym zadaniem utrzymaniowym.
+Aktywny katalog 139 diagramów jest kanonicznym plikiem `Content/diagrams.json` i jest walidowany przez testy kontraktu. `tools/New-DiagramCatalog.ps1` odtwarza starszy bazowy zestaw 76 definicji. Skrypt odmawia nadpisania aktywnego katalogu, aby nie usunąć później dodanych diagramów. Pełna konsolidacja jego źródeł pozostaje osobnym zadaniem utrzymaniowym.
 
 Generator zapisuje wyłącznie dane prymitywów wektorowych i nie tworzy PNG. Historyczne rastry znajdują się poza aplikacją w `docs/legacy/originals/images/`; ich mapowanie i sumy odtwarza `tools/New-LegacyImageArchiveManifest.ps1`.
 
@@ -53,9 +60,9 @@ Generator zapisuje wyłącznie dane prymitywów wektorowych i nie tworzy PNG. Hi
 
 `Content/exams.json` określa kolejność, aktywność, ścieżkę pliku i wspólne tematy. Każdy aktywny arkusz musi mieć unikalny identyfikator, a każdy `LearningExercise` musi wskazywać ten sam `ExamId`, jeden z 17 tematów i globalnie unikalny identyfikator krótszy niż 80 znaków. Nie wolno zmieniać istniejących identyfikatorów `mp21-*`.
 
-Schemat 4 arkuszy 2023, 2024, 2025 i 2026 przechowuje formułę, poziom, czas, maksimum punktów, oficjalną liczbę zadań i liczbę jednostek postępu. `DisplayNumber` zachowuje oznaczenia takie jak `12.1` i `13.2`, `GroupId` łączy części jednego oficjalnego zadania, a `Points`, `Solution`, `ScoringCriteria` i `SolutionSourcePage` odtwarzają umowę oceniania. Tryb `compound` zawiera co najmniej dwie części `multipleChoice`, `numeric` lub `text`.
+Schemat 4 arkuszy 2022, 2023, 2024, 2025 i 2026 przechowuje formułę, poziom, czas, maksimum punktów, oficjalną liczbę zadań i liczbę jednostek postępu. `DisplayNumber` zachowuje oznaczenia takie jak `12.1` i `13.2`, `GroupId` łączy części jednego oficjalnego zadania, a `Points`, `Solution`, `ScoringCriteria` i `SolutionSourcePage` odtwarzają umowę oceniania. Tryb `compound` zawiera co najmniej dwie części `multipleChoice`, `numeric` lub `text`.
 
-Źródła i liczniki matur opisuje osiem macierzy: `MATURA_2023_BASIC_COVERAGE.md`, `MATURA_2023_EXTENDED_COVERAGE.md`, `MATURA_2024_BASIC_COVERAGE.md`, `MATURA_2024_EXTENDED_COVERAGE.md`, `MATURA_2025*_COVERAGE.md` oraz `MATURA_2026*_COVERAGE.md`. Przed dodaniem lub zmianą treści źródłowej trzeba zweryfikować pliki, adresy i SHA-256, zaktualizować testy kontraktu oraz ocenić `Content/provenance.json`. Brak osobistej podstawy redystrybucji oznacza status `blocked`; nie wolno zmieniać go na `approved` na podstawie samego przejścia testów technicznych.
+Źródła i liczniki matur opisuje czternaście macierzy: `MATURA_2022_BASIC_COVERAGE.md`, `MATURA_2022_EXTENDED_COVERAGE.md`, `MATURA_2022_CORRECTION_BASIC_COVERAGE.md`, `MATURA_2023_*_COVERAGE.md`, `MATURA_2024_*_COVERAGE.md`, `MATURA_2025*_COVERAGE.md` oraz `MATURA_2026*_COVERAGE.md`. Przed dodaniem lub zmianą treści źródłowej trzeba zweryfikować pliki, adresy i SHA-256, zaktualizować testy kontraktu oraz ocenić `Content/provenance.json`. Brak osobistej podstawy redystrybucji oznacza status `blocked`; nie wolno zmieniać go na `approved` na podstawie samego przejścia testów technicznych.
 
 Testy kontraktu walidują aktywny katalog `Content/diagrams.json`. Nie należy uruchamiać starszego generatora bez jawnej ścieżki wyjściowej ani traktować jego wyniku jako kompletnego katalogu aplikacji.
 

@@ -4,7 +4,7 @@
 
 Aktywny arkusz matura-maj-2024-rozszerzona odwzorowuje główny egzamin maturalny z matematyki na poziomie rozszerzonym z 15 maja 2024 r., kod MMAP-R0-100-A-2405. Okładka, instrukcja, puste strony, brudnopis i karta odpowiedzi nie są treścią aplikacji.
 
-Transkrypcja zachowuje 13 oficjalnie numerowanych zadań jako 14 osobno ocenianych jednostek postępu, 180 minut pracy i 50 punktów. Zadania 13.1 i 13.2 mają wspólny identyfikator grupy, lecz oddzielny postęp i punktację. Arkusz jest piątym aktywnym zestawem historycznym - po maturach 2026 i 2025, a przed zachowanym arkuszem poprawkowym 2021.
+Transkrypcja zachowuje 13 oficjalnie numerowanych zadań jako 14 osobno ocenianych jednostek postępu, 180 minut pracy i 50 punktów. Zadania 13.1 i 13.2 mają wspólny identyfikator grupy, lecz oddzielny postęp i punktację. Arkusz jest siódmym aktywnym zestawem historycznym - po maturach 2026 i 2025, a przed zachowanym arkuszem poprawkowym 2021.
 
 ## Przypięte źródła
 
@@ -42,7 +42,7 @@ Suma punktów w macierzy wynosi 50. Identyfikatory mają mniej niż 80 znaków i
 
 Content/exam-2024-main-extended.json zawiera tekst każdego zadania, wynik, pełne rozwiązanie, kryteria punktowania oraz strony obu dokumentów źródłowych. Tryby numeric, compound i revealOnly są istniejącymi mechanizmami katalogu matur i nie wymagają zmiany schematu bazy.
 
-Zadanie 9 odwołuje się do exam-mm24-r0-z09 w Content/diagrams.json. Jest to jedna autorska, deterministyczna definicja wektorowa Avalonia - kwadrat, punkt E, przekątne, odcinek AE oraz punkty F i G - z opisem alternatywnym i numerem strony 14. Aktualny katalog diagramów zawiera 100 definicji; nie dodano aktywnego rastra.
+Zadanie 9 odwołuje się do exam-mm24-r0-z09 w Content/diagrams.json. Jest to jedna autorska, deterministyczna definicja wektorowa Avalonia - kwadrat, punkt E, przekątne, odcinek AE oraz punkty F i G - z opisem alternatywnym i numerem strony 14. Aktualny katalog diagramów zawiera 139 definicji; nie dodano aktywnego rastra.
 
 ## Walidacja
 
@@ -54,10 +54,10 @@ Test Matura2024ExtendedContentTests sprawdza:
 - kompletność diagramu, opis alternatywny, źródło i renderowanie bez rastra;
 - zatwierdzoną proweniencję nowej transkrypcji.
 
-Matura2026UiTests dodatkowo obejmuje wybór dziewięciu arkuszy, losowanie ograniczone do wybranego arkusza, agregację 230 jednostek postępu według 17 tematów, kontekst powrotu oraz osobny licznik Matura maj 2024 PR: x / 14.
+Matura2026UiTests dodatkowo obejmuje wybór siedemnastu arkuszy, losowanie ograniczone do wybranego arkusza, agregację 473 jednostek postępu według 17 tematów, kontekst powrotu oraz osobny licznik Matura maj 2024 PR: x / 14.
 
 ## Prawa i wydanie
 
 Grupa `cke-2024-main-extended-exam` w `Content/provenance.json` ma status `approved`. Osobiste rozszerzenie `docs/ASSET_RIGHTS_DECLARATION.md` z 10 sierpnia 2026 r. obejmuje arkusz MMAP-R0-100-A-2405, zasady MMAP-R0-100-2405 i ich transkrypcję wyłącznie jako integralną część Abiturii.
 
-Grupa tego arkusza pozostaje `approved`, ale bieżący worktree ma `releaseEligible=false` przez osobno zablokowaną transkrypcję 2023 PP i osiem jej figur. Zwykła walidacja proweniencji musi przechodzić; `Test-ContentProvenance.ps1 -RequireReleaseEligible` nie może przejść przed rozszerzeniem deklaracji.
+Grupa tego arkusza pozostaje `approved`, ale bieżący worktree ma `releaseEligible=false` przez osobno zablokowane grupy matur głównych 2022 PP i PR oraz poprawkowej 2022 PP, matury głównej i poprawkowej 2023 PP oraz matur poprawkowych 2024 i 2025 PP wraz z trzydziestoma sześcioma diagramami. Zwykła walidacja proweniencji musi przechodzić; `Test-ContentProvenance.ps1 -RequireReleaseEligible` nie może przejść przed rozszerzeniem deklaracji.

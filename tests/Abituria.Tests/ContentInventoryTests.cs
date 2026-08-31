@@ -34,14 +34,30 @@ public sealed class ContentInventoryTests
         var basic2025 = basic2025Catalog.Exam;
         var extended2025Catalog = Read<ExamCatalog>("Content/exam-2025-main-extended.json");
         var extended2025 = extended2025Catalog.Exam;
+        var correction2025Catalog = Read<ExamCatalog>("Content/exam-2025-correction-basic.json");
+        var correction2025 = correction2025Catalog.Exam;
         var basic2024Catalog = Read<ExamCatalog>("Content/exam-2024-main-basic.json");
         var basic2024 = basic2024Catalog.Exam;
         var extended2024Catalog = Read<ExamCatalog>("Content/exam-2024-main-extended.json");
         var extended2024 = extended2024Catalog.Exam;
+        var correction2024Catalog = Read<ExamCatalog>("Content/exam-2024-correction-basic.json");
+        var correction2024 = correction2024Catalog.Exam;
         var basic2023Catalog = Read<ExamCatalog>("Content/exam-2023-main-basic.json");
         var basic2023 = basic2023Catalog.Exam;
+        var correction2023Catalog = Read<ExamCatalog>("Content/exam-2023-correction-basic.json");
+        var correction2023 = correction2023Catalog.Exam;
         var extended2023Catalog = Read<ExamCatalog>("Content/exam-2023-main-extended.json");
         var extended2023 = extended2023Catalog.Exam;
+        var basic2022Catalog = Read<ExamCatalog>("Content/exam-2022-main-basic.json");
+        var basic2022 = basic2022Catalog.Exam;
+        var extended2022Catalog = Read<ExamCatalog>("Content/exam-2022-main-extended.json");
+        var extended2022 = extended2022Catalog.Exam;
+        var correction2022Catalog = Read<ExamCatalog>("Content/exam-2022-correction-basic.json");
+        var correction2022 = correction2022Catalog.Exam;
+        var basic2021Catalog = Read<ExamCatalog>("Content/exam-2021-main-basic.json");
+        var basic2021 = basic2021Catalog.Exam;
+        var extended2021Catalog = Read<ExamCatalog>("Content/exam-2021-main-extended.json");
+        var extended2021 = extended2021Catalog.Exam;
         var placeholders = Read<PlaceholderCatalog>("Content/placeholders.json");
         var roadmap = Read<RoadmapCatalog>("Content/roadmap.json");
 
@@ -56,10 +72,18 @@ public sealed class ContentInventoryTests
         Assert.Equal(4, extendedExamCatalog.SchemaVersion);
         Assert.Equal(4, basic2025Catalog.SchemaVersion);
         Assert.Equal(4, extended2025Catalog.SchemaVersion);
+        Assert.Equal(4, correction2025Catalog.SchemaVersion);
         Assert.Equal(4, basic2024Catalog.SchemaVersion);
         Assert.Equal(4, extended2024Catalog.SchemaVersion);
+        Assert.Equal(4, correction2024Catalog.SchemaVersion);
         Assert.Equal(4, basic2023Catalog.SchemaVersion);
+        Assert.Equal(4, correction2023Catalog.SchemaVersion);
         Assert.Equal(4, extended2023Catalog.SchemaVersion);
+        Assert.Equal(4, basic2022Catalog.SchemaVersion);
+        Assert.Equal(4, extended2022Catalog.SchemaVersion);
+        Assert.Equal(4, correction2022Catalog.SchemaVersion);
+        Assert.Equal(4, basic2021Catalog.SchemaVersion);
+        Assert.Equal(4, extended2021Catalog.SchemaVersion);
         Assert.Equal(1, examIndex.SchemaVersion);
         Assert.Equal(17, examIndex.Topics.Count);
         Assert.Equal(
@@ -68,10 +92,18 @@ public sealed class ContentInventoryTests
                 "matura-maj-2026-rozszerzona",
                 "matura-maj-2025-podstawowa",
                 "matura-maj-2025-rozszerzona",
+                "matura-poprawkowa-2025-podstawowa",
                 "matura-maj-2024-podstawowa",
                 "matura-maj-2024-rozszerzona",
+                "matura-poprawkowa-2024-podstawowa",
                 "matura-maj-2023-podstawowa",
+                "matura-poprawkowa-2023-podstawowa",
                 "matura-maj-2023-rozszerzona",
+                "matura-maj-2022-podstawowa",
+                "matura-maj-2022-rozszerzona",
+                "matura-poprawkowa-2022-podstawowa",
+                "matura-maj-2021-podstawowa",
+                "matura-maj-2021-rozszerzona",
                 "matura-poprawkowa-2021"
             ],
             examIndex.Exams.OrderBy(item => item.Order).Select(item => item.Id));
@@ -111,18 +143,42 @@ public sealed class ContentInventoryTests
         Assert.Equal(13, extended2025.Exercises.Count);
         Assert.Equal(12, extended2025.OfficialTaskCount);
         Assert.Equal(50, extended2025.MaximumPoints);
+        Assert.Equal(36, correction2025.Exercises.Count);
+        Assert.Equal(31, correction2025.OfficialTaskCount);
+        Assert.Equal(50, correction2025.MaximumPoints);
         Assert.Equal(35, basic2024.Exercises.Count);
         Assert.Equal(31, basic2024.OfficialTaskCount);
         Assert.Equal(46, basic2024.MaximumPoints);
         Assert.Equal(14, extended2024.Exercises.Count);
         Assert.Equal(13, extended2024.OfficialTaskCount);
         Assert.Equal(50, extended2024.MaximumPoints);
+        Assert.Equal(36, correction2024.Exercises.Count);
+        Assert.Equal(30, correction2024.OfficialTaskCount);
+        Assert.Equal(46, correction2024.MaximumPoints);
         Assert.Equal(34, basic2023.Exercises.Count);
         Assert.Equal(31, basic2023.OfficialTaskCount);
         Assert.Equal(46, basic2023.MaximumPoints);
+        Assert.Equal(36, correction2023.Exercises.Count);
+        Assert.Equal(33, correction2023.OfficialTaskCount);
+        Assert.Equal(46, correction2023.MaximumPoints);
         Assert.Equal(14, extended2023.Exercises.Count);
         Assert.Equal(13, extended2023.OfficialTaskCount);
         Assert.Equal(50, extended2023.MaximumPoints);
+        Assert.Equal(35, basic2022.Exercises.Count);
+        Assert.Equal(35, basic2022.OfficialTaskCount);
+        Assert.Equal(45, basic2022.MaximumPoints);
+        Assert.Equal(15, extended2022.Exercises.Count);
+        Assert.Equal(15, extended2022.OfficialTaskCount);
+        Assert.Equal(50, extended2022.MaximumPoints);
+        Assert.Equal(35, correction2022.Exercises.Count);
+        Assert.Equal(35, correction2022.OfficialTaskCount);
+        Assert.Equal(45, correction2022.MaximumPoints);
+        Assert.Equal(35, basic2021.Exercises.Count);
+        Assert.Equal(35, basic2021.OfficialTaskCount);
+        Assert.Equal(45, basic2021.MaximumPoints);
+        Assert.Equal(15, extended2021.Exercises.Count);
+        Assert.Equal(15, extended2021.OfficialTaskCount);
+        Assert.Equal(50, extended2021.MaximumPoints);
         Assert.Contains(roadmap.Items, item => item.Status == RoadmapStatus.Migrated);
         Assert.Contains(roadmap.Items, item => item.Status == RoadmapStatus.Planned);
         Assert.Contains(roadmap.Items, item => item.Status == RoadmapStatus.Superseded);
@@ -138,8 +194,8 @@ public sealed class ContentInventoryTests
 
         var diagrams = Read<DiagramCatalog>("Content/diagrams.json");
         Assert.Equal(1, diagrams.SchemaVersion);
-        Assert.Equal(100, diagrams.Diagrams.Count);
-        Assert.Equal(100, diagrams.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(139, diagrams.Diagrams.Count);
+        Assert.Equal(139, diagrams.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
     }
 
     [Fact]
@@ -251,10 +307,18 @@ public sealed class ContentInventoryTests
         var extendedExam = Read<ExamCatalog>("Content/exam-2026-main-extended.json").Exam;
         var basic2025 = Read<ExamCatalog>("Content/exam-2025-main-basic.json").Exam;
         var extended2025 = Read<ExamCatalog>("Content/exam-2025-main-extended.json").Exam;
+        var correction2025 = Read<ExamCatalog>("Content/exam-2025-correction-basic.json").Exam;
         var basic2024 = Read<ExamCatalog>("Content/exam-2024-main-basic.json").Exam;
         var extended2024 = Read<ExamCatalog>("Content/exam-2024-main-extended.json").Exam;
+        var correction2024 = Read<ExamCatalog>("Content/exam-2024-correction-basic.json").Exam;
         var basic2023 = Read<ExamCatalog>("Content/exam-2023-main-basic.json").Exam;
+        var correction2023 = Read<ExamCatalog>("Content/exam-2023-correction-basic.json").Exam;
         var extended2023 = Read<ExamCatalog>("Content/exam-2023-main-extended.json").Exam;
+        var basic2022 = Read<ExamCatalog>("Content/exam-2022-main-basic.json").Exam;
+        var extended2022 = Read<ExamCatalog>("Content/exam-2022-main-extended.json").Exam;
+        var correction2022 = Read<ExamCatalog>("Content/exam-2022-correction-basic.json").Exam;
+        var basic2021 = Read<ExamCatalog>("Content/exam-2021-main-basic.json").Exam;
+        var extended2021 = Read<ExamCatalog>("Content/exam-2021-main-extended.json").Exam;
         var diagrams = Read<DiagramCatalog>("Content/diagrams.json");
         var referencedDiagramIds = formulas.Articles.SelectMany(item => item.Blocks)
             .Concat(course.Lessons.SelectMany(item => item.Blocks))
@@ -265,10 +329,18 @@ public sealed class ContentInventoryTests
             .Concat(extendedExam.Exercises.SelectMany(item => item.DiagramIds))
             .Concat(basic2025.Exercises.SelectMany(item => item.DiagramIds))
             .Concat(extended2025.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(correction2025.Exercises.SelectMany(item => item.DiagramIds))
             .Concat(basic2024.Exercises.SelectMany(item => item.DiagramIds))
             .Concat(extended2024.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(correction2024.Exercises.SelectMany(item => item.DiagramIds))
             .Concat(basic2023.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(correction2023.Exercises.SelectMany(item => item.DiagramIds))
             .Concat(extended2023.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(basic2022.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(extended2022.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(correction2022.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(basic2021.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(extended2021.Exercises.SelectMany(item => item.DiagramIds))
             .Concat(courseExercises.Exercises.SelectMany(item => item.DiagramIds))
             .Distinct(StringComparer.Ordinal)
             .Order(StringComparer.Ordinal)
@@ -328,10 +400,18 @@ public sealed class ContentInventoryTests
             Read<ExamCatalog>("Content/exam-2026-main-extended.json").Exam,
             Read<ExamCatalog>("Content/exam-2025-main-basic.json").Exam,
             Read<ExamCatalog>("Content/exam-2025-main-extended.json").Exam,
+            Read<ExamCatalog>("Content/exam-2025-correction-basic.json").Exam,
             Read<ExamCatalog>("Content/exam-2024-main-basic.json").Exam,
             Read<ExamCatalog>("Content/exam-2024-main-extended.json").Exam,
+            Read<ExamCatalog>("Content/exam-2024-correction-basic.json").Exam,
             Read<ExamCatalog>("Content/exam-2023-main-basic.json").Exam,
+            Read<ExamCatalog>("Content/exam-2023-correction-basic.json").Exam,
             Read<ExamCatalog>("Content/exam-2023-main-extended.json").Exam,
+            Read<ExamCatalog>("Content/exam-2022-main-basic.json").Exam,
+            Read<ExamCatalog>("Content/exam-2022-main-extended.json").Exam,
+            Read<ExamCatalog>("Content/exam-2022-correction-basic.json").Exam,
+            Read<ExamCatalog>("Content/exam-2021-main-basic.json").Exam,
+            Read<ExamCatalog>("Content/exam-2021-main-extended.json").Exam,
             Read<ExamCatalog>("Content/exam-2021-correction.json").Exam
         };
         var placeholders = Read<PlaceholderCatalog>("Content/placeholders.json");

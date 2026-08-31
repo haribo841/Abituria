@@ -10,14 +10,20 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - pełny kurs matematyki Formuły 2023: 4 grupy, 13 obszarów, 119 wymagań, 238 rozwiązanych przykładów i 357 ćwiczeń z filtrem poziomu oraz osobnym postępem,
 - dział Wektory z ośmioma ilustracjami,
 - materiały issue #35: liczby naturalne i indukcja, alfabet grecki, liczby rzeczywiste i zbiory, algebra, równania i nierówności, funkcja kwadratowa oraz logarytmy,
+- matury główne 2022 PP i PR oraz poprawkowa 2022 PP w Formule 2015 zweryfikowane z publicznych archiwów: odpowiednio 35 zadań, 35 jednostek postępu i 45 punktów, 15 zadań, 15 jednostek postępu i 50 punktów oraz 35 zadań, 35 jednostek postępu i 45 punktów,
+- matura główna 2023 PP zweryfikowana z arkuszem i zasadami oceniania CKE: 31 zadań, 34 jednostki postępu i 46 punktów,
+- matura poprawkowa 2023 PP zweryfikowana z arkuszem CKE i dostępnym publicznym archiwum zasad oceniania: 33 zadania, 36 jednostek postępu i 46 punktów,
+- matura główna 2023 PR zweryfikowana z arkuszem i zasadami oceniania CKE: 13 zadań, 14 jednostek postępu i 50 punktów,
 - matura główna 2025 PP zweryfikowana z arkuszem i zasadami oceniania CKE: 31 zadań, 35 jednostek postępu i 50 punktów,
 - matura główna 2025 PR zweryfikowana z arkuszem i zasadami oceniania CKE: 12 zadań, 13 jednostek postępu i 50 punktów,
+- matura poprawkowa 2025 PP zweryfikowana z publicznym archiwum: 31 zadań, 36 jednostek postępu i 50 punktów,
 - matura główna 2024 PP zweryfikowana z arkuszem i zasadami oceniania CKE: 31 zadań, 35 jednostek postępu i 46 punktów,
 - matura główna 2024 PR zweryfikowana z arkuszem i zasadami oceniania CKE: 13 zadań, 14 jednostek postępu i 50 punktów,
 - matura główna 2026 PP zweryfikowana z arkuszem i zasadami oceniania CKE: 33 zadania, 37 jednostek postępu i 50 punktów,
 - matura główna 2026 PR zweryfikowana z arkuszem i zasadami oceniania CKE: 12 zadań, 13 jednostek postępu i 50 punktów,
 - 35 zadań matury poprawkowej 2021 zachowanych z identyfikatorami `mp21-*`,
-- wybór dziewięciu arkuszy i agregacja ich 230 jednostek postępu według 17 tematów,
+- matura poprawkowa 2024 PP zweryfikowana z publicznym archiwum: 30 zadań, 36 jednostek postępu i 46 punktów,
+- wybór siedemnastu arkuszy i agregacja ich 473 jednostek postępu według 17 tematów,
 - kalkulator ogólny z parserem wyrażeń, notacją naukową, Ans i historią sesji,
 - kalkulator funkcji kwadratowej,
 - losowanie zadań z całego arkusza i w obrębie wybranego tematu,
@@ -37,7 +43,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - podpisywanie kodu i paczek,
 - paczka macOS dla Apple Silicon.
 
-Manifest `Content/provenance.json` ma obecnie `releaseEligible=false`. Rozszerzenia deklaracji właściciela z 3, 5, 10 i 12 sierpnia 2026 r. obejmują zatwierdzone arkusze i materiały CKE, ale nie maturę podstawową 2023 ani osiem nowych figur. Każdy przyszły publiczny prerelease wymaga pełnej checklisty wydania, zweryfikowanego workflow i uzupełnionej deklaracji praw.
+Manifest `Content/provenance.json` ma obecnie `releaseEligible=false`. Rozszerzenia deklaracji właściciela z 3, 5, 10 i 12 sierpnia 2026 r. obejmują zatwierdzone arkusze i materiały CKE, ale nie matury główne 2022 PP i PR oraz poprawkową 2022 PP, maturę główną i poprawkową 2023 PP ani matury poprawkowe 2024 i 2025 PP, wraz z trzydziestoma sześcioma nowymi diagramami. Każdy przyszły publiczny prerelease wymaga pełnej checklisty wydania, zweryfikowanego workflow i uzupełnionej deklaracji praw.
 
 ## Zastąpione
 

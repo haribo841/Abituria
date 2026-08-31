@@ -20,6 +20,7 @@ public sealed class PerformanceMemoryAndLoadTests
     private const int CalculatorIterations = 10_000;
     private const int ParallelCalculatorOperations = 40_000;
     private const int ContentReloads = 20;
+    private const long MaximumContentReloadAllocationBytes = 4L * 1024L * 1024L * ContentReloads;
     private const int ProgressRecordCount = 5_000;
     private const int ProgressReadCount = 3;
 
@@ -153,7 +154,7 @@ public sealed class PerformanceMemoryAndLoadTests
             stopwatch.Elapsed < TimeSpan.FromSeconds(15),
             $"Ponowne odczytanie katalogu treści {ContentReloads} razy trwało {stopwatch.Elapsed}.");
         Assert.True(
-            allocatedBytes <= 64L * 1024L * 1024L,
+            allocatedBytes <= MaximumContentReloadAllocationBytes,
             $"Ponowne odczytanie katalogu zaalokowało {allocatedBytes} B.");
         Assert.True(
             retainedGrowthBytes <= 32L * 1024L * 1024L,

@@ -175,26 +175,34 @@ Dane trwałe są zapisywane w SQLite w katalogu `LocalApplicationData/Abituria/a
 - `course-exercises.json` - ćwiczenia kursowe korzystające ze wspólnego modelu `LearningExercise`,
 - `official-course-examples.json` - 97 przykładów CKE w osobnej warstwie źródłowej z numerami, stronami, wymaganiami, rozwiązaniami i opisami figur,
 - `exams.json` - uporządkowany indeks aktywnych arkuszy i 17 wspólnych tematów,
+- `exam-2023-main-basic.json` - matura główna 2023 PP w schemacie 4: 31 zadań, 34 części, 46 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
+- `exam-2023-correction-basic.json` - matura poprawkowa 2023 PP w schemacie 4: 33 zadania, 36 części, 46 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
+- `exam-2023-main-extended.json` - matura główna 2023 PR w schemacie 4: 13 zadań, 14 części, 50 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
+- `exam-2022-main-basic.json` - matura główna 2022 PP w Formule 2015 w schemacie 4: 35 zadań, 35 części, 45 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
+- `exam-2022-main-extended.json` - matura główna 2022 PR w Formule 2015 w schemacie 4: 15 zadań, 15 części, 50 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
+- `exam-2022-correction-basic.json` - matura poprawkowa 2022 PP w Formule 2015 w schemacie 4: 35 zadań, 35 części, 45 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
+- `exam-2024-correction-basic.json` - matura poprawkowa 2024 PP w schemacie 4: 30 zadań, 36 części, 46 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
 - `exam-2025-main-basic.json` - matura główna 2025 PP w schemacie 4: 31 zadań, 35 części, 50 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
 - `exam-2025-main-extended.json` - matura główna 2025 PR w schemacie 4: 12 zadań, 13 części, 50 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
+- `exam-2025-correction-basic.json` - matura poprawkowa 2025 PP w schemacie 4: 31 zadań, 36 części, 50 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
 - `exam-2024-main-basic.json` - matura główna 2024 PP w schemacie 4: 31 zadań, 35 części, 46 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
 - `exam-2024-main-extended.json` - matura główna 2024 PR w schemacie 4: 13 zadań, 14 części, 50 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
 - `exam-2026-main-basic.json` - matura główna 2026 PP w schemacie 4: 33 zadania, 37 części, 50 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
 - `exam-2026-main-extended.json` - matura główna 2026 PR w schemacie 4: 12 zadań, 13 części, 50 punktów, odpowiedzi, rozwiązania, kryteria i źródła,
 - `exam-2021-correction.json` - zgodny wstecznie arkusz poprawkowy 2021 w schemacie 3,
-- `diagrams.json` - 100 deterministycznych diagramów wektorowych, w tym czterdzieści trzy figury matur 2023, 2024, 2025 i 2026 ze stroną źródłową,
+- `diagrams.json` - 139 deterministycznych diagramów wektorowych, w tym dziewięćdziesiąt jeden figur matur 2021, 2022, 2023, 2024, 2025 i 2026 ze stroną źródłową,
 - `placeholders.json` - jawne placeholdery funkcji,
 - `roadmap.json` - plan rozwoju,
 - `ui-copy.json` - dłuższe statyczne teksty interfejsu.
 - `provenance.json` - autor, źródło, licencja i status redystrybucji każdego paczkowanego zasobu.
 
-Kod produkcyjny odpowiada za wczytanie i wyświetlenie treści, a nie za przechowywanie długich materiałów edukacyjnych. `ContentRepository.Exams` zachowuje kolejność aktywnego indeksu, `GetExam(id)` wybiera arkusz, a `GetTopicExercises(topicId)` agreguje zadania z dziewięciu arkuszy bez zmiany identyfikatorów `mp21-*`. `ExamCatalogValidator` sprawdza indeks, metadane, globalną unikalność identyfikatorów, kolejność, tematy i umowy odpowiedzi.
+Kod produkcyjny odpowiada za wczytanie i wyświetlenie treści, a nie za przechowywanie długich materiałów edukacyjnych. `ContentRepository.Exams` zachowuje kolejność aktywnego indeksu, `GetExam(id)` wybiera arkusz, a `GetTopicExercises(topicId)` agreguje zadania z siedemnastu arkuszy bez zmiany identyfikatorów `mp21-*`. `ExamCatalogValidator` sprawdza indeks, metadane, globalną unikalność identyfikatorów, kolejność, tematy i umowy odpowiedzi.
 
 `MathCourseNavigation` realizuje filtr podstawowy/rozszerzony i hierarchię obszar - lekcja - ćwiczenie. `OfficialCourseExampleCatalogValidator` porównuje źródła z przypiętymi źródłami kursu, sprawdza liczniki, strony, mapowania wymagań i opisy figur. `CourseLessonView` zachowuje autorskie przykłady jako pierwszą warstwę, a transkrypcje CKE prezentuje niżej w zwiniętych kartach bez wpływu na postęp i SQLite. `NumericAnswerEvaluator` przekazuje wyrażenia do bezpiecznego parsera kalkulatora, obsługuje przecinek lub kropkę, tolerancję bezwzględną i względną oraz odrzuca błędy i wartości niefinitywne. `CompoundAnswerEvaluator` łączy części wyboru, liczbowe i tekstowe; zadanie zostaje ukończone dopiero po poprawnym wypełnieniu wszystkich pól. Renderowanie treści miesza zwykłe `TextBlock`, skalowalne `DiagramView` oraz `MathView` z `Sylinko.CSharpMath.Avalonia`.
 
-Profil nadal zapisuje wyłącznie identyfikatory ukończonych ćwiczeń w istniejącej tabeli SQLite. Liczniki `x/37`, dwa liczniki `x/35`, dwa liczniki `x/13`, `x/14` i historyczny `x/35` są wyliczane przez przecięcie tego zbioru z identyfikatorami każdego arkusza, dlatego nie jest potrzebna nowa migracja bazy.
+Profil nadal zapisuje wyłącznie identyfikatory ukończonych ćwiczeń w istniejącej tabeli SQLite. Liczniki `x/37`, pięć liczników `x/35`, dwa liczniki `x/13`, dwa liczniki `x/14`, trzy liczniki `x/36` i `x/34` są wyliczane przez przecięcie tego zbioru z identyfikatorami każdego arkusza, dlatego nie jest potrzebna nowa migracja bazy.
 
-`DiagramView` materializuje prymitywy katalogu jako kontrolki `Line`, `Polyline`, `Polygon`, `Ellipse` i `TextBlock` Avalonia. Łuki są deterministycznie aproksymowane poliliniami, a `Viewbox` skaluje całość bez utraty proporcji. Trzydzieści pięć figur matur 2023, 2024, 2025 i 2026 używa wyłącznie tego wektorowego przepływu i nie tworzy `Image`, `Bitmap` ani aktywnych rastrów.
+`DiagramView` materializuje prymitywy katalogu jako kontrolki `Line`, `Polyline`, `Polygon`, `Ellipse` i `TextBlock` Avalonia. Łuki są deterministycznie aproksymowane poliliniami, a `Viewbox` skaluje całość bez utraty proporcji. Dziewięćdziesiąt jeden figur matur 2021, 2022, 2023, 2024, 2025 i 2026 używa wyłącznie tego wektorowego przepływu i nie tworzy `Image`, `Bitmap` ani aktywnych rastrów.
 
 Manifest pochodzenia jest porównywany z zasobami zadeklarowanymi w `Abituria.csproj`. Testy wymagają dokładnie jednego wpisu dla każdego pliku, kompletnego autora, źródła, licencji lub podstawy dystrybucji i istniejących dowodów. Status `blocked` nie psuje lokalnej kompilacji, ale `Test-ContentProvenance.ps1 -RequireReleaseEligible` bezwarunkowo blokuje publiczne wydanie.
 
@@ -229,7 +237,7 @@ Projekt ma testy dla głównych warstw:
 - `ContentProvenanceTests` - kompletność i jednoznaczność pochodzenia paczkowanych zasobów,
 - `MathCourse2023ContentTests` - kontrakt `4/13/73/46/238/357`, generowanie, filtr, tryby odpowiedzi, postęp, opisy alternatywne i rozmiary UI,
 - `OfficialCourseExampleContentTests` i `test_import_cke_informer_examples.py` - kontrakt `66/31/97`, przypięte źródła, komplet transkrypcji, mapowania wymagań, opisy 53 figur, rozdzielenie warstw UI i deterministyczny importer,
-- `Matura2023BasicContentTests`, `Matura2023ExtendedContentTests`, `Matura2024BasicContentTests`, `Matura2024ExtendedContentTests`, `Matura2025ContentTests`, `Matura2026ContentTests`, `Matura2026ExtendedContentTests`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` - kontrakty `31/34/46`, `13/14/50`, `31/35/46`, `13/14/50`, `31/35/50`, dwa razy `12/13/50` i `33/37/50`, źródła i SHA-256, dziewięć arkuszy oraz `230` jednostek postępu, agregacja tematów, odpowiedzi złożone i oddzielny postęp,
+- `Matura2021BasicContentTests`, `Matura2021ExtendedContentTests`, `Matura2022BasicContentTests`, `Matura2022ExtendedContentTests`, `Matura2022CorrectionBasicContentTests`, `Matura2023BasicContentTests`, `Matura2023CorrectionBasicContentTests`, `Matura2023ExtendedContentTests`, `Matura2024BasicContentTests`, `Matura2024CorrectionBasicContentTests`, `Matura2024ExtendedContentTests`, `Matura2025ContentTests`, `Matura2025CorrectionBasicContentTests`, `Matura2026ContentTests`, `Matura2026ExtendedContentTests`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` - kontrakty matur 2021 `35/35/45` i `15/15/50`, matur 2022 `35/35/45`, `15/15/50` i `35/35/45`, matur 2023 `31/34/46`, `33/36/46`, `13/14/50`, matur 2024 `31/35/46`, `30/36/46`, `13/14/50`, matur 2025 `31/35/50`, `12/13/50`, `31/36/50` oraz matur 2026 `33/37/50`, `12/13/50`, źródła i SHA-256, siedemnaście arkuszy oraz `473` jednostki postępu, agregacja tematów, odpowiedzi złożone i oddzielny postęp,
 - `Issue5CalculatorPipTests` - PiP, ustawienia profilu, kolejność schowka, wklejanie, sesyjny brudnopis, motywy i rozmiary UI.
 
 CI używa workflow `build` do restore, build oraz testów C# i Pythona. Raporty OpenCover i Cobertura trafiają do wspólnej bramki wymagającej `90%` łącznego pokrycia i `85%` pokrycia gałęzi. Dodatkowy workflow `sonarcloud` uruchamia wielojęzyczny SonarScanner for .NET, przekazuje oba raporty i czeka na quality gate. Workflow wydania działa na natywnych runnerach Windows, Ubuntu i macOS: odtwarza lockfile, audytuje NuGet, publikuje self-contained, wykonuje smoke test, sprawdza architekturę i zawartość archiwów oraz generuje sumy SHA-256, SBOM i atestacje. GitHub Pages powstaje z tych samych plików Markdown przez DocFX.

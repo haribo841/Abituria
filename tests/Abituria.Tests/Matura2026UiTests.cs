@@ -31,11 +31,19 @@ public sealed class Matura2026UiTests
         Assert.Same(repository.Exams[1], repository.GetExam("matura-maj-2026-rozszerzona"));
         Assert.Same(repository.Exams[2], repository.GetExam("matura-maj-2025-podstawowa"));
         Assert.Same(repository.Exams[3], repository.GetExam("matura-maj-2025-rozszerzona"));
-        Assert.Same(repository.Exams[4], repository.GetExam("matura-maj-2024-podstawowa"));
-        Assert.Same(repository.Exams[5], repository.GetExam("matura-maj-2024-rozszerzona"));
-        Assert.Same(repository.Exams[6], repository.GetExam("matura-maj-2023-podstawowa"));
-        Assert.Same(repository.Exams[7], repository.GetExam("matura-maj-2023-rozszerzona"));
-        Assert.Same(repository.Exams[8], repository.Exam);
+        Assert.Same(repository.Exams[4], repository.GetExam("matura-poprawkowa-2025-podstawowa"));
+        Assert.Same(repository.Exams[5], repository.GetExam("matura-maj-2024-podstawowa"));
+        Assert.Same(repository.Exams[6], repository.GetExam("matura-maj-2024-rozszerzona"));
+        Assert.Same(repository.Exams[7], repository.GetExam("matura-poprawkowa-2024-podstawowa"));
+        Assert.Same(repository.Exams[8], repository.GetExam("matura-maj-2023-podstawowa"));
+        Assert.Same(repository.Exams[9], repository.GetExam("matura-poprawkowa-2023-podstawowa"));
+        Assert.Same(repository.Exams[10], repository.GetExam("matura-maj-2023-rozszerzona"));
+        Assert.Same(repository.Exams[11], repository.GetExam("matura-maj-2022-podstawowa"));
+        Assert.Same(repository.Exams[12], repository.GetExam("matura-maj-2022-rozszerzona"));
+        Assert.Same(repository.Exams[13], repository.GetExam("matura-poprawkowa-2022-podstawowa"));
+        Assert.Same(repository.Exams[14], repository.GetExam("matura-maj-2021-podstawowa"));
+        Assert.Same(repository.Exams[15], repository.GetExam("matura-maj-2021-rozszerzona"));
+        Assert.Same(repository.Exams[16], repository.Exam);
         Assert.Throws<ArgumentException>(() => repository.GetExam(" "));
         Assert.Throws<KeyNotFoundException>(() => repository.GetExam("missing"));
         Assert.Throws<ArgumentException>(() => repository.GetTopicExercises(""));
@@ -73,13 +81,25 @@ public sealed class Matura2026UiTests
             button => Equals(button.Content, "Otwórz arkusz - 31 zadań, 35 części ocenianych"));
         Assert.Contains(
             matura.GetLogicalDescendants().OfType<Button>(),
+            button => Equals(button.Content, "Otwórz arkusz - 31 zadań, 36 części ocenianych"));
+        Assert.Contains(
+            matura.GetLogicalDescendants().OfType<Button>(),
+            button => Equals(button.Content, "Otwórz arkusz - 33 zadania, 36 części ocenianych"));
+        Assert.Contains(
+            matura.GetLogicalDescendants().OfType<Button>(),
+            button => Equals(button.Content, "Otwórz arkusz - 30 zadań, 36 części ocenianych"));
+        Assert.Contains(
+            matura.GetLogicalDescendants().OfType<Button>(),
             button => Equals(button.Content, "Otwórz arkusz - 35 zadań"));
+        Assert.Contains(
+            matura.GetLogicalDescendants().OfType<Button>(),
+            button => Equals(button.Content, "Otwórz arkusz - 15 zadań"));
 
         var topicButtons = tasks.GetLogicalDescendants().OfType<Button>()
             .Where(button => button.Content is string text && text.StartsWith("Losuj zadanie z tematu:", StringComparison.Ordinal))
             .ToArray();
         Assert.Equal(17, topicButtons.Length);
-        Assert.Equal(230, repository.ExamTopics.Sum(topic => repository.GetTopicExercises(topic.Id).Count));
+        Assert.Equal(473, repository.ExamTopics.Sum(topic => repository.GetTopicExercises(topic.Id).Count));
         Assert.All(repository.ExamTopics, topic =>
         {
             var topicExercises = repository.GetTopicExercises(topic.Id);
@@ -104,7 +124,7 @@ public sealed class Matura2026UiTests
     {
         var repository = new ContentRepository();
         var current = repository.Exams[0];
-        var legacy = repository.Exams[8];
+        var legacy = repository.Exams[16];
         var viewModel = new AppViewModel();
 
         viewModel.OpenExam(current.Id);
@@ -137,7 +157,7 @@ public sealed class Matura2026UiTests
     }
 
     [AvaloniaFact]
-    public void Topic_randomization_keeps_the_selected_category_and_includes_2023_and_2024_tasks()
+    public void Topic_randomization_keeps_the_selected_category_and_includes_all_active_exam_generations()
     {
         var repository = new ContentRepository();
         var topic = repository.ExamTopics.Single(item => item.Id == "inequalities");
@@ -162,7 +182,14 @@ public sealed class Matura2026UiTests
         var topicExercises = repository.GetTopicExercises(topic.Id);
         Assert.Contains(topicExercises, item => item.Id == "mm24-p0-z01");
         Assert.Contains(topicExercises, item => item.Id == "mm24-p0-z06");
+        Assert.Contains(topicExercises, item => item.Id == "mm24-p0p-z01");
+        Assert.Contains(topicExercises, item => item.Id == "mm25-p0p-z07");
         Assert.Contains(topicExercises, item => item.Id == "mm23-r0-z09");
+        Assert.Contains(topicExercises, item => item.Id == "em22-p0-z07");
+        Assert.Contains(topicExercises, item => item.Id == "em22-r0-z09");
+        Assert.Contains(topicExercises, item => item.Id == "em22-p0p-z06");
+        Assert.Contains(topicExercises, item => item.Id == "em21-p0-z06");
+        Assert.Contains(topicExercises, item => item.Id == "em21-r0-z07");
 
         Click(tasks, $"Losuj zadanie z tematu: {topic.Title}");
 
@@ -224,9 +251,18 @@ public sealed class Matura2026UiTests
             Assert.Contains("Matura maj 2026 PR: 1 / 13", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Matura maj 2025 PP: 1 / 35", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Matura maj 2025 PR: 1 / 13", progress.Text, StringComparison.Ordinal);
+            Assert.Contains("Matura poprawkowa 2025 PP: 1 / 36", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Matura maj 2024 PP: 1 / 35", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Matura maj 2024 PR: 1 / 14", progress.Text, StringComparison.Ordinal);
+            Assert.Contains("Matura poprawkowa 2024 PP: 1 / 36", progress.Text, StringComparison.Ordinal);
+            Assert.Contains("Matura maj 2023 PP: 1 / 34", progress.Text, StringComparison.Ordinal);
+            Assert.Contains("Matura poprawkowa 2023 PP: 1 / 36", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Matura maj 2023 PR: 1 / 14", progress.Text, StringComparison.Ordinal);
+            Assert.Contains("Matura maj 2022 PP (F2015): 1 / 35", progress.Text, StringComparison.Ordinal);
+            Assert.Contains("Matura maj 2022 PR (F2015): 1 / 15", progress.Text, StringComparison.Ordinal);
+            Assert.Contains("Matura poprawkowa 2022 PP (F2015): 1 / 35", progress.Text, StringComparison.Ordinal);
+            Assert.Contains("Matura maj 2021 PP (F2015): 1 / 35", progress.Text, StringComparison.Ordinal);
+            Assert.Contains("Matura maj 2021 PR (F2015): 1 / 15", progress.Text, StringComparison.Ordinal);
             Assert.Contains("Matura poprawkowa 2021: 1 / 35", progress.Text, StringComparison.Ordinal);
         }
         finally

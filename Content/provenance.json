@@ -204,6 +204,38 @@
       ]
     },
     {
+      "id": "cke-2024-correction-basic-exam",
+      "paths": [
+        "Content/exam-2024-correction-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMAP-P0-100-2408 i zasady oceniania o tym samym kodzie, pobrane z publicznego archiwum arkusze.pl; SHA-256 arkusza 351773315AC15C190E12C8496FD518DA111C12AB150B3253A6121ECBA61DCC87; SHA-256 zasad 3068D4F4B20A46293A209E980507E7183226EF79CA5FB477C69388B3DB90CBE4; weryfikacja 2026-08-31",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji tej transkrypcji oraz brak bezpośredniego archiwalnego adresu CKE",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji arkusza i zasad oceniania MMAP-P0-100-2408.",
+      "evidence": [
+        "docs/MATURA_2024_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2025-correction-basic-exam",
+      "paths": [
+        "Content/exam-2025-correction-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMAP-P0-100-2508 i zasady oceniania o tym samym kodzie, pobrane z publicznego archiwum arkusze.pl; SHA-256 arkusza 1A25E6B62185D623CA68E120157506E0C503DB285725B1CB31A34D40D522F873; SHA-256 zasad 058D68212521D98B4D63E320921647988BC35108941422FC39BF836813D63037; weryfikacja 2026-08-31",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji tej transkrypcji oraz brak bezpośredniego archiwalnego adresu CKE",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji arkusza i zasad oceniania MMAP-P0-100-2508.",
+      "evidence": [
+        "docs/MATURA_2025_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
       "id": "cke-2023-main-extended-exam",
       "paths": [
         "Content/exam-2023-main-extended.json"
@@ -219,15 +251,95 @@
       ]
     },
     {
+      "id": "cke-2022-main-basic-exam",
+      "paths": [
+        "Content/exam-2022-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, adaptacja opisowa i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-P0-100-2205, https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/EMAP-P0-100-2205_compressed.pdf, SHA-256 34101686FFB987572AB3110F344EC1A8692D8FACDBEF194498DBBD245568A2D2; zasady oceniania CKE EMAP-P0-100-2205, https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/EMAP-P0-100-2205-zasady.pdf, SHA-256 DD236C15820CBD5F7BD15D2EA194D075A3732B640C559A064062FBF3101F90B8; weryfikacja 2026-08-31",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji adaptacji arkusza i zasad oceniania EMAP-P0-100-2205",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji materiału CKE z Formuły 2015.",
+      "evidence": [
+        "docs/MATURA_2022_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2022-main-extended-exam",
+      "paths": [
+        "Content/exam-2022-main-extended.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, adaptacja opisowa i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-R0-100-2205, https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/EMAP-R0-100-2205_compressed.pdf, SHA-256 2AA11EADAE59BE3F60A61B97FD27DE782849F9631D0991D77B43C96D88B676A4; zasady oceniania CKE EMAP-R0-100-2205, https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/EMAP-R0-100-2205-zasady.pdf, SHA-256 83D33D8C83F6E866851406950CCA7A0C1A336DC5E5F28AB1ED947F0321478D06; weryfikacja 2026-08-31",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji adaptacji arkusza i zasad oceniania EMAP-R0-100-2205",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji materiału CKE z Formuły 2015.",
+      "evidence": [
+        "docs/MATURA_2022_EXTENDED_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2022-correction-basic-exam",
+      "paths": [
+        "Content/exam-2022-correction-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-P0-100-2208 i zasady oceniania o tym samym kodzie, pobrane z publicznego archiwum arkusze.pl; SHA-256 arkusza 8641D4EFC939DE0FCD92687174D111D6F2D879D509071EAC4ACE5526C97C42FD; SHA-256 zasad 25259F18F33B1FE910B10F7D6D9C06230658E5C21359E55079C51E87052BFEBC; weryfikacja 2026-08-31",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji tej transkrypcji oraz brak bezpośredniego archiwalnego adresu CKE",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji arkusza i zasad oceniania EMAP-P0-100-2208.",
+      "evidence": [
+        "docs/MATURA_2022_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2021-main-basic-exam",
+      "paths": [
+        "Content/exam-2021-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-P0-100-2105, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2021/Matematyka/poziom_podstawowy/EMAP-P0-100-2105.pdf, SHA-256 80AADA7793977EB615AE983AE2BD4762859EDB556A5115FE6B88607671B8D17C; zasady oceniania CKE EMAP-P0-100-2105, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2021/Zasady_Oceniania/EMAP-P0-100-2105-zasady.pdf, SHA-256 628D0C692EC414BB6C54251E97A6349D02A3D0E27B4A11EFA2866145DD9A1504; weryfikacja 2026-08-31",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji transkrypcji arkusza i zasad oceniania EMAP-P0-100-2105",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji materiału CKE z Formuły 2015.",
+      "evidence": [
+        "docs/MATURA_2021_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2021-main-extended-exam",
+      "paths": [
+        "Content/exam-2021-main-extended.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-R0-100-2105, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2021/Matematyka/poziom_rozszerzony/EMAP-R0-100-2105.pdf, SHA-256 EFAD08442C8C6A16317D783497630A6FBEF86744F5E3766FCBFA59B0E70C1C73; zasady oceniania CKE EMAP-R0-100-2105, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2021/Zasady_Oceniania/EMAP-R0-100-2105-zasady.pdf, SHA-256 E034E018D5070D6AF2BCA5D033B595B3C3F0FAC0D40C012AC7DD069BFB60D2CA; weryfikacja 2026-08-31",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji transkrypcji arkusza i zasad oceniania EMAP-R0-100-2105",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji materiału CKE z Formuły 2015.",
+      "evidence": [
+        "docs/MATURA_2021_EXTENDED_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
       "id": "runtime-vector-diagrams",
       "paths": [
         "Content/diagrams.json"
       ],
       "author": "Adam Kubiś - implementacje wektorowe Avalonia i nowe definicje kursu; Centralna Komisja Egzaminacyjna - źródłowa treść tablic i arkuszy; historyczni autorzy projektu Ich Troje - źródła zachowanych diagramów",
-      "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym osiem figur dla arkusza CKE MMAP-P0-100-2305, cztery figury dla MMAP-R0-100-2305, jedenaście figur dla MMAP-P0-100-A-2405, jedna figura dla MMAP-R0-100-A-2405, dziewięć figur dla MMAP-P0-100-A-2505, siedem figur dla MMAP-P0-100-A-2605 i trzy figury dla MMAP-R0-100-A-2605; bez aktywnych rastrów, Image ani Bitmap",
-      "license": "MIT dla implementacji wektorowych i definicji autorskich lub odziedziczonych; deklaracja redystrybucji w ramach Abiturii rozszerzona 2026-08-12 dla 92 wcześniejszych definicji, bez rozszerzenia dla ośmiu nowych figur MMAP-P0-100-2305",
+      "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym osiem figur dla arkusza CKE EMAP-P0-100-2105, trzy figury dla EMAP-R0-100-2105, sześć figur dla EMAP-P0-100-2205, jedna figura dla EMAP-R0-100-2205, pięć figur dla EMAP-P0-100-2208, osiem figur dla MMAP-P0-100-2305, pięć figur dla MMAP-P0-100-2308, pięć figur dla MMAP-P0-100-2408, sześć figur dla MMAP-P0-100-2508, cztery figury dla MMAP-R0-100-2305, jedenaście figur dla MMAP-P0-100-A-2405, jedna figura dla MMAP-R0-100-A-2405, dziewięć figur dla MMAP-P0-100-A-2505, siedem figur dla MMAP-P0-100-A-2605 i trzy figury dla MMAP-R0-100-A-2605; bez aktywnych rastrów, Image ani Bitmap",
+      "license": "MIT dla implementacji wektorowych i definicji autorskich lub odziedziczonych; deklaracja redystrybucji w ramach Abiturii rozszerzona 2026-08-12 dla 92 wcześniejszych definicji, bez rozszerzenia dla czterdziestu siedmiu nowych figur EMAP-P0-100-2105, EMAP-R0-100-2105, EMAP-P0-100-2205, EMAP-R0-100-2205, EMAP-P0-100-2208, MMAP-P0-100-2305, MMAP-P0-100-2308, MMAP-P0-100-2408 i MMAP-P0-100-2508",
       "distributionStatus": "blocked",
-      "blockedReason": "Katalog rozszerzono o osiem nowych diagramów pochodnych z MMAP-P0-100-2305, które nie są objęte dotychczasową deklaracją do 92 definicji.",
+      "blockedReason": "Katalog rozszerzono o czterdzieści siedem nowych diagramów pochodnych z EMAP-P0-100-2105, EMAP-R0-100-2105, EMAP-P0-100-2205, EMAP-R0-100-2205, EMAP-P0-100-2208, MMAP-P0-100-2305, MMAP-P0-100-2308, MMAP-P0-100-2408 i MMAP-P0-100-2508, które nie są objęte dotychczasową deklaracją do 92 definicji.",
       "evidence": [
         "docs/ASSET_RIGHTS_DECLARATION.md",
         "docs/MATURA_2026_COVERAGE.md",
@@ -237,6 +349,14 @@
         "docs/MATURA_2024_BASIC_COVERAGE.md",
         "docs/MATURA_2024_EXTENDED_COVERAGE.md",
         "docs/MATURA_2023_BASIC_COVERAGE.md",
+        "docs/MATURA_2023_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_2024_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_2025_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_2022_BASIC_COVERAGE.md",
+        "docs/MATURA_2022_EXTENDED_COVERAGE.md",
+        "docs/MATURA_2022_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_2021_BASIC_COVERAGE.md",
+        "docs/MATURA_2021_EXTENDED_COVERAGE.md",
         "docs/MATURA_2023_EXTENDED_COVERAGE.md",
         "docs/CONTENT_PROVENANCE.md",
         "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",

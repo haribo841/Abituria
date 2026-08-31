@@ -33,7 +33,7 @@ Data ostatniej aktualizacji: 5 sierpnia 2026 r.
 | instrukcja użytkownika i uruchomienia | `USER_GUIDE.md`, `INSTALLATION.md` | PASS |
 | testy funkcjonalne, regresyjne, wydajnościowe i pamięciowe | `TESTING.md`, testy projektu | PASS po pełnej bramie automatycznej |
 | użyteczność, instalacja niezależna i końcowy odbiór | `USABILITY_TEST_PROTOCOL.md`, `USABILITY_TEST_RESULTS.md`, ten dokument | PASS RETROSPEKTYWNY dla historycznych testów uczestników i odbioru; formalny test instalacji PASS na trzech niezależnych, natywnych runnerach |
-| ograniczenia i status prawny zasobów | `KNOWN_LIMITATIONS.md`, `CONTENT_PROVENANCE.md`, `ASSET_RIGHTS_DECLARATION.md` | PASS dla odebranego zakresu i wydania `0.9.0-beta.1`; bieżący worktree ma `releaseEligible=false`, bo matura podstawowa 2023 oczekuje na rozszerzenie praw |
+| ograniczenia i status prawny zasobów | `KNOWN_LIMITATIONS.md`, `CONTENT_PROVENANCE.md`, `ASSET_RIGHTS_DECLARATION.md` | PASS dla odebranego zakresu i wydania `0.9.0-beta.1`; bieżący worktree ma `releaseEligible=false`, bo matury główna i poprawkowa 2023 PP oczekują na rozszerzenie praw |
 | autor, licencja i historia zmian | `AUTHORS.md`, `LICENSE`, `CHANGELOG.md` | PASS |
 | PDF dla komisji | `output/pdf/Abituria-Technical-Documentation-0.9.0-beta.1.pdf` | PASS po wygenerowaniu i kontroli wizualnej |
 | zatwierdzenie i przekazanie komisji | decyzja poniżej i `DELIVERY_PROTOCOL.md` | PASS RETROSPEKTYWNY - projekt zaakceptowany przez prowadzącego na początku lutego 2022 r.; dokładny dzień i podpis nie zostały zachowane |
@@ -125,7 +125,7 @@ Poniższa tabela jest opcjonalnym uzupełnieniem dla sesji prowadzonej przez cz�
 
 ## Warunek publikacji
 
-Właściciel poświadczył posiadanie praw do zakresu zasobów ocenianego 19 lipca 2026 r., a 3, 5, 10 i 12 sierpnia 2026 r. rozszerzył deklarację na maturę rozszerzoną 2023, arkusze 2024, 2025 i 2026 na obu poziomach, zasady oceniania, przykłady z informatorów CKE oraz trzydzieści pięć autorskich implementacji wektorowych Avalonia. Historyczne przekazanie prowadzącemu zostało uzgodnione i zaakceptowane, dlatego spełnia formalny wariant przekazania dla Issue #43. Bieżący manifest ma `releaseEligible=false`, ponieważ jego zakres został poszerzony o maturę podstawową 2023 bez nowego oświadczenia. Oba warianty walidatora muszą przejść przed każdym wydaniem.
+Właściciel poświadczył posiadanie praw do zakresu zasobów ocenianego 19 lipca 2026 r., a 3, 5, 10 i 12 sierpnia 2026 r. rozszerzył deklarację na maturę rozszerzoną 2023, matury główne 2024, 2025 i 2026 na obu poziomach, zasady oceniania, przykłady z informatorów CKE oraz trzydzieści pięć autorskich implementacji wektorowych Avalonia. Historyczne przekazanie prowadzącemu zostało uzgodnione i zaakceptowane, dlatego spełnia formalny wariant przekazania dla Issue #43. Bieżący manifest ma `releaseEligible=false`, ponieważ jego zakres został poszerzony o maturę główną i poprawkową 2023 PP oraz matury poprawkowe 2024 i 2025 PP bez nowego oświadczenia. Oba warianty walidatora muszą przejść przed każdym wydaniem.
 
 Publiczne wydanie bieżącej wersji jest osobnym działaniem i zostało ukończone jako [prerelease `v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1). Dla dokładnego commita wydania ponowiono `tools/Test-ContentProvenance.ps1 -RequireReleaseEligible` oraz pozostałe bramy, po czym skontrolowano draft i opublikowano prerelease.
 

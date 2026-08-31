@@ -12,8 +12,8 @@ Górna nawigacja po zalogowaniu zawiera:
 
 - **Start** - skróty do głównych funkcji;
 - **Wzory** - tablice matematyczne;
-- **Matura** - wybór matury głównej 2023 na poziomie rozszerzonym, matur głównych 2024, 2025 i 2026 na poziomie podstawowym lub rozszerzonym, arkusza poprawkowego 2021 oraz archiwalnych placeholderów;
-- **Zadania** - zadania z pięciu aktywnych arkuszy pogrupowane według 17 tematów;
+- **Matura** - wybór matur głównej i poprawkowej 2023 na poziomie podstawowym, matury głównej 2023 na poziomie rozszerzonym, matur głównych 2024, 2025 i 2026 na poziomie podstawowym lub rozszerzonym, arkusza poprawkowego 2021 oraz archiwalnych placeholderów;
+- **Zadania** - zadania z jedenastu aktywnych arkuszy pogrupowane według 17 tematów;
 - **Działy** - materiały edukacyjne;
 - **Kalkulator** - funkcja kwadratowa i kalkulator ogólny;
 - **Opcje** - sposób wyświetlania kalkulatora Picture in Picture;
@@ -104,11 +104,11 @@ Dokładne wymagania pochodzą z aktu urzędowego. Nagłówek „Autorskie rozwi�
 
 ## Matura i Zadania
 
-Strona „Matura” pokazuje kolejno matury 2026 PP i PR, matury 2025 PP i PR, matury 2024 PP i PR oraz arkusz poprawkowy 2021. Wybierz arkusz, aby zobaczyć jego pełną listę. Losowanie w tym widoku korzysta wyłącznie z aktualnie wybranego arkusza.
+Strona „Matura” pokazuje kolejno matury 2026 PP i PR, matury 2025 PP i PR oraz poprawkową PP, matury 2024 PP i PR oraz poprawkową PP, maturę główną 2023 PP, maturę poprawkową 2023 PP, maturę główną 2023 PR, matury główne 2022 PP i PR oraz maturę poprawkową 2022 PP w Formule 2015, a także arkusz poprawkowy 2021. Wybierz arkusz, aby zobaczyć jego pełną listę. Losowanie w tym widoku korzysta wyłącznie z aktualnie wybranego arkusza.
 
-Strona „Zadania” agreguje siedem aktywnych arkuszy według 17 tematów. Każdy wpis na liście pokazuje źródłowy arkusz. Losowanie tematyczne nie wychodzi poza wybrany temat, ale może zwrócić zadanie z 2026, 2025, 2024 albo 2021. Strzałki poprzedniego i następnego zadania pozostają w puli wynikającej z drogi wejścia, a przycisk powrotu prowadzi odpowiednio do „Matury” lub „Zadań”.
+Strona „Zadania” agreguje piętnaście aktywnych arkuszy według 17 tematów. Każdy wpis na liście pokazuje źródłowy arkusz. Losowanie tematyczne nie wychodzi poza wybrany temat, ale może zwrócić zadanie z 2026, 2025, 2024, 2023, 2022 albo 2021. Strzałki poprzedniego i następnego zadania pozostają w puli wynikającej z drogi wejścia, a przycisk powrotu prowadzi odpowiednio do „Matury” lub „Zadań”.
 
-Lista oznacza ukończone zadania znakiem wyboru. Arkusze mają odpowiednio: 2026 PP `33/37/50`, 2026 PR `12/13/50`, 2025 PP `31/35/50`, 2025 PR `12/13/50`, 2024 PP `31/35/46`, 2024 PR `13/14/50`, 2023 PR `13/14/50` i poprawkowa 2021 `35/35/45`. Szczegóły źródeł i liczników zawierają osobne macierze pokrycia matur 2023, 2024, 2025 i 2026.
+Lista oznacza ukończone zadania znakiem wyboru. Arkusze mają odpowiednio: 2026 PP `33/37/50`, 2026 PR `12/13/50`, 2025 PP `31/35/50`, 2025 PR `12/13/50`, poprawkowa 2025 PP `31/36/50`, 2024 PP `31/35/46`, 2024 PR `13/14/50`, poprawkowa 2024 PP `30/36/46`, 2023 PP `31/34/46`, poprawkowa 2023 PP `33/36/46`, 2023 PR `13/14/50`, 2022 PP Formuły 2015 `35/35/45`, 2022 PR Formuły 2015 `15/15/50`, poprawkowa 2022 PP Formuły 2015 `35/35/45` i poprawkowa 2021 `35/35/45`. Szczegóły źródeł i liczników zawierają osobne macierze pokrycia matur 2022, 2023, 2024, 2025 i 2026.
 
 ### Tryby odpowiedzi
 
@@ -134,7 +134,7 @@ Brudnopis jest przechowywany osobno dla aktywnego profilu i zadania do czasu zam
 
 Przycisk „Otwórz kalkulator PiP” obok nagłówka brudnopisu otwiera kompaktowy kalkulator bez opuszczania zadania. Przyciski strzałek przechodzą do poprzedniego i następnego zadania w aktualnym kontekście, czyli w całym arkuszu albo w wybranym temacie.
 
-Strona „Profil” pokazuje osobno `Matura maj 2026 PP: x/37`, `Matura maj 2026 PR: x/13`, `Matura maj 2025 PP: x/35`, `Matura maj 2025 PR: x/13`, `Matura maj 2024 PP: x/35`, `Matura maj 2024 PR: x/14`, `Matura poprawkowa 2021: x/35`, podstawę `x/219` oraz część rozszerzoną `x/138`. Postęp jest lokalny i oddzielny dla każdego profilu. Nowe liczniki używają istniejącego zapisu identyfikatorów ukończonych zadań, więc aktualizacja nie zmienia schematu bazy i nie usuwa wcześniejszego postępu `mp21-*`.
+Strona „Profil” pokazuje osobno `Matura maj 2026 PP: x/37`, `Matura maj 2026 PR: x/13`, `Matura maj 2025 PP: x/35`, `Matura maj 2025 PR: x/13`, `Matura poprawkowa 2025 PP: x/36`, `Matura maj 2024 PP: x/35`, `Matura maj 2024 PR: x/14`, `Matura poprawkowa 2024 PP: x/36`, `Matura maj 2023 PP: x/34`, `Matura poprawkowa 2023 PP: x/36`, `Matura maj 2023 PR: x/14`, `Matura maj 2022 PP (F2015): x/35`, `Matura maj 2022 PR (F2015): x/15`, `Matura poprawkowa 2022 PP (F2015): x/35` i `Matura poprawkowa 2021: x/35`, podstawę `x/219` oraz część rozszerzoną `x/138`. Postęp jest lokalny i oddzielny dla każdego profilu. Nowe liczniki używają istniejącego zapisu identyfikatorów ukończonych zadań, więc aktualizacja nie zmienia schematu bazy i nie usuwa wcześniejszego postępu `mp21-*`.
 
 ## Kalkulator funkcji kwadratowej
 

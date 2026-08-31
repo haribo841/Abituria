@@ -4,7 +4,7 @@
 
 Aktywny arkusz matura-maj-2024-podstawowa odwzorowuje główny egzamin maturalny z matematyki na poziomie podstawowym z 8 maja 2024 r., kod MMAP-P0-100-A-2405. Okładka, instrukcja, puste strony, brudnopis i karta odpowiedzi nie są treścią aplikacji.
 
-Transkrypcja zachowuje 31 oficjalnie numerowanych zadań jako 35 osobno ocenianych jednostek postępu, 180 minut pracy i 46 punktów. Zadania 14.1-14.4 i 25.1-25.2 mają wspólne identyfikatory grup, lecz oddzielny postęp i punktację. Arkusz jest piątym aktywnym zestawem historycznym - po maturach 2026 i 2025, a przed maturą 2024 PR i arkuszem poprawkowym 2021.
+Transkrypcja zachowuje 31 oficjalnie numerowanych zadań jako 35 osobno ocenianych jednostek postępu, 180 minut pracy i 46 punktów. Zadania 14.1-14.4 i 25.1-25.2 mają wspólne identyfikatory grup, lecz oddzielny postęp i punktację. Arkusz jest szóstym aktywnym zestawem historycznym - po maturach 2026 i 2025, a przed maturą 2024 PR i arkuszem poprawkowym 2021.
 
 ## Przypięte źródła
 
@@ -63,7 +63,7 @@ Suma punktów wynosi 46. Wszystkie identyfikatory mają mniej niż 80 znaków i 
 
 Content/exam-2024-main-basic.json zawiera tekst każdego zadania, wynik, pełne rozwiązanie, kryteria punktowania oraz strony obu dokumentów źródłowych. Tryby multipleChoice, numeric, compound i revealOnly są istniejącymi mechanizmami katalogu matur i nie wymagają zmiany schematu bazy.
 
-Jedenaście odwołań do diagramów w Content/diagrams.json odtwarza osie liczbowe zadania 1, układ prostych zadania 11, wykresy zadania 14, kąt zadania 18, figury zadań 20, 22 i 25, wykres słupkowy zadania 29 oraz układ wybiegów zadania 31. Każdy diagram jest deterministyczną definicją wektorową Avalonia z opisem alternatywnym i stroną źródłową. Aktualny katalog diagramów zawiera 100 definicji; nie dodano aktywnego rastra.
+Jedenaście odwołań do diagramów w Content/diagrams.json odtwarza osie liczbowe zadania 1, układ prostych zadania 11, wykresy zadania 14, kąt zadania 18, figury zadań 20, 22 i 25, wykres słupkowy zadania 29 oraz układ wybiegów zadania 31. Każdy diagram jest deterministyczną definicją wektorową Avalonia z opisem alternatywnym i stroną źródłową. Aktualny katalog diagramów zawiera 139 definicji; nie dodano aktywnego rastra.
 
 ## Walidacja
 
@@ -75,10 +75,10 @@ Matura2024BasicContentTests sprawdza:
 - kompletność 11 diagramów, opisów alternatywnych, źródeł i renderowania bez rastra;
 - zatwierdzoną proweniencję nowej transkrypcji.
 
-Testy interfejsu obejmują wybór dziewięciu arkuszy, losowanie ograniczone do wybranego arkusza, agregację 230 jednostek postępu według 17 tematów, powrót do właściwego kontekstu oraz osobny licznik Matura maj 2024 PP: x/35.
+Testy interfejsu obejmują wybór siedemnastu arkuszy, losowanie ograniczone do wybranego arkusza, agregację 473 jednostek postępu według 17 tematów, powrót do właściwego kontekstu oraz osobny licznik Matura maj 2024 PP: x/35.
 
 ## Prawa i wydanie
 
 Grupa `cke-2024-main-basic-exam` w `Content/provenance.json` ma status `approved`. Osobiste rozszerzenie `docs/ASSET_RIGHTS_DECLARATION.md` z 10 sierpnia 2026 r. obejmuje arkusz MMAP-P0-100-A-2405, zasady MMAP-P0-100-2405 i ich transkrypcję wyłącznie jako integralną część Abiturii.
 
-Grupa tego arkusza pozostaje `approved`, ale bieżący worktree ma `releaseEligible=false` przez osobno zablokowaną transkrypcję 2023 PP i osiem jej figur. Zwykła walidacja proweniencji musi przechodzić; `Test-ContentProvenance.ps1 -RequireReleaseEligible` nie może przejść przed rozszerzeniem deklaracji.
+Grupa tego arkusza pozostaje `approved`, ale bieżący worktree ma `releaseEligible=false` przez osobno zablokowane grupy matur głównych 2022 PP i PR oraz poprawkowej 2022 PP, matury głównej i poprawkowej 2023 PP oraz matur poprawkowych 2024 i 2025 PP wraz z trzydziestoma sześcioma diagramami. Zwykła walidacja proweniencji musi przechodzić; `Test-ContentProvenance.ps1 -RequireReleaseEligible` nie może przejść przed rozszerzeniem deklaracji.

@@ -20,19 +20,19 @@ Arkusze od 2023 r. występują w dwóch formułach. Formuła 2023 jest przeznacz
 
 ## Stan bieżący
 
-Na `origin/main` znajduje się 7 aktywnych arkuszy: oba poziomy terminów głównych 2024, 2025 i 2026 oraz matura poprawkowa 2021 w Formule 2015. Bieżący worktree zawiera dodatkowo kompletne matury główne 2023 PP i PR, dlatego lokalnie katalog ma 9 arkuszy. Żaden arkusz 2023 nie jest jeszcze commitem ani częścią `origin/main`.
+Na `origin/main` znajduje się 7 aktywnych arkuszy: oba poziomy terminów głównych 2024, 2025 i 2026 oraz matura poprawkowa 2021 w Formule 2015. Bieżący worktree zawiera dodatkowo maturę główną 2023 PP, maturę poprawkową 2023 PP, maturę główną 2023 PR, matury poprawkowe 2024 i 2025 PP oraz matury główne i poprawkową 2021 i 2022 PP oraz PR w Formule 2015, dlatego lokalnie katalog ma 17 arkuszy. Żaden z dziesięciu lokalnie dodanych arkuszy nie jest jeszcze commitem ani częścią `origin/main`.
 
 | Rok | F2023 główna PP | F2023 główna PR | F2023 poprawkowa PP | F2015 główna PP | F2015 główna PR | F2015 poprawkowa PP |
 | --- | --- | --- | --- | --- | --- | --- |
 | 2026 | na `origin/main` | na `origin/main` | brak | brak | brak | brak |
-| 2025 | na `origin/main` | na `origin/main` | brak | brak | brak | brak |
-| 2024 | na `origin/main` | na `origin/main` | brak | brak | brak | brak |
-| 2023 | lokalnie, bez commita | lokalnie, bez commita | brak | brak | brak | brak |
-| 2022 | nie dotyczy | nie dotyczy | nie dotyczy | brak | brak | brak |
-| 2021 | nie dotyczy | nie dotyczy | nie dotyczy | brak | brak | na `origin/main` |
+| 2025 | na `origin/main` | na `origin/main` | lokalnie, bez commita | brak | brak | brak |
+| 2024 | na `origin/main` | na `origin/main` | lokalnie, bez commita | brak | brak | brak |
+| 2023 | lokalnie, bez commita | lokalnie, bez commita | lokalnie, bez commita | brak | brak | brak |
+| 2022 | nie dotyczy | nie dotyczy | nie dotyczy | lokalnie, bez commita | lokalnie, bez commita | lokalnie, bez commita |
+| 2021 | nie dotyczy | nie dotyczy | nie dotyczy | lokalnie, bez commita | lokalnie, bez commita | na `origin/main` |
 | 2020 | nie dotyczy | nie dotyczy | nie dotyczy | brak | brak | brak |
 
-Pełne archiwum z tabeli obejmuje 33 arkusze: 12 w Formule 2023 i 21 w Formule 2015. Wobec 9 arkuszy dostępnych lokalnie brakuje 24. Węższy zakres, bez równoległych arkuszy Formuły 2015 z lat 2023-2026, obejmuje 21 arkuszy i pozostawia 12 braków.
+Pełne archiwum z tabeli obejmuje 33 arkusze: 12 w Formule 2023 i 21 w Formule 2015. Wobec 17 arkuszy dostępnych lokalnie brakuje 16. Węższy zakres, bez równoległych arkuszy Formuły 2015 z lat 2023-2026, obejmuje 21 arkuszy i pozostawia 4 braki.
 
 ## Kolejność wdrożenia
 
@@ -45,15 +45,18 @@ Pełne archiwum z tabeli obejmuje 33 arkusze: 12 w Formule 2023 i 21 w Formule 2
 ### Etap 1 - brakująca Formuła 2023
 
 1. Matura maj 2023 PP - wykonana lokalnie jako `matura-maj-2023-podstawowa`, 31 zadań, 34 jednostki postępu i 46 punktów.
-2. Matury poprawkowe PP Formuły 2023 z lat 2023, 2024, 2025 i 2026.
-3. Dla każdego pozostałego arkusza dodać oddzielny plik `Content/exam-<rok>-<session>-<formula>-basic.json`, wpis indeksu oraz macierz pokrycia.
+2. Matura poprawkowa 2023 PP - wykonana lokalnie jako `matura-poprawkowa-2023-podstawowa`, 33 zadania, 36 jednostek postępu i 46 punktów.
+3. Matura poprawkowa 2024 PP - wykonana lokalnie jako `matura-poprawkowa-2024-podstawowa`, 30 zadań, 36 jednostek postępu i 46 punktów.
+4. Matura poprawkowa 2025 PP - wykonana lokalnie jako `matura-poprawkowa-2025-podstawowa`, 31 zadań, 36 jednostek postępu i 50 punktów.
+5. Matura poprawkowa PP Formuły 2023 z 2026 r. - dopiero po udostępnieniu zasad oceniania.
+6. Dla każdego pozostałego arkusza dodać oddzielny plik `Content/exam-<rok>-<session>-<formula>-basic.json`, wpis indeksu oraz macierz pokrycia.
 
 Po tym etapie komplet Formuły 2023 będzie zawierał 12 arkuszy: po PP, PR i poprawce PP dla każdego roku 2023-2026.
 
 ### Etap 2 - rdzeń historyczny Formuły 2015
 
-1. Matury główne PP i PR oraz poprawkowe PP z 2022 r.
-2. Matury główne PP i PR z 2021 r., przy zachowaniu istniejącej poprawki 2021 bez modyfikacji identyfikatorów `mp21-*`.
+1. Matury główne 2022 PP i PR oraz poprawkowa 2022 PP są wykonane lokalnie.
+2. Matury główne PP i PR z 2021 r. są wykonane lokalnie, przy zachowaniu istniejącej poprawki 2021 bez modyfikacji identyfikatorów `mp21-*`.
 3. Matury główne PP i PR oraz poprawkowe PP z 2020 r.
 
 Etap zapewnia ciągłe archiwum 2020-2022 i nie miesza go z treściami kursu Formuły 2023.
