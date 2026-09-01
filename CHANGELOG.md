@@ -2,6 +2,24 @@
 
 W tym pliku są opisywane wyłącznie rzeczywiste wydania repozytorium `haribo841/Abituria`. Nie rekonstruujemy fikcyjnych wersji `0.1.0` ani `0.2.0` na podstawie historycznych snapshotów.
 
+## [0.9.3] - 2026-09-01
+
+Wydanie beta rozszerzające aktywne archiwum matur i kończące weryfikację praw do obecnie paczkowanych materiałów.
+
+### Dodano
+
+- matury główne PP i PR oraz matury poprawkowe PP z lat 2018, 2019 i 2020 w Formule 2015;
+- 19 wektorowych diagramów dla arkuszy 2018 oraz kontrakty danych dla archiwum matur 2018-2020;
+- macierze pokrycia, przypięte źródła i sumy SHA-256 dla wszystkich nowych arkuszy.
+
+### Zmieniono
+
+- właściciel repozytorium potwierdził prawa do publicznej redystrybucji 18 grup arkuszy CKE i rozszerzonego katalogu diagramów wyłącznie jako części Abiturii;
+- manifest proweniencji ma `releaseEligible=true` po zatwierdzeniu wszystkich paczkowanych grup;
+- dokumentacja, metadane aplikacji i instrukcje paczek odnoszą się do prerelease `v0.9.3`.
+
+[0.9.3]: https://github.com/haribo841/Abituria/releases/tag/v0.9.3
+
 ## [0.9.2] - 2026-08-11
 
 Wydanie beta usuwające zgłoszenia jakości SonarCloud bez zmiany zachowania ćwiczeń.

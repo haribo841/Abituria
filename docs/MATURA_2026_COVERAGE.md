@@ -53,9 +53,9 @@ Każdy diagram ma stabilny identyfikator, `sourceId` równy `cke-2026-main-basic
 
 ## Proweniencja
 
-Treść arkusza ma status `approved` w `Content/provenance.json` na podstawie rozszerzenia `docs/ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r. Siedem figur jest autorskimi implementacjami wektorowymi Avalonia, bez aktywnych rastrów, `Image` lub `Bitmap`. Bieżący worktree ma jednak `releaseEligible=false`, ponieważ grupy matur głównych i poprawkowych 2019 i 2020, matur głównych 2021 PP i PR, matur głównych i poprawkowej 2022 PP oraz PR, matury głównej i poprawkowej 2023 PP oraz matur poprawkowych 2024 i 2025 PP wraz z osiemdziesięcioma czterema diagramami nie są objęte deklaracją.
+Treść arkusza ma status `approved` w `Content/provenance.json` na podstawie rozszerzenia `docs/ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r. Siedem figur jest autorskimi implementacjami wektorowymi Avalonia, bez aktywnych rastrów, `Image` lub `Bitmap`. Bieżący worktree ma `releaseEligible=true`, a wszystkie paczkowane grupy arkuszy oraz diagramów są objęte deklaracją właściciela z 1 września 2026 r.
 
-Deklaracja wskazuje źródła obu matur 2026, ich adresy i sumy SHA-256, zakres redystrybucji w Abiturii oraz dziesięć autorskich implementacji wektorowych Avalonia. Grupy `cke-2026-main-basic-exam` i `cke-2026-main-extended-exam` mają status `approved`, natomiast wspólny katalog `runtime-vector-diagrams` jest chwilowo `blocked` z powodu nowych definicji matury głównej i poprawkowej 2023 PP.
+Deklaracja wskazuje źródła obu matur 2026, ich adresy i sumy SHA-256, zakres redystrybucji w Abiturii oraz dziesięć autorskich implementacji wektorowych Avalonia. Grupy `cke-2026-main-basic-exam` i `cke-2026-main-extended-exam` mają status `approved`, natomiast wspólny katalog `runtime-vector-diagrams` ma status `approved` z powodu nowych definicji matury głównej i poprawkowej 2023 PP.
 
 ## Testy
 

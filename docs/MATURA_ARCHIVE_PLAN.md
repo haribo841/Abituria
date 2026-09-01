@@ -20,22 +20,21 @@ Arkusze od 2023 r. występują w dwóch formułach. Formuła 2023 jest przeznacz
 
 ## Stan bieżący
 
-Na `origin/main` znajduje się 7 aktywnych arkuszy: oba poziomy terminów głównych 2024, 2025 i 2026 oraz matura poprawkowa 2021 w Formule 2015. Bieżący worktree zawiera dodatkowo maturę główną 2023 PP, maturę poprawkową 2023 PP, maturę główną 2023 PR, matury poprawkowe 2024 i 2025 PP, matury główne i poprawkową 2021 i 2022 PP oraz PR, a także matury główne i poprawkowe 2020, 2019 i 2018 PP oraz PR w Formule 2015, dlatego lokalnie katalog ma 26 arkuszy. Żaden z dziewiętnastu lokalnie dodanych arkuszy nie jest jeszcze commitem ani częścią `origin/main`.
+Na `origin/main` znajduje się 26 aktywnych arkuszy: 11 w Formule 2023 i 15 w Formule 2015. Katalog obejmuje matury główne i poprawkowe Formuły 2023 z lat 2023-2025, matury główne PP i PR z 2026 oraz pełny ciąg głównych PP i PR oraz poprawek PP Formuły 2015 z lat 2018-2022. Wszystkie te arkusze są objęte deklaracją praw właściciela z 1 września 2026 r. i mają status `approved` w `Content/provenance.json`.
 
 | Rok | F2023 główna PP | F2023 główna PR | F2023 poprawkowa PP | F2015 główna PP | F2015 główna PR | F2015 poprawkowa PP |
 | --- | --- | --- | --- | --- | --- | --- |
 | 2026 | na `origin/main` | na `origin/main` | brak | brak | brak | brak |
-| 2025 | na `origin/main` | na `origin/main` | lokalnie, bez commita | brak | brak | brak |
-| 2024 | na `origin/main` | na `origin/main` | lokalnie, bez commita | brak | brak | brak |
-| 2023 | lokalnie, bez commita | lokalnie, bez commita | lokalnie, bez commita | brak | brak | brak |
-| 2022 | nie dotyczy | nie dotyczy | nie dotyczy | lokalnie, bez commita | lokalnie, bez commita | lokalnie, bez commita |
-| 2021 | nie dotyczy | nie dotyczy | nie dotyczy | lokalnie, bez commita | lokalnie, bez commita | na `origin/main` |
-| 2020 | nie dotyczy | nie dotyczy | nie dotyczy | lokalnie, bez commita | lokalnie, bez commita | lokalnie, bez commita |
-| 2019 | nie dotyczy | nie dotyczy | nie dotyczy | lokalnie, bez commita | lokalnie, bez commita | lokalnie, bez commita |
-| 2018 | nie dotyczy | nie dotyczy | nie dotyczy | lokalnie, bez commita | lokalnie, bez commita | lokalnie, bez commita |
+| 2025 | na `origin/main` | na `origin/main` | na `origin/main` | brak | brak | brak |
+| 2024 | na `origin/main` | na `origin/main` | na `origin/main` | brak | brak | brak |
+| 2023 | na `origin/main` | na `origin/main` | na `origin/main` | brak | brak | brak |
+| 2022 | nie dotyczy | nie dotyczy | nie dotyczy | na `origin/main` | na `origin/main` | na `origin/main` |
+| 2021 | nie dotyczy | nie dotyczy | nie dotyczy | na `origin/main` | na `origin/main` | na `origin/main` |
+| 2020 | nie dotyczy | nie dotyczy | nie dotyczy | na `origin/main` | na `origin/main` | na `origin/main` |
+| 2019 | nie dotyczy | nie dotyczy | nie dotyczy | na `origin/main` | na `origin/main` | na `origin/main` |
+| 2018 | nie dotyczy | nie dotyczy | nie dotyczy | na `origin/main` | na `origin/main` | na `origin/main` |
 
-Pełne archiwum z tabeli obejmuje 39 arkuszy: 12 w Formule 2023 i 27 w Formule 2015. Wobec 26 arkuszy dostępnych lokalnie brakuje 13. Węższy zakres, bez równoległych arkuszy Formuły 2015 z lat 2023-2026, obejmuje 27 arkuszy i pozostawia 1 brak.
-
+Pełne archiwum z tabeli obejmuje 39 arkuszy: 12 w Formule 2023 i 27 w Formule 2015. Wobec 26 zaimplementowanych arkuszy brakuje 13. Węższy zakres, bez równoległych arkuszy Formuły 2015 z lat 2023-2026, obejmuje 27 arkuszy i pozostawia jeden brak: maturę poprawkową PP Formuły 2023 z 2026 r.
 ## Kolejność wdrożenia
 
 ### Etap 0 - domknięcie obecnego 2023 PR

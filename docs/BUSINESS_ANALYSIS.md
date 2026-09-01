@@ -70,7 +70,7 @@ Użytkownik otrzymuje bezpłatny dostęp do lokalnej aplikacji, połączenie mat
 
 ### 4.3. Stan dystrybucji
 
-Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, a publiczne prerelease [`v0.9.2`](https://github.com/haribo841/Abituria/releases/tag/v0.9.2) stanowi kanał dystrybucji zatwierdzonej bety. Deklaracje z 3, 5, 10 i 12 sierpnia 2026 r. obejmują maturę rozszerzoną 2023, arkusze 2024, 2025 i 2026 na obu poziomach, zasady oceniania, transkrypcję 97 przykładów z informatorów CKE oraz trzydzieści pięć zatwierdzonych autorskich implementacji wektorowych Avalonia. Bieżący worktree ma jednak `releaseEligible=false`: matury główne i poprawkowe 2018, 2019 i 2020, matury główne 2021 PP i PR, matury główne i poprawkowa 2022 PP oraz PR, matura główna i poprawkowa 2023 PP oraz matury poprawkowe 2024 i 2025 PP wraz ze 103 pochodnymi diagramami oczekują na osobiste rozszerzenie deklaracji. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), macierze matur 2018-2026 oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
+Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, a publiczne prerelease [`v0.9.3`](https://github.com/haribo841/Abituria/releases/tag/v0.9.3) stanowi kanał dystrybucji zatwierdzonej bety. Deklaracje z 3, 5, 10 i 12 sierpnia oraz 1 września 2026 r. obejmują wszystkie paczkowane arkusze CKE 2018-2026, zasady oceniania, transkrypcję 97 przykładów z informatorów CKE i 195 zatwierdzonych implementacji wektorowych Avalonia. Bieżący worktree ma `releaseEligible=true`; szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), macierze matur 2018-2026 oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
 
 Koszty bieżącego wariantu obejmują przede wszystkim czas przygotowania treści, implementacji, testów, dokumentacji i utrzymania repozytorium. Aplikacja działa lokalnie, dlatego nie wymaga serwera aplikacyjnego ani przechowywania danych użytkowników przez zewnętrznego operatora.
 
@@ -119,10 +119,10 @@ Rzeczywiste daty najwcześniejszych weryfikowalnych stanów technicznych I-IV bi
 | Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | zrealizowane: pełny kurs `119/238/357`, dwadzieścia sześć aktywnych arkuszy z 722 jednostkami postępu, tablice i oddzielny postęp |
 | Tydzień 12 | M5a - testy i regresje | autor implementacji | zrealizowane ciągle: testy jednostkowe, integracyjne, UI i CI |
 | Tydzień 13 | M5b - dokumentacja i pakowanie | autor implementacji | technicznie zrealizowane: dokumentacja, workflow, paczki portable i smoke test |
-| Tydzień 14 | M6 - publiczne prerelease | autor implementacji, właściciel praw | osiągnięte: zatwierdzona proweniencja, tag, natywne workflow i publiczny GitHub Release `v0.9.2` |
+| Tydzień 14 | M6 - publiczne prerelease | autor implementacji, właściciel praw | osiągnięte: zatwierdzona proweniencja, tag, natywne workflow i publiczny GitHub Release `v0.9.3` |
 | 17 stycznia 2022 r. | M7 - publiczna obrona projektu historycznego | Adam Kubiś i komisja | osiągnięte: pokaz działającej aplikacji, pytania i odpowiedzi, decyzja pozytywna, wynik bardzo dobry; dowód w `DEFENSE_PROTOCOL.md` |
 
-M6 w tej tabeli dotyczy prerelease bieżącej migracji `0.9.2`, natomiast M7 dokumentuje rzeczywistą obronę historycznej wersji projektu w 2022 r. Są to odrębne zdarzenia i dowody.
+M6 w tej tabeli dotyczy prerelease bieżącej migracji `0.9.3`, natomiast M7 dokumentuje rzeczywistą obronę historycznej wersji projektu w 2022 r. Są to odrębne zdarzenia i dowody.
 
 Przed ustaleniem daty M6 należy potwierdzić wynik wszystkich bram dla dokładnego commita. Prawa do materiałów CKE, odziedziczonych grafik matematycznych oraz grafik aplikacji zostały odnotowane na podstawie oświadczenia właściciela z 19 lipca 2026 r.; nie zastępuje ono technicznego workflow publikacji.
 
@@ -141,7 +141,7 @@ Kryteria dzielą się na odbiór produktu i odbiór publicznego wydania:
 | Publiczne wydanie | istnieją tag, prerelease, działająca strona Pages i kontrola po publikacji | `RELEASE_PROCESS.md` |
 | Historyczna ocena projektu | siedem obszarów oceny i dziesięć warunków akceptacji jest odwzorowanych bez mieszania wersji WPF z migracją AvaloniaUI | `EVALUATION_PROTOCOL.md` |
 
-Spełnienie kryteriów technicznych nie zastępuje kryterium prawa do publicznej dystrybucji. Aktualny manifest ma `releaseEligible=false`, ponieważ grupy arkuszy 2018, 2019 i 2020, `cke-2021-main-basic-exam`, `cke-2021-main-extended-exam`, grupy arkuszy 2022 i 2023 PP, grupy poprawek 2024 i 2025 PP oraz rozszerzony katalog `runtime-vector-diagrams` są `blocked`. Zatwierdzone grupy pozostają ważne w swoim zakresie, lecz publiczne wydanie wymaga indywidualnego rozszerzenia deklaracji oraz zaliczenia twardej bramy proweniencji, pozostałych bramek i zweryfikowania rzeczywistego GitHub Release.
+Spełnienie kryteriów technicznych nie zastępuje kryterium prawa do publicznej dystrybucji. Aktualny manifest ma `releaseEligible=true`, ponieważ wszystkie paczkowane grupy mają status `approved` na podstawie deklaracji właściciela, w tym rozszerzenia z 1 września 2026 r. Każda zmiana źródła, zakresu lub sposobu pakowania wymaga indywidualnej oceny prawnej, twardej bramy proweniencji, pozostałych bramek i zweryfikowania rzeczywistego GitHub Release.
 
 Historyczny projekt został zaakceptowany i uzyskał wynik bardzo dobry. Zakres oraz ograniczenia tego dowodu opisuje `EVALUATION_PROTOCOL.md`. Wynik z 2022 r. nie jest oceną bieżącej migracji i nie zastępuje jej przyszłego procesu wydawniczego.
 

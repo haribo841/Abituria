@@ -77,6 +77,6 @@ Nie dodano aktywnych rastrów.
 
 ## Prawa i testy
 
-Grupa `cke-2022-correction-basic-exam` ma status `blocked` w `Content/provenance.json`, a `releaseEligible` pozostaje `false`. Nie ma jeszcze osobistego rozszerzenia deklaracji praw obejmującego ten arkusz Formuły 2015, zasady oceniania i pochodne diagramy.
+Grupa `cke-2022-correction-basic-exam` oraz katalog `runtime-vector-diagrams` mają status `approved` w `Content/provenance.json`. Rozszerzenie deklaracji właściciela z 1 września 2026 r. obejmuje ten arkusz Formuły 2015, zasady oceniania i pochodne diagramy wyłącznie jako integralną część Abiturii. Manifest ma `releaseEligible=true`.
 
 Test `Matura2022CorrectionBasicContentTests` kontroluje kontrakt 35/35/45, kolejność, strony, punkty, klucz odpowiedzi, źródła, sumy SHA-256, diagramy, proweniencję i wpis w spisie dokumentacji. Testy katalogu, UI i smoke testu kontrolują 26 aktywnych arkuszy oraz 722 jednostki postępu.

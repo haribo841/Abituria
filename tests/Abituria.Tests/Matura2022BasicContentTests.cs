@@ -128,7 +128,7 @@ public sealed class Matura2022BasicContentTests
     }
 
     [Fact]
-    public void Formula_2015_archive_remains_blocked_without_an_explicit_rights_declaration()
+    public void Formula_2015_archive_is_approved_after_explicit_rights_declaration()
     {
         using var provenance = JsonDocument.Parse(File.ReadAllText(Absolute("Content/provenance.json")));
         var root = provenance.RootElement;
@@ -139,9 +139,9 @@ public sealed class Matura2022BasicContentTests
         var coverage = File.ReadAllText(Absolute("docs/MATURA_2022_BASIC_COVERAGE.md"));
         var toc = File.ReadAllText(Absolute("docs/toc.yml"));
 
-        Assert.False(root.GetProperty("releaseEligible").GetBoolean());
-        Assert.Equal("blocked", groups["cke-2022-main-basic-exam"].GetProperty("distributionStatus").GetString());
-        Assert.Equal("blocked", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
+        Assert.True(root.GetProperty("releaseEligible").GetBoolean());
+        Assert.Equal("approved", groups["cke-2022-main-basic-exam"].GetProperty("distributionStatus").GetString());
+        Assert.Equal("approved", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
         Assert.Contains(PaperHash, groups["cke-2022-main-basic-exam"].GetProperty("source").GetString(), StringComparison.Ordinal);
         Assert.Contains(RulesHash, groups["cke-2022-main-basic-exam"].GetProperty("source").GetString(), StringComparison.Ordinal);
         Assert.DoesNotContain(PaperHash, rights, StringComparison.Ordinal);

@@ -143,7 +143,7 @@ public sealed class Matura2023CorrectionBasicContentTests
     }
 
     [Fact]
-    public void Archive_exam_and_derived_diagrams_remain_blocked_without_a_rights_declaration()
+    public void Archive_exam_and_derived_diagrams_are_approved_after_explicit_rights_declaration()
     {
         using var provenance = JsonDocument.Parse(File.ReadAllText(Absolute("Content/provenance.json")));
         var root = provenance.RootElement;
@@ -153,9 +153,9 @@ public sealed class Matura2023CorrectionBasicContentTests
         var rights = File.ReadAllText(Absolute("docs/ASSET_RIGHTS_DECLARATION.md"));
         var coverage = File.ReadAllText(Absolute("docs/MATURA_2023_CORRECTION_BASIC_COVERAGE.md"));
 
-        Assert.False(root.GetProperty("releaseEligible").GetBoolean());
-        Assert.Equal("blocked", groups["cke-2023-correction-basic-exam"].GetProperty("distributionStatus").GetString());
-        Assert.Equal("blocked", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
+        Assert.True(root.GetProperty("releaseEligible").GetBoolean());
+        Assert.Equal("approved", groups["cke-2023-correction-basic-exam"].GetProperty("distributionStatus").GetString());
+        Assert.Equal("approved", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
         Assert.Contains(PaperHash, groups["cke-2023-correction-basic-exam"].GetProperty("source").GetString(), StringComparison.Ordinal);
         Assert.Contains(RulesHash, groups["cke-2023-correction-basic-exam"].GetProperty("source").GetString(), StringComparison.Ordinal);
         Assert.DoesNotContain(PaperHash, rights, StringComparison.Ordinal);

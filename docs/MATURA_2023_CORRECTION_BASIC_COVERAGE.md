@@ -60,7 +60,7 @@ Suma punktów: **46**. Liczba oficjalnych zadań: **33**. Liczba jednostek post�
 
 ## Ograniczenia prawne
 
-Grupa `cke-2023-correction-basic-exam` w `Content/provenance.json` ma status `blocked`. Brak bezpośredniego, osobistego rozszerzenia deklaracji na arkusz, zasady oceniania i ich transkrypcję oznacza, że materiał nie może wejść do publicznego wydania. Informacja o archiwalnym adresie pobrania nie jest oświadczeniem o licencji ani zgodzie na redystrybucję.
+Grupa `cke-2023-correction-basic-exam` w `Content/provenance.json` ma status `approved`. Rozszerzenie deklaracji właściciela z 1 września 2026 r. obejmuje arkusz, zasady oceniania i ich transkrypcję wyłącznie jako integralną część Abiturii. Informacja o archiwalnym adresie pobrania pozostaje dowodem źródłowym, a nie samodzielną licencją.
 
 Pięć własnych definicji wektorowych `exam-mm23-p0p-z01`, `exam-mm23-p0p-z14`, `exam-mm23-p0p-z24`, `exam-mm23-p0p-z29` i `exam-mm23-p0p-z32` odtwarza osie odpowiedzi, wykres, trapez, bryłę i wykres słupkowy. Mają opisy alternatywne, strony źródłowe i są renderowane przez `DiagramView` bez aktywnych rastrów. Stanowią implementację techniczną, a nie rozszerzenie prawa do redystrybucji materiału źródłowego.
 

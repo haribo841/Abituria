@@ -8,6 +8,28 @@ public sealed class ContentProvenanceTests
 {
     private static readonly string RepositoryRoot = FindRepositoryRoot();
     private static readonly string[] DistributionStatuses = ["approved", "blocked"];
+    private static readonly string[] NewlyApprovedGroupIds =
+    [
+        "cke-2018-main-basic-exam",
+        "cke-2018-main-extended-exam",
+        "cke-2018-correction-basic-exam",
+        "cke-2019-main-basic-exam",
+        "cke-2019-main-extended-exam",
+        "cke-2019-correction-basic-exam",
+        "cke-2020-main-basic-exam",
+        "cke-2020-main-extended-exam",
+        "cke-2020-correction-basic-exam",
+        "cke-2021-main-basic-exam",
+        "cke-2021-main-extended-exam",
+        "cke-2022-main-basic-exam",
+        "cke-2022-main-extended-exam",
+        "cke-2022-correction-basic-exam",
+        "cke-2023-main-basic-exam",
+        "cke-2023-correction-basic-exam",
+        "cke-2024-correction-basic-exam",
+        "cke-2025-correction-basic-exam",
+        "runtime-vector-diagrams"
+    ];
     private static readonly JsonSerializerOptions ManifestJsonOptions = new()
     {
         PropertyNameCaseInsensitive = true
@@ -61,6 +83,26 @@ public sealed class ContentProvenanceTests
 
         Assert.Equal(blockers.Length == 0, manifest.ReleaseEligible);
         Assert.All(blockers, blocker => Assert.False(string.IsNullOrWhiteSpace(blocker.BlockedReason)));
+    }
+
+    [Fact]
+    public void Owner_declaration_approves_all_packaged_exam_groups_and_diagrams()
+    {
+        var manifest = ReadManifest();
+        var declaration = File.ReadAllText(Absolute("docs/ASSET_RIGHTS_DECLARATION.md"));
+        var approvedGroups = manifest.Assets
+            .Where(asset => NewlyApprovedGroupIds.Contains(asset.Id, StringComparer.Ordinal))
+            .ToArray();
+
+        Assert.True(manifest.ReleaseEligible);
+        Assert.DoesNotContain(manifest.Assets, asset => asset.DistributionStatus == "blocked");
+        Assert.Equal(19, approvedGroups.Length);
+        Assert.All(approvedGroups, group =>
+        {
+            Assert.Equal("approved", group.DistributionStatus);
+            Assert.Contains(group.Id, declaration, StringComparison.Ordinal);
+        });
+        Assert.Contains("1 września 2026 r.", declaration, StringComparison.Ordinal);
     }
 
     private static ProvenanceManifest ReadManifest() => JsonSerializer.Deserialize<ProvenanceManifest>(

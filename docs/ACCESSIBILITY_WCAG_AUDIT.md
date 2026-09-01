@@ -1,6 +1,6 @@
 # Audyt dostępności WCAG 2.2 A/AA
 
-Wersja aplikacji: `0.9.2`.
+Wersja aplikacji: `0.9.3`.
 
 Data przeglądu: 24 lipca 2026 r.
 

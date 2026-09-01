@@ -81,4 +81,4 @@ Testy interfejsu obejmują wybór dwudziestu sześciu arkuszy, losowanie ogranic
 
 Grupa `cke-2024-main-basic-exam` w `Content/provenance.json` ma status `approved`. Osobiste rozszerzenie `docs/ASSET_RIGHTS_DECLARATION.md` z 10 sierpnia 2026 r. obejmuje arkusz MMAP-P0-100-A-2405, zasady MMAP-P0-100-2405 i ich transkrypcję wyłącznie jako integralną część Abiturii.
 
-Grupa tego arkusza pozostaje `approved`, ale bieżący worktree ma `releaseEligible=false` przez osobno zablokowane grupy matur głównych i poprawkowych 2019 i 2020, matur głównych 2021 PP i PR, matur głównych i poprawkowej 2022 PP oraz PR, matury głównej i poprawkowej 2023 PP oraz matur poprawkowych 2024 i 2025 PP wraz z osiemdziesięcioma czterema diagramami. Zwykła walidacja proweniencji musi przechodzić; `Test-ContentProvenance.ps1 -RequireReleaseEligible` nie może przejść przed rozszerzeniem deklaracji.
+Grupa tego arkusza ma status `approved`. Manifest ma `releaseEligible=true` na podstawie rozszerzenia deklaracji właściciela z 1 września 2026 r. Zwykła walidacja proweniencji oraz `Test-ContentProvenance.ps1 -RequireReleaseEligible` muszą przechodzić przed każdym wydaniem.

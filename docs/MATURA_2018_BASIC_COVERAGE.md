@@ -39,4 +39,4 @@ Osiem definicji wektorowych Avalonia `exam-mm18-p0-z14`, `exam-mm18-p0-z16`, `ex
 
 `Matura2018ContentTests` kontroluje źródła, sumy SHA-256, kontrakt `34/34/50`, strony, punktację, tryby odpowiedzi, wyniki liczbowe i osiem diagramów. Testy katalogu, UI i smoke testu kontrolują 26 aktywnych arkuszy, 722 jednostki postępu i 195 diagramów.
 
-Grupa `cke-2018-main-basic-exam` oraz katalog `runtime-vector-diagrams` mają status `blocked`. `releaseEligible=false` pozostaje prawdziwe do czasu osobistego rozszerzenia deklaracji praw do redystrybucji arkusza i zasad oceniania.
+Grupa `cke-2018-main-basic-exam` oraz katalog `runtime-vector-diagrams` mają status `approved`. Manifest ma `releaseEligible=true` na podstawie rozszerzenia deklaracji właściciela z 1 września 2026 r. Każda zmiana źródeł, zakresu lub sposobu pakowania wymaga ponownej oceny i pełnej bramy proweniencji.

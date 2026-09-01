@@ -109,7 +109,7 @@ public sealed class Matura2019ContentTests
     }
 
     [Fact]
-    public void Nineteen_vector_definitions_are_referenced_by_2019_exams_and_remain_blocked()
+    public void Nineteen_vector_definitions_are_referenced_by_2019_exams_and_are_approved()
     {
         var basic = Read<ExamCatalog>("Content/exam-2019-main-basic.json").Exam;
         var extended = Read<ExamCatalog>("Content/exam-2019-main-extended.json").Exam;
@@ -136,11 +136,11 @@ public sealed class Matura2019ContentTests
             Assert.NotEmpty(definition.Primitives);
             Assert.Contains(definition.SourceId, ExpectedDiagramSourceIds);
         });
-        Assert.False(provenance.RootElement.GetProperty("releaseEligible").GetBoolean());
-        Assert.Equal("blocked", groups["cke-2019-main-basic-exam"].GetProperty("distributionStatus").GetString());
-        Assert.Equal("blocked", groups["cke-2019-main-extended-exam"].GetProperty("distributionStatus").GetString());
-        Assert.Equal("blocked", groups["cke-2019-correction-basic-exam"].GetProperty("distributionStatus").GetString());
-        Assert.Equal("blocked", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
+        Assert.True(provenance.RootElement.GetProperty("releaseEligible").GetBoolean());
+        Assert.Equal("approved", groups["cke-2019-main-basic-exam"].GetProperty("distributionStatus").GetString());
+        Assert.Equal("approved", groups["cke-2019-main-extended-exam"].GetProperty("distributionStatus").GetString());
+        Assert.Equal("approved", groups["cke-2019-correction-basic-exam"].GetProperty("distributionStatus").GetString());
+        Assert.Equal("approved", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
         DiagramCatalogValidator.Validate(diagrams);
     }
 

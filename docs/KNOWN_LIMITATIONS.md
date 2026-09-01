@@ -1,10 +1,10 @@
-# Znane ograniczenia `0.9.2`
+# Znane ograniczenia `0.9.3`
 
 Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest automatycznie błędem, ale każde zachowanie wykraczające poza poniższy opis należy zgłosić.
 
 ## Status publikacji
 
-- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=false`. Szesnaście grup obejmujących matury 2019 i 2020, matury główne 2021, matury 2022, matury PP 2023, poprawki 2024 i 2025 PP oraz `runtime-vector-diagrams` ma status `blocked`, ponieważ deklaracja nie obejmuje jeszcze arkuszy MMA-P1_1P-192, MMA-R1_1P-192, MMA-P1_1P-194, MMA-P1_1P-202, MMA-R1_1P-202, MMA-P1_1P-204, EMAP-P0-100-2105, EMAP-R0-100-2105, EMAP-P0-100-2205, EMAP-R0-100-2205, EMAP-P0-100-2208, MMAP-P0-100-2305, MMAP-P0-100-2308, MMAP-P0-100-2408 i MMAP-P0-100-2508, ich zasad ani osiemdziesięciu czterech nowych figur. Zatwierdzone grupy zachowują swój status, lecz każde publiczne wydanie wymaga ponownej oceny.
+- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=true`. Wszystkie paczkowane transkrypcje arkuszy CKE oraz katalog `runtime-vector-diagrams` mają status `approved` na podstawie deklaracji właściciela z 1 września 2026 r. Każda zmiana źródła, zakresu lub sposobu pakowania wymaga ponownej oceny i pełnej bramy wydania.
 - Rzeczywiste autorstwo i źródła są przypisane w `Content/provenance.json`. Przed tagiem trzeba ponownie przejść bramę `-RequireReleaseEligible` na dokładnym commicie wydania.
 - Lokalnie zbudowany artefakt nie jest oficjalnym wydaniem, nawet jeśli przechodzi testy techniczne.
 

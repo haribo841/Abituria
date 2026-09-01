@@ -107,3 +107,19 @@ Na podstawie bezpośredniej decyzji właściciela repozytorium Adam Kubiś rozsz
 - zasady oceniania poziomu rozszerzonego 2023: `https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Arkusze_egzaminacyjne/2023/Matematyka/poziom_rozszerzony/MMAP-R0-100-2305-zasady.pdf`, SHA-256 `B8FECD4D23811033E0DFF6C532A405F04ECE0CCC469A6D60412E353F1BBDBD2B`.
 
 Nowe diagramy są autorską implementacją matematycznej treści w obsługiwanych prymitywach Avalonia i nie są kopiami rastrów ani samodzielnymi reprodukcjami plików PDF. Rozszerzenie nie przypisuje Adamowi Kubisiowi autorstwa materiałów CKE, nie przenosi praw na odbiorców i nie udziela samodzielnej licencji na źródłowe PDF-y lub wyodrębnione transkrypcje. Zachowuje wszystkie ograniczenia pierwotnej deklaracji, a jednocześnie stanowi podstawę statusu `approved` wymienionych grup w `Content/provenance.json`.
+## Rozszerzenie deklaracji z 1 września 2026 r.
+
+Adam Kubiś, właściciel repozytorium i opiekun bieżącej implementacji Abiturii, potwierdza posiadanie praw lub skutecznego upoważnienia do publicznej redystrybucji niżej wskazanych materiałów CKE wyłącznie jako integralnej części Abiturii:
+
+- `cke-2018-main-basic-exam`, `cke-2018-main-extended-exam` i `cke-2018-correction-basic-exam`;
+- `cke-2019-main-basic-exam`, `cke-2019-main-extended-exam` i `cke-2019-correction-basic-exam`;
+- `cke-2020-main-basic-exam`, `cke-2020-main-extended-exam` i `cke-2020-correction-basic-exam`;
+- `cke-2021-main-basic-exam` i `cke-2021-main-extended-exam`;
+- `cke-2022-main-basic-exam`, `cke-2022-main-extended-exam` i `cke-2022-correction-basic-exam`;
+- `cke-2023-main-basic-exam` i `cke-2023-correction-basic-exam`;
+- `cke-2024-correction-basic-exam` i `cke-2025-correction-basic-exam`;
+- `runtime-vector-diagrams`, rozszerzony do 195 deterministycznych definicji, w tym 103 figur pochodnych z wymienionych arkuszy.
+
+Zakres obejmuje strukturalne transkrypcje zadań, odpowiedzi, rozwiązań i kryteriów oceniania oraz własne implementacje wektorowe Avalonia powiązane z tymi arkuszami. Dokładne adresy źródeł, sumy SHA-256, daty weryfikacji i przypisanie stron są zapisane w `Content/provenance.json` oraz macierzach `MATURA_2018_*_COVERAGE.md` do `MATURA_2025_CORRECTION_BASIC_COVERAGE.md`.
+
+Rozszerzenie stanowi podstawę ustawienia statusu `approved` dla wymienionych grup i wartości `releaseEligible=true` w manifeście. Nie przypisuje Adamowi Kubisiowi autorstwa materiałów CKE, nie przenosi praw na odbiorców i nie udziela samodzielnej licencji na źródłowe pliki PDF ani na wyodrębnione transkrypcje poza Abiturią.

@@ -285,8 +285,8 @@ public sealed class Matura2026ContentTests
         var toc = File.ReadAllText(Absolute("docs/toc.yml"));
 
         Assert.Equal("approved", groups["cke-2026-main-basic-exam"].GetProperty("distributionStatus").GetString());
-        Assert.False(root.GetProperty("releaseEligible").GetBoolean());
-        Assert.Equal("blocked", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
+        Assert.True(root.GetProperty("releaseEligible").GetBoolean());
+        Assert.Equal("approved", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
         Assert.Contains("MMAP-P0-100-A-2605", rights, StringComparison.Ordinal);
         Assert.Contains(PaperHash, rights, StringComparison.Ordinal);
         Assert.Contains(RulesHash, rights, StringComparison.Ordinal);

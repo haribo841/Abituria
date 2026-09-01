@@ -57,6 +57,6 @@ Suma punktów: **46**. Liczba oficjalnych zadań: **31**. Liczba jednostek post�
 
 ## Prawa i wydanie
 
-Grupa cke-2023-main-basic-exam ma w Content/provenance.json status blocked. Do czasu osobistego rozszerzenia deklaracji praw do redystrybucji arkusza i zasad oceniania nie wolno oznaczać wydania zawierającego tę transkrypcję jako publicznie dopuszczonego.
+Grupa cke-2023-main-basic-exam ma w Content/provenance.json status approved. Rozszerzenie deklaracji właściciela z 1 września 2026 r. pozwala umieścić tę transkrypcję w publicznym wydaniu wyłącznie jako integralną część Abiturii.
 
-Osiem diagramów odtwarza zależności matematyczne jako deterministyczne prymitywy Avalonia. Nie zawierają rastrów PDF, lecz katalog runtime-vector-diagrams także pozostaje tymczasowo zablokowany, ponieważ jego dotychczasowa deklaracja obejmowała 92 definicje, a katalog zawiera już 176.
+Osiem diagramów odtwarza zależności matematyczne jako deterministyczne prymitywy Avalonia. Nie zawierają rastrów PDF. Katalog `runtime-vector-diagrams` ma status `approved` i obejmuje wszystkie 195 aktualnych definicji na podstawie rozszerzenia z 1 września 2026 r.

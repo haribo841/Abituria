@@ -45,9 +45,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - podpisywanie kodu i paczek,
 - paczka macOS dla Apple Silicon.
 
-Manifest `Content/provenance.json` ma obecnie `releaseEligible=false`. Rozszerzenia deklaracji właściciela z 3, 5, 10 i 12 sierpnia 2026 r. obejmują zatwierdzone arkusze i materiały CKE, ale nie matury 2018, 2019 i 2020, matury główne 2021, matury główne i poprawkową 2022, maturę główną i poprawkową 2023 PP ani matury poprawkowe 2024 i 2025 PP, wraz ze 103 nowymi diagramami. Każdy przyszły publiczny prerelease wymaga pełnej checklisty wydania, zweryfikowanego workflow i uzupełnionej deklaracji praw.
-
-## Zastąpione
+Manifest `Content/provenance.json` ma obecnie `releaseEligible=true`. Rozszerzenie deklaracji właściciela z 1 września 2026 r. obejmuje wszystkie paczkowane arkusze CKE 2018-2026 i 195 diagramów wektorowych. Każdy przyszły publiczny prerelease nadal wymaga pełnej checklisty wydania, zweryfikowanego workflow i ponownej oceny podstawy prawnej przy zmianie zakresu.## Zastąpione
 
 - WPF, `NavigationWindow` i własne obramowanie okna przez AvaloniaUI,
 - prototyp SQL Server LocalDB przez lokalne SQLite,

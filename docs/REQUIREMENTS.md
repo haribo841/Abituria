@@ -215,7 +215,7 @@ System nie zakłada kont administratora, ról sieciowych ani synchronizacji wiel
 
 ## 11. Kryteria akceptacji projektu
 
-Kryteria techniczne bieżącej wersji, publiczna obrona 17 stycznia 2022 r., późniejszy historyczny odbiór przez prowadzącego i publiczna publikacja bieżącej migracji są odrębnymi stanami. Obrona zakończyła się pozytywną decyzją komisji i wynikiem bardzo dobrym. Historyczny projekt został również zaakceptowany przez prowadzącego na początku lutego 2022 r. zgodnie z poświadczeniem właściciela zapisanym 19 lipca 2026 r. Kryteria dotyczące tagu, proweniencji i GitHub Release pozostają warunkami osobnej publikacji `0.9.2`, a nie warunkami ponownego zatwierdzenia decyzji historycznych.
+Kryteria techniczne bieżącej wersji, publiczna obrona 17 stycznia 2022 r., późniejszy historyczny odbiór przez prowadzącego i publiczna publikacja bieżącej migracji są odrębnymi stanami. Obrona zakończyła się pozytywną decyzją komisji i wynikiem bardzo dobrym. Historyczny projekt został również zaakceptowany przez prowadzącego na początku lutego 2022 r. zgodnie z poświadczeniem właściciela zapisanym 19 lipca 2026 r. Kryteria dotyczące tagu, proweniencji i GitHub Release pozostają warunkami osobnej publikacji `0.9.3`, a nie warunkami ponownego zatwierdzenia decyzji historycznych.
 
 Zakres techniczny i wydawniczy jest oceniany według poniższych warunków:
 
@@ -283,15 +283,15 @@ Lokalna implementacja obejmuje pełny kontrakt `119/238/357`, filtr poziomu, ćw
 
 ## Status Issue #7
 
-Techniczny inwentarz licencji i proweniencji obejmuje maturę CKE 2023 na poziomie rozszerzonym, matury CKE 2024, 2025 i 2026 na poziomie podstawowym lub rozszerzonym, ich zasady oceniania oraz trzydzieści pięć autorskich implementacji wektorowych Avalonia. Rozszerzenia deklaracji właściciela z 3, 5, 10 i 12 sierpnia 2026 r. obejmują zatwierdzone arkusze 2023, 2024, 2025 i 2026, 97 przykładów z informatorów CKE i wskazane diagramy. Grupy `cke-2023-main-extended-exam`, `cke-2024-main-basic-exam` oraz `cke-2024-main-extended-exam` mają status `approved`. Zwykła walidacja proweniencji musi przechodzić na bieżącym worktree, natomiast `Test-ContentProvenance.ps1 -RequireReleaseEligible` pozostaje zablokowany do czasu rozszerzenia deklaracji o dziewiętnaście grup `blocked`, w tym matury 2018, 2019 i 2020, matury główne 2021 i matury główne oraz poprawkową 2022 Formuły 2015. Issue #7 uzyskało wymagane rozszerzenie deklaracji dla wcześniej zatwierdzonego zakresu.
+Techniczny inwentarz licencji i proweniencji obejmuje maturę CKE 2023 na poziomie rozszerzonym, matury CKE 2024, 2025 i 2026 na poziomie podstawowym lub rozszerzonym, ich zasady oceniania oraz trzydzieści pięć autorskich implementacji wektorowych Avalonia. Rozszerzenia deklaracji właściciela z 3, 5, 10 i 12 sierpnia 2026 r. obejmują zatwierdzone arkusze 2023, 2024, 2025 i 2026, 97 przykładów z informatorów CKE i wskazane diagramy. Grupy `cke-2023-main-extended-exam`, `cke-2024-main-basic-exam` oraz `cke-2024-main-extended-exam` mają status `approved`. Zwykła walidacja proweniencji oraz `Test-ContentProvenance.ps1 -RequireReleaseEligible` muszą przechodzić na bieżącym worktree. Rozszerzenie deklaracji właściciela z 1 września 2026 r. zatwierdza dziewiętnaście wcześniej zablokowanych grup, w tym matury 2018-2020, matury główne 2021 i matury główne oraz poprawkową 2022 Formuły 2015, wraz z katalogiem diagramów.
 
 ## Status issue #36
 
-Repozytorium zawiera kompletny proces wydania wersji `0.9.2`: jedno źródło wersji, .NET 10 LTS, lockfile, audyt, paczki portable dla trzech systemów, diagnostyczny smoke test, ekran "O programie", dokumentację, sumy, SBOM i atestacje. Opublikowany prerelease jest śledzony pod adresem `https://github.com/haribo841/Abituria/releases/tag/v0.9.2`, ale bieżący manifest ma `releaseEligible=false`, dopóki właściciel nie rozszerzy deklaracji na wszystkie zablokowane arkusze CKE i ich diagramy.
+Repozytorium zawiera kompletny proces wydania wersji `0.9.3`: jedno źródło wersji, .NET 10 LTS, lockfile, audyt, paczki portable dla trzech systemów, diagnostyczny smoke test, ekran "O programie", dokumentację, sumy, SBOM i atestacje. Przygotowywany prerelease jest śledzony pod adresem `https://github.com/haribo841/Abituria/releases/tag/v0.9.3`, a bieżący manifest ma `releaseEligible=true` po rozszerzeniu deklaracji właściciela na wszystkie paczkowane arkusze CKE i ich diagramy.
 
 ## Status Issue #9
 
-Bieżące [haribo841/Abituria#9](https://github.com/haribo841/Abituria/issues/9) wymaga utrzymania kompletnej analizy biznesowej obejmującej cele, użytkowników, model udostępniania, zakres, harmonogram, licencję, metodykę wymagań i architekturę. Aktywny dokument [BUSINESS_ANALYSIS.md](BUSINESS_ANALYSIS.md) zawiera weryfikowalne wymagania, testy i bramę pochodzenia zasobów. Historyczny kontekst pozostaje wyłącznie pod pełnym adresem [Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski#38](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38), bez zmian w starym repozytorium. Bieżące `releaseEligible=false` odzwierciedla bezpieczną blokadę nowej transkrypcji matury 2023 PP do czasu rozszerzenia praw.
+Bieżące [haribo841/Abituria#9](https://github.com/haribo841/Abituria/issues/9) wymaga utrzymania kompletnej analizy biznesowej obejmującej cele, użytkowników, model udostępniania, zakres, harmonogram, licencję, metodykę wymagań i architekturę. Aktywny dokument [BUSINESS_ANALYSIS.md](BUSINESS_ANALYSIS.md) zawiera weryfikowalne wymagania, testy i bramę pochodzenia zasobów. Historyczny kontekst pozostaje wyłącznie pod pełnym adresem [Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski#38](https://github.com/Projekt-Inzynierski-AK-AS-FD/Projekt-Inzynierski/issues/38), bez zmian w starym repozytorium. Bieżące `releaseEligible=true` odzwierciedla zatwierdzenie wszystkich paczkowanych transkrypcji przez deklarację właściciela z 1 września 2026 r.
 
 ## Status issue #43
 
@@ -299,7 +299,7 @@ Issue #43 dotyczyło odbioru czterech przyrostów, prototypowania, testów użyt
 
 Nie zachowano dokładnego dnia odbioru, osobnych dat decyzji dla I-III przyrostu, liczby i danych uczestników, kart sesji, komentarzy, powiązania poprawek z uczestnikami, kanału przekazania ani hasha historycznego pakietu. Protokoły ujawniają te braki i nie zastępują ich fikcyjnymi danymi. Późniejsze poprawki H-01-H-03 są wynikiem przeglądu heurystycznego z 2026 r. i nie są przypisywane uczestnikom.
 
-Na tej podstawie historyczny odbiór ma status `ACCEPTED - READY TO CLOSE`. Publiczny GitHub Release `0.9.2` pozostaje odrębnym działaniem bieżącej migracji i nie jest przedstawiany jako dowód historycznego odbioru.
+Na tej podstawie historyczny odbiór ma status `ACCEPTED - READY TO CLOSE`. Publiczny GitHub Release `0.9.3` pozostaje odrębnym działaniem bieżącej migracji i nie jest przedstawiany jako dowód historycznego odbioru.
 
 ## Status issue #44
 
@@ -315,4 +315,4 @@ Issue #45 definiowało siedem obszarów oceny, dziesięć warunków akceptacji o
 
 Historyczny produkt WPF został zaprezentowany 17 stycznia 2022 r., miał paczkę `v1.0.0` dostępną przed obroną i końcowe wydanie `v1.0.1` z 18 stycznia 2022 r. Komisja wydała decyzję pozytywną, a projekt i obrona uzyskały wynik bardzo dobry według poświadczenia właściciela. Nagranie dostępne przez link potwierdza prezentację, demonstrację i pytania, ale nie obejmuje ogłoszenia wyniku. Nie zachowano podpisanej karty oceny, pisemnej opinii prowadzącego ani ocen indywidualnych i dokumentacja nie rekonstruuje ich przez domysł.
 
-Bieżąca migracja AvaloniaUI `0.9.2` ma osobne dowody techniczne i nie była przedmiotem komisji z 2022 r. Jej publiczny GitHub Release jest odrębnym procesem wydawniczym. Stan historycznego zakresu: `ACCEPTED - HISTORICAL CRITERIA SATISFIED - READY TO CLOSE AS COMPLETED`.
+Bieżąca migracja AvaloniaUI `0.9.3` ma osobne dowody techniczne i nie była przedmiotem komisji z 2022 r. Jej publiczny GitHub Release jest odrębnym procesem wydawniczym. Stan historycznego zakresu: `ACCEPTED - HISTORICAL CRITERIA SATISFIED - READY TO CLOSE AS COMPLETED`.

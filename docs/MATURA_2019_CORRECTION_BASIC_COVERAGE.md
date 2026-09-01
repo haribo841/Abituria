@@ -38,4 +38,4 @@ Wektorowe definicje `exam-mm19-p0p-z08`, `exam-mm19-p0p-z14`, `exam-mm19-p0p-z16
 
 `Matura2019ContentTests` kontroluje źródła, sumy SHA-256, kontrakt `34/34/50`, punktację, tryby odpowiedzi, wyniki liczbowe i sześć diagramów. Testy katalogu, UI i smoke testu kontrolują 26 aktywnych arkuszy, 722 jednostki postępu i 195 diagramów.
 
-Grupa `cke-2019-correction-basic-exam` oraz katalog `runtime-vector-diagrams` mają status `blocked`. Brak bezpośredniego archiwalnego adresu CKE jest jawnie odnotowany w proweniencji. `releaseEligible=false` pozostaje prawdziwe do czasu osobistego rozszerzenia deklaracji praw.
+Grupa `cke-2019-correction-basic-exam` oraz katalog `runtime-vector-diagrams` mają status `approved`. Informacja o archiwalnym adresie CKE pozostaje jawnie odnotowana w proweniencji. Manifest ma `releaseEligible=true` na podstawie rozszerzenia deklaracji właściciela z 1 września 2026 r. Każda zmiana źródeł, zakresu lub sposobu pakowania wymaga ponownej oceny i pełnej bramy proweniencji.

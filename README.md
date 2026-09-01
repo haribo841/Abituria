@@ -2,20 +2,20 @@
 
 Abituria to działająca offline aplikacja desktopowa wspierająca naukę matematyki na poziomie szkoły średniej. Aktualna implementacja używa C#, .NET 10 LTS i AvaloniaUI 12. Dane profili oraz postęp są przechowywane lokalnie w SQLite.
 
-Bieżące publiczne wydanie beta: [`0.9.2`](https://github.com/haribo841/Abituria/releases/tag/v0.9.2).
+Bieżące publiczne wydanie beta: [`0.9.3`](https://github.com/haribo841/Abituria/releases/tag/v0.9.3).
 
 > [!IMPORTANT]
-> Bieżący worktree ma `releaseEligible=false`. Dodane adaptacje matur głównych i poprawkowych 2018, 2019 i 2020 PP, matur głównych 2021 PP i PR, matur głównych i poprawkowej 2022 PP oraz PR, matury głównej i poprawkowej 2023 PP oraz matur poprawkowych 2024 i 2025 PP wraz ze 103 nowymi diagramami pozostają zablokowane do czasu osobistego rozszerzenia deklaracji praw. Opublikowane `0.9.2` zachowuje wcześniejszy, zatwierdzony zakres i nie obejmuje tych lokalnych zmian.
+> Manifest ma `releaseEligible=true`. Rozszerzenie deklaracji praw właściciela z 1 września 2026 r. obejmuje wszystkie paczkowane transkrypcje arkuszy CKE oraz 195 diagramów wektorowych wyłącznie jako integralną część Abiturii. Każde kolejne wydanie nadal wymaga pełnej bramy proweniencji.
 
 ## Pobieranie
 
-Zweryfikowane paczki są dostępne w [GitHub Releases](https://github.com/haribo841/Abituria/releases/tag/v0.9.2):
+Zweryfikowane paczki są dostępne w [GitHub Releases](https://github.com/haribo841/Abituria/releases/tag/v0.9.3):
 
 | System | Paczka | Deklarowane środowisko beta |
 | --- | --- | --- |
-| Windows | `Abituria-v0.9.2-win-x64.exe` | Windows 11 24H2 x64 |
-| Ubuntu | `Abituria-v0.9.2-linux-x64.tar.gz` | Ubuntu 24.04 x64 |
-| macOS | `Abituria-v0.9.2-osx-x64.zip` | macOS 15 na komputerze Intel |
+| Windows | `Abituria-v0.9.3-win-x64.exe` | Windows 11 24H2 x64 |
+| Ubuntu | `Abituria-v0.9.3-linux-x64.tar.gz` | Ubuntu 24.04 x64 |
+| macOS | `Abituria-v0.9.3-osx-x64.zip` | macOS 15 na komputerze Intel |
 
 Artefakty są samowystarczalne i nie wymagają instalacji środowiska .NET. Windows otrzymuje pojedynczy plik EXE, natomiast Ubuntu i macOS pozostają wydaniami portable w archiwach. Nie ma instalatora, automatycznej aktualizacji, podpisu kodu ani AOT. Dla Windows dodatkowe archiwum ZIP zachowuje pełne dowody licencyjne i SBOM. Przed uruchomieniem należy sprawdzić sumę SHA-256 oraz attestation artefaktu.
 
@@ -47,7 +47,7 @@ Szczegółową instrukcję korzystania z tych funkcji zawiera [podręcznik użyt
 
 1. Pobierz artefakt przeznaczony dla swojego systemu oraz `SHA256SUMS.txt` z tego samego wydania.
 2. Zweryfikuj sumę i attestation zgodnie z [instrukcją instalacji](docs/INSTALLATION.md#sprawdzenie-integralności-i-pochodzenia).
-3. Na Windows zapisz pojedynczy plik EXE w nowym katalogu. Na Ubuntu i macOS rozpakuj aplikację do nowego katalogu i wejdź do utworzonego podkatalogu `Abituria-v0.9.2-<rid>`.
+3. Na Windows zapisz pojedynczy plik EXE w nowym katalogu. Na Ubuntu i macOS rozpakuj aplikację do nowego katalogu i wejdź do utworzonego podkatalogu `Abituria-v0.9.3-<rid>`.
 4. Uruchom plik EXE Windows, `Abituria` albo `Abituria.app`, zależnie od systemu.
 5. Wybierz profil gościa lub utwórz lokalne konto.
 
@@ -114,17 +114,17 @@ Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalneg
 | [Zależności](docs/DEPENDENCIES.md) | dokładnie rozwiązane pakiety produkcyjne i testowe |
 | [Pochodzenie treści](docs/CONTENT_PROVENANCE.md) | zasady dopuszczania treści, fontów i obrazów do paczek oraz oświadczenie o prawach |
 | [Plan archiwum matur 2026-2018](docs/MATURA_ARCHIVE_PLAN.md) | stan arkuszy na `origin/main` i lokalnie, braki oraz etapy uzupełnienia Formuł 2023 i 2015 |
-| [Matura maj 2019 PP - Formuła 2015](docs/MATURA_2019_BASIC_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 34/34/50, diagramy i blokada proweniencji |
-| [Matura maj 2019 PR - Formuła 2015](docs/MATURA_2019_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 15/15/50, diagramy i blokada proweniencji |
-| [Matura poprawkowa 2019 PP - Formuła 2015](docs/MATURA_2019_CORRECTION_BASIC_COVERAGE.md) | przypięte źródła z archiwum publicznego, SHA-256, kontrakt 34/34/50, diagramy i blokada proweniencji |
-| [Matura maj 2018 PP - Formuła 2015](docs/MATURA_2018_BASIC_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 34/34/50, diagramy i blokada proweniencji |
-| [Matura maj 2018 PR - Formuła 2015](docs/MATURA_2018_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 15/15/50, diagramy i blokada proweniencji |
-| [Matura poprawkowa 2018 PP - Formuła 2015](docs/MATURA_2018_CORRECTION_BASIC_COVERAGE.md) | przypięte źródła z archiwum publicznego, SHA-256, kontrakt 34/34/50, diagramy i blokada proweniencji |
-| [Matura maj 2022 PP - Formuła 2015](docs/MATURA_2022_BASIC_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 35/35/45, diagramy i blokada proweniencji |
-| [Matura maj 2022 PR - Formuła 2015](docs/MATURA_2022_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 15/15/50, diagram i blokada proweniencji |
-| [Matura poprawkowa 2022 PP - Formuła 2015](docs/MATURA_2022_CORRECTION_BASIC_COVERAGE.md) | przypięte źródła z archiwum publicznego, SHA-256, kontrakt 35/35/45, diagramy i blokada proweniencji |
-| [Matura maj 2023 PP](docs/MATURA_2023_BASIC_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 31/34/46, diagramy i blokada proweniencji |
-| [Matura poprawkowa 2024 PP](docs/MATURA_2024_CORRECTION_BASIC_COVERAGE.md) | przypięte źródła z archiwum publicznego, SHA-256, kontrakt 30/36/46, diagramy i blokada proweniencji |
+| [Matura maj 2019 PP - Formuła 2015](docs/MATURA_2019_BASIC_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 34/34/50, diagramy i status proweniencji |
+| [Matura maj 2019 PR - Formuła 2015](docs/MATURA_2019_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 15/15/50, diagramy i status proweniencji |
+| [Matura poprawkowa 2019 PP - Formuła 2015](docs/MATURA_2019_CORRECTION_BASIC_COVERAGE.md) | przypięte źródła z archiwum publicznego, SHA-256, kontrakt 34/34/50, diagramy i status proweniencji |
+| [Matura maj 2018 PP - Formuła 2015](docs/MATURA_2018_BASIC_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 34/34/50, diagramy i status proweniencji |
+| [Matura maj 2018 PR - Formuła 2015](docs/MATURA_2018_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 15/15/50, diagramy i status proweniencji |
+| [Matura poprawkowa 2018 PP - Formuła 2015](docs/MATURA_2018_CORRECTION_BASIC_COVERAGE.md) | przypięte źródła z archiwum publicznego, SHA-256, kontrakt 34/34/50, diagramy i status proweniencji |
+| [Matura maj 2022 PP - Formuła 2015](docs/MATURA_2022_BASIC_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 35/35/45, diagramy i status proweniencji |
+| [Matura maj 2022 PR - Formuła 2015](docs/MATURA_2022_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 15/15/50, diagram i status proweniencji |
+| [Matura poprawkowa 2022 PP - Formuła 2015](docs/MATURA_2022_CORRECTION_BASIC_COVERAGE.md) | przypięte źródła z archiwum publicznego, SHA-256, kontrakt 35/35/45, diagramy i status proweniencji |
+| [Matura maj 2023 PP](docs/MATURA_2023_BASIC_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 31/34/46, diagramy i status proweniencji |
+| [Matura poprawkowa 2024 PP](docs/MATURA_2024_CORRECTION_BASIC_COVERAGE.md) | przypięte źródła z archiwum publicznego, SHA-256, kontrakt 30/36/46, diagramy i status proweniencji |
 | [Matura maj 2023 PR](docs/MATURA_2023_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 13/14/50, diagramy i status proweniencji |
 | [Matura maj 2025 PP](docs/MATURA_2025_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 31/35/50, diagramy i status proweniencji |
 | [Matura maj 2025 PR](docs/MATURA_2025_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 12/13/50 i status proweniencji |
@@ -136,7 +136,7 @@ Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalneg
 | [Wsparcie](SUPPORT.md) | zgłaszanie błędów i wymagane dane diagnostyczne |
 | [Bezpieczeństwo](SECURITY.md) | prywatne zgłoszenia podatności i wspierane wersje |
 
-Kompletność kursu rozwijanego w ramach Issue #3, zachowanie treści historycznego Issue #35 oraz regresje opisują [macierz kursu](docs/MATH_COURSE_2023_COVERAGE.md) i [inwentarz migracji](docs/MIGRATION_INVENTORY.md). Stan pełnego archiwum matur 2026-2018, w tym rozróżnienie Formuł 2023 i 2015, opisuje [plan archiwum](docs/MATURA_ARCHIVE_PLAN.md). Zakres arkuszy 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 i 2026 opisują osobne macierze poziomu podstawowego lub rozszerzonego wymienione powyżej. Nowe lokalne arkusze pozostają zablokowane przed publicznym wydaniem do czasu osobistego rozszerzenia deklaracji praw.
+Kompletność kursu rozwijanego w ramach Issue #3, zachowanie treści historycznego Issue #35 oraz regresje opisują [macierz kursu](docs/MATH_COURSE_2023_COVERAGE.md) i [inwentarz migracji](docs/MIGRATION_INVENTORY.md). Stan pełnego archiwum matur 2026-2018, w tym rozróżnienie Formuł 2023 i 2015, opisuje [plan archiwum](docs/MATURA_ARCHIVE_PLAN.md). Zakres arkuszy 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 i 2026 opisują osobne macierze poziomu podstawowego lub rozszerzonego wymienione powyżej. Wszystkie obecnie paczkowane arkusze są objęte deklaracją praw właściciela z 1 września 2026 r.
 
 ## Autor i licencje
 

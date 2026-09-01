@@ -11,7 +11,7 @@
   - SHA-256: `058D68212521D98B4D63E320921647988BC35108941422FC39BF836813D63037`
   - weryfikacja: 2026-08-31
 
-Arkusz z 19 sierpnia 2025 r. ma kod `MMAP-P0-100-2508`, czas 180 minut i 50 punktów. Aplikacja zachowuje 31 oficjalnych zadań jako 36 osobno ocenianych jednostek postępu. W źródłach dostępnych w dniu weryfikacji zachowano publiczne archiwum, dlatego wpis proweniencji ma status `blocked` do czasu osobnej deklaracji praw.
+Arkusz z 19 sierpnia 2025 r. ma kod `MMAP-P0-100-2508`, czas 180 minut i 50 punktów. Aplikacja zachowuje 31 oficjalnych zadań jako 36 osobno ocenianych jednostek postępu. Źródła z publicznego archiwum są przypięte w proweniencji. Rozszerzenie deklaracji właściciela z 1 września 2026 r. daje grupie status `approved` wyłącznie jako integralnej części Abiturii.
 
 ## Macierz pokrycia
 
@@ -71,6 +71,6 @@ Każdy diagram ma niepusty opis alternatywny, stronę źródłową i `sourceId: 
 
 ## Prawa i weryfikacja
 
-`Content/provenance.json` ma osobną grupę `cke-2025-correction-basic-exam` ze statusem `blocked`. Grupa diagramów runtime również pozostaje `blocked`: deklaracja praw obejmuje 92 wcześniejsze definicje i nie obejmuje sześciu nowych definicji dla `MMAP-P0-100-2508`. Nie zmieniono `ASSET_RIGHTS_DECLARATION.md` ani `releaseEligible=false`.
+`Content/provenance.json` ma osobną grupę `cke-2025-correction-basic-exam` oraz katalog `runtime-vector-diagrams` ze statusem `approved`. Rozszerzenie deklaracji właściciela z 1 września 2026 r. obejmuje wszystkie 195 definicji, w tym sześć definicji dla `MMAP-P0-100-2508`. Manifest ma `releaseEligible=true`.
 
 Test `Matura2025CorrectionBasicContentTests` kontroluje liczniki, kolejność, strony, punkty, identyfikatory, URL-e, sumy SHA-256, metody odpowiedzi, diagramy, proweniencję i link w spisie dokumentacji. Testy katalogu i UI dodatkowo kontrolują 26 aktywnych arkuszy oraz 722 jednostki postępu.

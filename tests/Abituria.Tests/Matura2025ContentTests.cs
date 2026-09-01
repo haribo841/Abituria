@@ -165,7 +165,7 @@ public sealed class Matura2025ContentTests
         });
         Assert.Equal("approved", groups["cke-2025-main-basic-exam"].GetProperty("distributionStatus").GetString());
         Assert.Equal("approved", groups["cke-2025-main-extended-exam"].GetProperty("distributionStatus").GetString());
-        Assert.Equal("blocked", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
+        Assert.Equal("approved", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
         Assert.Contains(BasicPaperHash, rights, StringComparison.Ordinal);
         Assert.Contains(ExtendedRulesHash, rights, StringComparison.Ordinal);
         Assert.Contains(BasicPaperHash, coverage, StringComparison.Ordinal);

@@ -4,15 +4,15 @@ To jest samowystarczalna, przenośna paczka beta. Nie wymaga osobnej instalacji 
 
 ## Windows 11 x64
 
-W wydaniu znajduje się pojedynczy plik `Abituria-v0.9.2-win-x64.exe`. Po sprawdzeniu jego sumy SHA-256 i atestacji uruchom go bez rozpakowywania. Archiwum `Abituria-v0.9.2-win-x64.zip` pozostaje dostępne jako pełny pakiet audytowy z licencjami, notices i SBOM. SmartScreen może wymagać jednorazowego potwierdzenia dla tej aplikacji - nie wyłączaj zabezpieczeń globalnie.
+W wydaniu znajduje się pojedynczy plik `Abituria-v0.9.3-win-x64.exe`. Po sprawdzeniu jego sumy SHA-256 i atestacji uruchom go bez rozpakowywania. Archiwum `Abituria-v0.9.3-win-x64.zip` pozostaje dostępne jako pełny pakiet audytowy z licencjami, notices i SBOM. SmartScreen może wymagać jednorazowego potwierdzenia dla tej aplikacji - nie wyłączaj zabezpieczeń globalnie.
 
 ## Ubuntu 24.04 x64
 
-Zainstaluj `libx11-6`, `libice6`, `libsm6` i `libfontconfig1`, rozpakuj całe archiwum, wejdź do katalogu `Abituria-v0.9.2-linux-x64`, nadaj plikowi `Abituria` prawo wykonania poleceniem `chmod u+x ./Abituria`, a następnie uruchom `./Abituria`.
+Zainstaluj `libx11-6`, `libice6`, `libsm6` i `libfontconfig1`, rozpakuj całe archiwum, wejdź do katalogu `Abituria-v0.9.3-linux-x64`, nadaj plikowi `Abituria` prawo wykonania poleceniem `chmod u+x ./Abituria`, a następnie uruchom `./Abituria`.
 
 ## macOS 15 Intel x64
 
-Rozpakuj całe archiwum, wejdź do katalogu `Abituria-v0.9.2-osx-x64` i otwórz `Abituria.app`. Paczka nie obsługuje Apple Silicon. Gatekeeper może wymagać jednorazowego użycia systemowej opcji „Open” dla tej aplikacji - nie wyłączaj zabezpieczeń globalnie.
+Rozpakuj całe archiwum, wejdź do katalogu `Abituria-v0.9.3-osx-x64` i otwórz `Abituria.app`. Paczka nie obsługuje Apple Silicon. Gatekeeper może wymagać jednorazowego użycia systemowej opcji „Open” dla tej aplikacji - nie wyłączaj zabezpieczeń globalnie.
 
 ## Dane i aktualizacja
 

@@ -1,6 +1,6 @@
 # Plan i raport testów końcowych
 
-Wersja dokumentu: `0.9.2`.
+Wersja dokumentu: `0.9.3`.
 
 Data ostatniego lokalnego wykonania: 1 września 2026 r., Windows 11 x64, .NET SDK `10.0.302`, Python `3.13.1`, konfiguracja `Release`.
 
@@ -150,7 +150,7 @@ Historyczny odbiór Issue #43 jest zaliczony na podstawie łącznie udokumentowa
 3. historyczna forma przekazania została uzgodniona i przyjęta;
 4. brakujące szczegóły sesji, podpisu, kanału i hasha są ujawnione jako ograniczenia archiwalne, a nie uzupełnione fikcyjnymi danymi.
 
-Publiczne wydanie `0.9.2` jest osobnym procesem. Zwykły walidator proweniencji musi przechodzić na bieżącym worktree, natomiast brama `-RequireReleaseEligible` jest teraz spodziewanie zablokowana przez matury 2019 i 2020, matury główne 2021, matury główne i poprawkową 2022, maturę główną i poprawkową 2023 PP oraz matury poprawkowe 2024 i 2025 PP wraz z osiemdziesięcioma czterema nowymi diagramami. Zmiana dowolnego źródła, zakresu redystrybucji lub implementacji diagramów wymaga ponownego uruchomienia obu bramek.
+Publiczne wydanie `0.9.3` jest osobnym procesem. Zwykły walidator proweniencji oraz brama `-RequireReleaseEligible` muszą przechodzić na bieżącym worktree. Rozszerzenie deklaracji właściciela z 1 września 2026 r. obejmuje wszystkie paczkowane arkusze i 195 diagramów; każda zmiana źródła, zakresu redystrybucji lub implementacji diagramów wymaga ponownego uruchomienia obu bramek. Zmiana dowolnego źródła, zakresu redystrybucji lub implementacji diagramów wymaga ponownego uruchomienia obu bramek.
 
 Publiczny prerelease [`v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1) został opublikowany po wykonaniu następujących czynności:
 
