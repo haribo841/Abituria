@@ -2,39 +2,6 @@
     "schemaVersion":  2,
     "items":  [
                   {
-                      "id":  "matura-2019",
-                      "title":  "Matura 2019",
-                      "category":  "exam",
-                      "message":  "Arkusz maturalny 2019 nie został jeszcze uzupełniony.",
-                      "roadmapId":  "exam-archive",
-                      "blocks":  [
-
-                                 ]
-                  },
-                  {
-                      "id":  "matura-2020",
-                      "title":  "Matura 2020",
-                      "category":  "exam",
-                      "message":  "Arkusz maturalny 2020 nie został jeszcze uzupełniony.",
-                      "roadmapId":  "exam-archive",
-                      "blocks":  [
-
-                                 ]
-                  },
-                  {
-                      "id":  "matura-2021",
-                      "title":  "Matura 2021",
-                      "category":  "exam",
-                      "message":  "Podstawowy arkusz maturalny 2021 nie został jeszcze uzupełniony.",
-                      "roadmapId":  "exam-archive",
-                      "blocks":  [
-                                     {
-                                         "type":  "richText",
-                                         "text":  "Dane historyczne zapisane w starej wersji aplikacji: w 2021 roku maturę z matematyki zdało 79% absolwentów - 84% absolwentów liceów i 71% absolwentów techników. Średni wynik egzaminu na poziomie podstawowym wyniósł 56% możliwych punktów: 62% w liceach i 47% w technikach. Pomimo zmian związanych z pandemią ogólny wynik był zbliżony do poprzednich lat. Pełny arkusz i zadania nie były zaimplementowane."
-                                     }
-                                 ]
-                  },
-                  {
                       "id":  "graph-generator",
                       "title":  "Generator wykresów",
                       "category":  "calculator",

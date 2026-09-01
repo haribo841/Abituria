@@ -20,7 +20,8 @@ public sealed class PerformanceMemoryAndLoadTests
     private const int CalculatorIterations = 10_000;
     private const int ParallelCalculatorOperations = 40_000;
     private const int ContentReloads = 20;
-    private const long MaximumContentReloadAllocationBytes = 4L * 1024L * 1024L * ContentReloads;
+    // 5 MiB na odczyt obejmuje pełny katalog 26 arkuszy, 722 zadań i 195 diagramów.
+    private const long MaximumContentReloadAllocationBytes = 5L * 1024L * 1024L * ContentReloads;
     private const int ProgressRecordCount = 5_000;
     private const int ProgressReadCount = 3;
 
@@ -126,6 +127,7 @@ public sealed class PerformanceMemoryAndLoadTests
         var formulas = 0;
         var chapters = 0;
         var exercises = 0;
+        var allExamExercises = 0;
 
         for (var index = 0; index < ContentReloads; index++)
         {
@@ -133,6 +135,7 @@ public sealed class PerformanceMemoryAndLoadTests
             formulas += content.Formulas.Articles.Count;
             chapters += content.MathCourse.Lessons.Count;
             exercises += content.Exam.Exercises.Count;
+            allExamExercises += content.Exams.Sum(exam => exam.Exercises.Count);
         }
 
         stopwatch.Stop();
@@ -143,13 +146,14 @@ public sealed class PerformanceMemoryAndLoadTests
 
         ReportMetric(
             "content-reload",
-            $"reloads={ContentReloads}; formulas={formulas}; chapters={chapters}; exercises={exercises}; " +
+            $"reloads={ContentReloads}; formulas={formulas}; chapters={chapters}; exercises={exercises}; allExamExercises={allExamExercises}; " +
             $"elapsedMs={stopwatch.Elapsed.TotalMilliseconds:F1}; allocatedBytes={allocatedBytes}; " +
             $"retainedGrowthBytes={retainedGrowthBytes}");
 
         Assert.Equal(ContentReloads * warmup.Formulas.Articles.Count, formulas);
         Assert.Equal(ContentReloads * warmup.MathCourse.Lessons.Count, chapters);
         Assert.Equal(ContentReloads * warmup.Exam.Exercises.Count, exercises);
+        Assert.Equal(ContentReloads * warmup.Exams.Sum(exam => exam.Exercises.Count), allExamExercises);
         Assert.True(
             stopwatch.Elapsed < TimeSpan.FromSeconds(15),
             $"Ponowne odczytanie katalogu treści {ContentReloads} razy trwało {stopwatch.Elapsed}.");

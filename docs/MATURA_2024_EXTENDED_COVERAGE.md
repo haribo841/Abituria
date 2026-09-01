@@ -42,7 +42,7 @@ Suma punktów w macierzy wynosi 50. Identyfikatory mają mniej niż 80 znaków i
 
 Content/exam-2024-main-extended.json zawiera tekst każdego zadania, wynik, pełne rozwiązanie, kryteria punktowania oraz strony obu dokumentów źródłowych. Tryby numeric, compound i revealOnly są istniejącymi mechanizmami katalogu matur i nie wymagają zmiany schematu bazy.
 
-Zadanie 9 odwołuje się do exam-mm24-r0-z09 w Content/diagrams.json. Jest to jedna autorska, deterministyczna definicja wektorowa Avalonia - kwadrat, punkt E, przekątne, odcinek AE oraz punkty F i G - z opisem alternatywnym i numerem strony 14. Aktualny katalog diagramów zawiera 139 definicji; nie dodano aktywnego rastra.
+Zadanie 9 odwołuje się do exam-mm24-r0-z09 w Content/diagrams.json. Jest to jedna autorska, deterministyczna definicja wektorowa Avalonia - kwadrat, punkt E, przekątne, odcinek AE oraz punkty F i G - z opisem alternatywnym i numerem strony 14. Aktualny katalog diagramów zawiera 195 definicji; nie dodano aktywnego rastra.
 
 ## Walidacja
 
@@ -54,10 +54,10 @@ Test Matura2024ExtendedContentTests sprawdza:
 - kompletność diagramu, opis alternatywny, źródło i renderowanie bez rastra;
 - zatwierdzoną proweniencję nowej transkrypcji.
 
-Matura2026UiTests dodatkowo obejmuje wybór siedemnastu arkuszy, losowanie ograniczone do wybranego arkusza, agregację 473 jednostek postępu według 17 tematów, kontekst powrotu oraz osobny licznik Matura maj 2024 PR: x / 14.
+Matura2026UiTests dodatkowo obejmuje wybór dwudziestu sześciu arkuszy, losowanie ograniczone do wybranego arkusza, agregację 722 jednostek postępu według 17 tematów, kontekst powrotu oraz osobny licznik Matura maj 2024 PR: x / 14.
 
 ## Prawa i wydanie
 
 Grupa `cke-2024-main-extended-exam` w `Content/provenance.json` ma status `approved`. Osobiste rozszerzenie `docs/ASSET_RIGHTS_DECLARATION.md` z 10 sierpnia 2026 r. obejmuje arkusz MMAP-R0-100-A-2405, zasady MMAP-R0-100-2405 i ich transkrypcję wyłącznie jako integralną część Abiturii.
 
-Grupa tego arkusza pozostaje `approved`, ale bieżący worktree ma `releaseEligible=false` przez osobno zablokowane grupy matur głównych 2022 PP i PR oraz poprawkowej 2022 PP, matury głównej i poprawkowej 2023 PP oraz matur poprawkowych 2024 i 2025 PP wraz z trzydziestoma sześcioma diagramami. Zwykła walidacja proweniencji musi przechodzić; `Test-ContentProvenance.ps1 -RequireReleaseEligible` nie może przejść przed rozszerzeniem deklaracji.
+Grupa tego arkusza pozostaje `approved`, ale bieżący worktree ma `releaseEligible=false` przez osobno zablokowane grupy matur głównych i poprawkowych 2019 i 2020, matur głównych 2021 PP i PR, matur głównych i poprawkowej 2022 PP oraz PR, matury głównej i poprawkowej 2023 PP oraz matur poprawkowych 2024 i 2025 PP wraz z osiemdziesięcioma czterema diagramami. Zwykła walidacja proweniencji musi przechodzić; `Test-ContentProvenance.ps1 -RequireReleaseEligible` nie może przejść przed rozszerzeniem deklaracji.

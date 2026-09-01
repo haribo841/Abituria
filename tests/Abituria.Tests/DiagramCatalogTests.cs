@@ -26,12 +26,21 @@ public sealed class DiagramCatalogTests
 
         DiagramCatalogValidator.Validate(catalog);
         Assert.Equal(1, catalog.SchemaVersion);
-        Assert.Equal(139, catalog.Diagrams.Count);
-        Assert.Equal(139, catalog.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(195, catalog.Diagrams.Count);
+        Assert.Equal(195, catalog.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
         Assert.Equal(36, catalog.Diagrams.Count(item => item.SourceId == "cke-formula-2023"));
         Assert.Equal(9, catalog.Diagrams.Count(item => item.SourceId == "cke-2021-correction"));
         Assert.Equal(8, catalog.Diagrams.Count(item => item.SourceId == "cke-2021-main-basic"));
         Assert.Equal(3, catalog.Diagrams.Count(item => item.SourceId == "cke-2021-main-extended"));
+        Assert.Equal(8, catalog.Diagrams.Count(item => item.SourceId == "cke-2020-main-basic"));
+        Assert.Equal(4, catalog.Diagrams.Count(item => item.SourceId == "cke-2020-main-extended"));
+        Assert.Equal(6, catalog.Diagrams.Count(item => item.SourceId == "cke-2020-correction-basic"));
+        Assert.Equal(8, catalog.Diagrams.Count(item => item.SourceId == "cke-2019-main-basic-exam"));
+        Assert.Equal(5, catalog.Diagrams.Count(item => item.SourceId == "cke-2019-main-extended-exam"));
+        Assert.Equal(6, catalog.Diagrams.Count(item => item.SourceId == "cke-2019-correction-basic-exam"));
+        Assert.Equal(8, catalog.Diagrams.Count(item => item.SourceId == "cke-2018-main-basic-exam"));
+        Assert.Equal(4, catalog.Diagrams.Count(item => item.SourceId == "cke-2018-main-extended-exam"));
+        Assert.Equal(7, catalog.Diagrams.Count(item => item.SourceId == "cke-2018-correction-basic-exam"));
         Assert.Equal(6, catalog.Diagrams.Count(item => item.SourceId == "cke-2022-main-basic"));
         Assert.Equal(1, catalog.Diagrams.Count(item => item.SourceId == "cke-2022-main-extended"));
         Assert.Equal(5, catalog.Diagrams.Count(item => item.SourceId == "cke-2022-correction-basic"));
@@ -80,6 +89,51 @@ public sealed class DiagramCatalogTests
         Assert.Equal(
             [2, 8, 20],
             catalog.Diagrams.Where(item => item.SourceId == "cke-2021-main-extended")
+                .OrderBy(item => item.Id)
+                .Select(item => item.SourcePage));
+        Assert.Equal(
+            [4, 6, 8, 10, 10, 12, 17, 24],
+            catalog.Diagrams.Where(item => item.SourceId == "cke-2020-main-basic")
+                .OrderBy(item => item.Id)
+                .Select(item => item.SourcePage));
+        Assert.Equal(
+            [6, 14, 18, 20],
+            catalog.Diagrams.Where(item => item.SourceId == "cke-2020-main-extended")
+                .OrderBy(item => item.Id)
+                .Select(item => item.SourcePage));
+        Assert.Equal(
+            [4, 6, 8, 10, 15, 18],
+            catalog.Diagrams.Where(item => item.SourceId == "cke-2020-correction-basic")
+                .OrderBy(item => item.Id)
+                .Select(item => item.SourcePage));
+        Assert.Equal(
+            [4, 6, 8, 10, 10, 17, 19, 24],
+            catalog.Diagrams.Where(item => item.SourceId == "cke-2019-main-basic-exam")
+                .OrderBy(item => item.Id)
+                .Select(item => item.SourcePage));
+        Assert.Equal(
+            [2, 8, 10, 12, 20],
+            catalog.Diagrams.Where(item => item.SourceId == "cke-2019-main-extended-exam")
+                .OrderBy(item => item.Id)
+                .Select(item => item.SourcePage));
+        Assert.Equal(
+            [4, 6, 8, 10, 15, 22],
+            catalog.Diagrams.Where(item => item.SourceId == "cke-2019-correction-basic-exam")
+                .OrderBy(item => item.Id)
+                .Select(item => item.SourcePage));
+        Assert.Equal(
+            [6, 8, 8, 10, 10, 10, 17, 24],
+            catalog.Diagrams.Where(item => item.SourceId == "cke-2018-main-basic-exam")
+                .OrderBy(item => item.Id)
+                .Select(item => item.SourcePage));
+        Assert.Equal(
+            [5, 8, 14, 16],
+            catalog.Diagrams.Where(item => item.SourceId == "cke-2018-main-extended-exam")
+                .OrderBy(item => item.Id)
+                .Select(item => item.SourcePage));
+        Assert.Equal(
+            [4, 8, 10, 14, 17, 18, 22],
+            catalog.Diagrams.Where(item => item.SourceId == "cke-2018-correction-basic-exam")
                 .OrderBy(item => item.Id)
                 .Select(item => item.SourcePage));
         Assert.Equal(
@@ -233,10 +287,10 @@ public sealed class DiagramCatalogTests
     public void Main_exam_figures_use_only_Avalonia_vector_controls()
     {
         var definitions = new ContentRepository().Diagrams.Diagrams
-            .Where(item => item.SourceId is "cke-2021-main-basic" or "cke-2021-main-extended" or "cke-2022-main-basic" or "cke-2022-main-extended" or "cke-2022-correction-basic" or "cke-2023-main-basic" or "cke-2023-correction-basic" or "cke-2023-main-extended" or "cke-2024-main-basic" or "cke-2024-main-extended" or "cke-2026-main-basic" or "cke-2026-main-extended")
+            .Where(item => item.SourceId is "cke-2021-main-basic" or "cke-2021-main-extended" or "cke-2020-main-basic" or "cke-2020-main-extended" or "cke-2020-correction-basic" or "cke-2022-main-basic" or "cke-2022-main-extended" or "cke-2022-correction-basic" or "cke-2023-main-basic" or "cke-2023-correction-basic" or "cke-2023-main-extended" or "cke-2024-main-basic" or "cke-2024-main-extended" or "cke-2026-main-basic" or "cke-2026-main-extended" or "cke-2018-main-basic-exam" or "cke-2018-main-extended-exam" or "cke-2018-correction-basic-exam")
             .ToArray();
 
-        Assert.Equal(62, definitions.Length);
+        Assert.Equal(99, definitions.Length);
         foreach (var definition in definitions)
         {
             var view = new DiagramView(definition);

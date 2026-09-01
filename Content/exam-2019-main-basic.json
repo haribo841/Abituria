@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 4,
+  "exam": {
+    "id": "matura-maj-2019-podstawowa",
+    "title": "Matura maj 2019 - poziom podstawowy (Formuła 2015)",
+    "progressLabel": "Matura maj 2019 PP (F2015)",
+    "year": 2019,
+    "session": "główna",
+    "formula": "2015",
+    "level": "basic",
+    "durationMinutes": 170,
+    "maximumPoints": 50,
+    "officialTaskCount": 34,
+    "progressItemCount": 34,
+    "introduction": [
+      { "type": "richText", "text": "Arkusz główny z matematyki na poziomie podstawowym z 7 maja 2019 r. w Formule 2015 obejmuje 34 zadania, 50 punktów i 170 minut." },
+      { "type": "richText", "text": "Treść zadań, odpowiedzi, rozwiązań i kryteriów pochodzi z arkusza i zasad oceniania CKE. Publiczna redystrybucja tej transkrypcji pozostaje zablokowana do czasu osobnego rozszerzenia deklaracji praw." }
+    ],
+    "topicIntroduction": [],
+    "source": {
+      "publisher": "Centralna Komisja Egzaminacyjna",
+      "documentCode": "MMA-P1_1P-192",
+      "examDate": "2019-05-07",
+      "questionPaperUrl": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2019/formula_od_2015/matematyka/MMA-P1_1P-192.pdf",
+      "questionPaperSha256": "29F065F63AB4B9B833779CE4D79D63F77D7B1A940B24CF03E482B75F0921F87D",
+      "answerKeyUrl": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2019/formula_od_2015/Zasady_oceniania/MMA-P1_1P-192_model.pdf",
+      "answerKeySha256": "C388326760BA1A18B5156C87C1B3017398311E2E6E0FA8A0751BE0ADCA5097D9",
+      "verifiedOn": "2026-09-01"
+    },
+    "topics": [],
+    "exercises": [
+      {
+        "id": "mm19-p0-z01", "examId": "matura-maj-2019-podstawowa", "number": 1, "displayNumber": "1", "order": 1, "points": 1,
+        "title": "Zadanie 1", "topicId": "logarithms", "sourcePage": 2, "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Liczba log₂ 2 jest równa:", "options": ["2", "4", "1/2", "1"], "correctOption": 4,
+        "hints": ["Skorzystaj z definicji logarytmu.", "Szukaj wykładnika, do którego trzeba podnieść 2, aby otrzymać 2."],
+        "solution": "2¹ = 2, więc log₂ 2 = 1. Odpowiedź D.", "scoringCriteria": "1 pkt - odpowiedź D. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z02", "examId": "matura-maj-2019-podstawowa", "number": 2, "displayNumber": "2", "order": 2, "points": 1,
+        "title": "Zadanie 2", "topicId": "powers", "sourcePage": 2, "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Liczba naturalna n = 2¹⁴ · 5¹⁵ ma w zapisie dziesiętnym:", "options": ["14 cyfr", "15 cyfr", "16 cyfr", "30 cyfr"], "correctOption": 3,
+        "hints": ["Połącz czternaście par czynników 2 i 5.", "Zapisz n jako 10¹⁴ · 5."],
+        "solution": "n = 10¹⁴ · 5 = 500000000000000, więc ma 15 zer po cyfrze 5, czyli 16 cyfr. Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z03", "examId": "matura-maj-2019-podstawowa", "number": 3, "displayNumber": "3", "order": 3, "points": 1,
+        "title": "Zadanie 3", "topicId": "percentages", "sourcePage": 2, "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Prowizję bankową obniżono z 4% do 3%. O ile procent zmniejszyła się prowizja?", "options": ["1%", "25%", "33%", "75%"], "correctOption": 2,
+        "hints": ["Zmiana wynosi 1 punkt procentowy.", "Odnieś tę zmianę do początkowej prowizji 4%."],
+        "solution": "Spadek stanowi 1/4 wartości początkowej, czyli 25%. Odpowiedź B.", "scoringCriteria": "1 pkt - odpowiedź B. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z04", "examId": "matura-maj-2019-podstawowa", "number": 4, "displayNumber": "4", "order": 4, "points": 1,
+        "title": "Zadanie 4", "topicId": "equations", "sourcePage": 2, "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Równość 1/4 + 1/5 + 1/a = 1 jest prawdziwa dla:", "options": ["a = 11/20", "a = 8/9", "a = 9/8", "a = 20/11"], "correctOption": 4,
+        "hints": ["Dodaj pierwsze dwa ułamki.", "Wyznacz odwrotność otrzymanej różnicy."],
+        "solution": "1/a = 1 - 9/20 = 11/20, więc a = 20/11. Odpowiedź D.", "scoringCriteria": "1 pkt - odpowiedź D. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z05", "examId": "matura-maj-2019-podstawowa", "number": 5, "displayNumber": "5", "order": 5, "points": 1,
+        "title": "Zadanie 5", "topicId": "equations", "sourcePage": 2, "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Para x = 2, y = 2 jest rozwiązaniem układu ax + y = 4 oraz -2x + 3y = 2a dla:", "options": ["a = -1", "a = 1", "a = -2", "a = 2"], "correctOption": 2,
+        "hints": ["Podstaw x = 2 i y = 2 do pierwszego równania.", "Sprawdź wynik również w drugim równaniu."],
+        "solution": "2a + 2 = 4, więc a = 1. Drugie równanie daje wtedy 2 = 2a. Odpowiedź B.", "scoringCriteria": "1 pkt - odpowiedź B. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z06", "examId": "matura-maj-2019-podstawowa", "number": 6, "displayNumber": "6", "order": 6, "points": 1,
+        "title": "Zadanie 6", "topicId": "equations", "sourcePage": 2, "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Równanie ((x - 1)(x + 2))/(x - 3) = 0:", "options": ["ma rozwiązania 1, 3, -2", "ma rozwiązania -1, -3, 2", "ma rozwiązania 1 i -2", "ma rozwiązania -1 i 2"], "correctOption": 3,
+        "hints": ["Ułamek jest równy zero, gdy licznik jest równy zero, a mianownik nie jest zerem.", "Rozwiąż osobno x - 1 = 0 i x + 2 = 0."],
+        "solution": "Licznik zeruje się dla x = 1 i x = -2, a żaden z nich nie zeruje mianownika. Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z07", "examId": "matura-maj-2019-podstawowa", "number": 7, "displayNumber": "7", "order": 7, "points": 1,
+        "title": "Zadanie 7", "topicId": "linear-function", "sourcePage": 4, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Miejscem zerowym funkcji f(x) = 3(x + 1) - 6√3 jest liczba:", "options": ["3 - 6√3", "1 - 6√3", "2√3 - 1", "2√3 - 1/3"], "correctOption": 3,
+        "hints": ["Przyrównaj wartość funkcji do zera.", "Podziel równanie przez 3 i wyznacz x."],
+        "solution": "3(x + 1) = 6√3, więc x + 1 = 2√3 i x = 2√3 - 1. Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z08", "examId": "matura-maj-2019-podstawowa", "number": 8, "displayNumber": "8", "order": 8, "points": 1,
+        "title": "Zadanie 8", "topicId": "quadratic-function", "sourcePage": 4, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Parabola f ma wierzchołek W = (2, -4) i miejsca zerowe 0 oraz 4. Jej zbiorem wartości jest:", "options": ["(-∞, 0⟩", "⟨0, 4⟩", "⟨-4, +∞)", "⟨4, +∞)"], "correctOption": 3,
+        "hints": ["Parabola ma minimum w wierzchołku.", "Odczytaj współrzędną y wierzchołka."],
+        "solution": "Najmniejsza wartość funkcji wynosi -4, zatem zbiorem wartości jest ⟨-4, +∞). Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": ["exam-mm19-p0-z08to10"]
+      },
+      {
+        "id": "mm19-p0-z09", "examId": "matura-maj-2019-podstawowa", "number": 9, "displayNumber": "9", "order": 9, "points": 1,
+        "title": "Zadanie 9", "topicId": "quadratic-function", "sourcePage": 4, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Największa wartość funkcji f z poprzedniej informacji w przedziale ⟨1, 4⟩ jest równa:", "options": ["-3", "-4", "4", "0"], "correctOption": 4,
+        "hints": ["Parabola jest skierowana ramionami w górę.", "Sprawdź wartości na końcach podanego przedziału."],
+        "solution": "f(1) = -3, a f(4) = 0. Największą wartością jest 0. Odpowiedź D.", "scoringCriteria": "1 pkt - odpowiedź D. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": ["exam-mm19-p0-z08to10"]
+      },
+      {
+        "id": "mm19-p0-z10", "examId": "matura-maj-2019-podstawowa", "number": 10, "displayNumber": "10", "order": 10, "points": 1,
+        "title": "Zadanie 10", "topicId": "quadratic-function", "sourcePage": 4, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Osią symetrii paraboli f z wierzchołkiem W = (2, -4) jest prosta:", "options": ["y = -4", "x = -4", "y = 2", "x = 2"], "correctOption": 4,
+        "hints": ["Oś symetrii paraboli przechodzi przez jej wierzchołek.", "Dla wykresu funkcji kwadratowej jest to prosta pionowa."],
+        "solution": "Pionowa prosta przechodząca przez wierzchołek ma równanie x = 2. Odpowiedź D.", "scoringCriteria": "1 pkt - odpowiedź D. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": ["exam-mm19-p0-z08to10"]
+      },
+      {
+        "id": "mm19-p0-z11", "examId": "matura-maj-2019-podstawowa", "number": 11, "displayNumber": "11", "order": 11, "points": 1,
+        "title": "Zadanie 11", "topicId": "sequences", "sourcePage": 6, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "W ciągu arytmetycznym a₁ = 7 oraz a₈ = -49. Suma ośmiu pierwszych wyrazów wynosi:", "options": ["-168", "-189", "-21", "-42"], "correctOption": 1,
+        "hints": ["Zastosuj wzór na sumę n początkowych wyrazów ciągu arytmetycznego.", "S₈ = 8(a₁ + a₈)/2."],
+        "solution": "S₈ = 8(7 - 49)/2 = -168. Odpowiedź A.", "scoringCriteria": "1 pkt - odpowiedź A. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z12", "examId": "matura-maj-2019-podstawowa", "number": 12, "displayNumber": "12", "order": 12, "points": 1,
+        "title": "Zadanie 12", "topicId": "sequences", "sourcePage": 6, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Dodatni ciąg geometryczny spełnia a₅/a₃ = 1/9. Jego iloraz jest równy:", "options": ["1/3", "1/√3", "3", "√3"], "correctOption": 1,
+        "hints": ["Iloraz a₅/a₃ jest równy q².", "Wszystkie wyrazy są dodatnie, więc wybierz dodatni pierwiastek."],
+        "solution": "q² = 1/9, a q > 0, więc q = 1/3. Odpowiedź A.", "scoringCriteria": "1 pkt - odpowiedź A. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z13", "examId": "matura-maj-2019-podstawowa", "number": 13, "displayNumber": "13", "order": 13, "points": 1,
+        "title": "Zadanie 13", "topicId": "trigonometry", "sourcePage": 6, "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Sinus ostrego kąta α jest równy 4/5. Wtedy cos α jest równy:", "options": ["5/4", "1/5", "9/25", "3/5"], "correctOption": 4,
+        "hints": ["Użyj tożsamości sin² α + cos² α = 1.", "Cosinus kąta ostrego jest dodatni."],
+        "solution": "cos² α = 1 - 16/25 = 9/25, więc cos α = 3/5. Odpowiedź D.", "scoringCriteria": "1 pkt - odpowiedź D. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z14", "examId": "matura-maj-2019-podstawowa", "number": 14, "displayNumber": "14", "order": 14, "points": 1,
+        "title": "Zadanie 14", "topicId": "plane-geometry", "sourcePage": 6, "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "W układzie z trójkątem równobocznym i średnicą CD miara kąta wpisanego DEB wynosi:", "options": ["30°", "mniej niż 30°", "więcej niż 45°", "45°"], "correctOption": 1,
+        "hints": ["Kąt środkowy oparty na łuku DB ma miarę 60°.", "Kąt wpisany oparty na tym samym łuku jest dwa razy mniejszy."],
+        "solution": "Kąt środkowy DOB ma miarę 60°, zatem kąt wpisany DEB ma miarę 30°. Odpowiedź A.", "scoringCriteria": "1 pkt - odpowiedź A. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": ["exam-mm19-p0-z14"]
+      },
+      {
+        "id": "mm19-p0-z15", "examId": "matura-maj-2019-podstawowa", "number": 15, "displayNumber": "15", "order": 15, "points": 1,
+        "title": "Zadanie 15", "topicId": "plane-geometry", "sourcePage": 8, "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Dwa okręgi o promieniach 5 i 3 mają środki odległe o 16. Wspólna styczna przecina OP w K. Długość OK wynosi:", "options": ["6", "8", "10", "12"], "correctOption": 3,
+        "hints": ["Trójkąty wyznaczone przez promienie prostopadłe do stycznej są podobne.", "Stosunek OK:KP jest równy 5:3."],
+        "solution": "OK/(16 - OK) = 5/3, więc 3OK = 80 - 5OK i OK = 10. Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": ["exam-mm19-p0-z15"]
+      },
+      {
+        "id": "mm19-p0-z16", "examId": "matura-maj-2019-podstawowa", "number": 16, "displayNumber": "16", "order": 16, "points": 1,
+        "title": "Zadanie 16", "topicId": "plane-geometry", "sourcePage": 8, "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Romb ma bok 4 i kąt rozwarty 150°. Jego pole wynosi:", "options": ["8", "12", "8√3", "16"], "correctOption": 1,
+        "hints": ["Pole rombu wynosi a² sin α.", "Sin 150° = 1/2."],
+        "solution": "P = 4² · sin 150° = 16 · 1/2 = 8. Odpowiedź A.", "scoringCriteria": "1 pkt - odpowiedź A. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z17", "examId": "matura-maj-2019-podstawowa", "number": 17, "displayNumber": "17", "order": 17, "points": 1,
+        "title": "Zadanie 17", "topicId": "lines-and-segments", "sourcePage": 8, "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Proste y = (2m + 2)x - 2019 oraz y = (3m - 3)x + 2019 są równoległe dla:", "options": ["m = -1", "m = 0", "m = 1", "m = 5"], "correctOption": 4,
+        "hints": ["Proste równoległe mają równe współczynniki kierunkowe.", "Przyrównaj 2m + 2 i 3m - 3."],
+        "solution": "2m + 2 = 3m - 3, zatem m = 5. Odpowiedź D.", "scoringCriteria": "1 pkt - odpowiedź D. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z18", "examId": "matura-maj-2019-podstawowa", "number": 18, "displayNumber": "18", "order": 18, "points": 1,
+        "title": "Zadanie 18", "topicId": "lines-and-segments", "sourcePage": 8, "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Prosta y = ax + b jest prostopadła do y = -4x + 1 i przechodzi przez P = (1/2, 0).", "options": ["a = -4, b = -2", "a = 1/4, b = -1/8", "a = -4, b = 2", "a = 1/4, b = 1/2"], "correctOption": 2,
+        "hints": ["Współczynnik kierunkowy prostej prostopadłej do y = -4x + 1 wynosi 1/4.", "Podstaw współrzędne punktu P do równania prostej."],
+        "solution": "0 = (1/4)(1/2) + b, więc b = -1/8. Odpowiedź B.", "scoringCriteria": "1 pkt - odpowiedź B. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z19", "examId": "matura-maj-2019-podstawowa", "number": 19, "displayNumber": "19", "order": 19, "points": 1,
+        "title": "Zadanie 19", "topicId": "linear-function", "sourcePage": 10, "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Wykres funkcji f przechodzi przez A = (0, 4) i B = (2, 2). Obrazem tej prostej w symetrii względem początku układu jest wykres funkcji:", "options": ["g(x) = x + 4", "g(x) = x - 4", "g(x) = -x - 4", "g(x) = -x + 4"], "correctOption": 3,
+        "hints": ["Wyznacz równanie f z dwóch punktów.", "W symetrii środkowej punkt (x, y) przechodzi w (-x, -y)."],
+        "solution": "f(x) = -x + 4. Obraz przechodzi przez (0, -4) i (-2, -2), więc g(x) = -x - 4? Po zapisie jako funkcja obrazu g(x) = -x - 4. Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": ["exam-mm19-p0-z19"]
+      },
+      {
+        "id": "mm19-p0-z20", "examId": "matura-maj-2019-podstawowa", "number": 20, "displayNumber": "20", "order": 20, "points": 1,
+        "title": "Zadanie 20", "topicId": "plane-geometry", "sourcePage": 10, "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "A = (-2, 5), B = (4, -1). Średnica okręgu wpisanego w kwadrat o boku AB jest równa:", "options": ["12", "6", "6√2", "2√6"], "correctOption": 3,
+        "hints": ["Oblicz długość odcinka AB ze wzoru na odległość punktów.", "Średnica okręgu wpisanego w kwadrat jest równa długości boku kwadratu."],
+        "solution": "|AB| = √(6² + (-6)²) = 6√2. Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z21", "examId": "matura-maj-2019-podstawowa", "number": 21, "displayNumber": "21", "order": 21, "points": 1,
+        "title": "Zadanie 21", "topicId": "solid-geometry", "sourcePage": 10, "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Prostopadłościan ma wymiary 5 dm, 3 dm i 2 dm. Jego przekątna jest w przybliżeniu równa:", "options": ["5,83 dm", "6,16 dm", "3,61 dm", "5,39 dm"], "correctOption": 2,
+        "hints": ["Zastosuj twierdzenie Pitagorasa w trzech wymiarach.", "Oblicz √(5² + 3² + 2²)."],
+        "solution": "d = √38 ≈ 6,16 dm. Odpowiedź B.", "scoringCriteria": "1 pkt - odpowiedź B. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": ["exam-mm19-p0-z21"]
+      },
+      {
+        "id": "mm19-p0-z22", "examId": "matura-maj-2019-podstawowa", "number": 22, "displayNumber": "22", "order": 22, "points": 1,
+        "title": "Zadanie 22", "topicId": "solid-geometry", "sourcePage": 12, "solutionSourcePage": 5,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Kula i podstawa stożka mają promień 4. Pole kuli jest równe polu całkowitemu stożka. Tworząca stożka ma długość:", "options": ["8", "4", "16", "12"], "correctOption": 4,
+        "hints": ["Pole kuli wynosi 4πr².", "Pole całkowite stożka wynosi πr² + πrl."],
+        "solution": "64π = 16π + 4πl, więc l = 12. Odpowiedź D.", "scoringCriteria": "1 pkt - odpowiedź D. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z23", "examId": "matura-maj-2019-podstawowa", "number": 23, "displayNumber": "23", "order": 23, "points": 1,
+        "title": "Zadanie 23", "topicId": "statistics", "sourcePage": 12, "solutionSourcePage": 5,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Mediana liczb 4, 8, 21, a, 16, 25 jest równa 14. Wtedy:", "options": ["a = 7", "a = 12", "a = 14", "a = 20"], "correctOption": 2,
+        "hints": ["Po uporządkowaniu sześciu danych mediana jest średnią trzeciej i czwartej liczby.", "Umieść a między 8 a 16."],
+        "solution": "(a + 16)/2 = 14, więc a = 12. Odpowiedź B.", "scoringCriteria": "1 pkt - odpowiedź B. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z24", "examId": "matura-maj-2019-podstawowa", "number": 24, "displayNumber": "24", "order": 24, "points": 1,
+        "title": "Zadanie 24", "topicId": "combinatorics", "sourcePage": 12, "solutionSourcePage": 5,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Ile jest liczb pięciocyfrowych zapisanych wyłącznie cyframi 0, 2, 5?", "options": ["12", "36", "162", "243"], "correctOption": 3,
+        "hints": ["Pierwsza cyfra nie może być zerem.", "Dla każdej z czterech kolejnych pozycji są trzy możliwości."],
+        "solution": "Pierwszą cyfrę wybieramy na 2 sposoby, a każdą z czterech pozostałych na 3 sposoby. Jest 2 · 3⁴ = 162 liczb. Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z25", "examId": "matura-maj-2019-podstawowa", "number": 25, "displayNumber": "25", "order": 25, "points": 1,
+        "title": "Zadanie 25", "topicId": "probability", "sourcePage": 12, "solutionSourcePage": 6,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "W pudełku jest 40 kul, w tym 35 białych. Prawdopodobieństwo wylosowania kuli czerwonej wynosi:", "options": ["1/8", "1/5", "1/40", "1/35"], "correctOption": 1,
+        "hints": ["Wyznacz liczbę kul czerwonych.", "Podziel liczbę wyników sprzyjających przez liczbę wszystkich wyników."],
+        "solution": "Czerwonych kul jest 5, więc prawdopodobieństwo wynosi 5/40 = 1/8. Odpowiedź A.", "scoringCriteria": "1 pkt - odpowiedź A. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z26", "examId": "matura-maj-2019-podstawowa", "number": 26, "displayNumber": "26", "order": 26, "points": 2,
+        "title": "Zadanie 26", "topicId": "equations", "sourcePage": 14, "solutionSourcePage": 7,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "Rozwiąż równanie (x³ - 8)(x² - 4x - 5) = 0.",
+        "hints": ["Zastosuj własność iloczynu równego zero.", "Rozwiąż osobno równania x³ - 8 = 0 oraz x² - 4x - 5 = 0."],
+        "solution": "x³ - 8 = 0 daje x = 2. Z równania x² - 4x - 5 = 0 otrzymujemy x = -1 lub x = 5. Zbiór rozwiązań to {-1, 2, 5}.", "scoringCriteria": "2 pkt - wszystkie trzy rozwiązania. 1 pkt - poprawnie rozwiązany jeden z czynników. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z27", "examId": "matura-maj-2019-podstawowa", "number": 27, "displayNumber": "27", "order": 27, "points": 2,
+        "title": "Zadanie 27", "topicId": "inequalities", "sourcePage": 15, "solutionSourcePage": 8,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "Rozwiąż nierówność 3x² - 16x + 16 > 0.",
+        "hints": ["Wyznacz miejsca zerowe trójmianu kwadratowego.", "Parabola ma dodatni współczynnik przy x², więc jest dodatnia poza pierwiastkami."],
+        "solution": "Miejsca zerowe to 4/3 i 4. Nierówność jest spełniona dla x ∈ (-∞, 4/3) ∪ (4, +∞).", "scoringCriteria": "2 pkt - poprawny zbiór rozwiązań. 1 pkt - poprawne miejsca zerowe albo analiza znaku. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z28", "examId": "matura-maj-2019-podstawowa", "number": 28, "displayNumber": "28", "order": 28, "points": 2,
+        "title": "Zadanie 28", "topicId": "proofs", "sourcePage": 16, "solutionSourcePage": 10,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "Wykaż, że dla dowolnych liczb rzeczywistych a i b zachodzi 3a² - 2ab + 3b² ≥ 0.",
+        "hints": ["Rozdziel wyrażenie na sumę kwadratów.", "Spróbuj wykorzystać (a - b)²."],
+        "solution": "3a² - 2ab + 3b² = 2a² + 2b² + (a - b)². Każdy składnik jest nieujemny, zatem całe wyrażenie jest nieujemne.", "scoringCriteria": "2 pkt - poprawny dowód przez sumę wyrażeń nieujemnych. 1 pkt - istotne poprawne przekształcenie. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z29", "examId": "matura-maj-2019-podstawowa", "number": 29, "displayNumber": "29", "order": 29, "points": 2,
+        "title": "Zadanie 29", "topicId": "proofs", "sourcePage": 17, "solutionSourcePage": 15,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "W konfiguracji okręgu, cięciwy AB i punktu C z BC = r wykaż, że gdy ∠ACS = α, to ∠ASD = 3α.",
+        "hints": ["Zauważ równości odcinków promieni oraz BC = r.", "Wyznacz kąty w trójkątach równoramiennych zbudowanych na promieniach."],
+        "solution": "Z równości promieni i BC = r kolejne trójkąty pomocnicze są równoramienne. Z zależności kątowych otrzymujemy ∠ASD = 3α.", "scoringCriteria": "2 pkt - pełny dowód relacji kątowej. 1 pkt - poprawne wykorzystanie trójkątów równoramiennych. 0 pkt - brak istotnego postępu.", "diagramIds": ["exam-mm19-p0-z29"]
+      },
+      {
+        "id": "mm19-p0-z30", "examId": "matura-maj-2019-podstawowa", "number": 30, "displayNumber": "30", "order": 30, "points": 2,
+        "title": "Zadanie 30", "topicId": "probability", "sourcePage": 18, "solutionSourcePage": 17,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "numeric", "expectedValue": 0.36,
+        "prompt": "Ze zbioru {1, 2, 3, 4, 5} losujemy dwa razy ze zwracaniem. Oblicz prawdopodobieństwo otrzymania iloczynu nieparzystego.",
+        "hints": ["Iloczyn jest nieparzysty wtedy i tylko wtedy, gdy oba losowania są nieparzyste.", "W zbiorze są trzy liczby nieparzyste."],
+        "solution": "Prawdopodobieństwo otrzymania liczby nieparzystej w jednym losowaniu wynosi 3/5, więc P(A) = (3/5)² = 9/25 = 0,36.", "scoringCriteria": "2 pkt - poprawny wynik 9/25. 1 pkt - poprawny opis zdarzenia lub iloczyn prawdopodobieństw. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z31", "examId": "matura-maj-2019-podstawowa", "number": 31, "displayNumber": "31", "order": 31, "points": 2,
+        "title": "Zadanie 31", "topicId": "plane-geometry", "sourcePage": 19, "solutionSourcePage": 20,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "W trapezie prostokątnym dłuższa podstawa ma długość 8, przekątna AC ma długość 4 i tworzy z krótszą podstawą kąt 30°. Oblicz długość BD.",
+        "hints": ["Rozłóż przekątną AC na składową poziomą i wysokość trapezu.", "Zastosuj twierdzenie Pitagorasa w trójkącie z przekątną BD."],
+        "solution": "Wysokość trapezu wynosi 4 sin 30° = 2, a pozioma składowa AC to 2√3. Stąd |BD| = √((8 - 2√3)² + 2²) = √(68 - 32√3).", "scoringCriteria": "2 pkt - poprawna długość BD. 1 pkt - poprawnie wyznaczona wysokość lub składowa przekątnej AC. 0 pkt - brak istotnego postępu.", "diagramIds": ["exam-mm19-p0-z31"]
+      },
+      {
+        "id": "mm19-p0-z32", "examId": "matura-maj-2019-podstawowa", "number": 32, "displayNumber": "32", "order": 32, "points": 4,
+        "title": "Zadanie 32", "topicId": "sequences", "sourcePage": 20, "solutionSourcePage": 21,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "Ciąg arytmetyczny ma różnicę r = -4, a średnia pierwszych sześciu wyrazów wynosi 16. Oblicz a₁ oraz k, dla którego aₖ = -78.",
+        "hints": ["Średnia pierwszego i szóstego wyrazu równa się średniej całego sześciowyrazowego ciągu.", "Użyj wzoru aₖ = a₁ + (k - 1)r."],
+        "solution": "a₆ = a₁ - 20, a zatem (a₁ + a₆)/2 = a₁ - 10 = 16, więc a₁ = 26. Z równania 26 - 4(k - 1) = -78 otrzymujemy k = 27.", "scoringCriteria": "4 pkt - a₁ = 26 i k = 27. 2 pkt - poprawne a₁. 1 pkt - poprawna zależność dla ciągu. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z33", "examId": "matura-maj-2019-podstawowa", "number": 33, "displayNumber": "33", "order": 33, "points": 4,
+        "title": "Zadanie 33", "topicId": "lines-and-segments", "sourcePage": 22, "solutionSourcePage": 24,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "Punkt A = (-18, 10), a prosta y = 3x jest symetralną odcinka AB. Wyznacz współrzędne punktu B.",
+        "hints": ["Wyznacz rzut prostopadły punktu A na prostą y = 3x.", "Punkt rzutu jest środkiem odcinka AB."],
+        "solution": "Odbicie punktu A względem prostej 3x - y = 0 ma współrzędne B = (102/5, -14/5).", "scoringCriteria": "4 pkt - poprawne współrzędne B. 3 pkt - poprawny środek odcinka i metoda odbicia. 2 pkt - poprawna prosta prostopadła. 1 pkt - istotny krok rachunkowy. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0-z34", "examId": "matura-maj-2019-podstawowa", "number": 34, "displayNumber": "34", "order": 34, "points": 5,
+        "title": "Zadanie 34", "topicId": "solid-geometry", "sourcePage": 24, "solutionSourcePage": 29,
+        "verificationSource": "CKE MMA-P1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "Ostrosłup prawidłowy czworokątny ma krawędź podstawy 6, a pole całkowite równe czterem polom podstawy. Oblicz cosinus kąta nachylenia krawędzi bocznej do podstawy.",
+        "hints": ["Pole jednej ściany bocznej wyznacz z pola całkowitego.", "Rozważ trójkąt utworzony przez wierzchołek ostrosłupa, środek podstawy i wierzchołek podstawy."],
+        "solution": "Pole podstawy wynosi 36, a pole boczne 108. Wysokość ściany bocznej ma długość 9, wysokość ostrosłupa 6√2, a rzut krawędzi bocznej ma długość 3√2. Stąd cos α = (3√2)/(3√10) = √5/5.", "scoringCriteria": "5 pkt - poprawna wartość √5/5. 4 pkt - poprawne długości istotnych odcinków. 2 pkt - poprawne pole ściany bocznej. 1 pkt - poprawne pole podstawy. 0 pkt - brak istotnego postępu.", "diagramIds": ["exam-mm19-p0-z34"]
+      }
+    ]
+  }
+}

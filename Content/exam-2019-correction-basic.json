@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 4,
+  "exam": {
+    "id": "matura-poprawkowa-2019-podstawowa",
+    "title": "Matura poprawkowa 2019 - poziom podstawowy (Formuła 2015)",
+    "progressLabel": "Matura poprawkowa 2019 PP (F2015)",
+    "year": 2019,
+    "session": "poprawkowa",
+    "formula": "2015",
+    "level": "basic",
+    "durationMinutes": 170,
+    "maximumPoints": 50,
+    "officialTaskCount": 34,
+    "progressItemCount": 34,
+    "introduction": [
+      { "type": "richText", "text": "Arkusz poprawkowy z matematyki na poziomie podstawowym z 20 sierpnia 2019 r. w Formule 2015 obejmuje 34 zadania, 50 punktów i 170 minut." },
+      { "type": "richText", "text": "Treść zadań, odpowiedzi, rozwiązań i kryteriów pochodzi z zachowanego publicznego archiwum arkusza oraz zasad oceniania. Publiczna redystrybucja tej transkrypcji pozostaje zablokowana do czasu osobnego rozszerzenia deklaracji praw." }
+    ],
+    "topicIntroduction": [],
+    "source": {
+      "publisher": "Centralna Komisja Egzaminacyjna; pliki pobrane z publicznego archiwum arkusze.pl",
+      "documentCode": "MMA-P1_1P-194",
+      "examDate": "2019-08-20",
+      "questionPaperUrl": "https://arkusze.pl/maturalne/matematyka-2019-sierpien-poprawkowa-podstawowa.pdf",
+      "questionPaperSha256": "9E89885F36BB5C74598338FE64C8B755E495EC58164A19CC6A79E520C4A0E318",
+      "answerKeyUrl": "https://arkusze.pl/maturalne/matematyka-2019-sierpien-poprawkowa-podstawowa-odpowiedzi.pdf",
+      "answerKeySha256": "512BF13A01E5CFFC09FAB08A79DF2A927D9AA5F139BE977369706690EF59E739",
+      "verifiedOn": "2026-09-01"
+    },
+    "topics": [],
+    "exercises": [
+      {
+        "id": "mm19-p0p-z01", "examId": "matura-poprawkowa-2019-podstawowa", "number": 1, "displayNumber": "1", "order": 1, "points": 1,
+        "title": "Zadanie 1", "topicId": "logarithms", "sourcePage": 2, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Liczba log₇ 7 jest równa:", "options": ["1", "7", "1/7", "1/2"], "correctOption": 1,
+        "hints": ["Zastosuj definicję logarytmu.", "Szukaj wykładnika, do którego trzeba podnieść 7, aby otrzymać 7."],
+        "solution": "7¹ = 7, więc log₇ 7 = 1. Odpowiedź A.", "scoringCriteria": "1 pkt - odpowiedź A. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z02", "examId": "matura-poprawkowa-2019-podstawowa", "number": 2, "displayNumber": "2", "order": 2, "points": 1,
+        "title": "Zadanie 2", "topicId": "identities", "sourcePage": 2, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Kwadrat liczby 8 - 3√7 jest równy:", "options": ["127 + 48√7", "127 - 48√7", "1 - 48√7", "1 + 48√7"], "correctOption": 2,
+        "hints": ["Użyj wzoru (a - b)² = a² - 2ab + b².", "Podstaw a = 8 oraz b = 3√7."],
+        "solution": "(8 - 3√7)² = 64 - 48√7 + 63 = 127 - 48√7. Odpowiedź B.", "scoringCriteria": "1 pkt - odpowiedź B. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z03", "examId": "matura-poprawkowa-2019-podstawowa", "number": 3, "displayNumber": "3", "order": 3, "points": 1,
+        "title": "Zadanie 3", "topicId": "percentages", "sourcePage": 2, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "75% liczby a i 59% liczby b są równe 177. Wtedy:", "options": ["b - a = 26", "b - a = 64", "a - b = 26", "a - b = 64"], "correctOption": 2,
+        "hints": ["Zapisz a = 177/0,75 i b = 177/0,59.", "Porównaj wyznaczone liczby."],
+        "solution": "a = 236, b = 300, więc b - a = 64. Odpowiedź B.", "scoringCriteria": "1 pkt - odpowiedź B. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z04", "examId": "matura-poprawkowa-2019-podstawowa", "number": 4, "displayNumber": "4", "order": 4, "points": 1,
+        "title": "Zadanie 4", "topicId": "equations", "sourcePage": 2, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Równanie x(5x + 1) = 5x + 1 ma rozwiązania:", "options": ["x = 1", "x = 1 i x = -1", "x = -1/5 i x = 1", "x = 1/5 i x = -1"], "correctOption": 3,
+        "hints": ["Przenieś prawą stronę na lewą.", "Wyłącz wspólny czynnik 5x + 1."],
+        "solution": "(5x + 1)(x - 1) = 0, więc x = -1/5 lub x = 1. Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z05", "examId": "matura-poprawkowa-2019-podstawowa", "number": 5, "displayNumber": "5", "order": 5, "points": 1,
+        "title": "Zadanie 5", "topicId": "equations", "sourcePage": 2, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Para x = 3, y = 1 spełnia układ -x + 12y = a² oraz 2x + ay = 9 dla:", "options": ["a = 7/3", "a = -3", "a = 3", "a = -7/3"], "correctOption": 3,
+        "hints": ["Podstaw x = 3 i y = 1 do drugiego równania.", "Sprawdź, czy wynik spełnia pierwsze równanie."],
+        "solution": "6 + a = 9, więc a = 3. Pierwsze równanie daje wtedy 9 = a². Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z06", "examId": "matura-poprawkowa-2019-podstawowa", "number": 6, "displayNumber": "6", "order": 6, "points": 1,
+        "title": "Zadanie 6", "topicId": "equations", "sourcePage": 2, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Równanie ((x - 2)(x + 4))/(x - 4)² = 0 ma rozwiązania:", "options": ["x = 2", "x = -2", "x = 2 i x = -4", "x = -2 i x = 4"], "correctOption": 3,
+        "hints": ["Ułamek jest równy zero, gdy licznik jest równy zero.", "Pamiętaj, że x = 4 wyklucza mianownik."],
+        "solution": "Licznik zeruje się dla x = 2 oraz x = -4, a mianownik w tych punktach jest różny od zera. Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z07", "examId": "matura-poprawkowa-2019-podstawowa", "number": 7, "displayNumber": "7", "order": 7, "points": 1,
+        "title": "Zadanie 7", "topicId": "quadratic-function", "sourcePage": 4, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Miejscami zerowymi funkcji f(x) = 9 - (3 - x)² są liczby:", "options": ["0 i 3", "-6 i 6", "0 i -6", "0 i 6"], "correctOption": 4,
+        "hints": ["Przyrównaj 9 - (3 - x)² do zera.", "Wyciągnij pierwiastek z 9."],
+        "solution": "(3 - x)² = 9, więc 3 - x = ±3. Stąd x = 0 lub x = 6. Odpowiedź D.", "scoringCriteria": "1 pkt - odpowiedź D. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z08", "examId": "matura-poprawkowa-2019-podstawowa", "number": 8, "displayNumber": "8", "order": 8, "points": 1,
+        "title": "Zadanie 8", "topicId": "quadratic-function", "sourcePage": 4, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Parabola g ma wierzchołek W = (1, 1) i jest skierowana ramionami w dół. Jej zbiorem wartości jest:", "options": ["(-∞, 0⟩", "⟨0, 2⟩", "⟨1, +∞)", "(-∞, 1⟩"], "correctOption": 4,
+        "hints": ["Wierzchołek paraboli skierowanej w dół wyznacza największą wartość.", "Odczytaj współrzędną y wierzchołka."],
+        "solution": "Największa wartość funkcji wynosi 1, więc zbiorem wartości jest (-∞, 1⟩. Odpowiedź D.", "scoringCriteria": "1 pkt - odpowiedź D. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": ["exam-mm19-p0p-z08"]
+      },
+      {
+        "id": "mm19-p0p-z09", "examId": "matura-poprawkowa-2019-podstawowa", "number": 9, "displayNumber": "9", "order": 9, "points": 1,
+        "title": "Zadanie 9", "topicId": "powers", "sourcePage": 4, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Która z liczb jest większa od 5?", "options": ["(1/25)⁻¹ᐟ²", "(1/25)⁻¹ᐟ⁵", "125²ᐟ³", "125¹ᐟ³"], "correctOption": 3,
+        "hints": ["Zapisz podstawy jako potęgi liczb 5 lub 25.", "Porównaj otrzymane wartości z 5."],
+        "solution": "125²ᐟ³ = (∛125)² = 25, więc jest większe od 5. Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z10", "examId": "matura-poprawkowa-2019-podstawowa", "number": 10, "displayNumber": "10", "order": 10, "points": 1,
+        "title": "Zadanie 10", "topicId": "linear-function", "sourcePage": 4, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Punkt A = (a, 3) leży na prostej y = (3/4)x + 6. Wtedy:", "options": ["a = -4", "a = 4", "a = 33/4", "a = 39/4"], "correctOption": 1,
+        "hints": ["Podstaw y = 3 do równania prostej.", "Rozwiąż równanie liniowe względem a."],
+        "solution": "3 = (3/4)a + 6, więc (3/4)a = -3 i a = -4. Odpowiedź A.", "scoringCriteria": "1 pkt - odpowiedź A. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z11", "examId": "matura-poprawkowa-2019-podstawowa", "number": 11, "displayNumber": "11", "order": 11, "points": 1,
+        "title": "Zadanie 11", "topicId": "sequences", "sourcePage": 6, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "W ciągu arytmetycznym a₁ = -11 i a₉ = 5. Suma dziewięciu pierwszych wyrazów jest równa:", "options": ["-24", "-27", "-16", "-18"], "correctOption": 2,
+        "hints": ["Użyj wzoru S₉ = 9(a₁ + a₉)/2.", "Podstaw dane końcowe wyrazy."],
+        "solution": "S₉ = 9(-11 + 5)/2 = -27. Odpowiedź B.", "scoringCriteria": "1 pkt - odpowiedź B. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z12", "examId": "matura-poprawkowa-2019-podstawowa", "number": 12, "displayNumber": "12", "order": 12, "points": 1,
+        "title": "Zadanie 12", "topicId": "sequences", "sourcePage": 6, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Dodatni ciąg geometryczny ma a₂ = 162 i a₅ = 48. Jego iloraz wynosi:", "options": ["2/3", "3/4", "1/3", "1/2"], "correctOption": 1,
+        "hints": ["Iloraz a₅/a₂ jest równy q³.", "Oblicz pierwiastek sześcienny z 48/162."],
+        "solution": "q³ = 48/162 = 8/27, więc q = 2/3. Odpowiedź A.", "scoringCriteria": "1 pkt - odpowiedź A. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z13", "examId": "matura-poprawkowa-2019-podstawowa", "number": 13, "displayNumber": "13", "order": 13, "points": 1,
+        "title": "Zadanie 13", "topicId": "trigonometry", "sourcePage": 6, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Cosinus ostrego kąta α jest równy 12/13. Wtedy sin α jest równy:", "options": ["13/12", "1/13", "5/13", "25/169"], "correctOption": 3,
+        "hints": ["Skorzystaj z sin² α + cos² α = 1.", "Sinus kąta ostrego jest dodatni."],
+        "solution": "sin² α = 1 - 144/169 = 25/169, więc sin α = 5/13. Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z14", "examId": "matura-poprawkowa-2019-podstawowa", "number": 14, "displayNumber": "14", "order": 14, "points": 1,
+        "title": "Zadanie 14", "topicId": "plane-geometry", "sourcePage": 6, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "W trójkącie równoramiennym z punktem D na podstawie, przy danych AD = CD, BC = BD i ∠BCD = 72°, kąt ACD ma miarę:", "options": ["38°", "36°", "42°", "40°"], "correctOption": 2,
+        "hints": ["Zaznacz kąty równe w trójkątach równoramiennych.", "Wykorzystaj sumę kątów w trójkącie ABC."],
+        "solution": "Z równości boków wynika układ zależności kątowych, z którego otrzymujemy ∠ACD = 36°. Odpowiedź B.", "scoringCriteria": "1 pkt - odpowiedź B. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": ["exam-mm19-p0p-z14"]
+      },
+      {
+        "id": "mm19-p0p-z15", "examId": "matura-poprawkowa-2019-podstawowa", "number": 15, "displayNumber": "15", "order": 15, "points": 1,
+        "title": "Zadanie 15", "topicId": "plane-geometry", "sourcePage": 6, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Okrąg o środku S = (a, 5) jest styczny do osi Oy i do prostej y = 2. Jego promień wynosi:", "options": ["3", "5", "2", "4"], "correctOption": 1,
+        "hints": ["Odległość środka od prostej stycznej równa się promieniowi.", "Oblicz odległość punktu o rzędnej 5 od prostej y = 2."],
+        "solution": "Odległość środka od prostej y = 2 wynosi |5 - 2| = 3. Odpowiedź A.", "scoringCriteria": "1 pkt - odpowiedź A. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z16", "examId": "matura-poprawkowa-2019-podstawowa", "number": 16, "displayNumber": "16", "order": 16, "points": 1,
+        "title": "Zadanie 16", "topicId": "solid-geometry", "sourcePage": 8, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Ostrosłup prawidłowy czworokątny ma wszystkie ściany boczne równoboczne. Miara kąta SAC wynosi:", "options": ["60°", "45°", "90°", "75°"], "correctOption": 2,
+        "hints": ["W trójkącie SAC odcinki SA i SC są równe krawędzi podstawy.", "Przekątna AC kwadratu ma długość a√2."],
+        "solution": "W trójkącie SAC mamy SA = SC = a i AC = a√2, więc z twierdzenia cosinusów ∠SAC = 45°. Odpowiedź B.", "scoringCriteria": "1 pkt - odpowiedź B. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": ["exam-mm19-p0p-z16"]
+      },
+      {
+        "id": "mm19-p0p-z17", "examId": "matura-poprawkowa-2019-podstawowa", "number": 17, "displayNumber": "17", "order": 17, "points": 1,
+        "title": "Zadanie 17", "topicId": "lines-and-segments", "sourcePage": 8, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Proste y = (4m + 1)x - 19 oraz y = (5m - 4)x + 20 są równoległe dla:", "options": ["m = 5", "m = -1/4", "m = 5/4", "m = -5"], "correctOption": 1,
+        "hints": ["Dla prostych równoległych współczynniki kierunkowe są równe.", "Przyrównaj 4m + 1 i 5m - 4."],
+        "solution": "4m + 1 = 5m - 4, więc m = 5. Odpowiedź A.", "scoringCriteria": "1 pkt - odpowiedź A. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z18", "examId": "matura-poprawkowa-2019-podstawowa", "number": 18, "displayNumber": "18", "order": 18, "points": 1,
+        "title": "Zadanie 18", "topicId": "lines-and-segments", "sourcePage": 8, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "S = (40, 40) jest środkiem odcinka KL, a K = (0, 8). Punkt L ma współrzędne:", "options": ["(20, 24)", "(-80, -72)", "(-40, -24)", "(80, 72)"], "correctOption": 4,
+        "hints": ["Współrzędne środka są średnimi współrzędnych końców odcinka.", "Zastosuj L = 2S - K."],
+        "solution": "L = (80, 80) - (0, 8) = (80, 72). Odpowiedź D.", "scoringCriteria": "1 pkt - odpowiedź D. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z19", "examId": "matura-poprawkowa-2019-podstawowa", "number": 19, "displayNumber": "19", "order": 19, "points": 1,
+        "title": "Zadanie 19", "topicId": "lines-and-segments", "sourcePage": 8, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Punkt P = (-6, -8) odbito najpierw względem osi Ox, a potem względem osi Oy. Otrzymany punkt Q to:", "options": ["(6, 8)", "(-6, -8)", "(8, 6)", "(-8, -6)"], "correctOption": 1,
+        "hints": ["Odbicie względem osi Ox zmienia znak współrzędnej y.", "Odbicie względem osi Oy zmienia znak współrzędnej x."],
+        "solution": "Po pierwszym odbiciu otrzymujemy (-6, 8), a po drugim (6, 8). Odpowiedź A.", "scoringCriteria": "1 pkt - odpowiedź A. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z20", "examId": "matura-poprawkowa-2019-podstawowa", "number": 20, "displayNumber": "20", "order": 20, "points": 1,
+        "title": "Zadanie 20", "topicId": "lines-and-segments", "sourcePage": 8, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "P = (-30, -76) leży w tej samej ćwiartce co jeden z punktów A = (1, 4), B = (-5, -1), C = (-5, 3), D = (6, -4).", "options": ["A", "B", "C", "D"], "correctOption": 2,
+        "hints": ["Sprawdź znaki obu współrzędnych punktu P.", "Porównaj je ze znakami współrzędnych punktów A-D."],
+        "solution": "P ma obie współrzędne ujemne, więc leży w III ćwiartce tak jak punkt B. Odpowiedź B.", "scoringCriteria": "1 pkt - odpowiedź B. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z21", "examId": "matura-poprawkowa-2019-podstawowa", "number": 21, "displayNumber": "21", "order": 21, "points": 1,
+        "title": "Zadanie 21", "topicId": "solid-geometry", "sourcePage": 10, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Prostopadłościan ma wymiary 30 cm, 40 cm i 120 cm. Jego przekątna jest dłuższa od odcinków o długościach:", "options": ["tylko 119 cm", "tylko 119 cm i 121 cm", "119 cm, 121 cm i 129 cm", "wszystkich czterech: 119 cm, 121 cm, 129 cm, 131 cm"], "correctOption": 3,
+        "hints": ["Oblicz długość przekątnej z twierdzenia Pitagorasa w trzech wymiarach.", "Porównaj ją z każdą z czterech długości."],
+        "solution": "d = √(30² + 40² + 120²) = 130 cm. Jest dłuższa od 119, 121 i 129 cm. Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": ["exam-mm19-p0p-z21"]
+      },
+      {
+        "id": "mm19-p0p-z22", "examId": "matura-poprawkowa-2019-podstawowa", "number": 22, "displayNumber": "22", "order": 22, "points": 1,
+        "title": "Zadanie 22", "topicId": "solid-geometry", "sourcePage": 10, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Pole całkowite stożka jest trzy razy większe od pola kuli. Promień kuli i podstawy stożka wynosi 2. Tworząca stożka ma długość:", "options": ["12", "11", "24", "22"], "correctOption": 4,
+        "hints": ["Pole kuli o promieniu 2 wynosi 16π.", "Pole całkowite stożka wynosi 4π + 2πl."],
+        "solution": "4π + 2πl = 3 · 16π, więc l = 22. Odpowiedź D.", "scoringCriteria": "1 pkt - odpowiedź D. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z23", "examId": "matura-poprawkowa-2019-podstawowa", "number": 23, "displayNumber": "23", "order": 23, "points": 1,
+        "title": "Zadanie 23", "topicId": "statistics", "sourcePage": 10, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Średnia liczb 3, 10, 5, x, x, x, x, 12, 19, 7 wynosi 12. Mediana tych liczb wynosi:", "options": ["14", "12", "16", "x"], "correctOption": 1,
+        "hints": ["Najpierw wyznacz x ze średniej arytmetycznej.", "Następnie uporządkuj dziesięć liczb i wyznacz średnią piątej oraz szóstej."],
+        "solution": "56 + 4x = 120, więc x = 16. Po uporządkowaniu mediana to (12 + 16)/2 = 14. Odpowiedź A.", "scoringCriteria": "1 pkt - odpowiedź A. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z24", "examId": "matura-poprawkowa-2019-podstawowa", "number": 24, "displayNumber": "24", "order": 24, "points": 1,
+        "title": "Zadanie 24", "topicId": "combinatorics", "sourcePage": 10, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "Ile jest czterocyfrowych liczb parzystych zapisanych wyłącznie cyframi 1, 2, 3?", "options": ["54", "81", "8", "27"], "correctOption": 4,
+        "hints": ["Ostatnia cyfra liczby parzystej musi być równa 2.", "Każdą z trzech wcześniejszych pozycji można obsadzić na trzy sposoby."],
+        "solution": "Ostatnia cyfra jest ustalona, a trzy poprzednie mają po 3 możliwości. Jest 3³ = 27 liczb. Odpowiedź D.", "scoringCriteria": "1 pkt - odpowiedź D. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z25", "examId": "matura-poprawkowa-2019-podstawowa", "number": 25, "displayNumber": "25", "order": 25, "points": 1,
+        "title": "Zadanie 25", "topicId": "probability", "sourcePage": 10, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "multipleChoice",
+        "prompt": "W grupie 60 osób jest 35 kobiet. Prawdopodobieństwo wylosowania mężczyzny wynosi:", "options": ["1/60", "1/25", "7/12", "5/12"], "correctOption": 4,
+        "hints": ["Wyznacz liczbę mężczyzn w grupie.", "Podziel ją przez liczbę wszystkich osób."],
+        "solution": "Mężczyzn jest 60 - 35 = 25, więc prawdopodobieństwo wynosi 25/60 = 5/12. Odpowiedź D.", "scoringCriteria": "1 pkt - odpowiedź D. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z26", "examId": "matura-poprawkowa-2019-podstawowa", "number": 26, "displayNumber": "26", "order": 26, "points": 2,
+        "title": "Zadanie 26", "topicId": "equations", "sourcePage": 12, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "revealOnly",
+        "prompt": "Rozwiąż równanie (x² - 16)(x³ - 1) = 0.",
+        "hints": ["Zastosuj własność iloczynu równego zero.", "Rozwiąż osobno x² - 16 = 0 i x³ - 1 = 0."],
+        "solution": "x² - 16 = 0 daje x = -4 lub x = 4, a x³ - 1 = 0 daje x = 1. Zbiór rozwiązań to {-4, 1, 4}.", "scoringCriteria": "2 pkt - wszystkie trzy rozwiązania. 1 pkt - poprawnie rozwiązany jeden czynnik. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z27", "examId": "matura-poprawkowa-2019-podstawowa", "number": 27, "displayNumber": "27", "order": 27, "points": 2,
+        "title": "Zadanie 27", "topicId": "inequalities", "sourcePage": 13, "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "revealOnly",
+        "prompt": "Rozwiąż nierówność 2x² - 5x + 3 ≤ 0.",
+        "hints": ["Rozłóż trójmian na czynniki lub wyznacz jego miejsca zerowe.", "Parabola ma dodatni współczynnik przy x²."],
+        "solution": "2x² - 5x + 3 = (2x - 3)(x - 1). Nierówność jest spełniona dla x ∈ ⟨1, 3/2⟩.", "scoringCriteria": "2 pkt - poprawny przedział. 1 pkt - poprawne miejsca zerowe albo analiza znaku. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z28", "examId": "matura-poprawkowa-2019-podstawowa", "number": 28, "displayNumber": "28", "order": 28, "points": 2,
+        "title": "Zadanie 28", "topicId": "proofs", "sourcePage": 14, "solutionSourcePage": 5,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "revealOnly",
+        "prompt": "Wykaż, że dla każdej liczby dodatniej x zachodzi x + (1 - x)/x ≥ 1.",
+        "hints": ["Uprość wyrażenie po lewej stronie.", "Użyj nierówności x + 1/x ≥ 2 dla x > 0."],
+        "solution": "x + (1 - x)/x = x + 1/x - 1. Ponieważ x + 1/x ≥ 2, lewa strona jest co najmniej 1.", "scoringCriteria": "2 pkt - pełny dowód. 1 pkt - poprawne uproszczenie lub użycie właściwej nierówności. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z29", "examId": "matura-poprawkowa-2019-podstawowa", "number": 29, "displayNumber": "29", "order": 29, "points": 2,
+        "title": "Zadanie 29", "topicId": "proofs", "sourcePage": 15, "solutionSourcePage": 6,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "revealOnly",
+        "prompt": "Punkty A i C leżą na okręgu o promieniu r, środek S leży na AB, BC jest styczna w C, a AC = r√3. Wykaż, że ∠ACB = 120°.",
+        "hints": ["Trójkąt ASC ma boki SA = SC = r i AC = r√3.", "Promień SC jest prostopadły do stycznej BC."],
+        "solution": "Z twierdzenia cosinusów w trójkącie ASC otrzymujemy ∠ASC = 120°, a kąty przy A i C mają po 30°. Ponieważ SC ⟂ BC, kąt ACB ma miarę 90° + 30° = 120°.", "scoringCriteria": "2 pkt - pełny dowód kąta 120°. 1 pkt - poprawna analiza trójkąta ASC albo styczności. 0 pkt - brak istotnego postępu.", "diagramIds": ["exam-mm19-p0p-z29"]
+      },
+      {
+        "id": "mm19-p0p-z30", "examId": "matura-poprawkowa-2019-podstawowa", "number": 30, "displayNumber": "30", "order": 30, "points": 2,
+        "title": "Zadanie 30", "topicId": "probability", "sourcePage": 16, "solutionSourcePage": 8,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "numeric", "expectedValue": 0.2777777777777778,
+        "prompt": "Losujemy jedną liczbę dwucyfrową. Oblicz prawdopodobieństwo, że cyfra dziesiątek jest nieparzysta, a cyfra jedności parzysta.",
+        "hints": ["Liczb dwucyfrowych jest 90.", "Cyfrę dziesiątek wybierz na 5 sposobów, a cyfrę jedności na 5 sposobów."],
+        "solution": "Wyników sprzyjających jest 5 · 5 = 25, a wszystkich 90. Prawdopodobieństwo wynosi 25/90 = 5/18.", "scoringCriteria": "2 pkt - poprawny wynik 5/18. 1 pkt - poprawne policzenie wyników sprzyjających lub wszystkich. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z31", "examId": "matura-poprawkowa-2019-podstawowa", "number": 31, "displayNumber": "31", "order": 31, "points": 2,
+        "title": "Zadanie 31", "topicId": "lines-and-segments", "sourcePage": 17, "solutionSourcePage": 10,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "revealOnly",
+        "prompt": "Przekątne rombu przecinają się w S = (21/2, -1). Przekątna AC leży na prostej y = x/3 + 5/2. Wyznacz równanie prostej BD.",
+        "hints": ["Przekątne rombu są prostopadłe.", "Prosta BD przechodzi przez punkt S."],
+        "solution": "Współczynnik kierunkowy AC wynosi 1/3, więc BD ma współczynnik -3. Z punktu S: y + 1 = -3(x - 21/2), czyli y = -3x + 61/2.", "scoringCriteria": "2 pkt - poprawne równanie BD. 1 pkt - poprawny współczynnik kierunkowy lub wykorzystanie punktu S. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z32", "examId": "matura-poprawkowa-2019-podstawowa", "number": 32, "displayNumber": "32", "order": 32, "points": 4,
+        "title": "Zadanie 32", "topicId": "sequences", "sourcePage": 18, "solutionSourcePage": 10,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "numeric", "expectedValue": 10,
+        "prompt": "W czterdziestowyrazowym ciągu arytmetycznym suma wyrazów o numerach parzystych wynosi 1340, a nieparzystych 1400. Wyznacz a₄₀.",
+        "hints": ["Różnica sum parzystych i nieparzystych jest równa 20r.", "Suma wszystkich 40 wyrazów wynosi 2740."],
+        "solution": "1340 - 1400 = 20r, więc r = -3. Ze wzoru S₄₀ = 20(a₁ + a₄₀) = 2740 otrzymujemy a₁ + a₄₀ = 137, a a₄₀ = a₁ - 117. Stąd a₄₀ = 10.", "scoringCriteria": "4 pkt - poprawny wynik 10. 3 pkt - poprawne r = -3 i relacja sumy. 2 pkt - poprawna zależność dla ciągu. 1 pkt - istotny krok pomocniczy. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z33", "examId": "matura-poprawkowa-2019-podstawowa", "number": 33, "displayNumber": "33", "order": 33, "points": 4,
+        "title": "Zadanie 33", "topicId": "plane-geometry", "sourcePage": 20, "solutionSourcePage": 12,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "numeric", "expectedValue": 22,
+        "prompt": "Środek okręgu jest oddalony o 10 cm od cięciwy. Długość cięciwy jest o 22 cm większa od promienia. Oblicz promień.",
+        "hints": ["Prosta od środka do cięciwy dzieli ją na połowy.", "Zastosuj twierdzenie Pitagorasa w trójkącie o przeciwprostokątnej r."],
+        "solution": "r² = 10² + ((r + 22)/2)². Po uproszczeniu otrzymujemy 3r² - 44r - 484 = 0, a dodatnie rozwiązanie to r = 22 cm.", "scoringCriteria": "4 pkt - poprawny promień 22 cm. 3 pkt - poprawne równanie. 2 pkt - poprawny model geometryczny. 1 pkt - istotny krok pomocniczy. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-p0p-z34", "examId": "matura-poprawkowa-2019-podstawowa", "number": 34, "displayNumber": "34", "order": 34, "points": 5,
+        "title": "Zadanie 34", "topicId": "solid-geometry", "sourcePage": 22, "solutionSourcePage": 13,
+        "verificationSource": "CKE MMA-P1_1P-194; publiczne archiwum PDF", "mode": "revealOnly",
+        "prompt": "Krawędź boczna ostrosłupa prawidłowego czworokątnego ma długość 12 i tworzy z wysokością kąt α o tg α = 2/5. Oblicz objętość ostrosłupa.",
+        "hints": ["W trójkącie z krawędzią boczną wysokość jest przyprostokątną przyległą do α.", "Wyznacz promień okręgu opisanego na podstawie, a potem bok kwadratu."],
+        "solution": "Jeżeli AO = 2k i SO = 5k, to 29k² = 144. Zatem SO = 60/√29, a bok podstawy spełnia a² = 1152/29. Objętość wynosi V = (1/3)a²SO = 23040/(29√29).", "scoringCriteria": "5 pkt - poprawna objętość. 4 pkt - poprawne długości wysokości i podstawy. 3 pkt - poprawne zastosowanie tangensa. 1 pkt - poprawny trójkąt pomocniczy. 0 pkt - brak istotnego postępu.", "diagramIds": ["exam-mm19-p0p-z34"]
+      }
+    ]
+  }
+}

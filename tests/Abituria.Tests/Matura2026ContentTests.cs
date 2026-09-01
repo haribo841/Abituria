@@ -158,7 +158,7 @@ public sealed class Matura2026ContentTests
 
         Assert.Equal(17, topicIds.Count);
         Assert.Equal(
-            ["basic", "extended", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "basic", "extended", "basic", "extended", "basic", "basic", "extended", "basic"],
+            ["basic", "extended", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "basic", "extended", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic"],
             index.Exams.OrderBy(item => item.Order).Select(item => item.Level));
         Assert.Equal(topicIds.Order(), exam.Exercises.Select(item => item.TopicId).Distinct(StringComparer.Ordinal).Order());
         Assert.All(exam.Exercises, item => Assert.Contains(item.TopicId, topicIds));
@@ -193,7 +193,16 @@ public sealed class Matura2026ContentTests
         var basic2021 = Read<ExamCatalog>("Content/exam-2021-main-basic.json").Exam;
         var extended2021 = Read<ExamCatalog>("Content/exam-2021-main-extended.json").Exam;
         var legacy = Read<ExamCatalog>("Content/exam-2021-correction.json").Exam;
-        var exams = new[] { current, extended, basic2025, extended2025, correction2025, basic2024, extended2024, correction2024, basic2023, correction2023, extended2023, basic2022, extended2022, correction2022, basic2021, extended2021, legacy };
+        var basic2020 = Read<ExamCatalog>("Content/exam-2020-main-basic.json").Exam;
+        var extended2020 = Read<ExamCatalog>("Content/exam-2020-main-extended.json").Exam;
+        var correction2020 = Read<ExamCatalog>("Content/exam-2020-correction-basic.json").Exam;
+        var basic2019 = Read<ExamCatalog>("Content/exam-2019-main-basic.json").Exam;
+        var extended2019 = Read<ExamCatalog>("Content/exam-2019-main-extended.json").Exam;
+        var correction2019 = Read<ExamCatalog>("Content/exam-2019-correction-basic.json").Exam;
+        var basic2018 = Read<ExamCatalog>("Content/exam-2018-main-basic.json").Exam;
+        var extended2018 = Read<ExamCatalog>("Content/exam-2018-main-extended.json").Exam;
+        var correction2018 = Read<ExamCatalog>("Content/exam-2018-correction-basic.json").Exam;
+        var exams = new[] { current, extended, basic2025, extended2025, correction2025, basic2024, extended2024, correction2024, basic2023, correction2023, extended2023, basic2022, extended2022, correction2022, basic2021, extended2021, legacy, basic2020, extended2020, correction2020, basic2019, extended2019, correction2019, basic2018, extended2018, correction2018 };
 
         Assert.Equal(
             [
@@ -213,7 +222,16 @@ public sealed class Matura2026ContentTests
                 "matura-poprawkowa-2022-podstawowa",
                 "matura-maj-2021-podstawowa",
                 "matura-maj-2021-rozszerzona",
-                "matura-poprawkowa-2021"
+                "matura-poprawkowa-2021",
+                "matura-maj-2020-podstawowa",
+                "matura-maj-2020-rozszerzona",
+                "matura-poprawkowa-2020-podstawowa",
+                "matura-maj-2019-podstawowa",
+                "matura-maj-2019-rozszerzona",
+                "matura-poprawkowa-2019-podstawowa",
+                "matura-maj-2018-podstawowa",
+                "matura-maj-2018-rozszerzona",
+                "matura-poprawkowa-2018-podstawowa"
             ],
             index.Exams.Where(item => item.IsActive).OrderBy(item => item.Order).Select(item => item.Id));
         Assert.Equal(35, legacy.Exercises.Count);
@@ -234,6 +252,15 @@ public sealed class Matura2026ContentTests
         Assert.Equal(35, correction2022.Exercises.Count);
         Assert.Equal(35, basic2021.Exercises.Count);
         Assert.Equal(15, extended2021.Exercises.Count);
+        Assert.Equal(34, basic2020.Exercises.Count);
+        Assert.Equal(15, extended2020.Exercises.Count);
+        Assert.Equal(34, correction2020.Exercises.Count);
+        Assert.Equal(34, basic2019.Exercises.Count);
+        Assert.Equal(15, extended2019.Exercises.Count);
+        Assert.Equal(34, correction2019.Exercises.Count);
+        Assert.Equal(34, basic2018.Exercises.Count);
+        Assert.Equal(15, extended2018.Exercises.Count);
+        Assert.Equal(34, correction2018.Exercises.Count);
         Assert.Equal(17, index.Topics.Count);
 
         foreach (var topic in index.Topics.OrderBy(item => item.Order))

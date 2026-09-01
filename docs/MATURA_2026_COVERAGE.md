@@ -53,7 +53,7 @@ Każdy diagram ma stabilny identyfikator, `sourceId` równy `cke-2026-main-basic
 
 ## Proweniencja
 
-Treść arkusza ma status `approved` w `Content/provenance.json` na podstawie rozszerzenia `docs/ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r. Siedem figur jest autorskimi implementacjami wektorowymi Avalonia, bez aktywnych rastrów, `Image` lub `Bitmap`. Bieżący worktree ma jednak `releaseEligible=false`, ponieważ nowe grupy matur głównych 2022 PP i PR oraz poprawkowej 2022 PP, matury głównej i poprawkowej 2023 PP oraz matur poprawkowych 2024 i 2025 PP wraz z trzydziestoma sześcioma diagramami nie są objęte deklaracją.
+Treść arkusza ma status `approved` w `Content/provenance.json` na podstawie rozszerzenia `docs/ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r. Siedem figur jest autorskimi implementacjami wektorowymi Avalonia, bez aktywnych rastrów, `Image` lub `Bitmap`. Bieżący worktree ma jednak `releaseEligible=false`, ponieważ grupy matur głównych i poprawkowych 2019 i 2020, matur głównych 2021 PP i PR, matur głównych i poprawkowej 2022 PP oraz PR, matury głównej i poprawkowej 2023 PP oraz matur poprawkowych 2024 i 2025 PP wraz z osiemdziesięcioma czterema diagramami nie są objęte deklaracją.
 
 Deklaracja wskazuje źródła obu matur 2026, ich adresy i sumy SHA-256, zakres redystrybucji w Abiturii oraz dziesięć autorskich implementacji wektorowych Avalonia. Grupy `cke-2026-main-basic-exam` i `cke-2026-main-extended-exam` mają status `approved`, natomiast wspólny katalog `runtime-vector-diagrams` jest chwilowo `blocked` z powodu nowych definicji matury głównej i poprawkowej 2023 PP.
 
@@ -62,5 +62,5 @@ Deklaracja wskazuje źródła obu matur 2026, ich adresy i sumy SHA-256, zakres 
 - `Matura2026ContentTests` sprawdza kontrakt `33/37/50`, źródła, sumy, etykiety, klucze, tryby, tematy, identyfikatory i diagramy.
 - `Matura2026UiTests` sprawdza wybór arkusza, agregację 17 tematów, kontekst nawigacji, osobny postęp, odpowiedzi złożone, dostępność i trzy rozmiary okna.
 - `CompoundAnswerEvaluatorTests` sprawdza wybór, wynik liczbowy, zapis tekstowy przedziału, przecinek lub kropkę i niepoprawne dane.
-- `DiagramCatalogTests` renderuje wszystkie 139 diagramów w trzech motywach i przy rozmiarach `720x520`, `960x640` oraz `1280x820`.
-- `ReleaseRuntimeTests` wymaga siedemnastu arkuszy i 473 jednostek postępu, zachowując 35 historycznych zadań 2021.
+- `DiagramCatalogTests` renderuje wszystkie 195 diagramów w trzech motywach i przy rozmiarach `720x520`, `960x640` oraz `1280x820`.
+- `ReleaseRuntimeTests` wymaga dwudziestu sześciu arkuszy i 722 jednostek postępu, zachowując 35 historycznych zadań 2021.

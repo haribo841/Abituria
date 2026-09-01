@@ -26,7 +26,7 @@ public sealed class MaturaView : UserControl
     {
         var exerciseRandomizer = randomizer ?? new ExerciseRandomizer();
         var root = new StackPanel { Spacing = 14 };
-        root.Children.Add(UiFactory.PageTitle("Matura", "Pracuj z pełnym arkuszem albo wybierz archiwalny zestaw."));
+        root.Children.Add(UiFactory.PageTitle("Matura", "Wybierz rok, formułę i poziom albo pracuj z pełnym arkuszem."));
         foreach (var exam in exams)
         {
             var examPanel = new StackPanel { Spacing = 10 };

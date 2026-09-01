@@ -4,7 +4,7 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 
 ## Status publikacji
 
-- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=false`. Grupy `cke-2022-main-basic-exam`, `cke-2022-main-extended-exam`, `cke-2022-correction-basic-exam`, `cke-2023-main-basic-exam`, `cke-2023-correction-basic-exam`, `cke-2024-correction-basic-exam`, `cke-2025-correction-basic-exam` i `runtime-vector-diagrams` są `blocked`, ponieważ deklaracja nie obejmuje jeszcze arkuszy EMAP-P0-100-2205, EMAP-R0-100-2205, EMAP-P0-100-2208, MMAP-P0-100-2305, MMAP-P0-100-2308, MMAP-P0-100-2408 i MMAP-P0-100-2508, ich zasad ani trzydziestu sześciu nowych figur. Zatwierdzone grupy zachowują swój status, lecz każde publiczne wydanie wymaga ponownej oceny.
+- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=false`. Szesnaście grup obejmujących matury 2019 i 2020, matury główne 2021, matury 2022, matury PP 2023, poprawki 2024 i 2025 PP oraz `runtime-vector-diagrams` ma status `blocked`, ponieważ deklaracja nie obejmuje jeszcze arkuszy MMA-P1_1P-192, MMA-R1_1P-192, MMA-P1_1P-194, MMA-P1_1P-202, MMA-R1_1P-202, MMA-P1_1P-204, EMAP-P0-100-2105, EMAP-R0-100-2105, EMAP-P0-100-2205, EMAP-R0-100-2205, EMAP-P0-100-2208, MMAP-P0-100-2305, MMAP-P0-100-2308, MMAP-P0-100-2408 i MMAP-P0-100-2508, ich zasad ani osiemdziesięciu czterech nowych figur. Zatwierdzone grupy zachowują swój status, lecz każde publiczne wydanie wymaga ponownej oceny.
 - Rzeczywiste autorstwo i źródła są przypisane w `Content/provenance.json`. Przed tagiem trzeba ponownie przejść bramę `-RequireReleaseEligible` na dokładnym commicie wydania.
 - Lokalnie zbudowany artefakt nie jest oficjalnym wydaniem, nawet jeśli przechodzi testy techniczne.
 
@@ -33,7 +33,7 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 
 - Kurs matematyki obejmuje Formułę 2023 na poziomie podstawowym i rozszerzonym; nie zawiera osobnego kursu Formuły 2015.
 - Warstwa 238 przykładów i 357 ćwiczeń kursowych pozostaje autorska. Obok niej działa osobny katalog 97 oficjalnych przykładów CKE - 66 podstawowych i 31 rozszerzonych - z jawnym źródłem, stronami, wymaganiami, zasadami oceniania, rozwiązaniami i opisami figur.
-- Dostępne są matury główne 2022 PP i PR oraz poprawkowa 2022 PP w Formule 2015, matury główna i poprawkowa 2023 na poziomie podstawowym, matura główna 2023 na poziomie rozszerzonym, matury główne 2024, 2025 i 2026 na poziomie podstawowym i rozszerzonym, matury poprawkowe 2024 i 2025 PP oraz arkusz poprawkowy 2021. Arkusze 2019, 2020 i zwykła matura podstawowa 2021 pozostają w przygotowaniu.
+- Dostępne są matury główne i poprawkowe 2019 oraz 2020 PP i PR, matury główne 2021 PP i PR, matury główne i poprawkowa 2022 PP oraz PR w Formule 2015, matury główna i poprawkowa 2023 na poziomie podstawowym, matura główna 2023 na poziomie rozszerzonym, matury główne 2024, 2025 i 2026 na poziomie podstawowym i rozszerzonym, matury poprawkowe 2024 i 2025 PP oraz arkusz poprawkowy 2021. Równoległe warianty Formuły 2015 z lat 2023-2026 pozostają w przygotowaniu.
 - Generator wykresów i kalkulator funkcji trygonometrycznych pozostają placeholderami.
 - Renderer CSharpMath obsługuje używany podzbiór zapisu matematycznego, ale nie jest pełnym silnikiem TeX. Treści muszą przechodzić walidację delimitera i regresje renderowania.
 - Materiały edukacyjne nie zastępują nauczyciela, oficjalnego informatora egzaminacyjnego ani aktualnych komunikatów CKE.

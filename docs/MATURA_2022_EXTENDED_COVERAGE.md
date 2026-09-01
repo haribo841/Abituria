@@ -43,4 +43,4 @@ Własna definicja Avalonia `exam-em22-r0-z13` odtwarza przestrzenny układ grani
 
 `Content/provenance.json` ma osobną grupę `cke-2022-main-extended-exam` ze statusem `blocked`. Grupa diagramów runtime również pozostaje `blocked`. Nie zmieniono `ASSET_RIGHTS_DECLARATION.md` ani `releaseEligible=false`, ponieważ deklaracja nie obejmuje jeszcze Formuły 2015 z 2022 r.
 
-Test `Matura2022ExtendedContentTests` kontroluje kontrakt `15/15/50`, źródła, sumy SHA-256, strony, odpowiedzi, tryby, diagram, proweniencję i link w spisie dokumentacji. Testy katalogu, UI i smoke testu kontrolują 17 aktywnych arkuszy oraz 473 jednostki postępu.
+Test `Matura2022ExtendedContentTests` kontroluje kontrakt `15/15/50`, źródła, sumy SHA-256, strony, odpowiedzi, tryby, diagram, proweniencję i link w spisie dokumentacji. Testy katalogu, UI i smoke testu kontrolują 26 aktywnych arkuszy oraz 722 jednostki postępu.

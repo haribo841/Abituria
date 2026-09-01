@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 4,
+  "exam": {
+    "id": "matura-maj-2019-rozszerzona",
+    "title": "Matura maj 2019 - poziom rozszerzony (Formuła 2015)",
+    "progressLabel": "Matura maj 2019 PR (F2015)",
+    "year": 2019,
+    "session": "główna",
+    "formula": "2015",
+    "level": "extended",
+    "durationMinutes": 180,
+    "maximumPoints": 50,
+    "officialTaskCount": 15,
+    "progressItemCount": 15,
+    "introduction": [
+      { "type": "richText", "text": "Arkusz główny z matematyki na poziomie rozszerzonym z 9 maja 2019 r. w Formule 2015 obejmuje 15 zadań, 50 punktów i 180 minut." },
+      { "type": "richText", "text": "Treść zadań, odpowiedzi, rozwiązań i kryteriów pochodzi z arkusza i zasad oceniania CKE. Publiczna redystrybucja tej transkrypcji pozostaje zablokowana do czasu osobnego rozszerzenia deklaracji praw." }
+    ],
+    "topicIntroduction": [],
+    "source": {
+      "publisher": "Centralna Komisja Egzaminacyjna",
+      "documentCode": "MMA-R1_1P-192",
+      "examDate": "2019-05-09",
+      "questionPaperUrl": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2019/formula_od_2015/matematyka/MMA-R1_1P-192.pdf",
+      "questionPaperSha256": "6C1234D94620A6149DD08E8DC4D0BA5D09BB7627C53CF53D926614B0BF409F07",
+      "answerKeyUrl": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2019/formula_od_2015/Zasady_oceniania/MMA-R1_1P-192_model.pdf",
+      "answerKeySha256": "D8F0A3D47971248D4D07E2613243B94A70DA3B7A7EB5B5D35FB477E517483AF0",
+      "verifiedOn": "2026-09-01"
+    },
+    "topics": [],
+    "exercises": [
+      {
+        "id": "mm19-r0-z01", "examId": "matura-maj-2019-rozszerzona", "number": 1, "displayNumber": "1", "order": 1, "points": 1,
+        "title": "Zadanie 1", "topicId": "logarithms", "sourcePage": 2, "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Dla x > 0, x ≠ 1, y > 0, y ≠ 1 wartość log₍₁⁄ₓ₎ y · log₍₁⁄ᵧ₎ x jest równa:", "options": ["x · y", "1/(x · y)", "-1", "1"], "correctOption": 4,
+        "hints": ["Zastosuj wzór na zmianę podstawy logarytmu.", "Zauważ, że log₍₁⁄ₓ₎ y = -logₓ y."],
+        "solution": "Oba znaki minus znoszą się, a logₓ y · logᵧ x = 1. Odpowiedź D.", "scoringCriteria": "1 pkt - odpowiedź D. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-r0-z02", "examId": "matura-maj-2019-rozszerzona", "number": 2, "displayNumber": "2", "order": 2, "points": 1,
+        "title": "Zadanie 2", "topicId": "trigonometry", "sourcePage": 2, "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Liczba cos² 105° - sin² 105° jest równa:", "options": ["-√3/2", "-1/2", "1/2", "√3/2"], "correctOption": 1,
+        "hints": ["Użyj tożsamości cos² t - sin² t = cos 2t.", "Oblicz cos 210°."],
+        "solution": "cos² 105° - sin² 105° = cos 210° = -√3/2. Odpowiedź A.", "scoringCriteria": "1 pkt - odpowiedź A. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-r0-z03", "examId": "matura-maj-2019-rozszerzona", "number": 3, "displayNumber": "3", "order": 3, "points": 1,
+        "title": "Zadanie 3", "topicId": "linear-function", "sourcePage": 2, "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Wykres złożony z półprostych i odcinków przez A = (-1, 0), B = (1, 2), C = (3, 0), D = (-4, 3), E = (6, 3) opisuje funkcję:", "options": ["|x + 1| + |x - 1|", "||x - 1| - 2|", "|x - 1| + 2", "|x - 1| - 2"], "correctOption": 2,
+        "hints": ["Rozważ kolejne przedziały wyznaczone przez x = -1, 1 i 3.", "Zagnieżdżona wartość bezwzględna tworzy dwa odcinki malejące i dwa rosnące."],
+        "solution": "Funkcja ||x - 1| - 2| ma wierzchołki (-1, 0), (1, 2) i (3, 0), a jej półproste przechodzą przez D i E. Odpowiedź B.", "scoringCriteria": "1 pkt - odpowiedź B. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": ["exam-mm19-r0-z03"]
+      },
+      {
+        "id": "mm19-r0-z04", "examId": "matura-maj-2019-rozszerzona", "number": 4, "displayNumber": "4", "order": 4, "points": 1,
+        "title": "Zadanie 4", "topicId": "probability", "sourcePage": 2, "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "multipleChoice",
+        "prompt": "Jeżeli P(B') = 1/4 oraz P(A|B) = 1/5, to P(A ∩ B) jest równe:", "options": ["1/20", "4/15", "3/20", "4/5"], "correctOption": 3,
+        "hints": ["Najpierw oblicz P(B).", "Zastosuj wzór P(A ∩ B) = P(A|B) · P(B)."],
+        "solution": "P(B) = 3/4, więc P(A ∩ B) = (1/5)(3/4) = 3/20. Odpowiedź C.", "scoringCriteria": "1 pkt - odpowiedź C. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.", "diagramIds": []
+      },
+      {
+        "id": "mm19-r0-z05", "examId": "matura-maj-2019-rozszerzona", "number": 5, "displayNumber": "5", "order": 5, "points": 2,
+        "title": "Zadanie 5", "topicId": "powers", "sourcePage": 4, "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "numeric", "expectedValue": 952,
+        "prompt": "Wyznacz trzy kolejne cyfry po przecinku granicy: lim n→∞ ((9n³ + 11n²)/(7n³ + 5n² + 3n + 1) - n²/(3n² + 1)).",
+        "hints": ["Podziel licznik i mianownik obu ułamków przez najwyższą potęgę n.", "Granica wynosi 9/7 - 1/3."],
+        "solution": "Granica wynosi 9/7 - 1/3 = 20/21 = 0,952380..., więc trzy kolejne cyfry po przecinku to 952.", "scoringCriteria": "2 pkt - trzy poprawne cyfry 952. 1 pkt - poprawnie obliczona granica. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-r0-z06", "examId": "matura-maj-2019-rozszerzona", "number": 6, "displayNumber": "6", "order": 6, "points": 3,
+        "title": "Zadanie 6", "topicId": "combinatorics", "sourcePage": 5, "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "numeric", "expectedValue": 6666600,
+        "prompt": "Oblicz sumę wszystkich pięciocyfrowych liczb utworzonych bez powtarzania cyfr 1, 3, 5, 7, 9.",
+        "hints": ["Każda cyfra występuje tyle samo razy na każdej pozycji.", "Na ustalonej pozycji każda cyfra występuje 4! razy."],
+        "solution": "Suma cyfr wynosi 25. Na każdej pozycji wkład wynosi 4! · 25, zatem suma to 24 · 25 · (1 + 10 + 100 + 1000 + 10000) = 6666600.", "scoringCriteria": "3 pkt - poprawna suma 6666600. 2 pkt - poprawna metoda z równą liczbą wystąpień. 1 pkt - istotny krok kombinatoryczny. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-r0-z07", "examId": "matura-maj-2019-rozszerzona", "number": 7, "displayNumber": "7", "order": 7, "points": 2,
+        "title": "Zadanie 7", "topicId": "quadratic-function", "sourcePage": 6, "solutionSourcePage": 8,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "numeric", "expectedValue": 2019,
+        "prompt": "Punkt P = (10, 2429) leży na paraboli y = 2x² + x + 2219. Styczna w P ma postać y = ax + b. Oblicz b.",
+        "hints": ["Współczynnik kierunkowy stycznej jest wartością pochodnej 4x + 1 dla x = 10.", "Podstaw punkt P do równania stycznej."],
+        "solution": "a = 4·10 + 1 = 41. Z równania 2429 = 41·10 + b otrzymujemy b = 2019.", "scoringCriteria": "2 pkt - poprawny wynik b = 2019. 1 pkt - poprawny współczynnik kierunkowy stycznej. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-r0-z08", "examId": "matura-maj-2019-rozszerzona", "number": 8, "displayNumber": "8", "order": 8, "points": 3,
+        "title": "Zadanie 8", "topicId": "proofs", "sourcePage": 7, "solutionSourcePage": 10,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "Udowodnij, że dla 0 < x < y i a > 0 zachodzi (x + a)/(y + a) + y/x > 2.",
+        "hints": ["Przenieś 2 na lewą stronę i sprowadź wyrażenie do wspólnego mianownika.", "Wykorzystaj dodatniość x, y i a oraz nierówność x < y."],
+        "solution": "Po odjęciu 2 i sprowadzeniu do wspólnego mianownika otrzymujemy ((y - x)(y - x + a))/(x(y + a)). Licznik i mianownik są dodatnie, więc różnica jest dodatnia. To dowodzi nierówności.", "scoringCriteria": "3 pkt - pełny poprawny dowód. 2 pkt - poprawne przekształcenie do postaci o dodatnim znaku. 1 pkt - istotny krok algebraiczny. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-r0-z09", "examId": "matura-maj-2019-rozszerzona", "number": 9, "displayNumber": "9", "order": 9, "points": 3,
+        "title": "Zadanie 9", "topicId": "proofs", "sourcePage": 8, "solutionSourcePage": 15,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "W trójkącie równoramiennym ABC punkt M leży na AC, punkt N na BC i AM = CN. Proste prostopadłe do AB przez M i N wyznaczają S i T. Udowodnij, że ST = AB/2.",
+        "hints": ["Wykorzystaj symetrię trójkąta równoramiennego względem wysokości z C.", "Porównaj rzuty odcinków AM i CN na podstawę AB."],
+        "solution": "Warunek AM = CN i symetria trójkąta powodują, że rzuty M i N dzielą podstawę tak, że odległość ST stanowi połowę AB. Zatem ST = AB/2.", "scoringCriteria": "3 pkt - pełny dowód ST = AB/2. 2 pkt - poprawne wykorzystanie symetrii lub rzutów. 1 pkt - istotny krok geometryczny. 0 pkt - brak istotnego postępu.", "diagramIds": ["exam-mm19-r0-z09"]
+      },
+      {
+        "id": "mm19-r0-z10", "examId": "matura-maj-2019-rozszerzona", "number": 10, "displayNumber": "10", "order": 10, "points": 4,
+        "title": "Zadanie 10", "topicId": "plane-geometry", "sourcePage": 10, "solutionSourcePage": 21,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "W trójkącie ABC punkt D leży na AB. Dane są AC = 16, AD = 6, CD = 14 oraz BC = BD. Oblicz obwód trójkąta ABC.",
+        "hints": ["Zastosuj twierdzenie cosinusów w trójkącie ACD.", "Następnie użyj relacji BC = BD i zależności AB = AD + BD."],
+        "solution": "Z twierdzenia cosinusów w ACD wynika cos ∠ADC = -1/7, a więc cos ∠BDC = 1/7. W trójkącie BCD, gdzie BC = BD = x, mamy 7/x = 1/7, zatem x = 49. Stąd AB = 55, a obwód wynosi 16 + 49 + 55 = 120.", "scoringCriteria": "4 pkt - poprawny obwód 120. 3 pkt - poprawne wyznaczenie BD = 49. 2 pkt - poprawne zastosowanie twierdzenia cosinusów. 1 pkt - istotny krok pomocniczy. 0 pkt - brak istotnego postępu.", "diagramIds": ["exam-mm19-r0-z10"]
+      },
+      {
+        "id": "mm19-r0-z11", "examId": "matura-maj-2019-rozszerzona", "number": 11, "displayNumber": "11", "order": 11, "points": 6,
+        "title": "Zadanie 11", "topicId": "plane-geometry", "sourcePage": 12, "solutionSourcePage": 34,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "Dane są okręgi x² + y² - 12x - 8y + 43 = 0 oraz x² + y² - 2ax + 4y + a² - 77 = 0. Wyznacz wszystkie a, dla których mają dokładnie jeden punkt wspólny.",
+        "hints": ["Wyznacz środki i promienie obu okręgów.", "Rozważ styczność zewnętrzną i wewnętrzną."],
+        "solution": "Pierwszy okrąg ma środek (6, 4) i promień 3, drugi środek (a, -2) i promień 9. Warunki styczności to √((a - 6)² + 36) = 12 albo = 6. Otrzymujemy a = 6 - 6√3, a = 6 oraz a = 6 + 6√3.", "scoringCriteria": "6 pkt - komplet wartości a: 6 - 6√3, 6, 6 + 6√3. 4 pkt - poprawnie wyprowadzone równania styczności. 2 pkt - poprawne środki i promienie. 1 pkt - istotny krok pomocniczy. 0 pkt - brak istotnego postępu.", "diagramIds": ["exam-mm19-r0-z11"]
+      },
+      {
+        "id": "mm19-r0-z12", "examId": "matura-maj-2019-rozszerzona", "number": 12, "displayNumber": "12", "order": 12, "points": 6,
+        "title": "Zadanie 12", "topicId": "sequences", "sourcePage": 14, "solutionSourcePage": 39,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "Dodatni ciąg (a, b, c) jest arytmetyczny, a ciąg (1/a, 2/(3b), 1/(2a + 2b + c)) jest geometryczny. Oblicz iloraz drugiego ciągu.",
+        "hints": ["Zapisz warunek arytmetyczności jako a + c = 2b.", "Dla trzech wyrazów ciągu geometrycznego użyj r² = pierwszy · trzeci."],
+        "solution": "Z arytmetyczności c = 2b - a. Warunek geometryczny daje 4/[9b²] = 1/[a(a + 4b)]. Dla t = a/b otrzymujemy 4t(t + 4) = 9, a dodatnie rozwiązanie to t = 1/2. Iloraz wynosi 2a/(3b) = 1/3.", "scoringCriteria": "6 pkt - poprawny iloraz 1/3. 4 pkt - poprawne równanie wynikające z warunku geometrycznego. 2 pkt - poprawne wykorzystanie arytmetyczności. 1 pkt - istotny krok algebraiczny. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-r0-z13", "examId": "matura-maj-2019-rozszerzona", "number": 13, "displayNumber": "13", "order": 13, "points": 6,
+        "title": "Zadanie 13", "topicId": "inequalities", "sourcePage": 16, "solutionSourcePage": 43,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "Wielomian W(x) = 2x³ + (m³ + 2)x² - 11x - 2(2m + 1) jest podzielny przez x - 2 i daje resztę 6 przy dzieleniu przez x + 1. Oblicz m i dla tej wartości rozwiąż W(x) ≤ 0.",
+        "hints": ["Użyj twierdzenia o reszcie dla x = 2 i x = -1.", "Po wyznaczeniu m rozłóż otrzymany wielomian na czynniki."],
+        "solution": "Warunki W(2) = 0 i W(-1) = 6 prowadzą odpowiednio do m(m² - 1) = 0 oraz m³ - 4m + 3 = 0. Ich wspólnym rozwiązaniem jest m = 1. Wtedy W(x) = (x - 2)(2x + 1)(x + 3), więc W(x) ≤ 0 dla x ∈ (-∞, -3⟩ ∪ ⟨-1/2, 2⟩.", "scoringCriteria": "6 pkt - m = 1 i poprawny zbiór rozwiązań nierówności. 4 pkt - poprawne m albo poprawna analiza znaku wielomianu. 2 pkt - poprawne zastosowanie twierdzenia o reszcie. 1 pkt - istotny krok rachunkowy. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-r0-z14", "examId": "matura-maj-2019-rozszerzona", "number": 14, "displayNumber": "14", "order": 14, "points": 4,
+        "title": "Zadanie 14", "topicId": "trigonometry", "sourcePage": 18, "solutionSourcePage": 46,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "Rozwiąż równanie cos x [sin(x - π/3) + sin(x + π/3)] = (1/2) sin x.",
+        "hints": ["Zastosuj wzór na sumę sinusów.", "Po uproszczeniu wyłącz sin x przed nawias."],
+        "solution": "Suma sinusów jest równa sin x. Otrzymujemy sin x(cos x - 1/2) = 0, więc x = kπ lub x = 2kπ ± π/3, gdzie k jest liczbą całkowitą.", "scoringCriteria": "4 pkt - pełny zbiór rozwiązań. 3 pkt - poprawne przekształcenie do iloczynu. 2 pkt - poprawna suma sinusów. 1 pkt - istotny krok trygonometryczny. 0 pkt - brak istotnego postępu.", "diagramIds": []
+      },
+      {
+        "id": "mm19-r0-z15", "examId": "matura-maj-2019-rozszerzona", "number": 15, "displayNumber": "15", "order": 15, "points": 7,
+        "title": "Zadanie 15", "topicId": "solid-geometry", "sourcePage": 20, "solutionSourcePage": 49,
+        "verificationSource": "CKE MMA-R1_1P-192 i zasady oceniania, wersja X", "mode": "revealOnly",
+        "prompt": "Rozważ wszystkie graniastosłupy prawidłowe trójkątne o objętości V = 2. Wyznacz długości krawędzi bryły o najmniejszym polu całkowitym i oblicz to pole.",
+        "hints": ["Wyraź wysokość graniastosłupa przez bok podstawy z warunku objętości.", "Zapisz pole całkowite jako funkcję jednego dodatniego parametru i znajdź minimum."],
+        "solution": "Dla boku podstawy a wysokość wynosi h = 8/(√3a²). Pole całkowite S(a) = (√3/2)a² + 24/(√3a) ma minimum dla a = 2. Wtedy h = 2√3/3, a najmniejsze pole wynosi 6√3.", "scoringCriteria": "7 pkt - bok podstawy 2, wysokość 2√3/3 i minimalne pole 6√3. 5 pkt - poprawnie wyznaczony punkt minimum. 3 pkt - poprawna funkcja pola z warunku objętości. 1 pkt - istotny krok przygotowawczy. 0 pkt - brak istotnego postępu.", "diagramIds": ["exam-mm19-r0-z15"]
+      }
+    ]
+  }
+}

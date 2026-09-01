@@ -331,15 +331,159 @@
       ]
     },
     {
+      "id": "cke-2020-main-basic-exam",
+      "paths": [
+        "Content/exam-2020-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-P1_1P-202, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2020/formula_od_2015/matematyka/MMA-P1_1P-202.pdf, SHA-256 678D7765CCDABABAC3AF11C3D96A1F1038BD54AAB2111726472FA4F92FE45C0E; zasady oceniania CKE MMA-PP-202, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2020/formula_od_2015/Zasady_oceniania/MMA-PP-202_zasady.pdf, SHA-256 0EEEAA2970026EC0EAD1BA8B34B9E222A7212F31151485ED1C6282E0B4B41C32; weryfikacja 2026-08-31",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji transkrypcji arkusza i zasad oceniania MMA-P1_1P-202",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji materiału CKE z Formuły 2015.",
+      "evidence": [
+        "docs/MATURA_2020_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2020-main-extended-exam",
+      "paths": [
+        "Content/exam-2020-main-extended.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-R1_1P-202, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2020/formula_od_2015/matematyka/MMA-R1_1P-202.pdf, SHA-256 4D6DB1245E54AE6E9CFED9AF90D4293B167F14E9D82D7710FF4D4BE8FAA631BA; zasady oceniania CKE MMA-PR-202, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2020/formula_od_2015/Zasady_oceniania/MMA-PR-202_zasady.pdf, SHA-256 6A3B150CD9E68FD853AE5CC8D39F5FDCF48D464082D206172D3D0109766BEECD; weryfikacja 2026-08-31",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji transkrypcji arkusza i zasad oceniania MMA-R1_1P-202",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji materiału CKE z Formuły 2015.",
+      "evidence": [
+        "docs/MATURA_2020_EXTENDED_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2020-correction-basic-exam",
+      "paths": [
+        "Content/exam-2020-correction-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-P1_1P-204 i zasady oceniania dla terminu poprawkowego we wrześniu 2020 r., pobrane z publicznego archiwum arkusze.pl; SHA-256 arkusza C14040F3142B2E922EF6ED84F5647DD40EBB824AD616C048AC76F0BC37CDFFB3; SHA-256 zasad A708976C4C495F922369C7EE3098BFD8EFF7AD2FCA037631824B26772596C9D7; weryfikacja 2026-08-31",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji tej transkrypcji oraz brak bezpośredniego archiwalnego adresu CKE",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji arkusza i zasad oceniania MMA-P1_1P-204.",
+      "evidence": [
+        "docs/MATURA_2020_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2019-main-basic-exam",
+      "paths": [
+        "Content/exam-2019-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-P1_1P-192, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2019/formula_od_2015/matematyka/MMA-P1_1P-192.pdf, SHA-256 29F065F63AB4B9B833779CE4D79D63F77D7B1A940B24CF03E482B75F0921F87D; zasady oceniania CKE MMA-P1_1P-192, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2019/formula_od_2015/Zasady_oceniania/MMA-P1_1P-192_model.pdf, SHA-256 C388326760BA1A18B5156C87C1B3017398311E2E6E0FA8A0751BE0ADCA5097D9; weryfikacja 2026-09-01",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji transkrypcji arkusza i zasad oceniania MMA-P1_1P-192",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji materiału CKE z Formuły 2015.",
+      "evidence": [
+        "docs/MATURA_2019_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2019-main-extended-exam",
+      "paths": [
+        "Content/exam-2019-main-extended.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-R1_1P-192, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2019/formula_od_2015/matematyka/MMA-R1_1P-192.pdf, SHA-256 6C1234D94620A6149DD08E8DC4D0BA5D09BB7627C53CF53D926614B0BF409F07; zasady oceniania CKE MMA-R1_1P-192, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2019/formula_od_2015/Zasady_oceniania/MMA-R1_1P-192_model.pdf, SHA-256 D8F0A3D47971248D4D07E2613243B94A70DA3B7A7EB5B5D35FB477E517483AF0; weryfikacja 2026-09-01",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji transkrypcji arkusza i zasad oceniania MMA-R1_1P-192",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji materiału CKE z Formuły 2015.",
+      "evidence": [
+        "docs/MATURA_2019_EXTENDED_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2019-correction-basic-exam",
+      "paths": [
+        "Content/exam-2019-correction-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-P1_1P-194 i zasady oceniania dla terminu poprawkowego w sierpniu 2019 r., pobrane z publicznego archiwum arkusze.pl; SHA-256 arkusza 9E89885F36BB5C74598338FE64C8B755E495EC58164A19CC6A79E520C4A0E318; SHA-256 zasad 512BF13A01E5CFFC09FAB08A79DF2A927D9AA5F139BE977369706690EF59E739; weryfikacja 2026-09-01",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji tej transkrypcji oraz brak bezpośredniego archiwalnego adresu CKE",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji arkusza i zasad oceniania MMA-P1_1P-194.",
+      "evidence": [
+        "docs/MATURA_2019_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2018-main-basic-exam",
+      "paths": [
+        "Content/exam-2018-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-P1_1P-182, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2018/formula_od_2015/matematyka/MMA-P1_1P-182.pdf, SHA-256 D19CC243C36128FFEE5BBF5ECA511CCE18A436C75C10FDF293A46C59156746AA; zasady oceniania CKE MMA-P1_1P-182, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2018/formula_od_2015/Zasady_oceniania/MMA-P1_1P-182_zasady_oceniania.pdf, SHA-256 A6067EB5B97EAAD2373ED82134193AE9F542886FDF7A003816091AF24324DCE9; weryfikacja 2026-09-01",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji transkrypcji arkusza i zasad oceniania MMA-P1_1P-182",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji materiału CKE z Formuły 2015.",
+      "evidence": [
+        "docs/MATURA_2018_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2018-main-extended-exam",
+      "paths": [
+        "Content/exam-2018-main-extended.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-R1_1P-182, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2018/formula_od_2015/matematyka/MMA-R1_1P-182.pdf, SHA-256 7EFD8731C3DDD97F4CFACF7E4D450F7E8C818FDE5318C57F4CA320F1280E42DD; zasady oceniania CKE MMA-R1_1P-182, https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2018/Matematyka/MMA-R1_1P-182_zasady_oceniania.pdf, SHA-256 A8874470FB79681CDB8D39A35D55016D21D7378BB501E7C815CFA21DB2C1CD7F; weryfikacja 2026-09-01",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji transkrypcji arkusza i zasad oceniania MMA-R1_1P-182",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji materiału CKE z Formuły 2015.",
+      "evidence": [
+        "docs/MATURA_2018_EXTENDED_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2018-correction-basic-exam",
+      "paths": [
+        "Content/exam-2018-correction-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-P1_1P-184 i zasady oceniania dla terminu poprawkowego w sierpniu 2018 r., pobrane z publicznego archiwum arkusze.pl; URL arkusza https://arkusze.pl/maturalne/matematyka-2018-sierpien-poprawkowa-podstawowa.pdf, SHA-256 7DFB5C1A05A34126483B425D3958D1B13FCD3760B0778FEEFF7B662E7A7F5BC2; URL zasad https://arkusze.pl/maturalne/matematyka-2018-sierpien-poprawkowa-podstawowa-odpowiedzi.pdf, SHA-256 F9C9FCB9CCC03544F1960E0026CBD3E0627EF8D1CB2903DBC504D5031708D7DB; weryfikacja 2026-09-01",
+      "license": "Brak indywidualnego rozszerzenia deklaracji praw do publicznej redystrybucji tej transkrypcji oraz brak bezpośredniego archiwalnego adresu CKE",
+      "distributionStatus": "blocked",
+      "blockedReason": "Czekamy na wyraźne rozszerzenie deklaracji praw do redystrybucji arkusza i zasad oceniania MMA-P1_1P-184.",
+      "evidence": [
+        "docs/MATURA_2018_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
       "id": "runtime-vector-diagrams",
       "paths": [
         "Content/diagrams.json"
       ],
       "author": "Adam Kubiś - implementacje wektorowe Avalonia i nowe definicje kursu; Centralna Komisja Egzaminacyjna - źródłowa treść tablic i arkuszy; historyczni autorzy projektu Ich Troje - źródła zachowanych diagramów",
-      "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym osiem figur dla arkusza CKE EMAP-P0-100-2105, trzy figury dla EMAP-R0-100-2105, sześć figur dla EMAP-P0-100-2205, jedna figura dla EMAP-R0-100-2205, pięć figur dla EMAP-P0-100-2208, osiem figur dla MMAP-P0-100-2305, pięć figur dla MMAP-P0-100-2308, pięć figur dla MMAP-P0-100-2408, sześć figur dla MMAP-P0-100-2508, cztery figury dla MMAP-R0-100-2305, jedenaście figur dla MMAP-P0-100-A-2405, jedna figura dla MMAP-R0-100-A-2405, dziewięć figur dla MMAP-P0-100-A-2505, siedem figur dla MMAP-P0-100-A-2605 i trzy figury dla MMAP-R0-100-A-2605; bez aktywnych rastrów, Image ani Bitmap",
-      "license": "MIT dla implementacji wektorowych i definicji autorskich lub odziedziczonych; deklaracja redystrybucji w ramach Abiturii rozszerzona 2026-08-12 dla 92 wcześniejszych definicji, bez rozszerzenia dla czterdziestu siedmiu nowych figur EMAP-P0-100-2105, EMAP-R0-100-2105, EMAP-P0-100-2205, EMAP-R0-100-2205, EMAP-P0-100-2208, MMAP-P0-100-2305, MMAP-P0-100-2308, MMAP-P0-100-2408 i MMAP-P0-100-2508",
+      "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym osiem figur dla arkusza CKE EMAP-P0-100-2105, trzy figury dla EMAP-R0-100-2105, sześć figur dla EMAP-P0-100-2205, jedna figura dla EMAP-R0-100-2205, pięć figur dla EMAP-P0-100-2208, osiem figur dla MMAP-P0-100-2305, pięć figur dla MMAP-P0-100-2308, pięć figur dla MMAP-P0-100-2408, sześć figur dla MMAP-P0-100-2508, cztery figury dla MMAP-R0-100-2305, jedenaście figur dla MMAP-P0-100-A-2405, jedna figura dla MMAP-R0-100-A-2405, dziewięć figur dla MMAP-P0-100-A-2505, siedem figur dla MMAP-P0-100-A-2605, trzy figury dla MMAP-R0-100-A-2605, osiem figur dla MMA-P1_1P-202, cztery figury dla MMA-R1_1P-202, sześć figur dla MMA-P1_1P-204, osiem figur dla MMA-P1_1P-192, pięć figur dla MMA-R1_1P-192, sześć figur dla MMA-P1_1P-194, osiem figur dla MMA-P1_1P-182, cztery figury dla MMA-R1_1P-182 i siedem figur dla MMA-P1_1P-184; bez aktywnych rastrów, Image ani Bitmap",
+      "license": "MIT dla implementacji wektorowych i definicji autorskich lub odziedziczonych; deklaracja redystrybucji w ramach Abiturii rozszerzona 2026-08-12 dla 92 wcześniejszych definicji, bez rozszerzenia dla stu trzech nowych figur EMAP-P0-100-2105, EMAP-R0-100-2105, EMAP-P0-100-2205, EMAP-R0-100-2205, EMAP-P0-100-2208, MMAP-P0-100-2305, MMAP-P0-100-2308, MMAP-P0-100-2408, MMAP-P0-100-2508, MMA-P1_1P-202, MMA-R1_1P-202, MMA-P1_1P-204, MMA-P1_1P-192, MMA-R1_1P-192, MMA-P1_1P-194, MMA-P1_1P-182, MMA-R1_1P-182 i MMA-P1_1P-184",
       "distributionStatus": "blocked",
-      "blockedReason": "Katalog rozszerzono o czterdzieści siedem nowych diagramów pochodnych z EMAP-P0-100-2105, EMAP-R0-100-2105, EMAP-P0-100-2205, EMAP-R0-100-2205, EMAP-P0-100-2208, MMAP-P0-100-2305, MMAP-P0-100-2308, MMAP-P0-100-2408 i MMAP-P0-100-2508, które nie są objęte dotychczasową deklaracją do 92 definicji.",
+      "blockedReason": "Katalog rozszerzono o sto trzy nowe diagramy pochodne z EMAP-P0-100-2105, EMAP-R0-100-2105, EMAP-P0-100-2205, EMAP-R0-100-2205, EMAP-P0-100-2208, MMAP-P0-100-2305, MMAP-P0-100-2308, MMAP-P0-100-2408, MMAP-P0-100-2508, MMA-P1_1P-202, MMA-R1_1P-202, MMA-P1_1P-204, MMA-P1_1P-192, MMA-R1_1P-192, MMA-P1_1P-194, MMA-P1_1P-182, MMA-R1_1P-182 i MMA-P1_1P-184, które nie są objęte dotychczasową deklaracją do 92 definicji.",
       "evidence": [
         "docs/ASSET_RIGHTS_DECLARATION.md",
         "docs/MATURA_2026_COVERAGE.md",
@@ -357,6 +501,15 @@
         "docs/MATURA_2022_CORRECTION_BASIC_COVERAGE.md",
         "docs/MATURA_2021_BASIC_COVERAGE.md",
         "docs/MATURA_2021_EXTENDED_COVERAGE.md",
+        "docs/MATURA_2020_BASIC_COVERAGE.md",
+        "docs/MATURA_2020_EXTENDED_COVERAGE.md",
+        "docs/MATURA_2020_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_2019_BASIC_COVERAGE.md",
+        "docs/MATURA_2019_EXTENDED_COVERAGE.md",
+        "docs/MATURA_2019_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_2018_BASIC_COVERAGE.md",
+        "docs/MATURA_2018_EXTENDED_COVERAGE.md",
+        "docs/MATURA_2018_CORRECTION_BASIC_COVERAGE.md",
         "docs/MATURA_2023_EXTENDED_COVERAGE.md",
         "docs/CONTENT_PROVENANCE.md",
         "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",

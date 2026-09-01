@@ -73,4 +73,4 @@ Każdy diagram ma niepusty opis alternatywny, stronę źródłową i `sourceId: 
 
 `Content/provenance.json` ma osobną grupę `cke-2025-correction-basic-exam` ze statusem `blocked`. Grupa diagramów runtime również pozostaje `blocked`: deklaracja praw obejmuje 92 wcześniejsze definicje i nie obejmuje sześciu nowych definicji dla `MMAP-P0-100-2508`. Nie zmieniono `ASSET_RIGHTS_DECLARATION.md` ani `releaseEligible=false`.
 
-Test `Matura2025CorrectionBasicContentTests` kontroluje liczniki, kolejność, strony, punkty, identyfikatory, URL-e, sumy SHA-256, metody odpowiedzi, diagramy, proweniencję i link w spisie dokumentacji. Testy katalogu i UI dodatkowo kontrolują 17 aktywnych arkuszy oraz 473 jednostki postępu.
+Test `Matura2025CorrectionBasicContentTests` kontroluje liczniki, kolejność, strony, punkty, identyfikatory, URL-e, sumy SHA-256, metody odpowiedzi, diagramy, proweniencję i link w spisie dokumentacji. Testy katalogu i UI dodatkowo kontrolują 26 aktywnych arkuszy oraz 722 jednostki postępu.

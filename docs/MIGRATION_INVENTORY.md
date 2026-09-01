@@ -36,11 +36,12 @@
 | Matura główna 2024 PR | nowe źródła CKE `MMAP-R0-100-A-2405` i `MMAP-R0-100-2405` | 13 zadań, 14 jednostek postępu, 50 punktów, rozwiązania, kryteria i 1 diagram wektorowy; nie pochodzi ze starego repozytorium |
 | Matura główna 2026 PP | nowe źródła CKE `MMAP-P0-100-A-2605` i `MMAP-P0-100-2605` | 33 zadania, 37 jednostek postępu, 50 punktów, rozwiązania, kryteria i 7 diagramów wektorowych; nie pochodzi ze starego repozytorium |
 | Matura główna 2026 PR | nowe źródła CKE `MMAP-R0-100-A-2605` i `MMAP-R0-100-2605` | 12 zadań, 13 jednostek postępu, 50 punktów, rozwiązania, kryteria i 3 diagramy wektorowe; nie pochodzi ze starego repozytorium |
-| Zadania według tematów | `ZadaniaPage.xaml` oraz nowy indeks arkuszy | 17 kategorii agregujących 473 jednostki postępu z siedemnastu arkuszy 2021, 2022, 2023, 2024, 2025 i 2026 |
+| Zadania według tematów | `ZadaniaPage.xaml` oraz nowy indeks arkuszy | 17 kategorii agregujących 722 jednostki postępu z dwudziestu sześciu arkuszy 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 i 2026 |
 | Brudnopis | pola tekstowe ekranów zadań | Wielowierszowe pole robocze przechowywane osobno dla profilu i zadania do zamknięcia aplikacji, z `Ctrl+V` lub `Cmd+V` i menu `Wklej` |
 | Zadania 1–28 | checkboxy i `correctAnsw` | Cztery opcje, sprawdzanie i zapis po poprawnej odpowiedzi |
 | Zadania 29–35 | `ShowAnsBtn`/`ConfirmBtn` | Tryb `revealOnly`; zapis po ujawnieniu odpowiedzi |
-| Matury 2019/2020/2021 | pojedyncze ekrany informacyjne | Zachowane jako placeholdery z kontekstem historycznym i linkiem do roadmapy |
+| Matury 2019 i niewdrożone warianty Formuły 2015 | indeks matur i dane `exam-2019-*.json` | Aktywne matury główne PP i PR oraz poprawkowa PP z 2019 r. mają własne identyfikatory, proweniencję `blocked`, rozwiązania, kryteria i diagramy; równoległe warianty Formuły 2015 z lat 2023-2026 pozostają planowane |
+| Matury 2018 | indeks matur i dane `exam-2018-*.json` | Aktywne matury główne PP i PR oraz poprawkowa PP z 2018 r. mają własne identyfikatory, proweniencję `blocked`, rozwiązania, kryteria i 19 diagramów wektorowych; równoległe warianty Formuły 2015 z lat 2023-2026 pozostają planowane |
 | Planowane kalkulatory | ekrany z `TODO` | Generator wykresów i kalkulator funkcji trygonometrycznych zachowane jako placeholdery |
 | Działy issue #35 | `Uzupełnić Treść działów matematyki.txt` i niezależny seed `tools/seeds/issue-35-content.json` | Aksjomatyka i indukcja, alfabet grecki, liczby rzeczywiste i zbiory, algebra, równania i nierówności, wszystkie przypadki delty, ułamki, przybliżenia, potęgi i pierwiastki, przedziały, procenty, logarytmy oraz zadania |
 | Kurs Formuły 2023 | podstawa programowa z 2024 r. oraz informatory CKE dla poziomu podstawowego i rozszerzonego | 4 grupy, 13 obszarów, 73 wymagania podstawowe i 46 rozszerzonych, 238 autorskich przykładów oraz 357 autorskich ćwiczeń; historyczne identyfikatory i materiały issue #35 zachowane w lekcjach |

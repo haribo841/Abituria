@@ -184,8 +184,8 @@
                   {
                       "id":  "exam-archive",
                       "title":  "Archiwum arkuszy maturalnych",
-                      "status":  "planned",
-                      "summary":  "Uzupełnienie arkuszy 2019, 2020 i podstawowego arkusza 2021.",
+                      "status":  "migrated",
+                        "summary":  "Aktywne arkusze Formuły 2015 z lat 2018-2022 oraz Formuły 2023 z lat 2023-2026; osobne dane, postęp i proweniencja dla każdego arkusza.",
                       "context":  "exams",
                       "sourceRefs":  [
                                          "MaturaPage.xaml"

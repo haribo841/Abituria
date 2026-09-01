@@ -141,6 +141,30 @@ public sealed class ReleaseValidationScriptTests
             ["https://bip.cke.gov.pl/attachments/download/9944"]);
     }
 
+    [Fact]
+    public void Documentation_validator_uses_pinned_hash_instead_of_probing_legacy_exam_pdfs()
+    {
+        AssertLinksAreExcludedFromOnlineProbe(
+        [
+            "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2018/formula_od_2015/matematyka/MMA-P1_1P-182.pdf",
+            "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2018/formula_od_2015/Zasady_oceniania/MMA-P1_1P-182_zasady_oceniania.pdf",
+            "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2018/formula_od_2015/matematyka/MMA-R1_1P-182.pdf",
+            "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2018/Matematyka/MMA-R1_1P-182_zasady_oceniania.pdf",
+            "https://arkusze.pl/maturalne/matematyka-2018-sierpien-poprawkowa-podstawowa.pdf",
+            "https://arkusze.pl/maturalne/matematyka-2018-sierpien-poprawkowa-podstawowa-odpowiedzi.pdf",
+            "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2020/formula_od_2015/matematyka/MMA-P1_1P-202.pdf",
+            "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2020/formula_od_2015/Zasady_oceniania/MMA-PP-202_zasady.pdf",
+            "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2020/formula_od_2015/matematyka/MMA-R1_1P-202.pdf",
+            "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2020/formula_od_2015/Zasady_oceniania/MMA-PR-202_zasady.pdf",
+            "https://arkusze.pl/maturalne/matematyka-2020-wrzesien-poprawkowa-podstawowa.pdf",
+            "https://arkusze.pl/maturalne/matematyka-2020-wrzesien-poprawkowa-podstawowa-odpowiedzi.pdf",
+            "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/EMAP-P0-100-2205_compressed.pdf",
+            "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/EMAP-P0-100-2205-zasady.pdf",
+            "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/EMAP-R0-100-2205_compressed.pdf",
+            "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/EMAP-R0-100-2205-zasady.pdf"
+        ]);
+    }
+
     private static void AssertLinksAreExcludedFromOnlineProbe(string[] excludedLinks)
     {
         using var directory = new TemporaryDirectory();

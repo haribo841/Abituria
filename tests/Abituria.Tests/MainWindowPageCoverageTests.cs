@@ -118,11 +118,10 @@ public sealed class MainWindowPageCoverageTests
             Click(window, "← Wróć");
             AssertPage<CalculatorView>(window);
 
-            var examPlaceholder = content.Placeholders.Items.First(item => item.Category == "exam");
-            viewModel.OpenPlaceholder(examPlaceholder);
+            viewModel.OpenExam(content.Exams[^1].Id);
             Render();
-            AssertPage<PlaceholderView>(window);
-            Click(window, "← Wróć");
+            AssertPage<ExerciseListView>(window);
+            Click(window, "← Matura");
             AssertPage<MaturaView>(window);
 
             viewModel.Navigate((AppPage)int.MaxValue);

@@ -11577,6 +11577,871 @@
         { "type": "text", "x": 445, "y": 70, "text": "S", "stroke": "accent", "fontSize": 30 },
         { "type": "text", "x": 625, "y": 300, "text": "6", "stroke": "accent", "fontSize": 25 }
       ]
+    },
+    {
+      "id": "exam-mm20-p0p-z10",
+      "sourceId": "cke-2020-correction-basic",
+      "sourcePage": 4,
+      "alternativeText": "Układ współrzędnych z parabolą o ramionach skierowanych w górę. Wierzchołek leży na dodatniej części osi Ox, a punkt przecięcia z osią Oy znajduje się nad osią Ox.",
+      "width": 900,
+      "height": 620,
+      "primitives": [
+        { "type": "line", "x": 95, "y": 450, "x2": 850, "y2": 450, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 350, "y": 560, "x2": 350, "y2": 65, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "polyline", "points": [295, 110, 325, 225, 355, 325, 385, 395, 420, 435, 460, 450, 500, 435, 535, 395, 565, 325, 595, 225, 625, 110], "stroke": "accent", "strokeThickness": 4 },
+        { "type": "ellipse", "x": 460, "y": 450, "radiusX": 7, "radiusY": 7, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "ellipse", "x": 350, "y": 310, "radiusX": 7, "radiusY": 7, "stroke": "danger", "fill": "danger", "strokeThickness": 2 },
+        { "type": "text", "x": 855, "y": 445, "text": "x", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 358, "y": 72, "text": "y", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 470, "y": 480, "text": "W", "stroke": "accent", "fontSize": 24 },
+        { "type": "text", "x": 360, "y": 303, "text": "c > 0", "stroke": "danger", "fontSize": 22 }
+      ]
+    },
+    {
+      "id": "exam-mm20-p0p-z15",
+      "sourceId": "cke-2020-correction-basic",
+      "sourcePage": 6,
+      "alternativeText": "Trójkąt prostokątny ABC z kątem prostym przy C, poziomą przyprostokątną AC długości 6 oraz wysokością CD opuszczoną na przeciwprostokątną AB.",
+      "width": 860,
+      "height": 580,
+      "primitives": [
+        { "type": "polygon", "points": [155, 455, 155, 110, 700, 455], "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 155, "y": 455, "x2": 314, "y2": 310, "stroke": "accent", "strokeThickness": 3 },
+        { "type": "line", "x": 155, "y": 425, "x2": 185, "y2": 425, "stroke": "muted", "strokeThickness": 3 },
+        { "type": "line", "x": 185, "y": 425, "x2": 185, "y2": 455, "stroke": "muted", "strokeThickness": 3 },
+        { "type": "text", "x": 130, "y": 485, "text": "C", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 130, "y": 95, "text": "B", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 710, "y": 485, "text": "A", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 320, "y": 300, "text": "D", "stroke": "accent", "fontSize": 27 },
+        { "type": "text", "x": 425, "y": 490, "text": "6", "stroke": "primary", "fontSize": 25 }
+      ]
+    },
+    {
+      "id": "exam-mm20-p0p-z16",
+      "sourceId": "cke-2020-correction-basic",
+      "sourcePage": 8,
+      "alternativeText": "Układ współrzędnych z punktem P o współrzędnych minus trzy, cztery i prostą przechodzącą przez P oraz początek układu. Zaznaczono kąt nachylenia alfa.",
+      "width": 900,
+      "height": 620,
+      "primitives": [
+        { "type": "line", "x": 85, "y": 390, "x2": 850, "y2": 390, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 475, "y": 550, "x2": 475, "y2": 60, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 295, "y": 150, "x2": 670, "y2": 525, "stroke": "accent", "strokeThickness": 4, "arrowStart": true, "arrowEnd": true },
+        { "type": "ellipse", "x": 295, "y": 150, "radiusX": 7, "radiusY": 7, "stroke": "danger", "fill": "danger", "strokeThickness": 2 },
+        { "type": "arc", "x": 475, "y": 390, "radiusX": 62, "radiusY": 62, "startAngle": 180, "sweepAngle": -53, "stroke": "accent", "strokeThickness": 3 },
+        { "type": "text", "x": 855, "y": 385, "text": "x", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 483, "y": 68, "text": "y", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 305, "y": 140, "text": "P(-3, 4)", "stroke": "danger", "fontSize": 24 },
+        { "type": "text", "x": 500, "y": 362, "text": "α", "stroke": "accent", "fontSize": 28 }
+      ]
+    },
+    {
+      "id": "exam-mm20-p0p-z20",
+      "sourceId": "cke-2020-correction-basic",
+      "sourcePage": 10,
+      "alternativeText": "Tabela odwrotnej proporcjonalności: w pierwszym wierszu x, a, 3, 8, a w drugim wierszu y, 36, 24, b.",
+      "width": 760,
+      "height": 430,
+      "primitives": [
+        { "type": "line", "x": 145, "y": 105, "x2": 615, "y2": 105, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 145, "y": 215, "x2": 615, "y2": 215, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 145, "y": 325, "x2": 615, "y2": 325, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 145, "y": 105, "x2": 145, "y2": 325, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 262, "y": 105, "x2": 262, "y2": 325, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 379, "y": 105, "x2": 379, "y2": 325, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 496, "y": 105, "x2": 496, "y2": 325, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 615, "y": 105, "x2": 615, "y2": 325, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "text", "x": 195, "y": 175, "text": "x", "stroke": "primary", "fontSize": 31 },
+        { "type": "text", "x": 307, "y": 175, "text": "a", "stroke": "accent", "fontSize": 31 },
+        { "type": "text", "x": 422, "y": 175, "text": "3", "stroke": "primary", "fontSize": 31 },
+        { "type": "text", "x": 540, "y": 175, "text": "8", "stroke": "primary", "fontSize": 31 },
+        { "type": "text", "x": 195, "y": 285, "text": "y", "stroke": "primary", "fontSize": 31 },
+        { "type": "text", "x": 300, "y": 285, "text": "36", "stroke": "primary", "fontSize": 31 },
+        { "type": "text", "x": 417, "y": 285, "text": "24", "stroke": "primary", "fontSize": 31 },
+        { "type": "text", "x": 540, "y": 285, "text": "b", "stroke": "accent", "fontSize": 31 }
+      ]
+    },
+    {
+      "id": "exam-mm20-p0p-z29",
+      "sourceId": "cke-2020-correction-basic",
+      "sourcePage": 15,
+      "alternativeText": "Dwa zewnętrznie styczne okręgi o promieniach 2 i 6, styczne do wspólnej prostej k. Prosta l łączy ich środki S i P oraz tworzy z prostą k kąt alfa.",
+      "width": 900,
+      "height": 610,
+      "primitives": [
+        { "type": "line", "x": 110, "y": 510, "x2": 805, "y2": 180, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "ellipse", "x": 335, "y": 345, "radiusX": 85, "radiusY": 85, "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "ellipse", "x": 590, "y": 215, "radiusX": 255, "radiusY": 255, "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 135, "y": 410, "x2": 830, "y2": 300, "stroke": "danger", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "ellipse", "x": 335, "y": 345, "radiusX": 7, "radiusY": 7, "stroke": "primary", "fill": "primary", "strokeThickness": 2 },
+        { "type": "ellipse", "x": 590, "y": 215, "radiusX": 7, "radiusY": 7, "stroke": "primary", "fill": "primary", "strokeThickness": 2 },
+        { "type": "arc", "x": 170, "y": 480, "radiusX": 50, "radiusY": 50, "startAngle": 320, "sweepAngle": -30, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "text", "x": 315, "y": 375, "text": "S", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 600, "y": 245, "text": "P", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 360, "y": 320, "text": "r = 2", "stroke": "accent", "fontSize": 24 },
+        { "type": "text", "x": 630, "y": 165, "text": "R = 6", "stroke": "accent", "fontSize": 24 },
+        { "type": "text", "x": 760, "y": 175, "text": "k", "stroke": "primary", "fontSize": 25 },
+        { "type": "text", "x": 820, "y": 290, "text": "l", "stroke": "danger", "fontSize": 25 },
+        { "type": "text", "x": 192, "y": 440, "text": "α", "stroke": "danger", "fontSize": 27 }
+      ]
+    },
+    {
+      "id": "exam-mm20-p0p-z32",
+      "sourceId": "cke-2020-correction-basic",
+      "sourcePage": 18,
+      "alternativeText": "Trójkąt równoramienny ABC z podstawą AB długości 12 i ramionami AC oraz BC długości 10. Punkt D jest środkiem boku BC, a odcinek AD jest środkową tworzącą z bokiem AC kąt alfa.",
+      "width": 900,
+      "height": 590,
+      "primitives": [
+        { "type": "polygon", "points": [130, 465, 770, 465, 450, 65], "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 130, "y": 465, "x2": 610, "y2": 265, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "ellipse", "x": 610, "y": 265, "radiusX": 7, "radiusY": 7, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "arc", "x": 130, "y": 465, "radiusX": 70, "radiusY": 70, "startAngle": 305, "sweepAngle": 23, "stroke": "accent", "strokeThickness": 3 },
+        { "type": "text", "x": 105, "y": 500, "text": "A", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 780, "y": 500, "text": "B", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 440, "y": 52, "text": "C", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 620, "y": 255, "text": "D", "stroke": "accent", "fontSize": 28 },
+        { "type": "text", "x": 420, "y": 505, "text": "12", "stroke": "primary", "fontSize": 25 },
+        { "type": "text", "x": 255, "y": 235, "text": "10", "stroke": "primary", "fontSize": 25 },
+        { "type": "text", "x": 635, "y": 235, "text": "10", "stroke": "primary", "fontSize": 25 },
+        { "type": "text", "x": 205, "y": 410, "text": "α", "stroke": "accent", "fontSize": 28 }
+      ]
+    },
+    {
+      "id": "exam-mm19-p0-z08to10",
+      "sourceId": "cke-2019-main-basic-exam",
+      "sourcePage": 4,
+      "alternativeText": "Parabola skierowana ramionami w górę z wierzchołkiem W o współrzędnych dwa, minus cztery oraz miejscami zerowymi zero i cztery.",
+      "width": 900,
+      "height": 600,
+      "primitives": [
+        { "type": "line", "x": 80, "y": 430, "x2": 840, "y2": 430, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 260, "y": 540, "x2": 260, "y2": 60, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "polyline", "points": [80, 120, 140, 248, 200, 348, 260, 420, 320, 464, 380, 480, 440, 464, 500, 420, 560, 348, 620, 248, 680, 120], "stroke": "accent", "strokeThickness": 4 },
+        { "type": "ellipse", "x": 440, "y": 480, "radiusX": 7, "radiusY": 7, "stroke": "danger", "fill": "danger", "strokeThickness": 2 },
+        { "type": "text", "x": 246, "y": 455, "text": "0", "stroke": "primary", "fontSize": 22 },
+        { "type": "text", "x": 610, "y": 455, "text": "4", "stroke": "primary", "fontSize": 22 },
+        { "type": "text", "x": 448, "y": 510, "text": "W(2, -4)", "stroke": "danger", "fontSize": 22 }
+      ]
+    },
+    {
+      "id": "exam-mm19-p0-z14",
+      "sourceId": "cke-2019-main-basic-exam",
+      "sourcePage": 6,
+      "alternativeText": "Okrąg opisany na trójkącie równobocznym ABC. Odcinek CD jest średnicą, a punkt E leży na okręgu i wyznacza kąt wpisany DEB.",
+      "width": 850,
+      "height": 600,
+      "primitives": [
+        { "type": "ellipse", "x": 430, "y": 305, "radiusX": 220, "radiusY": 220, "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "polygon", "points": [245, 405, 615, 405, 430, 90], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 430, "y": 90, "x2": 430, "y2": 525, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "line", "x": 430, "y": 525, "x2": 615, "y2": 405, "stroke": "muted", "strokeThickness": 3 },
+        { "type": "line", "x": 430, "y": 525, "x2": 260, "y2": 310, "stroke": "muted", "strokeThickness": 3 },
+        { "type": "text", "x": 225, "y": 435, "text": "A", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 625, "y": 435, "text": "B", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 420, "y": 80, "text": "C", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 420, "y": 555, "text": "D", "stroke": "danger", "fontSize": 28 },
+        { "type": "text", "x": 240, "y": 300, "text": "E", "stroke": "muted", "fontSize": 28 }
+      ]
+    },
+    {
+      "id": "exam-mm19-p0-z15",
+      "sourceId": "cke-2019-main-basic-exam",
+      "sourcePage": 8,
+      "alternativeText": "Dwa okręgi o promieniach pięć i trzy, wspólna styczna AB oraz odcinek OP długości szesnaście przecięty przez styczną w punkcie K.",
+      "width": 900,
+      "height": 600,
+      "primitives": [
+        { "type": "ellipse", "x": 270, "y": 300, "radiusX": 140, "radiusY": 140, "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "ellipse", "x": 665, "y": 300, "radiusX": 84, "radiusY": 84, "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 90, "y": 130, "x2": 840, "y2": 130, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 270, "y": 300, "x2": 665, "y2": 300, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "line", "x": 270, "y": 300, "x2": 270, "y2": 130, "stroke": "muted", "strokeThickness": 3 },
+        { "type": "line", "x": 665, "y": 300, "x2": 665, "y2": 130, "stroke": "muted", "strokeThickness": 3 },
+        { "type": "text", "x": 255, "y": 325, "text": "O", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 675, "y": 325, "text": "P", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 475, "y": 325, "text": "K", "stroke": "danger", "fontSize": 27 },
+        { "type": "text", "x": 250, "y": 115, "text": "A", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 655, "y": 115, "text": "B", "stroke": "primary", "fontSize": 27 }
+      ]
+    },
+    {
+      "id": "exam-mm19-p0-z19",
+      "sourceId": "cke-2019-main-basic-exam",
+      "sourcePage": 10,
+      "alternativeText": "Układ współrzędnych z prostą przez punkty A równe zero, cztery oraz B równe dwa, dwa. Zaznaczono symetrię względem początku układu.",
+      "width": 900,
+      "height": 600,
+      "primitives": [
+        { "type": "line", "x": 70, "y": 390, "x2": 850, "y2": 390, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 390, "y": 540, "x2": 390, "y2": 60, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 100, "y": 110, "x2": 680, "y2": 400, "stroke": "accent", "strokeThickness": 4, "arrowStart": true, "arrowEnd": true },
+        { "type": "ellipse", "x": 390, "y": 150, "radiusX": 7, "radiusY": 7, "stroke": "danger", "fill": "danger", "strokeThickness": 2 },
+        { "type": "ellipse", "x": 510, "y": 270, "radiusX": 7, "radiusY": 7, "stroke": "danger", "fill": "danger", "strokeThickness": 2 },
+        { "type": "text", "x": 400, "y": 145, "text": "A(0, 4)", "stroke": "danger", "fontSize": 23 },
+        { "type": "text", "x": 520, "y": 265, "text": "B(2, 2)", "stroke": "danger", "fontSize": 23 },
+        { "type": "text", "x": 405, "y": 415, "text": "O", "stroke": "primary", "fontSize": 22 }
+      ]
+    },
+    {
+      "id": "exam-mm19-p0-z21",
+      "sourceId": "cke-2019-main-basic-exam",
+      "sourcePage": 10,
+      "alternativeText": "Prostopadłościan o krawędziach pięć, trzy i dwa decymetry z zaznaczoną przekątną KL.",
+      "width": 850,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [170, 430, 510, 430, 670, 290, 330, 290], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "polygon", "points": [170, 200, 510, 200, 670, 60, 330, 60], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 170, "y": 430, "x2": 170, "y2": 200, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 510, "y": 430, "x2": 510, "y2": 200, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 670, "y": 290, "x2": 670, "y2": 60, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 330, "y": 290, "x2": 330, "y2": 60, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 170, "y": 430, "x2": 670, "y2": 60, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "text", "x": 155, "y": 460, "text": "K", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 680, "y": 55, "text": "L", "stroke": "primary", "fontSize": 27 }
+      ]
+    },
+    {
+      "id": "exam-mm19-p0-z29",
+      "sourceId": "cke-2019-main-basic-exam",
+      "sourcePage": 17,
+      "alternativeText": "Okrąg o środku S, cięciwa AB, punkt C na przedłużeniu cięciwy oraz prosta CS przecinająca okrąg w punktach D i E.",
+      "width": 900,
+      "height": 600,
+      "primitives": [
+        { "type": "ellipse", "x": 420, "y": 290, "radiusX": 180, "radiusY": 180, "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 110, "y": 400, "x2": 760, "y2": 400, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 770, "y": 455, "x2": 245, "y2": 125, "stroke": "danger", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "ellipse", "x": 420, "y": 290, "radiusX": 6, "radiusY": 6, "stroke": "primary", "fill": "primary", "strokeThickness": 2 },
+        { "type": "text", "x": 295, "y": 425, "text": "A", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 540, "y": 425, "text": "B", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 775, "y": 480, "text": "C", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 430, "y": 285, "text": "S", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 270, "y": 140, "text": "D", "stroke": "danger", "fontSize": 26 },
+        { "type": "text", "x": 575, "y": 335, "text": "E", "stroke": "danger", "fontSize": 26 }
+      ]
+    },
+    {
+      "id": "exam-mm19-p0-z31",
+      "sourceId": "cke-2019-main-basic-exam",
+      "sourcePage": 19,
+      "alternativeText": "Trapez prostokątny ABCD z dłuższą podstawą AB długości osiem, przekątną AC długości cztery i kątem trzydzieści stopni przy krótszej podstawie.",
+      "width": 850,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [130, 460, 730, 460, 515, 250, 130, 250], "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 130, "y": 460, "x2": 515, "y2": 250, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 730, "y": 460, "x2": 130, "y2": 250, "stroke": "danger", "strokeThickness": 4 },
+        { "type": "arc", "x": 515, "y": 250, "radiusX": 58, "radiusY": 58, "startAngle": 0, "sweepAngle": 30, "stroke": "accent", "strokeThickness": 3 },
+        { "type": "text", "x": 110, "y": 490, "text": "A", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 740, "y": 490, "text": "B", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 520, "y": 240, "text": "C", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 110, "y": 240, "text": "D", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 410, "y": 490, "text": "8", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 280, "y": 330, "text": "4", "stroke": "accent", "fontSize": 24 }
+      ]
+    },
+    {
+      "id": "exam-mm19-p0-z34",
+      "sourceId": "cke-2019-main-basic-exam",
+      "sourcePage": 24,
+      "alternativeText": "Ostrosłup prawidłowy czworokątny o krawędzi podstawy sześć z zaznaczonym wierzchołkiem S i kątem nachylenia krawędzi bocznej do płaszczyzny podstawy.",
+      "width": 850,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [190, 430, 505, 510, 700, 370, 385, 290], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 445, "y": 80, "x2": 190, "y2": 430, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 445, "y": 80, "x2": 505, "y2": 510, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 445, "y": 80, "x2": 700, "y2": 370, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 445, "y": 80, "x2": 385, "y2": 290, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 445, "y": 80, "x2": 445, "y2": 400, "stroke": "danger", "strokeThickness": 3, "dashed": true },
+        { "type": "text", "x": 435, "y": 65, "text": "S", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 175, "y": 460, "text": "A", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 510, "y": 540, "text": "B", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 710, "y": 365, "text": "C", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 365, "y": 280, "text": "D", "stroke": "primary", "fontSize": 27 }
+      ]
+    },
+    {
+      "id": "exam-mm19-r0-z03",
+      "sourceId": "cke-2019-main-extended-exam",
+      "sourcePage": 2,
+      "alternativeText": "Wykres łamany funkcji z punktami A minus jeden, zero, B jeden, dwa, C trzy, zero oraz półprostymi przez D minus cztery, trzy i E sześć, trzy.",
+      "width": 900,
+      "height": 600,
+      "primitives": [
+        { "type": "line", "x": 60, "y": 410, "x2": 860, "y2": 410, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 430, "y": 530, "x2": 430, "y2": 65, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "polyline", "points": [150, 110, 330, 350, 450, 190, 570, 350, 750, 110], "stroke": "accent", "strokeThickness": 4, "arrowStart": true, "arrowEnd": true },
+        { "type": "text", "x": 315, "y": 380, "text": "A", "stroke": "primary", "fontSize": 25 },
+        { "type": "text", "x": 440, "y": 180, "text": "B", "stroke": "primary", "fontSize": 25 },
+        { "type": "text", "x": 580, "y": 380, "text": "C", "stroke": "primary", "fontSize": 25 },
+        { "type": "text", "x": 135, "y": 105, "text": "D", "stroke": "primary", "fontSize": 25 },
+        { "type": "text", "x": 760, "y": 105, "text": "E", "stroke": "primary", "fontSize": 25 }
+      ]
+    },
+    {
+      "id": "exam-mm19-r0-z09",
+      "sourceId": "cke-2019-main-extended-exam",
+      "sourcePage": 8,
+      "alternativeText": "Trójkąt równoramienny ABC z podstawą AB, punktami M i N na ramionach oraz prostopadłymi przez M i N do podstawy, wyznaczającymi punkty S i T.",
+      "width": 900,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [150, 460, 750, 460, 450, 80], "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "ellipse", "x": 330, "y": 310, "radiusX": 7, "radiusY": 7, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "ellipse", "x": 570, "y": 310, "radiusX": 7, "radiusY": 7, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "line", "x": 330, "y": 310, "x2": 330, "y2": 460, "stroke": "danger", "strokeThickness": 3, "dashed": true },
+        { "type": "line", "x": 570, "y": 310, "x2": 570, "y2": 460, "stroke": "danger", "strokeThickness": 3, "dashed": true },
+        { "type": "text", "x": 135, "y": 490, "text": "A", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 760, "y": 490, "text": "B", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 440, "y": 70, "text": "C", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 315, "y": 300, "text": "M", "stroke": "accent", "fontSize": 25 },
+        { "type": "text", "x": 580, "y": 300, "text": "N", "stroke": "accent", "fontSize": 25 },
+        { "type": "text", "x": 315, "y": 490, "text": "S", "stroke": "danger", "fontSize": 25 },
+        { "type": "text", "x": 580, "y": 490, "text": "T", "stroke": "danger", "fontSize": 25 }
+      ]
+    },
+    {
+      "id": "exam-mm19-r0-z10",
+      "sourceId": "cke-2019-main-extended-exam",
+      "sourcePage": 10,
+      "alternativeText": "Trójkąt ABC z punktem D na boku AB. Zaznaczono odcinki AD równe sześć, CD równe czternaście i AC równe szesnaście.",
+      "width": 850,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [130, 470, 730, 470, 425, 110], "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "ellipse", "x": 325, "y": 470, "radiusX": 7, "radiusY": 7, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "line", "x": 325, "y": 470, "x2": 425, "y2": 110, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "text", "x": 110, "y": 500, "text": "A", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 740, "y": 500, "text": "B", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 415, "y": 100, "text": "C", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 315, "y": 500, "text": "D", "stroke": "accent", "fontSize": 27 },
+        { "type": "text", "x": 215, "y": 450, "text": "6", "stroke": "primary", "fontSize": 23 },
+        { "type": "text", "x": 350, "y": 290, "text": "14", "stroke": "danger", "fontSize": 23 },
+        { "type": "text", "x": 250, "y": 260, "text": "16", "stroke": "primary", "fontSize": 23 }
+      ]
+    },
+    {
+      "id": "exam-mm19-r0-z11",
+      "sourceId": "cke-2019-main-extended-exam",
+      "sourcePage": 12,
+      "alternativeText": "Dwa okręgi na płaszczyźnie współrzędnych, dla których porównuje się odległość środków z sumą oraz różnicą promieni, aby ustalić styczność.",
+      "width": 850,
+      "height": 600,
+      "primitives": [
+        { "type": "line", "x": 70, "y": 410, "x2": 830, "y2": 410, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 360, "y": 540, "x2": 360, "y2": 60, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "ellipse", "x": 510, "y": 250, "radiusX": 80, "radiusY": 80, "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "ellipse", "x": 650, "y": 340, "radiusX": 180, "radiusY": 180, "stroke": "danger", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 510, "y": 250, "x2": 650, "y2": 340, "stroke": "muted", "strokeThickness": 3, "dashed": true },
+        { "type": "text", "x": 520, "y": 245, "text": "S₁", "stroke": "accent", "fontSize": 24 },
+        { "type": "text", "x": 660, "y": 335, "text": "S₂", "stroke": "danger", "fontSize": 24 }
+      ]
+    },
+    {
+      "id": "exam-mm19-r0-z15",
+      "sourceId": "cke-2019-main-extended-exam",
+      "sourcePage": 20,
+      "alternativeText": "Graniastosłup prawidłowy trójkątny z trójkątem równobocznym jako podstawą, bokiem podstawy a i wysokością h.",
+      "width": 850,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [220, 400, 480, 480, 350, 255], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "polygon", "points": [220, 190, 480, 270, 350, 45], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 220, "y": 400, "x2": 220, "y2": 190, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 480, "y": 480, "x2": 480, "y2": 270, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 350, "y": 255, "x2": 350, "y2": 45, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "text", "x": 335, "y": 355, "text": "a", "stroke": "primary", "fontSize": 26 },
+        { "type": "text", "x": 495, "y": 370, "text": "h", "stroke": "accent", "fontSize": 26 }
+      ]
+    },
+    {
+      "id": "exam-mm19-p0p-z08",
+      "sourceId": "cke-2019-correction-basic-exam",
+      "sourcePage": 4,
+      "alternativeText": "Parabola skierowana ramionami w dół z wierzchołkiem W o współrzędnych jeden, jeden.",
+      "width": 850,
+      "height": 600,
+      "primitives": [
+        { "type": "line", "x": 70, "y": 410, "x2": 820, "y2": 410, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 370, "y": 540, "x2": 370, "y2": 60, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "polyline", "points": [130, 490, 190, 365, 250, 268, 310, 205, 370, 185, 430, 205, 490, 268, 550, 365, 610, 490], "stroke": "accent", "strokeThickness": 4 },
+        { "type": "ellipse", "x": 370, "y": 185, "radiusX": 7, "radiusY": 7, "stroke": "danger", "fill": "danger", "strokeThickness": 2 },
+        { "type": "text", "x": 380, "y": 175, "text": "W(1, 1)", "stroke": "danger", "fontSize": 24 }
+      ]
+    },
+    {
+      "id": "exam-mm19-p0p-z14",
+      "sourceId": "cke-2019-correction-basic-exam",
+      "sourcePage": 6,
+      "alternativeText": "Trójkąt równoramienny ABC z podstawą AB i punktem D na podstawie. Zaznaczono odcinki AD, CD, BD i kąt BCD równy siedemdziesiąt dwa stopnie.",
+      "width": 850,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [150, 450, 720, 450, 435, 100], "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "ellipse", "x": 390, "y": 450, "radiusX": 7, "radiusY": 7, "stroke": "accent", "fill": "accent", "strokeThickness": 2 },
+        { "type": "line", "x": 390, "y": 450, "x2": 435, "y2": 100, "stroke": "accent", "strokeThickness": 3 },
+        { "type": "arc", "x": 720, "y": 450, "radiusX": 70, "radiusY": 70, "startAngle": 210, "sweepAngle": 50, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "text", "x": 135, "y": 480, "text": "A", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 730, "y": 480, "text": "B", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 425, "y": 90, "text": "C", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 380, "y": 480, "text": "D", "stroke": "accent", "fontSize": 26 },
+        { "type": "text", "x": 630, "y": 380, "text": "72°", "stroke": "danger", "fontSize": 23 }
+      ]
+    },
+    {
+      "id": "exam-mm19-p0p-z16",
+      "sourceId": "cke-2019-correction-basic-exam",
+      "sourcePage": 8,
+      "alternativeText": "Ostrosłup prawidłowy czworokątny, którego ściany boczne są trójkątami równobocznymi. Zaznaczono przekątną AC i kąt SAC.",
+      "width": 850,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [190, 430, 500, 510, 690, 370, 380, 290], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 445, "y": 65, "x2": 190, "y2": 430, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 445, "y": 65, "x2": 500, "y2": 510, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 445, "y": 65, "x2": 690, "y2": 370, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 445, "y": 65, "x2": 380, "y2": 290, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 190, "y": 430, "x2": 690, "y2": 370, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "arc", "x": 190, "y": 430, "radiusX": 70, "radiusY": 70, "startAngle": 300, "sweepAngle": 35, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "text", "x": 435, "y": 50, "text": "S", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 175, "y": 460, "text": "A", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 700, "y": 365, "text": "C", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 250, "y": 380, "text": "∠SAC", "stroke": "danger", "fontSize": 23 }
+      ]
+    },
+    {
+      "id": "exam-mm19-p0p-z21",
+      "sourceId": "cke-2019-correction-basic-exam",
+      "sourcePage": 10,
+      "alternativeText": "Prostopadłościan o krawędziach trzydzieści, czterdzieści i sto dwadzieścia centymetrów z zaznaczoną przekątną bryły.",
+      "width": 850,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [150, 450, 490, 450, 670, 300, 330, 300], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "polygon", "points": [150, 220, 490, 220, 670, 70, 330, 70], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 150, "y": 450, "x2": 150, "y2": 220, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 490, "y": 450, "x2": 490, "y2": 220, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 670, "y": 300, "x2": 670, "y2": 70, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 330, "y": 300, "x2": 330, "y2": 70, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 150, "y": 450, "x2": 670, "y2": 70, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "text", "x": 305, "y": 480, "text": "120", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 500, "y": 330, "text": "40", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 125, "y": 335, "text": "30", "stroke": "primary", "fontSize": 24 }
+      ]
+    },
+    {
+      "id": "exam-mm19-p0p-z29",
+      "sourceId": "cke-2019-correction-basic-exam",
+      "sourcePage": 15,
+      "alternativeText": "Okrąg o środku S na boku AB trójkąta ABC, punkt C na okręgu oraz styczna BC prostopadła do promienia SC.",
+      "width": 850,
+      "height": 600,
+      "primitives": [
+        { "type": "ellipse", "x": 360, "y": 310, "radiusX": 190, "radiusY": 190, "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 150, "y": 420, "x2": 720, "y2": 420, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 480, "y": 160, "x2": 720, "y2": 420, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "line", "x": 360, "y": 310, "x2": 480, "y2": 160, "stroke": "muted", "strokeThickness": 3 },
+        { "type": "line", "x": 150, "y": 420, "x2": 480, "y2": 160, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "text", "x": 135, "y": 450, "text": "A", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 730, "y": 450, "text": "B", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 485, "y": 150, "text": "C", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 370, "y": 305, "text": "S", "stroke": "primary", "fontSize": 27 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0-z14",
+      "sourceId": "cke-2018-main-basic-exam",
+      "sourcePage": 6,
+      "alternativeText": "Trójkąt prostokątny KLM z kątem prostym przy M, przyprostokątną LM długości trzy, przeciwprostokątną KL długości osiem oraz kątem alfa przy K.",
+      "width": 820,
+      "height": 580,
+      "primitives": [
+        { "type": "polygon", "points": [150, 440, 650, 440, 285, 120], "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 150, "y": 440, "x2": 150, "y2": 385, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "line", "x": 150, "y": 385, "x2": 205, "y2": 385, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "arc", "x": 650, "y": 440, "radiusX": 70, "radiusY": 70, "startAngle": 190, "sweepAngle": 35, "stroke": "accent", "strokeThickness": 3 },
+        { "type": "text", "x": 125, "y": 475, "text": "M", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 660, "y": 475, "text": "K", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 275, "y": 105, "text": "L", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 100, "y": 290, "text": "3", "stroke": "danger", "fontSize": 25 },
+        { "type": "text", "x": 440, "y": 245, "text": "8", "stroke": "primary", "fontSize": 25 },
+        { "type": "text", "x": 560, "y": 410, "text": "α", "stroke": "accent", "fontSize": 28 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0-z16",
+      "sourceId": "cke-2018-main-basic-exam",
+      "sourcePage": 8,
+      "alternativeText": "Okrąg o środku S. Punkty K, L i M leżą na okręgu. Kąt środkowy KSL ma miarę alfa, a kąt wpisany KML ma miarę beta.",
+      "width": 820,
+      "height": 580,
+      "primitives": [
+        { "type": "ellipse", "x": 410, "y": 285, "radiusX": 190, "radiusY": 190, "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 410, "y": 285, "x2": 260, "y2": 410, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 410, "y": 285, "x2": 570, "y2": 410, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 260, "y": 410, "x2": 610, "y2": 190, "stroke": "muted", "strokeThickness": 3 },
+        { "type": "line", "x": 570, "y": 410, "x2": 610, "y2": 190, "stroke": "muted", "strokeThickness": 3 },
+        { "type": "text", "x": 400, "y": 275, "text": "S", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 235, "y": 440, "text": "K", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 580, "y": 440, "text": "L", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 620, "y": 185, "text": "M", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 365, "y": 355, "text": "α", "stroke": "danger", "fontSize": 27 },
+        { "type": "text", "x": 555, "y": 270, "text": "β", "stroke": "danger", "fontSize": 27 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0-z17",
+      "sourceId": "cke-2018-main-basic-exam",
+      "sourcePage": 8,
+      "alternativeText": "Trapez prostokątny KLMN z dłuższą podstawą KL długości a, krótszą podstawą MN długości b i kątem sześćdziesiąt stopni przy L.",
+      "width": 820,
+      "height": 580,
+      "primitives": [
+        { "type": "polygon", "points": [170, 445, 670, 445, 530, 180, 170, 180], "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "arc", "x": 670, "y": 445, "radiusX": 75, "radiusY": 75, "startAngle": 190, "sweepAngle": 60, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "text", "x": 145, "y": 480, "text": "K", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 680, "y": 480, "text": "L", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 540, "y": 170, "text": "M", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 145, "y": 170, "text": "N", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 405, "y": 480, "text": "a", "stroke": "accent", "fontSize": 26 },
+        { "type": "text", "x": 335, "y": 155, "text": "b", "stroke": "accent", "fontSize": 26 },
+        { "type": "text", "x": 580, "y": 400, "text": "60°", "stroke": "danger", "fontSize": 23 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0-z20",
+      "sourceId": "cke-2018-main-basic-exam",
+      "sourcePage": 10,
+      "alternativeText": "Ostrosłup o kwadratowej podstawie KLMN. Wierzchołek S leży pionowo nad N, a zaznaczono krawędzie KS i MS tworzące kąt alfa.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [170, 430, 490, 500, 680, 355, 355, 290], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 355, "y": 105, "x2": 170, "y2": 430, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 355, "y": 105, "x2": 490, "y2": 500, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 355, "y": 105, "x2": 680, "y2": 355, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 355, "y": 105, "x2": 355, "y2": 290, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "arc", "x": 355, "y": 105, "radiusX": 70, "radiusY": 70, "startAngle": 60, "sweepAngle": 42, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "text", "x": 345, "y": 85, "text": "S", "stroke": "accent", "fontSize": 28 },
+        { "type": "text", "x": 145, "y": 455, "text": "K", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 500, "y": 530, "text": "L", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 690, "y": 350, "text": "M", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 330, "y": 290, "text": "N", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 445, "y": 160, "text": "α", "stroke": "danger", "fontSize": 27 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0-z21",
+      "sourceId": "cke-2018-main-basic-exam",
+      "sourcePage": 10,
+      "alternativeText": "Graniastosłup prosty o prostokątnej podstawie o bokach trzy i cztery oraz zaznaczonej przekątnej bryły tworzącej z podstawą kąt czterdzieści pięć stopni.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [155, 430, 470, 430, 665, 295, 350, 295], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "polygon", "points": [155, 225, 470, 225, 665, 90, 350, 90], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 155, "y": 430, "x2": 155, "y2": 225, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 470, "y": 430, "x2": 470, "y2": 225, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 665, "y": 295, "x2": 665, "y2": 90, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 350, "y": 295, "x2": 350, "y2": 90, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 155, "y": 430, "x2": 665, "y2": 90, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "text", "x": 300, "y": 460, "text": "4", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 510, "y": 350, "text": "3", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 245, "y": 280, "text": "45°", "stroke": "danger", "fontSize": 23 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0-z22",
+      "sourceId": "cke-2018-main-basic-exam",
+      "sourcePage": 10,
+      "alternativeText": "Walec o promieniu i wysokości r, na którym umieszczono półkulę o tym samym promieniu r.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "ellipse", "x": 410, "y": 370, "radiusX": 160, "radiusY": 52, "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 250, "y": 210, "x2": 250, "y2": 370, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 570, "y": 210, "x2": 570, "y2": 370, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "ellipse", "x": 410, "y": 210, "radiusX": 160, "radiusY": 52, "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "arc", "x": 410, "y": 210, "radiusX": 160, "radiusY": 155, "startAngle": 180, "sweepAngle": 180, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 410, "y": 370, "x2": 410, "y2": 210, "stroke": "muted", "strokeThickness": 2, "dashed": true },
+        { "type": "line", "x": 410, "y": 210, "x2": 570, "y2": 210, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "text", "x": 425, "y": 300, "text": "r", "stroke": "muted", "fontSize": 25 },
+        { "type": "text", "x": 490, "y": 195, "text": "r", "stroke": "danger", "fontSize": 25 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0-z29",
+      "sourceId": "cke-2018-main-basic-exam",
+      "sourcePage": 17,
+      "alternativeText": "Dwa styczne zewnętrznie okręgi o środkach A i B, styczne do ramion kąta prostego. Promień większego okręgu wynosi dwa.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "line", "x": 135, "y": 495, "x2": 700, "y2": 495, "stroke": "primary", "strokeThickness": 4 },
+        { "type": "line", "x": 135, "y": 495, "x2": 135, "y2": 80, "stroke": "primary", "strokeThickness": 4 },
+        { "type": "ellipse", "x": 435, "y": 300, "radiusX": 195, "radiusY": 195, "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "ellipse", "x": 240, "y": 435, "radiusX": 60, "radiusY": 60, "stroke": "danger", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 435, "y": 300, "x2": 240, "y2": 435, "stroke": "muted", "strokeThickness": 2, "dashed": true },
+        { "type": "text", "x": 445, "y": 300, "text": "A", "stroke": "accent", "fontSize": 28 },
+        { "type": "text", "x": 248, "y": 435, "text": "B", "stroke": "danger", "fontSize": 28 },
+        { "type": "text", "x": 555, "y": 270, "text": "2", "stroke": "accent", "fontSize": 25 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0-z34",
+      "sourceId": "cke-2018-main-basic-exam",
+      "sourcePage": 24,
+      "alternativeText": "Graniastosłup prawidłowy trójkątny z trójkątną podstawą ABC oraz równoległą podstawą DEF.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [210, 410, 555, 430, 375, 250], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "polygon", "points": [210, 220, 555, 240, 375, 60], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 210, "y": 410, "x2": 210, "y2": 220, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 555, "y": 430, "x2": 555, "y2": 240, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 375, "y": 250, "x2": 375, "y2": 60, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "text", "x": 190, "y": 445, "text": "A", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 565, "y": 455, "text": "B", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 365, "y": 275, "text": "C", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 190, "y": 205, "text": "D", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 565, "y": 230, "text": "E", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 365, "y": 50, "text": "F", "stroke": "primary", "fontSize": 27 }
+      ]
+    },
+    {
+      "id": "exam-mm18-r0-z07",
+      "sourceId": "cke-2018-main-extended-exam",
+      "sourcePage": 5,
+      "alternativeText": "Trójkąt ABC z punktami K i N na boku AB, punktami L i M na bokach AC i BC oraz odcinkami tworzącymi czworokąt KNML.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [125, 455, 700, 455, 455, 100], "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "polygon", "points": [340, 455, 470, 455, 580, 330, 265, 305], "stroke": "accent", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 265, "y": 305, "x2": 340, "y2": 455, "stroke": "muted", "strokeThickness": 2 },
+        { "type": "text", "x": 105, "y": 485, "text": "A", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 710, "y": 485, "text": "B", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 445, "y": 90, "text": "C", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 330, "y": 485, "text": "K", "stroke": "accent", "fontSize": 25 },
+        { "type": "text", "x": 255, "y": 295, "text": "L", "stroke": "accent", "fontSize": 25 },
+        { "type": "text", "x": 585, "y": 330, "text": "M", "stroke": "accent", "fontSize": 25 },
+        { "type": "text", "x": 465, "y": 485, "text": "N", "stroke": "accent", "fontSize": 25 }
+      ]
+    },
+    {
+      "id": "exam-mm18-r0-z10",
+      "sourceId": "cke-2018-main-extended-exam",
+      "sourcePage": 8,
+      "alternativeText": "Stożek ścięty o promieniu mniejszej podstawy r, promieniu większej podstawy R i wysokości H.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "ellipse", "x": 410, "y": 145, "radiusX": 100, "radiusY": 32, "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "ellipse", "x": 410, "y": 445, "radiusX": 190, "radiusY": 60, "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 310, "y": 145, "x2": 220, "y2": 445, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 510, "y": 145, "x2": 600, "y2": 445, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 410, "y": 145, "x2": 410, "y2": 445, "stroke": "muted", "strokeThickness": 2, "dashed": true },
+        { "type": "line", "x": 410, "y": 145, "x2": 510, "y2": 145, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "line", "x": 410, "y": 445, "x2": 600, "y2": 445, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "text", "x": 450, "y": 285, "text": "H", "stroke": "muted", "fontSize": 26 },
+        { "type": "text", "x": 455, "y": 130, "text": "r", "stroke": "danger", "fontSize": 26 },
+        { "type": "text", "x": 510, "y": 430, "text": "R", "stroke": "danger", "fontSize": 26 }
+      ]
+    },
+    {
+      "id": "exam-mm18-r0-z14",
+      "sourceId": "cke-2018-main-extended-exam",
+      "sourcePage": 14,
+      "alternativeText": "Układ współrzędnych z okręgiem wpisanym o środku w początku układu, wierzchołkiem A o współrzędnych minus siedem, jeden oraz trójkątem ABC.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "line", "x": 80, "y": 410, "x2": 750, "y2": 410, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 430, "y": 540, "x2": 430, "y2": 65, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "ellipse", "x": 430, "y": 410, "radiusX": 115, "radiusY": 115, "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "polygon", "points": [160, 350, 570, 190, 315, 525], "stroke": "danger", "fill": "none", "strokeThickness": 3 },
+        { "type": "text", "x": 135, "y": 340, "text": "A(-7, 1)", "stroke": "danger", "fontSize": 23 },
+        { "type": "text", "x": 580, "y": 180, "text": "B", "stroke": "danger", "fontSize": 27 },
+        { "type": "text", "x": 300, "y": 550, "text": "C", "stroke": "danger", "fontSize": 27 },
+        { "type": "text", "x": 440, "y": 430, "text": "O", "stroke": "accent", "fontSize": 26 }
+      ]
+    },
+    {
+      "id": "exam-mm18-r0-z15",
+      "sourceId": "cke-2018-main-extended-exam",
+      "sourcePage": 16,
+      "alternativeText": "Trapez równoramienny o dłuższej podstawie a, wysokości h i okręgu wpisanym stycznym do wszystkich boków.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [150, 455, 670, 455, 535, 225, 285, 225], "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "ellipse", "x": 410, "y": 345, "radiusX": 105, "radiusY": 105, "stroke": "accent", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 410, "y": 455, "x2": 410, "y2": 225, "stroke": "muted", "strokeThickness": 2, "dashed": true },
+        { "type": "text", "x": 405, "y": 490, "text": "a", "stroke": "danger", "fontSize": 27 },
+        { "type": "text", "x": 425, "y": 340, "text": "h", "stroke": "muted", "fontSize": 26 },
+        { "type": "text", "x": 390, "y": 210, "text": "b", "stroke": "primary", "fontSize": 26 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0p-z06",
+      "sourceId": "cke-2018-correction-basic-exam",
+      "sourcePage": 4,
+      "alternativeText": "Układ współrzędnych z dwiema przecinającymi się prostymi, jedną malejącą i jedną rosnącą, użyty do rozpoznania układu równań liniowych.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "line", "x": 70, "y": 400, "x2": 760, "y2": 400, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 410, "y": 535, "x2": 410, "y2": 60, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 150, "y": 110, "x2": 720, "y2": 480, "stroke": "accent", "strokeThickness": 4, "arrowStart": true, "arrowEnd": true },
+        { "type": "line", "x": 340, "y": 500, "x2": 580, "y2": 120, "stroke": "danger", "strokeThickness": 4, "arrowStart": true, "arrowEnd": true },
+        { "type": "ellipse", "x": 480, "y": 325, "radiusX": 7, "radiusY": 7, "stroke": "primary", "fill": "primary", "strokeThickness": 2 },
+        { "type": "text", "x": 770, "y": 395, "text": "x", "stroke": "primary", "fontSize": 24 },
+        { "type": "text", "x": 420, "y": 65, "text": "y", "stroke": "primary", "fontSize": 24 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0p-z17",
+      "sourceId": "cke-2018-correction-basic-exam",
+      "sourcePage": 8,
+      "alternativeText": "Okrąg o środku S z punktami K, L i M na okręgu, kątem środkowym alfa oraz kątem wpisanym beta opartymi na łuku KL.",
+      "width": 820,
+      "height": 580,
+      "primitives": [
+        { "type": "ellipse", "x": 410, "y": 285, "radiusX": 190, "radiusY": 190, "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 410, "y": 285, "x2": 245, "y2": 410, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 410, "y": 285, "x2": 570, "y2": 410, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 245, "y": 410, "x2": 610, "y2": 190, "stroke": "muted", "strokeThickness": 3 },
+        { "type": "line", "x": 570, "y": 410, "x2": 610, "y2": 190, "stroke": "muted", "strokeThickness": 3 },
+        { "type": "text", "x": 400, "y": 275, "text": "S", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 220, "y": 440, "text": "K", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 580, "y": 440, "text": "L", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 620, "y": 185, "text": "M", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 365, "y": 355, "text": "α", "stroke": "danger", "fontSize": 27 },
+        { "type": "text", "x": 555, "y": 270, "text": "β", "stroke": "danger", "fontSize": 27 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0p-z22",
+      "sourceId": "cke-2018-correction-basic-exam",
+      "sourcePage": 10,
+      "alternativeText": "Sześcian z zaznaczoną przekątną bryły, przekątną ściany bocznej oraz kątem alfa między nimi.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [165, 430, 455, 430, 620, 300, 330, 300], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "polygon", "points": [165, 190, 455, 190, 620, 60, 330, 60], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 165, "y": 430, "x2": 165, "y2": 190, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 455, "y": 430, "x2": 455, "y2": 190, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 620, "y": 300, "x2": 620, "y2": 60, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 330, "y": 300, "x2": 330, "y2": 60, "stroke": "primary", "strokeThickness": 3 },
+        { "type": "line", "x": 165, "y": 430, "x2": 620, "y2": 60, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 165, "y": 430, "x2": 455, "y2": 190, "stroke": "danger", "strokeThickness": 4 },
+        { "type": "arc", "x": 165, "y": 430, "radiusX": 75, "radiusY": 75, "startAngle": 295, "sweepAngle": 35, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "text", "x": 250, "y": 325, "text": "α", "stroke": "danger", "fontSize": 27 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0p-z28",
+      "sourceId": "cke-2018-correction-basic-exam",
+      "sourcePage": 14,
+      "alternativeText": "Równoległobok ABCD z punktem E będącym środkiem boku BC, prostą DE i punktem F na przedłużeniu prostej AB.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [145, 440, 430, 440, 630, 210, 345, 210], "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 345, "y": 210, "x2": 730, "y2": 440, "stroke": "accent", "strokeThickness": 3 },
+        { "type": "line", "x": 145, "y": 440, "x2": 730, "y2": 440, "stroke": "muted", "strokeThickness": 2 },
+        { "type": "ellipse", "x": 530, "y": 325, "radiusX": 7, "radiusY": 7, "stroke": "danger", "fill": "danger", "strokeThickness": 2 },
+        { "type": "text", "x": 125, "y": 475, "text": "A", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 440, "y": 475, "text": "B", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 640, "y": 200, "text": "C", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 325, "y": 200, "text": "D", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 540, "y": 325, "text": "E", "stroke": "danger", "fontSize": 27 },
+        { "type": "text", "x": 740, "y": 475, "text": "F", "stroke": "accent", "fontSize": 27 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0p-z31",
+      "sourceId": "cke-2018-correction-basic-exam",
+      "sourcePage": 17,
+      "alternativeText": "Układ współrzędnych z wierzchołkami A równe dwa, cztery, B równe zero, zero, C równe minus cztery, dwa i środkiem D odcinka AC.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "line", "x": 70, "y": 400, "x2": 760, "y2": 400, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "line", "x": 410, "y": 540, "x2": 410, "y2": 60, "stroke": "primary", "strokeThickness": 3, "arrowEnd": true },
+        { "type": "polygon", "points": [550, 190, 410, 400, 130, 295], "stroke": "accent", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 410, "y": 400, "x2": 340, "y2": 242, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "ellipse", "x": 340, "y": 242, "radiusX": 7, "radiusY": 7, "stroke": "danger", "fill": "danger", "strokeThickness": 2 },
+        { "type": "text", "x": 555, "y": 185, "text": "A", "stroke": "accent", "fontSize": 27 },
+        { "type": "text", "x": 420, "y": 425, "text": "B", "stroke": "accent", "fontSize": 27 },
+        { "type": "text", "x": 110, "y": 290, "text": "C", "stroke": "accent", "fontSize": 27 },
+        { "type": "text", "x": 350, "y": 235, "text": "D", "stroke": "danger", "fontSize": 27 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0p-z32",
+      "sourceId": "cke-2018-correction-basic-exam",
+      "sourcePage": 18,
+      "alternativeText": "Ostrosłup prawidłowy trójkątny ABCS z wierzchołkiem S, środkiem O podstawy i zaznaczoną krawędzią boczną AS.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [180, 440, 635, 435, 420, 300], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 420, "y": 75, "x2": 180, "y2": 440, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 420, "y": 75, "x2": 635, "y2": 435, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 420, "y": 75, "x2": 420, "y2": 300, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 420, "y": 75, "x2": 420, "y2": 390, "stroke": "danger", "strokeThickness": 2, "dashed": true },
+        { "type": "text", "x": 410, "y": 60, "text": "S", "stroke": "accent", "fontSize": 28 },
+        { "type": "text", "x": 160, "y": 470, "text": "A", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 645, "y": 465, "text": "B", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 430, "y": 300, "text": "C", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 430, "y": 390, "text": "O", "stroke": "danger", "fontSize": 27 }
+      ]
+    },
+    {
+      "id": "exam-mm18-p0p-z34",
+      "sourceId": "cke-2018-correction-basic-exam",
+      "sourcePage": 22,
+      "alternativeText": "Trójkąt prostokątny ACB z przyprostokątną AC długości pięć i okręgiem wpisanym o promieniu dwa.",
+      "width": 820,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [170, 455, 650, 455, 170, 150], "stroke": "primary", "fill": "none", "strokeThickness": 4 },
+        { "type": "ellipse", "x": 280, "y": 345, "radiusX": 80, "radiusY": 80, "stroke": "accent", "fill": "none", "strokeThickness": 4 },
+        { "type": "line", "x": 170, "y": 455, "x2": 170, "y2": 395, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "line", "x": 170, "y": 395, "x2": 230, "y2": 395, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "line", "x": 280, "y": 345, "x2": 280, "y2": 455, "stroke": "muted", "strokeThickness": 2 },
+        { "type": "text", "x": 145, "y": 485, "text": "C", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 660, "y": 485, "text": "B", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 145, "y": 140, "text": "A", "stroke": "primary", "fontSize": 27 },
+        { "type": "text", "x": 190, "y": 300, "text": "5", "stroke": "danger", "fontSize": 25 },
+        { "type": "text", "x": 290, "y": 390, "text": "2", "stroke": "accent", "fontSize": 25 }
+      ]
+    },
+    {
+      "id": "exam-mm19-p0p-z34",
+      "sourceId": "cke-2019-correction-basic-exam",
+      "sourcePage": 22,
+      "alternativeText": "Ostrosłup prawidłowy czworokątny z wysokością SO, krawędzią boczną długości dwanaście i kątem alfa między krawędzią boczną a wysokością.",
+      "width": 850,
+      "height": 600,
+      "primitives": [
+        { "type": "polygon", "points": [170, 440, 490, 510, 690, 360, 370, 290], "stroke": "primary", "fill": "none", "strokeThickness": 3 },
+        { "type": "line", "x": 440, "y": 75, "x2": 170, "y2": 440, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 440, "y": 75, "x2": 490, "y2": 510, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 440, "y": 75, "x2": 690, "y2": 360, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 440, "y": 75, "x2": 370, "y2": 290, "stroke": "accent", "strokeThickness": 4 },
+        { "type": "line", "x": 440, "y": 75, "x2": 440, "y2": 400, "stroke": "danger", "strokeThickness": 3, "dashed": true },
+        { "type": "arc", "x": 440, "y": 75, "radiusX": 65, "radiusY": 65, "startAngle": 75, "sweepAngle": 35, "stroke": "danger", "strokeThickness": 3 },
+        { "type": "text", "x": 430, "y": 60, "text": "S", "stroke": "primary", "fontSize": 28 },
+        { "type": "text", "x": 450, "y": 400, "text": "O", "stroke": "danger", "fontSize": 27 },
+        { "type": "text", "x": 260, "y": 240, "text": "12", "stroke": "accent", "fontSize": 24 },
+        { "type": "text", "x": 490, "y": 120, "text": "α", "stroke": "danger", "fontSize": 27 }
+      ]
     }
   ]
 }

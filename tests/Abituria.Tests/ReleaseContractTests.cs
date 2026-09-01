@@ -321,6 +321,18 @@ public sealed class ReleaseContractTests
             item => item.GetString() == "bip.cke.gov.pl");
         Assert.Contains(
             root.GetProperty("allowedHosts").EnumerateArray(),
+            item => item.GetString() == "arkusze.pl");
+        Assert.Contains(
+            root.GetProperty("allowedHosts").EnumerateArray(),
+            item => item.GetString() == "slsa.dev");
+        Assert.Contains(
+            root.GetProperty("allowedHosts").EnumerateArray(),
+            item => item.GetString() == "spdx.dev");
+        Assert.Contains(
+            root.GetProperty("allowedHosts").EnumerateArray(),
+            item => item.GetString() == "www.oke.waw.pl");
+        Assert.Contains(
+            root.GetProperty("allowedHosts").EnumerateArray(),
             item => item.GetString() == "cke.gov.pl");
         var onlineCheckExclusions = root.GetProperty("onlineCheckExclusions");
         Assert.Contains(
@@ -336,6 +348,46 @@ public sealed class ReleaseContractTests
                 item.GetProperty("urlPrefix").GetString() == "https://www.nuget.org/packages/" &&
                 item.GetProperty("reason").GetString()!.Contains(
                     "locked restore data",
+                    StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() ==
+                    "https://arkusze.pl/maturalne/" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "SHA-256",
+                    StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() ==
+                    "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2020/" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "SHA-256",
+                    StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() ==
+                    "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2018/" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "SHA-256",
+                    StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() ==
+                    "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2018/Matematyka/" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "SHA-256",
+                    StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() ==
+                    "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "SHA-256",
                     StringComparison.Ordinal));
         Assert.Contains(
             onlineCheckExclusions.EnumerateArray(),

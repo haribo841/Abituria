@@ -1,15 +1,15 @@
-# Plan uzupełnienia archiwum matur 2026-2020
+# Plan uzupełnienia archiwum matur 2026-2018
 
 ## Cel i zakres
 
-Plan porządkuje archiwum oficjalnych arkuszy matematyki CKE od aktualnego roku 2026 do roku 2020 włącznie. Obejmuje wyłącznie:
+Plan porządkuje archiwum oficjalnych arkuszy matematyki CKE od aktualnego roku 2026 do roku 2018 włącznie. Obejmuje wyłącznie:
 
 - termin główny - poziom podstawowy i rozszerzony;
 - termin poprawkowy - poziom podstawowy.
 
 Matematyka na poziomie rozszerzonym nie jest przedmiotem obowiązkowym, dlatego nie istnieje osobny arkusz poprawkowy PR. Termin dodatkowy nie jest częścią tego planu.
 
-Arkusze od 2023 r. występują w dwóch formułach. Formuła 2023 jest przeznaczona dla osób zdających według nowej podstawy, natomiast Formuła 2015 pozostaje dostępna dla części osób zdających ponownie. Lata 2020-2022 należą wyłącznie do Formuły 2015. Aplikacja musi zawsze pokazywać formułę przy arkuszu, aby nie mieszać zakresów egzaminacyjnych.
+Arkusze od 2023 r. występują w dwóch formułach. Formuła 2023 jest przeznaczona dla osób zdających według nowej podstawy, natomiast Formuła 2015 pozostaje dostępna dla części osób zdających ponownie. Lata 2018-2022 należą wyłącznie do Formuły 2015. Aplikacja musi zawsze pokazywać formułę przy arkuszu, aby nie mieszać zakresów egzaminacyjnych.
 
 ## Legenda stanu
 
@@ -20,7 +20,7 @@ Arkusze od 2023 r. występują w dwóch formułach. Formuła 2023 jest przeznacz
 
 ## Stan bieżący
 
-Na `origin/main` znajduje się 7 aktywnych arkuszy: oba poziomy terminów głównych 2024, 2025 i 2026 oraz matura poprawkowa 2021 w Formule 2015. Bieżący worktree zawiera dodatkowo maturę główną 2023 PP, maturę poprawkową 2023 PP, maturę główną 2023 PR, matury poprawkowe 2024 i 2025 PP oraz matury główne i poprawkową 2021 i 2022 PP oraz PR w Formule 2015, dlatego lokalnie katalog ma 17 arkuszy. Żaden z dziesięciu lokalnie dodanych arkuszy nie jest jeszcze commitem ani częścią `origin/main`.
+Na `origin/main` znajduje się 7 aktywnych arkuszy: oba poziomy terminów głównych 2024, 2025 i 2026 oraz matura poprawkowa 2021 w Formule 2015. Bieżący worktree zawiera dodatkowo maturę główną 2023 PP, maturę poprawkową 2023 PP, maturę główną 2023 PR, matury poprawkowe 2024 i 2025 PP, matury główne i poprawkową 2021 i 2022 PP oraz PR, a także matury główne i poprawkowe 2020, 2019 i 2018 PP oraz PR w Formule 2015, dlatego lokalnie katalog ma 26 arkuszy. Żaden z dziewiętnastu lokalnie dodanych arkuszy nie jest jeszcze commitem ani częścią `origin/main`.
 
 | Rok | F2023 główna PP | F2023 główna PR | F2023 poprawkowa PP | F2015 główna PP | F2015 główna PR | F2015 poprawkowa PP |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -30,9 +30,11 @@ Na `origin/main` znajduje się 7 aktywnych arkuszy: oba poziomy terminów głów
 | 2023 | lokalnie, bez commita | lokalnie, bez commita | lokalnie, bez commita | brak | brak | brak |
 | 2022 | nie dotyczy | nie dotyczy | nie dotyczy | lokalnie, bez commita | lokalnie, bez commita | lokalnie, bez commita |
 | 2021 | nie dotyczy | nie dotyczy | nie dotyczy | lokalnie, bez commita | lokalnie, bez commita | na `origin/main` |
-| 2020 | nie dotyczy | nie dotyczy | nie dotyczy | brak | brak | brak |
+| 2020 | nie dotyczy | nie dotyczy | nie dotyczy | lokalnie, bez commita | lokalnie, bez commita | lokalnie, bez commita |
+| 2019 | nie dotyczy | nie dotyczy | nie dotyczy | lokalnie, bez commita | lokalnie, bez commita | lokalnie, bez commita |
+| 2018 | nie dotyczy | nie dotyczy | nie dotyczy | lokalnie, bez commita | lokalnie, bez commita | lokalnie, bez commita |
 
-Pełne archiwum z tabeli obejmuje 33 arkusze: 12 w Formule 2023 i 21 w Formule 2015. Wobec 17 arkuszy dostępnych lokalnie brakuje 16. Węższy zakres, bez równoległych arkuszy Formuły 2015 z lat 2023-2026, obejmuje 21 arkuszy i pozostawia 4 braki.
+Pełne archiwum z tabeli obejmuje 39 arkuszy: 12 w Formule 2023 i 27 w Formule 2015. Wobec 26 arkuszy dostępnych lokalnie brakuje 13. Węższy zakres, bez równoległych arkuszy Formuły 2015 z lat 2023-2026, obejmuje 27 arkuszy i pozostawia 1 brak.
 
 ## Kolejność wdrożenia
 
@@ -55,11 +57,10 @@ Po tym etapie komplet Formuły 2023 będzie zawierał 12 arkuszy: po PP, PR i po
 
 ### Etap 2 - rdzeń historyczny Formuły 2015
 
-1. Matury główne 2022 PP i PR oraz poprawkowa 2022 PP są wykonane lokalnie.
+1. Matury główne PP i PR oraz poprawkowe PP z 2018, 2019, 2020 i 2022 r. są wykonane lokalnie.
 2. Matury główne PP i PR z 2021 r. są wykonane lokalnie, przy zachowaniu istniejącej poprawki 2021 bez modyfikacji identyfikatorów `mp21-*`.
-3. Matury główne PP i PR oraz poprawkowe PP z 2020 r.
 
-Etap zapewnia ciągłe archiwum 2020-2022 i nie miesza go z treściami kursu Formuły 2023.
+Etap zapewnia ciągłe archiwum 2018-2022 i nie miesza go z treściami kursu Formuły 2023.
 
 ### Etap 3 - równoległe arkusze Formuły 2015 z lat 2023-2026
 
@@ -67,7 +68,7 @@ Etap zapewnia ciągłe archiwum 2020-2022 i nie miesza go z treściami kursu For
 2. Pokaż przy każdym arkuszu widoczny znacznik `Formuła 2015` albo `Formuła 2023` w widoku Matura, liście tematów i źródle zadania.
 3. Zachować kolejność: rok malejąco, następnie formuła, termin główny PP, termin główny PR, termin poprawkowy PP.
 
-Etap 3 jest potrzebny wyłącznie do pełnego katalogu 33 arkuszy. Nie jest wymagany dla węższego archiwum 21 arkuszy.
+Etap 3 jest potrzebny wyłącznie do pełnego katalogu 36 arkuszy. Nie jest wymagany dla węższego archiwum 24 arkuszy.
 
 ## Kontrakt pojedynczego arkusza
 

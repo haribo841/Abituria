@@ -89,7 +89,7 @@ public sealed class Issue4NavigationTests
                 item => openedPlaceholders.Add(item.Id),
                 (exercise, topicId) => randomized.Add((exercise.Id, topicId))));
 
-        Assert.Equal(17, repository.Exams.Count);
+        Assert.Equal(26, repository.Exams.Count);
         Assert.Equal(17, repository.ExamTopics.Count);
         Assert.Contains(matura.GetLogicalDescendants().OfType<Button>(), button =>
             button.Content is string text && text.Contains("33 zadania, 37 części ocenianych", StringComparison.Ordinal));
@@ -99,11 +99,23 @@ public sealed class Issue4NavigationTests
             button.Content is string text && text.Contains("13 zadań, 14 części ocenianych", StringComparison.Ordinal));
         Assert.Contains(matura.GetLogicalDescendants().OfType<Button>(), button =>
             button.Content is string text && text.Contains("31 zadań, 35 części ocenianych", StringComparison.Ordinal));
-        Assert.Equal(3, matura.GetLogicalDescendants().OfType<Button>().Count(button =>
+        Assert.Equal(0, matura.GetLogicalDescendants().OfType<Button>().Count(button =>
             button.Content is string text && repository.Placeholders.Items.Any(item =>
                 item.Category == "exam" && text.StartsWith(item.Title, StringComparison.Ordinal))));
         Assert.DoesNotContain(matura.GetLogicalDescendants().OfType<Button>(), button =>
             button.Content is string text && text.StartsWith("Zestaw E1-E35", StringComparison.Ordinal));
+        Assert.Contains(matura.GetLogicalDescendants().OfType<TextBlock>(), text =>
+            text.Text == "Matura maj 2019 - poziom podstawowy (Formuła 2015)");
+        Assert.Contains(matura.GetLogicalDescendants().OfType<TextBlock>(), text =>
+            text.Text == "Matura maj 2019 - poziom rozszerzony (Formuła 2015)");
+        Assert.Contains(matura.GetLogicalDescendants().OfType<TextBlock>(), text =>
+            text.Text == "Matura poprawkowa 2019 - poziom podstawowy (Formuła 2015)");
+        Assert.Contains(matura.GetLogicalDescendants().OfType<TextBlock>(), text =>
+            text.Text == "Matura maj 2018 - poziom podstawowy (Formuła 2015)");
+        Assert.Contains(matura.GetLogicalDescendants().OfType<TextBlock>(), text =>
+            text.Text == "Matura maj 2018 - poziom rozszerzony (Formuła 2015)");
+        Assert.Contains(matura.GetLogicalDescendants().OfType<TextBlock>(), text =>
+            text.Text == "Matura poprawkowa 2018 - poziom podstawowy (Formuła 2015)");
         Assert.Equal(17, tasks.GetLogicalDescendants().OfType<Button>().Count(button =>
             button.Content is string text && text.StartsWith("Losuj zadanie z tematu:", StringComparison.Ordinal)));
         Assert.Single(tasks.GetLogicalDescendants().OfType<Button>(), button =>
@@ -114,7 +126,6 @@ public sealed class Issue4NavigationTests
         var newestExam = repository.Exams[0];
         Click(matura, "Otwórz arkusz - 33 zadania, 37 części ocenianych");
         Click(matura, $"Losuj zadanie z arkusza: {newestExam.Title}");
-        Click(matura, "Matura 2019 - treść w przygotowaniu");
         var firstTopic = repository.ExamTopics[0];
         var firstTopicCount = repository.GetTopicExercises(firstTopic.Id).Count;
         Click(tasks, $"{firstTopic.Title} - {ExerciseCountLabel(firstTopicCount)}");
@@ -123,7 +134,8 @@ public sealed class Issue4NavigationTests
 
         Assert.Equal([newestExam.Id], openedExams);
         Assert.Equal([firstTopic.Id], openedTopics);
-        Assert.Equal(["matura-2019", "exercise-set-e"], openedPlaceholders);
+        Assert.Equal(["exercise-set-e"], openedPlaceholders);
+        Assert.DoesNotContain(repository.Placeholders.Items, item => item.Category == "exam");
         Assert.Null(randomized[0].TopicId);
         Assert.Equal(firstTopic.Id, randomized[1].TopicId);
     }

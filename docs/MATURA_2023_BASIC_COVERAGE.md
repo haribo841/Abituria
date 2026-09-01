@@ -59,4 +59,4 @@ Suma punktów: **46**. Liczba oficjalnych zadań: **31**. Liczba jednostek post�
 
 Grupa cke-2023-main-basic-exam ma w Content/provenance.json status blocked. Do czasu osobistego rozszerzenia deklaracji praw do redystrybucji arkusza i zasad oceniania nie wolno oznaczać wydania zawierającego tę transkrypcję jako publicznie dopuszczonego.
 
-Osiem diagramów odtwarza zależności matematyczne jako deterministyczne prymitywy Avalonia. Nie zawierają rastrów PDF, lecz katalog runtime-vector-diagrams także pozostaje tymczasowo zablokowany, ponieważ jego dotychczasowa deklaracja obejmowała 92 definicje, a katalog zawiera już 139.
+Osiem diagramów odtwarza zależności matematyczne jako deterministyczne prymitywy Avalonia. Nie zawierają rastrów PDF, lecz katalog runtime-vector-diagrams także pozostaje tymczasowo zablokowany, ponieważ jego dotychczasowa deklaracja obejmowała 92 definicje, a katalog zawiera już 176.

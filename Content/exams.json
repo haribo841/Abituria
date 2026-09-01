@@ -144,6 +144,69 @@
       "level": "basic",
       "order": 17,
       "isActive": true
+    },
+    {
+      "id": "matura-maj-2020-podstawowa",
+      "contentPath": "Content/exam-2020-main-basic.json",
+      "level": "basic",
+      "order": 18,
+      "isActive": true
+    },
+    {
+      "id": "matura-maj-2020-rozszerzona",
+      "contentPath": "Content/exam-2020-main-extended.json",
+      "level": "extended",
+      "order": 19,
+      "isActive": true
+    },
+    {
+      "id": "matura-poprawkowa-2020-podstawowa",
+      "contentPath": "Content/exam-2020-correction-basic.json",
+      "level": "basic",
+      "order": 20,
+      "isActive": true
+    },
+    {
+      "id": "matura-maj-2019-podstawowa",
+      "contentPath": "Content/exam-2019-main-basic.json",
+      "level": "basic",
+      "order": 21,
+      "isActive": true
+    },
+    {
+      "id": "matura-maj-2019-rozszerzona",
+      "contentPath": "Content/exam-2019-main-extended.json",
+      "level": "extended",
+      "order": 22,
+      "isActive": true
+    },
+    {
+      "id": "matura-poprawkowa-2019-podstawowa",
+      "contentPath": "Content/exam-2019-correction-basic.json",
+      "level": "basic",
+      "order": 23,
+      "isActive": true
+    },
+    {
+      "id": "matura-maj-2018-podstawowa",
+      "contentPath": "Content/exam-2018-main-basic.json",
+      "level": "basic",
+      "order": 24,
+      "isActive": true
+    },
+    {
+      "id": "matura-maj-2018-rozszerzona",
+      "contentPath": "Content/exam-2018-main-extended.json",
+      "level": "extended",
+      "order": 25,
+      "isActive": true
+    },
+    {
+      "id": "matura-poprawkowa-2018-podstawowa",
+      "contentPath": "Content/exam-2018-correction-basic.json",
+      "level": "basic",
+      "order": 26,
+      "isActive": true
     }
   ]
 }

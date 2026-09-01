@@ -79,4 +79,4 @@ Nie dodano aktywnych rastrów.
 
 Grupa `cke-2022-correction-basic-exam` ma status `blocked` w `Content/provenance.json`, a `releaseEligible` pozostaje `false`. Nie ma jeszcze osobistego rozszerzenia deklaracji praw obejmującego ten arkusz Formuły 2015, zasady oceniania i pochodne diagramy.
 
-Test `Matura2022CorrectionBasicContentTests` kontroluje kontrakt 35/35/45, kolejność, strony, punkty, klucz odpowiedzi, źródła, sumy SHA-256, diagramy, proweniencję i wpis w spisie dokumentacji. Testy katalogu, UI i smoke testu kontrolują 17 aktywnych arkuszy oraz 473 jednostki postępu.
+Test `Matura2022CorrectionBasicContentTests` kontroluje kontrakt 35/35/45, kolejność, strony, punkty, klucz odpowiedzi, źródła, sumy SHA-256, diagramy, proweniencję i wpis w spisie dokumentacji. Testy katalogu, UI i smoke testu kontrolują 26 aktywnych arkuszy oraz 722 jednostki postępu.

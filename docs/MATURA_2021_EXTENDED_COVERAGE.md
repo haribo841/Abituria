@@ -49,4 +49,4 @@ Każdy diagram ma niepusty opis alternatywny, stronę źródłową i sourceId: c
 
 Content/provenance.json ma osobną grupę cke-2021-main-extended-exam ze statusem blocked. Grupa diagramów runtime również pozostaje blocked. Nie zmieniono ASSET_RIGHTS_DECLARATION.md ani releaseEligible=false, ponieważ deklaracja nie obejmuje jeszcze Formuły 2015 z 2021 r.
 
-Test Matura2021ExtendedContentTests kontroluje kontrakt 15/15/50, źródła, sumy SHA-256, strony, klucz odpowiedzi, tryby odpowiedzi, diagramy, proweniencję i link w spisie dokumentacji. Testy katalogu, UI i smoke testu kontrolują 17 aktywnych arkuszy oraz 473 jednostki postępu.
+Test Matura2021ExtendedContentTests kontroluje kontrakt 15/15/50, źródła, sumy SHA-256, strony, klucz odpowiedzi, tryby odpowiedzi, diagramy, proweniencję i link w spisie dokumentacji. Testy katalogu, UI i smoke testu kontrolują 26 aktywnych arkuszy oraz 722 jednostki postępu.
