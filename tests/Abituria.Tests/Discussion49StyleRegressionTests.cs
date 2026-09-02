@@ -523,13 +523,10 @@ public sealed class Discussion49StyleRegressionTests
 
             // Prime platform-specific text and control caches before measuring the
             // repeatable navigation cost. CoreText performs substantially more
-            // one-time allocation than DirectWrite or Fontconfig.
-            foreach (var page in pages)
-            {
-                viewModel.Navigate(page);
-                Dispatcher.UIThread.RunJobs();
-                using var warmupFrame = Assert.IsType<WriteableBitmap>(window.CaptureRenderedFrame());
-            }
+            // one-time allocation than DirectWrite or Fontconfig. Every theme and
+            // viewport must be warmed too, otherwise the first measured capture
+            // includes platform-specific cache initialization.
+            PrimeStyleRenderCaches(window, viewModel, themeButton, pages);
             viewModel.Navigate(AppPage.Home);
             Dispatcher.UIThread.RunJobs();
 
@@ -571,14 +568,7 @@ public sealed class Discussion49StyleRegressionTests
                 allocatedBytes <= allocationBudget,
                 $"Renderowanie zaalokowało {allocatedBytes} B przy limicie {allocationBudget} B.");
             Assert.True(hashes.Count >= 3, $"Oczekiwano co najmniej 3 różnych klatek, uzyskano {hashes.Count}.");
-            for (var attempt = 0;
-                 attempt < 4 && !((themeButton.Content as string)?.Contains("Systemowy", StringComparison.Ordinal) ?? false);
-                 attempt++)
-            {
-                themeButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                Dispatcher.UIThread.RunJobs();
-            }
-            Assert.Contains("Systemowy", themeButton.Content as string, StringComparison.Ordinal);
+            RestoreSystemTheme(themeButton);
         }
         finally
         {
@@ -586,6 +576,47 @@ public sealed class Discussion49StyleRegressionTests
             SqliteConnection.ClearAllPools();
             if (Directory.Exists(directory)) Directory.Delete(directory, recursive: true);
         }
+    }
+
+    private static void PrimeStyleRenderCaches(
+        MainWindow window,
+        AppViewModel viewModel,
+        Button themeButton,
+        AppPage[] pages)
+    {
+        const int themeCount = 4;
+        for (var themeIndex = 0; themeIndex < themeCount; themeIndex++)
+        {
+            for (var pageIndex = 0; pageIndex < pages.Length; pageIndex++)
+            {
+                viewModel.Navigate(pages[pageIndex]);
+                window.Width = pageIndex % 2 == 0 ? 960 : 1280;
+                window.Height = pageIndex % 2 == 0 ? 640 : 820;
+                Dispatcher.UIThread.RunJobs();
+                using var warmupFrame = Assert.IsType<WriteableBitmap>(window.CaptureRenderedFrame());
+            }
+
+            if (themeIndex < themeCount - 1)
+            {
+                themeButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                Dispatcher.UIThread.RunJobs();
+            }
+        }
+
+        RestoreSystemTheme(themeButton);
+    }
+
+    private static void RestoreSystemTheme(Button themeButton)
+    {
+        for (var attempt = 0;
+             attempt < 4 && !((themeButton.Content as string)?.Contains("Systemowy", StringComparison.Ordinal) ?? false);
+             attempt++)
+        {
+            themeButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+            Dispatcher.UIThread.RunJobs();
+        }
+
+        Assert.Contains("Systemowy", themeButton.Content as string, StringComparison.Ordinal);
     }
 
     private static void AssertResponsiveColumns(
