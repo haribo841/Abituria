@@ -58,7 +58,7 @@ Nie wolno usuwać parametru bramy, ręcznie zmieniać `releaseEligible` ani wył
 
 ## Aktualny stan
 
-`releaseEligible` ma obecnie wartość `true`. Rozszerzenie [deklaracji praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 1 września 2026 r. obejmuje osiemnaście grup arkuszy CKE oraz wszystkie 195 definicji `runtime-vector-diagrams`. Zwykła walidacja kompletności i brama `-RequireReleaseEligible` muszą przechodzić przed każdym wydaniem.
+`releaseEligible` ma obecnie wartość `false`. Rozszerzenie [deklaracji praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 1 września 2026 r. obejmuje wcześniej zatwierdzone grupy arkuszy CKE i 195 ówczesnych definicji `runtime-vector-diagrams`, lecz nie obejmuje sześciu nowych grup matur 2017 i 2016 ani 31 pochodnych diagramów. Zwykła walidacja kompletności przechodzi lokalnie, natomiast brama `-RequireReleaseEligible` celowo blokuje wydanie do czasu odrębnego rozszerzenia deklaracji.
 
 ### Materiały CKE
 
@@ -118,9 +118,13 @@ Grupa `mathematics-course-formula-2023` obejmuje `Content/chapters.json` i `Cont
 
 Warstwa autorska pozostaje niezmieniona: 238 przykładów, 357 ćwiczeń, podpowiedzi, pełne rozwiązania i cztery nowe definicje diagramów kursu są materiałami Adama Kubisia. Osiem zachowanych diagramów wektorowych nadal ma historyczne przypisanie. Osobna grupa `cke-formula-2023-guide-examples` obejmuje `Content/official-course-examples.json`: 66 przykładów podstawowych i 31 rozszerzonych wraz z oficjalnym brzmieniem wymagań wskazanych przy zadaniach, zasadami oceniania, rozwiązaniami, stronami PDF i 53 opisami informacji wizualnej. Autorem tych materiałów pozostaje CKE. Maszynowa macierz [MATH_COURSE_2023_COVERAGE.md](MATH_COURSE_2023_COVERAGE.md) rozdziela obie warstwy oraz dokumentuje kontrakty `119/238/357` i `66/31/97`.
 
+### Matury Formuły 2015 z 2017 i 2016
+
+Grupy `cke-2017-main-basic-exam`, `cke-2017-main-extended-exam`, `cke-2017-correction-basic-exam`, `cke-2016-main-basic-exam`, `cke-2016-main-extended-exam` i `cke-2016-correction-basic-exam` obejmują odpowiednio lokalne transkrypcje sześciu arkuszy i zasad oceniania. Każdy arkusz ma osobną macierz pokrycia, adres źródła, sumy SHA-256 i datę weryfikacji w danych JSON. Wszystkie sześć grup ma status `blocked`, ponieważ deklaracja z 1 września 2026 r. nie wskazuje tych konkretnych arkuszy. Techniczne przejście testów nie stanowi zgody na publiczną redystrybucję.
+
 ### Diagramy i archiwum historyczne
 
-Grupa `runtime-vector-diagrams` obejmuje `Content/diagrams.json` z dokładnie 195 definicjami wektorowymi: 36 dla tablic wzorów, 8 dla matury podstawowej 2018, 4 dla matury rozszerzonej 2018, 7 dla matury poprawkowej 2018, 8 dla matury podstawowej 2019, 5 dla matury rozszerzonej 2019, 6 dla matury poprawkowej 2019, 8 dla matury podstawowej 2020, 4 dla matury rozszerzonej 2020, 6 dla matury poprawkowej 2020, 9 dla arkusza poprawkowego 2021, 8 dla matury podstawowej 2021, 3 dla matury rozszerzonej 2021, 6 dla matury podstawowej 2022, 1 dla matury rozszerzonej 2022, 5 dla matury poprawkowej 2022, 8 dla matury podstawowej 2023, 5 dla matury poprawkowej 2023, 4 dla matury rozszerzonej 2023, 11 dla matury podstawowej 2024, 5 dla matury poprawkowej 2024, 1 dla matury rozszerzonej 2024, 9 dla matury podstawowej 2025, 6 dla matury poprawkowej 2025, 7 dla matury podstawowej 2026, 3 dla matury rozszerzonej 2026 i 12 dla kursu. Każda definicja ma stabilny identyfikator, źródło i opis alternatywny, a 147 figur maturalnych ma również stronę arkusza. `DiagramView` materializuje je wyłącznie jako `Line`, `Polyline`, `Polygon`, `Ellipse`, łuki i `TextBlock` Avalonia, bez ładowania rastrów, `Image` lub `Bitmap`. Implementacje figur są autorskim kodem wektorowym Adama Kubisia, a wszystkie definicje są objęte rozszerzeniem deklaracji z 1 września 2026 r. Grupa ma status `approved`.
+Grupa `runtime-vector-diagrams` obejmuje `Content/diagrams.json` z dokładnie 226 definicjami wektorowymi. Składa się z 195 wcześniej zatwierdzonych definicji oraz 16 figur pochodnych z arkuszy 2017 i 15 figur pochodnych z arkuszy 2016. Każda definicja ma stabilny identyfikator, źródło i opis alternatywny. `DiagramView` materializuje je wyłącznie jako `Line`, `Polyline`, `Polygon`, `Ellipse`, łuki i `TextBlock` Avalonia, bez ładowania rastrów, `Image` lub `Bitmap`. Implementacje figur są autorskim kodem wektorowym Adama Kubisia, ale wspólna grupa ma status `blocked`, ponieważ zawiera 31 figur pochodnych z niezatwierdzonych transkrypcji 2017-2016.
 
 Siedemdziesiąt pięć historycznych obrazów znajduje się w `docs/legacy/originals/images/`. Pliki zachowano bajt w bajt, udokumentowano mapowaniem `PATH-MAPPING.csv` i sumami `SHA256SUMS`, ale nie są paczkowane ani publikowane przez DocFX. Jedynym statycznym wyjątkiem jest `img/icon.ico` w grupie `application-icon`, używany wyłącznie jako `ApplicationIcon`.
 
@@ -131,10 +135,10 @@ Manifest oznacza jako `approved`:
 - aktualne treści techniczne i inwentarz autorstwa Adama Kubisia na licencji MIT;
 - autorskie przykłady, ćwiczenia, rozwiązania i diagramy kursu Formuły 2023 wraz z przypisanym urzędowym źródłem dokładnego brzmienia wymagań;
 - zmigrowane treści matematyczne, dla których dowodem jest zachowana historyczna licencja MIT i inwentarz migracji;
-- wszystkie paczkowane transkrypcje arkuszy CKE 2018-2026 i diagramy wektorowe, objęte deklaracją praw lub upoważnienia do publicznej redystrybucji wyłącznie jako części Abiturii;
+- zatwierdzone transkrypcje arkuszy CKE 2018-2026, objęte deklaracją praw lub upoważnienia do publicznej redystrybucji wyłącznie jako części Abiturii;
 - font Mulish na licencji SIL Open Font License 1.1, potwierdzonej przez `fonts/OFL.txt` i `fonts/README.txt`.
 
-Manifest nie zawiera obecnie grup `blocked`. Każda zmiana źródeł, zakresu redystrybucji lub sposobu renderowania wymaga ponownej oceny, uruchomienia zwykłego walidatora i osobnej bramy `-RequireReleaseEligible`.
+Manifest zawiera siedem grup `blocked`: sześć nowych grup arkuszy 2017-2016 oraz wspólny katalog diagramów. Każda zmiana źródeł, zakresu redystrybucji lub sposobu renderowania wymaga ponownej oceny, uruchomienia zwykłego walidatora i osobnej bramy `-RequireReleaseEligible`.
 
 Status zatwierdzony należy ponownie ocenić po każdej zmianie źródła, zakresu plików albo sposobu pakowania.
 

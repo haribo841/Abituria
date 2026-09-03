@@ -27,7 +27,16 @@ public sealed class ContentProvenanceTests
         "cke-2023-main-basic-exam",
         "cke-2023-correction-basic-exam",
         "cke-2024-correction-basic-exam",
-        "cke-2025-correction-basic-exam",
+        "cke-2025-correction-basic-exam"
+    ];
+    private static readonly string[] NewlyBlockedGroupIds =
+    [
+        "cke-2017-main-basic-exam",
+        "cke-2017-main-extended-exam",
+        "cke-2017-correction-basic-exam",
+        "cke-2016-main-basic-exam",
+        "cke-2016-main-extended-exam",
+        "cke-2016-correction-basic-exam",
         "runtime-vector-diagrams"
     ];
     private static readonly JsonSerializerOptions ManifestJsonOptions = new()
@@ -86,21 +95,29 @@ public sealed class ContentProvenanceTests
     }
 
     [Fact]
-    public void Owner_declaration_approves_all_packaged_exam_groups_and_diagrams()
+    public void Owner_declaration_preserves_approved_groups_and_blocks_the_new_2017_and_2016_scope()
     {
         var manifest = ReadManifest();
         var declaration = File.ReadAllText(Absolute("docs/ASSET_RIGHTS_DECLARATION.md"));
         var approvedGroups = manifest.Assets
             .Where(asset => NewlyApprovedGroupIds.Contains(asset.Id, StringComparer.Ordinal))
             .ToArray();
+        var blockedGroups = manifest.Assets
+            .Where(asset => NewlyBlockedGroupIds.Contains(asset.Id, StringComparer.Ordinal))
+            .ToArray();
 
-        Assert.True(manifest.ReleaseEligible);
-        Assert.DoesNotContain(manifest.Assets, asset => asset.DistributionStatus == "blocked");
-        Assert.Equal(19, approvedGroups.Length);
+        Assert.False(manifest.ReleaseEligible);
+        Assert.Equal(18, approvedGroups.Length);
         Assert.All(approvedGroups, group =>
         {
             Assert.Equal("approved", group.DistributionStatus);
             Assert.Contains(group.Id, declaration, StringComparison.Ordinal);
+        });
+        Assert.Equal(7, blockedGroups.Length);
+        Assert.All(blockedGroups, group =>
+        {
+            Assert.Equal("blocked", group.DistributionStatus);
+            Assert.False(string.IsNullOrWhiteSpace(group.BlockedReason));
         });
         Assert.Contains("1 września 2026 r.", declaration, StringComparison.Ordinal);
     }

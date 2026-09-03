@@ -111,7 +111,7 @@ public sealed class Matura2026UiTests
             .Where(button => button.Content is string text && text.StartsWith("Losuj zadanie z tematu:", StringComparison.Ordinal))
             .ToArray();
         Assert.Equal(17, topicButtons.Length);
-        Assert.Equal(722, repository.ExamTopics.Sum(topic => repository.GetTopicExercises(topic.Id).Count));
+        Assert.Equal(889, repository.ExamTopics.Sum(topic => repository.GetTopicExercises(topic.Id).Count));
         Assert.All(repository.ExamTopics, topic =>
         {
             var topicExercises = repository.GetTopicExercises(topic.Id);

@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 4,
+  "exam": {
+    "id": "matura-maj-2017-rozszerzona",
+    "title": "Matura maj 2017 - poziom rozszerzony (Formuła 2015)",
+    "progressLabel": "Matura maj 2017 PR (F2015)",
+    "year": 2017,
+    "session": "główna",
+    "formula": "2015",
+    "level": "extended",
+    "durationMinutes": 180,
+    "maximumPoints": 50,
+    "officialTaskCount": 15,
+    "progressItemCount": 15,
+    "introduction": [
+      {
+        "type": "richText",
+        "text": "Arkusz główny z matematyki na poziomie rozszerzonym z 9 maja 2017 r. w Formule 2015 obejmuje 15 zadań, 50 punktów i 180 minut."
+      },
+      {
+        "type": "richText",
+        "text": "Treść zadań, odpowiedzi, rozwiązań i kryteriów pochodzi z arkusza oraz zasad oceniania CKE. Publiczna redystrybucja tej nowej transkrypcji oczekuje na odrębne rozszerzenie deklaracji praw właściciela."
+      }
+    ],
+    "topicIntroduction": [],
+    "source": {
+      "publisher": "Centralna Komisja Egzaminacyjna",
+      "documentCode": "MMA-R1_1P-172",
+      "examDate": "2017-05-09",
+      "questionPaperUrl": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_od_2015/matematyka/MMA-R1_1P-172.pdf",
+      "questionPaperSha256": "4D6F682AA0BB350CA67CA4F2CAE967332264339DA1AF006D5A4F0C5F23EB0277",
+      "answerKeyUrl": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_od_2015/zasady_oceniania/MMA-R1-N.pdf",
+      "answerKeySha256": "2B3DDFC0161632B6F6E5FD5CBC47BAE14FE618942D7636D4B870F9C8B3F4E36C",
+      "verifiedOn": "2026-09-01"
+    },
+    "topics": [],
+    "exercises": [
+      {
+        "id": "mm17-r0-z01",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 1,
+        "displayNumber": "1",
+        "order": 1,
+        "points": 1,
+        "title": "Zadanie 1",
+        "topicId": "powers",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Liczba (√(2 - √3) - √(2 + √3))² jest równa:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Po rozwinięciu kwadratu otrzymujemy 4 - 2√((2 - √3)(2 + √3)) = 4 - 2 = 2. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "2",
+          "4",
+          "√3",
+          "2√3"
+        ],
+        "correctOption": 1,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-r0-z02",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 2,
+        "displayNumber": "2",
+        "order": 2,
+        "points": 1,
+        "title": "Zadanie 2",
+        "topicId": "sequences",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Ciąg aₙ = ((n² - 10n)(2 - 3n))/(2n³ + n² + 3) ma granicę:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Iloraz wyrazów najwyższego stopnia wynosi (-3n³)/(2n³) = -3/2. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "1/2",
+          "0",
+          "-∞",
+          "-3/2"
+        ],
+        "correctOption": 4,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-r0-z03",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 3,
+        "displayNumber": "3",
+        "order": 3,
+        "points": 1,
+        "title": "Zadanie 3",
+        "topicId": "plane-geometry",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "W konfiguracji z rysunku CD jest wysokością, |AD| = |CD| = |BC|/2. Zaznaczony kąt wpisany α jest równy:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Z zależności długości wynika miara odpowiedniego kąta środkowego 105°. Kąt wpisany oparty na tym łuku ma miarę 52,5°. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "37,5°",
+          "45°",
+          "52,5°",
+          "60°"
+        ],
+        "correctOption": 3,
+        "diagramIds": [
+          "exam-mm17-r0-z03"
+        ]
+      },
+      {
+        "id": "mm17-r0-z04",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 4,
+        "displayNumber": "4",
+        "order": 4,
+        "points": 1,
+        "title": "Zadanie 4",
+        "topicId": "lines-and-segments",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Dane są B = (-4, 7) i wektor u = [-3, 5]. Punkt A spełnia AB = -3u. Współrzędne A to:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "-3u = [9, -15], więc B - A = [9, -15], skąd A = (-13, 22). Odpowiedź B.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "(5, -8)",
+          "(-13, 22)",
+          "(9, -15)",
+          "(12, 24)"
+        ],
+        "correctOption": 2,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-r0-z05",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 5,
+        "displayNumber": "5",
+        "order": 5,
+        "points": 2,
+        "title": "Zadanie 5",
+        "topicId": "equations",
+        "sourcePage": 4,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "numeric",
+        "prompt": "Reszta z dzielenia W(x) = x³ - 2x² + ax + 3/4 przez x - 2 jest równa 1. Wpisz trzy pierwsze cyfry po przecinku rozwinięcia a.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Z twierdzenia o reszcie W(2) = 1: 8 - 8 + 2a + 3/4 = 1. Stąd 2a = 1/4 i a = 0,125, więc wpisujemy 125.",
+        "scoringCriteria": "2 pkt - poprawny wynik 125. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "expectedValue": 125,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-r0-z06",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 6,
+        "displayNumber": "6",
+        "order": 6,
+        "points": 3,
+        "title": "Zadanie 6",
+        "topicId": "quadratic-function",
+        "sourcePage": 4,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "Funkcja f(x) = (x - 1)/(x² + 1). Wyznacz równanie stycznej do jej wykresu w punkcie P = (1, 0).",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "f'(x) = (x² + 1 - 2x(x - 1))/(x² + 1)², zatem f'(1) = 1/2. Styczna przez (1, 0) ma równanie y = (x - 1)/2.",
+        "scoringCriteria": "3 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-r0-z07",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 7,
+        "displayNumber": "7",
+        "order": 7,
+        "points": 3,
+        "title": "Zadanie 7",
+        "topicId": "proofs",
+        "sourcePage": 5,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "Wykaż, że dla x ≠ y zachodzi x²y² + x² + y² - 8xy + 4 > 0.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Przekształcamy: x²y² + x² + y² - 8xy + 4 = (xy - 2)² + (x - y)². Suma kwadratów jest nieujemna, a równość wymagałaby jednocześnie xy = 2 i x = y, co jest niemożliwe dla x ≠ y.",
+        "scoringCriteria": "3 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-r0-z08",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 8,
+        "displayNumber": "8",
+        "order": 8,
+        "points": 3,
+        "title": "Zadanie 8",
+        "topicId": "proofs",
+        "sourcePage": 6,
+        "solutionSourcePage": 7,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "W trójkącie ABC bok AB = c, BC = a, ∠ABC = β, a BE jest dwusieczną. Wykaż, że BE = 2ac cos(β/2)/(a + c).",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Stosujemy twierdzenie cosinusów do trójkątów ABE i CBE oraz twierdzenie o dwusiecznej AE/EC = c/a. Po podstawieniu i uproszczeniu otrzymujemy BE = 2ac cos(β/2)/(a + c).",
+        "scoringCriteria": "3 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": [
+          "exam-mm17-r0-z08"
+        ]
+      },
+      {
+        "id": "mm17-r0-z09",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 9,
+        "displayNumber": "9",
+        "order": 9,
+        "points": 4,
+        "title": "Zadanie 9",
+        "topicId": "solid-geometry",
+        "sourcePage": 7,
+        "solutionSourcePage": 11,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "W czworościanie foremnym o krawędzi 6 płaszczyzna równoległa do podstawy odcina przy wierzchołku ostrosłup o objętości 8/27 objętości całego czworościanu. Oblicz odległość środka S od tej płaszczyzny.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Stosunek podobieństwa odciętego ostrosłupa wynosi ∛(8/27) = 2/3. Wysokość czworościanu foremnego o krawędzi 6 wynosi 2√6. Szukana odległość to 2√6 - (2/3)·2√6 = 2√6/3 = √6.",
+        "scoringCriteria": "4 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": [
+          "exam-mm17-r0-z09"
+        ]
+      },
+      {
+        "id": "mm17-r0-z10",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 10,
+        "displayNumber": "10",
+        "order": 10,
+        "points": 4,
+        "title": "Zadanie 10",
+        "topicId": "trigonometry",
+        "sourcePage": 8,
+        "solutionSourcePage": 16,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "Rozwiąż równanie cos 2x + 3 cos x = -2 w przedziale [0, 2π].",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Podstawiamy cos 2x = 2cos²x - 1. Otrzymujemy 2c² + 3c + 1 = 0, czyli (2c + 1)(c + 1) = 0. Zatem x = 2π/3, 4π/3 lub π.",
+        "scoringCriteria": "4 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-r0-z11",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 11,
+        "displayNumber": "11",
+        "order": 11,
+        "points": 4,
+        "title": "Zadanie 11",
+        "topicId": "probability",
+        "sourcePage": 9,
+        "solutionSourcePage": 18,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "numeric",
+        "prompt": "Trzykrotnie losujemy ze zwracaniem liczby od 1 do 8. Oblicz prawdopodobieństwo, że ich iloczyn jest podzielny przez 4.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Dopełnieniem są iloczyny z mniej niż dwoma czynnikami 2. Zliczenie dopełnienia daje 5/16, więc szukane prawdopodobieństwo wynosi 1 - 5/16 = 11/16.",
+        "scoringCriteria": "4 pkt - poprawny wynik 11/16. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "expectedValue": 0.6875,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-r0-z12",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 12,
+        "displayNumber": "12",
+        "order": 12,
+        "points": 5,
+        "title": "Zadanie 12",
+        "topicId": "equations",
+        "sourcePage": 10,
+        "solutionSourcePage": 20,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "Wyznacz wszystkie wartości parametru m, dla których 4x² - 6mx + (2m + 3)(m - 3) = 0 ma dwa różne pierwiastki x₁ < x₂ spełniające (4x₁ - 4x₂ - 1)(4x₁ - 4x₂ + 1) < 0.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Warunek jest równoważny |4(x₂ - x₁)| < 1. Z zależności między pierwiastkami otrzymujemy 0 < Δ < 1, co po uproszczeniu prowadzi do m ∈ (-13/2, -6) ∪ (-6, -11/2).",
+        "scoringCriteria": "5 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-r0-z13",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 13,
+        "displayNumber": "13",
+        "order": 13,
+        "points": 5,
+        "title": "Zadanie 13",
+        "topicId": "lines-and-segments",
+        "sourcePage": 12,
+        "solutionSourcePage": 23,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "Wyznacz równanie okręgu przechodzącego przez A = (-5, 3) i B = (0, 6), którego środek leży na prostej x - 3y + 1 = 0.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Środek leży także na symetralnej AB. Ich przecięcie to S = (10, -1/3). Promień spełnia r² = 289/9, więc równanie ma postać (x - 10)² + (y + 1/3)² = 289/9.",
+        "scoringCriteria": "5 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-r0-z14",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 14,
+        "displayNumber": "14",
+        "order": 14,
+        "points": 6,
+        "title": "Zadanie 14",
+        "topicId": "sequences",
+        "sourcePage": 14,
+        "solutionSourcePage": 27,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "Liczby a, b, c tworzą ciąg arytmetyczny i a + b + c = 27. Liczby a - 2, b, c + 1 tworzą ciąg geometryczny. Wyznacz wszystkie trójki (a, b, c).",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Z ciągu arytmetycznego b = 9 i c = 18 - a. Warunek geometryczny daje 9² = (a - 2)(19 - a). Rozwiązania prowadzą do trójek (5, 9, 13) oraz (31/2, 9, 5/2).",
+        "scoringCriteria": "6 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-r0-z15",
+        "examId": "matura-maj-2017-rozszerzona",
+        "number": 15,
+        "displayNumber": "15",
+        "order": 15,
+        "points": 7,
+        "title": "Zadanie 15",
+        "topicId": "solid-geometry",
+        "sourcePage": 16,
+        "solutionSourcePage": 31,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "Walec ma pole powierzchni całkowitej P. Dla jakich wymiarów jego objętość jest największa i ile wynosi?",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Przy P = 2πr² + 2πrh mamy h = P/(2πr) - r. Maksymalizacja V = πr²h daje r = √(P/(6π)), h = 2√(P/(6π)), a Vmax = P³⁄²/(3√(6π)).",
+        "scoringCriteria": "7 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      }
+    ]
+  }
+}

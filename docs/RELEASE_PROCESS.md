@@ -6,7 +6,7 @@ Ten dokument opisuje przygotowanie, walidację i publikację Abiturii. Przykład
 
 Build techniczny, artefakt workflow i GitHub Release to trzy różne stany. Publiczne wydanie istnieje dopiero po ręcznym opublikowaniu zweryfikowanego draftu prerelease. Issue #36 można zamknąć dopiero po publikacji prerelease, wdrożeniu GitHub Pages i dodaniu komentarza z linkami do wydania, workflow oraz checklisty.
 
-Aktualny worktree ma `releaseEligible=true`. Rozszerzenie [ASSET_RIGHTS_DECLARATION.md](ASSET_RIGHTS_DECLARATION.md) z 1 września 2026 r. obejmuje osiemnaście wcześniej zablokowanych grup arkuszy CKE oraz wszystkie 195 definicji diagramów wektorowych. Szczegóły opisują [CONTENT_PROVENANCE.md](CONTENT_PROVENANCE.md) i macierze matur 2018-2026. Publiczny prerelease [`v0.9.3`](https://github.com/haribo841/Abituria/releases/tag/v0.9.3) będzie odwoływać się do zweryfikowanego commita wydania.
+Aktualny worktree ma `releaseEligible=false`. Rozszerzenie [ASSET_RIGHTS_DECLARATION.md](ASSET_RIGHTS_DECLARATION.md) z 1 września 2026 r. obejmuje wcześniej zatwierdzone grupy arkuszy CKE 2018-2026 i 195 ówczesnych definicji diagramów wektorowych, lecz nie obejmuje sześciu nowych grup matur 2017 i 2016 ani 31 pochodnych diagramów. Szczegóły opisują [CONTENT_PROVENANCE.md](CONTENT_PROVENANCE.md) i macierze matur 2016-2026. Historyczny prerelease [`v0.9.3`](https://github.com/haribo841/Abituria/releases/tag/v0.9.3) pozostaje odwołaniem do zweryfikowanego commita wydania; obecny stan nie może zostać wydany przed rozszerzeniem deklaracji.
 
 ## Kontrakt wydania
 

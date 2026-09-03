@@ -154,9 +154,9 @@ public sealed class Matura2023ExtendedContentTests
         var coverage = File.ReadAllText(Absolute("docs/MATURA_2023_EXTENDED_COVERAGE.md"));
         var toc = File.ReadAllText(Absolute("docs/toc.yml"));
 
-        Assert.True(root.GetProperty("releaseEligible").GetBoolean());
+        Assert.False(root.GetProperty("releaseEligible").GetBoolean());
         Assert.Equal("approved", groups["cke-2023-main-extended-exam"].GetProperty("distributionStatus").GetString());
-        Assert.Equal("approved", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
+        Assert.Equal("blocked", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
         Assert.Contains(PaperHash, groups["cke-2023-main-extended-exam"].GetProperty("source").GetString(), StringComparison.Ordinal);
         Assert.Contains(RulesHash, groups["cke-2023-main-extended-exam"].GetProperty("source").GetString(), StringComparison.Ordinal);
         Assert.Contains(PaperHash, rights, StringComparison.Ordinal);

@@ -1,0 +1,1349 @@
+
+
+===== PDF PAGE 1 =====
+ 
+ 
+MMA
+2017 
+Arkusz zawiera informacje  
+prawnie chronione do momentu 
+rozpoczęcia egzaminu. 
+Układ graficzny 
+© CKE 2015 
+MMA
+2017 
+ 
+UZUPEŁNIA ZDAJĄCY  
+ 
+ KOD PESEL  
+                 
+ 
+ 
+ 
+ 
+EGZAMIN MATURALNY  
+Z MATEMATYKI 
+ 
+POZIOM PODSTAWOWY 
+ 
+ 
+DATA: 5 maja 2017 r. 
+GODZINA ROZPOCZĘCIA: 9:00 
+CZAS PRACY: 170 minut 
+LICZBA PUNKTÓW DO UZYSKANIA: 50 
+ 
+Instrukcja dla zdającego 
+ 
+1. Sprawdź, czy arkusz egzaminacyjny zawiera 26 stron (zadania 1–34). 
+Ewentualny brak zgłoś przewodniczącemu zespołu nadzorującego 
+egzamin. 
+2. Rozwiązania zadań i odpowiedzi wpisuj w miejscu na to przeznaczonym. 
+3. Odpowiedzi do zadań zamkniętych (1–25) zaznacz na karcie odpowiedzi, 
+w części karty przeznaczonej dla zdającego. Zamaluj  pola do tego 
+przeznaczone. Błędne zaznaczenie otocz kółkiem  i zaznacz właściwe. 
+4. Pamiętaj, że pominięcie argumentacji lub istotnych obliczeń  
+w rozwiązaniu zadania otwartego (26–34) może spowodować, że za to 
+rozwiązanie nie otrzymasz pełnej liczby punktów. 
+5. Pisz czytelnie i używaj tylko długopisu lub pióra z czarnym tuszem lub 
+atramentem. 
+6. Nie używaj korektora, a błędne zapisy wyraźnie przekreśl. 
+7. Pamiętaj, że zapisy w brudnopisie nie będą oceniane. 
+8. Możesz korzystać z zestawu wzorów matematycznych, cyrkla i linijki, 
+a także z kalkulatora prostego. 
+9. Na tej stronie oraz na karcie odpowiedzi wpisz swój numer PESEL  
+i przyklej naklejkę z kodem.  
+10. Nie wpisuj żadnych znaków w części przeznaczonej dla egzaminatora. 
+ 
+ 
+ 
+MMA-P1_1P-172 
+ 
+ 
+ 
+miejsce 
+na naklejkę 
+UZUPEŁNIA ZESPÓŁ 
+NADZORUJĄCY 
+Uprawnienia zdającego do: 
+ dostosowania 
+kryteriów oceniania 
+ 
+ nieprzenoszenia 
+zaznaczeń na kartę 
+ 
+ dostosowania  
+w zw. z dyskalkulią 
+ 
+ 
+ 
+NOWA FORMUŁA
+
+===== PDF PAGE 2 =====
+ 
+ 
+ 
+Strona 2 z 26 
+ 
+ 
+MMA_1P 
+W zadaniach od 1. do 25. wybierz i zaznacz na karcie odpowiedzi poprawną odpowiedź. 
+ 
+ 
+Zadanie 1. (0–1) 
+Liczba 8251 6 −⋅  jest równa 
+A. 
+8
+5
+2
+
+
+ B. 5
+2  C. 810  D. 10 
+ 
+ 
+ 
+ 
+Zadanie 2. (0–1) 
+Liczba 33 54 2−  jest równa 
+A.  3 52  B.  3 C. 322  D.  2 
+ 
+ 
+ 
+ 
+Zadanie 3. (0–1) 
+Liczba 5log23log2 22 −  jest równa 
+A. 2
+9log 25  B. 2
+3log 5  C. 2
+9log 5  D. 2
+6log 25  
+ 
+ 
+ 
+ 
+Zadanie 4. (0–1) 
+Liczba osobników pewnego zagro żonego wyginięciem gatunku zwierz ąt wzrosła w stosunku 
+do liczby tych zwierz ąt z 31 grudnia 2011 r. o 120% i obecn ie jest równa 8910. Ile zwierz ąt 
+liczyła populacja tego gatunku w ostatnim dniu 2011 roku?   
+A. 4050  B. 1782 C. 7425 D. 7128 
+ 
+ 
+ 
+ 
+Zadanie 5. (0–1) 
+Równość () ()
+22
+22 2 2x −= +  jest  
+A. prawdziwa dla 2x =− . 
+B. prawdziwa dla  2x = . 
+C. prawdziwa dla 1x =− . 
+D. fałszywa dla każdej liczby x. 
+
+===== PDF PAGE 3 =====
+ 
+Strona 3 z 26 MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+
+===== PDF PAGE 4 =====
+ 
+Strona 4 z 26 MMA_1P 
+Zadanie 6. (0–1) 
+Do zbioru rozwiązań nierówności () ()
+4 12 0xx +− >  nie należy liczba 
+A. 3−  B.  1−  C.  1 D. 3 
+ 
+ 
+ 
+ 
+Zadanie 7. (0–1) 
+Wskaż rysunek, na którym jest przed stawiony zbiór wszystkich rozwi ązań nierówno ści 
+23 4 x−≥ . 
+A.
+  
+B.
+  
+C.
+  
+D.
+  
+ 
+ 
+ 
+ 
+Zadanie 8. (0–1) 
+Równanie () ()
+22 44 0xx x −+ =  z niewiadomą x  
+A. nie ma rozwi ązań w zbiorze liczb rzeczywistych.  
+B. ma dok ładnie dwa rozwiązania w zbiorze liczb rzeczywistych. 
+C. ma dok ładnie trzy rozwiązania w zbiorze liczb rzeczywistych. 
+D. ma dok ładnie pięć rozwiązań w zbiorze liczb rzeczywistych. 
+ 
+ 
+ 
+Zadanie 9. (0–1) 
+Miejscem zerowym funkcji liniowej  () ()31 1 2fx x =+ −   jest liczba  
+A. 34−  B. 23 1−+  C. 43 1−  D. 31 2−+  
+2
+3−  
+x 
+2
+3  
+x 
+2
+3  
+x 
+2
+3−  
+x 
+
+===== PDF PAGE 5 =====
+ 
+Strona 5 z 26 MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+
+===== PDF PAGE 6 =====
+ 
+Strona 6 z 26 MMA_1P 
+Zadanie 10. (0–1) 
+Na rysunku przedstawiono fragme nt wykresu funkcji kwadratowej ()
+2f xa xb x c=+ + , 
+której miejsca zerowe to: 3−  i 1. 
+ 
+ 
+ 
+Współczynnik c we wzorze funkcji  f  jest równy 
+A. 1 B. 2 C. 3 D. 4 
+ 
+ 
+ 
+ 
+Zadanie 11. (0–1) 
+Na rysunku przedstawiono fr agment wykresu funkcji wyk ładniczej f  okre ślonej wzorem 
+()
+xf xa = . Punkt ()1, 2A =  należy do tego wykresu funkcji. 
+ 
+Podstawa a  potęgi jest równa 
+A. 1
+2−  B. 1
+2
+ C. 2−  D. 2  
+
+===== PDF PAGE 7 =====
+ 
+Strona 7 z 26 MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PDF PAGE 8 =====
+ 
+Strona 8 z 26 MMA_1P 
+ 
+Zadanie 12. (0–1)  
+W ciągu arytmetycznym () na , określonym dla 1n ≥ , dane są: 1 5a = , 2 11a = . Wtedy  
+A. 14 71a =  B. 12 71a =  C. 11 71a =  D. 10 71=a  
+ 
+ 
+ 
+ 
+ 
+ 
+Zadanie 13. (0–1) 
+Dany jest trzywyrazowy ciąg geometryczny ()24, 6, 1a − . Stąd wynika, że 
+A. 5
+2a =  B. 2
+5a =  C. 3
+2a =  D. 2
+3a =  
+ 
+ 
+ 
+ 
+ 
+ 
+Zadanie 14. (0–1) 
+Jeśli sin 50m =° , to 
+ 
+A. sin 40m =°  B. cos 40m =°  C. cos 50m =°  D. tg50m =°  
+ 
+ 
+ 
+ 
+ 
+ 
+Zadanie 15. (0–1) 
+Na okręgu o środku w punkcie O leży punkt C  (zobacz rysunek). Odcinek AB  jest średnicą 
+tego okręgu. Zaznaczony na rysunku kąt środkowy α  ma miarę 
+ 
+ 
+A. 116°  B. 114°  C. 112°  D. 110°  
+ 
+A 
+C
+  
+α 
+O
+B 
+56°  
+
+===== PDF PAGE 9 =====
+ 
+Strona 9 z 26 MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PDF PAGE 10 =====
+ 
+Strona 10 z 26 MMA_1P 
+ 
+Zadanie 16. (0–1) 
+W trójk ącie ABC punkt D le ży na boku BC, a punkt E le ży na boku AB. Odcinek DE jest 
+równoległy do boku AC, a ponadto 10BD = , 12BC =  i 24AC =  (zobacz rysunek).   
+ 
+          
+ 
+ 
+ 
+ 
+ 
+ 
+Długość odcinka 
+DE jest równa 
+ 
+A. 22 B. 20 C. 12 D. 11 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Zadanie 17. (0–1) 
+Obwód trójkąta ABC, przedstawionego na rysunku, jest równy  
+ 
+A. 33 2 a +
+  
+B. 22 2 a +
+ 
+C. ()33 a+    
+D. ()22 a+  
+ 
+ 
+ 
+B 
+A C 
+D E 
+10 
+24 
+2 
+A 
+C 
+B 
+30°    
+a 
+
+===== PDF PAGE 11 =====
+ 
+Strona 11 z 26 MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PDF PAGE 12 =====
+ 
+Strona 12 z 26 MMA_1P 
+Zadanie 18. (0–1) 
+Na rysunku przedstawiona jest prosta k, przechodz ąca przez punkt ()2, 3A =−  i przez 
+początek układu współrzędnych, oraz zaznaczony jest kąt α nachylenia tej prostej do osi Ox.  
+ 
+- 5 - 4 - 3 - 2 - 1 12345
+-4
+-3
+-2
+-1
+1
+2
+3
+4
+5
+x
+y
+0
+α
+k
+A
+ 
+Zatem   
+A. 2tg 3α =−  B. 3tg 2α =−  C. 2tg 3α =  D. 3tg 2α =  
+ 
+ 
+ 
+ 
+Zadanie 19. (0–1) 
+Na p łaszczyźnie z uk ładem wspó łrzędnych proste k i l przecinaj ą si ę pod k ątem prostym 
+w punkcie () 2,4A =− .  Prosta k jest okre ślona równaniem 17
+42yx=− + .  Zatem prost ą l 
+opisuje równanie 
+A. 17
+42yx=+  B. 17
+42yx=− −  C. 41 2yx=−  D. 41 2yx=+  
+ 
+ 
+ 
+ 
+Zadanie 20. (0–1) 
+Dany jest okr ąg o środku ()2,3S =  i promieniu 5r = . Który z podanych punktów le ży na 
+tym okręgu? 
+A. () 1, 7A =−  B. ()2, 3B =−  C. ()3, 2C =  D. ()5, 3D =  
+ 
+ 
+ 
+ 
+Zadanie 21. (0–1) 
+Pole powierzchni ca łkowitej graniastos łupa prawid łowego czworok ątnego, w którym 
+wysokość jest 3 razy d łuższa od kraw ędzi podstawy, jest równe 140. Zatem kraw ędź 
+podstawy tego graniastosłupa jest równa 
+A. 10  B. 31 0  C. 42  D. 34 2  
+
+===== PDF PAGE 13 =====
+ 
+Strona 13 z 26 MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PDF PAGE 14 =====
+ 
+Strona 14 z 26 MMA_1P 
+Zadanie 22. (0–1) 
+Promień AS podstawy walca jest równy wysoko ści OS tego walca. Sinus k ąta OAS  (zobacz 
+rysunek) jest równy  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+A. 
+3
+2  B. 2
+2  C. 1
+2  D. 1 
+ 
+ 
+ 
+ 
+ 
+Zadanie 23. (0–1) 
+Dany jest stożek o wysokości 4  i średnicy podstawy 12. Objętość tego stożka jest równa 
+A. 576π  B. 192π  C. 144π  D. 48π  
+ 
+ 
+ 
+ 
+ 
+Zadanie 24. (0–1) 
+Średnia arytmetyczna ośmiu liczb: 3, 5, 7, 9, x, 15, 17, 19 jest równa 11. Wtedy 
+A. 1x =  B. 2x =  C. 11x =  D. 13x =  
+ 
+ 
+ 
+ 
+ 
+Zadanie 25. (0–1) 
+Ze zbioru dwudziestu czterech kolejnych liczb naturalnych od 1 do 24 losujemy jedn ą liczbę. 
+Niech A oznacza zdarzenie, że wylosowana liczba b ędzie dzielnikiem liczby 24. Wtedy 
+prawdopodobieństwo zdarzenia A jest równe
+ 
+ 
+A. 1
+4  B. 1
+3  C. 1
+8  D.  1
+6  
+ 
+A
+O
+S
+
+===== PDF PAGE 15 =====
+ 
+Strona 15 z 26 MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PDF PAGE 16 =====
+ 
+Strona 16 z 26 MMA_1P 
+Zadanie 26. (0–2)  
+Rozwiąż nierówność 287 2 0xx −≤ . 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Odpowiedź: ................................................................................................................................... . 
+
+===== PDF PAGE 17 =====
+ 
+Strona 17 z 26 MMA_1P 
+Zadanie 27. (0–2) 
+Wykaż, że liczba 2017 2018 2019 20204444+++  jest podzielna przez 17. 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 26. 27. 
+Maks. liczba pkt 2 2 
+Uzyskana liczba pkt   
+
+===== PDF PAGE 18 =====
+ 
+Strona 18 z 26 MMA_1P 
+Zadanie 28. (0–2) 
+Dane s ą dwa okr ęgi o środkach w punktach P  i R , styczne zewn ętrznie w punkcie C. 
+Prosta AB jest styczna do obu okr ęgów odpowiednio w punktach A i B oraz APC α=  
+i ABC β=  (zobacz rysunek). Wykaż, że 180 2α β=° − . 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+A  
+P  
+Rα  
+β  
+C  
+B  
+
+
+
+
+===== PDF PAGE 19 =====
+ 
+Strona 19 z 26 MMA_1P 
+Zadanie 29. (0–4) 
+Funkcja kwadratowa f jest okre ślona dla wszystkich liczb rzeczywistych x wzorem 
+() 2f xa xb x c=+ + . Najwi ększa warto ść funkcji f  jest równa 6 oraz () ( ) 360 2ff −= = . 
+Oblicz wartość współczynnika a.  
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Odpowiedź: ................................................................................................................................... . 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 28. 29. 
+Maks. liczba pkt 2 4 
+Uzyskana liczba pkt   
+ 
+
+===== PDF PAGE 20 =====
+ 
+Strona 20 z 26 MMA_1P 
+ 
+Zadanie 30. (0–2) 
+Przeciwprostokątna trójk ąta prostok ątnego ma d ługość 26 cm, a jedna z przyprostok ątnych 
+jest o 14 cm dłuższa od drugiej. Oblicz obwód tego trójkąta. 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Odpowiedź: ................................................................................................................................... . 
+
+===== PDF PAGE 21 =====
+ 
+Strona 21 z 26 MMA_1P 
+Zadanie 31. (0–2) 
+W ci ągu arytmetycznym () na , okre ślonym dla 1n ≥ , dane s ą: wyraz 1 8a =  i suma trzech 
+początkowych wyrazów tego ciągu 3 33S = . Oblicz różnicę 16 13aa − . 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Odpowiedź: ................................................................................................................................... . 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 30. 31. 
+Maks. liczba pkt 2 2 
+Uzyskana liczba pkt   
+ 
+
+===== PDF PAGE 22 =====
+ 
+Strona 22 z 26 MMA_1P 
+Zadanie 32. (0–5) 
+Dane są punkty () 4, 0A =−  i ()2,9M =  oraz prosta k o równaniu 2 10yx=− + . Wierzchołek 
+B trójkąta ABC to punkt przeci ęcia prostej k z osi ą Ox układu współrzędnych, a wierzcho łek 
+C jest punktem przecięcia prostej k z prostą AM. Oblicz pole trójkąta ABC. 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Odpowiedź: ................................................................................................................................... . 
+
+===== PDF PAGE 23 =====
+ 
+Strona 23 z 26 MMA_1P 
+Zadanie 33. (0–2) 
+Ze zbioru wszystkich liczb natura lnych dwucyfrowych losujemy jedn ą liczb ę. Oblicz 
+prawdopodobieństwo zdarzenia, że wylosujemy liczb ę, która jest równocze śnie mniejsza od 
+40 i podzielna przez 3. Wynik zapisz w postaci ułamka zwykłego nieskracalnego. 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Odpowiedź: ................................................................................................................................... . 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 32. 33. 
+Maks. liczba pkt 5 2 
+Uzyskana liczba pkt   
+
+===== PDF PAGE 24 =====
+ 
+Strona 24 z 26 MMA_1P 
+Zadanie 34. (0–4) 
+W ostros łupie prawid łowym trójk ątnym wysoko ść ściany bocznej prostopad ła do kraw ędzi 
+podstawy ostros łupa jest równa 53
+4 , a pole powierzchni bocznej tego ostros łupa jest 
+równe 15 3
+4 . Oblicz objętość tego ostrosłupa. 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PDF PAGE 25 =====
+ 
+Strona 25 z 26 MMA_1P 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Odpowiedź: ................................................................................................................................... . 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 34. 
+Maks. liczba pkt 4 
+Uzyskana liczba pkt  
+
+===== PDF PAGE 26 =====
+ 
+Strona 26 z 26 MMA_1P 
+BRUDNOPIS (nie podlega ocenie) 
+ 
+ 

@@ -59,4 +59,4 @@ Suma punktów: **46**. Liczba oficjalnych zadań: **31**. Liczba jednostek post�
 
 Grupa cke-2023-main-basic-exam ma w Content/provenance.json status approved. Rozszerzenie deklaracji właściciela z 1 września 2026 r. pozwala umieścić tę transkrypcję w publicznym wydaniu wyłącznie jako integralną część Abiturii.
 
-Osiem diagramów odtwarza zależności matematyczne jako deterministyczne prymitywy Avalonia. Nie zawierają rastrów PDF. Katalog `runtime-vector-diagrams` ma status `approved` i obejmuje wszystkie 195 aktualnych definicji na podstawie rozszerzenia z 1 września 2026 r.
+Osiem diagramów odtwarza zależności matematyczne jako deterministyczne prymitywy Avalonia. Nie zawierają rastrów PDF. Katalog `runtime-vector-diagrams` zawiera 226 definicji, ale ma obecnie status `blocked`, ponieważ obejmuje też figury pochodne z arkuszy 2017 i 2016 nieobjętych deklaracją z 1 września 2026 r. Status źródeł tego arkusza pozostaje `approved`.

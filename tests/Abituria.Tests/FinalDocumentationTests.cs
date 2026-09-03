@@ -120,7 +120,7 @@ public sealed class FinalDocumentationTests
         Assert.Contains("Publiczny GitHub Release `0.9.3` pozostaje odrębnym działaniem", requirements, StringComparison.Ordinal);
 
         var provenance = File.ReadAllText(Absolute("Content/provenance.json"));
-        Assert.Contains("\"releaseEligible\": true", provenance, StringComparison.Ordinal);
+        Assert.Contains("\"releaseEligible\": false", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2023-main-basic-exam\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2026-main-basic-exam\"", provenance, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-2026-main-extended-exam\"", provenance, StringComparison.Ordinal);

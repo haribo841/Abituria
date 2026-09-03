@@ -174,7 +174,7 @@ public static class ReleaseSmokeTestRunner
             content.MathCourse.Requirements.Count != 119 ||
             content.MathCourse.Lessons.SelectMany(lesson => lesson.WorkedExamples).Count() != 238 ||
             content.CourseExercises.Exercises.Count != 357 ||
-            content.Exams.Count != 26 ||
+            content.Exams.Count != 32 ||
             content.GetExam("matura-maj-2026-podstawowa").Exercises.Count != 37 ||
             content.GetExam("matura-maj-2026-rozszerzona").Exercises.Count != 13 ||
             content.GetExam("matura-maj-2025-podstawowa").Exercises.Count != 35 ||
@@ -201,6 +201,12 @@ public static class ReleaseSmokeTestRunner
             content.GetExam("matura-maj-2018-podstawowa").Exercises.Count != 34 ||
             content.GetExam("matura-maj-2018-rozszerzona").Exercises.Count != 15 ||
             content.GetExam("matura-poprawkowa-2018-podstawowa").Exercises.Count != 34 ||
+            content.GetExam("matura-maj-2017-podstawowa").Exercises.Count != 34 ||
+            content.GetExam("matura-maj-2017-rozszerzona").Exercises.Count != 15 ||
+            content.GetExam("matura-poprawkowa-2017-podstawowa").Exercises.Count != 34 ||
+            content.GetExam("matura-maj-2016-podstawowa").Exercises.Count != 34 ||
+            content.GetExam("matura-maj-2016-rozszerzona").Exercises.Count != 16 ||
+            content.GetExam("matura-poprawkowa-2016-podstawowa").Exercises.Count != 34 ||
             content.ExamTopics.Count != 17 ||
             content.UiCopy.Entries.Count == 0)
         {
@@ -235,6 +241,12 @@ public static class ReleaseSmokeTestRunner
             !content.GetExam("matura-maj-2018-podstawowa").Exercises.Any(exercise => exercise.Id == "mm18-p0-z34") ||
             !content.GetExam("matura-maj-2018-rozszerzona").Exercises.Any(exercise => exercise.Id == "mm18-r0-z15") ||
             !content.GetExam("matura-poprawkowa-2018-podstawowa").Exercises.Any(exercise => exercise.Id == "mm18-p0p-z34") ||
+            !content.GetExam("matura-maj-2017-podstawowa").Exercises.Any(exercise => exercise.Id == "mm17-p0-z34") ||
+            !content.GetExam("matura-maj-2017-rozszerzona").Exercises.Any(exercise => exercise.Id == "mm17-r0-z15") ||
+            !content.GetExam("matura-poprawkowa-2017-podstawowa").Exercises.Any(exercise => exercise.Id == "mm17-p0p-z34") ||
+            !content.GetExam("matura-maj-2016-podstawowa").Exercises.Any(exercise => exercise.Id == "mm16-p0-z34") ||
+            !content.GetExam("matura-maj-2016-rozszerzona").Exercises.Any(exercise => exercise.Id == "mm16-r0-z16") ||
+            !content.GetExam("matura-poprawkowa-2016-podstawowa").Exercises.Any(exercise => exercise.Id == "mm16-p0p-z34") ||
             !content.Exam.Exercises.Any(exercise => exercise.Id == "mp21-z9"))
         {
             throw new InvalidDataException("Nie załadowano reprezentatywnych materiałów wydania.");
@@ -243,10 +255,23 @@ public static class ReleaseSmokeTestRunner
 
     private static void EnsureApplicationDiagramsAreAvailable(ContentRepository content)
     {
-        if (content.Diagrams.Diagrams.Count != 195)
+        if (content.Diagrams.Diagrams.Count != 226)
             throw new InvalidDataException("Katalog diagramów aplikacji jest niekompletny.");
 
-        foreach (var diagramId in new[] { "formula-w9a", "exam-mp21-z9", "exam-em21-p0-z24", "exam-em21-r0-z14", "exam-mm20-p0-z34", "exam-mm20-r0-z15", "exam-mm20-p0p-z32", "exam-mm19-p0-z34", "exam-mm19-r0-z15", "exam-mm19-p0p-z34", "exam-mm18-p0-z34", "exam-mm18-r0-z15", "exam-mm18-p0p-z34", "exam-em22-p0-z26", "exam-em22-r0-z13", "exam-em22-p0p-z35", "exam-mm23-p0-z29", "exam-mm23-p0p-z24", "exam-mm23-r0-z13", "exam-mm24-p0-z14", "exam-mm24-r0-z09", "exam-mm24-p0p-z20", "exam-mm25-z06", "exam-mm25-p0p-z26", "exam-mm26-z12", "exam-mm26-r0-z11", "course-right-triangle" })
+        var requiredDiagramIds = new[]
+        {
+            "formula-w9a", "exam-mp21-z9", "exam-em21-p0-z24", "exam-em21-r0-z14",
+            "exam-mm20-p0-z34", "exam-mm20-r0-z15", "exam-mm20-p0p-z32", "exam-mm19-p0-z34",
+            "exam-mm19-r0-z15", "exam-mm19-p0p-z34", "exam-mm18-p0-z34", "exam-mm18-r0-z15",
+            "exam-mm18-p0p-z34", "exam-mm17-p0-z22", "exam-mm17-r0-z09", "exam-mm17-p0p-z21",
+            "exam-mm16-p0-z29", "exam-mm16-r0-z16", "exam-mm16-p0p-z33", "exam-em22-p0-z26",
+            "exam-em22-r0-z13", "exam-em22-p0p-z35", "exam-mm23-p0-z29", "exam-mm23-p0p-z24",
+            "exam-mm23-r0-z13", "exam-mm24-p0-z14", "exam-mm24-r0-z09", "exam-mm24-p0p-z20",
+            "exam-mm25-z06", "exam-mm25-p0p-z26", "exam-mm26-z12", "exam-mm26-r0-z11",
+            "course-right-triangle"
+        };
+
+        foreach (var diagramId in requiredDiagramIds)
             _ = content.Diagrams.GetRequired(diagramId);
     }
 

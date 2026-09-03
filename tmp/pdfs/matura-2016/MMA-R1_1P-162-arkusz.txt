@@ -1,0 +1,1171 @@
+
+
+===== PAGE 1 =====
+ 
+ 
+Arkusz zawiera informacje  
+prawnie chronione do momentu 
+rozpoczęcia egzaminu. 
+MMA
+ 2016 
+Układ graficzny 
+© CKE 2015 
+MMA
+ 2016 
+ 
+UZUPEŁNIA ZDAJĄCY  
+ 
+        KOD                                     PESEL 
+                 
+ 
+ 
+  
+ dysleksja 
+ 
+EGZAMIN MATURALNY Z MATEMATYKI 
+ 
+POZIOM ROZSZERZONY 
+ 
+ 
+DATA: 9 maja 2016 r. 
+GODZINA ROZPOCZĘCIA: 9:00 
+CZAS PRACY: 180 minut 
+LICZBA PUNKTÓW DO UZYSKANIA: 50 
+ 
+Instrukcja dla zdającego 
+ 
+1. Sprawdź, czy arkusz egzaminacyjny zawiera 22 strony (zadania 1–16). 
+Ewentualny brak zgłoś przewodniczącemu zespołu nadzorującego 
+egzamin. 
+2. Rozwiązania zadań i odpowiedzi wpisuj w miejscu na to przeznaczonym. 
+3. Odpowiedzi do zadań zamkniętych (1–5) zaznacz na karcie odpowiedzi 
+w części karty przeznaczonej dla zdającego. Zamaluj  pola do tego 
+przeznaczone. Błędne zaznaczenie otocz kółkiem  i zaznacz właściwe. 
+4. W zadaniu 6. wpisz odpowiednie cyfry w kratki pod treścią zadania. 
+5. Pamiętaj, że pominięcie argumentacji lub istotnych obliczeń  
+w rozwiązaniu zadania otwartego (7–16) może spowodować, że za to 
+rozwiązanie nie otrzymasz pełnej liczby punktów. 
+6. Pisz czytelnie i używaj tylko długopisu lub pióra z czarnym tuszem lub 
+atramentem. 
+7. Nie używaj korektora, a błędne zapisy wyraźnie przekreśl. 
+8. Pamiętaj, że zapisy w brudnopisie nie będą oceniane. 
+9. Możesz korzystać z zestawu wzorów matematycznych, cyrkla i linijki oraz 
+kalkulatora prostego. 
+10. Na tej stronie oraz na karcie odpowiedzi wpisz swój numer PESEL  
+i przyklej naklejkę z kodem. 
+11. Nie wpisuj żadnych znaków w części przeznaczonej dla egzaminatora. 
+MMA-R1_1P-162 
+ 
+ 
+miejsce 
+na naklejkę 
+
+===== PAGE 2 =====
+ 
+Strona 2 z 22 MMA_1R 
+W zadaniach od 1. do 5. wybierz i zaznacz na karcie odpowiedzi poprawną odpowiedź. 
+ 
+ 
+Zadanie 1. (0–1) 
+W rozwinięciu wyrażenia ()
+3
+23 4x y+  współczynnik przy iloczynie 2xy  jest równy 
+  
+A. 332  B. 48  C. 396  D. 144 
+ 
+ 
+Zadanie 2. (0–1) 
+Wielomian 32() 6 3 5Wx x x x p=+− +  jest podzielny przez dwumian 1x −  dla p równego 
+ 
+A. 4  B. 2−  C. 2 D. 4−  
+ 
+ 
+Zadanie 3. (0–1) 
+Na rysunku przedstawiono fragment  wykresu funkcji homograficznej )(xfy = , której 
+dziedziną jest zbiór () ( ),3 3 ,D =− ∞ ∪ + ∞ . 
+- 2 - 1 1234567
+-2
+-1
+1
+2
+3
+4
+5
+6
+7
+x
+y
+0
+ 
+Równanie ()f xp =  z niewiadomą x ma dokładnie jedno rozwiązanie  
+ 
+A. w dwóch przypadkach: 0=p  lub 3 =p .  B. w dwóch przypadkach: 0 =p  lub 2 =p . 
+C. tylko wtedy, gdy 3p = . D. tylko wtedy, gdy 2p = . 
+ 
+ 
+Zadanie 4. (0–1) 
+Funkcja () 2
+31
+4
+xfx x
+−= +  jest określona dla każdej liczby rzeczywistej x. Pochodna tej funkcji 
+jest określona wzorem 
+ 
+A. ()
+()
+2
+22
+32 1 2
+4
+xxfx
+x
+−+ +′ =
++
+  B.  ()
+()
+2
+22
+92 1 2
+4
+xxfx
+x
+−+ −′ =
++
+  
+C. ()
+()
+2
+22
+32 1 2
+4
+xxfx
+x
+−−′ =
++
+  D. ()
+()
+2
+22
+92 1 2
+4
+xxfx
+x
+−+′ =
++
+ 
+ 
+
+===== PAGE 3 =====
+ 
+Strona 3 z 22 MMA_1R 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PAGE 4 =====
+ 
+Strona 4 z 22 MMA_1R 
+ 
+Zadanie 5. (0–1) 
+Granica ()
+32
+6
+4 8lim 54 5n
+pn n
+n→∞
++
+=−−  . Wynika stąd, że 
+ 
+A. 8p =−  B. 4p =   C. 2p =   D. 2p =−  
+ 
+Zadanie 6. (0–2) 
+Wśród 10 tysi ęcy mieszkańców pewnego miasta przeprowadzono sonda ż dotyczący budowy 
+przedszkola publicznego. Wyniki sondażu przedstawiono w tabeli. 
+Badane grupy Liczba osób popierających 
+budowę przedszkola 
+Liczba osób niepopierających 
+budowy przedszkola 
+Kobiety 5140  1860  
+Mężczyźni 2260  740  
+ 
+Oblicz prawdopodobie ństwo zdarzenia polegaj ącego na tym, że losowo wybrana osoba, 
+spośród ankietowanych, popiera budow ę przedszkola, je śli wiadomo, że jest m ężczyzną. 
+Zakoduj trzy pierwsze cyfry po przecinku niesko ńczonego rozwini ęcia dziesi ętnego 
+otrzymanego wyniku.  
+ 
+ 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PAGE 5 =====
+ 
+Strona 5 z 22 MMA_1R 
+Zadanie 7. (0–2) 
+Dany jest ciąg geometryczny () na  określony wzorem 1
+2 371
+n
+na x
+=  −
+ dla 1n ≥ . Wszystkie 
+wyrazy tego ci ągu s ą dodatnie. Wyznacz najmniejsz ą liczb ę ca łkowitą x, dla której 
+nieskończony szereg 123 ...aaa+++   jest zbieżny. 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+Wypełnia 
+egzaminator
+Nr zadania 6. 7. 
+Maks. liczba pkt 2 2 
+Uzyskana liczba pkt   
+
+===== PAGE 6 =====
+ 
+Strona 6 z 22 MMA_1R 
+ 
+ 
+Zadanie 8. (0–3) 
+Wykaż, że dla dowolnych dodatnich liczb rzeczywistych x i y takich, że 22 2xy += , 
+prawdziwa jest nierówność 2xy+≤ . 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+
+===== PAGE 7 =====
+ 
+Strona 7 z 22 MMA_1R 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 8. 
+Maks. liczba pkt 3 
+Uzyskana liczba pkt  
+
+===== PAGE 8 =====
+ 
+Strona 8 z 22 MMA_1R 
+ 
+Zadanie 9. (0–3) 
+Dany jest prostok ąt ABCD. Okr ąg wpisany w trójk ąt BCD jest styczny do przek ątnej BD 
+w punkcie N. Okrąg wpisany w trójkąt ABD jest styczny do boku AD w punkcie M, a środek S 
+tego okręgu leży na odcinku MN, jak na rysunku. 
+  
+Wykaż, że MNA D= . 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+A B
+CD 
+SM N
+
+===== PAGE 9 =====
+ 
+Strona 9 z 22 MMA_1R 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 9. 
+Maks. liczba pkt 3 
+Uzyskana liczba pkt  
+
+===== PAGE 10 =====
+ 
+Strona 10 z 22 MMA_1R 
+ 
+Zadanie 10. (0–4) 
+Wyznacz wszystkie warto ści parametru a , dla których wykresy funkcji f i g, okre ślonych 
+wzorami () 2fx x =−  oraz () 5gx a x=− , przecinaj ą si ę w punkcie o obu wspó łrzędnych 
+dodatnich. 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+
+===== PAGE 11 =====
+ 
+Strona 11 z 22 MMA_1R 
+Zadanie 11. (0–4) 
+Rozwiąż nierówność 2
+2cos 3 0cos
+x
+x
+− <  w przedziale 0, 2π . 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+Wypełnia 
+egzaminator
+Nr zadania 10. 11. 
+Maks. liczba pkt 4 4 
+Uzyskana liczba pkt   
+
+===== PAGE 12 =====
+ 
+Strona 12 z 22 MMA_1R 
+Zadanie 12. (0–6) 
+Dany jest trójmian kwadratowy () ( )
+2 21 6 1fx x m x m=+ + + + . Wyznacz wszystkie 
+rzeczywiste wartości parametru m, dla których ten trójmian ma dwa ró żne pierwiastki 1x , 2x  
+tego samego znaku, spełniające warunek 12 3xx−< . 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PAGE 13 =====
+ 
+Strona 13 z 22 MMA_1R 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+Wypełnia 
+egzaminator
+Nr zadania 12. 
+Maks. liczba pkt 6 
+Uzyskana liczba pkt  
+
+===== PAGE 14 =====
+ 
+Strona 14 z 22 MMA_1R 
+Zadanie 13. (0–5) 
+Punkty ()30, 32=A  i ()0, 8=B  są sąsiednimi wierzchołkami czworokąta ABCD wpisanego 
+w okrąg. Prosta o równaniu 20xy−+=  jest jedyn ą osią symetrii tego czworok ąta i zawiera 
+przekątną AC . Oblicz współrzędne wierzchołków C i D tego czworokąta. 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+
+===== PAGE 15 =====
+ 
+Strona 15 z 22 MMA_1R 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+Wypełnia 
+egzaminator
+Nr zadania 13. 
+Maks. liczba pkt 5 
+Uzyskana liczba pkt  
+
+===== PAGE 16 =====
+ 
+Strona 16 z 22 MMA_1R 
+Zadanie 14. (0–3) 
+Rozpatrujemy wszystkie liczby naturalne dziesi ęciocyfrowe, w zapisie których mog ą 
+występować wy łącznie cyfry 1, 2, 3, przy czym cyfra 1 wyst ępuje dok ładnie trzy razy. 
+Uzasadnij, że takich liczb jest 15 360. 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PAGE 17 =====
+ 
+Strona 17 z 22 MMA_1R 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+Wypełnia 
+egzaminator
+Nr zadania 14. 
+Maks. liczba pkt 3 
+Uzyskana liczba pkt  
+
+===== PAGE 18 =====
+ 
+Strona 18 z 22 MMA_1R 
+Zadanie 15. (0–6) 
+W ostrosłupie prawidłowym czworokątnym ABCDS o podstawie ABCD wysokość jest równa 5, 
+a kąt między sąsiednimi ścianami bocznymi ostros łupa ma miar ę 120° . Oblicz obj ętość tego 
+ostrosłupa. 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+
+===== PAGE 19 =====
+ 
+Strona 19 z 22 MMA_1R 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+Wypełnia 
+egzaminator
+Nr zadania 15. 
+Maks. liczba pkt 6 
+Uzyskana liczba pkt  
+
+===== PAGE 20 =====
+ 
+Strona 20 z 22 MMA_1R 
+Zadanie 16. (0–7) 
+Parabola o równaniu 21
+22yx=−  przecina o ś Ox uk ładu wspó łrzędnych w punktach 
+() 2, 0A =−  i ()2, 0B = . Rozpatrujemy wszystki e trapezy równoramienne ABCD, których 
+dłuższą podstawą jest odcinek AB, a ko ńce C i D krótszej podstawy leżą na paraboli (zobacz 
+rysunek).  
+ 
+-2 -1 1 2
+1
+2
+x
+y
+0
+ A  B
+ C D
+ 
+ 
+Wyznacz pole trapezu ABCD w zależności od pierwszej wspó łrzędnej wierzchołka C. Oblicz 
+współrzędne wierzchołka C tego z rozpatrywanych trapezów, którego pole jest największe. 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PAGE 21 =====
+ 
+Strona 21 z 22 MMA_1R 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+Wypełnia 
+egzaminator
+Nr zadania 16. 
+Maks. liczba pkt 7 
+Uzyskana liczba pkt  
+
+===== PAGE 22 =====
+ 
+Strona 22 z 22 MMA_1R 
+BRUDNOPIS (nie podlega ocenie) 
+ 
+ 

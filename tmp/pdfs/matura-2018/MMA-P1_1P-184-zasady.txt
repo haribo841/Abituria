@@ -1,0 +1,1005 @@
+
+
+===== PAGE 1 =====
+
+ 
+ 
+ 
+ 
+ 
+ 
+EGZAMIN MATURALNY 
+W ROKU SZKOLNYM 2017/2018 
+ 
+FORMUŁA OD 2015 
+„NOWA MATURA” 
+i 
+FORMUŁA DO 2014 
+„STARA MATURA” 
+ 
+ 
+MATEMATYKA 
+POZIOM PODSTAWOWY 
+ 
+ 
+ 
+ZASADY OCENIANIA ROZWIĄZAŃ ZADAŃ 
+ARKUSZ MMA-P1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SIERPIEŃ 2018 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 2 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 2 z 20 
+ 
+ 
+Egzaminatorze! 
+ 
+• Oceniaj prace zdających uczciwie i z zaangażowaniem. 
+• Stosuj przyj ęte zasady oceniania w sposób obiektywny . Pami ętaj, że ka żda 
+merytorycznie poprawna odpowied ź, spe łniająca warunki okre ślone w poleceniu, musi 
+zostać pozytywnie oceniona, nawet je żeli nie zosta ła przewidziana w przyk ładowych 
+odpowiedziach w zasadach oceniania. 
+• Konsultuj niejednoznaczne rozwi ązania zada ń z innymi egzaminatorami lub 
+przewodniczącym zespo łu egzaminatorów. W przypadku niemo żności osi ągnięcia 
+wspólnego stanowiska, rozstrzygajcie na korzyść zdającego. 
+• Przyznając punkty, nie kieruj się emocjami. 
+• Informuj przewodnicz ącego o wszystkich nieprawid łowościach zaistnia łych w trakcie 
+oceniania, w tym podejrzeń o niesamodzielność w pisaniu pracy. 
+ 
+ 
+ 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 3 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 3 z 20 
+ 
+Klucz punktowania zadań zamkniętych 
+ 
+Nr 
+zad. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 
+Odp. B A A D B B C C D D A D A B C A B C D A D D B C C 
+ 
+Schemat oceniania zadań otwartych 
+ 
+Zadanie 26. (0–2) 
+Rozwiąż nierówność 2 61 6 0xx +−< . 
+Przykładowe rozwiązanie 
+Rozwiązanie nierówności kwadratowej składa się z dwóch etapów.  
+ 
+Pierwszy etap to wyznaczenie pierwiastków trójmianu kwadratowego 2 61 6+−xx . 
+ 
+Drugi etap to zapisanie zbioru rozwiązań nierówności kwadratowej.  
+ 
+Pierwszy etap rozwiązania może zostać zrealizowany następująco: 
+• obliczamy pierwiastki trójmianu kwadratowego 2 61 6+−xx  
+o obliczamy wyróżnik tego trójmianu:  
+()36 4 1 16 100Δ= − ⋅ ⋅ − =   i stąd 1
+61 0
+2 8−−== −x  oraz 2
+61 0
+2 2−+==x  
+albo 
+o stosujemy wzory Viète’a: 
+12 16⋅= −xx  oraz 12 6+= −xx , stąd 1 8=−x  oraz 2 2=x . 
+Drugi etap rozwiązania: 
+Podajemy zbiór rozwiązań nierówności: () 8, 2−  lub () 8, 2∈−x . 
+ 
+Schemat punktowania 
+Zdający otrzymuje  .............................................................................................................  1 p. 
+gdy: 
+• zrealizuje pierwszy etap rozwi ązania i na tym zako ńczy lub b łędnie zapisze zbiór 
+rozwiązań nierówności, np. 
+ 
+o obliczy lub poda pierwiastki trójmianu kwadratowego 1 8=−x  i 2 2=x  
+i na tym zakończy lub błędnie zapisze zbiór rozwiązań nierówności, 
+ 
+o zaznaczy na wykresie miejsca zerowe funkcji ()
+2 61 6=+−fx x x  i na tym 
+zakończy lub błędnie zapisze zbiór rozwiązań nierówności 
+albo  
+• realizując pierwszy etap pope łni b łędy, ale obliczy dwa ró żne pierwiastki trójmianu 
+kwadratowego i konsekwentnie do pope łnionych b łędów wyznaczy zbiór rozwi ązań 
+nierówności. 
+Zdający otrzymuje ………………………………………………………………………. 2 p. 
+gdy:  
+• poda zbiór rozwiązań nierówności: () 8, 2−  lub () 8, 2∈−x , lub 82>− ∧ <xx   
+albo 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 4 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 4 z 20 
+ 
+• poda zbiór rozwi ązań nierówno ści w postaci graficznej  z poprawnie zaznaczonymi 
+końcami przedziałów  
+ 
+ 
+ 
+ 
+ 
+Uwagi 
+1. Jeżeli zdający wyznacza pierwiastki trójmianu kwadratowego w przypadku, gdy obliczony 
+wyróżnik Δ jest ujemny, to otrzymuje 0 punktów za całe rozwiązanie. 
+2. Jeżeli zdaj ący podaje pierwiastki bez zwi ązku z trójmianem kwadra towym z zadania, to 
+oznacza, że nie podj ął realizacji 1. etapu rozwi ązania i w konsekwencji otrzymuje 
+0 punktów za całe rozwiązanie. 
+3. Akceptujemy zapisanie odpowiedzi w postaci: 2<x  lub 8>−x , 2<x  oraz 8>−x , itp.   
+4. Jeżeli zdaj ący poprawnie obliczy pierwiastki trójmianu 1 8=−x , 2 2=x  i b łędnie zapisze 
+odpowiedź, np. ()8, 2∈x , pope łniając tym samym b łąd przy przepisywaniu jednego 
+z pierwiastków, to otrzymuje 2 punkty. 
+5. Jeżeli zdający po rozwi ązaniu nierówności zapisuje w odpowiedzi, jako zbiór rozwi ązań, 
+zbiór, zawieraj ący elementy nienale żące do rzeczywistego zbioru rozwi ązań lub zbiór 
+pusty, to otrzymuje 1 punkt . Zapisanie w miejscu przeznaczonym na odpowied ź 
+pierwiastków trójmianu kwadratowego nie jest traktowane jak opis zbioru rozwiązań. 
+ 
+ 
+Kryteria uwzględniające specyficzne trudności w uczeniu się matematyki 
+Jeśli zdający pomyli porządek liczb na osi liczbowej, np. zapisze zbiór rozwiązań nierówności 
+w postaci ()2, 8∈−x  lub ()2, 8− , to przyznajemy 2 punkty. 
+ 
+ 
+ 
+Zadanie 27. (0–2) 
+Rozwiąż równanie () ()
+32 27 16 0+− =xx . 
+Przykładowe rozwiązanie 
+Lewa strona równania jest  iloczynem dwóch czynników 3 27+x  oraz 2 16−x . Zatem iloczyn 
+ten jest równy 0, gdy co najmniej jede n z tych czynników jest równy 0, czyli 3 27 0+=x  lub 
+2 16 0−=x . 
+Rozwiązaniem równania 3 27 0+=x  jest 3 27 3=− = −x . 
+Równanie 2 16 0−=x  doprowadzamy do postaci iloczynowej () () 44 0−⋅+ =xx . 
+Przynajmniej jeden z czynników 4−x  lub 4+x  jest równy 0, czyli 4=x  lub 4=−x . 
+ 
+Wszystkie rozwiązania równania () ()
+32 27 16 0+− =xx ,  
+to 3=−x  lub 4=x , lub 4=−x .  
+ 
+Schemat punktowania 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+gdy: 
+• zapisze dwa równania 3 27 0+=x  i 2 16 0−=x   
+albo 
+x 8−  2
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 5 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 5 z 20 
+ 
+• wyznaczy poprawnie (lub poda) rozwiązania jednego z równań: 3 27 0+=x  lub 
+2 16 0−=x  
+i na tym zakończy lub dalej popełni błędy. 
+Zdający otrzymuje  .............................................................................................................. 2 p. 
+gdy wyznaczy wszystkie rozwiązania równania: 3=−x  lub 4=x , lub 4=−x . 
+ 
+Uwagi 
+1. Jeżeli zdaj ący poda wszystkie rozwi ązania równania, bez rachunków lub uzasadnienia, 
+to otrzymuje 2 punkty. 
+2. Jeżeli zdaj ący uzyska trafne rozwi ązania równania, ale w wyniku b łędnej metody, 
+to otrzymuje 0 punktów , o ile nie uzyska 1 punktu za zapisanie dwóch równa ń 
+3 27 0+=x  i 2 16 0−=x . 
+3. Jeżeli zdaj ący poprawnie wyznaczy pierwiastki wielomianu () ()
+32 27 16+−xx  i poda 
+niewłaściwą odpowiedź, np. { }43 4∈− − −x ,, , to otrzymuje 1 punkt. 
+ 
+ 
+ 
+Zadanie 28. (0–2)  
+W równoległoboku ABCD punkt E jest środkiem boku BC. Z wierzcho łka D poprowadzono 
+prostą przecinającą bok BC w punkcie E. Proste AB i DE przecinają się w punkcie F (zobacz 
+rysunek). Wykaż, że punkt B jest środkiem odcinka AF.  
+Przykładowe rozwiązania 
+I sposób (podobieństwo) 
+Rozpatrujemy trójkąty AFD i BFE. 
+Kąty DAF i EBF są odpowiadające i odcinki AD i BC są równoległe, więc DAF EBF= . 
+Tak samo wnioskujemy, że ADF BEF= . Ponadto k ąt przy wierzcho łku F jest k ątem 
+wspólnym w obu trójk ątach, wi ęc z cechy kkk podobie ństwa trójk ątów wnioskujemy, że 
+trójkąty AFD i BFE są podobne.  
+Stąd wynika proporcja  
+ADA F
+BE BF= ,   
+ale 11
+22BEB CA D== , gdyż punkt E jest środkiem boku BC. 
+Zatem 
+1
+2
+ADA F
+BFAD
+= , czyli 2AF BF= ,  
+co należało wykazać. 
+E 
+D C 
+B A F 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 6 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 6 z 20 
+ 
+II sposób (przystawanie) 
+Rozpatrujemy trójkąty BFE oraz CDE. 
+1. Kąty BEF i CED są wierzchołkowe, więc BEF CED= . 
+2. K ąty FBE i DCE s ą naprzemianleg łe i proste AB i CD s ą równoleg łe, wi ęc 
+FBE DCE=  
+3. Punkt E jest środkiem boku BC, więc BEE C= .   
+Stąd, na mocy cechy kbk przystawania trójk ątów wnioskujemy, że trójk ąty BFE i CDE są 
+przystające. Zatem BFC D= . 
+Ponieważ czworokąt ABCD jest równoległobokiem, więc AB CD= . Z ostatnich dwóch 
+równości wynika, że AB BF= , co oznacza, że punkt B jest środkiem odcinka AF.  
+To należało wykazać. 
+ 
+Schemat punktowania 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+gdy  
+• zapisze lub wykorzysta przystawanie trójkątów BFE oraz CDE  
+albo 
+• zauważy podobie ństwo trójk ątów AFD i BFE, zapisze proporcj ę, wynikaj ącą 
+z tego podobieństwa, np. ADA F
+BE BF=  
+i na tym poprzestanie lub dalej popełni błędy. 
+Zdający otrzymuje  ............................................................................................................ 2 p.  
+gdy przeprowadzi pełne rozumowanie. 
+ 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 7 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 7 z 20 
+ 
+ 
+ 
+ 
+ 
+Zadanie 29. (0–2)  
+Wykaż, że jeżeli a i b są liczbami rzeczywistymi dodatnimi, to () 11 4ab ab
+++ ≥
+. 
+Przykładowe rozwiązanie 
+Przekształcamy równoważnie wyrażenie () ()11 4a bab++ ≥  
+ i otrzymujemy  
+11 4ab ab+++ ≥ ,  
+22
+2ab
+ab
++ ≥ ,  
+22 2ab a b+≥ , 
+()
+2
+0ab−≥ . 
+Ta kończy dowód. 
+ 
+Schemat punktowania 
+Zdający otrzymuje ............................................................................................................... 1 p. 
+gdy poprawnie przekszta łci nierówno ść do postaci, w której liczby a i b wyst ępują jedynie 
+w wyrażeniach: 2a , 2b  i ab , np.: 
+22
+2ab
+ab
++ ≥  lub 22 2ab a b+≥ . 
+Zdający otrzymuje ............................................................................................................... 2 p. 
+gdy przeprowadzi pełne rozumowanie. 
+ 
+Uwagi 
+1. Jeżeli zdający zapisze nierówność w postaci równoważnej 2ab ab +≥  i na tym zakończy, 
+to otrzymuje 1 punkt.  
+2. Jeżeli zdający zapisze nierówność w postaci równoważnej 2ab ab +≥  i zapisze, że jest ona 
+prawdziwa dla dowolnych liczb dodatnich, to otrzymuje 2 punkty.  
+3. Jeżeli zdający zapisze nierówność w postaci równoważnej 22 2ab a b+≥  i zapisze, że jest 
+ona prawdziwa dla dowolnych liczb, to otrzymuje 2 punkty. 
+4. Jeżeli zdający przeprowadzi poprawne rozumowanie, które zakończy zapisaniem 
+nierówności ()
+2
+0ab−≥ , to otrzymuje 2 punkty. 
+5. Jeżeli zdający sprawdza prawdziwość nierówności jedynie dla wybranych wartości a i b, 
+to otrzymuje 0 punktów.  
+6. Jeżeli zdający w wyniku poprawnych przekształceń równoważnych otrzyma 
+nierówność ()
+2
+4ab a b+≥ , to otrzymuje 1 punkt. 
+7. Jeżeli zdający zapisze nierówność w postaci równoważnej 2ab a b+≥  i na tym 
+zakończy, to otrzymuje 1 punkt. Jeżeli zdający zapisze nierówność w postaci 
+równoważnej 2ab a b+≥  i dopisze komentarz o średnich, uzasadniający jej 
+prawdziwość dla dowolnych liczb dodatnich a, b, to otrzymuje 2 punkty. 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 8 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 8 z 20 
+ 
+ 
+ 
+Zadanie 30. (0–2)  
+Dziewiąty wyraz ci ągu arytmetycznego () na , okre ślonego dla 1n ≥ , jest równy 34, a suma 
+jego o śmiu pocz ątkowych wyrazów jest równa 110. Oblicz pierwszy wyraz i ró żnicę tego 
+ciągu. 
+Przykładowe rozwiązanie 
+Korzystamy ze wzoru na n-ty wyraz ciągu arytmetycznego i zapisujemy wzór na 9a : 
+91 (9 1)=+− ⋅aa r . 
+Korzystamy ze wzoru na sumę n początkowych wyrazów ciągu arytmetycznego i zapisujemy 
+wzór na 8S : 
+1
+8
+2( 8 1 ) 82
++− ⋅=⋅ arS . 
+Otrzymujemy układ równań 
+134 8=+ar  i 1110 8 28=+ ar . 
+Stąd otrzymujemy 
+1 2, 4,5=− =ar . 
+Schemat punktowania 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+gdy zapisze dwa równania z dwiema niewiadomymi 1a  i r wynikające z zastosowania 
+poprawnych wzorów na n-ty wyraz ciągu arytmetycznego i sumę n początkowych wyrazów 
+ciągu arytmetycznego: 
+np.: 134 8=+ar  i 127110 8 2
++=⋅ ar  
+i na tym zakończy lub dalej popełni błędy. 
+ 
+Zdający otrzymuje  .............................................................................................................. 2 p. 
+gdy obliczy pierwszy wyraz ciągu: 1 2a =−  i obliczy różnicę ciągu: 4,5r = . 
+ 
+Uwagi  
+1. Jeżeli zdający, stosując metodę prób i błędów, zapisze poprawny ciąg poprzez wypisanie 
+8 początkowych kolejnych wyrazów i ustali, że 1 2a =−  i 4,5r = , to otrzymuje 2 punkty. 
+2. Jeżeli zdający, stosując metodę prób i błędów, wypisze co najmniej trzy kolejne wyrazy 
+i ustali, że 1 2a =−  i 4,5r = , ale nie zapisze wszystkich 8 początkowych wyrazów ciągu, 
+to otrzymuje 1 punkt. 
+3. Jeżeli zdający zapisze tylko 1 2a =−  i 4,5r = , to otrzymuje 0 punktów. 
+4. Jeżeli zdający dodaje do sumy ośmiu początkowych wyrazów wyraz dziewiąty i zapisuje 
+właściwe równanie z niewiadomą 1a , to otrzymuje przynajmniej 1 punkt. 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 9 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 9 z 20 
+ 
+ 
+ 
+Zadanie 31. (0–2) 
+Punkty ()2, 4A = , ()0, 0B = , ()4, 2C =−  s ą wierzcho łkami trójk ąta ABC. Punkt D jest 
+środkiem boku AC tego trójkąta. Wyznacz równanie prostej BD. 
+ 
+Przykładowe rozwiązania 
+Punkt D jest środkiem odcinka AC, więc ze wzorów na współrzędne środka odcinka 
+otrzymujemy 
+() ()4(2 )24
+22 ,3 , 1D +−+==  . 
+Pozostaje wyznaczyć równanie prostej przechodzącej przez dwa punkty ()0, 0B =  i ()3, 1D = .  
+ 
+I sposób 
+Szukane równanie ma postać baxy += . Ponieważ punkty B i D leżą na tej prostej, więc  
+możemy zapisać układ równań: 
+31
+00 .
+ab
+ab
+⋅+ =
+ ⋅+ =
+ 
+Z drugiego równania mamy 0=b , a odejmując stronami otrzymujemy 13 =a , czyli 1
+3a = .  
+II sposób 
+Podstawmy współrzędne punktów ()3, 1D =  oraz ()0, 0B =  do równania prostej, 
+przechodzącej przez dane dwa punkty: 
+() () () () 0310301 =−−−−− xy . 
+Stąd () 0313 =−+−− xy , czyli 0 333 =−++− xy . Zatem 1
+3y x= . 
+III sposób 
+Możemy zaznaczyć w uk ładzie współrzędnych wierzchołki trójkąta i korzystaj ąc z punktów 
+kratowych ustali ć zale żność mi ędzy prost ą AC i prost ą do niej prostopad łą przechodz ącą 
+przez środek odcinka AC, np. tak, jak na rysunku.   
+ 
+1234
+-2
+-1
+1
+2
+3
+4
+x
+y A
+B
+C
+D
+ 
+ 
+Zauważamy wówczas, że szukana prosta ma równanie 1
+3y x= .  
+Schemat punktowania 
+Zdający otrzymuje ............................................................................................................... 1 p. 
+gdy  
+• wyznaczy lub poda współrzędne środka D odcinka AC: ()3, 1D =  
+albo 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 10 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 10 z 20 
+ 
+• zaznaczy w układzie współrzędnych wierzchołki trójkąta ABC i zaznaczy na rysunku 
+prostą BD oraz wyznaczy lub poda współczynnik kierunkowy prostej AC: 3− . 
+ 
+Zdający otrzymuje ............................................................................................................... 2 p. 
+gdy wyznaczy równanie prostej BD: 1
+3y x= .   
+Uwagi 
+1. Jeżeli zdający wyznaczy równanie prostej prostopadłej do prostej AC i przechodzącej 
+przez punkt B oraz zapisze (zaznaczy na rysunku), że trójkąt ABC jest równoramienny, to 
+otrzymuje 2 punkty.   
+2. Jeżeli zdający wyznaczy równanie prostej prostopadłej do prostej AC i przechodzącej 
+przez punkt B, ale nie zapisze (nie zaznaczy na rysunku), że trójkąt ABC jest 
+równoramienny, to otrzymuje 1 punkt. 
+3. Jeżeli zdający wyznacza równanie prostej prostopadłej do prostej AC i przechodzącej przez 
+punkt B i popełni przy tym błąd lub nie doprowadzi rozwiązania do końca, ale zapisze 
+(zaznaczy na rysunku), że trójkąt ABC jest równoramienny, to otrzymuje 1 punkt. 
+ 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 11 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 11 z 20 
+ 
+ 
+ 
+ 
+Zadanie 32. (0–5) 
+W ostros łupie prawid łowym trójk ątnym ABCS kraw ędź podstawy ma d ługość a. Pole 
+powierzchni bocznej tego ostros łupa jest dwa razy wi ększe od pola jego podstawy. Oblicz 
+cosinus kąta nachylenia krawędzi bocznej tego ostrosłupa do płaszczyzny jego podstawy. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Przykładowe rozwiązanie 
+Wprowadzamy oznaczenia: 
+bh  – wysokość ściany bocznej ostrosłupa,  
+α  – kąt nachylenia krawędzi bocznej ostrosłupa do płaszczyzny jego podstawy, 
+E – środek krawędzi BC. 
+ 
+Z podanej zależności pól 2 pbPP⋅=  otrzymujemy równanie 
+2 3 1
+4223 b
+a ah⋅= ⋅ ⋅ ⋅ ,  
+skąd otrzymujemy 
+3
+3b
+ah = . 
+Trójkąt ABC jest równoboczny, spodek O wysokości ostrosłupa jest środkiem ciężkości tego 
+trójkąta, więc 3
+2
+aAE =  oraz 2
+3AOA E= . Stąd  
+3
+3
+aAO = . 
+O 
+A 
+S 
+C
+B 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 12 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 12 z 20 
+ 
+Z twierdzenia Pitagorasa w trójkącie prostokątnym BES i otrzymujemy 
+( ) ()
+2 23
+32
+7 21
+623
+a a a aSB =+ = = . 
+Ponieważ w ostrosłupie prawidłowym krawędzie boczne mają równe długości, więc  
+21
+6
+aAS BS== . 
+Z definicji cosinusa w trójkącie prostokątnym AOS otrzymujemy 
+cos AO
+ASα = . 
+3
+3
+21
+6
+22 7cos 77
+a
+a
+AO
+ASα == = = . 
+Uwaga 
+Zamiast wyznaczać długość krawędzi bocznej może wyznaczyć, korzystając z twierdzenia 
+Pitagorasa dla trójkąta OES wysokość SO ostrosłupa:  
+( ) ( )
+22
+33
+36 2
+aa aSO =− = . 
+Następnie z trójkąta prostokątnego ASO  możemy obliczyć tangens kąta α : 
+2
+3
+3
+3tg 2
+a
+a
+SO
+AOα == = . 
+Korzystając z tożsamości trygonometrycznych możemy obliczyć cosinus kąta α : 
+3sincos 2
+αα =  oraz 22sin cosαα+= 1 . 
+Z pierwszego równanie otrzymujemy 3
+2sin cosαα= . Stąd i z drugiego równania 
+otrzymujemy 
+( )
+2
+23
+2 cos cosαα += 1 , 
+27
+4 cos α =1 , 
+2 4
+7cos α = . 
+Stąd 272
+77cosα == , gdyż kąt α jest ostry. 
+Schemat punktowania 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania zadania  ............................................................................................................ 1 p. 
+Zdający: 
+• zaznaczy na rysunku kąt α  lub zapisze cos AO
+ASα =  
+albo 
+• wyznaczy długość odcinka AO: 3
+3
+aAO = , 
+albo 
+• wyznaczy długość odcinka EO: 3
+6
+aEO = , 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 13 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 13 z 20 
+ 
+albo 
+• zapisze równanie z dwiema niewiadomymi a i bh  wynikaj ące z zale żności mi ędzy 
+polem podstawy i polem powierzchni bocznej ostrosłupa: 
+2 3 1
+4223 b
+a ah⋅= ⋅ ⋅ ⋅   
+i na tym zakończy lub dalej popełnia błędy. 
+Rozwiązanie, w którym jest istotny postęp  ....................................................................... 2 p. 
+Zdający wyznaczy wysokość ściany bocznej ostrosłupa opuszczoną na krawędź podstawy: 
+3
+3b
+ah = . 
+Pokonanie zasadniczych trudności zadania  ...................................................................... 3 p. 
+Zdający  
+• wyznaczy długość krawędzi bocznej 21
+6
+aAS =  i nie wyznaczy długości odcinka AO 
+albo 
+• wyznaczy długość odcinka AO i wysokość ostrosłupa: 3
+3
+aAO = , 2
+aSO =  
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Rozwiązanie prawie pełne  .................................................................................................. 4 p. 
+Zdający: 
+• wyznaczy 21
+6
+aAS =  i 3
+3
+aAO =  
+albo 
+• obliczy 3
+7sinα = , 
+albo 
+• obliczy 3
+2tgα = . 
+ 
+Rozwiązanie pełne  ............................................................................................................... 5 p. 
+Zdający obliczy wartość 22 7cos 77
+α == . 
+Uwagi 
+1. Jeżeli zdający realizuje strategię rozwiązania, a jedynymi błędami w przedstawionym 
+rozwiązaniu są błędy rachunkowe, to otrzymuje 4 punkty. 
+2. Jeżeli zdający popełnia błąd polegający na zastosowaniu niepoprawnego wzoru na pole 
+trójkąta równobocznego, to otrzymuje 3 punkty, o ile nie popełnia innych błędów 
+i rozwiąże zadanie do końca.  
+3. Jeżeli zdający popełnia błąd merytoryczny, stosując twierdzenie Pitagorasa, to otrzymuje 
+3 punkty, o ile nie popełnia innych błędów i rozwiąże zadanie do końca.  
+4. Jeżeli zdający popełnia błąd merytoryczny, przyjmując, że punkt  O jest środkiem odcinka 
+AE lub przyjmie, że 1
+3AOA E= , to otrzymuje 3 punkty, o ile nie popełnia innych 
+błędów i rozwiąże zadanie do końca.  
+5. Jeżeli zdający popełnia błąd, polegający na niewłaściwym określeniu zależności między 
+polem podstawy a polem powierzchni bocznej, przyjmując  2pbPP= , to może otrzymać co 
+najwyżej 1 punkt.   
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 14 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 14 z 20 
+ 
+6. Jeżeli zdający popełnia błąd, polegający na niewłaściwym określeniu zależności między 
+polem podstawy a polem powierzchni bocznej, przyjmując  2 ps bPP=  lub  2ps bPP= , to 
+może otrzymać co najwyżej 3 punkty.   
+7. Jeżeli zdający błędnie interpretuje kąt nachylenia krawędzi bocznej do płaszczyzny 
+podstawy ostrosłupa, to może otrzymać co najwyżej 3 punkty.   
+8. Jeżeli zdający poprawnie rozwiązuje zadanie, oblicza tg α  lub sinα , a następnie podaje 
+przybliżoną wartość cosinusa z tablic, to może otrzymać maksymalną liczbę punktów. 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 15 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 15 z 20 
+ 
+ 
+Zadanie 33. (0–4) 
+Ze zbioru { }3, 2, 1, 1, 2, 3A =− − −  losujemy liczb ę a, natomiast ze zbioru {} 2,1,0,1−=B  
+losujemy liczbę b. Te liczby s ą – odpowiednio – wspó łczynnikiem kierunkowym i wyrazem 
+wolnym funkcji liniowej ()f xa x b=+ . Oblicz prawdopodobieństwo zdarzenia polegającego 
+na tym, że otrzymana funkcja  f  jest rosnąca i ma dodatnie miejsce zerowe. 
+ 
+Przykładowe rozwiązanie 
+Zdarzeniem elementarnym jest uporz ądkowana para () ba,  liczb, gdzie Aa ∈  oraz Bb ∈ . 
+Liczba Ω  wszystkich zdarzeń elementarnych jest równa 
+64 2 4Ω= ⋅ = . 
+Niech Z oznacza zdarzenie polegaj ące na tym, że otrzymana funkcja f jest rosn ąca i ma 
+dodatnie miejsce zerowe. Funkcja liniowa jest rosn ąca, gdy wspó łczynnik kierunkowy a jest 
+dodatni, wi ęc { }1, 2, 3a ∈ . Rosn ąca funkcja liniowa ma dodatnie miejsce zerowe tylko 
+wówczas, gdy jej wykres przecina oś Oy w punkcie o ujemnej rzędnej. Zatem współczynnik b 
+musi być równy 1− . 
+Zbiór Z ma więc postać  
+() ( ) ( ){ }1 , 1, 2 , 1, 3 , 1Z =− − − . 
+Zatem liczba wszystkich zdarzeń elementarnych sprzyjających zdarzeniu Z jest równa  
+3Z = . 
+Prawdopodobieństwo zdarzenia Z jest równe: 
+() 31
+24 8PZ == . 
+Schemat punktowania 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania ........................................................................................................................... 1 p. 
+Zdający 
+• obliczy liczb ę wszystkich zdarze ń elementarnych: 64 2 4Ω= ⋅ =  lub wypisze 
+wszystkie zdarzenia elementarne 
+albo 
+• zapisze, że funkcja liniowa f jest rosnąca tylko dla { }1, 2, 3a ∈ , 
+albo 
+• zapisze, że funkcja liniowa f, jako funkcja rosn ąca, ma dodatnie miejsce zerowe dla 
+1b =−  
+i na tym poprzestanie lub dalej popełnia błędy.  
+Rozwiązanie, w którym jest istotny postęp ........................................................................ 2 p.  
+Zdający  
+• obliczy liczb ę wszystkich zdarze ń elementarnych: 64Ω= ⋅  lub wypisze wszystkie 
+zdarzenia elementarne oraz zapisze, że funkcja liniowa f jest rosn ąca tylko dla 
+{ }1, 2, 3a ∈  
+albo 
+• zapisze, że funkcja liniowa f jest rosn ąca i ma dodatnie miejsce zerowe dla 
+{ }1, 2, 3a ∈  i 1b =−  
+i na tym poprzestanie lub dalej popełnia błędy. 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 16 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 16 z 20 
+ 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p. 
+Zdający obliczy lub poda liczbę wszystkich zdarzeń elementarnych 64Ω= ⋅  oraz  
+• wyznaczy wszystkie zdarzenia elementarne sprzyjające zdarzeniu Z: 
+( () ( ) ( ){ }1 , 1, 2 , 1, 3 , 1Z =− − − )  
+albo 
+• zapisze, że { }1, 2, 3a ∈ , 1b =−  oraz 3Z = . 
+Rozwiązanie pełne ................................................................................................................ 4 p. 
+Zdający obliczy szukane prawdopodobieństwo: 8
+1 . 
+Uwagi 
+1. Jeżeli zdający uzyska w wyniku końcowym liczbę spoza przedziału 0, 1 , to może 
+otrzymać co najwyżej 2 punkty. 
+2. Jeżeli zdający poda, że 3Z =  i nie zapisze zdarzeń elementarnych sprzyjających 
+zdarzeniu Z i z rozwiązania nie można wywnioskować, które zdarzenia elementarne 
+zdający bierze pod uwagę, ale zapisze, że { }1, 2, 3a ∈ (albo tylko 1b =− ), to za całe 
+rozwiązanie zdający może otrzymać co najwyżej 3 punkty. 
+3. Jeżeli zdający poda, że 3Z =  i nie zapisze zdarzeń elementarnych sprzyjających 
+zdarzeniu Z i z rozwiązania nie można wywnioskować, które zdarzenia elementarne 
+zdający bierze pod uwagę, nie zapisze, że { }1, 2, 3a ∈ oraz nie zapisze, że 1b =− , to za 
+całe rozwiązanie zdający może otrzymać co najwyżej 1 punkt. 
+4. Jeżeli zdający wypisze 3 poprawne zdarzenia elementarne sprzyjające zdarzeniu Z 
+i przyjmie, że takimi zdarzeniami są też inne pary postaci () ,ab , gdzie { }1, 2, 3a ∈ , 
+to może otrzymać 3 punkty za całe rozwiązanie, o ile przyjęcie tych niepoprawnych 
+zdarzeń elementarnych jest efektem błędów rachunkowych przy obliczaniu miejsc 
+zerowych utworzonych funkcji. 
+5. Jeżeli zdający wypisze 2 poprawne zdarzenia elementarne sprzyjające zdarzeniu Z 
+i trzecie poprawne potraktuje jako zdarzenie niesprzyjające zdarzeniu Z, to może 
+otrzymać 3 punkty za całe rozwiązanie, o ile odrzucenie tego poprawnego zdarzenia 
+elementarnego jest efektem błędów rachunkowych przy obliczaniu miejsca zerowego 
+utworzonej funkcji. 
+6. Jeżeli zdający zamiast rozważać a > 0 rozważa a < 0, to jego rozwiązanie może być 
+ocenione tak jak w niżej wymienionych przypadkach.  
+Przypadek 6a. Jeśli zdający, przy rozważanym a < 0, rozważa b < 0, rysuje wykres 
+rosnącej funkcji liniowej (lub w inny sposób sygnalizuje, że rozważa funkcję rosnącą) 
+i poprawnie oblicza |Ω|, to może otrzymać 2 punkty, o ile nie popełnia innych błędów 
+i rozwiązuje zadanie do końca.  
+Przypadek 6b. Jeśli zdający, przy rozważanym a < 0, rozważa funkcję liniową malejącą 
+i konsekwentnie b > 0, a ponadto poprawnie oblicza |Ω|, to może otrzymać 2 punkty, 
+o ile nie popełnia innych błędów i rozwiązuje zadanie do końca. 
+7. Jeżeli zdający rozwiązuje zadanie metodą drzewkową to może otrzymać: 
+4 punkty – za rozwiązanie w pełni poprawne; 
+3 punkty – za rozwiązanie, z którego jednoznacznie wynika, że zdający ustala:  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 17 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 17 z 20 
+ 
+a = 1, 2, 3 i że a może być wylosowane z prawdopodobieństwem 1
+2 , b = –1i że może być 
+wylosowane z prawdopodobieństwem 1
+4 ; 
+2 punkty – za rozwiązanie, z którego jednoznacznie wynika, że zdający ustala:  
+• a > 0 i że może być wylosowane z prawdopodobieństwem 1
+2 , b < 0 i że może być 
+wylosowane z prawdopodobieństwem 1
+4   
+albo 
+• a = 1, 2, 3 i b = –1; 
+1 punkt – za rozwiązanie, z którego jednoznacznie wynika, że zdający ustala:  
+• a = 1, 2, 3 
+albo 
+• a > 0 i że może być wylosowane z prawdopodobieństwem 1
+2 . 
+8. Jeżeli zdający poprawnie obliczy liczbę wszystkich zdarzeń elementarnych (lub wypisze 
+wszystkie zdarzenia elementarne) i zapisze, że funkcja liniowa f, jako funkcja rosnąca, 
+ma dodatnie miejsce zerowe gdy b = -1, to może otrzymać 2 punkty. 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 18 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 18 z 20 
+ 
+ 
+ 
+ 
+Zadanie 34. (0–4) 
+W trójkącie prostokątnym ACB przyprostokątna AC ma długość 5, a promień okręgu wpisanego 
+w ten trójkąt jest równy 2. Oblicz pole trójkąta ACB. 
+ 
+Przykładowe rozwiązania 
+I sposób 
+Przyjmijmy oznaczenia jak na rysunku. 
+ 
+Pole trójkąta ACB możemy zapisać na dwa sposoby. Ze wzoru na pole trójkąta z podstawą 
+i prostopadłą doń wysokością trójkąta otrzymujemy  
+511
+22 2 5ACBPA C B C a a=⋅ ⋅ =⋅ ⋅= ,  
+a ze wzoru na pole trójkąta z promienieniem okręgu wpisanego w ten trójkąt otrzymujemy 
+() ()11
+22 52 5ACBP p r A C B C A B r ac ac=⋅ =⋅ + + ⋅ =⋅ + + ⋅ =+ + . 
+Stąd otrzymujemy 
+5
+25ac a++= , 
+3
+2 5ca=− . 
+Z twierdzenia Pitagorasa otrzymujemy równanie z jedną niewiadomą 
+()
+222 3
+255 aa+= − , 
+22 9
+425 15 25aaa+= − + , 
+25
+4 15 0aa−= , 
+()5
+4 12 0aa −= . 
+Stąd  
+0a =  lub 12a = . 
+Pierwsze z otrzymanych rozwiązań nie spełnia warunków zadania, więc 12a = .  
+Pole trójkąta ACB jest więc równe 
+55
+22 12 30ACBPa == ⋅ = . 
+II sposób 
+Poprowadźmy promienie okr ęgu wpisanego w trójk ąt ACB do punktów styczno ści tego 
+okręgu z bokami tego trójkąta i przyjmijmy oznaczenia jak na rysunku. 
+  c 
+  B
+  A 
+  C 
+  S
+  a
+  2  5 
+  2
+  2
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 19 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 19 z 20 
+ 
+ 
+Czworokąt CFSE jest kwadratem o boku długości 2, gdyż kąty przy wierzchołkach C, F i E są 
+proste, a boki ES i FS są równej długości. Zatem  2EC FC== .  
+Stąd wynika, że 523AE AC EC=−= − = . 
+Oznaczmy x BF= . Zatem  2BC BF CF x=+= + .  
+Z twierdzenia o odcinkach stycznych otrzymujemy 
+BDB Fx==  oraz 3AD AE== . 
+Zatem 3AB AD BD x=+= +  . 
+Z twierdzenia Pitagorasa dla trójkąta ABC otrzymujemy 
+22 2
+AB AC BC=+ , 
+() ()
+22 2352xx+= + + , 
+2296 2 5 4 4xx x x++=+++ , 
+10x = . 
+Przyprostokątna AC ma więc długość  21 2BC x=+= , więc pole trójkąta ACB jest równe  
+1
+2 51 2 3 0ACBP =⋅ ⋅ = . 
+III sposób 
+Przyjmijmy oznaczenia jak na rysunku. 
+ 
+Ze wzoru na promień okręgu wpisanego w trójkąt prostokątny otrzymujemy 
+5
+22 ac+−= , 
+45 ac=+− , 
+1ca=+ . 
+Z twierdzenia Pitagorasa otrzymujemy 
+2225 ac+= . 
+Zatem      ()
+22251 aa+=+ , 
+2225 2 1aa a+=++ , 
+  c 
+  B
+  A 
+  C 
+  S
+  a
+  2  5 
+  2
+  2
+  2 
+  B
+  A 
+  C 
+  S
+  D
+  E 
+  F
+  x  2  5 
+  2
+  2
+  x  2
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 20 =====
+
+Schemat oceniania 
+Poziom podstawowy 
+Strona 20 z 20 
+ 
+22 4a = , 
+12a = . 
+Pole trójkąta ACB równe więc równe 
+55
+22 12 30ACBPa == ⋅ = . 
+Schemat punktowania 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania ........................................................................................................................... 1 p. 
+Zdający  
+• zapisze zależność między długościami przyprostokątnej BC i przeciwprostokątnej 
+trójkąta, np.: 2225 ac+=  lub 5
+25ac a++=  lub 5
+22 ac+−=  
+albo 
+• zapisze lub zaznaczy na rysunku równości co najmniej dwóch par odpowiednich 
+odcinków, wynikające z twierdzenia o odcinkach stycznych,  
+np.: EC FC=  i BFB D=  
+i na tym zakończy lub dalej popełnia błędy. 
+Rozwiązanie, w którym jest istotny postęp ........................................................................ 2 p.  
+Zdający  
+• zapisze układ równań pozwalający obliczyć długość przyprostokątnej BC, np.: 
+( 3
+2 5ca=−  i 2225 ac+= ) lub ( 5
+22 ac+−=  i 2225 ac+= ) 
+albo 
+• zapisze długości boków BC i AB trójkąta ACB w zależności od jednej zmiennej,  
+np. długości x odcinka BF: 2BC x=+ , 3AB x=+  
+i na tym zakończy lub dalej popełnia błędy. 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p. 
+Zdający zapisze równanie z jedną niewiadomą prowadzące do wyznaczenia długości boków 
+BC i AB trójkąta, np.: ()
+222 3
+255 aa+= −  lub () ()
+22 232 5xx+= ++  lub ()
+22251 aa+=+  i na 
+tym zakończy lub dalej popełnia błędy. 
+Rozwiązanie pełne ................................................................................................................ 4 p. 
+Zdający obliczy pole trójkąta ACB: 30ACBP = . 
+Uwagi 
+1. Jeżeli zdający realizuje strategię rozwiązania, a jedynymi błędami w przedstawionym 
+rozwiązaniu są błędy rachunkowe, to otrzymuje 3 punkty. 
+2. Jeżeli zdający popełnia błąd merytoryczny, stosując twierdzenie Pitagorasa, to otrzymuje 
+2 punkty, o ile nie popełnia innych błędów i rozwiąże zadanie do końca.  
+3. Jeżeli zdający popełnia błąd merytoryczny, stosując nieistniejący wzór „kwadrat 
+sumy/różnicy = suma/różnica kwadratów”, to otrzymuje 2 punkty, o ile nie popełnia 
+innych błędów i rozwiąże zadanie do końca.  
+4. Jeżeli zdający pominie we wzorze na pole trójkąta współczynnik 1
+2 , to otrzymuje 
+3 punkty, o ile nie popełnia innych błędów i rozwiąże zadanie do końca. 
+5. Jeżeli zdający przyjmie, że 5  to długość przyprostokątnej BC, to może otrzymać 
+maksymalnie 4 punkty, o ile poprawnie rozwiąże zadanie do końca. 
+6. Jeżeli zdający przyjmie, że 5 to długość przeciwprostokątnej, to może otrzymać co 
+najwyżej 1 punkt, za zapisanie (zaznaczenie) równości odcinków stycznych. 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl

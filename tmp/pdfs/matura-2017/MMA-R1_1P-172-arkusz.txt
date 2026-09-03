@@ -1,0 +1,968 @@
+
+
+===== PDF PAGE 1 =====
+ 
+ 
+MMA
+2017 
+Arkusz zawiera informacje  
+prawnie chronione do momentu 
+rozpoczęcia egzaminu. 
+Układ graficzny 
+© CKE 2015 
+MMA
+2017 
+ 
+UZUPEŁNIA ZDAJĄCY  
+ 
+ KOD PESEL  
+                 
+ 
+ 
+ 
+ 
+EGZAMIN MATURALNY  
+Z MATEMATYKI 
+ 
+POZIOM ROZSZERZONY 
+ 
+DATA: 9 maja 2017 r. 
+GODZINA ROZPOCZĘCIA: 9:00 
+CZAS PRACY: 180 minut 
+LICZBA PUNKTÓW DO UZYSKANIA: 50 
+ 
+Instrukcja dla zdającego 
+ 
+1. Sprawdź, czy arkusz egzaminacyjny zawiera 18 stron (zadania 1–15). 
+Ewentualny brak zgłoś przewodniczącemu zespołu nadzorującego 
+egzamin. 
+2. Rozwiązania zadań i odpowiedzi wpisuj w miejscu na to przeznaczonym. 
+3. Odpowiedzi do zadań zamkniętych (1–4) zaznacz na karcie odpowiedzi 
+w części karty przeznaczonej dla zdającego. Zamaluj  pola do tego 
+przeznaczone. Błędne zaznaczenie otocz kółkiem  i zaznacz właściwe. 
+4. W zadaniu 5. wpisz odpowiednie cyfry w kratki pod treścią zadania. 
+5. Pamiętaj, że pominięcie argumentacji lub istotnych obliczeń  
+w rozwiązaniu zadania otwartego (6–15) może spowodować, że za to 
+rozwiązanie nie otrzymasz pełnej liczby punktów. 
+6. Pisz czytelnie i używaj tylko długopisu lub pióra z czarnym tuszem lub 
+atramentem.  
+7. Nie używaj korektora, a błędne zapisy wyraźnie przekreśl. 
+8. Pamiętaj, że zapisy w brudnopisie nie będą oceniane. 
+9. Możesz korzystać z zestawu wzorów matematycznych, cyrkla i linijki oraz 
+kalkulatora prostego. 
+10. Na tej stronie oraz na karcie odpowiedzi wpisz swój numer PESEL  
+i przyklej naklejkę z kodem. 
+11. Nie wpisuj żadnych znaków w części przeznaczonej dla egzaminatora. 
+ 
+ 
+ 
+MMA-R1_1P-172 
+ 
+ 
+ 
+miejsce 
+na naklejkę 
+UZUPEŁNIA ZESPÓŁ 
+NADZORUJĄCY 
+Uprawnienia zdającego do: 
+ dostosowania 
+kryteriów oceniania 
+ 
+ nieprzenoszenia 
+zaznaczeń na kartę 
+ 
+ 
+NOWA FORMUŁA
+
+===== PDF PAGE 2 =====
+ 
+Strona 2 z 18 MMA_1R 
+W zadaniach od 1. do 4. wybierz i zaznacz na karcie odpowiedzi poprawną odpowiedź. 
+ 
+ 
+Zadanie 1. (0–1) 
+Liczba ( )
+2
+23 23−−+  jest równa 
+ 
+A. 2   B. 4  C. 3  D. 23  
+ 
+ 
+ 
+ 
+Zadanie 2. (0–1) 
+Nieskończony ci ąg liczbowy jest okre ślony wzorem () ()
+2
+32
+10 2 3
+23
+n
+nn n
+a nn
+−−
+= ++  dla 1n ≥ .  
+Wtedy 
+ 
+A. 1lim 2
+nn
+a
+→∞
+=  B. lim 0nn
+a
+→∞
+=  C. lim nn
+a
+→∞
+=− ∞  D. 3lim 2
+nn
+a
+→∞
+=−  
+ 
+ 
+ 
+ 
+Zadanie 3. (0–1) 
+Odcinek CD jest wysoko ścią trójkąta ABC, w którym 1
+2ADC D B C==
+ 
+(zobacz rysunek). 
+Okrąg o środku C i promieniu CD jest styczny do prostej AB. Okr ąg ten przecina boki 
+AC i BC trójkąta odpowiednio w punktach K i L.  
+  
+Zaznaczony na rysunku kąt α  wpisany w okrąg jest równy 
+ 
+A. 37,5°  B. 45°  C. 52,5°  D. 60°  
+ 
+ 
+ 
+Zadanie 4. (0–1) 
+Dane są punkt () 4, 7B =−  i wektor [ ]3, 5u =− . Punkt A, taki, że 3ABu=−
+  , ma współrzędne 
+A. ()5, 8A =−  B. () 13, 22A =−  C. ()9, 15A =−  D. ()12, 24A =  
+DA 
+C
+α
+B
+M
+K 
+L
+
+===== PDF PAGE 3 =====
+ 
+Strona 3 z 18 MMA_1R 
+BRUDNOPIS (nie podlega ocenie) 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+
+===== PDF PAGE 4 =====
+ 
+Strona 4 z 18 MMA_1R 
+Zadanie 5. (0–2) 
+Reszta z dzielenia wielomianu 32 3
+4() 2Wx x x a x=− ++  przez dwumian 2x −  jest równa 1. 
+Oblicz wartość współczynnika a.  
+W poniższe kratki wpisz kolejno trzy pi erwsze cyfry po przecinku rozwini ęcia dziesiętnego 
+otrzymanego wyniku. 
+ 
+ 
+ 
+BRUDNOPIS (nie podlega ocenie) 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Zadanie 6. (0–3) 
+Funkcja f  jest określona wzorem () 2
+1
+1
+xfx x
+−= +  dla każdej liczby rzeczywistej x . Wyznacz 
+równanie stycznej do wykresu tej funkcji w punkcie ()1, 0P = . 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+
+===== PDF PAGE 5 =====
+ 
+Strona 5 z 18 MMA_1R 
+Zadanie 7. (0–3) 
+Udowodnij, że dla dowolnych różnych liczb rzeczywistych x, y prawdziwa jest nierówność 
+22 2 2 2284 0xy x y x y++−+ > . 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+ 
+Wypełnia 
+egzaminator 
+Nr zadania 5. 6. 7. 
+Maks. liczba pkt 2 3 3 
+Uzyskana liczba pkt    
+ 
+ 
+
+===== PDF PAGE 6 =====
+ 
+Strona 6 z 18 MMA_1R 
+Zadanie 8. (0–3) 
+W trójk ącie ostrok ątnym ABC bok AB ma d ługość c, d ługość boku  BC jest równa a oraz 
+ABC β= . Dwusieczna kąta ABC przecina bok AC trójkąta w punkcie E.  
+Wykaż, że długość odcinka BE jest równa 
+2c o s 2ac
+ac
+β⋅
++ . 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PDF PAGE 7 =====
+ 
+Strona 7 z 18 MMA_1R 
+Zadanie 9. (0–4) 
+W czworościanie, którego wszystkie kraw ędzie mają taką samą długość 6, umieszczono kul ę 
+tak, że ma ona dok ładnie jeden punkt wspólny z ka żdą ścianą czworościanu. Płaszczyzna π , 
+równoległa do podstawy tego czworo ścianu, dzieli go na dwie bry ły: ostros łup o obj ętości 
+równej 8
+27  objętości dzielonego czworo ścianu i ostros łup ścięty. Oblicz odleg łość środka S 
+kuli od płaszczyzny π , tj. długość najkrótszego spośród odcinków SP, gdzie P jest punktem 
+płaszczyzny π .  
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 8. 9. 
+Maks. liczba pkt 3 4 
+Uzyskana liczba pkt   
+ 
+
+===== PDF PAGE 8 =====
+ 
+Strona 8 z 18 MMA_1R 
+Zadanie 10. (0–4) 
+Rozwiąż równanie cos 2 3cos 2+= −xx  w przedziale 0, 2π . 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+
+===== PDF PAGE 9 =====
+ 
+Strona 9 z 18 MMA_1R 
+Zadanie 11. (0–4) 
+W pudełku znajduje si ę 8 pi łeczek oznaczonych kolejnymi liczbami naturalnymi od 1 do 8. 
+Losujemy jedn ą pi łeczkę, zapisujemy liczb ę na niej wyst ępującą, a nast ępnie zwracamy 
+piłeczkę do urny. T ę procedur ę wykonujemy jeszcze dwa razy i tym samym otrzymujemy 
+zapisane trzy liczby. Oblicz prawdopodobie ństwo wylosowania takich pi łeczek, że iloczyn 
+trzech zapisanych liczb jest podzielny przez 4. Wynik podaj w postaci ułamka zwykłego. 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 10. 11. 
+Maks. liczba pkt 4 4 
+Uzyskana liczba pkt   
+ 
+ 
+ 
+ 
+
+===== PDF PAGE 10 =====
+ 
+Strona 10 z 18 MMA_1R 
+Zadanie 12. (0–5) 
+Wyznacz wszystkie wartości parametru m , dla których równanie 
+() ( )
+246 2 3 3 0xm xm m−++ − =  
+ma dwa różne rozwiązania rzeczywiste 1x  i 2x , przy czym 12<x x , spełniające warunek  
+() ()12 12441 441 0xx xx−− −+ < . 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PDF PAGE 11 =====
+ 
+Strona 11 z 18 MMA_1R 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 12. 
+Maks. liczba pkt 5 
+Uzyskana liczba pkt  
+ 
+
+===== PDF PAGE 12 =====
+ 
+Strona 12 z 18 MMA_1R 
+Zadanie 13. (0–5) 
+Wyznacz równanie okr ęgu przechodz ącego przez punkty () 5, 3A =−  i ()0, 6B = , którego 
+środek leży na prostej o równaniu 31 0xy−+ = . 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PDF PAGE 13 =====
+ 
+Strona 13 z 18 MMA_1R 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 13. 
+Maks. liczba pkt 5 
+Uzyskana liczba pkt  
+ 
+
+===== PDF PAGE 14 =====
+ 
+Strona 14 z 18 MMA_1R 
+Zadanie 14. (0–6) 
+Liczby a, b, c s ą – odpowiednio – pierwszym, drugim i trzecim wyrazem ci ągu 
+arytmetycznego. Suma tych liczb jest równa 27. Ciąg () 2, , 2 1ab c−+  jest geometryczny.  
+Wyznacz liczby a, b, c. 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PDF PAGE 15 =====
+ 
+Strona 15 z 18 MMA_1R 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 14. 
+Maks. liczba pkt 6 
+Uzyskana liczba pkt  
+ 
+
+===== PDF PAGE 16 =====
+ 
+Strona 16 z 18 MMA_1R 
+Zadanie 15. (0–7) 
+Rozpatrujemy wszystkie wal ce o danym polu powierzchni ca łkowitej P. Oblicz wysoko ść 
+i promień podstawy tego walca, którego obj ętość jest najwi ększa. Oblicz t ę najwi ększą 
+objętość. 
+ 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+
+===== PDF PAGE 17 =====
+ 
+Strona 17 z 18 MMA_1R 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+Odpowiedź:  ................................................................................................................................  . 
+ 
+Wypełnia 
+egzaminator
+Nr zadania 15. 
+Maks. liczba pkt 7 
+Uzyskana liczba pkt  
+ 
+
+===== PDF PAGE 18 =====
+ 
+Strona 18 z 18 MMA_1R 
+BRUDNOPIS (nie podlega ocenie) 
+ 
+ 

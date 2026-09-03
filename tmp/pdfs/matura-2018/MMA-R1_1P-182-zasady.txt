@@ -1,0 +1,1928 @@
+
+
+===== PAGE 1 =====
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EGZAMIN MATURALNY 
+ 
+W ROKU SZKOLNYM 2017/2018 
+ 
+ 
+ 
+MATEMATYKA 
+ 
+POZIOM ROZSZERZONY 
+ 
+FORMUŁA OD 2015 
+ 
+(„NOWA MATURA”) 
+ 
+ 
+ 
+ZASADY OCENIANIA ROZWIĄZAŃ ZADAŃ 
+ 
+ARKUSZ MMA-R1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MAJ 2018
+  
+
+===== PAGE 2 =====
+
+ 
+ 
+Strona 2 z 34 
+Zadania zamknięte  
+ 
+Punkt przyznaje się za wskazanie poprawnej odpowiedzi. 
+ 
+Zadanie 1. (0−1) 
+Wymagania ogólne Wymagania szczegó łowe Poprawna  
+odpowiedź 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+1. Liczby rzeczywiste. Zdający oblicza potęgi 
+o wykładnikach wymiernych i stosuje prawa 
+działań na potęgach o wykładnikach wymiernych 
+(1.4). 
+A 
+ 
+Zadanie 2. (0−1) 
+I. Wykorzystanie 
+i tworzenie informacji. 
+1. Liczby rzeczywiste. Zdający wykorzystuje 
+pojęcie wartości bezwzględnej i jej interpretację 
+geometryczną (R1.1). 
+ALBO 
+3. Równania i nierówności. Zdający rozwiązuje 
+równania i nierówności z wartością bezwzględną 
+(R3.9). 
+B 
+ 
+Zadanie 3. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+1. Liczby rzeczywiste. Zdający stosuje 
+w obliczeniach wzór na logarytm potęgi oraz 
+wzór na zamianę podstawy logarytmu (R1.2). 
+C 
+ 
+Zadanie 4. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+11. Rachunek różniczkowy. Zdający oblicza 
+granice funkcji (i granice jednostronne), 
+korzystając z twierdzeń o działaniach na 
+granicach i z własności funkcji ciągłych (R11.1 ). 
+D 
+ 
+Zadanie 5. (0−2) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+11. Rachunek różniczkowy. Zdający oblicza 
+granice funkcji (i granice jednostronne), 
+korzystając z twierdzeń o działaniach na 
+granicach i z własności funkcji ciągłych (R11.1 ). 
+4. Funkcje. Zdający odczytuje z wykresu 
+własności funkcji (dziedzinę, zbiór wartości) 
+(4.2). 
+166 
+ 
+
+===== PAGE 3 =====
+
+ 
+ 
+Strona 3 z 34 
+Ogólne zasady oceniania zadań otwartych 
+ 
+Uwaga: Akceptowane są wszystkie odpowiedzi merytorycznie poprawne i spełniające warunki 
+zadania. 
+Zadanie 6. (0−3) 
+Wymagania ogólne Wymagania szczegó łowe 
+II. Wykorzystanie 
+i interpretowanie reprezentacji. 
+11. Rachunek różniczkowy. Zdający korzysta 
+z geometrycznej i fizycznej interpretacji pochodnej 
+(R11.3 ). 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób 
+Rozważmy funkcję kwadratową  f  określoną wzorem () 231fx x =− . 
+Współczynnik kierunkowy stycznej do wykresu tej funkcji w punkcie () 00 , yxP =  
+nachylonej do osi Ox pod kątem °30  jest równy tg30 3
+3°=  i jest równocześnie wartością 
+pochodnej funkcji f w punkcie 0x . 
+Wyznaczamy pochodną funkcji f: () 23f 'x x = .  
+Współrzędna 0x  punktu styczności spełnia więc równanie 
+023 3
+3x = . 
+Stąd 
+  0
+1
+6x = . 
+Wartość funkcji f dla argumentu 0
+1
+6x =  jest równa 
+() ()
+2
+0 31 33 61
+63 6fx =− = − . 
+Zatem punkt P ma współrzędne: 0
+1
+6x = , 0
+33 6
+36y = − . 
+ 
+ 
+II sposób 
+ 
+Styczna do paraboli nachylona do osi Ox pod kątem °30  ma współczynnik kierunkowy  
+równy tg30 3
+3°= , więc jej równanie jest postaci 3
+3yx b=+ .  
+Punkt P to jedyny punkt wspólny paraboli i tej stycznej, więc układ równań 231yx=−  
+i 3
+3yx b=+  ma dokładnie jedno rozwiązanie. Tak jest wtedy i tylko wtedy, gdy równanie  
+231 3
+3x xb−= + , czyli  231 0 3
+3xx b−− − =  ma jedno rozwiązanie, którym jest  
+0
+1
+23 6
+3
+3x == . 
+  
+
+===== PAGE 4 =====
+
+ 
+ 
+Strona 4 z 34 
+Jest to pierwsza współrzędna punktu P. Druga współrzędna tego punktu jest więc równa  
+()
+2
+0 31 33 61
+63 6y =− = − . 
+ 
+Schemat punktowania  
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania zadania  ............................................................................................................ 1 p. 
+Zdający  
+• zapisze, że wspó łczynnik kierunkowy stycznej jest równy 
+tg30 3
+3°=  lub równanie 
+stycznej: 3
+3yx b=+  
+albo 
+• wyznaczy pochodną funkcji f: () 23f 'x x = . 
+Pokonanie zasadniczych trudności zadania  ...................................................................... 2 p. 
+Zdający  
+• zapisze równanie: 023 3
+3x =  
+albo 
+• zapisze równanie: 231 0 3
+3xx b−− − =  i stwierdzi, że ma ono dok ładnie jedno 
+rozwiązanie, np. zapisze 0Δ= . 
+  
+Rozwiązanie pełne  ............................................................................................................... 3 p. 
+Zdający wyznaczy współrzędne punktu P: 0
+1
+6x = , 0
+33 6
+36y = − . 
+Uwagi 
+1. Jeżeli zdający błędnie wyznaczy pochodną funkcji, ale poprawnie wyznaczy wspó łczynnik 
+kierunkowy stycznej, to je śli nawet konsekwentnie rozwi ąże zadanie do ko ńca, otrzymuje 
+1 punkt. 
+2. Jeżeli zdaj ący przyjmie, że wspó łczynnik kierunkowy stycznej jest równy tg30° , ale 
+przypisuje tej wielko ści b łędną warto ść liczbow ą, np. zapisze 3a =  lub tg 1
+2a α==  
+itp., i konsekwentnie do pope łnionego b łędu rozwi ąże zadanie do ko ńca, bez żadnego 
+innego błędu, to otrzymuje 2 punkty. 
+3. Jeżeli zdaj ący b łędnie zinterpretuje wspó łczynnik kierunkowy stycznej do paraboli, np. 
+zapisze 1
+2a =  lub sina α=  itp., i konsekwentnie do pope łnionego błędu rozwiąże zadanie 
+do końca to otrzymuje 1 punkt. 
+4. Jeżeli zdaj ący b łędnie przyjmie, że k ąt nachylenia stycznej do osi Ox jest równy 150° , 
+i konsekwentnie do pope łnionego b łędu rozwi ąże zadanie do ko ńca lub rozpatruje dwie  
+styczne o kątach nachylenia 30°  i 150°  do osi Ox, to otrzymuje 2 punkty. 
+5. Jeżeli zdający realizuje strategię rozwiązania zadania i popełnia jedynie błędy rachunkowe, 
+to może otrzymać 2 punkty, o ile pope łnione błędy nie u łatwiają rozwiązania na żadnym 
+etapie. 
+ 
+  
+
+===== PAGE 5 =====
+
+ 
+ 
+Strona 5 z 34 
+Zadanie 7. (0−3) 
+V. Rozumowanie 
+i argumentacja. 
+7. Planimetria. Zdający stosuje twierdzenia 
+charakteryzujące czworokąty wpisane w okrąg 
+i czworokąty opisane na okręgu (R7.1). 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób – bilans kątów 
+Oznaczmy miary k ątów trójk ąta ABC odpowiednio przez γβα 2,2,2 , a punkt wspólny 
+dwusiecznej Ad  i odcinka KL przez P, dwusiecznej Cd  i odcinka LM przez R oraz 
+dwusiecznej Bd  i odcinka MN przez Q.  
+ 
+ 
+Wówczas °=++ 180222 γβα , stąd °=++ 90γβα . Wtedy 
+KAP α= , zatem 90AKP α=° −  i ()180 90 90LKN αα=° −° − = ° +  
+oraz 
+90CMR γ=° −  oraz 90BMQ β=° − ,  
+zatem () ( )180 90 90LMN γβ β γ=° −° − −° − = + . 
+Suma kątów LKN i LMN jest więc równa 
+() ( )90 90 180LKN LMN αβ γ α β γ+= ° + + + = + + + ° = ° . 
+To oznacza, że na czworokącie KNML można opisać okrąg. 
+  
+A B 
+C 
+K 
+M 
+ L 
+N 
+P 
+R 
+Q 
+
+===== PAGE 6 =====
+
+ 
+ 
+Strona 6 z 34 
+II sposób – symetralne 
+ 
+Rozważmy trójk ąt KLM. Z definicji symetrii osiowej wynika, że dwusieczna Ad  jest 
+symetralną boku KL. Analogicznie dwusieczna Cd  jest symetraln ą boku LM. Symetralne 
+boków trójk ąta przecinaj ą si ę w jednym punkcie, który jest środkiem okr ęgu opisanego na 
+tym trójk ącie – oznaczmy go przez O. Czyli punkt wspólny dwusiecznych Ad  i Cd  
+(symetralnych boków trójk ąta KLM) jest środkiem okr ęgu, którego promieniem jest 
+w szczególności odcinek OL. 
+Podobnie rozwa żmy trójk ąt LMN . Z definicji symetrii osiowej wynika, że dwusieczna Cd  
+jest symetraln ą boku LM . Analogicznie dwusieczna Bd  jest symetraln ą boku MN . Punkt 
+wspólny tych dwusiecznych (symetralnych)  jest tym samym punktem, o którym by ła mowa 
+wyżej i jest oczywi ście środkiem okręgu opisanego na trójk ącie LMN. Zatem musi to by ć ten 
+sam okrąg. Wszystkie wierzchołki czworokąta  KNML leżą na tym okręgu. To kończy dowód. 
+ 
+  
+A B 
+C 
+K 
+M 
+ L 
+N 
+P 
+R 
+Q 
+O 
+
+===== PAGE 7 =====
+
+ 
+ 
+Strona 7 z 34 
+III sposób – równość promieni 
+Oznaczmy przez O punkt przeci ęcia si ę dwusiecznych k ątów trójk ąta ABC, punkt wspólny 
+dwusiecznej Ad  i odcinka KL przez P, dwusiecznej Cd  i odcinka LM przez R oraz 
+dwusiecznej Bd  i odcinka MN przez Q. 
+ 
+ 
+Z definicji symetrii osiowej i z treści zadania wynika, że KP LP=  oraz KLA O⊥ . Oznacza 
+to, że trójkąty OPK i OPL są prostokątne, mają wspólną przyprostokątną OP oraz pozosta łe 
+przyprostokątne s ą równej d ługości. S ą to wi ęc trójk ąty przystaj ące (na mocy cechy bkb 
+przystawania trójkątów). Stąd wynika, że OKOL = . Analogicznie trójk ąty ORL i ORM są 
+przystające oraz trójk ąty OQM i OQN s ą przystaj ące, a w konsekwencji OL OM=  oraz 
+OM ON= . Zatem punkt O jest wi ęc równooddalony od wszystkich wierzcho łków 
+czworokąta KNML, a to oznacza, że na tym czworokącie można opisać okrąg. 
+ 
+Schemat punktowania  
+Rozwiązanie, w którym jest istotny postęp  ....................................................................... 1 p. 
+Zdający  
+• wyznaczy miarę jednego z kątów czworokąta KNML w zależności od miar kątów 
+trójkąta ABC, np.: 
+90LKN α=° +  
+albo 
+• zapisze, że prosta zawierająca dwusieczną kąta trójkąta ABC jest symetralną jednego 
+z odcinków KL, LM, MN 
+albo 
+• zapisze jedną lub dwie równości spośród: OKOL = , OL OM= , OM ON=  
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+  
+A B 
+C 
+K 
+M 
+ L 
+N 
+O 
+R 
+P 
+Q 
+
+===== PAGE 8 =====
+
+ 
+ 
+Strona 8 z 34 
+Pokonanie zasadniczych trudności zadania  ...................................................................... 2 p. 
+Zdający  
+• wyznaczy miary dwóch przeciwległych kątów czworokąta KNML w zależności od 
+miar kątów trójkąta ABC, np.: 90LKN α=° +  i LMN βγ=+  
+albo  
+• zapisze, że punkt przecięcia dwusiecznych kątów trójkąta ABC jest środkiem okręgu 
+opisanego na trójkącie KLM  lub na trójkącie LMN, lub że jest punktem przecięcia 
+symetralnych trzech boków czworokąta KNML 
+albo 
+• zapisze i uzasadni jedną lub dwie równości spośród: OKOL = , OL OM= , 
+OM ON=  
+Uwaga 
+Jeżeli zdający zapisze wszystkie równości OKOL = , OL OM= , OM ON=  
+i stąd wyciągnie wniosek, że punkt O jest środkiem okręgu opisanego na czworokącie 
+KNML, ale nie uzasadni żadnej z tych równości (lub uzasadnienie nie będzie pełne), 
+to otrzymuje 2 punkty. 
+ 
+Rozwiązanie pełne  ............................................................................................................... 3 p. 
+Zdający przeprowadzi pełne rozumowanie. 
+ 
+Uwagi 
+1. Jeżeli zdający przeprowadza dowód z wykorzystaniem bilansu kątów i korzysta z równości 
+kątów w trójk ątach równoramiennych, to mo że otrzyma ć 3 punkty  tak że w przypadku, 
+gdy bez stosownego komentarza korzysta z faktu, że trójkąty są równoramienne. 
+2. Jeżeli zdający  
+• uzależni wszystkie kąty trójkąta ABC oraz jeden z kątów czworokąta KNML 
+albo 
+• uzależni jeden z  kątów LKN, KNM i jeden z kątów KLM, NML  
+od kątów α =  AKL =  ALK, β =  BML =  BLM i γ =  CLM =  CML, to otrzymuje 
+1 punkt. 
+3. Jeżeli zdający  
+• wyznaczy 2 przeciwległe kąty czworokąta KNML w zależności od α, β, γ i wykaże, że 
+α + β + γ = 180º 
+albo 
+• wyznaczy wszystkie k ąty czworok ąta KNML i obliczy sum ę dwóch przeciwleg łych 
+kątów czworokąta KNML, 
+to otrzymuje 2 punkty. 
+ 
+ 
+ 
+  
+
+===== PAGE 9 =====
+
+ 
+ 
+Strona 9 z 34 
+Zadanie 8. (0−3) 
+V. Rozumowanie 
+i argumentacja. 
+2. Wyrażenia algebraiczne. Zdający rozkłada wielomian 
+na czynniki, stosując wzory skróconego mnożenia lub 
+wyłączając wspólny czynnik przed nawias (R2.3). 
+SP2. Działania na liczbach naturalnych. Zdający 
+rozpoznaje liczby naturalne podzielne przez 2, 3 
+(SP2.3). 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób  
+Zauważmy, że () () () mkmkkmmkkmkmmk −+=−=− 2233 . 
+Rozwiązanie zadania składa się z dwóch etapów: 
+• uzasadnienie podzielności przez 2; 
+• uzasadnienie podzielności przez 3. 
+Podzielność przez 2. 
+Gdy którakolwiek z liczb k, m  jest parzysta, to iloczyn ( )22 mkkm −  jest parzysty, a gdy obie  
+liczby k, m  są nieparzyste, to ich suma km+  jest liczbą parzystą, więc iloczyn 
+() ()km k m k m+−  jest podzielny przez 2. 
+Podzielność przez 3. (I sposób) 
+Dowód przeprowadzimy w czterech rozłącznych sytuacjach: A, B, C, D. 
+ A.  Którakolwiek z liczb k, m  jest podzielna przez 3 
+Wtedy iloczyn ( )22 mkkm −  jest podzielny przez 3. 
+B. Obie liczby k, m  przy dzieleniu przez 3 dają resztę 1  
+Wtedy liczba mk −  jest podzielna przez 3, więc iloczyn () ()km k m k m+−  jest 
+podzielny przez 3. 
+C. Obie liczby k, m  przy dzieleniu przez 3 dają resztę 2 
+Wtedy liczba mk −  jest podzielna przez 3, więc iloczyn () ()km k m k m+−  jest 
+podzielny przez 3. 
+D. Jedna z liczb k, m  przy dzieleniu przez 3 daje resztę 1, a druga przy dzieleniu przez 3 
+daje resztę 2  
+Wtedy liczba mk +  jest podzielna przez 3, więc iloczyn () ()km k m k m+−  jest 
+podzielny przez 3.  
+ 
+Podzielność przez 3. (II sposób) 
+Dowód przeprowadzimy w dwóch rozłącznych sytuacjach: E, F. 
+E.  Którakolwiek z liczb k, m  jest podzielna przez 3. 
+Wtedy iloczyn ( )22 mkkm −  jest podzielny przez 3. 
+F.  Żadna z liczb k, m  nie jest podzielna przez 3. 
+Wtedy kwadrat każdej z nich przy dzieleniu przez 3 daje resztę 1, więc różnica 
+22km−  jest podzielna przez 3. 
+Wykazaliśmy zatem, że liczba 33km k m− jest podzielna przez 2 i przez 3, wi ęc jest podzielna 
+przez 32 ⋅ , czyli przez 6. To kończy dowód. 
+  
+
+===== PAGE 10 =====
+
+ 
+ 
+Strona 10 z 34 
+II sposób  
+Zauważmy, że 
+() ( ) ( ) () () ( ) ( )
+33 2 2 2 2 11 1 1 1 1 1 1k m km km k m km k km m km k k km m m−= − + −= − − − = −+ − − +
+Iloczyn () () 11kk k −+  to iloczyn trzech kolejnych liczb ca łkowitych, wi ęc dok ładnie jedna 
+z nich jest podzielna przez 3 i co najm niej jedna jest podzielna przez 2, wi ęc iloczyn jest 
+podzielny przez 2 i przez 3, a wi ęc jest podzielny przez 6. Analogicznie iloczyn 
+() () 11mm m−+  jest podzielny przez 6. Ró żnica dwóch liczb podzielnych przez 6 jest 
+podzielna przez 6. To kończy dowód. 
+Schemat punktowania 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+jeśli 
+• uzasadni podzielność przez 2 
+albo 
+• uzasadni podzielność przez 3 w dwóch przypadkach spośród A, B, C, D, 
+albo 
+• uzasadni podzielność przez 3 w przypadku F. 
+Zdający otrzymuje  .............................................................................................................. 2 p. 
+jeśli 
+• uzasadni podzielno ść przez 2 i uzasadni podzielno ść przez 3 w dwóch przypadkach 
+spośród A, B, C, D 
+albo 
+• uzasadni podzielność przez 2 i uzasadni podzielność przez 3 w przypadku F, 
+albo 
+• uzasadni podzielność przez 3, 
+albo 
+• zapisze liczbę 33km k m−  w postaci  () () ( ) ( )11 1 1km k k km m m−+ − − + . 
+ 
+Zdający otrzymuje  .............................................................................................................. 3 p. 
+przeprowadzi pełne rozumowanie uzasadniające podzielność przez 6. 
+ 
+Uwagi  
+1. Akceptujemy sytuację,  w której zdający stwierdza bez uzasadnienia, że iloczyn trzech 
+kolejnych liczb ca łkowitych jest podzie lny przez 6 oraz ró żnica liczb podzielnych 
+przez 6 jest podzielna przez 6. 
+2. Jeżeli zdający rozważa reszty z dzielenia liczb k i m przez 6 i udowodni podzielno ść 
+przez 6 w jednym z poniższych 5 przypadków: 
+- dok ładnie jedna z liczb k, m jest podzielna przez 6 lub obie liczby k, m daj ą przy 
+dzieleniu przez 6 tę samą resztę; 
+- żadna z liczb k, m nie jest podzielna przez 6, a o podzielno ści liczby k3m − km3 
+można wnioskować na podstawie iloczynu liczb k, m; 
+- żadna z liczb k, m nie jest podzielna przez 6, a o podzielno ści liczby k3m − km3 
+można wnioskować na podstawie sumy liczb k, m; 
+- żadna z liczb k, m nie jest podzielna przez 6, a o podzielno ści liczby k3m − km3 
+można wnioskować na podstawie sumy i iloczynu liczb k, m; 
+- żadna z liczb k, m nie jest podzielna przez 6, a o podzielno ści liczby k3m − km3 
+można wnioskować na podstawie różnicy i iloczynu liczb k, m, 
+to otrzymuje 1 punkt. 
+
+===== PAGE 11 =====
+
+ 
+ 
+Strona 11 z 34 
+3. Jeżeli zdający rozważa reszty z dzielenia liczb k i m przez 6 i udowodni podzielno ść 
+przez 6 w trzech z poniższych 5 przypadków: 
+- dok ładnie jedna z liczb k, m jest podzielna przez 6 lub obie liczby k, m daj ą przy 
+dzieleniu przez 6 tę samą resztę; 
+- żadna z liczb k, m nie jest podzielna przez 6, a o podzielno ści liczby k3m − km3 
+można wnioskować na podstawie iloczynu liczb k, m; 
+- żadna z liczb k, m nie jest podzielna przez 6, a o podzielno ści liczby k3m − km3 
+można wnioskować na podstawie sumy liczb k, m; 
+- żadna z liczb k, m nie jest podzielna przez 6, a o podzielno ści liczby k3m − km3 
+można wnioskować na podstawie sumy i iloczynu liczb k, m; 
+- żadna z liczb k, m nie jest podzielna przez 6, a o podzielno ści liczby k3m − km3 
+można wnioskować na podstawie różnicy i iloczynu liczb k, m, 
+to otrzymuje 2 punkty. 
+ 
+ 
+ 
+Zadanie 9. (0−4) 
+III. Modelowanie 
+matematyczne. 
+10. Elementy statystyki opisowej. Teoria 
+prawdopodobieństwa i kombinatoryka. Zdający 
+wykorzystuje wzory na liczbę permutacji, kombinacji, 
+wariacji i wariacji z powtórzeniami do zliczania 
+obiektów w bardziej złożonych sytuacjach 
+kombinatorycznych (R10.1). Zdający oblicza 
+prawdopodobieństwa w prostych sytuacjach, stosując 
+klasyczną definicję prawdopodobieństwa (10.3). 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób  
+Zdarzeniami elementarnymi s ą permutacje (bez powtórze ń) zbioru o śmioelementowego 
+{ }1, 2, 3, 4, 5, 6, 7, 9 .  
+Liczba wszystkich zdarzeń elementarnych jest równa 8!Ω= . 
+Niech A b ędzie zdarzeniem, polegaj ącym na tym, że żadne dwie liczby parzyste nie s ą 
+sąsiednimi wyrazami utworzonego ci ągu. Ustalmy liczb ę wszystkich zdarze ń elementarnych 
+sprzyjających zdarzeniu A. 
+ 
+I metoda 
+W zbiorze Z jest 5 liczb nieparzystych, wi ęc mo żemy je ustawi ć w ci ąg na 5! sposobów. 
+Otrzymamy wtedy sytuację: 
+_(1)_ n _(2)_  n _(3)_  n _(4)_  n _(5)_  n_(6)_ 
+Pierwszą z pozosta łych liczb (parzystych) zbioru Z mo żemy ustawi ć na jednym z sze ściu 
+miejsc _(1)_  – _(6)_, drugą na jednym z pozosta łych pięciu, a trzeci ą na jednym z pozosta łych 
+czterech.  
+Zatem 5! 6 5 4A =⋅ ⋅ ⋅ . 
+ 
+ 
+  
+
+===== PAGE 12 =====
+
+ 
+ 
+Strona 12 z 34 
+II metoda 
+W zbiorze Z jest 5 liczb nieparzystych, więc możemy je ustawić w ciąg na 5! sposobów. 
+Otrzymamy wtedy sytuację: 
+_(1)_ n _(2)_  n _(3)_  n _(4)_  n _(5)_  n_(6)_ 
+Trzy pozostałe liczby (parzyste) ze zbioru Z musimy ustawić na wybranych trzech miejscach 
+spośród sześciu miejsc _(1)_  – _(6)_.  Te trzy miejsca mo żemy wybrać na ()6
+3  sposobów. Na 
+tych trzech ustalonych miejscach mo żemy trzy liczby parzyste ze zbioru Z ustawić na 3! 
+sposobów. 
+Zatem ()6
+35! 3!A =⋅ ⋅ . 
+ 
+III metoda (ustalenie kolejności parzystych, a następnie ustalenie pozycji parzystych) 
+W zbiorze Z mamy 3 liczby parzyste: 2, 4, 6. Mo żemy ustawi ć je w kolejno ści na 3! 6=  
+sposobów. Jedną z takich możliwości jest kolejność: 2, 4, 6. 
+Wypiszmy wszystkie przypadki ustawienia tych trzech liczb w kolejności 2, 4, 6 w ciągu  
+8-wyrazowym:  
+(a) 2 na pierwszym miejscu  
+2 – 4 – 6 – – –, 2 – 4 – – 6 – –, 2 – 4 – – – 6 –, 2 – 4 – – – – 6, 2 – – 4 – 6 – –, 
+2 – – 4 – – 6 –, 2 – – 4 – – – 6, 2 – – – 4 – 6 –, 2 – – – 4 – – 6, 2 – – – – 4 – 6, 
+(b) 2 na drugim miejscu  
+– 2 – 4 – 6 – –, – 2 – 4 – – 6 –, – 2 – 4 – – – 6, – 2 – – 4 – 6 –, – 2 – – 4 – – 6, 
+– 2 – – – 4 – 6,  
+(c) 2 na trzecim miejscu  
+– – 2 – 4 – 6 –, – – 2 – 4 – – 6, – – 2 – – 4 – 6,  
+(d) 2 na czwartym miejscu  
+– – – 2 – 4 – 6. 
+Łącznie mamy 20 przypadków ustawienia w ci ągu 8-wyrazowym trzech liczb parzystych  
+– 2, 4, 6 – w kolejności 2, 4, 6.  
+Ponieważ mamy 6 mo żliwości ustalenia kolejno ści dla trzech liczb 2, 4, 6, wi ęc liczby 
+parzyste ze zbioru Z możemy ustawić na 
+62 0⋅  sposobów. 
+Do ustawionych liczb parzystych na wolne miejsca ustawiamy liczby nieparzyste, a mo żemy 
+to zrobić na 5! sposobów. 
+Zatem 62 05 !A =⋅ ⋅ . 
+ 
+IV metoda (ustalenie pozycji parzystych) 
+Wypiszmy wszystkie przypadki  wyboru trzech miejsc, spo śród o śmiu, dla liczb parzystych, 
+z uwzględnieniem warunku, że żadne dwie parzyste nie sąsiadują ze sobą.  
+(a) pierwsza liczba parzysta na pierwszym miejscu  
+p – p – p – – –, p – p – – p – –, p – p – – – p –, p – p – – – – p, p – – p – p – –, 
+p – – p – – p –, p – – p – – – p, p – – – p – p –, p – – – p – – p, p – – – – p – p, 
+(b) pierwsza liczba parzysta na drugim miejscu  
+– p – p – p – –, – p – p – – p –, – p – p – – – p, – p – – p – p –, – p – – p – – p, 
+– p – – – p – p,  
+(c) pierwsza liczba parzysta na trzecim miejscu  
+– – p – p – p –, – – p – p – – p, – – p – – p – p,  
+(d) pierwsza liczba parzysta na czwartym miejscu  
+– – – p – p – p. 
+Łącznie mamy 20 przypadków ustalenia w ciągu 8-wyrazowym pozycji liczb parzystych.  
+Zatem 
+20 3! 5!A =⋅ ⋅ . 
+  
+
+===== PAGE 13 =====
+
+ 
+ 
+Strona 13 z 34 
+Uwaga! Te same przypadki wyboru uzyskamy, wypisuj ąc wszystkie ustawienia liczb 
+parzystych i nieparzystych przy za łożeniu, że rozpoczynamy najpierw od liczby parzystej (10 
+przypadków), a następnie od nieparzystej (kolejne 10 przypadków). Ponadto należy pamiętać, 
+że przedstawione tu przypadki ustawie ń liczb parzystych (a tym samym i nieparzystych) 
+mogą być przedstawione jako gałęzie drzewa probabilistycznego z 20 gałęziami. 
+ 
+V metoda (przerwy między parzystymi) 
+Trzy liczby parzyste musimy rozdzieli ć pi ęcioma nieparzystymi, przy czym nieparzyste 
+możemy umieszcza ć tak że przed wszystkimi parzystymi lub po wszystkich parzystych. 
+Mamy zatem 4 usytuowania dla liczb nieparzystych. 
+Wypiszmy najpierw przypadki uwzgl ędniające liczb ę pozycji dla liczb nieparzystych 
+w poszczególnych usytuowaniach (cyfra oznacza liczb ę miejsc zaj ętych przez liczby 
+nieparzyste, litera p oznacza liczbę parzystą). 
+0-p-1-p-1-p-3, 0-p-1-p-2-p-2, 0-p-1-p-3-p-1, 0-p-1-p-4-p-0, 0-p-2-p-1-p-2, 0-p-2-p-2-p-1,  
+0-p-2-p-3-p-0, 0-p-3-p-1-p-1, 0- p-3-p-2-p-0, 0-p-4-p-1-p-0, 1- p-1-p-1-p-1, 1- p-1-p-2-p-1,  
+1-p-1-p-3-p-0, 1-p-2-p-1-p-1, 1-p-2-p-2-p-0, 1-p-3-p-1-p-0, 2-p-1-p-1-p-1, 2-p-1-p-2-p-0,  
+2-p-2-p-1-p-0, 3-p-1-p-1-p-0 
+Łącznie mamy 20 takich przypadków.  
+Zatem 
+20 3! 5!A =⋅ ⋅ . 
+Obliczamy prawdopodobieństwo:  
+() 20 3! 5! 10 5
+8! 28 14PA ⋅⋅== = . 
+ 
+II sposób (zdarzenie przeciwne) 
+Zdarzeniami elementarnymi s ą permutacje (bez powtórze ń) zbioru o śmioelementowego 
+{ }1, 2, 3, 4, 5, 6, 7, 9 .  
+Liczba wszystkich zdarzeń elementarnych jest równa 8!Ω=  
+Niech A b ędzie zdarzeniem, polegaj ącym na tym, że żadne dwie liczby parzyste nie s ą 
+sąsiednimi wyrazami utworzonego ciągu. 
+Zdarzeniem przeciwnym  jest otrzym anie w wyniku permutacji zbioru Z ciągu, w którym 
+liczby parzyste są sąsiednimi wyrazami ciągu, tzn.  
+I: wszystkie trzy liczby parzyste będą kolejnymi wyrazami ciągu  
+albo  
+II. dwie licz by parzyste b ędą kolejnymi wyrazami ci ągu, a trzecia liczba parzysta nie b ędzie 
+sąsiadować z żadną z nich. 
+W sytuacji I miejsca dla liczb parzystych w ybieramy na 6 sposobów, ustawiamy na tych 
+miejscach liczby parzyste na 3! sposobów, a pozosta łe liczby ustawiamy na pi ęciu miejscach 
+na 
+5! sposobów. 
+W sytuacji II. dla sąsiadujących liczb parzystych wybieramy miejsca na 7 sposobów:  
+m1 i m2, m2 i m3, m3 i m4, m4 i m5, m5 i m6, m6 i m7, m7 i m8. 
+Miejsce dla trzeciej parzystej liczby mo żemy wybra ć: na 5 sposobów wtedy, gdy parzyste 
+liczby sąsiadują na miejscach m 1 i m2 albo na miejscach m 7 i m8 oraz na 4 sposoby w ka żdej 
+z pozostałych możliwości. 
+Liczby parzyste mo żemy rozstawi ć na wybranych miejscach na 3! sposobów, a pozosta łe 
+liczby ustawiamy na pięciu miejscach na 5! sposobów. 
+Wszystkich zdarzeń elementarnych sprzyjających zdarzeniu  jest: 
+6 3 !5 ! 2 5 3 !5 ! 5 4 3 !5 !⋅⋅+⋅⋅⋅+⋅⋅⋅ . 
+  
+A′
+A′
+
+===== PAGE 14 =====
+
+ 
+ 
+Strona 14 z 34 
+Obliczamy prawdopodobieństwo zdarzenia A:  
+() ( ) 36 3! 5! 36 6 36 20 511 11 8! 6 7 8 56 56 14PA PA ⋅⋅ ⋅′=− =− =− =− = = ⋅⋅ . 
+Uwaga! Zdaj ący mo że wypisywa ć przypadki, w których wyst ąpią zdarzenia elementarne 
+sprzyjające zdarzeniu , stosuj ąc metody analogiczne do metod III, IV, V z I sposobu 
+rozwiązania, i uwzględnić 36 rozłącznych przypadków. 
+ 
+Schemat punktowania  
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania  .........................................................................................................................  1 p. 
+Zdający 
+• zapisze 8!Ω=  
+albo 
+• wypisze przynajmniej 11 różnych przypadków spośród 20, gdy rozpatruje zdarzenie A 
+albo 
+• wypisze przynajmniej 19 różnych przypadków spośród 36, gdy rozpatruje zdarzenie A′, 
+albo 
+• zapisze, że jest ()6
+3  lub 654⋅⋅  przypadków, gdy rozp atruje zdarzenie A (lub 
+62 55 4+⋅+⋅  przypadków, gdy rozpatruje zdarzenie A′),  
+albo 
+• zapisze iloczyn 3! 5!⋅  lub w inny sposób zaznaczy uwzgl ędnienie iloczynu 3! 5!⋅ , 
+wynikającego z permutacji liczb parzystych i liczb  nieparzystych na wybranych dla nich 
+miejscach,  
+albo 
+• narysuje drzewo z wyró żnionymi co najmniej 11 ró żnymi istotnymi ga łęziami 
+odpowiadającymi zdarzeniu A (albo z wyró żnionymi co najmniej 19 ró żnymi istotnymi 
+gałęziami odpowiadającymi zdarzeniu ), 
+albo 
+• narysuje niepe łne drzewo (mo że wyst ąpić brak istotnych ga łęzi odpowiadaj ących 
+zdarzeniu A lub ), ale na wszystkich odc inkach co najmniej jednej ga łęzi zapisze 
+prawdopodobieństwa, przy czym ga łąź ta musi uwzgl ędniać jeden z przypadków: 
+wylosowano 3 parzyste liczby lub wylosowano 7 liczb 
+i na tym zakończy lub dalej popełnia błędy. 
+Rozwiązanie, w którym jest istotny postęp  ......................................................................  2 p. 
+Zdający 
+• zapisze 8!Ω=  i wypisze przynajmniej 11 ró żnych przypadków spo śród 20, gdy 
+rozpatruje zdarzenie A, 
+albo 
+• zapisze 8!Ω=  i wypisze przynajmniej 19 ró żnych przypadków spo śród 36, gdy 
+rozpatruje zdarzenie A′, 
+albo 
+• zapisze 8!Ω=  i zapisze, że jest ()6
+3  lub 654⋅⋅  przypadków, gdy rozpatruje zdarzenie A 
+(lub 62 55 4+⋅+⋅  przypadków, gdy rozpatruje zdarzenie A′), 
+  
+A′
+A′
+A′
+
+===== PAGE 15 =====
+
+ 
+ 
+Strona 15 z 34 
+albo 
+• zapisze ()6
+3 3! 5!A =⋅ ⋅  lub 6545 !A =⋅ ⋅⋅  lub 20 3! 5!A =⋅ ⋅  lub 
+()62 55 43 ! 5 !A′=+ ⋅ + ⋅ ⋅ ⋅   lub 36 3! 5!′=⋅ ⋅A , 
+albo 
+• narysuje drzewo z wyró żnionymi co najmniej 11 ró żnymi istotnymi ga łęziami 
+odpowiadającymi zdarzeniu A (albo z wyró żnionymi co najmniej 19 ró żnymi istotnymi 
+gałęziami odpowiadającymi zdarzeniu ) i na wszystkich odcinkach co najmniej jednej 
+gałęzi zapisze prawdopodobie ństwa, przy czym ga łąź ta musi uwzgl ędniać jeden 
+z przypadków: wylosowano 3 parzyste liczby lub wylosowano 7 liczb 
+i na tym zakończy lub dalej popełnia błędy. 
+Pokonanie zasadniczych trudności zadania  .....................................................................  3 p. 
+Zdający  
+• zapisze 8!Ω=  i zapisze  ()6
+3 3! 5!A =⋅ ⋅  lub 6545 !A =⋅ ⋅⋅  lub 20 3! 5!A =⋅ ⋅   
+lub ()62 55 43 ! 5 !A′=+ ⋅ + ⋅ ⋅ ⋅   lub 36 3! 5!′=⋅ ⋅A  
+albo 
+• zapisze prawdopodobieństwo zdarzenia A (albo ) zgodnie z „metod ą drzewkową”. 
+Rozwiązanie pełne  ..............................................................................................................  4 p. 
+Zdający obliczy prawdopodobieństwo: () 5
+14PA = . 
+Uwagi 
+1. Możemy te ż rozpatrywa ć model probabilistyczny, w którym zdarzeniem elementarnym 
+jest 3 elementowy podzbiór zbio ru 8 elementowego (nie uwzgl ędniamy wówczas 
+kolejności ustawienia liczb ni eparzystych ani kolejno ści ustawienia liczb parzystych, 
+a jedynie pozycje zajmowan e przez te liczby). Wtedy ()8
+3 56Ω= = , ()6
+3 20A == , 
+() 5
+14PA = . 
+2. Jeżeli zdaj ący b łędnie za łoży, że podany w tre ści zadania o śmioelementowy zbiór  Z 
+zawiera 4 liczby parzyste i 4 liczby nieparzyste (np. za łoży, że zbiór Z zawiera liczb ę 
+8 zamiast 9) i rozwi ąże zadanie do ko ńca, otrzymuj ąc () 54 !4 ! 1
+8! 14PA ⋅⋅== , to otrzymuje 
+2 punkty. Zdający otrzymuje w tej sytuacji 1 punkt tylko za zapisanie 8!Ω= . 
+3. Jeżeli zdaj ący b łędnie za łoży, że podany w tre ści zadania zbiór Z jest 9-elementowy 
+(i zawiera 4 liczby parzyste i 5 liczby nieparzystych) i konsekwentnie rozwiąże zadanie do 
+końca, to otrzymuje 3 punkty. 
+4. Jeżeli zdający zapisze |Ω|=8! oraz rozpatrując zdarzenie A′ rozważy trzy sytuacje: 
+I. wszystkie trzy liczby parzyste są kolejnymi wyrazami ciągu; 
+II. dwie liczby parzyste s ą dwoma skrajnymi (pierwszym i drugim lub siódmym 
+i ósmym) wyrazami ciągu, a trzecia liczba parzysta nie sąsiaduje bezpośrednio z żadną 
+z nich; 
+III. dwie liczby parzyste s ą dwoma kolejnymi, ale nie skrajnymi wyrazami ci ągu, 
+a trzecia parzysta nie sąsiaduje bezpośrednio z żadną  z nich 
+oraz zapisze sposób zliczania tych ci ągów w każdej z tych trzech sytuacji, uwzgl ędniający 
+permutacje liczb parzystych i liczb nieparzystych i jednoczenie gwarantuj ący to, że żaden 
+ciąg nie zostanie policzony wielokrotnie; 
+a ponadto nie ustali poprawnej liczby wszystkich zdarze ń elementarnych sprzyjaj ących 
+zdarzeniu A′, to otrzymuje 
+2 punkty. 
+A′
+A′
+
+===== PAGE 16 =====
+
+ 
+ 
+Strona 16 z 34 
+5. Jeżeli zdaj ący rozwa ża zdarzenie A i wypisuje przynajmniej  12 przypadków, ale jeden 
+z nich zapisuje dwukrotnie, to otrzymuje przynajmniej 1 punkt. Dotyczy to tak że sytuacji 
+wypisania 21 przypadków. 
+ 
+ 
+Zadanie 10. (0−4) 
+IV. Użycie i tworzenie strategii. 
+9. Stereometria. Zdający rozpoznaje w walcach 
+i w stożkach kąt między odcinkami oraz kąt między 
+odcinkami i płaszczyznami (9.3).  
+3. Równania i nierówności. Zdający rozwiązuje 
+równania kwadratowe z jedną niewiadomą (3.4). 
+ 
+Przykładowe rozwiązanie 
+ 
+Przekrojem osiowym stożka jest trapez równoramienny ABCD. Niech DE oznacza wysokość 
+stożka opuszczoną z punktu D. 
+ 
+Po podstawieniu danych do wzoru na objętość otrzymujemy równanie kwadratowe 
+()
+221 10 6 6 8403 RRπ⋅ ⋅ + + = π . 
+Stąd 
+2 62 1 6 0RR+− = . 
+Rozwiązując je, otrzymujemy 
+36 4 216 900, 30Δ= + ⋅ = Δ= , 
+63 0 18 02R −−== − <  lub 63 0 122R −+== . 
+Przekrojem osiowym tego sto żka jest trapez równor amienny o podstawach d ługości 24 i 12 
+oraz wysokości 10. Długość odcinka EB jest równa  
+12 6 18EB R r=+ = + = . 
+Z twierdzenia Pitagorasa dla trójkąta BDE otrzymujemy 
+2210 18 424 2 106BD =+ = = . 
+Zatem 18 9cos
+2 106 106
+DBE == . 
+ 
+Schemat punktowania  
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania ..........................................................................................................................  1 p. 
+Zdający wyznaczy promień R większej podstawy: 12R =  i na tym zakończy lub dalej popełni 
+błędy. 
+C
+BA
+D
+E
+
+===== PAGE 17 =====
+
+ 
+ 
+Strona 17 z 34 
+Rozwiązanie, w którym jest istotny postęp ........................................................................ 2 p. 
+Zdający wyznaczy promień R większej podstawy: 12R =  i długość odcinka EB: 18EB = ,  
+i na tym zakończy lub dalej popełni błędy. 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p.  
+Zdający obliczy  
+• długość przekątnej trapezu 2 106BD =   
+albo 
+• obliczy tangens kąta DBE:  5
+9tg DBE =  
+ i na tym zakończy lub dalej popełni błędy. 
+Rozwiązanie pełne  ............................................................................................................... 4 p. 
+Zdający obliczy 9
+106cos DBE = . 
+Uwagi 
+1. Jeżeli zdaj ący zapisze cosinus k ąta nachylenia przek ątnej przekroju osiowego tego 
+stożka ściętego do jednej z jego podstaw w zale żności od R, r, H i na tym zako ńczy 
+lub dalej popełnia błędy, to otrzymuje 2 punkty. 
+2. Jeżeli zdaj ący pope łni b łąd merytoryczny przy zastosowaniu twierdzenia Pitagorasa, 
+pisząc np.: | EB|2 + |BD|2 = |ED|2, albo pope łni błąd merytoryczny przez zastosowanie 
+nieistniejącego wzoru "pierwiastek sumy = suma pierwiastków", to może otrzymać co 
+najwyżej 2 punkty za całe rozwiązanie.  
+3. Jeżeli zdaj ący b łędnie przyjmie, że wysoko ścią sto żka jest odcinek AD, to mo że 
+otrzymać co najwyżej 1 punkt, o ile poprawnie obliczy R.  
+4. Jeżeli zdaj ący realizuje strategi ę rozwi ązania zadania i pope łnia jedynie b łędy 
+rachunkowe, to mo że otrzyma ć 3 punkty , o ile pope łnione b łędy nie u łatwiają 
+rozwiązania na żadnym etapie. 
+5. Jeżeli zdaj ący obliczy d ługość R oraz d ługość ramienia trapezu, to mo że otrzyma ć 
+2 punkty. Jeżeli zdający obliczy d ługość R oraz d ługość ramienia trapezu, a ponadto 
+obliczy długość BD i zapisze twierdzenie cosinusów, to może otrzymać 3 punkty. 
+6. Jeżeli zdaj ący b łędnie przyjmuje, że średnica górnej podstawy sto żka ściętego ma 
+długość 6, to otrzymuje co najwyżej 3 punkty. 
+7. Jeżeli zdający błędnie przyjmuje, że długość rzutu prostok ątnego ramienia trapezu na 
+dłuższą podstaw ę to ró żnica średnic dolnej i górnej podstawy zamiast po łowy tej 
+różnicy i nie jest to błąd wynikający z rachunków, to otrzymuje co najwyżej 2 punkty 
+za całe rozwiązanie.   
+ 
+ 
+ 
+  
+
+===== PAGE 18 =====
+
+ 
+ 
+Strona 18 z 34 
+Zadanie 11. (0−4) 
+IV. Użycie i tworzenie strategii. 
+6. Trygonometria. Zdający stosuje wzory na sinus 
+i cosinus sumy i różnicy kątów, sumę i różnicę sinusów 
+i cosinusów kątów (R6.5). Zdający rozwiązuje 
+równania i nierówności trygonometryczne (R6.6). 
+ 
+Przykładowe rozwiązanie 
+Przekształcamy równanie w sposób równoważny  
+sin 6 cos3 2sin 3 1x xx+= + , 
+2sin3 cos3 cos3 2sin3 1x xx x+= + , 
+()cos3 2sin3 1 2sin3 1x xx+= + , 
+() ( )2sin3 1 cos3 1 0xx+− = , 
+1
+2sin 3x =−  lub cos 3 1x = .  
+Stąd  732 6x kπ π=+  lub 1132 6x kπ π=+  lub 32x kπ= ,  k – liczba całkowita. 
+Zatem 72
+18 3
+kx ππ=+  lub 11 2
+18 3
+kx ππ=+  lub 2
+3
+kx π= . 
+W przedziale 0,π  mamy następujące rozwiązania równania: 7
+18x π= , 11
+18x π= , 0x = , 2
+3x π= . 
+ 
+Schemat punktowania 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania ........................................................................................................................... 1 p. 
+Zdający zastosuje wzór na sinus kąta podwojonego i zapisze równanie w postaci 
+2sin 3 cos3 cos3 2sin 3 1x xx x+= + , i na tym zakończy lub dalej popełnia błędy. 
+Rozwiązanie, w którym jest istotny postęp  ....................................................................... 2 p. 
+Zdający zapisze dwa równania 1sin 3 2x =−  , cos 3 1x = . 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p.  
+Zdający  
+• zapisze wszystkie rozwi ązania równa ń 1sin 3 2x =−  oraz cos 3 1x =  w zbiorze liczb 
+rzeczywistych 72
+18 3
+kx ππ=+  lub 11 2
+18 3
+kx ππ=+  lub 2
+3
+kx π=  
+albo 
+• zapisze dwa równania 1sin 3 2x =−  oraz cos 3 1x =  i jedno z nich rozwi ąże 
+w przedziale 0,π  
+i na tym zakończy lub dalej popełnia błędy. 
+  
+
+===== PAGE 19 =====
+
+ 
+ 
+Strona 19 z 34 
+Rozwiązanie pełne ................................................................................................................ 4 p. 
+Zdający zapisze wszystkie rozwiązania równania w przedziale 0,π : 7
+18x π= , 11
+18x π= , 
+0x = , 2
+3x π= . 
+ 
+Uwagi 
+1. Je żeli zdaj ący poprawnie stosuje wzór na sinus k ąta podwojonego, zapisze tylko jedno 
+z równań cos 3 1x = , 1
+2sin 3x =−  , to otrzymuje  
+1 punkt, jeśli rozwiąże to równanie w R; 
+2 punkty, jeśli rozwiąże to równanie w 0,π . 
+2. Je żeli zdaj ący poprawnie stosuje wzór na sinus k ąta podwojonego i poprawnie zapisze 
+równanie równoważne w postaci, w której z jednej strony wyst ępuje iloczyn, a z drugiej zero, 
+ale w wyniku b łędów zapisuje jedno równanie lub dwa równania z niew łaściwym znakiem 
+przy stałej, to otrzymuje: 
+3 punkty, o ile konsekwentnie rozwiąże obydwa równania w przedziale 0,π ; 
+2 punkty, o ile konsekwentnie rozwi ąże dwa równania w R lub konsekwentnie rozwi ąże 
+jedno równanie w 0,π ; 
+1 punkt, o ile konsekwentnie rozwiąże jedno równanie w R. 
+4. Jeżeli zdaj ący wyznacza rozwi ązania równa ń cos 1α =  oraz 1
+2sinα =− , gdzie 3xα = , 
+w przedziale 0,3π  i na tym poprzestaje lub dalej pope łnia b łędy, to otrzymuje co 
+najwyżej 3 punkty. 
+5. Jeżeli zdaj ący przy wyznaczaniu rozwi ązań równa ń cos 3 1x =  oraz 1
+2sin 3x =−  zapisuje 
+poprawnie serię rozwiązań pierwszego z nich (z cos) oraz jedn ą serię rozwiązań drugiego  
+(z sin), a następnie konsekwentnie wyznacza przynajmniej 4 rozwiązania równania z treści 
+zadania w przedziale 0,π , to otrzymuje co najwyżej 3 punkty. 
+ 
+ 
+ 
+ 
+Zadanie 12. (0−6) 
+III. Modelowanie 
+matematyczne.  
+3. Równania i nierówności. Zdający stosuje wzory 
+Viète’a (R3.1). 
+ 
+Przykładowe rozwiązanie 
+Równanie ma dwa różne rozwiązania rzeczywiste, gdy jego wyróżnik jest dodatni, czyli 
+() ()
+2 214 1 1 0mmΔ= + − ⋅ ⋅ − + >  
+252 3 0mm+− >  
+1 1m =− , 2
+3
+5m = . 
+Stąd () ()3
+5,1 ,m∈− ∞− ∪ + ∞  
+
+===== PAGE 20 =====
+
+ 
+ 
+Strona 20 z 34 
+Warunek  mo żemy zapisać w postaci równoważnej 
+() ()
+22
+121 1 22 1 2 7x xx x xx x x+− + > − , 
+() () ()
+2
+12 12 1 2 1 2 37x xx x x x x x++ − > − . 
+Ze wzorów Viète’a na sumę i iloczyn pierwiastków trójmianu kwadratowego możemy tę 
+nierówność zapisać w postaci:  
+() ()
+2
+37bb c caa a a−−  −> −  
+() () () ()( ) ()
+2 2211 3 1 7 1mm m m−+ −+ − −+> − −+  
+() () () ()
+3 2213 1 1 7 1mm m m−++ +−+ > − −+  
+() () () ()
+3 2213 1 1 7 1 0mm m m−++ +−+ + −+ >  
+() () () ()()
+2 211 3 1 7 1 0mm m m+−++ −+ + − +>  
+() ()
+2212 1 3 3 7 7 0mm m m m+−− − − + + − >  
+() ()
+214 9 90mm m+− − + >  
+1 3m =−   lub  2
+3
+4m =  lub 3 1m =− . 
+() () 3
+431m, ,∈− ∞− ∪− . 
+Wyznaczamy część wspólną zbiorów () ()3
+51,,−∞ − ∪ + ∞  i () () 3
+431, ,−∞ − ∪ − . 
+Odpowiedź () ()33
+5 43m, ,∈− ∞− ∪ . 
+Schemat punktowania 
+Rozwiązanie zadania składa się z trzech etapów. 
+ 
+Pierwszy etap polega na rozwiązaniu nierówności : 
+() ()3
+5,1 ,m ∈− ∞− ∪ + ∞  
+Za poprawne rozwiązanie tego etapu zdający otrzymuje 1 punkt. 
+Uwaga  
+Jeżeli zdający zapisze , to za t ę część otrzymuje 0 punktów. 
+ 
+Drugi etap polega na rozwiązaniu nierówności . 
+Za tę część rozwiązania zdający otrzymuje 4 punkty. 
+Podział punktów za drugi etap rozwiązania: 
+1 punkt zdający otrzymuje za zapisanie nierówności w postaci:  
+() () ()
+2
+12 12 1 2 1 2 37x xx x x x x x++ − > −  
+lub równoważnej. 
+2 punkty zdający otrzymuje za doprowadzenie do nierówności ze zmienną m, np. 
+() () () ()( ) ()
+2 2211 3 1 7 1mm m m−+ −+ − −+> − −+  
+3 punkty zdający otrzymuje za wyznaczenie miejsc zerowych wielomianu  
+() () () ()( ) ()
+2 2211 3 1 7 1mm m m−+ −+ − −++ −+ ,  
+czyli wielomianu 3241 39mm−− + :   3− , 1− , 3
+4  
+33
+12 1 2 7x xx x+> −
+0>Δ
+0Δ≥
+33
+12 1 2 7x xx x+> −
+
+===== PAGE 21 =====
+
+ 
+ 
+Strona 21 z 34 
+4 punkty zdający otrzymuje za rozwiązanie powyższej nierówności.  
+() () 3
+431m, ,∈− ∞− ∪−  
+Trzeci etap polega na wyznaczeniu szukanej wartości parametru m z uwzględnieniem 
+wszystkich warunków. 
+() ()33
+5 43m, ,∈− ∞− ∪ . 
+ 
+Uwagi  
+1. W przypadku otrzymania na jednym z etapów (I lub II) zbioru pustego lub zbioru R jako 
+zbioru rozwiązań nierówności przyznajemy 0 punktów za III etap.  
+2. W przypadku otrzymania w II etapie zbioru rozwi ązań, b ędącego podzbiorem zbioru 
+rozwiązań z I etapu lub otrzymania w I etapie zbioru rozwi ązań, b ędącego podzbiorem 
+zbioru rozwiązań z II etapu, przyznajemy 0 punktów za III etap. 
+3. O ile nie zachodz ą przypadki z uwag 1. i 2. i zdaj ący poprawnie wykona etap I 
+oraz popełnia b łędy w rozwi ązaniu nierówno ści z etapu II, albo gdy pope łnia b łędy 
+w etapie I i otrzyma co najmniej 1 punkt za etap II, to za III etap może otrzymać 1 punkt. 
+4. Jeżeli zdający w II etapie rozwiązania stosuje nieistniejącą zależność: „suma sześcianów = 
+sześcian sumy”, prowadzącą do uproszczenia badanego problemu, lub zdający stosuje inny 
+błędny wzór, prowadz ący do uproszczenia badanego problemu, ale otrzyma nierówno ść 
+wielomianową stopnia trzeciego, uzyska trzy  miejsca zerowe i poprawnie rozwi ązuje 
+otrzymaną nierówność, to za II etap otrzymuje 1 punkt (za rozwiązanie nierówności). 
+5. Jeżeli zdaj ący w II etapie rozwi ązania otrzyma poprawn ą nierówno ść wielomianow ą 
+stopnia 3. i popełnia błędy rachunkowe w jej rozwi ązaniu, to może otrzymać 3 punkty za 
+II etap, o ile wyznaczy 3 ró żne miejsca zerowe wielomianu z tej nierówno ści 
+i konsekwentnie rozwi ąże nierówno ść do ko ńca, za ś w ka żdym innym przypadku 
+otrzymuje 2 punkty za ten etap.  
+6. Jeżeli zdaj ący w II etapie rozwi ązania rozwa ża nierówno ść wielomianow ą stopnia 
+większego ni ż 3. lub niepoprawn ą nierówno ść stopnia 3. i  wyznacza miejsca zerowe 
+w liczbie właściwej dla stopnia wielomianu i otrzymuje przynajmniej 3 miejsca zerowe, to 
+otrzymuje co najwy żej 3 punkty  za II etap, o ile konsekwentnie rozwi ąże nierówno ść. 
+Jeżeli wielomian w tej nierówno ści nie ma trzech ró żnych miejsc zerowych, to zdaj ący 
+może otrzymać co najwyżej 2 punkty za ten etap. 
+7. Jeżeli zdaj ący przy rozwi ązywaniu otrzymanej w II etapie nierówno ści stopnia co 
+najmniej 3. pope łnia b łąd, polegaj ący na niepoprawnym grupowaniu wyrazów, np. 
+z nierówności 3241 39 0mm−− + >  uzyska () ()
+241 3 9 0mm+− > , to nie otrzymuje 
+punktów za części II.3 i II.4. 
+ 
+ 
+ 
+  
+
+===== PAGE 22 =====
+
+ 
+ 
+Strona 22 z 34 
+Zadanie 13. (0−4) 
+III. Modelowanie 
+matematyczne. 
+5. Ciągi. Zdający stosuje wzór na n-ty wyraz i na sumę 
+n początkowych wyrazów ciągu geometrycznego (5.4). 
+ 
+Przykładowe rozwiązanie 
+Niech 1a  będzie pierwszym wyrazem ciągu geometrycznego, zaś q  jego ilorazem. 
+Z treści zadania otrzymujemy układ równań: 
+
+
+
+=+
+−=+
+168
+84
+6
+1
+3
+1
+5
+1
+2
+1
+qaqa
+qaqa  
+()
+()
+
+
+=+
+−=+
+1681
+841
+33
+1
+32
+1
+qqa
+qqa  
+Dzieląc stronami te równania, co mo żemy zrobi ć, gdy ż gdyby którakolwiek z liczb 1a , q , 
+31 q+  była równa 0, to otrzymalibyśmy sprzeczność, otrzymujemy 
+2q =− . 
+Zatem  
+() () ()
+23
+1 21 2 8 4a −+ − = − , 
+128 84a−⋅= − , 
+1 3a = . 
+Otrzymaliśmy ciąg geometryczny () na , w którym: 
+
+
+
+−=
+=
+2
+31
+q
+a
+ 
+Wykorzystując wzór na sum ę n pocz ątkowych wyrazów ci ągu geometrycznego, 
+doprowadzamy do równania postaci  
+()()32 1
+3276921
+n
+−−
+=−− . 
+Przekształcając to równanie, otrzymujemy () 327682 −=−
+n
+. Ponieważ () ()
+15
+22 −=−
+n
+, wi ęc 
+15=n .  
+Schemat punktowania 
+Rozwiązanie, w którym post ęp jest niewielki, ale ko nieczny na drodze do pe łnego 
+rozwiązania . .............................................................................................................................  1 p. 
+Zdający zapisze 
+• układ równań z dwiema niewiadomymi, np.: 
+
+
+
+=+
+−=+
+168
+84
+6
+1
+3
+1
+5
+1
+2
+1
+qaqa
+qaqa   
+albo 
+• układ równań z niewiadomymi q, 3a , 6a , np.: 
+()
+36
+36
+84
+168
+aa
+qa a
++= − +=
+ 
+i na tym zakończy lub dalej popełnia błędy. 
+  
+
+===== PAGE 23 =====
+
+ 
+ 
+Strona 23 z 34 
+Rozwiązanie, w którym jest istotny postęp  ...........................................................................  2 p. 
+Zdający zapisze równanie z jedną niewiadomą 1a  lub q 
+i na tym zakończy lub dalej popełnia błędy. 
+Pokonanie zasadniczych trudności  ......................................................................................... 3 p. 
+Zdający rozwiąże układ równań: 
+
+
+
+−=
+=
+2
+31
+q
+a
+. 
+Rozwiązanie pełne  ...................................................................................................................  4 p. 
+Zdający wyznaczy szukaną liczbę n: 15=n . 
+ 
+Uwagi 
+1. Jeżeli zdaj ący przedstawi poprawn ą strategi ę poszukiwania liczby n, ale otrzyma b łędne  
+wartości 1a  lub q, takie że po podstawieniu do wzoru na nS  otrzymuje równanie, którego 
+rozwiązanie nie jest liczb ą naturaln ą, to mo że otrzyma ć co najwy żej 2 punkty , za 
+realizację rozwiązania do etapu: istotny postęp. 
+2. Jeżeli zdaj ący zapisze 2q =−  bez rozwi ązania uk ładu lub stosownego uzasadnienia, to 
+może otrzymać co najwyżej 2 punkty. 
+3. Jeżeli zdaj ący korzysta przy wyznaczaniu n z zapisanej przez siebie zale żności 
+"− (−2)n = 2n" bez stosownego komentarza, to może otrzymać co najwyżej 3 punkty. 
+ 
+  
+
+===== PAGE 24 =====
+
+ 
+ 
+Strona 24 z 34 
+Zadanie 14. (0−6) 
+IV. Użycie i tworzenie strategii.  
+8. Geometria na płaszczyźnie kartezjańskiej. Zdający 
+posługuje się równaniem okręgu (x – a)2 + (y – b)2 = r2 
+oraz opisuje koła za pomocą nierówności, wyznacza 
+współrzędne środka odcinka, wyznacza równanie 
+prostej, która jest równoległa lub prostopadła do prostej 
+danej w postaci kierunkowej i przechodzi przez dany 
+punkt, oblicza współrzędne punktu przecięcia dwóch 
+prostych, wyznacza punkty wspólne prostej i okręgu 
+oraz oblicza odległość punktu od prostej (R8.5, 8.5, 8.3, 
+8.4, R8.6, R8.4). 
+ 
+Przykładowe rozwiązania 
+I sposób − analitycznie − styczne AC i AB 
+ 
+ 
+Proste AC i AB przechodzą przez punkt ()71A ,=− , żadna z nich nie jest prostopadła do osi 
+Ox układu współrzędnych, więc mają równania postaci 
+() 71ya x=− − , 
+71 0ax y a−− − = . 
+Obie te proste są styczne do okręgu, zatem ich odległości od środka okręgu są równe 
+promieniowi okręgu. Stąd otrzymujemy równanie 
+2
+71 10
+1
+a
+a
+−− =
++
+, 
+() ()
+2 271 1 0 1aa−− = + , 
+2249 14 1 10 10aa a++ = +  
+239 14 9 0aa+− =  
+14 40 9
+78 13a −−== −   lub   14 40 1
+78 3a −+== . 
+Szukane styczne mają więc równania: 95 0
+13 13yx=− + ,  101
+33yx=− . Tylko druga z tych 
+prostych przechodzi przez trzecią ćwiartkę układu współrzędnych, więc prosta AC ma 
+równanie 101
+33yx=− , a prosta AB ma równanie 95 0
+13 13yx=− + . 
+
+
+===== PAGE 25 =====
+
+ 
+ 
+Strona 25 z 34 
+Trójkąt ABC jest równoramienny, a jego ramionami są boki AC i BC. Zatem wierzchołek C 
+leży na przecięciu prostej AC i symetralnej l  boku AB. Prosta l jest prostopadła do prostej AB 
+i przechodzi przez punkt  ()00S,= . Zatem współczynnik kierunkowy prostej l jest równy  
+13
+9la = . Stąd l ma równanie postaci  
+13
+9yx= . 
+Współrzędne wierzchołka C obliczymy, rozwiązując układ równań  
+101
+33yx=−  i 13
+9yx= . 
+Stąd otrzymujemy równanie  
+10 131
+33 9x x−= , 
+10 30
+99x =−  
+3x =− , 
+więc  ()13 13
+93 3y =⋅ − = − , czyli () 13
+33,C =− − . 
+Obliczamy współrzędne punktu D styczności prostej AB z danym okręgiem. Jest to punkt 
+przecięcia prostej l z prostą AB. Wystarczy więc rozwiązać układ równań  
+95 0
+13 13yx=− +  i 13
+9yx= . 
+Stąd otrzymujemy równanie  
+95 0 1 3
+13 13 9x x−+ = , 
+250 50
+117 13x =  
+9
+5x = , 
+więc 13 9 13
+559y =⋅ = , czyli ()91 3
+55,D = . 
+Punkt D jest środkiem odcinka AB, więc  
+( )
+17
+22 ,
+BB yxD −++= . 
+Zatem  
+7 9
+52
+Bx+ =  i 1 13
+52
+By−+ = , 
+17
+5Bx =−  i 31
+5By = . 
+Zatem () 17 31
+55,B =− . 
+  
+
+===== PAGE 26 =====
+
+ 
+ 
+Strona 26 z 34 
+II sposób − syntetycznie – długości odcinków CE i CS 
+ 
+Promień okręgu jest równy . D ługość odcinka SA jest równa 
+. 
+ Z twierdzenia Pitagorasa dla trójkąta ASE otrzymujemy 
+, 
+, 
+, 
+. 
+Z twierdzenia o odcinkach stycznych otrzymujemy . 
+Trójkąty CES i CDA są podobne, gdyż oba są prostokątne i mają wspólny kąt ostry przy 
+wierzchołku C. Stąd wynika  
+ oraz , 
+ oraz , 
+ oraz , 
+ oraz . 
+Stąd  
+, 
+, więc . 
+Uwaga 
+Długości  m i n możemy też obliczyć korzystając z twierdzenia Pitagorasa dla trójkątów ACD 
+i CSE. Otrzymujemy wtedy  
+ oraz , 
+10r =
+()
+2271 5 0 5 2SA =+ − = =
+222
+SA SE EA=+
+250 10 EA=+
+2
+40EA =
+40 2 10EA ==
+21 0DA EA==
+CE CD
+SE DA= CS CA
+SE DA=
+10
+10 2 10
+mn += 21 0
+10 2 10
+nm +=
+21 0mn=+ 21 0nm=+
+21 0nm=− ()2 2 10 10mm−= +
+4 2 10 10mm−= +
+4
+3 10m = 54
+3321 0 1 0 1 0n =⋅ − =
+22 2
+CA CD DA=+
+22 2
+CS CE SE=+
+
+===== PAGE 27 =====
+
+ 
+ 
+Strona 27 z 34 
+ oraz , 
+ oraz , 
+ oraz , 
+ oraz , 
+ oraz , 
+ oraz , 
+ oraz . 
+Zatem długość ramienia AC trójkąta ABC jest równa  
+. 
+Niech . Poniewa ż  i , wi ęc 
+ i , 
+ i . 
+Pierwsze równanie możemy zapisać w postaci 
+. 
+Stąd i z drugiego równania otrzymujemy 
+, 
+, 
+. 
+Stąd i z pierwszego równania mamy 
+, 
+, 
+, 
+, 
+, 
+, 
+, 
+,  
+ lub . 
+Gdy , to , a gdy , to .  
+Ponieważ obie współrzędne punktu C są ujemne, więc . 
+() () ()
+22 2
+21 0 1 0 21 0mn+= + + ()
+222 10nm=+
+22 4 10 40 2 10 10 40mm nn++ = + + + 22 10nm=+
+41 0 2 1 0 2 0mn =+ 22 10nm=+
+21 0mn−= ()
+2 221 0 1 0mm−= +
+21 0mn−= 224 4 10 10 10mm m−+ = +
+21 0mn−= 4
+3 10m =
+5
+3 10n = 4
+3 10m =
+104
+3321 0 1 0 21 0 1 0AC CE EA m=+= + = + =
+() ,Cx y= 10
+3 10AC = 5
+3 10CS =
+2 1000
+9AC =
+2 250
+9CS =
+() ()
+22 1000
+971xy−+ += 22 250
+9xy +=
+22 1000
+914 2 50xy xy+− ++=
+250 1000
+99 14 2 50xy−+ + =
+50
+370xy−+ =
+150
+97yx=+
+()
+22 50 250
+397xx ++ =
+22 700 2500 250
+39 949 0xx x++ +− =
+2 700 2250
+3950 0xx ++=
+2 14
+3 50xx ++ =
+231 4 1 5 0xx ++ =
+239 5 1 5 0xx x+++=
+()()33 5 3 0xx x x+++ =
+() ( )33 5 0xx++ =
+3x =− 5
+3x =−
+3x =− () 50 13
+3373y =⋅ − + = − 5
+3x =− () 55 0
+3375y =⋅ − + =
+() 13
+33,C =− −
+
+===== PAGE 28 =====
+
+ 
+ 
+Strona 28 z 34 
+Niech ()B x,y= . Ponieważ 10
+3 10BC AC==  i  221 0 41 0AB =⋅ = , więc 
+2 1000
+9BC =  i 
+2
+160AB = , 
+() ()
+22 13 1000
+393 xy−− +− − =  i () ()
+22
+71 1 6 0xy−+ += , 
+22 26 250
+3360xy x y+++ − =  i 
+22 14 2 110 0xy xy+− +− = . 
+Stąd  
+14
+33 0xy++ =  i 
+22 14 2 110 0xy xy+− +− = , 
+34yx=− −  i () ()
+22 3 4 14 2 3 4 110 0xx x x+− − − + − − − = . 
+Drugie równanie możemy zapisać w postaci 
+210 4 102 0xx +− = , 
+252 5 1 0xx +−= , 
+()
+2Δ 2 4 5 51 1024=− ⋅ ⋅ − = , Δ 32= , 
+23 2 1 7
+510x −−== −  lub 23 2
+10 3x −+== , 
+Gdy 17
+5x =− , to () 17 31
+5534y =− ⋅ − − = , a gdy 3x = , to 33 4 1 3y =− ⋅ − =− . 
+Ponieważ punkt B nie leży w czwartej ćwiartce układu współrzędnych, więc () 17 31
+55B ,=− . 
+Schemat punktowania  
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania zadania  ............................................................................................................ 1 p. 
+Zdający: 
+a) obliczy długości odcinków stycznych poprowadzonych z punktu A: 
+21 0AD AE==  
+albo 
+b) obliczy współrzędne środka M odcinka AS oraz długość odcinka AS,  
+gdzie ()0, 0S = : () ,7 1
+22M =−  , 52AS = , 
+albo 
+c) obliczy sinus kąta SAE : sin 5
+5α = , 
+albo 
+d) zapisze równanie pęku prostych przechodzących przez punkt A: 71ya x a=−− , 
+albo 
+e) zapisze, że trójkąt ADC  jest podobny do trójkąta SEC , 
+f) obliczy długość tylko jednego z odcinków AD lub AE: 21 0AD AE== oraz 
+zapisze tę długość w zależności od współrzędnych punktu D (lub E) lub obliczy 
+tangens kąta SAE lub SAD: tg 1
+2α =  
+i na tym zakończy lub dalej popełnia błędy. 
+  
+
+===== PAGE 29 =====
+
+ 
+ 
+Strona 29 z 34 
+Rozwiązanie, w którym istotny postęp  .............................................................................. 2 p. 
+Zdający: 
+A) obliczy 21 0AD =  oraz zapisze układ równań () ()
+22
+22
+71 4 0
+10
+xy
+xy
+ −+ +=
++=
+ 
+albo 
+B) obliczy 21 0AD AE==  oraz zapisze układ równań z niewiadomymi mC E=  i 
+nC S= : 
+•   10
+10 2 10
+nm = +  i 10
+10 2 10
+mn = +   
+• () () ()
+22 2
+21 0 1 0 21 0mn+= + +  i ()
+222 10nm=+  
+albo 
+C) obliczy 21 0AD = , obliczy tangens kąta SAE : tg 1
+2α =  oraz obliczy      
+współczynnik kierunkowy prostej AS  () 1
+7ASa =−  
+albo 
+D) obliczy współrzędne środka () ,7 1
+22M =− , długość odcinka 52AS =  oraz zapisze 
+układ równań () ()
+2 272 5 1
+22 2
+22 10
+xy
+xy
+ −+ +=
+ +=
+ 
+albo  
+E) obliczy sinus kąta SAE : 5
+5sinα = , tangens tego kąta: tg 1
+2α =  oraz współczynnik 
+kierunkowy prostej AS  () 1
+7ASa =−  
+albo 
+F) zapisze równanie pęku prostych przechodzących przez punkt A: 71ya x a=−−  oraz 
+równanie z niewiadomą a: 2 10
+71
+1
+a
+a
+=
+−−
++
+ 
+albo 
+G) zapisze równanie pęku prostych przechodzących przez punkt A: 71ya x a=−−  oraz 
+układu równań 22 10xy +=  i 71ya x a=−−  wraz z warunkiem istnienia jednego 
+rozwiązania tego układu 
+i na tym zakończy lub dalej popełnia błędy. 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p. 
+Zdający: 
+I  obliczy współrzędne punktów styczności D  i E : () ,91 3
+55D = , ()1, 3E =−  
+albo 
+II  zapisze równania prostych AC i AB: 101
+33yx=− , 95 0
+13 13yx=− +   
+albo 
+III  obliczy długości odcinków CE i CS: 104
+3mC E== ,  104
+3nC S==  
+i na tym zakończy lub dalej popełnia błędy. 
+
+===== PAGE 30 =====
+
+ 
+ 
+Strona 30 z 34 
+Rozwiązanie prawie pełne ................................................................................................... 4 p. 
+Zdający  
+• obliczy współrzędne wierzchołka B: () ,17 31
+55B =−   
+albo 
+• obliczy współrzędne wierzchołka C: () 3, 13
+3C =− −   
+Uwaga 
+Jeżeli zdający  
+• obliczy współrzędne wierzchołka B: () ,17 31
+55B =−  oraz zapisze układ równań 
+z niewiadomymi x, y – współrzędnymi wierzchołka C, np.:  
+i  
+albo 
+• obliczy współrzędne wierzchołka C: () 3, 13
+3C =− −  oraz zapisze układ równań 
+z niewiadomymi x, y – współrzędnymi wierzchołka B, np.: 79
+52
+x =+  i 1 13
+52
+y =−  
+albo 
+• obliczy współrzędne obu wierzchołków B i C, popełniając w trakcie rozwiązania 
+błędy rachunkowe 
+to otrzymuje 5 punktów.  
+Rozwiązanie pełne ................................................................................................................ 6 p. 
+Zdający obliczy współrzędne wierzchołków B i C:  () ,17 31
+55B =− , () 3, 13
+3C =− − . 
+ 
+Uwagi  
+1. Jeżeli zdający pominie informację o ujemnych wspó łrzędnych punktu C i tym samym 
+zamieni miejscami proste AC i AB, to może otrzymać 5 punktów za całe rozwiązanie, 
+o ile nie popełni innych błędów.  
+2. Jeżeli zdający błędnie przyjmuje, że podstawą trójkąta jest inny bok ni ż AB, to mo że 
+otrzymać co najwyżej 5 punktów.   
+3. Jeżeli zdający realizuje strategię rozwiązania i popełnia jedynie błędy rachunkowe, to 
+może otrzymać 5 punktów, o ile pope łnione błędy nie u łatwiają rozwiązania zadania 
+na żadnym etapie. 
+4. Jeżeli zdaj ący zapisze dwa równania z dwiema niewiadomymi, którymi s ą 
+współrzędne punktu B lub C, to otrzymuje 2 punkty. 
+5. Jeżeli zdaj ący odczytuje z rysunku wspó łrzędne punktu E, a nast ępnie wyznacza 
+równanie stycznej AE i na tym poprzestaje, to może otrzymać 1 punkt. 
+ 
+ 
+ 
+  
+31 0 0xy−−=
+13 9 0xy−=
+
+===== PAGE 31 =====
+
+ 
+ 
+Strona 31 z 34 
+Zadanie 15. (0−7) 
+III. Modelowanie 
+matematyczne. 
+7. Planimetria. Zdający znajduje związki miarowe 
+w figurach płaskich z zastosowaniem twierdzenia 
+sinusów i twierdzenia cosinusów. (R7.5). 
+11. Rachunek różniczkowy. Zdający stosuje pochodne 
+do rozwiązywania zagadnień optymalizacyjnych 
+(R11.6). 
+ 
+Przykładowe rozwiązanie 
+Przyjmijmy oznaczenia jak na rysunku. 
+ 
+Wyznaczmy dziedzinę funkcji L. Z warunków zadania wynika, że , wi ęc .  
+Stąd . Je śli 1a = , to czworokąt jest kwadratem.  Ponadto . Je śli 2a = , to 0h =  
+i zamiast trapezu mamy do czynienia z odcinkiem o długości 2.  
+Rozważany trapez istnieje jedynie dla ()1, 2a ∈ . 
+Z warunków zadania otrzymujemy 
+, skąd 2ha=− . 
+Ponieważ w trapez można wpisać okrąg, więc  
+. 
+Obwód L trapezu jest więc równy 
+. 
+Trapez jest równoramienny, więc odcinki AE i FB mają tę samą długość równą 
+. 
+Z twierdzenia Pitagorasa dla trójkąta BCF otrzymujemy 
+, 
+ 
+22
+2
+22
+ab ab h−+  +=  
+, 
+2222
+2
+424 424
+a a bb a a bb h−++ =++ , 
+2ha b= , 
+()
+2
+2 aa b−= , 
+ah> 2aa>−
+1a > 2a <
+2ah+=
+2ab c+=
+()22La b c a b=++ = +
+2
+abp −=
+222p hc+=
+
+===== PAGE 32 =====
+
+ 
+ 
+Strona 32 z 34 
+()
+2 22 44a aab aa
+− −+== . 
+Zatem 
+()
+22 44 2 4422 2 2 aa aaLa b c a b a aa
+ −+ −+=++ = + = + =⋅ 
+, 
+czyli 
+()
+248 8aaLa a
+−+=  dla . 
+Pochodna funkcji L jest równa 
+() () () () ()
+2 2
+22 2
+42 288 4 88 1 48 aaaa a a aLa aa a
+−+−⋅ − − +⋅ −′ == =  dla . 
+Ponieważ dla każdego  prawdziwa jest nierówno ść ()
+2
+42
+0
+a
+a
++
+> , więc 
+, 
+, 
+. 
+Oznacza to, że w przedziale  funkcja L jest malejąca, w przedziale  jest 
+rosnąca, a w punkcie  osiąga minimum lokalne, które jest zarazem jej najmniejszą 
+wartością.   
+Tangens kąta ostrego trapezu o najmniejszym obwodzie jest równy 
+() ()
+()2 442
+22 22tg 21ab aa a
+aa ahaABC p aa− −+
+−−−== = = −−
+ ,
+ więc dla 2a =  wartość tangensa jest równa 
+()
+()
+22 2 22 2tg 1
+22 221 2
+ABC
+− −== =
+−−
+ , 
+co oznacza, że 45ABC =° . 
+ 
+Schemat oceniania  
+Rozwiązanie zadania składa się z trzech etapów. Ocenianie II etapu jest niezależne od wyniku 
+uzyskanego za I etap. 
+ 
+I. Pierwszy etap, który oceniamy na 
+3 punkty, składa się z trzech części: 
+I.1) wyznaczenie wszystkich warto ści a, dla których istnieje trapez o podanych 
+własnościach, czyli dziedziny funkcji L:  ()1, 2LD =  
+(Za wyznaczenie dziedziny uznaje się też zapisanie dwóch nierówności: 20−>a , 
+2aa>− ). 
+I.2)  zapisanie poprawnej zale żności między wielkościami a i b, np.: 
+() () ()
+22 2
+22 2ab ab a−+ +− =  lub 
+2 44aab a
+−+=  
+()1, 2a ∈
+()1, 2a ∈
+()1, 2a ∈
+() ()02 0 1 , 2 2La a a a′ =⇔− =∧ ∈ ⇔=
+() () ()02 0 1 , 2 2 , 2La a a a′ >⇔− >∧∈ ⇔∈
+() () ()02 0 1 , 21 , 2La a a a′ <⇔− <∧∈ ⇔∈
+(1, 2 )2,2
+2a =
+
+===== PAGE 33 =====
+
+ 
+ 
+Strona 33 z 34 
+I.3)  wykazanie, że obwód L trapezu, jako funkcja zmiennej a, wyraża się wzorem: 
+()
+248 8aaLa a
+−+=  
+Za poprawne rozwiązanie każdej z części tego etapu zdający otrzymuje 1 punkt. 
+ 
+II. Drugi etap (3 punkty) składa się z trzech części: 
+II.1) wyznaczenie pochodnej funkcji ()
+248 8aafa a
+−+= :  
+() () ()
+2
+2
+88 4 88 1aa a a
+fa a
+−⋅ − − +⋅′ =  lub ()
+2
+2
+48afa a
+−′ =  
+II.2) obliczenie miejsc zerowych pochodnej funkcji f : 2a =−  lub 2a =  
+II.3) uzasadnienie (np. badanie monotoniczno ści funkcji), że funkcja L posiada wartość 
+najmniejszą dla 2a = . 
+ 
+III. Trzeci etap (1 punkt) – obliczenie tangensa kąta ostrego trapezu o najmniejszym polu:  
+tg 1ABC = .  
+ 
+Uwagi 
+1. Za poprawne uzasadnienie, że funkcja L posiada warto ść najmniejsz ą dla wyznaczonej 
+wartości a, przy której pochodna się zeruje można uznać sytuacje, gdy zdający:  
+- opisuje, słownie lub graficznie (np. przy użyciu strzałek), monotoniczność funkcji L; 
+- zapisuje, że dla wyznaczonej warto ści a funkcja L ma minimum lokalne i jest to 
+jednocześnie jej najmniejsza wartość. 
+Jeżeli zdający nie przedstawi takiego uzasadnienia, to za II etap mo że otrzymać co najwy żej 
+2 punkty. 
+2. Jeżeli zdający przyjmuje, że dziedziną funkcji L jest przedział ()0, +∞  lub nie wyznaczy tej 
+dziedziny, to nie otrzymuje punktów za realizację części II.3. 
+3. Jeżeli zdający przyjmuje, że dziedziną funkcji L jest przedzia ł ()0, 2  lub zapisze warunki: 
+20−>a  i 0a > , to może otrzymać 1 punkt za realizację części II.3., o ile uzasadni istnienie 
+najmniejszej wartości funkcji. 
+4. Jeżeli zdający przyjmuje, że dziedziną funkcji L jest przedział ()1,+∞  lub zapisze warunki: 
+ah>  i 0h > , lub zapisze warunek 2aa>− , to może otrzymać 1 punkt za realizację części 
+II.3., o ile uzasadni istnienie najmniejszej wartości funkcji. 
+5. Jeżeli zdający przyjmuje, że dziedziną funkcji L jest przedział )1,2 , to za realizację etapu 
+I.1 otrzymuje 1 punkt. 
+6. Je żeli zdaj ący w wyniku b łędów nie wyznaczy poprawnie d ługości d łużej podstawy 
+trapezu o najmniejszym obwodz ie, ale dla wyznaczonej warto ści a obliczy tangens k ąta 
+ostrego trapezu, to może otrzymać 1 punkt za III etap. 
+7. Jeżeli zdający bada inną funkcję zmiennej a niż postaci ()
+248 8aa aga k −+=⋅ , gdzie 0k ≠ , 
+to nie otrzymuje punktów za II i III etap rozwiązania. 
+8. Jeżeli z zapisu rozwiązania wynika, że zdający stosuje poprawny wzór na pochodną ilorazu 
+funkcji i dalej pope łnia błędy, ale otrzymana w rozwi ązaniu pochodna ma dwa ró żne miejsca 
+zerowe, to zdający może otrzymać w II etapie punkty za konsekwentn ą realizację części II.2) 
+
+===== PAGE 34 =====
+
+ 
+ 
+Strona 34 z 34 
+i II.3). Je żeli z zapisu rozwi ązania nie wynika, że zdaj ący stosuje poprawny wzór na 
+pochodną ilorazu funkcji i zdaj ący popełnia błędy przy obliczaniu pochodnej, ale otrzymuje 
+wzór na pochodn ą, w którym w liczniku jest wielomian stopnia 2, a w mianowniku a2, to 
+może w II etapie otrzymać jedynie punkt za konsekwentną realizację części II.3. 
+ 
+ 
+ 
+ 

@@ -1,0 +1,1164 @@
+
+
+===== PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EGZAMIN MATURALNY 
+W ROKU SZKOLNYM 2015/2016 
+ 
+ 
+ 
+MATEMATYKA 
+POZIOM PODSTAWOWY 
+ 
+FORMUŁA OD 2015 
+(„NOWA MATURA”) 
+i 
+FORMUŁA DO 2014 
+(„STARA MATURA”) 
+ 
+ 
+ 
+ 
+ZASADY OCENIANIA ROZWIĄZAŃ ZADAŃ 
+ARKUSZ MMA-P1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SIERPIEŃ 2016 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 2 =====
+Strona 2 z 20 
+ 
+ 
+Klucz punktowania zadań zamkniętych 
+ 
+Nr 
+zad. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 
+Odp. 
+ 
+A B D B B A A B A D C D B C C D A D C C D C A D B 
+ 
+ 
+Schemat oceniania zadań otwartych 
+ 
+Zadanie 26. (0–2) 
+Rozwiąż nierówność 236 ( 2 ) ( 8 )xx x x−≥ − − . 
+ 
+Rozwiązanie 
+Rozwiązanie nierówności kwadratowej składa się z dwóch etapów.  
+ 
+Pierwszy etap to wyznaczenie pi erwiastków trójmianu kwadratowego 224 1 6xx +−  lub 
+2 28x x+− . 
+Drugi etap to zapisanie zbioru rozwiązań nierówności kwadratowej.  
+ 
+Pierwszy etap rozwiązania może zostać zrealizowany następująco: 
+• zapisujemy nierówno ść w postaci 2 28 0xx +− ≥  i obliczamy pierwiastki trójmianu 
+kwadratowego 2 28x x+−  
+o obliczamy wyróżnik tego trójmianu:  
+43 23 6Δ= + =   i stąd 1
+26
+2 2x −+==  oraz 2
+26
+2 4x −−== −  
+albo 
+o stosujemy wzory Viète’a: 
+12 8xx⋅= −  oraz 12 2xx+= − , stąd 1 2x =  oraz 2 4x =−  
+albo  
+• przekształcamy nierówno ść do postaci () ( )22 8 0xx−+ ≥ , sk ąd bezpo średnio 
+odczytujemy pierwiastki: 1 2x = , 2 4x =− , 
+albo 
+• przekształcamy nierówno ść do postaci równowa żnej 13x +≥ , korzystaj ąc 
+z własności wartości bezwzględnej, i odczytujemy te wartości x, dla których  13x += : 
+4x =− , 2x = . 
+ 
+Drugi etap rozwiązania: 
+Podajemy zbiór rozwiązań nierówności: ( ),4 2 ,−∞ − ∪ + ∞  lub ( ),4 2 ,x ∈− ∞ − ∪ + ∞ . 
+ 
+Schemat oceniania 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+gdy: 
+• zrealizuje pierwszy etap rozwi ązania i na tym poprzestanie lub b łędnie zapisze zbiór 
+rozwiązań nierówności 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 3 =====
+Strona 3 z 20 
+ 
+albo  
+• realizując pierwszy etap rozwi ązania zadania pope łni b łąd (ale otrzyma dwa ró żne 
+pierwiastki) i konsekwentnie do tego zapisze zbiór rozwiązań nierówności, np. 
+o popełni b łąd rachunkowy przy obliczaniu wyró żnika lub pierwiastków 
+trójmianu kwadratowego i konsekwentnie do popełnionego błędu zapisze zbiór 
+rozwiązań nierówności, 
+o błędnie zapisze równania wynikaj ące ze wzorów Viète’a, np.: 12 1xx+=  
+i konsekwentnie do popełnionego błędu zapisze zbiór rozwiązań nierówności, 
+o błędnie zapisze nierówno ść z warto ścią bezwzgl ędną, np. 13x −≥  
+i konsekwentnie do popełnionego błędu zapisze zbiór rozwiązań nierówności. 
+ 
+Zdający otrzymuje  .............................................................................................................. 2 p. 
+gdy:  
+• poda zbiór rozwi ązań nierówno ści: ( ),4 2 ,−∞ − ∪ + ∞  lub ( ),4 2 ,x ∈− ∞ − ∪ + ∞   
+lub ( 4x ≤−  lub 2x ≥ ) 
+albo 
+• sporządzi ilustracj ę geometryczn ą (o ś liczbowa, wykres) i zapisze zbiór rozwi ązań 
+nierówności w postaci: 4, 2xx≤− ≥ , 
+albo 
+• poda zbiór rozwi ązań nierówno ści w postaci graficznej  z poprawnie zaznaczonymi 
+końcami przedziałów. 
+ 
+Uwagi 
+1. Akceptujemy zapisanie odpowiedzi w postaci: 4x ≤−  i 2x ≥ , 4x ≤−  oraz 2x ≥  itp.   
+2. Jeżeli zdaj ący dzieli obie strony nierówno ści przez 2x −  bez stosownego za łożenia,  
+to otrzymuje 0 punktów. 
+3. Jeżeli zdaj ący dzieli obie strony nierówno ści przez 2x − , rozwa żając dwa przypadki 
+20x −>  oraz 20x −< , rozwi ąże nierówno ść w ka żdym z tych przypadków, ale nie 
+rozważy przypadku 20x −= , to otrzymuje 1 punkt. 
+4. Jeżeli zdający poprawnie obliczy pi erwiastki trójmianu 1 2x = , 2 4x =−  i b łędnie zapisze 
+odpowiedź, np. ( ),2 2 ,−∞ − ∪ + ∞ , pope łniając tym samym b łąd przy przepisywaniu 
+jednego z pierwiastków, to otrzymuje 2 punkty. 
+ 
+ 
+Kryteria uwzględniające specyficzne trudności w uczeniu się matematyki 
+Akceptujemy zapis przedzia łu nieuwzgl ędniający porz ądku liczb na osi liczbowej, 
+np. ( ),2 4 ,−∞ ∪ − + ∞ , )4,−− ∞ ∪ ( ,2+∞ . 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 4 =====
+Strona 4 z 20 
+ 
+ 
+Zadania 27. (0–2) 
+Jeżeli do licznika pewnego nieskracalnego u łamka dodamy 32 , a mianownik pozostawimy 
+niezmieniony, to otrzymamy liczb ę 2 . Je żeli natomiast od licznika i od mianownika tego 
+ułamka odejmiemy 6 , to otrzymamy liczbę 8
+17 . Wyznacz ten ułamek. 
+ 
+Rozwiązanie (I sposób) 
+Niech x i y oznaczają odpowiednio licznik i mianownik szukanego ułamka nieskracalnego.  
+Z treści zadania otrzymujemy układ równań 
+32 2x
+y
++ =  oraz 68
+61 7
+x
+y
+−
+− = , 
+23 2yx=+  oraz () ()17 6 8 6xy−= − , 
+23 2yx=+  oraz 17 102 8 48xy−= − . 
+Stąd  
+17 54 4 128xx−=+ , 
+13 182x = , 
+14x = ,  
+więc 21 4 3 2 4 6y =+= . Zatem 23y =  . 
+Szukany ułamek to 14
+23 . Jest to ułamek nieskracalny. 
+ 
+Schemat oceniania I sposobu rozwiązania 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+ 
+gdy zapisze układ równań z dwiema niewiadomymi, np.:   
+32 2x
+y
++ =  i  68
+61 7
+x
+y
+−
+− =  
+i na tym zakończy lub dalej popełni błędy. 
+ 
+Zdający otrzymuje  .............................................................................................................. 2 p. 
+gdy wyznaczy szukany ułamek: 14
+23 . 
+Uwaga 
+Jeżeli zdający obliczy licznik 14x =  i mianownik 23y =  szukanego u łamka, ale nie zapisze 
+tego ułamka, to otrzymuje 2 punkty.  
+ 
+Rozwiązanie (II sposób) 
+Dodając do licznika i do mianownika u łamka 8
+17  liczb ę 6, otrzymujemy u łamek 14
+23 . Jest to 
+ułamek nieskracalny, a gdy do jego licznika dodamy liczb ę 32, to otrzymujemy 
+14 32 46
+23 23 2+ == . Zatem szukany ułamek to 14
+23 . 
+ 
+Schemat oceniania II sposobu rozwiązania 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+ 
+gdy doda do licznika i do mianownika u łamka 8
+17  liczbę 6, zapisze, że szukanym u łamkiem 
+jest 14
+23  i nie zapisze, że 14 32 46
+23 23 2+ == , a wi ęc, że spe łnia on drugi z warunków podanych 
+w treści zadania. 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 5 =====
+Strona 5 z 20 
+ 
+ 
+Zdający otrzymuje  .............................................................................................................. 2 p. 
+gdy doda do licznika i do mianownika u łamka 8
+17  liczbę 6, zapisze, że szukanym u łamkiem 
+jest 14
+23  oraz sprawdzi, że 14 32 46
+23 23 2+ == .  
+ 
+ 
+Zadanie 28. (0–2) 
+Wykaż, że jeżeli liczby rzeczywiste a, b, c spełniają warunek 1abc = , to  
+111−−−++=+ +abc a b a c b c . 
+ 
+Rozwiązanie 
+Zauważmy, że  
+111 111−−− ++++= + + = bc ac ababc a b c abc . 
+Wykorzystujemy warunek 1abc =  i otrzymujemy zależność 
+1
+++ ++ == + +bc ac ab bc ac ab bc ac ababc , 
+co kończy dowód. 
+ 
+Uwaga  
+Tezę możemy też uzasadnić w inny sposób: 
+1) Korzystamy z równości 1abc =
+ 111 111 aabc abc
+−−−++= + + = bc
+a
+ab+ c
+b
+ab c+
+c
+bc ac ab=++ . 
+2) Z równości 1abc =  otrzymujemy: 1bc a= , 1ac b= , 1ab c= . Zatem 
+111111bc ac ab a b c abc
+−−−++= + + = + + . 
+Schemat oceniania 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+gdy  
+• wykorzysta definicję potęgi o wyk ładniku 1−  i zapisze lew ą stronę podanej równo ści 
+w postaci 111 bc ac ababc abc
+−−− ++++=   lub 111 abc abc abcabc abc
+−−−++= + +  
+albo 
+• wykorzysta definicję potęgi o wykładniku 1− , pomnoży obie strony podanej równości 
+przez iloczyn abc i zapisze równość w postaci równoważnej  
+111abc abc abc ab abc ac abc bc abcabc⋅+ ⋅+ ⋅= ⋅+ ⋅+ ⋅ , 
+albo  
+• wykorzysta za łożenie 1abc = , wyznaczaj ąc st ąd iloczyny: 1ab c= , 1ac b= , 1bc a=  
+oraz zapisze prawą stronę podanej równości w postaci 111ab ac bc cba++= + +  
+i na tym zakończy lub dalej popełni błędy. 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 6 =====
+Strona 6 z 20 
+ 
+Zdający otrzymuje  .............................................................................................................  2 p. 
+gdy poda pełne uzasadnienie. 
+ 
+Uwaga 
+Jeżeli zdający sprawdza prawdziwość wzoru jedynie w wybranych przypadkach, to otrzymuje 
+0 punktów.  
+ 
+ 
+Zadanie 29. (0–2) 
+Funkcja kwadratowa jest okre ślona wzorem ()
+2 11f xx x=− . Oblicz najmniejsz ą warto ść 
+funkcji f  w przedziale 6, 6− . 
+ 
+Rozwiązanie 
+Wykresem funkcji f  jest parabola o wierzchołku w punkcie, którego pierwsza współrzędna 
+jest równa 11
+22w
+b
+ax =− = . Ponieważ argument 11 1
+22 5wx ==  należy do przedziału 6, 6− , 
+więc najmniejszą wartością funkcji f  w przedziale 6, 6−  jest ()11 121 1
+24 4 30f =− =− . 
+ 
+Schemat oceniania  
+Zdający otrzymuje  .............................................................................................................. 1 p.  
+• gdy obliczy pierwsz ą wspó łrzędną wierzcho łka paraboli 1
+25wx = , zapisze, że 
+6, 6wx ∈−  i na tym zakończy lub dalej popełni błędy 
+albo 
+• popełni b łąd rachunkowy przy oblic zaniu pierwszej wspó łrzędnej wierzcho łka tej 
+paraboli i konsekwentnie do pope łnionego błędu obliczy najmniejsz ą wartość funkcji 
+f  w przedziale 6, 6− .   
+ 
+Zdający otrzymuje  .............................................................................................................. 2 p. 
+gdy obliczy i zapisze, że najmniejsza wartość funkcji f  w przedziale 6, 6−  jest równa  
+()11 1
+24 30f =− . 
+Uwagi 
+1. Jeżeli zdający zapisze jedynie trzy wartości funkcji: () 6 102f −= , ()11 1
+24 30f =−  i ()63 0f =−   
+oraz sformułuje poprawną odpowiedź, to za takie rozwiązanie otrzymuje 2 punkty. 
+2. Jeżeli zdaj ący zapisze tylko obliczenie jednej warto ści ()11 1
+24 30f =−  oraz sformu łuje 
+poprawną odpowiedź, to za takie rozwiązanie otrzymuje 2 punkty.  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 7 =====
+Strona 7 z 20 
+ 
+ 
+ 
+Zadanie 30.  (0–2) 
+W trapezie ABCD o podstawach AB i CD przekątne AC oraz BD przecinają się w punkcie S. 
+Wykaż, że jeżeli 5
+6ASA C= , to pole trójkąta ABS jest 25 razy większe od pola trójkąta DCS. 
+Rozwiązanie (I sposób) 
+Przyjmijmy oznaczenia jak na rysunku. 
+ 
+Trójkąty ABS i DCS są podobne, gdy ż kąty ASB i CSD są równe, jako k ąty wierzchołkowe, 
+natomiast naprzemianleg łe k ąty SAB i SCD są równe, bo proste AB i CD s ą równoleg łe, 
+podobnie kąty ABS i SDC są równe. 
+Stąd, że 5
+6AS AC= , wynika równo ść 1
+6CS AC= . Skala podobie ństwa trójk ąta ABS do 
+trójkąta CDS jest równa 
+5
+6 51
+6
+ACASk CS AC
+== = . 
+Stosunek pól figur podobnych jest równy kwadratowi skali podobieństwa, więc  
+2ABS
+CDS
+P kP = , zatem 25ABS CDSPP =⋅ . 
+To należało wykazać. 
+Rozwiązanie (II sposób) 
+Przyjmijmy oznaczenia jak na rysunku. 
+ 
+Kąty ASB i CSD to kąty wierzchołkowe, więc są równe.  
+Ponieważ  5
+6AS AC= , więc 1
+6CS AC= . 
+Proste AB i CD są równoległe, więc z twierdzenia Talesa otrzymujemy proporcję 
+ASB S
+CS DS= . 
+C 
+α  
+D 
+β  
+A B 
+S 
+C 
+ϕ
+D 
+β  
+A B 
+S ϕ
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 8 =====
+Strona 8 z 20 
+ 
+Stąd i ze wzoru na „pole trójkąta z sinusem”, otrzymujemy 
+22 5
+6
+1
+6
+1 sin2 251 sin2
+ABS
+CDS
+AS BS ACAS BS ASP
+PC S D S C S ACCS DS
+⋅⋅⋅ ⋅ == = = =  ⋅⋅⋅⋅  
+ϕ
+ϕ
+, 
+czyli  25ABS CDSPP =⋅ , co należało wykazać. 
+ 
+Schemat oceniania I i II sposobu rozwiązania 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+gdy  
+• zapisze, że trójk ąty ABS i CDS są podobne oraz wyznaczy skal ę ich podobie ństwa: 
+5k =  
+albo 
+• wyznaczy pola trójk ątów ABS i CDS w zale żności od sinusa tego samego k ąta 
+i zapisze proporcj ę wynikaj ącą z twierdzenia Talesa: 1
+2 sinABSPA S B S=⋅ ⋅ ⋅ ϕ , 
+1
+2 sinCDSPC S D S=⋅ ⋅ ⋅ ϕ ,  ASB S
+CS DS=  
+i na tym zakończy lub dalej popełni błędy. 
+Zdający otrzymuje  .............................................................................................................  2 p. 
+gdy wykaże, że 25 CDSABSPP =⋅ . 
+Uwaga 
+Jeżeli zdaj ący przyjmie konkretne d ługości odcinków, np. 6AC =  i 5AS = , to 
+otrzymuje 0 punktów. 
+ 
+ 
+Zadanie 31.  (0–4) 
+Ciąg arytmetyczny () na  okre ślony jest wzorem 2016 3nan =− , dla 1n ≥ . Oblicz sum ę 
+wszystkich dodatnich wyrazów tego ciągu. 
+ 
+Rozwiązanie 
+Pierwszy wyraz ci ągu () na  jest równy 1 2013=a , a ka żdy inny wyraz tego ci ągu jest o 3 
+mniejszy od wyrazu bezpośrednio go poprzedzającego. 
+Mamy do czynienia z ciągiem arytmetycznym o różnicy 3=−r . 
+Wyznaczmy liczbę wszystkich dodatnich wyrazów ciągu () na : 
+0na > , 
+2016 3 0−>n ,  
+2016
+3n < , a stąd 672<n . 
+Zatem 1a , 2a , 3a , …, 671a  to wszystkie dodatnie wyrazy tego ciągu. Obliczmy ich sumę: 
+16 7 1
+671 6712
++=⋅aaS  i 671 2016 3 671 3=− ⋅ =a , 
+671
+2013 3
+2 671 676 368S +=⋅ = . 
+Uwaga  
+Możemy obliczyć sumę wszystkich dodatnich wyrazów tego ciągu, korzystając ze wzoru:  
+671
+126 7 0
+2 671arS +=⋅ . 
+()
+671
+2 2013 670 3 4026 2010
+22 671 671 1008 671 676 368S
+⋅+ ⋅ − −=⋅ = ⋅ = ⋅ = . 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 9 =====
+Strona 9 z 20 
+ 
+ 
+Schemat oceniania 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania ........................................................................................................................... 1 p. 
+Zdający 
+• obliczy pierwszy wyraz ciągu () na : 1 2013=a  
+albo  
+• zapisze różnicę ciągu arytmetycznego () na : 3r =− , 
+albo  
+• zapisze warunek pozwalaj ący obliczy ć liczb ę wszystkich dodatnich wyrazów ci ągu 
+() na : np. 2016 3 0−> n  
+i na tym zakończy lub dalej popełni błędy. 
+Rozwiązanie, w którym jest istotny postęp ........................................................................ 2 p. 
+Zdający  
+• obliczy pierwszy wyraz i ciągu () na  oraz zapisze jego różnicę: 1 2013=a  i 3r =−  
+albo 
+• zapisze warunek pozwalaj ący obliczy ć liczb ę wszystkich dodatnich wyrazów ci ągu 
+() na : np. 2016 3 0−>n  i zapisze różnicę ciągu arytmetycznego () na : 3r =− , 
+albo  
+• zapisze warunek pozwalaj ący obliczy ć liczb ę wszystkich dodatnich wyrazów ci ągu 
+() na : np. 2016 3 0−>n  i obliczy pierwszy wyraz ciągu () na : 1 2013=a  
+i na tym zakończy lub dalej popełni błędy. 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p. 
+Zdający  
+• obliczy pierwszy wyraz ci ągu () na  i obliczy liczb ę wszystkich dodatnich wyrazów 
+ciągu () na : 1 2013=a , 671=n  
+albo  
+• obliczy pierwszy wyraz ci ągu () na : 1 2013=a  oraz wyznaczy najmniejszy dodatni 
+wyraz tego ciągu:  3, 
+albo 
+• obliczy pierwszy wyraz ci ągu () na : 1 2013=a  oraz wyznaczy numer wyrazu  
+równego 0: 672n =  
+i na tym zakończy lub dalej popełni błędy. 
+Rozwiązanie pełne ................................................................................................................ 4 p. 
+Zdający obliczy sumę wszystkich dodatnich wyrazów ciągu () na : 671 676 368=S . 
+Uwagi  
+1. Je żeli zdaj ący zauwa ży, że wyraz 672 0=a  i obliczy sum ę 672 676 368=S , to mo że 
+otrzymać maksymaln ą liczb ę punktów, o ile nie pope łni b łędu w przedstawionym 
+rozwiązaniu. 
+2. Je żeli zdający obliczy pierwszy wyraz ci ągu () na , wyznaczy najmniejszy dodatni wyraz 
+ciągu, ale błędnie ustali jego numer i konsekwentnie obliczy sumę 2013 3
+2 672 677 376+ ⋅= , 
+to otrzymuje 3 punkty. 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 10 =====
+Strona 10 z 20 
+ 
+ 
+Zadanie 32. (0–4) 
+Na rysunku przedstawione s ą dwa wierzcho łki trójk ąta prostok ątnego ABC: () 3, 3A =− −  
+i ()2, 7C =  oraz prosta o równaniu 33
+44yx=− , zawieraj ąca przeciwprostok ątną AB tego 
+trójkąta. 
+ 
+- 5 - 4 - 3 - 2 - 1 123456789 1 0
+-5
+-4
+-3
+-2
+-1
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+ y
+0 x
+ A
+ C
+ 
+ 
+Oblicz współrzędne wierzchołka B tego trójkąta i długość odcinka AB. 
+ 
+Rozwiązanie (I sposób) 
+Współrzędne punktu B możemy obliczyć na kilka sposobów.  
+Sposób a) 
+Współczynnik kierunkowy prostej AC, a wi ęc prostej przechodz ącej przez punkty 
+() 3, 3A =− −  i ()2, 7C = , jest równy  
+73
+23 2ACa +
++== . 
+Prosta CB jest prostopad ła do prostej AC i przechodzi przez punkt ()2, 7C = , wi ęc ma 
+równanie postaci  
+()1
+2 27yx=− − + , czyli 1
+2 8yx=− + . 
+ 
+Współrzędne punktu B obliczymy rozwiązując układ równań 33
+44yx=−  i 1
+2 8yx=− + .  Stąd 
+otrzymujemy  
+33 1
+44 2 8x x−= − + , 
+33 23 2xx−= − + , 
+53 5x =  
+7x =  oraz 11
+22 78 4y =− ⋅ + = . 
+Zatem () 1
+27,4B = . 
+Sposób b) 
+Wektory CA
+
+ i CB
+
+ są prostopadłe. Współrzędne wektora CA
+
+ są równe  
+[ ] [ ]3 2 ,3 7 5 ,1 0CA =−− −− =− −
+
+. 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 11 =====
+Strona 11 z 20 
+ 
+Punkt B le ży na prostej AB, więc jego wspó łrzędne mo żemy zapisa ć w postaci 
+() 33
+44,Bx x=− . Zatem współrzędne wektora CB
+
+ są równe  3
+4
+31
+42,CB x x =− − 
+
+. 
+Z warunku prostopadłości wektorów CA
+
+ i CB
+
+ otrzymujemy  
+0CA CB =
+  
+ , 
+[ ] 3
+4
+31
+45, 10 2, 0 xx−− − − =  , 
+() ()33 1
+4452 1 0 0xx−− − −= , 
+() ()33 1
+44
+22 0xx−+ − = , 
+53 5
+22 0x −= , 
+53 5x = , 
+7x = .  
+Zatem () 1
+27, 4B = . 
+Sposób c) 
+Punkt B leży na prostej AB, więc jego współrzędne możemy zapisać w postaci 
+() 33
+44,Bx x=− . Z twierdzenia Pitagorasa dla trójkąta ABC otrzymujemy  
+22 2
+ABA C B C=+ , 
+() () () ()() () ()
+2 222 222 2 2 33 33
+44 4433 2 3 7 327xx xx   ++ − + = ++ + + −+ − −    
+, 
+() () () ()
+2222 2239 33 1
+44 4 435 1 0 2xx xx++ + = ++ −+ − , 
+22 22 9 54 81 9 186 961
+16 16 16 16 16 166 9 125 4 4xx x x xx x x++ + + += +−+ + − + , 
+7x = . 
+Zatem () ()33 1
+44 27, 7 7,4B =⋅ − = . 
+Długość odcinka AB jest równa  
+() () ()
+222 1
+2
+400 225 625 2511
+22 4 4 273 4 3 1 0 0 7 1 2AB +=+ ++ = + = = = = . 
+Schemat oceniania I sposobu rozwiązania 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania ........................................................................................................................... 1 p. 
+Zdający  
+• wyznaczy współczynnik kierunkowy prostej AC: 2ACa =  
+albo 
+• wyznaczy współrzędne wektora [ ]5, 10CA =− −
+
+, 
+albo 
+• wyznaczy współrzędne wektora CB
+
+ w zależności od jednej zmiennej,  
+np: 33 1
+44
+2,CB x x =− − 
+
+, 
+albo 
+• zastosuje twierdzenie Pitagorasa i zapisze 
+22 2
+ABA CB C=+  oraz uzale żni 
+współrzędne punktu B od tej samej zmiennej: np.: () 33
+44,Bx x=−  
+i na tym zakończy lub dalej popełni błędy. 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 12 =====
+Strona 12 z 20 
+ 
+Rozwiązanie, w którym jest istotny postęp ........................................................................ 2 p. 
+Zdający wyznaczy 
+• równanie prostej BC: 1
+2 8yx=− +  
+albo  
+• równanie z jedn ą niewiadom ą wynikaj ące z warunku prostopad łości wektorów 
+pozwalające obliczy ć wspó łrzędne punktu B: np. [ ] 33 1
+445, 10 2, 0 xx−− − − =   (lub 
+układ równań [ ] [ ]5, 10 2, 7 0xy−− − − =   i 33
+44yx=− ), 
+albo 
+• równanie z jedną niewiadomą wynikające z twierdzenia Pitagorasa dla trójkąta ABC:  
+() () () ()() () ()
+2 222 222 2 2 33 33
+44 4433 2 3 7 327xx xx   ++ − + = ++ + + −+ − −    
+ 
+lub układ równań z dwiema niewiadomymi  
+() ()() () ()() () ()()
+22 2
+22 2 2 22
+33
+44
+33 2 3 7 3 27xy xy
+yx
+ ++ + = ++ + + −+ −
+ =−
+  
+i na tym zakończy lub dalej popełni błędy. 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p. 
+Zdający obliczy współrzędne wierzchołka B: () 1
+27,4B =  i na tym zakończy lub dalej popełni 
+błędy. 
+Rozwiązanie pełne ................................................................................................................ 4 p. 
+Zdający obliczy wspó łrzędne wierzcho łka B oraz d ługość odcinka AB: () 1
+27,4B = , 
+25 1
+22 12AB == . 
+Rozwiązanie (II sposób) 
+Trójkąt ABC jest prostokątny, więc środek S okręgu opisanego na tym trójkącie jest środkiem 
+przeciwprostokątnej AB. Jednocze śnie le ży on na symetralnej boku AC. Wyznaczamy 
+najpierw równanie symetralnej boku AC. Jest to prosta prostopadła do prostej AC i przechodzi 
+przez środek M odcinka AC. Poniewa ż () 3, 3A =− −  i ()2, 7C = , wi ęc punkt M ma 
+współrzędne: 
+() ()32 37 1
+22 2,, 2M −+ −+ −== ,  
+a wspó łczynnik kierunkowy prostej AC jest równy 73
+23 2ACa +
++== , wi ęc prosta AC ma 
+równanie postaci  
+()23 3yx=+ − , czyli 23yx=+ . 
+Współczynnik kierunkowy symetralnej MS boku AC jest zatem równy 1
+2MSa =− , 
+a symetralna MS ma równanie postaci 
+  ()11
+22 2yx=− + + , 
+71
+24yx=− + . 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 13 =====
+Strona 13 z 20 
+ 
+Współrzędne środka S okręgu opisanego trójkącie ABC obliczymy, rozwiązując układ równań  
+33
+44yx=−  i 71
+24yx=− + . 
+Stąd  
+33 7 1
+44 24xx−= − + , 
+33 27xx−= − + , 
+51 0x =  
+2x =  oraz 731
+24 42y =− ⋅ + = . 
+Zatem () 3
+42,S = . 
+Ponieważ S jest środkiem boku AB, to  
+() ()
+33
+22
+3
+4,2 ,BBxyS −+ −+== . 
+Stąd 
+3
+2 2Bx−+ =  i 3
+2
+3
+4
+By−+ =  
+34 Bx−+ =  i  3
+23 By−+ =  
+7Bx =  i  1
+24By = . 
+Zatem () 1
+27,4B = . 
+Długość odcinka AB jest równa 
+() () ()
+222 1
+2
+400 225 625 2511
+22 4 4 273 4 3 1 0 0 7 1 2AB +=+ ++ = + = = = = . 
+ 
+Schemat oceniania II sposobu rozwiązania 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania ........................................................................................................................... 1 p. 
+Zdający wyznaczy   
+• współczynnik kierunkowy prostej AC: 2ACa =  
+albo 
+• wyznaczy wspó łrzędne środka M odcinka AC: () 1
+2 ,2M =−  i zapisze, że środek 
+okręgu opisanego na trójk ącie ABC  to punkt przeci ęcia symetralnej boku AC 
+i prostej AB.  
+i na tym zakończy lub dalej popełni błędy. 
+Rozwiązanie, w którym jest istotny postęp ........................................................................ 2 p. 
+Zdający wyznaczy wspó łrzędne środka S okr ęgu opisanego trójk ącie ABC: () 3
+42,S =  i na 
+tym zakończy lub dalej popełni błędy. 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p. 
+Zdający  
+• obliczy współrzędne wierzchołka B i nie obliczy długości boku AB: () 1
+27, 4B =  
+albo  
+• obliczy długość boku AB i nie obliczy współrzędnych wierzchołka B:  
+11
+4222 6 1 2AB AS=⋅ =⋅ =  
+i na tym zakończy lub dalej popełni błędy. 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 14 =====
+Strona 14 z 20 
+ 
+Rozwiązanie pełne ................................................................................................................ 4 p. 
+Zdający obliczy wspó łrzędne wierzcho łka B oraz d ługość odcinka AB: () 1
+27,4B = , 
+25 1
+22 12AB == . 
+Uwaga 
+Jeżeli zdający błędnie zinterpretuje treść zadania, przyjmując, że wierzchołkiem kąta prostego  
+trójkąta ABC jest B, to otrzymuje 0 punktów. 
+ 
+ 
+ 
+Zadanie 33. (0–5) 
+Trójkąt równoboczny ABC jest podstaw ą ostros łupa prawid łowego ABCS, w którym ściana 
+boczna jest nachylona do p łaszczyzny podstawy pod k ątem 60°, a kraw ędź boczna ma 
+długość 7 (zobacz rysunek). Oblicz objętość tego ostrosłupa.  
+                                
+Rozwiązanie I sposób 
+Przyjmijmy oznaczenia jak na rysunku.  
+ 
+ 
+Podstawa ostros łupa jest trójk ątem równobocznym o boku d ługości a, ostros łup jest 
+prawidłowy, więc spodek O wysokości SO tego ostros łupa jest środkiem okręgu wpisanego 
+i opisanego na podstawie ostrosłupa.  
+ 
+A 
+B
+C
+S
+60°  
+h 
+H 
+O 
+a 
+7 
+D 
+A
+B
+C
+S
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 15 =====
+Strona 15 z 20 
+ 
+Zatem   
+ 3
+3
+aAO =  oraz 3
+6
+aOD = . 
+Ściana boczna jest nachylona do płaszczyzny podstawy pod kątem 60°, stąd otrzymujemy 
+tg60H
+OD =° , 
+3
+3
+6
+H
+a
+= , 
+3 36
+aH =⋅ , 
+2
+aH = . 
+Z twierdzenia Pitagorasa w trójkącie AOS, otrzymujemy  
+22 2
+AOO S A S+= , 
+2 2
+23 732
+aa +=  
+, 
+22
+4934
+aa += , 
+274 9 1 2a =⋅ , 
+2 71 2a =⋅ , 
+22 1a = . 
+Zatem 21H = . 
+Objętość ostrosłupa jest więc równa 
+()
+2
+2 22 1 313 4 2 1 3 21 21 21 73 4 12 12
+aVH ⋅= ⋅ ⋅ = ⋅= ⋅= . 
+ 
+Schemat oceniania I sposobu rozwiązania 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania ........................................................................................................................... 1 p. 
+Zdający  
+• zaznaczy kąt nachylenia ściany bocznej do płaszczyzny podstawy ostrosłupa 
+albo 
+• zapisze, że d ługość odcinka AO: 3
+3
+aAO = , gdzie a oznacza d ługość kraw ędzi 
+podstawy ostrosłupa, 
+albo 
+• zapisze, że d ługość odcinka OD: 3
+6
+aOD = , gdzie a oznacza d ługość kraw ędzi 
+podstawy ostrosłupa 
+i na tym zakończy lub dalej popełni błędy. 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 16 =====
+Strona 16 z 20 
+ 
+Rozwiązanie, w którym jest istotny postęp ........................................................................ 2 p. 
+Zdający wyznaczy w zależności od jednej zmiennej, np. a – długości krawędzi podstawy 
+• zaznaczy k ąt nachylenia ściany bocznej do p łaszczyzny podstawy ostros łupa oraz 
+długość odcinka AO: 3
+3
+aAO =  
+albo 
+• zaznaczy k ąt nachylenia ściany bocznej do p łaszczyzny podstawy ostros łupa oraz 
+długość odcinka OD: 3
+6
+aOD =  
+i na tym zakończy lub dalej popełni błędy. 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p. 
+Zdający wyznaczy wysoko ść ostros łupa w zale żności od jednej zmiennej, np. a – d ługości 
+krawędzi podstawy: 2
+aH =  i na tym zakończy lub dalej popełni błędy. 
+Rozwiązanie prawie pełne  .................................................................................................. 4 p. 
+Zdający obliczy wysoko ść ostros łupa oraz d ługość kraw ędzi podstawy ostros łupa (lub 
+bezpośrednio pole podstawy ostros łupa): 21H = , 22 1a =  i na tym zako ńczy lub dalej 
+popełni błędy. 
+ 
+Rozwiązanie pełne ................................................................................................................ 5 p. 
+Zdający obliczy objętość ostrosłupa: 21 7V = . 
+Uwaga 
+Zdający nie musi zaznacza ć kąta nachylenia ściany bocznej do p łaszczyzny podstawy, o ile 
+z rozwiązania wynika, że poprawnie interpretuje ten kąt. 
+Rozwiązanie II sposób 
+Przyjmijmy oznaczenia jak na rysunku.  
+ 
+ 
+Trójkąt DOS jest prostokątny, w którym jeden k ąt ostry ma miar ę 60°. Wysokość SD ściany 
+bocznej oznaczmy przez 2x . Zatem  
+3HS Ox==  oraz OD x= . 
+A 
+B
+C
+S
+60°  
+2x 3x  
+O 
+a 
+7 
+D 2x x 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 17 =====
+Strona 17 z 20 
+ 
+Podstawa ostros łupa jest trójk ątem równobocznym o boku d ługości a, ostros łup jest 
+prawidłowy, więc spodek O wysokości SO tego ostros łupa jest środkiem okręgu wpisanego 
+i opisanego na podstawie ostrosłupa. Zatem   
+ 2AO x=  oraz 23ax= . 
+Dla trójkąta AOS zapisujemy twierdzenie Pitagorasa i obliczamy x: 
+22 2
+AO OS AS+= , 
+() ()
+22 223 7xx += , 
+22434 9xx += , 
+274 9x = , 
+7x = . 
+Zatem 73 2 1H =⋅=  oraz 23 2 2 1ax== . 
+Objętość ostrosłupa jest więc równa 
+()
+2
+2 22 1 313 4 2 1 3 21 21 21 73 4 12 12
+aVH ⋅= ⋅ ⋅ = ⋅= ⋅= . 
+Uwaga 
+Zdający może podać wynik w postaci 55,56V ≈ . 
+ 
+ 
+Schemat oceniania II sposobu rozwiązania 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania ........................................................................................................................... 1 p. 
+Zdający  
+• zaznaczy kąt nachylenia ściany bocznej do płaszczyzny podstawy ostrosłupa 
+albo 
+• zapisze zale żność mi ędzy d ługościami odcinków OA i OD, np. OD x= , 2OA x= , 
+gdzie x – pół wysokości ściany bocznej,  
+i na tym zakończy lub dalej popełni błędy. 
+Rozwiązanie, w którym jest istotny postęp ........................................................................ 2 p. 
+Zdający wyznaczy w zależności od jednej zmiennej, np. x – pół wysokości ściany bocznej, 
+• wysokość ostrosłupa SO: 3SO H x==  
+albo 
+• zaznaczy k ąt nachylenia ściany bocznej do p łaszczyzny podstawy ostros łupa oraz 
+zapisze zależność między długościami odcinków OA i OD, np. OD x= , 2OA x=  
+i na tym zakończy lub dalej popełni błędy. 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p. 
+Zdający wyznaczy d ługość a kraw ędzi podstawy  ostrosłupa w zale żności od  x: 23ax=  
+i na tym zakończy lub dalej popełni błędy. 
+Rozwiązanie prawie pełne  .................................................................................................. 4 p. 
+Zdający obliczy wysoko ść ostros łupa oraz d ługość kraw ędzi podstawy ostros łupa (lub 
+bezpośrednio pole podstawy ostros łupa): 21H = , 22 1a =  i na tym zako ńczy lub dalej 
+popełni błędy. 
+Rozwiązanie pełne ................................................................................................................ 5 p. 
+Zdający obliczy objętość ostrosłupa: 21 7V = . 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 18 =====
+Strona 18 z 20 
+ 
+Uwaga 
+Zdający nie musi zaznacza ć kąta nachylenia ściany bocznej do p łaszczyzny podstawy, o ile 
+z rozwiązania wynika, że poprawnie interpretuje ten kąt. 
+ 
+ 
+ 
+Zadanie 34. (0–2) 
+Ze zbioru siedmiu liczb naturalnych { }1, 2, 3, 4, 5, 6, 7  losujemy dwie ró żne liczby. Oblicz 
+prawdopodobieństwo zdarzenia polegaj ącego na tym, że wi ększą z wylosowanych liczb 
+będzie liczba 5. 
+ 
+Rozwiązanie (I sposób) 
+Niech zdarzeniami elementarnymi b ędą uporządkowane pary () ,ab  liczb z podanego zbioru, 
+takie że ab≠ . Jest to model klasyczny. Liczba wszystkich zdarzeń elementarnych jest równa 
+76 4 2Ω= ⋅ = . 
+Niech A  oznacza zdarzenie polegaj ące na wylosowaniu dwóch liczb, z których wi ększą jest 
+liczba 5. 
+Zdarzeniu A  sprzyja osiem zdarzeń elementarnych 
+() ( ) ( ) ( ) () ( ) ( ) ( ){ }1, 5 , 2, 5 , 3, 5 , 4, 5 , 5, 1 , 5, 2 , 5, 3 , 5, 4A= . 
+Prawdopodobieństwo zdarzenia A  jest równe 
+() 8 4
+42 21PA == .  
+ 
+Rozwiązanie (II sposób) 
+Niech zdarzeniami elementarnymi b ędą dwuelementowe podzbiory { },ab  liczb z podanego 
+zbioru. Jest to model klasyczny. Liczba wszystkich zdarzeń elementarnych jest równa 
+( )
+7
+2 21Ω= = . 
+Niech A  oznacza zdarzenie polegaj ące na wylosowaniu dwóch liczb, z których wi ększą jest 
+liczba 5. 
+Zdarzenia A  sprzyjają cztery zdarzenia elementarne  
+{ } { } { } { }{ }1 , 5,2 , 5,3 , 5,4 , 5A= . 
+Prawdopodobieństwo zdarzenia A  jest równe: 
+() 4
+21PA = .  
+Uwaga 
+Zbiór wszystkich zdarzeń elementarnych oraz zdarzenia elementarne sprzyjające zdarzeniu 
+A możemy też zapisać w tabeli. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Symbol 
+ użyty w tabeli oznacza zdarzenie elementarne sprzyjające zdarzeniu A. 
+ 1 2 3 4 5 6 7 
+1        
+2        
+3        
+4        
+5        
+6        
+7         
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 19 =====
+Strona 19 z 20 
+ 
+Wówczas 
+277 4 2Ω= − =   i  8A = . Zatem () 8 4
+42 21PA == . 
+ 
+Schemat oceniania I i II sposobu rozwiązania 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+gdy  
+• obliczy liczbę wszystkich zdarzeń elementarnych: 76 4 2Ω= ⋅ =  (lub ( )
+7
+2 21Ω= = ) 
+albo 
+• obliczy (zaznaczy poprawnie w tabeli) liczb ę zdarze ń elementarnych sprzyjaj ących 
+zdarzenia A : 8A =  (lub 4A = ). 
+i na tym zakończy lub dalej popełni błędy. 
+Zdający otrzymuje  .............................................................................................................. 2 p. 
+gdy obliczy prawdopodobieństwo zdarzenia A: () 8 4
+42 21PA == . 
+ 
+Uwagi 
+1. Jeśli zdaj ący rozwi ąże zadanie do ko ńca i otrzyma () 1PA >  lub () 0PA < , to za ca łe 
+rozwiązanie otrzymuje 0 punktów. 
+2. Jeżeli zdaj ący pope łni b łąd przy zliczaniu w tabeli par, spe łniających warunki zadania 
+i konsekwentnie do pope łnionego b łędu obliczy prawdopodobie ństwo, to otrzymuje 
+1 punkt. 
+3. Jeżeli zdający zapisze tylko () 8
+42PA = , to otrzymuje 1 punkt. 
+ 
+Rozwiązanie (III sposób) 
+Niech A oznacza zdarzenie – większa z wylosowanych liczb jest równa 5. Narysujmy drzewo 
+zawierające tylko istotne gałęzie 
+ 
+                                                        
+ 
+                          
+ 
+ 
+ 
+ 
+ 
+ 
+Prawdopodobieństwo zajścia zdarzenia jest równe 
+() 811 11 11 11 11 4
+7777 76 6 6 6 6 42 21 4PA ⋅+⋅+⋅ ⋅ ⋅=+ + ⋅ = = . 
+ 
+Schemat oceniania III sposobu rozwiązania 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+gdy narysuje pełne drzewo oraz przynajmniej na jednej gałęzi zapisze poprawne 
+prawdopodobieństwo i na tym zakończy lub dalej popełni błędy. 
+Zdający otrzymuje  .............................................................................................................. 2 p. 
+gdy obliczy i zapisze prawdopodobieństwo zdarzenia A: () 4
+21PA = . 
+Uwagi 
+1. Jeśli zdaj ący rozwi ąże zadanie do ko ńca i otrzyma () 1PA >  lub () 0PA < , to za ca łe  
+     rozwiązanie otrzymuje 0 punktów. 
+ 
+1
+7  
+63 21 4 5 7 
+55 15 
+1
+7
+ 
+1
+7  1
+7  
+1
+7
+ 1
+7  
+1
+7  
+1
+6  1
+6  1
+6  1
+6  1
+6  1
+6  1
+6  1
+6  
+5 2 34
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PAGE 20 =====
+Strona 20 z 20 
+ 
+2. Jeśli zdaj ący dodaje prawdopodobie ństwa na ga łęziach drzewa, to za ca łe rozwi ązanie  
+     otrzymuje 1 punkt (pod warunkiem, że prawdopodobie ństwa na ga łęziach drzewa s ą  
+     zapisane prawidłowo).  
+3. Jeżeli zdający popełni błąd: 
+•  przy przepisywaniu prawdopodobieństw z gałęzi drzewa  
+lub 
+•  w zapisaniu prawdopodobieństwa na jednej gałęzi drzewa,  
+lub  
+•  nie zaznaczy jednej istotnej gałęzi drzewa  
+i konsekwentnie do pope łnionego b łędu obliczy prawdopodobie ństwo, to otrzymuje 
+1 punkt. 
+ 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl

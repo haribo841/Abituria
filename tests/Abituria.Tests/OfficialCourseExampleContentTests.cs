@@ -89,7 +89,7 @@ public sealed class OfficialCourseExampleContentTests
             item.GetProperty("id").GetString() == "cke-formula-2023-guide-examples");
         var rights = File.ReadAllText(Path.Combine(RepositoryRoot, "docs/ASSET_RIGHTS_DECLARATION.md"));
 
-        Assert.True(root.GetProperty("releaseEligible").GetBoolean());
+        Assert.False(root.GetProperty("releaseEligible").GetBoolean());
         Assert.Equal("approved", group.GetProperty("distributionStatus").GetString());
         Assert.Contains(BasicHash, group.GetProperty("source").GetString(), StringComparison.Ordinal);
         Assert.Contains(ExtendedHash, group.GetProperty("source").GetString(), StringComparison.Ordinal);

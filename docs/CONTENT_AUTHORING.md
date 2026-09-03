@@ -52,7 +52,7 @@ python tools/Import-CkeInformerExamples.py `
 
 Importer pobiera wyłącznie główne zestawy przykładów: zadania 1-66 na stronach PDF 12-138 informatora podstawowego oraz zadania 1-31 na stronach 12-106 informatora rozszerzonego. Nie dubluje późniejszych powtórzeń przeznaczonych dla zdających ze specjalnymi potrzebami. Każdy rekord zachowuje numer, punktację, strony, mapowanie wymagań, pełną transkrypcję oraz opisy informacji wizualnej. Po zmianie katalogu trzeba osobno ocenić jego status w `Content/provenance.json`; test techniczny nie zastępuje deklaracji praw do publicznej redystrybucji.
 
-Aktywny katalog 195 diagramów jest kanonicznym plikiem `Content/diagrams.json` i jest walidowany przez testy kontraktu. `tools/New-DiagramCatalog.ps1` odtwarza starszy bazowy zestaw 76 definicji. Skrypt odmawia nadpisania aktywnego katalogu, aby nie usunąć później dodanych diagramów. Pełna konsolidacja jego źródeł pozostaje osobnym zadaniem utrzymaniowym.
+Aktywny katalog 226 diagramów jest kanonicznym plikiem `Content/diagrams.json` i jest walidowany przez testy kontraktu. `tools/New-DiagramCatalog.ps1` odtwarza starszy bazowy zestaw 76 definicji. Skrypt odmawia nadpisania aktywnego katalogu, aby nie usunąć później dodanych diagramów. Pełna konsolidacja jego źródeł pozostaje osobnym zadaniem utrzymaniowym.
 
 Generator zapisuje wyłącznie dane prymitywów wektorowych i nie tworzy PNG. Historyczne rastry znajdują się poza aplikacją w `docs/legacy/originals/images/`; ich mapowanie i sumy odtwarza `tools/New-LegacyImageArchiveManifest.ps1`.
 

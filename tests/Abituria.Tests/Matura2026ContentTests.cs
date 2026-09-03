@@ -158,7 +158,7 @@ public sealed class Matura2026ContentTests
 
         Assert.Equal(17, topicIds.Count);
         Assert.Equal(
-            ["basic", "extended", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "basic", "extended", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic"],
+            ["basic", "extended", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "basic", "extended", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic"],
             index.Exams.OrderBy(item => item.Order).Select(item => item.Level));
         Assert.Equal(topicIds.Order(), exam.Exercises.Select(item => item.TopicId).Distinct(StringComparer.Ordinal).Order());
         Assert.All(exam.Exercises, item => Assert.Contains(item.TopicId, topicIds));
@@ -202,7 +202,20 @@ public sealed class Matura2026ContentTests
         var basic2018 = Read<ExamCatalog>("Content/exam-2018-main-basic.json").Exam;
         var extended2018 = Read<ExamCatalog>("Content/exam-2018-main-extended.json").Exam;
         var correction2018 = Read<ExamCatalog>("Content/exam-2018-correction-basic.json").Exam;
-        var exams = new[] { current, extended, basic2025, extended2025, correction2025, basic2024, extended2024, correction2024, basic2023, correction2023, extended2023, basic2022, extended2022, correction2022, basic2021, extended2021, legacy, basic2020, extended2020, correction2020, basic2019, extended2019, correction2019, basic2018, extended2018, correction2018 };
+        var basic2017 = Read<ExamCatalog>("Content/exam-2017-main-basic.json").Exam;
+        var extended2017 = Read<ExamCatalog>("Content/exam-2017-main-extended.json").Exam;
+        var correction2017 = Read<ExamCatalog>("Content/exam-2017-correction-basic.json").Exam;
+        var basic2016 = Read<ExamCatalog>("Content/exam-2016-main-basic.json").Exam;
+        var extended2016 = Read<ExamCatalog>("Content/exam-2016-main-extended.json").Exam;
+        var correction2016 = Read<ExamCatalog>("Content/exam-2016-correction-basic.json").Exam;
+        var exams = new[]
+        {
+            current, extended, basic2025, extended2025, correction2025, basic2024, extended2024,
+            correction2024, basic2023, correction2023, extended2023, basic2022, extended2022,
+            correction2022, basic2021, extended2021, legacy, basic2020, extended2020, correction2020,
+            basic2019, extended2019, correction2019, basic2018, extended2018, correction2018, basic2017,
+            extended2017, correction2017, basic2016, extended2016, correction2016
+        };
 
         Assert.Equal(
             [
@@ -231,7 +244,13 @@ public sealed class Matura2026ContentTests
                 "matura-poprawkowa-2019-podstawowa",
                 "matura-maj-2018-podstawowa",
                 "matura-maj-2018-rozszerzona",
-                "matura-poprawkowa-2018-podstawowa"
+                "matura-poprawkowa-2018-podstawowa",
+                "matura-maj-2017-podstawowa",
+                "matura-maj-2017-rozszerzona",
+                "matura-poprawkowa-2017-podstawowa",
+                "matura-maj-2016-podstawowa",
+                "matura-maj-2016-rozszerzona",
+                "matura-poprawkowa-2016-podstawowa"
             ],
             index.Exams.Where(item => item.IsActive).OrderBy(item => item.Order).Select(item => item.Id));
         Assert.Equal(35, legacy.Exercises.Count);
@@ -261,6 +280,12 @@ public sealed class Matura2026ContentTests
         Assert.Equal(34, basic2018.Exercises.Count);
         Assert.Equal(15, extended2018.Exercises.Count);
         Assert.Equal(34, correction2018.Exercises.Count);
+        Assert.Equal(34, basic2017.Exercises.Count);
+        Assert.Equal(15, extended2017.Exercises.Count);
+        Assert.Equal(34, correction2017.Exercises.Count);
+        Assert.Equal(34, basic2016.Exercises.Count);
+        Assert.Equal(16, extended2016.Exercises.Count);
+        Assert.Equal(34, correction2016.Exercises.Count);
         Assert.Equal(17, index.Topics.Count);
 
         foreach (var topic in index.Topics.OrderBy(item => item.Order))
@@ -273,7 +298,7 @@ public sealed class Matura2026ContentTests
     }
 
     [Fact]
-    public void New_cke_assets_are_approved_by_the_extended_rights_declaration()
+    public void Approved_2026_assets_are_retained_while_new_archives_block_release()
     {
         using var provenance = JsonDocument.Parse(File.ReadAllText(Absolute("Content/provenance.json")));
         var root = provenance.RootElement;
@@ -285,8 +310,8 @@ public sealed class Matura2026ContentTests
         var toc = File.ReadAllText(Absolute("docs/toc.yml"));
 
         Assert.Equal("approved", groups["cke-2026-main-basic-exam"].GetProperty("distributionStatus").GetString());
-        Assert.True(root.GetProperty("releaseEligible").GetBoolean());
-        Assert.Equal("approved", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
+        Assert.False(root.GetProperty("releaseEligible").GetBoolean());
+        Assert.Equal("blocked", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
         Assert.Contains("MMAP-P0-100-A-2605", rights, StringComparison.Ordinal);
         Assert.Contains(PaperHash, rights, StringComparison.Ordinal);
         Assert.Contains(RulesHash, rights, StringComparison.Ordinal);

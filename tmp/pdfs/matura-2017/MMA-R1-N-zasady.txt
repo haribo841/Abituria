@@ -1,0 +1,1823 @@
+
+
+===== PDF PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+EGZAMIN MATURALNY 
+W ROKU SZKOLNYM 2016/2017 
+ 
+FORMUŁA OD 2015 
+(„NOWA MATURA”) 
+ 
+ 
+MATEMATYKA 
+POZIOM ROZSZERZONY 
+ 
+ 
+ 
+ZASADY OCENIANIA ROZWIĄZAŃ ZADAŃ 
+ARKUSZ MMA-R1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MAJ 2017
+
+===== PDF PAGE 2 =====
+Strona 2 z 32 
+ 
+ 
+Uwaga: Akceptowane są wszystkie odpowiedzi merytorycznie poprawne i spełniające warunki 
+zadania. 
+ 
+ 
+Zadanie 1. (0−1) 
+Wymagania ogólne Wymagania szczegó łowe Poprawna 
+odp. (1 p.)
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+2. Wyrażenia algebraiczne. Zdający używa wzorów 
+skróconego mnożenia na (a ±b)
+2 oraz a2 – b2 (2.1). 
+1. Liczby rzeczywiste. Zdający posługuje się 
+w obliczeniach pierwiastkami dowolnego stopnia 
+i stosuje prawa działań na pierwiastkach (1.3). 
+A 
+ 
+Zadanie 2. (0−1) 
+I. Wykorzystanie 
+i tworzenie informacji. 
+5. Ciągi. Zdający oblicza granice ciągów, korzystając 
+z granic ciągów typu 1/n, 1/n2 oraz z twierdzeń 
+o działaniach na granicach ciągów; (R5.2). 
+D 
+ 
+Zadanie 3. (0−1) 
+IV. Użycie i tworzenie 
+strategii. 
+7. Planimetria. Zdający stosuje zależności między 
+kątem środkowym i kątem wpisanym; (7.1). C 
+ 
+Zadanie 4. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+8. Geometria na płaszczyźnie kartezjańskiej. Zdający 
+oblicza współrzędne oraz długość wektora; dodaje 
+i odejmuje wektory oraz mnoży je przez liczbę. 
+Interpretuje geometrycznie działania na wektorach 
+(R8.7). 
+B 
+ 
+Zadanie 5. (0−2) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+3. Równania i nierówności. Zdający stosuje 
+twierdzenie o reszcie z dzielenia 
+wielomianu przez dwumian x – a (R3.4). 
+125 
+ 
+ 
+
+===== PDF PAGE 3 =====
+Strona 3 z 32 
+ 
+Zadanie 6. (0−3) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+11. Rachunek różniczkowy. Zdający oblicza pochodne funkcji 
+wymiernych oraz korzysta z geometrycznej i fizycznej interpretacji 
+pochodnej (R11.2, R11.3). 
+ 
+Przykładowe rozwiązanie 
+Pochodna funkcji f jest równa 
+() ()
+() ()
+2 2
+2222
+12 1 21
+11
++− − −+ +′ ==
+++
+xx x x xfx
+xx
+ dla każdej liczby rzeczywistej x. 
+Współczynnik kierunkowy szukanej stycznej jest równy: 
+() 211 42
+′ ==f , 
+zatem równanie stycznej do wykresu funkcji f w punkcie ()1, 0P =  ma postać: 
+()1 102=− +yx , 
+11
+22=−yx . 
+Schemat punktowania 
+ 
+Zdający otrzymuje  ..............................................................................................................  1 p.  
+gdy wyznaczy pochodną funkcji f:  
+np. () ()
+()
+2
+22
+12 1
+1
+xx xfx
+x
++− −′ =
++
+ lub ()
+()
+2
+22
+21
+1
+x xfx
+x
+−+ +′ =
++
+ 
+i na tym zakończy lub dalej popełnia błędy. 
+Zdający otrzymuje  ..............................................................................................................  2 p.  
+gdy obliczy () 11 2
+′ =f , poprawnie interpretuje t ę liczb ę jako wspó łczynnik kierunkowy 
+stycznej i na tym zakończy lub dalej popełnia błędy. 
+Zdający otrzymuje  ..............................................................................................................  3 p.  
+gdy zapisze równanie stycznej do wykresu funkcji  f  w punkcie ()1, 0P = :  11
+22=−yx . 
+Uwaga 
+Jeżeli zdaj ący wyznacza b łędnie pochodn ą funkcji, np.: () ()
+2
+2
+12 1
+1
+xx xfx x
++− −′ = +  
+i konsekwentnie do popełnionego błędu wyznaczy równanie stycznej, to otrzymuje 1 punkt. 
+ 
+ 
+
+===== PDF PAGE 4 =====
+Strona 4 z 32 
+ 
+Zadanie 7. (0−3) 
+V. Rozumowanie 
+i argumentacja. 
+2. Wyrażenia algebraiczne. Zdający używa wzorów skróconego 
+mnożenia na (a ±b)2 oraz a2 – b2 (2.1). 
+Zdający dodaje, odejmuje, mnoży i dzieli wyrażenia 
+wymierne (R2.6). 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób 
+Przekształcamy nierówność równoważnie: 
+22 2 2 44 242 0xy x y x x y y−+ +−+> , 
+() ()
+2 2222 2 0xy x xy y−+ − + > , 
+() ( )
+22
+22 0xy x y−+ − > . 
+Ponieważ x y≠ , wi ęc ()
+2
+0xy−> . Zatem lewa strona tej nierówno ści jest sum ą liczby 
+nieujemnej ()
+2
+2xy −  oraz liczby dodatniej ()
+2
+2 x y− , a więc jest dodatnia.  
+To kończy dowód. 
+ 
+II sposób 
+Zapiszmy nierówność 22 2 2 2284 0xy x y x y++−+ >  w postaci równoważnej 
+()
+22 2 28 2 4 0+− ⋅ + + >yx y x y . 
+Ponieważ 2 20+>y  dla ka żdej liczby rzeczywistej y, wi ęc mo żemy potraktowa ć t ę 
+nierówność jak nierówność kwadratową z niewiadomą x i parametrem y (lub z niewiadomą y 
+i parametrem x). Wystarczy wi ęc wykaza ć, że wyró żnik trójmianu kwadratowego 
+()
+22 2 28 2 4+− ⋅ + +yx y x y  zmiennej x jest ujemny.  
+() () ( ) ()
+22 22 2 2Δ 84 2 2 4 6 4 8 2=− − ⋅ + ⋅ + = − + =yy y y y  
+() ( ) ( )
+224 2 4 2 288 4 4 8 4 4 8 2=− − − = − + − = − −yy y y y y . 
+Dla każdej liczby rzeczywistej y, takiej, że 2 2≠y  wyróżnik jest ujemy. Gdy 2 2=y , to 
+wówczas nierówność 22 2 2 2284 0xy x y x y++−+ >  ma postać 
+248 2 8 0−+ >xx  lub 248 2 8 0++ >xx  
+2 22 2 0−+ >xx  lub 2 22 2 0++ >xx , 
+()
+2
+20−>x  lub ()
+2
+20+>x . 
+Ponieważ z założenia wynika, że ≠x y , więc 2 2≠x , a to oznacza, że każda z otrzymanych 
+nierówności jest prawdziwa.  
+To kończy dowód. 
+ 
+III sposób 
+Rozpatrzmy nierówność 22 2 2 2284 0xy x y x y++−+ >  w trzech przypadkach. 
+I. Gdy co najmniej jedna z liczb x, y jest równa 0, np. gdy 0=x . Wtedy nierówno ść 
+przyjmuje postać 
+224 0+>y . 
+
+===== PDF PAGE 5 =====
+Strona 5 z 32 
+ 
+Ta nierówność jest prawdziwa dla każdej liczby rzeczywistej y. 
+ 
+II. Gdy żadna z liczb x, y nie jest równa 0 i gdy 0<xy . Wtedy po lewej stronie nierówno ści 
+22 2 2 2284 0xy x y x y++−+ >  wszystkie sk ładniki s ą dodatnie, wi ęc nierówno ść jest 
+prawdziwa. 
+ 
+III. Gdy żadna z liczb x, y nie jest równa 0 i gdy 0 >xy . Wtedy, dziel ąc obie strony 
+nierówności 22 2 2 2284 0xy x y x y++−+ >  przez xy , otrzymujemy nierówność równoważną  
+4228 0++− + >xyxy
+yx x y
+, 
+4 28 0
+
+++ +− > 
+xyxy
+xy y x
+, 
+442 2 0
+
+−+ + −+ > 
+xyxy
+xy y x
+, 
+22
+2 20
+  
+   −+ − >    
+xyxy
+xy y x
+. 
+Ponieważ z założenia ≠x y , więc 1≠x
+y
+, zatem ≠x y
+y x
+, co oznacza, że 
+2
+0
+
+ −>
+xy
+yx
+. 
+Stąd i z tego, że 
+2
+2 0
+
+ −≥
+xy
+xy
+ wynika prawdziwość otrzymanej nierówności. 
+To kończy dowód.  
+ 
+IV sposób 
+I. Gdy 0xy ≤ , to wtedy po lewej stronie nierówno ści 22 2 2 2284 0xy x y x y++−+ >  cztery 
+pierwsze składniki są nieujemne, piąty jest dodatni, więc nierówność jest prawdziwa. 
+II. Gdy 0xy > , wtedy z nierówno ści między średnią arytmetyczną i geometryczn ą dla liczb 
+dodatnich 22x y , 22x , 22y  i 4 otrzymujemy 
+22 2 2
+22 2 2 4444224 224 1 6 24
+xy x y x yxy x y x y+++ ≥⋅ ⋅ ⋅ = = , 
+skąd 
+22 2 2 224 8x yxy x y+++ ≥ . 
+Równość miałaby miejsce tylko wtedy, gdyby 22 2 2 224xy x y=== , a więc gdyby 22x y= , 
+co wobec nierówności 0xy >  oznaczałoby x y= , co jest sprzeczne z założeniem. Zatem 
+22 2 2 224 8x yxy x y+++ > , 
+czyli  
+22 2 2 2284 0xy x y x y++−+ > . 
+To kończy dowód.  
+
+===== PDF PAGE 6 =====
+Strona 6 z 32 
+ 
+Schemat punktowania  
+ 
+I sposób rozwiązania 
+Pokonanie zasadniczych trudności zadania  .....................................................................  2 p.  
+Zdający zapisze nierówno ść w postaci () ( )
+22
+22 0xy x y−+ − >  i na tym zako ńczy lub dalej 
+popełnia błędy. 
+Rozwiązanie pełne  ..............................................................................................................  3 p.  
+Zdający przeprowadzi pełne rozumowanie, uwzględniające założenie, że x y≠ . 
+ 
+II sposób rozwiązania 
+Rozwiązanie, w którym postęp jest istotny  ......................................................................  1 p.  
+Zdający zapisze nierówność w postaci ()
+22 2 28 2 4 0+− ⋅ + + >yx y x y , obliczy wyróżnik 
+trójmianu kwadratowego ()
+22 2 28 2 4+− ⋅ + +yx y x y , np.: () () ( )
+2 22Δ 84 2 2 4yy y=− − ⋅ + ⋅ +  
+i na tym zakończy lub dalej popełnia błędy. 
+Pokonanie zasadniczych trudności zadania  .....................................................................  2 p.  
+Zdający uzasadni, że wyróżnik ()
+22Δ 82=− − y  jest niedodatni dla każdej liczby rzeczywistej 
+y, ale nie rozpatrzy przypadku, gdy 2 2=y  i na tym zakończy lub dalej popełnia błędy. 
+Rozwiązanie pełne  ..............................................................................................................  3 p.  
+Zdający przeprowadzi pełne rozumowanie. 
+ 
+III sposób rozwiązania 
+Rozwiązanie, w którym postęp jest istotny  ......................................................................  1 p.  
+Zdający wykaże prawdziwość nierówności w I i w II przypadku i na tym zakończy lub dalej 
+popełnia błędy. 
+Pokonanie zasadniczych trudności zadania  .....................................................................  2 p.  
+Zdający zapisze nierówno ść w postaci 4 28 0
+
+++ +− > 
+xyxy
+xy y x
+ w przypadku, gdy 0 >xy  
+i na tym zakończy lub dalej popełnia błędy. 
+Rozwiązanie pełne  ..............................................................................................................  3 p.  
+Zdający przeprowadzi pełne rozumowanie. 
+ 
+IV sposób rozwiązania 
+Rozwiązanie, w którym postęp jest istotny  ......................................................................  1 p.  
+Zdający wykaże prawdziwość nierówności 22 2 2 2284 0xy x y x y++−+ >  w I przypadku 
+i na tym zakończy lub dalej popełnia błędy. 
+
+===== PDF PAGE 7 =====
+Strona 7 z 32 
+ 
+Pokonanie zasadniczych trudności zadania  .....................................................................  2 p.  
+Zdający uzasadni, że gdy 0xy > , to prawdziwa jest nierówno ść 
+22 2 2 224 24
+xy x y xy+++ ≥  
+i na tym zakończy lub dalej popełnia błędy. 
+Rozwiązanie pełne  ..............................................................................................................  3 p.  
+Zdający przeprowadzi pełne rozumowanie. 
+ 
+ 
+Zadanie 8. (0−3) 
+V. Rozumowanie 
+i argumentacja. 
+7. Planimetria. Zdający korzysta z własności funkcji 
+trygonometrycznych w łatwych obliczeniach geometrycznych, w tym 
+ze wzoru na pole trójkąta ostrokątnego o danych dwóch bokach 
+i kącie między nimi. (7.4). 
+Zdający rozpoznaje figury podobne i jednokładne wykorzystuje 
+(także w kontekstach praktycznych) ich własności. (R7.4). 
+Zdający znajduje związki miarowe w figurach płaskich 
+z zastosowaniem twierdzenia sinusów i twierdzenia cosinusów. 
+(R7.5). 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób 
+Przyjmijmy oznaczenia jak na rysunku. 
+ 
+Pole trójkąta ABC jest równe 
+1 sin2=⋅ ⋅ βABCPa c . 
+Pola trójkątów ABE i CBE są równe 
+1 sin22=⋅ ⋅ β
+ABEPd c  oraz  1 sin22=⋅ ⋅ β
+CBEPd a . 
+Suma pól trójkątów ABE i CBE jest równa polu trójkąta ABC, zatem   
+11 1 sin sin sin22 2 2 2⋅⋅ = ⋅⋅ + ⋅⋅ βββac dc da . 
+A B 
+C 
+E a  
+c
+d 
+2
+β   
+2
+β   
+
+===== PDF PAGE 8 =====
+Strona 8 z 32 
+ 
+Stąd ()2sin cos sin22 2⋅⋅ = ⋅ + ⋅ββ βac d a c . 
+()2c o s 2⋅= ⋅ +βac d a c , 
+2 cos 2=⋅ +
+βacd ac . 
+ 
+To kończy dowód. 
+ 
+II sposób 
+Przyjmijmy oznaczenia jak na rysunku. 
+ 
+Z twierdzenia o dwusiecznej otrzymujemy 
+=CE CB
+AE AB , czyli =y a
+x c . 
+Z twierdzenia cosinusów dla trójkątów ABE i CBE otrzymujemy  
+222 2c o s 2xcd c d β=+−  oraz 222 2c o s 2ya d a d β=+− . 
+Zatem  
+2222
+22 22
+2
+2
+2c o s
+2c o s
+ad a day
+cx cd c d
+β
+β
++−
+==
++−
+. 
+Stąd otrzymujemy 
+ 
+( ) ( )
+22 2 2 2 2
+222 cos 2 cosac d c d ca d a d ββ+− = +− , 
+22 2 2 2 22 2 2 2
+222 cos 2 cosac ad ac d ac cd a cd ββ+− =+− , 
+22 22 2 2
+222 cos 2 cosad cd ac d a cd ββ−= − , 
+() ()
+22
+22c o sac d a c a c β−= − . 
+Gdy ac= , wówczas trójkąt ABC jest równoramienny, więc trójkąty ABE i CBE są 
+prostokątne i przystające. Wtedy  2cos d
+c
+β = , skąd 
+2
+22 2
+22cos cos cos2
+ca cdc ca c
+ββ β== = + . 
+Gdy zaś ac≠ , to () () 0acac−+ ≠ , czyli 22 0ac −≠ , więc 
+()
+22 22
+2 2cos cosac acda c ac a c
+ββ−== −+ . 
+To kończy dowód. 
+A B 
+C 
+E a  
+c
+d 
+2
+β   
+2
+β   
+x 
+y 
+
+===== PDF PAGE 9 =====
+Strona 9 z 32 
+ 
+III sposób 
+Poprowadźmy wysoko ści CG i EF trójk ątów ABC i ABE. Poniewa ż trójk ąt ABC jest 
+ostrokątny, wi ęc spodki F i G tych wysoko ści le żą na boku AB trójk ąta ABC. Pozosta łe 
+oznaczenia przyjmijmy jak na rysunku. 
+ 
+Z twierdzenia o dwusiecznej otrzymujemy 
+=CE CB
+AE AB , czyli =ya
+x c . 
+Z trójkątów BEF i BCG otrzymujemy  
+sin 2= βp
+d  oraz sin= βh
+a . 
+Stąd 
+sin 2= βpd  oraz sin= βha . 
+Trójkąty AFE i AGC są podobne, gdyż oba są prostokątne i mają wspólny kąt ostry przy 
+wierzchołku A. Zatem  
+  =EF CG
+AE AC , czyli = +
+p h
+x xy . 
+Stąd i z poprzednio otrzymanych równości otrzymujemy kolejno 
+ 
+sin sin2 = +
+β
+βd a
+x xy , 
+2sin cos22sin 2 1
+a
+d y
+x
+ββ
+β ⋅
+=
++
+, 
+2 cos 2 cos22
+1
+⋅⋅
+== ++
+ββaa c
+d a ac
+c
+. 
+To kończy dowód. 
+A B 
+C 
+E a  
+c
+d 
+2
+β   
+2
+β   
+F G
+p 
+h 
+x 
+y 
+
+===== PDF PAGE 10 =====
+Strona 10 z 32 
+ 
+Schemat punktowania 
+ 
+I sposób rozwiązania 
+Rozwiązanie, w którym postęp jest istotny  ......................................................................  1 p. 
+Zdający 
+• zapisze pola ka żdego z trójk ątów ABC, ABE i CBE w zale żności od d ługości a, c, d 
+i kąta β : 1 sin2=⋅ ⋅ βABCPa c , 1 sin22=⋅ ⋅ β
+ABEPd c , 1 sin22=⋅ ⋅ β
+CBEPd a  
+albo 
+• zapisze, że pole trójk ąta ABC  jest sum ą pól trójk ątów ABE i CBE oraz zapisze jedno 
+z tych pól: 1 sin2=⋅ ⋅ βABCPa c  lub 1 sin22=⋅ ⋅ β
+ABEPd c  lub 1 sin22=⋅ ⋅ β
+CBEPd a  
+i na tym zakończy lub dalej popełnia błędy. 
+Pokonanie zasadniczych trudności zadania  .....................................................................  2 p. 
+Zdający zapisze zale żność mi ędzy polem trójk ąta ABC i polami trójk ątów ABE i CBE 
+w postaci, w której występują jedynie wielkości a, c, d i β , np.: 
+11 1 sin sin sin22 2 2 2⋅⋅ = ⋅⋅ + ⋅⋅ βββac dc da  
+i na tym zakończy lub dalej popełnia błędy. 
+Rozwiązanie pełne  ..............................................................................................................  3 p. 
+Zdający przeprowadzi pełne rozumowanie. 
+ 
+ 
+II sposób rozwiązania 
+Rozwiązanie, w którym postęp jest istotny  ......................................................................  1 p. 
+Zdający zapisze zależności między wielkościami x, y, d, a i c oraz kątem β : 
+=y a
+x c , 222 2c o s 2xcd c d β=+− , 222 2c o s 2yad a d β=+−  
+i na tym zakończy lub dalej popełnia błędy. 
+Pokonanie zasadniczych trudności zadania  .....................................................................  2 p. 
+Zdający zapisze równanie, np.: 
+222
+2 22
+2
+2
+2c o s
+2c o s
+ad a da
+c cd c d
+β
+β
++−
+=
++−
+  
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Rozwiązanie pełne  ..............................................................................................................  3 p. 
+Zdający przeprowadzi pełne rozumowanie. 
+Uwaga 
+Jeżeli zdający nie rozważy sytuacji gdy ac= , to może otrzymać co najwyżej 2 punkty.  
+ 
+
+===== PDF PAGE 11 =====
+Strona 11 z 32 
+ 
+III sposób rozwiązania 
+Rozwiązanie, w którym postęp jest istotny  ......................................................................  1 p. 
+Zdający zapisze 
+• zależność między wielkościami x, y, a i c oraz zależności między wielkościami p, h i a 
+oraz kątem β :   =y a
+x c , sin 2= βp
+d , sin= βh
+a  
+albo 
+• zależność mi ędzy wielko ściami x, y, a i c  oraz zale żności mię dzy wielko ściami  
+p, h, x i y oraz kątem β :   =ya
+x c , = +
+p h
+x xy , 
+albo 
+• zależność mi ędzy wielko ściami p, h i a oraz k ątem β  oraz zale żność mi ędzy 
+wielkościami x, y, a i c: sin 2= βp
+d , sin= βh
+a , =y a
+x c  
+i na tym zakończy lub dalej popełnia błędy. 
+Pokonanie zasadniczych trudności zadania  .....................................................................  2 p. 
+Zdający zapisze wystarczaj ącą liczb ę zależ ności mi ędzy wielko ściami x, y, a, c, p i h oraz 
+kątem β , pozwalającą wyznaczyć d w zależności od wielkości a, c i kąta β , np.:   
+=ya
+x c , 
+sin sin2 = +
+β
+βd a
+x xy  
+i na tym zakończy lub dalej popełnia błędy. 
+Rozwiązanie pełne  ..............................................................................................................  3 p. 
+Zdający przeprowadzi pełne rozumowanie. 
+ 
+Uwaga 
+Jeżeli zdający zapisze jedynie 3 razy twierdzenie cosinusów, to otrzymuje 0 punktów. 
+ 
+ 
+Zadanie 9. (0−4) 
+IV. Użycie i tworzenie 
+strategii. 
+9. Stereometria. Zdający określa, jaką figurą jest dany przekrój 
+graniastosłupa lub ostrosłupa płaszczyzną. (R9.2). 
+7. Planimetria. Zdający rozpoznaje figury podobne i jednokładne; 
+wykorzystuje (także w kontekstach praktycznych) ich własności 
+(R7.4). 
+G10. Figury płaskie. Zdający stosuje twierdzenie Pitagorasa (G10.7). 
+ 
+Przykładowe rozwiązanie 
+ 
+Niech K b ędzie środkiem odcinka BC, a M i O spodkami wysoko ści trójk ąta AKD 
+opuszczonymi z wierzcho łków A i D. Płaszczyzny AKD i ABC są prostopadłe, bo prosta BC 
+jest prostopadła do płaszczyzny AKD. 
+Niech T będzie punktem wspólnym wysokości AM i DO. Odległości punktu T od prostych AK 
+i DK są równe, bo AKD K= . Są to też odległości punktu T od płaszczyzn ABC i BCD. Ten 
+sam punkt T otrzymamy rozpatruj ąc trójk ąt LCD, gdzie L jest środkiem odcinka AB lub 
+
+===== PDF PAGE 12 =====
+Strona 12 z 32 
+ 
+trójkąt ŁBD, gdzie Ł jest środkiem odcinka AC. Wynika stąd, że odległość punktu T od każdej 
+ściany czworościanu ABCD jest taka sama. Wobec tego ST= . 
+Niech H oznacza wysoko ść czworościanu, h wysokość ściany czworościanu, a R – promień 
+kuli, o której mowa w treści zadania. Pozostałe oznaczenia przyjmijmy takie jak na rysunku.  
+ 
+Wyznaczymy wysokość H czworościanu. 
+Odcinki AK i DK to wysoko ści przystających trójkątów równobocznych ABC i BCD o boku 
+długości 6, więc  
+63 332===AK DK . 
+ Spodek O wysokości DO czworościanu jest środkiem ciężkości trójkąta ABC, więc  
+1 33==KO AK . 
+Z twierdzenia Pitagorasa dla trójkąta DOK otrzymujemy  
+22 2
++=DOK OD K ,  
+() ()
+222 33 3+=H . 
+Stąd 
+() ()
+222 33 3=−H , 
+26=H . 
+Wyznaczamy odległość d środka S kuli od płaszczyzny π . 
+ 
+A 
+C 
+B 
+D
+S M
+O K 
+R 
+H
+R 
+6 
+6 
+6 
+L 
+
+===== PDF PAGE 13 =====
+Strona 13 z 32 
+ 
+I sposób 
+Niech P b ędzie punktem, w którym wysoko ść DO przebija p łaszczyznę π. Poniewa ż 
+płaszczyzna π jest równoleg ła do p łaszczyzny ściany ABC, wi ęc czworo ścian odci ęty t ą 
+płaszczyzną od czworo ścianu ABCD jest podobny do czworo ścianu ABCD, a skala tego 
+podobieństwa jest równa 3 8 2
+27 3= . Wynika st ąd, że p łaszczyzna π przecina wysoko ść DK 
+ściany bocznej BCD w takim punkcie ′M , że  
+2
+3′=DM DK . 
+To oznacza ′=M M .  
+ 
+Trójkąty DOK, DPM, MPS są podobne, poniewa ż para trójk ątów prostokątnych DOK, DPM  
+ma jeden kąt ostry wspólny oraz para trójk ątów prostokątnych DPM, MPS ma jeden kąt ostry 
+wspólny. Zatem  
+Stąd  
+DPD OM P
+MPO K P S== , czyli 
+2
+3
+3
+==
+H MPH
+MPd . 
+Stąd 
+2 33MP =  oraz 
+2 326 3
+3
+= d   
+Zatem 6
+6=d . 
+ 
+A 
+π  
+D 
+M
+O K 
+H
+R 
+P 
+d 
+S R 
+
+===== PDF PAGE 14 =====
+Strona 14 z 32 
+ 
+II sposób 
+Obliczymy najpierw promień R kuli. 
+ 
+Trójkąty DOK i DMS są podobne, ponieważ są prostokątne i mają jeden kąt ostry wspólny. 
+Zatem =SM KO
+DSD K . Stąd  
+1
+13
+3==−
+hR
+HR h , 
+3RHR=− , 
+4RH=  
+1
+4RH= . 
+Ponieważ 26=H , więc 
+26 6
+42R == . 
+Płaszczyzna π odcina czworo ścian podobny do czworo ścianu ABCD w skali 2
+3 , wi ęc 
+2
+3DPH= , skąd 11 2 26 633 3OP H== ⋅= . 
+Odległość punktu S od płaszczyzny π jest więc równa  
+12 6 6 6
+33 2 6=− = − =dH R . 
+Uwaga 
+Możemy najpierw wyznaczyć wielkości R i OP  w zależności od H, potem wyznaczyć 
+szukaną odległość d w zależności od H, a następnie obliczyć H i w rezultacie d: 
+1
+4RH= , 1
+3OP H= ,  
+więc  
+611 1 1
+341 21 2 6 26dHH H=−= = ⋅ = . 
+A 
+π   
+D
+M
+O K 
+H
+R 
+P 
+d 
+S R 
+
+===== PDF PAGE 15 =====
+Strona 15 z 32 
+ 
+Schemat punktowania  
+Rozwiązanie, w którym post ęp jest wprawdzie niewielki, ale konieczny na drodze do 
+pełnego rozwiązania  ...........................................................................................................  1 p. 
+Zdający:  
+• obliczy wysokość czworościanu ABCD: 26=H  
+albo 
+• obliczy skalę s podobieństwa czworościanu odciętego płaszczyzną π od czworościanu 
+ABCD do czworościanu ABCD: 2
+3=s , 
+albo 
+• zapisze zale żność mi ędzy promieniem R kuli, wysoko ścią H czworo ścianu ABCD 
+i wysokością h ściany czworościanu, np.: 
+1
+3 hR
+H Rh=− , 
+albo 
+• zapisze zależność między R, objętością V czworościanu ABCD  polem cP  powierzchni 
+całkowitej  czworościanu ABCD, np.: 3
+c
+VR P= , 
+albo 
+• poprawnie interpretuje wielkość d, np. pisz ąc dHP DR=− −  lub zaznaczaj ąc d na 
+rysunku  
+i na tym poprzestanie lub dalej popełnia błędy. 
+ 
+Rozwiązanie, w którym postęp jest istotny  ......................................................................  2 p. 
+Zdający:  
+• obliczy wysoko ść H czworo ścianu ABCD oraz skal ę s podobie ństwa czworo ścianu 
+odciętego płaszczyzną π od czworościanu ABCD do czworościanu ABCD: 26=H , 
+2
+3=s  
+albo 
+• obliczy wysoko ść H czworo ścianu ABCD oraz obliczy promie ń R kuli: 26=H , 
+6
+2R = , 
+albo 
+• obliczy skalę s podobieństwa czworościanu odciętego płaszczyzną π od czworościanu 
+ABCD do czworościanu ABCD oraz  promień R kuli : 2
+3=s , 6
+2R = , 
+albo 
+• obliczy skalę s podobieństwa czworościanu odciętego płaszczyzną π od czworościanu 
+ABCD do czworo ścianu ABCD oraz wyznaczy promie ń R kuli w zale żności od H : 
+2
+3=s , 1
+4RH=  
+i na tym poprzestanie lub dalej popełnia błędy. 
+
+===== PDF PAGE 16 =====
+Strona 16 z 32 
+ 
+Pokonanie zasadniczych trudności zadania  .....................................................................  3 p. 
+Zdający:  
+• obliczy wysoko ść H czworo ścianu ABCD, wysoko ść czworo ścianu odci ętego 
+płaszczyzną π od czworo ścianu ABCD do czworo ścianu ABCD oraz promie ń R kuli: 
+26=H , 4 63DP = , 6
+2R = , 
+albo 
+• wyznaczy szukan ą odleg łość d w zale żności od wysoko ści H czworo ścianu ABCD, 
+np.: 11
+34dHH=−  
+i na tym zakończy lub dalej popełnia błędy. 
+Rozwiązanie pełne  ..............................................................................................................  4 p. 
+Zdający obliczy odległość punktu S od płaszczyzny π: 6
+6=d . 
+ 
+ 
+Zadanie 10. (0−4) 
+IV. Użycie i tworzenie 
+strategii. 
+6. Trygonometria. Zdający rozwiązuje równania i nierówności 
+trygonometryczne oraz posługuje się wykresami funkcji 
+trygonometrycznych (R6.6, R6.4). 
+ 
+Przykładowe rozwiązania 
+ 
+Równanie można przekształcić równoważnie do postaci: 
+22cos 3cos 1 0++ =xx . 
+Podstawiamy cos=tx , przy czym 1, 1∈−t . 
+Rozwiązujemy równanie kwadratowe: 
+223 1 0++ =tt . 
+981 , 1Δ= − = Δ= , 
+1
+31 14
+−−== −t , 
+2
+31 1
+42
+−+== −t . 
+Wyznaczamy wartości x w przedziale 0, 2π : 
+cos 1=−x  lub 1cos 2=−x , 
+π=x  lub 2π
+3=x , lub 4π
+3=x . 
+
+===== PDF PAGE 17 =====
+Strona 17 z 32 
+ 
+Schemat punktowania 
+ 
+Rozwiązanie, w którym postęp jest wprawdzie niewielki, ale konieczny na drodze do 
+pełnego rozwiązania  ...........................................................................................................  1 p. 
+Zdający zapisze podane równanie w postaci, w której występuje tylko jedna funkcja 
+trygonometryczna tego samego argumentu, np. 22cos 1 3cos 2−+ = −xx  i na tym zakończy 
+lub dalej popełnia błędy. 
+Rozwiązanie, w którym postęp jest istotny  ......................................................................  2 p. 
+Zdający zapisze, że równanie 22cos 3cos 1 0++ =xx  ma dwa rozwiązania 
+cos 1=−x  lub 1cos 2=−x  
+i na tym zakończy lub dalej popełnia błędy. 
+Pokonanie zasadniczych trudności zadania  .....................................................................  3 p. 
+Zdający 
+• rozwiąże jedno z równań cos 1 =−x  lub 1cos 2=−x  w przedziale 0, 2π  
+albo 
+• wyznaczy wszystkie rozwiązania równań cos 1 =−x  i 1cos 2=−x w zbiorze R 
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Rozwiązanie pełne  ..............................................................................................................  4 p. 
+Zdający wyznaczy wszystkie rozwiązania równania w podanym przedziale:  
+π=x  lub 2π
+3=x , lub 4π
+3=x . 
+Uwagi 
+1. Je żeli zdaj ący pope łnił b łąd przy rozwi ązywaniu równania kwadratowego i otrzyma ł 
+równanie sprzeczne lub równanie, którego wszystkie rozwi ązania są spoza przedziału 1,1− , 
+to może otrzymać co najwyżej 1 punkt. 
+2. Je żeli zdaj ący pope łnił b łąd przy rozwi ązywaniu równania kwadratowego i otrzyma ł 
+równanie, które ma tylko jedno rozwi ązanie z przedzia łu 1,1− , to mo że otrzyma ć co 
+najwyżej 2 punkty. 
+3. Je żeli zdaj ący pope łnił b łąd przy rozwi ązywaniu równania kwadratowego i otrzyma ł 
+równanie, które ma dwa rozwiązania z przedziału 1,1− , przy czym co najmniej jedno z nich 
+jest z przedziału () 1,1− , to może otrzymać co najwyżej 3 punkty. 
+4. Jeżeli zdający poda liczby 2π 4π
+33π,, jako rozwiązanie, ale bez stosownego uzasadnienia, to 
+otrzymuje 0 punktów . Je żeli poda te 3 liczby jako rozwi ązanie, z uzasadnieniem, np. 
+sprawdzeniem spe łniania przez te liczby równo ści lub odpowiedni ą ilustracj ą, to otrzymuje 
+1 punkt. 
+ 
+ 
+
+===== PDF PAGE 18 =====
+Strona 18 z 32 
+ 
+Zadanie 11. (0−4) 
+IV. Użycie i tworzenie 
+strategii. 
+10. Elementy statystyki opisowej. Teoria prawdopodobieństwa 
+i kombinatoryka. Zdający wykorzystuje wzory na liczbę 
+permutacji, kombinacji, wariacji i wariacji z powtórzeniami do 
+zliczania obiektów w bardziej złożonych sytuacjach 
+kombinatorycznych (R10.1).
+ 
+ 
+Przykładowe rozwiązanie 
+Jest to model klasyczny. Za ka żdym razem mamy 8 mo żliwości wyciągnięcia jednej piłeczki. 
+Zbiór wszystkich zdarzeń elementarnych Ω  jest zbiorem wszystkich ci ągów trójwyrazowych 
+o wyrazach ze zbioru liczb całkowitych od 1 do 8. Zatem 8 8 8 512Ω= ⋅ ⋅ = .  
+Niech A oznacza zdarzenie zapisania takich trzech liczb, że ich iloczyn dzieli si ę przez 4. 
+Wtedy możliwe są 3 przypadki. 
+I. Wszystkie zapisane liczby są parzyste. 
+II. Dwie z zapisanych liczb są parzyste, a jedna z zapisanych jest nieparzysta. 
+III. Dwie z zapisanych liczb są nieparzyste, a jedna z zapisanych jest podzielna przez 4. 
+Obliczamy liczbę zdarzeń elementarnych w każdym z tych przypadków. 
+I. 444 6 4⋅⋅= . 
+II. 4443 1 9 2⋅⋅⋅= . 
+III. 4423 9 6⋅⋅⋅= . 
+Obliczamy prawdopodobie ństwo zdarzenia, polegaj ącego na tym, że iloczyn trzech 
+zapisanych liczb jest podzielny przez 4: () 64 192 96 352 11
+512 512 16
+++== =PA . 
+ 
+Uwaga 
+Prawdopodobieństwo zdarzenia A mo żemy te ż wyznaczy ć po uprzednim obliczeniu 
+prawdopodobieństwa zdarzenia przeciwnego A’. Je żeli iloczyn trzech zapisanych liczb nie 
+dzieli się przez 4, to oznacza, że zachodzi jeden z poniższych przypadków. 
+I. Wszystkie zapisane liczby są nieparzyste. 
+II. Dwie z zapisanych liczb są nieparzyste, a jedna z zapisanych jest równa 2 lub 6. 
+Obliczamy liczbę zdarzeń elementarnych w każdym z tych przypadków. 
+I. 444 6 4⋅⋅= . 
+II. 963244 =⋅⋅⋅ . 
+Obliczamy prawdopodobie ństwo zdarzenia, polegaj ącego na tym, że iloczyn trzech 
+zapisanych liczb nie jest podzielny przez 4: () 16
+5
+512
+160
+512
+9664 ==+=′AP . 
+Zatem  () 16
+11
+16
+51 =−=AP . 
+
+===== PDF PAGE 19 =====
+Strona 19 z 32 
+ 
+Schemat punktowania  
+Rozwiązanie, w którym postęp jest wprawdzie niewielki, ale konieczny na drodze do 
+pełnego rozwiązania  ...........................................................................................................  1 p. 
+Zdający 
+• obliczy 888Ω= ⋅ ⋅  
+albo 
+• wypisze wszystkie mo żliwe, ale roz łączne, przypadki, w których wyst ąpi zdarzenie A 
+lub zdarzenie A′,  
+albo 
+• wypisze wszystkie możliwe przypadki, w których wystąpi zdarzenie A (lub A′) i poda 
+taką metodę zliczania zdarze ń elementarnych sprzyjaj ących A (lub A′), która wyklucza 
+powtórzenie tego samego zdarzenia elementarnego,  
+albo 
+• obliczy A (lub A′), stosując poprawną metodę, ale z błędem rachunkowym, 
+albo 
+• narysuje drzewo z wyróżnionymi wszystkimi gałęziami odpowiadającymi zdarzeniu A 
+(albo A′), 
+albo 
+• narysuje niepe łne drzewo (mo że wyst ąpić brak istotnych ga łęzi odpowiadaj ących 
+zdarzeniu A lub A′), ale na wszystkich odci nkach co najmniej jednej ga łęzi zapisze 
+prawdopodobieństwa, np. 111
+244⋅⋅ , przy czym najwy żej na jednym z trzech odcinków 
+prawdopodobieństwo może być równe 1 
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Rozwiązanie, w którym postęp jest istotny  ......................................................................  2 p. 
+Zdający 
+• obliczy 888Ω= ⋅ ⋅  i wypisze wszystkie możliwe, ale rozłączne, przypadki, w których 
+wystąpi zdarzenie A lub zdarzenie A′ 
+albo 
+• obliczy 888Ω= ⋅ ⋅  i wypisze wszystkie mo żliwe przypadki, w których wyst ąpi 
+zdarzenie A (lub A′) i poda tak ą metodę zliczania zdarze ń elementarnych sprzyjaj ących 
+A (lub A′), która wyklucza powtórzenie tego samego zdarzenia elementarnego,  
+albo 
+• obliczy 888Ω= ⋅ ⋅  i obliczy liczb ę zdarze ń elementarnych w dwóch spo śród 
+przypadków: a) zapisano 3 lic zby parzyste, b) zapisano 2 liczby parzyste i jedn ą 
+nieparzystą, c) zapisano dwie liczby nieparzyste i jedną podzielną przez 4,  
+albo 
+• obliczy 352=A  lub 160=′A ,  
+albo 
+• narysuje drzewo z wyróżnionymi wszystkimi gałęziami odpowiadającymi zdarzeniu A 
+(albo A′) i na wszystkich odcink ach co najmniej jednej ga łęzi zapisze 
+prawdopodobieństwa, np. 111
+244⋅⋅ , przy czym najwy żej na jednym z trzech odcinków 
+prawdopodobieństwo może być równe 1, 
+
+===== PDF PAGE 20 =====
+Strona 20 z 32 
+ 
+albo 
+• narysuje drzewo z wyró żnionymi wszystkimi ga łęziami odpowiadaj ącymi dwóm 
+spośród przypadków: a) zapisano 3 liczby parzys te, b) zapisano 2 liczby parzyste i jedn ą 
+nieparzystą, c) zapisano dwie liczby nieparzyste i jedn ą podzieln ą przez 4 i oblicza 
+prawdopodobieństwo zgodnie z „metodą drzewkową” 
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Pokonanie zasadniczych trudności zadania  .....................................................................  3 p. 
+Zdający  
+• obliczy 888Ω= ⋅ ⋅  i 352=A  (lub 160=′A ) 
+albo 
+• narysuje poprawne drzewo  oraz zapisze prawdopodobie ństwo zdarzenia A (albo A′) 
+zgodnie z „metodą drzewkową” 
+i na tym zakończy lub dalej popełnia błędy. 
+Rozwiązanie pełne  ..............................................................................................................  4 p. 
+Zdający obliczy prawdopodobieństwo: () 352 11
+512 16PA == . 
+ 
+ 
+Zadanie 12. (0−5) 
+III. Modelowanie 
+matematyczne. 3. Równania i nierówności. Zdający stosuje wzory Viète’a (R3.1). 
+ 
+Przykładowe rozwiązania 
+I sposób 
+Zapisujemy układ warunków 
+()
+2
+12
+0
+44 1 0
+Δ> −− < xx
+ 
+Rozwiązujemy nierówno ść 0Δ> , czyli ()
+2236 16 2 3 9 0mm m−− − > . Po uporz ądkowaniu 
+otrzymujemy nierówno ść ()
+2
+46 0m +> , której rozwi ązaniem s ą wszystkie liczby 
+rzeczywiste oprócz 6m =− .  
+Drugą nierówność przekształcamy równoważnie i otrzymujemy kolejno: 
+()
+2
+1216 1 0−− <xx , 
+()
+22
+11 2 216 2 1 0−+ − <xx x x , 
+()
+2
+12 1 216 4 1 0 +− − <xx x x . 
+Stosujemy wzory Viete'a i otrzymujemy: 
+2236 2 3 916 4 1 016 4
+ −−−⋅ −<
+mm m . 
+
+===== PDF PAGE 21 =====
+Strona 21 z 32 
+ 
+Przekształcamy nierówność równoważnie otrzymujemy kolejno: 
+2236 32 48 143 0−+ + <mmm , 
+24 48 143 0++ <mm . 
+Rozwiązujemy tę nierówność. 
+22304 2288 4Δ= − =  
+1
+48 4 13
+82
+−−== −m ,  2
+48 4 11
+82
+−+== −m , 
+13 11,22
+∈− −
+m . 
+Wyznaczamy część wspólną obu warunków: 13 11,6 6 ,22
+  ∈− − ∪− −    
+m . 
+ 
+II sposób 
+Rozwiązujemy nierówno ść 0Δ> , czyli ()
+2236 16 2 3 9 0mm m−− − > . Po uporz ądkowaniu 
+otrzymujemy nierówno ść ()
+2
+46 0m +> , której rozwi ązaniem s ą wszystkie liczby 
+rzeczywiste oprócz 6m =− .  
+Obliczamy pierwiastki równania, z zachowaniem warunku 12<x x : 
+1
+62 6 3 6
+84
+−+ − +== mm m mx ,  2
+62 6 3 6
+84
+++ + +== mm m mx . 
+Obliczamy wartość wyrażenia 1244 −x x  w zależności od m: 
+12
+2644 4 2 6 4
+−+−= ⋅ = −+ mxx m .  
+Zapisujemy nierówno ść z tre ści zadania z wykorzystaniem wyznaczonych rozwi ązań 
+równania i przekształcamy ją równoważnie, otrzymując kolejno:  
+() ()26 1 26 1 0−+ − −+ + <mm , 
+()
+2
+14 6 0−− + < m , 
+24 48 143 0++ <mm . 
+Dalsza część rozwiązania przebiega podobnie jak w I sposobie rozwiązania, 
+ 
+Schemat punktowania  
+Rozwiązanie zadania składa się z trzech etapów.  
+Pierwszy z nich polega na rozwiązaniu nierówności 0Δ> . 
+Za poprawne rozwiązanie tego etapu zdający otrzymuje 1 punkt.  
+Uwaga 
+Jeżeli zdaj ący rozwi ąże nierówno ść 0Δ≥  i nie odrzuci przypadku 0Δ= , to za ten etap 
+otrzymuje 0 punktów.  
+ 
+Drugi etap polega na znalezieniu warto ści 
+m, dla których spe łniona jest nierówno ść: 
+() ()12 12441 441 0xx xx−− −+ < . 
+Za tę część rozwiązania zdający otrzymuje 3 punkty.  
+ 
+
+===== PDF PAGE 22 =====
+Strona 22 z 32 
+ 
+Poniżej podział punktów za drugi etap rozwiązania: 
+Zdający otrzymuje 1 punkt gdy: 
+•  zapisze nierówno ść () ()12 12441 441 0xx xx−− −+ <  w postaci równowa żnej 
+zawierającej jedynie sum ę i iloczyn pierwiastków  trójmianu kwadratowego 
+() ( )
+246 2 3 3xm xm m−++ − , np.: ()
+2
+12 1 216 4 1 0 +− − <xx x x  
+lub 
+• obliczy pierwiastki trójmianu: 
+ 1
+62 6 3 6
+84
+−+ − +== mm m mx , 2
+62 6 3 6
+84
+++ + +== mm m mx . 
+Zdający otrzymuje 2 punkty gdy: 
+• zapisze nierówność () ()12 12441 441 0xx xx−− −+ <  w postaci nierówności równoważnej 
+z jedną niewiadomą np.: 
+2236 2 3 916 4 1 016 4
+ −−−⋅ −<
+mm m  lub 24 48 143 0++ <mm  
+lub () ()26 1 26 1 0−+ − −+ + <mm . 
+ 
+Zdający otrzymuje 3 punkty gdy: 
+• poprawnie rozwiąże nierówność: 13 11,22
+∈− −
+m .  
+Trzeci etap polega na wyznaczeniu cz ęści wspólnej zbiorów rozwiązań nierówności z etapów 
+I i II oraz podaniu odpowiedzi: 13 11,6 6 ,22
+  ∈− − ∪− −    
+m . 
+Za poprawne rozwiązanie tego etapu zdający otrzymuje 1 punkt. 
+ 
+Uwagi  
+1. W przypadku otrzymania na jednym z etapów (I lub II) zbioru pustego lub zbioru R jako 
+zbioru rozwiązań nierówności przyznajemy 0 punktów za III etap.  
+2. W przypadku otrzymania w II etapie zbioru rozwi ązań, b ędącego podzbiorem zbioru 
+rozwiązań z I etapu przyznajemy 0 punktów za III etap. 
+3. W przypadku rozwiązania z błędami, nieprzekreślającymi poprawności rozumowania, za 
+ostatni etap przyznajemy 1 punkt jedynie wówczas, gdy zdaj ący poprawnie wykona etap I 
+i popełnia b łędy w rozwi ązaniu nierówno ści z etapu II lub gdy pope łnia b łędy w etapie I 
+i dobrze rozwiąże etap II (uwaga 3. ma zastosowanie, gdy nie zachodzą przypadki 1. i 2.).  
+4. Jeżeli zdający w wyniku błędów otrzyma w II etapie nierówność z niewiadomą m stopnia 
+drugiego z ujemnym wyró żnikiem lub nierówno ść liniow ą, to mo że otrzyma ć co najwy żej 
+3 punkty. 
+5. W przypadku, gdy zdaj ący przyjmuje b łędnie ()26mΔ= +  i konsekwentnie rozwi ąże 
+zadanie do końca  może otrzymać maksymalnie 3 punkty. 
+ 
+ 
+
+===== PDF PAGE 23 =====
+Strona 23 z 32 
+ 
+Zadanie 13. (0−5) 
+IV. Użycie i tworzenie 
+strategii. 
+8. Geometria na płaszczyźnie kartezjańskiej. Zdający posługuje 
+się równaniem okręgu (x – a)2 + (y – b)2 = r2 oraz opisuje koła za 
+pomocą nierówności, wyznacza współrzędne środka odcinka, 
+wyznacza równanie prostej, która jest równoległa lub prostopadła 
+do prostej danej w postaci kierunkowej i przechodzi przez dany 
+punkt, oblicza współrzędne punktu przecięcia dwóch prostych 
+oraz oblicza odległość dwóch punktów (R8.5, 8.5, 8.3, 8.4, 8.6). 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób  
+Środek S szukanego okr ęgu jest punktem przeci ęcia prostej 31 0xy−+ =  oraz symetralnej 
+odcinka AB. 
+Wyznaczmy współrzędne środka D odcina AB: 50 36 5 9,,22 2 2
+−+ + −  ==    
+D . 
+Obliczamy współczynnik kierunkowy prostej przechodzącej przez punkty A i B:  
+63 3
+05 5
+−== +
+ABa . 
+Z warunku prostopad łości prostych wyznaczamy wspó łczynnik kierunkowy symetralnej 
+odcinka AB: 5
+3=−a . Wyznaczamy równanie symetralnej odcinka AB: 5
+3=− +yx b . 
+Przechodzi ona przez punkt 59,22
+=−
+D , st ąd otrzymujemy 955
+232
+=− ⋅ − +
+b . Zatem 
+1
+3=b . Wobec tego symetralną odcinka AB jest prosta 51
+33=− +yx .  
+Obliczamy wspó łrzędne punktu S, rozwi ązując uk ład równa ń 
+31 0
+51 .33
+−+ = =− +
+xy
+yx
+ Środkiem 
+okręgu jest 10, 3
+= 
+S .  
+Wyznaczamy promień okręgu r obliczając np.: 
+2
+2 81 75 33
+=+ = 
+AS .  
+Wyznaczamy równanie okr ęgu o środku w punkcie 10, 3
+= 
+S  i promieniu 17
+3=r : 
+2
+2 1 289
+39
++− =
+xy . 
+ 
+II sposób 
+Środkiem okręgu jest punkt S, który leży na prostej 31 0xy−+ = . Zatem ()31 ,Sy y=− .  
+Ponieważ  
+22
+ASB S= , więc możemy zapisać równanie () () ()
+22 2 253 6xy x y++ −= + − .  
+Rozwiązujemy zatem układ równań  
+10 6 2xy+=  i 31xy−= − , 
+
+===== PDF PAGE 24 =====
+Strona 24 z 32 
+ 
+otrzymując współrzędne punktu S  
+10, 3
+= 
+S . 
+Następnie obliczamy kwadrat długości promienia 
+2 2SB r =  
+2
+2 17 289
+39r ==
+. 
+Zatem równanie  okręgu o środku w punkcie S i promieniu r ma postać 
+2
+2 12 8 9
+39
++− =
+xy . 
+ 
+III sposób  
+Przyjmijmy, że punkt () baS ,=  jest środkiem szukanego okr ęgu. Poniewa ż punkt ten le ży 
+na prostej 31 0xy−+ = , wi ęc jego wspó łrzędne spe łniają równanie tej prostej. St ąd 
+31 0−+ =ab . 
+Okrąg przechodzi przez punkty () 5, 3A =−  i ()0, 6B = , zatem  
+() ( )
+()( )
+22 2
+22 2
+53
+6.
+ −− + − =
+−+ − =
+ab r
+ab r
+ 
+Stąd otrzymujemy zależność między a i b: 53 1 0+− =ab .  
+Z układu równań  
+31 0
+53 1 0
+−+ =
+ +− =
+ab
+ab  
+obliczamy wspó łrzędne środka okr ęgu 10, 3
+= 
+S . Wyznaczone wspó łrzędne podstawiamy 
+do jednego z równa ń uk ładu z niewiadom ą r i obliczamy kwadrat promienia okr ęgu: 
+2 289
+9=r . 
+Zatem szukane równanie okręgu ma postać: 
+2
+2 1 289
+39
++− =
+xy . 
+ 
+Schematy punktowania  
+I sposób rozwiązania  
+Rozwiązanie, w którym postęp jest wprawdzie niewielki, ale konieczny na drodze do 
+pełnego rozwiązania  ................................................................................................................  1 p. 
+Zdający 
+• wyznaczy współrzędne środka odcinka AB: 59,22
+=−
+D  
+albo 
+• wyznaczy współczynnik kierunkowy prostej zawierającej odcinek AB: 3
+5=ABa  
+i na tym zakończy lub dalej popełnia błędy. 
+
+===== PDF PAGE 25 =====
+Strona 25 z 32 
+ 
+Rozwiązanie, w którym postęp jest istotny  ...........................................................................  2 p. 
+Zdający zapisze równanie symetralnej odcinka AB: 51
+33=− +yx  i na tym zako ńczy lub 
+dalej popełnia błędy. 
+Pokonanie zasadniczych trudności ......................................................................................... 3 .p. 
+Zdający wyznaczy współrzędne punktu S: 10, 3
+= 
+S  i na tym zakończy lub dalej popełnia 
+błędy. 
+Rozwiązanie prawie pełne  .......................................................................................................  4 p. 
+Zdający wyznaczy promie ń okr ęgu (lub kwadrat promienia okr ęgu): 17
+3=r  i na tym 
+zakończy lub dalej popełnia błędy. 
+Rozwiązanie pełne  ...................................................................................................................  5 p. 
+Zdający wyznaczy równanie okręgu: 
+2
+2 1 289
+39
++− =
+xy . 
+ 
+II sposób rozwiązania  
+ 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania  ..............................................................................................................................  1 p. 
+Zdający 
+• zapisze współrzędne punktu S w zależności od jednej zmiennej, np.: ()31 ,Sy y=−   
+albo 
+• zapisze równość 
+22
+ASB S=  (lub =AS BS ) lub równoważne równanie 
+() () ()
+22 2 253 6xy x y++ −= + −  
+i na tym zakończy lub dalej popełni błędy. 
+ 
+Rozwiązanie, w którym jest istotny postęp  ...........................................................................  2 p. 
+Zdający zapisze układ równań 
+10 6 2xy+=  i 31xy−= −  
+i na tym zakończy lub dalej popełni błędy. 
+ 
+Pokonanie zasadniczych trudności  ........................................................................................  3 p. 
+Zdający wyznaczy współrzędne punktu S:  
+10, 3
+= 
+S  
+i na tym zakończy lub dalej popełni błędy. 
+ 
+Rozwiązanie prawie pełne  .......................................................................................................  4 p. 
+Wyznaczy kwadrat promienia okręgu (lub promień okręgu): 2 289
+9r =   
+i na tym zakończy lub dalej popełni błędy. 
+ 
+
+===== PDF PAGE 26 =====
+Strona 26 z 32 
+ 
+Rozwiązanie pełne  ...................................................................................................................  5 p. 
+Zdający wyznaczy równanie okręgu: 
+2
+2 12 8 9
+39
++− =
+xy . 
+III sposób rozwiązania  
+ 
+Rozwiązanie, w którym postęp jest wprawdzie niewielki, ale konieczny na drodze do 
+pełnego rozwiązania  ................................................................................................................  1 p.  
+Zdający 
+• zapisze układ równań: () ( )
+()( )
+22 2
+22 2
+53
+6
+ −− + − =
+−+ − =
+ab r
+ab r
+ 
+albo 
+• zauważy, że współrzędne środka okręgu spełniają równanie: 31 0−+ =ab  
+i na tym zakończy lub dalej popełni błędy. 
+ 
+Rozwiązanie, w którym postęp jest istotny  ...........................................................................  2 p. 
+Zdający zapisze uk ład równa ń: () ( )
+()( )
+22 2
+22 2
+53
+6
+ −− + − =
+−+ − =
+ab r
+ab r
+ i zauwa ży, że wspó łrzędne 
+środka okręgu spełniają równanie 31 0−+ =ab  
+i na tym zakończy lub dalej popełni błędy. 
+ 
+Pokonanie zasadniczych trudności  ........................................................................................  3 p. 
+Zdający wyznaczy współrzędne punktu S: 10, 3
+= 
+S  i na tym zakończy lub dalej popełnia 
+błędy. 
+Rozwiązanie prawie pełne  ......................................................................................................  4 p. 
+Wyznaczy promień okr ęgu (lub kwadrat promienia okr ęgu): 17
+3=r  i na tym zako ńczy lub 
+dalej popełnia błędy. 
+Rozwiązanie pełne  ...................................................................................................................  5 p. 
+Zdający wyznaczy równanie okręgu: 
+2
+2 1 289
+39
++− =
+xy . 
+Uwaga 
+Jeżeli zdający oblicza wspó łrzędne punktu P przecięcia danej prostej z osi ą Oy, oblicza 
+odległość PB, zapisuje równanie okr ęgu i na tym poprzes taje, to otrzymuje 0 punktów. 
+ 
+ 
+
+===== PDF PAGE 27 =====
+Strona 27 z 32 
+ 
+Zadanie 14. (0−6) 
+III. Modelowanie 
+matematyczne. 
+5. Ciągi. Zdający stosuje wzór na n-ty wyraz i na sumę 
+n początkowych wyrazów ciągu arytmetycznego oraz stosuje wzór 
+na  
+n-ty wyraz i na sumę n początkowych wyrazów ciągu 
+geometrycznego. (5.3, 5.4) 
+3. Równania i nierówności. Zdający rozwiązuje układy równań, 
+prowadzące do równań kwadratowych; (R3.3).
+ 
+ 
+Przykładowe rozwiązania 
+I sposób 
+Oznaczmy przez r różnicę ciągu arytmetycznego. Skoro suma wyrazów ciągu arytmetycznego 
+jest równa 27, to 27brbbr−+++= , a stąd 9b = . Wówczas ciąg geometryczny 
+()7, 9 , 21 9rr−+  spełnia warunek () ( )81 7 2 19rr=− ⋅ + . Równanie to ma dwa rozwiązania 
+4r =  i 13
+2r =− . 
+W pierwszym przypadku otrzymujemy ciąg arytmetyczny ()5, 9,13 , a w drugim przypadku 
+ciąg arytmetyczny 31 5,9,22
+
+
+. 
+ 
+II sposób 
+Liczby a, b, c są odpowiednio pierwszym, drugim i trzecim wyrazem ci ągu arytmetycznego, 
+zatem 2
+ac b+ = . Suma liczb a, b, c równa 27, st ąd 27abc++= . Ciąg () 2, , 2 1ab c−+  jest 
+geometryczny, zatem () ( )
+2 221ba c=− ⋅ + . 
+Zapisujemy układ trzech równań z trzema niewiadomymi: 
+() ( )
+2
+2
+27
+221
+ac b
+abc
+ba c
++ =
+ ++=
+
+=− ⋅ +
+
+. 
+Z pierwszego równania wyznaczamy 2ac b+= , podstawiamy do drugiego równania 
+i otrzymujemy 9b = . 
+Do trzeciego równania podstawiamy 9b =  i 2ab c=−  i otrzymujemy równanie kwadratowe: 
+223 1 6 5 0cc −+ = . Równanie to ma dwa rozwi ązania: 5
+2c =  oraz 13c = . W pierwszym 
+przypadku otrzymujemy: 5=a , 9=b , 13=c  a w drugim przypadku otrzymujemy: 31
+2=a , 
+9=b , 5
+2=c . 
+
+===== PDF PAGE 28 =====
+Strona 28 z 32 
+ 
+III sposób 
+Niech q oznacza iloraz ci ągu geometrycznego, natomiast 2a −  pierwszy wyraz tego ci ągu. 
+Wtedy () 2ba q=−  i ()
+221 2ca q+= − . Z ostatniej zależności otrzymujemy ()
+221
+2
+aqc −−= . 
+Ponieważ suma liczb a , b , c  jest równa 27, więc możemy zapisać równość 
+() ()
+22122 7 2
+aqaa q −−+− + = . 
+Z własności ciągu arytmetycznego wynika równanie  
+2
+acb += , 
+które możemy zapisać w postaci 
+() ()
+222 12 4
+aa qaq +− −−= . 
+Otrzymaliśmy zatem układ równań z niewiadomymi a  i q : 
+() ()
+222 2 2 5 5aaq aq+−+ − =    
+() ()
+242 2 2 1aq a aq−= + − − . 
+Ten układ jest równoważny układowi  
+() () ()
+222 22 2 5 1aa q a q−+ − +− =   
+() () ()
+222 42 2 3aa q a q−− + − − − =  
+Po wyłączeniu czynnika () 2a −  każde z równań przyjmuje postać 
+() ()
+2222 5 1aq q−+ + =  
+() ()
+222 4 3aq q−− + − =  
+Zatem 
+() ( )
+2232 2 5 1 2 4qq qq++ = − +− , 
+skąd otrzymujemy równanie kwadratowe 
+231 1 6 0qq−+ = . 
+To równanie ma dwa rozwiązania 
+3q = , 2
+3q = . 
+Jeśli 3q = , to 5a = , 9b =  i 13c =  . Jeżeli natomiast 2
+3q = , to 31
+2a = , 9b =  i 5
+2c = . 
+ 
+Schemat punktowania  
+I sposób rozwiązania 
+Rozwiązanie, w którym postęp jest wprawdzie niewielki, ale konieczny na drodze 
+do pełnego rozwiązania zadania  .......................................................................................  1 p. 
+Zdający uzależni wartości dwie spo śród liczb a, b, c od trzeciej z liczb i od ró żnicy r ciągu 
+arytmetycznego, np.: abr=−  i cbr=+  
+i na tym zakończy lub dalej popełnia błędy. 
+
+===== PDF PAGE 29 =====
+Strona 29 z 32 
+ 
+Rozwiązanie, w którym postęp jest istotny  ......................................................................  2 p. 
+Zdający zapisze równania wynikające z własności ciągu arytmetycznego i z własności ciągu 
+geometrycznego, np.: abr=− , cbr=+ , () ( )
+2 221ba c=− ⋅ +  
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Pokonanie zasadniczych trudności zadania  .....................................................................  3 p. 
+Zdający zapisze równanie z jedn ą niewiadom ą, wynikaj ące z w łasności ci ągu 
+geometrycznego, np.: () ( )81 7 2 19rr=− +  
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Rozwiązanie prawie pełne  ..................................................................................................  5 p. 
+Zdający obliczy liczby a, b, c w jednym z mo żliwych przypadków i na tym zako ńczy lub 
+dalej popełnia błędy. 
+Uwaga 
+Jeśli zdający poprawnie rozwiąże równanie kwadratowe, to otrzymuje 4 punkty. 
+ 
+Rozwiązanie pełne  ..............................................................................................................  6 p. 
+Zdający obliczy liczby w dwóch przypadkach spe łniających warunki zadania: 5=a , 9=b , 
+13=c  oraz 31
+2=a , 9=b , 5
+2=c . 
+ 
+II sposób rozwiązania 
+Rozwiązanie, w którym postęp jest wprawdzie niewielki, ale konieczny na drodze 
+do pełnego rozwiązania zadania  ........................................................................................  1 p. 
+Zdający zapisze jedno z równań: 2
+ac b+ = , () ( )
+2 221ba c=− ⋅ + . 
+Rozwiązanie, w którym jest istotny postęp  ......................................................................  2 p. 
+Zdający zapisze układ trzech równań z trzema niewiadomymi, np.: 
+() ( )
+2
+2
+27
+221
+ac b
+abc
+ba c
++ =
+ ++=
+
+=− ⋅ +
+
+. 
+Pokonanie zasadniczych trudności zadania  .....................................................................  3 p. 
+Zdający zapisze równanie kwadratowe z jedną niewiadomą, np.: 223 1 1 6 8 1−+ + =cc . 
+ 
+Rozwiązanie prawie pełne  ..................................................................................................  5 p. 
+Zdający obliczy liczby a, b, c w jednym z mo żliwych przypadków i na tym zako ńczy lub 
+dalej popełnia błędy. 
+
+===== PDF PAGE 30 =====
+Strona 30 z 32 
+ 
+Uwaga 
+Jeśli zdający poprawnie rozwiąże równanie kwadratowe, to otrzymuje 4 punkty. 
+Rozwiązanie pełne  ..............................................................................................................  6 p. 
+Zdający obliczy liczby w dwóch przypadkach spe łniających warunki zadania: 5=a , 9=b , 
+13=c  oraz 31
+2=a , 9=b , 5
+2=c . 
+III sposób rozwiązania 
+Rozwiązanie, w którym postęp jest wprawdzie niewielki, ale konieczny na drodze  
+do całkowitego rozwiązania .......................................................................................................  1 p. 
+Zdający zapisze wszystkie wyrazy ciągu arytmetycznego w zależności od jednej z liczb 
+i ilorazu ciągu geometrycznego, np.  
+2a − , () 2ba q=− , ()
+221
+2
+aqc −−=  
+i na tym zakończy lub dalej popełni błędy. 
+Rozwiązanie, w którym postęp jest istotny  ......................................................................  2 p. 
+Zdający zapisze układ równań z dwiema niewiadomymi, np.: 
+() ()
+22122 7 2
+aqaa q −−+− + =  i () ()
+222 12 4
+aa qaq +− −−=  
+i na tym zakończy lub dalej popełni błędy. 
+Pokonanie zasadniczych trudności zadania  .....................................................................  3 p. 
+Zdający zapisze równanie kwadratowe z jedną niewiadomą, np.: 
+() ( )
+2232 2 5 1 2 4qq qq++ = − +−  
+i na tym zakończy lub dalej popełni błędy. 
+Rozwiązanie prawie pełne  .................................................................................................  5 p. 
+Zdający obliczy liczby a , b  i c  w jednym z możliwych przypadków i na tym zakończy 
+lub dalej popełnia błędy. 
+ 
+Uwaga 
+Jeśli zdający poprawnie rozwiąże równanie kwadratowe, to otrzymuje 4 punkty. 
+    
+Rozwiązanie pełne  ..............................................................................................................  6 p. 
+Zdający zapisze dwa zestawy liczb spełniające warunki zadania: 5a = , 9b =  i 13c =   
+oraz 31
+2a = , 9b =  i 5
+2c = . 
+ 
+
+===== PDF PAGE 31 =====
+Strona 31 z 32 
+ 
+Uwagi (do wszystkich schematów punktowania) 
+1. Jeżeli zdający myli własności ciągu arytmetycznego z własnościami ciągu 
+geometrycznego, to za całe rozwiązanie otrzymuje 0 punktów. 
+2. Jeżeli zdający odgadnie jeden zestaw liczb a, b, c, także ze sprawdzeniem warunków 
+zadania, to otrzymuje 0 punktów. 
+Zadanie 15. (0−7) 
+III. Modelowanie 
+matematyczne. 
+11. Rachunek różniczkowy. Zdający stosuje pochodne do 
+rozwiązywania zagadnień optymalizacyjnych (R11.6). 
+ 
+Przykładowe rozwiązanie 
+Niech r  oraz h  oznaczają, odpowiednio, promień podstawy walca i wysoko ść walca. Pole P 
+powierzchni całkowitej tego walca jest równe 222=+ ππPr r h . Stąd 
+22
+2
+−= π
+π
+Prh r . 
+Objętość walca 2= πVr h  zapisujemy jako funkcję zmiennej r : 
+()
+23
+2 22
+22
+−−== πππ
+π
+Pr P rrVr r
+r
+, gdzie 20 << π
+Pr . 
+Pochodna funkcji V jest określona wzorem  
+() ()
+21
+2 6′ =− πVr P r  dla 20 << π
+Pr . 
+Wyznaczamy miejsca zerowe i badamy znak pochodnej 
+() 0′ =Vr  wtedy i tylko wtedy, gdy 6= π
+Pr , 
+() 0′ >Vr  wtedy i tylko wtedy, gdy 60 << π
+Pr , 
+() 0′ <Vr  wtedy i tylko wtedy, gdy 62 <<ππ
+PP r . 
+Wynika stąd, że w przedziale ( 60 π
+P,  funkcja V jest rosnąca, a w przedziale )62ππ
+PP,  
+jest malejąca. Zatem ( )6π
+PV  jest największą wartością tej funkcji. Wartość ta jest równa 
+( ) ( )
+3
+66
+6
+2
+23 6
+⋅− ⋅
+== ⋅ ππ
+π
+π
+π
+PP
+P
+P PPV . 
+Gdy 6= π
+Pr , to wtedy 
+2
+2
+3
+2
+2
+−== π
+π
+π
+PPrh r . 
+Schemat punktowania 
+Rozwiązanie zadania składa się z trzech etapów. 
+ 
+a) Pierwszy etap składa się z trzech części: 
+• wyznaczenie wysoko ścią walca w zale żności od promienia podstawy walca: 
+22
+2
+−= π
+π
+Prh r , 
+
+===== PDF PAGE 32 =====
+Strona 32 z 32 
+ 
+• wyznaczenie objętości walca jako funkcji jednej zmiennej r, () 2
+π2 3rrPrV −= , 
+• wyznaczenie dziedziny funkcji V : ( )20= πV
+PD, . 
+Za poprawne wykonanie każdej z tych części zdający otrzymuje 1 punkt. 
+ 
+b) Drugi etap składa się z trzech części: 
+• wyznaczenie pochodnej funkcji wielomianowej ()
+3
+2=⋅ − πPf rr r :  
+ ()
+2
+2 3′ =− πPf rr ,  
+• obliczenie miejsc zerowych pochodnej funkcji V: 6= π
+Pr  lub obliczenie miejsc 
+zerowych pochodnej funkcji f: 6=− π
+Pr , 6= π
+Pr . 
+• zbadanie znaku pochodnej funkcji V i uzasadnienie, że dla 6= π
+Pr funkcja V  osiąga 
+największą wartość. 
+Za poprawne rozwiązanie każdej z części tego etapu zdający otrzymuje 1 punkt. 
+ 
+c) Trzeci etap. 
+Obliczenie największej objętości walca i wysokości walca o największej objętości: 
+36=⋅ π
+PPV  , 2
+3= π
+Ph . 
+Za poprawne wykonanie tego etapu zdający otrzymuje 1 punkt. 
+ 
+Uwagi  
+1. Jeżeli zdający zapisze objętość walca z błędem rzeczowym, to może otrzymać co najwyżej 
+1 punkt za całe rozwiązanie, a jeżeli dodatkowo poprawnie wyznaczy dziedzinę funkcji V, to 
+może otrzymać co najwyżej 2 punkty za całe rozwiązanie. 
+2. Jeżeli zdający obliczy pochodną funkcji f lub V z błędem rachunkowym i otrzyma funkcj ę 
+liniową albo funkcj ę kwadratow ą o ujemnym wyró żniku o wyró żniku równym 0, to mo że 
+otrzymać punkty jedynie za pierwszy etap rozwiązania. 
+3. Je śli zdaj ący rozwi ązuje zadanie dla sto żka, to otrzymuje 0 punktów , nawet je śli 
+rozwiązanie tego innego zadania jest poprawne. 
+4. Za rozwi ązanie z konkretn ą warto ścią liczbow ą w miejsce P zdaj ący otrzymuje 
+0 punktów. 
+ 
+ 

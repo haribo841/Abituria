@@ -1,0 +1,1326 @@
+
+
+===== PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EGZAMIN MATURALNY 
+W ROKU SZKOLNYM 2015/2016 
+ 
+FORMUŁA OD 2015 
+(„NOWA MATURA”) 
+ 
+ 
+MATEMATYKA 
+POZIOM PODSTAWOWY 
+ 
+ 
+ 
+ZASADY OCENIANIA ROZWIĄZAŃ ZADAŃ 
+ARKUSZ MMA-P1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MAJ 2016 
+
+===== PAGE 2 =====
+Strona 2 z 20 
+ 
+Ogólne zasady oceniania 
+ 
+ 
+Uwaga: Akceptowane są wszystkie odpowiedzi merytorycznie poprawne i spełniające warunki 
+zadania. 
+ 
+ 
+ 
+Zadanie 1. (0−1) 
+Wymagania ogólne Wymagania szczegó łowe Poprawna  
+odp. (1 p.) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+1. Liczby rzeczywiste. Zdający oblicza potęgi 
+o wykładnikach wymiernych i stosuje prawa 
+działań na potęgach o wykładnikach  
+wymiernych (1.4). 
+Wersja 
+I 
+Wersja 
+II 
+A D 
+ 
+Zadanie 2. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+1. Liczby rzeczywiste. Zdający wykorzystuje 
+definicję logarytmu i stosuje w obliczeniach 
+wzory na logarytm iloczynu, logarytm ilorazu 
+i logarytm potęgi o wykładniku naturalnym 
+(1.6). 
+Wersja 
+I 
+Wersja 
+II 
+D A 
+ 
+Zadanie 3. (0−1) 
+III. Modelowanie 
+matematyczne. 
+1. Liczby rzeczywiste. Zdający wykonuje 
+obliczenia procentowe, oblicza podatki, zysk 
+z lokat (1.9). 
+Wersja 
+I 
+Wersja 
+II 
+A B 
+ 
+Zadanie 4. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+2. Wyrażenia algebraiczne. Zdający używa 
+wzorów skróconego mnożenia na 
+()
+2
+ab±  
+oraz 22ab −  (2.1). 
+Wersja 
+I 
+Wersja 
+II 
+A D 
+ 
+Zadanie 5. (0−1) 
+I. Wykorzystanie 
+i tworzenie informacji. 
+3. Równania i nierówności. Zdający sprawdza, 
+czy dana liczba rzeczywista jest rozwiązaniem 
+równania lub nierówności (3.1). 
+Wersja 
+I 
+Wersja 
+II 
+C D 
+ 
+
+===== PAGE 3 =====
+Strona 3 z 20 
+ 
+Zadanie 6. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+8. Geometria na płaszczyźnie kartezjańskiej. 
+Zdający oblicza współrzędne punktu 
+przecięcia dwóch prostych (8.4). 
+Wersja 
+I 
+Wersja 
+II 
+C A 
+ 
+Zadanie 7. (0−1) 
+IV. Użycie i tworzenie 
+strategii. 
+7. Planimetria. Zdający stosuje zależności 
+między kątem środkowym i kątem wpisanym 
+(7.1). 
+Wersja 
+I 
+Wersja 
+II 
+D B 
+ 
+Zadanie 8. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+4. Funkcje. Zdający posługuje się poznanymi 
+metodami rozwiązywania równań do 
+obliczenia, dla jakiego argumentu funkcja 
+przyjmuje daną wartość (4.2). 
+Wersja 
+I 
+Wersja 
+II 
+D A 
+ 
+Zadanie 9. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+3. Równania i nierówności. Zdający 
+rozwiązuje proste równania wymierne, 
+prowadzące do równań liniowych lub 
+kwadratowych, np. ,  ( 3.8). 
+Wersja 
+I 
+Wersja 
+II 
+A C 
+ 
+Zadanie 10. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+4. Funkcje. Zdający odczytuje z wykresu 
+własności funkcji – zbiór wartości (4.3). 
+Wersja 
+I 
+Wersja 
+II 
+D B 
+ 
+Zadanie 11. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+4. Funkcje. Zdający odczytuje z wykresu 
+własności funkcji – punkty, w których funkcja 
+przyjmuje w podanym przedziale wartość 
+największą lub najmniejszą (4.3). 
+Wersja 
+I 
+Wersja 
+II 
+B A 
+ 
+Zadanie 12. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+4. Funkcje. Zdający oblicza ze wzoru wartość 
+funkcji dla danego argumentu (4.2). 
+Wersja 
+I 
+Wersja 
+II 
+B D 
+ 
+1 23
+x
+x
++ =+
+1 2x xx
++ =
+
+===== PAGE 4 =====
+Strona 4 z 20 
+ 
+Zadanie 13. (0−1) 
+IV. Użycie i tworzenie 
+strategii. 
+6. Trygonometria. Zdający korzysta  
+z przybliżonych wartości funkcji 
+trygonometrycznych (6.2). 
+Wersja 
+I 
+Wersja 
+II 
+A C 
+ 
+Zadanie 14. (0−1) 
+III. Modelowanie 
+matematyczne. 
+5. Ciągi. Zdający stosuje wzór na n-ty wyraz 
+i  na sumę n początkowych wyrazów ciągu 
+arytmetycznego (5.3). 
+Wersja 
+I 
+Wersja 
+II 
+A B 
+ 
+Zadanie 15. (0−1) 
+I. Wykorzystanie 
+i tworzenie informacji. 
+5. Ciągi. Zdający bada, czy dany ciąg jest 
+arytmetyczny lub geometryczny (5.2). 
+Wersja 
+I 
+Wersja 
+II 
+D C 
+ 
+Zadanie 16. (0−1) 
+I. Wykorzystanie 
+i tworzenie informacji. 
+7. Planimetria. Zdający rozpoznaje trójkąty 
+podobne i wykorzystuje cechy podobieństwa 
+trójkątów (7.3). 
+Wersja 
+I 
+Wersja 
+II 
+B C 
+ 
+Zadanie 17. (0−1) 
+IV. Użycie i tworzenie 
+strategii. 
+6. Trygonometria. Zdający, znając wartość 
+jednej z funkcji: sinus lub cosinus, wyznacza 
+wartości pozostałych funkcji tego samego kąta 
+ostrego (6.5). 
+Wersja 
+I 
+Wersja 
+II 
+C B 
+ 
+Zadanie 18. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+SP9. Wielokąty, koła, okręgi. Zdający ustala 
+możliwość zbudowania trójkąta (SP9.2). 
+Wersja 
+I 
+Wersja 
+II 
+D A 
+ 
+Zadanie 19. (0−1) 
+IV. Użycie i tworzenie 
+strategii. 
+7. Planimetria. Zdający korzysta z własności 
+stycznej do okręgu i własności okręgów 
+stycznych (7.2). 
+Wersja 
+I 
+Wersja 
+II 
+B C 
+ 
+
+===== PAGE 5 =====
+Strona 5 z 20 
+ 
+Zadanie 20. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+8. Geometria na płaszczyźnie kartezjańskiej. 
+Zdający bada równoległość i prostopadłość 
+prostych na podstawie ich równań 
+kierunkowych (8.2). 
+Wersja 
+I 
+Wersja 
+II 
+C D 
+ 
+Zadanie 21. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+8. Geometria na płaszczyźnie kartezjańskiej. 
+Zdający wyznacza współrzędne środka 
+odcinka (8.6). 
+Wersja 
+I 
+Wersja 
+II 
+B C 
+ 
+Zadanie 22. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+10. Elementy statystyki opisowej. Teoria 
+prawdopodobieństwa i kombinatoryka. 
+Zdający oblicza prawdopodobieństwa 
+w prostych sytuacjach, stosując klasyczną 
+definicję prawdopodobieństwa (10.3). 
+Wersja 
+I 
+Wersja 
+II 
+C B 
+ 
+Zadanie 23. (0−1) 
+I. Wykorzystanie 
+i tworzenie informacji. 
+9. Stereometria. Zdający rozpoznaje 
+w walcach i stożkach kąty między odcinkami 
+i płaszczyznami (9.3). 
+Wersja 
+I 
+Wersja 
+II 
+D B 
+ 
+Zadanie 24. (0−1) 
+I. Wykorzystanie 
+i tworzenie informacji. 
+9. Stereometria. Zdający rozpoznaje 
+w graniastosłupach i ostrosłupach kąty między 
+odcinkami i płaszczyznami (9.2). 
+Wersja 
+I 
+Wersja 
+II 
+B A 
+ 
+Zadanie 25. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+G9. Statystyka opisowa i wprowadzenie do 
+rachunku prawdopodobieństwa. Zdający 
+wyznacza średnią arytmetyczną i medianę 
+zestawu danych (G9.4). 
+Wersja 
+I 
+Wersja 
+II 
+C D 
+ 
+ 
+ 
+ 
+
+===== PAGE 6 =====
+Strona 6 z 20 
+ 
+Zadanie 26. (0–2) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+G9. Statystyka opisowa i wprowadzenie do rachunku 
+prawdopodobieństwa. Zdający wyznacza średnią arytmetyczną 
+i medianę zestawu danych (G9.4). 
+1. Liczby rzeczywiste. Zdający oblicza błąd bezwzględny i błąd 
+względny przybliżenia (1.7). 
+ 
+Przykładowe rozwiązanie 
+Obliczamy średni roczny przyrost sosny: . 
+Obliczamy błąd względny przybliżenia: . 
+ 
+Schemat punktowania 
+ 
+Zdający otrzymuje ............................................................................................................... 1 p. 
+• gdy obliczy średni roczny przyrost wysoko ści sosny:   i na tym zako ńczy lub 
+dalej popełnia błędy 
+albo 
+• gdy otrzyma średni roczny przyrost wysoko ści sosny b ędący liczb ą spe łniającą 
+nierówność  lub nierówno ść  i konsekwentnie obliczy b łąd 
+względny otrzymanego przybliżenia. 
+ 
+Uwaga: 
+Akceptujemy wynik przybliżony z przedziału . 
+ 
+Zdający otrzymuje ............................................................................................................... 2 p. 
+gdy obliczy błąd względny przybliżenia: . 
+ 
+ 
+ 
+ 
+ 
+Zadanie 27. (0–2) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+3. Równania i nierówności. Zdający rozwiązuje nierówności 
+kwadratowe z jedną niewiadomą (3.5). 
+ 
+Przykładowe rozwiązanie 
+Rozwiązanie nierówno ści kwadratowej sk łada si ę z dwóch etapów. Pierwszy polega na 
+ustaleniu pierwiastków trójmianu kwadratowe go. Drugi etap polega na ustaleniu zbioru 
+rozwiązań nierówności. 
+ 
+  
+18 3x =
+1
+13 0, 04 4%25 25
+3
+== =
+18 3x =
+78 , 2 ( 3 )x<< 8, 4(3) 10x<<
+8, 2(3);8, 4(3)
+4%
+
+===== PAGE 7 =====
+Strona 7 z 20 
+ 
+Realizacja pierwszego etapu 
+I sposób  
+Redukujemy wyrazy podobne i zapisujemy nierówność w postaci równoważnej  
+. 
+Znajdujemy pierwiastki trójmianu kwadratowego  
+• obliczamy wyróżnik tego trójmianu:  
+ i stąd  oraz  
+albo 
+• wykorzystujemy postać iloczynową trójmianu 2 2x x−+ : 
+() 20xx−− = , stąd  oraz ,  
+albo 
+• stosujemy wzory Viète’a: 
+ oraz , st ąd  oraz ,  
+albo 
+• podajemy je bezpo średnio, np. zapisuj ąc pierwiastki trójmianu ,  lub 
+zaznaczając je na wykresie 
+ 
+II sposób  
+Wyznaczamy postać kanoniczną trójmianu kwadratowego  i zapisujemy nierówno ść 
+w postaci równoważnej, np.  
+. 
+Stąd  
+()()
+2
+11 0x−− − > . 
+Następnie przekszta łcamy nierówno ść do postaci równowa żnej, korzystaj ąc z w łasności 
+wartości bezwzględnej 
+,  
+.
+ Realizacja drugiego etapu 
+Podajemy zbiór rozwiązań nierówności:  lub . 
+ 
+Schemat punktowania 
+ 
+Zdający otrzymuje  ............................................................................................................... 1 p. 
+gdy: 
+• zrealizuje pierwszy etap rozwi ązania, tzn. ustali pierwiastki trójmianu kwadratowego 
+i na tym poprzestanie lub błędnie zapisze zbiór rozwiązań nierówności, np.: 
+022 >+− xx
+xx 22 +−
+() 40144 =⋅−⋅−=Δ 22
+22
+1 =−
+−−=x 02
+22
+2 =−
++−=x
+01 =x 22 =x
+021 =⋅xx 221 =+ xx 01 =x 22 =x
+1 0x = 2 2x =
+-1 1 2 3
+-2
+-1
+1
+ y
+0 x
+xx 22 +−
+() 011
+2
+>+−− x
+() 11
+2
+<−x
+11 <−x
+() 2,0 () 2,0∈x
+
+===== PAGE 8 =====
+Strona 8 z 20 
+ 
+o obliczy lub poda pierwiastki tr ójmianu kwadratowego ,   
+i na tym zakończy lub błędnie zapisze zbiór rozwiązań nierówności, 
+o zaznaczy na wykresie miejsca zerowe funkcji   
+i na tym zakończy lub błędnie zapisze zbiór rozwiązań nierówności, 
+o zapisze nierówno ść  i na tym zako ńczy lub b łędnie zapisze zbiór 
+rozwiązań nierówności 
+albo  
+• przy realizacji pierwszego etapu rozwi ązania pope łni b łąd (ten sam b łąd pope łniony 
+wielokrotnie traktuje si ę jak jeden b łąd), ale otrzyma dwa ró żne pierwiastki, 
+i konsekwentnie rozwiąże nierówność, np.: 
+o popełni b łędy przy wyznaczaniu pierwiastków trójmianu kwadratowego 
+i konsekwentnie rozwiąże nierówność, 
+o błędnie zapisze równania wynikaj ące ze wzorów Viète’a, np.  
+i konsekwentnie rozwiąże nierówność, 
+o błędnie zapisze nierówność, np.  i konsekwentnie j ą rozwiąże. 
+Zdający otrzymuje  .............................................................................................................. 2 p. 
+gdy:  
+• poda zbiór rozwiązań nierówności:  lub , lub  i  
+albo 
+• sporządzi poprawn ą ilustracj ę geometryczn ą (o ś liczbowa, wykres) i zapisze zbiór 
+rozwiązań nierówności w postaci: , , 
+albo 
+• poda zbiór rozwi ązań nierówno ści w postaci graficznej  z poprawnie zaznaczonymi 
+końcami przedziałów. 
+ 
+ 
+ 
+Kryteria uwzględniające specyficzne trudności w uczeniu się matematyki 
+Akceptujemy zapis przedziału nieuwzględniający porządku liczb na osi liczbowej, np. . 
+ 
+Uwagi: 
+1. Jeżeli zdaj ący dzieli obie strony nierówno ści przez 2−x  lub przez x, bez stosownego 
+założenia, to otrzymuje 0 punktów. 
+2. Jeżeli zdaj ący dzieli obie strony nierówno ści przez 2−x , rozwa żając przy tym dwa 
+przypadki 2x >  i 2x < , rozwiąże nierówność w każdym z tych przypadków oraz wyznaczy 
+poprawny zbiór rozwiązań nierówności, to otrzymuje 2 punkty.  
+ 
+ 
+ 
+ 
+  
+1 0x = 2 2x =
+2() 2f xxx=− +
+11x −<
+221 −=+ xx
+11 >−x
+() 2,0 () 2,0∈x 0x > 2x <
+0x > 2x <
+()2, 0
+x 0 2  
+
+===== PAGE 9 =====
+Strona 9 z 20 
+ 
+Zadanie 28. (0–2) 
+I. Wykorzystanie 
+i tworzenie informacji 
+3. Równania i nierówności. Zdający korzysta z własności 
+iloczynu przy rozwiązywaniu równań typu  
+(3.7). 
+ 
+Przykładowe rozwiązanie 
+Lewa strona równania jest iloczynem dwóch czynników  oraz . Zatem iloczyn 
+ten jest równy 0, gdy co najmniej jeden z tych czynników jest równy 0, czyli  
+ lub . 
+Rozwiązaniem równania  jest . 
+Rozwiązania równania mo żemy wyznaczyć, korzystając: 
+• ze wzorów na pierwiastki trójmianu kwadratowego:  
+, ,  
+albo 
+• ze wzorów Viète’a:  
+  oraz  i st ąd , ,  
+albo 
+• z postaci iloczynowej trójmianu  
+, stąd , ,  
+albo 
+• z w łasności warto ści bezwzgl ędnej, przekszta łcając najpierw równanie do postaci 
+równoważnej , sk ąd  lub , czyli  lub .  
+Zatem wszystkie rozwiązania równania to:  lub , lub . 
+ 
+Schemat punktowania 
+ 
+Zdający otrzymuje  ............................................................................................................... 1 p.  
+gdy: 
+• zapisze dwa równania:  i  (wystarczy, że z rozwi ązania 
+wynika, że zdający wyznacza pierwiastki każdego z wielomianów: , ) 
+albo 
+• zapisze rozwiązanie , 
+albo 
+• obliczy co najmniej jeden pierwiastek trójmianu : , , 
+albo 
+• wyznaczy jeden z pierwiastków wielomianu   
+i na tym zakończy lub dalej popełnia błędy.   
+Zdający otrzymuje  ............................................................................................................... 2 p. 
+gdy wyznaczy bezbłędnie wszystkie rozwiązania równania: , , . 
+ 
+Uwagi: 
+1. Je żeli zdaj ący obliczy trzy pierwiastki, ale w odpowiedzi ko ńcowej podaje tylko dwa, to 
+otrzymuje 1 punkt. 
+() ( )17 0xx x+− =
+4 x− 2 21 5xx +−
+40 x−= 2 21 5 0xx +−=
+40 x−= 4x =
+2 21 5 0xx +−=
+()2224 11 56 4 8Δ= − ⋅ ⋅ − = = 1
+28 52x −−== − 2
+28 32x −+==
+12 2xx+= − 12 15xx⋅= − 1 5x =− 2 3x =
+2 21 5xx +−
+() () 53 0xx+− = 1 5x =− 2 3x =
+14x += 14x += 14x += − 3x = 5x =−
+4x = 5x =− 3x =
+40 x−= 2 21 5 0xx +−=
+4 x− 2 21 5xx +−
+4x =
+2 21 5xx +− 5x =− 3x =
+32 22 3 6 0xx x−+ + −
+5x =− 3x = 4x =
+
+===== PAGE 10 =====
+Strona 10 z 20 
+ 
+2. Jeżeli zdający dzieli obie strony równania bez stosownego za łożenia przez 4x −  lub przez 
+drugi czynnik i oblicza pierwiastk i (lub pierwiastek) dla pozosta łej cz ęści, to otrzymuje 
+0 punktów. 
+ 
+ 
+Zadanie 29. (0–2) 
+V. Rozumowanie 
+i argumentacja. 
+7. Planimetria. Zdający rozpoznaje trójkąty podobne 
+i wykorzystuje (także w kontekstach praktycznych) cechy 
+podobieństwa trójkątów (7.3). 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób 
+Niech . 
+Ponieważ , wi ęc . 
+W : , wi ęc . 
+Trójkąt CDE jest prostokątny oraz , wi ęc . 
+Podobnie trójkąt BFG jest prostokątny i 90FGB =  , więc . 
+Ponieważ trójkąty CDE i BFG mają równe kąty, więc na podstawie cechy podobieństwa kkk są 
+podobne. 
+ 
+II sposób 
+Niech  i . 
+Trójkąt CED jest podobny do trójk ąta ABC (cecha kkk), bo  oraz 
+. 
+Podobnie trójkąt GBF jest podobny do trójk ąta ABC, (cecha kkk), bo  
+oraz . 
+Stąd trójkąt CED jest podobny do trójkąta FBG (z przechodniości relacji podobieństwa). 
+ 
+Schemat punktowania 
+ 
+Zdający otrzymuje ............................................................................................................... 1 p. 
+gdy  
+• wskaże w dwóch trójk ątach spośród trójkątów CBA, CDE i FBG jedną parę równych 
+kątów ostrych i na tym zako ńczy lub dalej pope łni b łędy, przy czym k ąt przy 
+wierzchołku B musi być wskazany dwukrotnie, jako k ąt w obu trójkątach CBA i FBG, 
+np. zdający zapisze  lub stwierdzi, że jest to wspólny k ąt trójkątów 
+CBA i FBG (analogicznie z kątem przy wierzchołku C w trójkątach CBA i CDE) 
+albo 
+• zapisze, że trójk ąt CBA jest podobny do trójk ąta FBG i do trójk ąta CDE i st ąd 
+wywnioskuje, że trójkąt CDE jest podobny do trójkąta FBG, ale nie wskaże żadnej pary 
+równych kątów ostrych w tych trójkątach i na tym zakończy lub dalej popełnia błędy. 
+= αACB
+90=°CAB 90=° − αABC
+ΔCDE 90=°DEC 90=° − αCDE
+90=°DEC 90=° − αCDE
+= αBFG
+ACB DCE α== ABC FBG β==
+ACB DCE α==
+90CAB DEC== °
+ABC FBG β==
+90CAB FGB== °
+FBG CBA=
+
+===== PAGE 11 =====
+Strona 11 z 20 
+ 
+ 
+Zdający otrzymuje ................................................................................................................ 2 p. 
+gdy przeprowadzi pełne rozumowanie. 
+ 
+Uwagi: 
+1. Jeżeli zdający przyjmie konkretne miary kątów, to otrzymuje 0 punktów. 
+2. Jeżeli zdający przyjmie błędne zależności między kątami, to otrzymuje 0 punktów. 
+ 
+ 
+Zadanie 30. (0–2) 
+V. Rozumowanie 
+i argumentacja. 
+2. Wyrażenia algebraiczne. Zdający używa wzorów skróconego 
+mnożenia na  oraz  (2.1). 
+ 
+Przykładowe rozwiązanie 
+Rozważmy wyraz 
+222nann=+ .  
+Wyraz 1na +  można zapisać, jako  
+. 
+Wtedy  
+. 
+Zatem 
+. 
+Liczba  jest naturalna. To ko ńczy dowód. 
+ 
+Schemat punktowania 
+ 
+Zdający otrzymuje  ............................................................................................................... 1 p. 
+gdy poprawnie zapisze sumę dwóch kolejnych wyrazów tego ciągu, np. 
+ 
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Zdający otrzymuje  ............................................................................................................... 2 p. 
+gdy przeprowadzi pełne rozumowanie. 
+ 
+Uwaga: 
+Jeżeli zdaj ący sprawdzi prawdziwo ść tezy tylko dla konkretnych warto ści n, to otrzymuje 
+0 punktów. 
+  
+()
+2
+ab± 22ab −
+()()
+2 2
+1 21 21 26 4+ =+ ++ =+ +nan n n n
+22 2
+1 22 26 4 48 4++=+ ++ + =+ +nnaa n nn n n n
+()
+2
+1 22++=+nnaa n
+22 +n
+()()
+22
+1 22 21 21nnaa n n n n++=+ ++ ++
+
+===== PAGE 12 =====
+Strona 12 z 20 
+ 
+Zadanie 31. (0–2) 
+III. Modelowanie 
+matematyczne. 
+1. Liczby rzeczywiste. Zdający wykorzystuje definicję logarytmu 
+i stosuje w obliczeniach wzory na logarytm iloczynu, logarytm 
+ilorazu i logarytm potęgi o wykładniku naturalnym oraz 
+wykorzystuje podstawowe własności potęg – również 
+w zagadnieniach związanych z innymi dziedzinami wiedzy, 
+np. fizyką, chemią, informatyką (1.6, 1.5). 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób 
+Zapisujemy równanie  
+. 
+Korzystamy z definicji logarytmu  
+. 
+Stąd 
+, 
+. 
+Stwierdzamy, że  2,2 210 10 100>= , gdyż funkcja wyk ładnicza 10 xy =  jest rosn ąca. Oznacza 
+to, że  cm. 
+ 
+II sposób 
+Zapisujemy równanie  
+. 
+To równanie jest równoważne kolejno równaniom 
+, 
+, 
+. 
+Zatem . Korzystamy z definicji logarytmu i otrzymujemy równo ść 
+. 
+Stwierdzamy, że 2,2 210 10 100>= , gdyż funkcja wyk ładnicza 10 xy =  jest rosn ąca. Oznacza 
+to, że  cm. 
+ 
+Schemat punktowania 
+ 
+Zdający otrzymuje ............................................................................................................... 1 p. 
+gdy  
+• wykorzysta definicj ę logarytmu i przekszta łci równanie  do postaci 
+ 
+  
+46, 2 log 10
+A
+−=
+6,2
+410 10
+A
+−=
+6,2 410 10A −=⋅
+2,210A =
+100A >
+46, 2 log 10
+A
+−=
+()
+46,2 log 10 A=
+46, 2 log10 log A=+
+6, 2 4 log A=+
+2, 2 log A=
+2,210A =
+100A >
+46, 2 log 10
+A
+−=
+6,2
+410
+10
+A
+−=
+
+===== PAGE 13 =====
+Strona 13 z 20 
+ 
+albo 
+• wykorzysta własność logarytmu i przekształci równanie  do postaci
+46, 2 log log10A −=−  lub 46, 2 log log10A=+   
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+gdy zapisze, że  i stwierdzi, że amplituda tego trz ęsienia ziemi by ła wi ększa od 
+ cm. 
+Zdający otrzymuje ............................................................................................................... 2 p. 
+Uwagi: 
+1. Jeżeli zdaj ący b łędnie interpretuje tre ść zadania, w szczególno ści stosuje niepoprawne 
+podstawienie do wzoru, to otrzymuje 0 punktów. 
+2. Jeżeli zdający nie obliczy amplitudy, ale uzasadni, że amplituda jest wi ększa od 100 cm, 
+to otrzymuje 1 punkt. 
+3. Jeżeli zdaj ący nie obliczy amplitudy tylko zapisze bez uzasadnienia, że amplituda jest 
+większa od 100 cm, to otrzymuje 0 punktów. 
+ 
+ 
+Zadanie 32. (0–4) 
+IV. U życie i tworzenie 
+strategii. 
+SP9. Wielokąty, koła, okręgi. Zdający stosuje twierdzenie 
+o sumie kątów trójkąta (SP9.3). 
+G7. Równania. Zdający rozwiązuje równania stopnia pierwszego 
+z jedną niewiadomą (G7.3). 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób 
+Niech  oznacza najmniejszy k ąt trójkąta. Zatem pozostałe dwa kąty tego trójkąta równe są 
+ oraz . Suma k ątów trójkąta jest równa , wi ęc  
+, 
+, 
+. 
+Stąd   oraz . 
+II sposób 
+Niech  oznacza najwi ększy kąt trójkąta. Zatem pozostałe dwa kąty tego trójkąta równe są 
+ oraz . Suma k ątów trójkąta jest równa , wi ęc  
+, 
+, 
+78=°α . 
+Stąd 263 =°α  oraz 50 763 +° =°α . 
+ 
+ 
+  
+46, 2 log 10
+A
+−=
+2,210A =
+100
+α
+50α +° 3α 180°
+3 50 180αα α++ + ° = °
+5 130α =°
+26α =°
+50 76α +° =° 37 8α =°
+α
+503 +°α
+3
+α 180°
+50 18033++° += °αα α
+5 390=°α
+
+===== PAGE 14 =====
+Strona 14 z 20 
+ 
+III sposób 
+Niech α  oznacza ten k ąt trójk ąta, który nie jest ani najwi ększy, ani najmniejszy. Zatem 
+pozostałe dwa kąty tego trójkąta równe są 50−°α  oraz ()35 0−°α . Suma kątów trójkąta jest 
+równa 180°, więc  
+()50 3 50 180−° + + −° = °αα α , 
+53 8 0=°α , 
+76=°α . 
+Stąd 50 26−° =°α  oraz ()35 0 7 8−° =°α . 
+ 
+Schemat punktowania 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze 
+do pełnego rozwiązania ........................................................................................................ 1 p. 
+Zdający zapisze: 
+• kąty trójkąta w zależności od jednego kąta, np.: 
+, ,     lub    ,    lub     
+albo 
+• układ dwóch równań, np.  
+50 180
+3,
+αα β
+βα
+++ ° += °
+ =
+  
+albo 
+• układ trzech równań, np.  
+180
+3
+50
+αβγ
+γα
+βα
+++= °
+ =
+ =+°
+ 
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Rozwiązanie, w którym jest istotny postęp ........................................................................ 2 p. 
+Zdający zapisze równanie z jedną niewiadomą, np.:  
+  lub  ,  lub   
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p. 
+Zdający obliczy jeden z k ątów trójk ąta, np.:  lub , lub  i na tym 
+zakończy lub dalej popełnia błędy. 
+Rozwiązanie pełne ................................................................................................................ 4 p. 
+Zdający obliczy wszystkie kąty trójkąta. 
+ 
+Uwagi: 
+1. Jeżeli zdający tylko poda kąty ( 26°, 76° , 78° ), to otrzymuje 1 punkt. 
+2. Jeżeli zdający tylko poda kąty i sprawdzi wszystkie warunki zadania, to otrzymuje 2 punkty. 
+ 
+ 
+  
+α 50α +° 3α ,5 0 ,33 +°αα α ()50 , , 3 50−° −°αα α
+35 0 1 8 0αα α++ + ° = ° 50 18033++° += °αα α ()50 3 50 180−° + + −° = °αα α
+26α =° 78=°α 76=°α
+
+===== PAGE 15 =====
+Strona 15 z 20 
+ 
+Zadanie 33. (0–5) 
+IV. U życie i tworzenie 
+strategii. 
+9. Stereometria. Zdający stosuje trygonometrię do obliczeń 
+długości odcinków, miar kątów, pól powierzchni i objętości 
+(9.6). 
+G10. Figury płaskie. Zdający stosuje twierdzenie Pitagorasa 
+(G10.7). 
+ 
+Przykładowe rozwiązanie  
+Wprowadzamy oznaczenia jak na rysunku. 
+ 
+Ponieważ wysokość tego ostrosłupa jest równa wysokości jego podstawy, to 3
+2
+aH = . Objętość 
+ostrosłupa jest równa 27, więc otrzymujemy równanie  
+, 
+skąd otrzymujemy a = 6.  
+Wysokość ostrosłupa jest równa 
+. 
+Punkt O jest środkiem okręgu opisanego na trójkącie równobocznym ABC, zatem długość 
+odcinka PO stanowi 1
+3  wysokości trójkąta ABC , czyli 
+11
+33 33 3OP H== ⋅= . 
+Z twierdzenia Pitagorasa zastosowanego dla trójkąta POS otrzymujemy 
+222hO PH=+ , 
+() ()
+222 33 3h =+ , 
+2 30h = . 
+Stąd  
+30h = . 
+  
+213 3 2734 2
+aa⋅⋅ =
+63 332H ==
+A 
+ B 
+ C 
+a 
+  O 
+ 
+  P 
+S 
+  H   h 
+
+===== PAGE 16 =====
+Strona 16 z 20 
+ 
+Pole powierzchni bocznej ostrosłupa jest zatem równe 
+1133 6 3 0 9 3 022
+bPa h=⋅ =⋅⋅ = . 
+Cosinus kąta nachylenia wysokości ściany bocznej do płaszczyzny podstawy jest równy 
+31 0cos 1030
+OP
+hα === . 
+ 
+Schemat punktowania 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze 
+do pełnego rozwiązania ........................................................................................................ 1 p. 
+Zdający: 
+• zapisze równanie, z którego można obliczyć długość krawędzi podstawy ostrosłupa: 
+ 
+albo 
+• zapisze równanie, z którego można obliczyć wysokość ostrosłupa: 
+ 
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Rozwiązanie, w którym jest istotny postęp ........................................................................ 2 p. 
+Zdający obliczy d ługość kraw ędzi podstawy ostros łupa 6a =  lub wysoko ść ostros łupa 
+ i na tym zakończy lub dalej popełnia błędy. 
+ 
+Uwaga: 
+Zdający mo że obliczy ć od razu tangens k ąta nachylenia wysoko ści ściany bocznej do 
+płaszczyzny podstawy ostrosłupa:  
+1
+3
+tg 3 H
+Hα == , 
+a następnie obliczyć szukaną wartość cosinusa tego kąta: 
+. 
+Otrzymuje wtedy 2 punkty. 
+ 
+ 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p. 
+Zdający obliczy  
+• wysokość ściany bocznej ostrosłupa:   
+albo 
+• długość krawędzi bocznej ostrosłupa:  
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+  
+213 3 2734 2
+aa⋅⋅ =
+2
+2 31 3 2734
+H
+H
+
+⋅⋅ =
+33H =
+10cos 10α =
+30
+39
+
+===== PAGE 17 =====
+Strona 17 z 20 
+ 
+Rozwiązanie prawie pełne .................................................................................................... 4 p. 
+Zdający obliczy: 
+• pole powierzchni bocznej ostrosłupa ABCS:  
+albo 
+• cosinus kąta nachylenia wysokości ściany bocznej do płaszczyzny podstawy: 
+ 
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Rozwiązanie pełne ................................................................................................................ 5 p. 
+Zdający obliczy pole powierzchni bocznej ostrosłupa ABCS:  i cosinus k ąta nachylenia 
+wysokości ściany bocznej do płaszczyzny podstawy: . 
+ 
+Uwagi: 
+1. Jeżeli zdający rozważa inną bryłę niż podana w zadaniu, to za ca łe rozwiązanie otrzymuje 
+0 punktów. 
+2. Jeżeli zdający popełni błąd merytoryczny np. w zastosowani u twierdzenia Pitagorasa przy 
+obliczaniu wysokości ściany bocznej lub w interpretacji własności trójkąta równobocznego, 
+to otrzymuje za całe rozwiązanie otrzymuje co najwyżej 2 punkty. 
+3. Akceptujemy poprawne przybliżenia dziesiętne liczb rzeczywistych. 
+ 
+ 
+Zadanie 34. (0–4) 
+III. Modelowanie 
+matematyczne. 
+10. Elementy statystyki opisowej. Teoria prawdopodobieństwa  
+i kombinatoryka. Zdający oblicza prawdopodobieństwa  
+w prostych sytuacjach, stosując klasyczną definicję 
+prawdopodobieństwa (10.3). 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób 
+Zdarzeniem elementarnym jest uporz ądkowana para  dwóch ró żnych liczb ze zbioru 
+, który zawiera 90 liczb. Liczba wszystkich zdarzeń elementarnych jest równa 
+. Wszystkie zdarzenia elementarne s ą równo prawdopodobne. Mamy wi ęc do 
+czynienia z modelem klasycznym.  
+Niech A oznacza zdarzenie polegające na tym, że suma wylosowanych liczb jest 30.  
+Zatem zdarzeniu A sprzyjają następujące zdarzenia elementarne: 
+, , , ()13,17 , ()14,16 , ()16,14 , ()17,13 , ()18,12 , ()19,11 , ()20,10 . 
+Ich liczba jest równa 10=A . 
+Prawdopodobieństwo zdarzenia A jest równe 
+() 10 1 1
+90 89 9 89 801== = =Ω⋅ ⋅
+APA . 
+93 0
+10cos 10α =
+93 0
+10cos 10α =
+() ,x y
+{ }10,11,12,...,99
+90 89Ω= ⋅
+()10, 20 ()11,19 ()12,18
+
+===== PAGE 18 =====
+Strona 18 z 20 
+ 
+Odpowiedź: Prawdopodobieństwo zdarzenia polegającego na tym, że wylosujemy dwie różne 
+liczby dwucyfrowe, których suma jest równa 30 jest równe 1
+801 . 
+ 
+II sposób 
+Zdarzeniem elementarnym jest zbiór dwuelementowy { },x y  dwóch ró żnych liczb ze zbioru 
+{ }10,11,12,...,99 , który zawiera 90 liczb. Liczba wszystkich zdarzeń elementarnych jest równa 
+()
+90
+2
+90! 90 89 400588! 2! 2
+⋅Ω= = = = ⋅ . Wszystkie zdarzenia elementarne s ą równo 
+prawdopodobne. Mamy więc do czynienia z modelem klasycznym.  
+Niech A oznacza zdarzenie polegaj ące na tym, że suma wylosowanych liczb jest 30. Zatem 
+zdarzeniu A sprzyjają następujące zdarzenia elementarne: 
+{ }10, 20 , { }11,19 , { }12,18 , { }13,17 , { }14,16 . 
+Ich liczba jest równa 5A = . 
+Prawdopodobieństwo zdarzenia A jest równe 
+() 51 1
+45 89 9 89 801
+APA == = =Ω⋅ ⋅ . 
+Odpowiedź: Prawdopodobieństwo zdarzenia polegającego na tym, że wylosujemy dwie różne 
+liczby dwucyfrowe, których suma jest równa 30 jest równe 1
+801 . 
+III sposób 
+Rysujemy drzewo z uwzgl ędnieniem wszystkich ga łęzi, które prowadz ą do sytuacji 
+sprzyjających zdarzeniu A (polegaj ącemu na tym, że suma wylosowanych liczb b ędzie 
+równa 30). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 19 =====
+Strona 19 z 20 
+ 
+Prawdopodobieństwo zdarzenia A jest równe 
+() 11 1 110 90 89 9 89 801PA =⋅ ⋅ = = ⋅ . 
+Odpowiedź: Prawdopodobieństwo zdarzenia polegającego na tym, że wylosujemy dwie różne 
+liczby dwucyfrowe, których suma jest równa 30 jest równe 1
+801 . 
+ 
+Schemat punktowania 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze  
+do pełnego rozwiązania ........................................................................................................ 1 p. 
+Zdający 
+• zapisze, że wszystkich liczb naturalnych dwucyfrowych jest 90   
+albo 
+• wypisze zdarzenia elementarne sprzyjające zdarzeniu A: 
+()10, 20 , ()11,19 , , , , , 
+, , ,  
+lub , , , , , 
+albo 
+• zapisze, że  lub , 
+albo 
+• narysuje drzewo ilustruj ące przebieg do świadczenia (na rysunku musz ą wyst ąpić 
+wszystkie istotne gałęzie) 
+i na tym zakończy lub dalej popełni błędy. 
+Rozwiązanie, w którym jest istotny postęp ................................................................... 2 p. 
+Zdający  
+• zapisze, że wszystkich liczb naturalnych dwucyfrowych jest  90  oraz wypisze wszystkie 
+zdarzenia elementarne sprzyjające zdarzeniu A: 
+()10, 20 , ()11,19 , , , , , 
+, , ,  
+lub , , , ,  
+albo 
+• zapisze, że wszystkich liczb naturalnych dwucyfrowych jest 90 oraz zapisze, że  
+lub , 
+albo 
+• obliczy liczb ę wszystkich zdarze ń elementarnych:  lub , lub 
+, lub , 
+albo 
+• narysuje drzewo ze wszystkimi istotnymi ga łęziami i zapisze prawdopodobieństwa na 
+wszystkich istotnych odcinkach jednego z etapów lub na jednej z istotnych gałęzi  
+i na tym zakończy lub dalej popełni błędy. 
+ 
+()12,18 ()13,17 ()14,16 ()16,14
+()17,13 ()18,12 ()19,11 ()20,10
+{ }10, 20 { }11,19 { }12,18 { }13,17 { }14,16
+10=A 5A =
+()12,18 ()13,17 ()14,16 ()16,14
+()17,13 ()18,12 ()19,11 ()20,10
+{ }10, 20 { }11,19 { }12,18 { }13,17 { }14,16
+10=A
+5A =
+90 89Ω= ⋅ ()
+90
+2Ω=
+90 89
+2
+⋅Ω= 4005Ω=
+
+===== PAGE 20 =====
+Strona 20 z 20 
+ 
+Pokonanie zasadniczych trudności zadania ................................................................... 3 p. 
+Zdający  
+• obliczy liczbę wszystkich zdarzeń elementarnych:  oraz zapisze, że  
+albo 
+• obliczy liczb ę wszystkich zdarze ń elementarnych:  lub , lub 
+ oraz zapisze, że  , 
+albo 
+• obliczy prawdopodobie ństwo wzd łuż jednej istotnej ga łęzi narysowanego drzewa: 
+  
+i na tym zakończy lub dalej popełni błędy. 
+ 
+Rozwiązanie pełne ............................................................................................................ 4 p. 
+Zdający obliczy prawdopodobieństwo zdarzenia A: . 
+ 
+Uwagi: 
+1. Jeżeli zdający poprawnie wyznaczy moc zbioru wszystkich zdarzeń elementarnych, ale przy 
+wyznaczaniu liczby zdarze ń sprzyjaj ących zdarzeniu A pominie jedno zdarzenie 
+elementarne lub popełni błąd przy zliczaniu poprawnie wypisanych zdarzeń elementarnych 
+sprzyjających zdarzeniu A i konsekwentnie rozwi ąże zadanie do ko ńca, to otrzymuje 
+3 punkty. 
+2. Jeżeli zdający błędnie zapisze, że wszystkich liczb dwucyfrowych jest 89 i konsekwentnie 
+rozwiąże zadanie do końca, to otrzymuje 3 punkty. 
+3. Jeżeli w rozwi ązaniu występuje sprzeczność modeli probabilistycznych, to zdaj ący może 
+otrzymać, co najwyżej 2 punkty. 
+4. Akceptujemy sytuacje, gdy zdaj ący zamiast wypisywania zdarze ń elementarnych 
+sprzyjających zdarzeniu A zapisze nast ępujące sumy 10 20+ , 11 19+ , 12 18+ , 13 17+ , 
+14 16+ , 16 14+ , 17 13+ , 18 12+ , 19 11+ , 20 10+  (lub tylko 10 20+ , 11 19+ , 12 18+ , 
+13 17+ , 14 16+ ). 
+5. Jeżeli zdaj ący zapisze, że wszystkich liczb naturalnych dw ucyfrowych jest 90, ale przy 
+wypisywaniu zdarzeń elementarnych sprzyjających zdarzeniu A, zapisuje sumę 15 15+  i na 
+tym zakończy to otrzymuje 1 punkt. 
+6. Jeżeli zdaj ący bez żadnych oblicze ń poda tylko wynik, np. 1
+801 , to otrzymuje za ca łe 
+rozwiązanie 1 punkt. 
+90 89Ω= ⋅ 10=A
+()
+90
+2Ω= 90 89
+2
+⋅Ω=
+4005Ω= 5A =
+11
+90 89⋅
+() 1
+801
+APA ==Ω

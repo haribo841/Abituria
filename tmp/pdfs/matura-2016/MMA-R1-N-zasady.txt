@@ -1,0 +1,1715 @@
+
+
+===== PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EGZAMIN MATURALNY 
+W ROKU SZKOLNYM 2015/2016 
+ 
+FORMUŁA OD 2015 
+(„NOWA MATURA”) 
+ 
+ 
+MATEMATYKA 
+POZIOM ROZSZERZONY 
+ 
+ 
+ 
+ZASADY OCENIANIA ROZWIĄZAŃ ZADAŃ 
+ARKUSZ MMA-P1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MAJ 2016 
+
+===== PAGE 2 =====
+Strona 2 z 34 
+ 
+Ogólne zasady oceniania 
+ 
+ 
+Uwaga: Akceptowane są wszystkie odpowiedzi merytorycznie poprawne i spełniające warunki 
+zadania. 
+ 
+ 
+Zadanie 1. (0−1) 
+Wymagania ogólne Wymagania szczegó łowe Poprawna 
+odp. (1 p.)
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+2. Wyrażenia algebraiczne. Zdający używa wzorów 
+skróconego mnożenia na 
+()
+3
+±ab  oraz 33±ab  
+(R2.1). 
+C 
+ 
+Zadanie 2. (0−1) 
+I. Wykorzystanie 
+i tworzenie informacji. 
+3. Równania i nierówności. Zdający stosuje 
+twierdzenie o reszcie z dzielenia wielomianu przez 
+dwumian 
+x – a (R3.4). 
+D 
+ 
+Zadanie 3. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+4. Funkcje. Zdający na podstawie wykresu funkcji  
+y = f(x) szkicuje wykresy funkcji y = |f(x)|, y = c·f(x),  
+y = f(cx) (R4.1). 
+B 
+ 
+Zadanie 4. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+11. Rachunek różniczkowy. Zdający oblicza 
+pochodne funkcji wymiernych (R11.2). A 
+ 
+Zadanie 5. (0−1) 
+II. Wykorzystanie 
+i interpretowanie 
+reprezentacji. 
+11. Rachunek różniczkowy. Zdający oblicza granice 
+funkcji (i granice jednostronne), korzystając 
+z twierdzeń o działaniach na granicach i z własności 
+funkcji ciągłych (R11.1). 
+D 
+ 
+Zadanie 6. (0−2) 
+III. Modelowanie 
+matematyczne. 
+10. Elementy statystyki opisowej. Teoria 
+prawdopodobieństwa i kombinatoryka.  Zdający 
+oblicza prawdopodobieństwo warunkowe (R10.2). 
+753 
+ 
+
+===== PAGE 3 =====
+Strona 3 z 34 
+ 
+Zadanie 7. (0−2) 
+III. Modelowanie 
+matematyczne. 
+5. Ciągi. Zdający rozpoznaje szeregi geometryczne zbieżne i oblicza 
+ich sumy (R5.3). 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób 
+Pierwszym wyrazem ciągu () na  jest 1
+1
+2 371a x= − . Ilorazem tego ciągu jest 1
+2 371q x= − . 
+Ponieważ wszystkie wyrazy tego ci ągu s ą dodatnie, wi ęc szereg jest zbie żny, gdy 
+101 2 371x<< − .  Zatem 
+2 371 0x −>   i  2 371 1x −> . 
+Stąd 
+23 7 2x > , 
+186x > . 
+Zatem szukaną liczbą całkowitą jest 187. 
+ 
+II sposób 
+Pierwszym wyrazem ci ągu () na  jest 1
+1
+2 371a x= − , ilorazem tego ci ągu za ś jest 
+1
+2 371q x= − . Szereg geometryczny jest zbieżny wtedy i tylko wtedy, gdy: 1 12 371x <− .  
+Rozwiązujemy powyższą nierówność: 
+111 2 371x−< < − , 
+2 370 2 37200 2 371 2 371
+xx
+xx
+−− +<∧ < −− ,  
+( ) () ( ) ()185,5 185 185,5 0 186 185,5 0xx x x x≠∧ − −> ∧ − −> , 
+() ( ),185 186,x ∈− ∞ ∪ + ∞ . 
+Wszystkie wyrazy ciągu () na  są dodatnie, więc ()186,x ∈+ ∞ . Zatem szukaną liczbą całkowitą 
+jest 187. 
+Schemat punktowania 
+ 
+Zdający otrzymuje ................................................................................................................ 1 p. 
+gdy zapisze 1
+2 371q x= −  i na tym poprzestanie lub dalej popełnia błędy.  
+Zdający otrzymuje ................................................................................................................ 2 p. 
+gdy zapisze najmniejsz ą liczbę całkowitą x, dla której niesko ńczony szereg jest zbie żny, tzn. 
+liczbę 187, o ile wynik nie został uzyskany w wyniku błędnego rozwiązania. 
+ 
+
+===== PAGE 4 =====
+Strona 4 z 34 
+ 
+Uwaga: 
+Jeżeli zdający bez stosownych obliczeń i bez komentarza zapisuje, że szukaną liczbą jest 187 
+i na tym zakończy, to otrzymuje 1 punkt. 
+ 
+ 
+Zadanie 8. (0−3) 
+ 
+Przykładowe rozwiązanie 
+ 
+I sposób 
+Dla dowolnych liczb dodatnich x i y takich, że 22 2xy +=  nierówno ść 2xy+≤  jest 
+równoważna kolejno nierównościom 
+()
+2
+4xy+≤ , 
+22 24xx y y++ ≤ ,  
+22 22 2xx y y++ ≤ ⋅ , 
+()
+22 22 22x yx y x y++ ≤ + , 
+22 2 2 22 2x yx y xy++ ≤ + , 
+22 20xy x y+− ≥ , 
+()
+2
+0xy−≥ . 
+Ta ostatnia nierówno ść jest prawdziwa dla dow olnych liczb rzeczywistych x i y. To ko ńczy 
+dowód. 
+Schemat punktowania I sposobu rozwiązania 
+Zdający otrzymuje  .............................................................................................................. 1 p.  
+gdy uzasadni, że dla dowolnych liczb dodatnich x i y takich, że 22 2xy +=  nierówno ść 
+2xy+≤  jest równowa żna nierówności 22 22 2xx y y++ ≤ ⋅  i na tym poprzestanie lub dalej 
+popełnia błędy.  
+Zdający otrzymuje  .............................................................................................................. 2 p.  
+gdy uzasadni, że dla dowolnych liczb dodatnich x i y takich, że 22 2xy +=  nierówno ść 
+2xy+≤  jest równowa żna nierówności ()
+22 22 22x yx y x y++ ≤ + i na tym poprzestanie lub 
+dalej popełnia błędy. 
+Zdający otrzymuje  .............................................................................................................. 3 p.  
+gdy przeprowadzi pełne rozumowanie. 
+ 
+V. Rozumowanie 
+i argumentacja. 
+2. Wyrażenia algebraiczne. Zdający używa wzorów skróconego 
+mnożenia na ()
+2
+ab±  oraz 22ab−  (2.1). 
+
+===== PAGE 5 =====
+Strona 5 z 34 
+ 
+Przykładowe rozwiązanie 
+ 
+II sposób 
+Niech x i y będą dowolnymi dodatnimi liczbami rzeczywistymi takimi, że 22 2xy += .  
+Obie strony nierówno ści 2xy+≤  s ą dodatnie, wi ęc podnosząc obie strony nierówno ści do 
+kwadratu otrzymujmy nierówność równoważną 
+22 24xy x y++ ≤ . 
+Stąd otrzymujemy 2 2 4xy+≤ , więc 1xy ≤ . 
+Obie strony tej nierówno ści 1xy ≤  są dodatnie, wi ęc podnosząc obie strony nierówno ści do 
+kwadratu otrzymujmy nierówność równoważną 
+22 1xy ≤ . 
+Z założenia 22 2y x=− . Wówczas nierówność 22 1xy ≤  jest równoważna nierównościom 
+()
+22 21xx −≤ , 
+42 21xx−+ ≤ , 
+42 21 0xx −+ ≥ , 
+()
+22 10x −≥ . 
+Ta ostatnia nierówność jest prawdziwa dla każdej liczby rzeczywistej x. To kończy dowód. 
+ 
+Schemat punktowania II sposobu rozwiązania 
+Zdający otrzymuje  ............................................................................................................... 1 p.  
+gdy uzasadni, że dla dowolnych liczb dodatnich x i y takich, że 22 2xy +=  nierówno ść 
+2xy+≤  jest równoważna nierówności 1xy ≤  i na tym poprzestanie lub dalej popełnia błędy.  
+Zdający otrzymuje  ............................................................................................................... 2 p.  
+gdy zapisze nierówno ść z jedn ą niewiadomą, np. ( )
+221xx −≤  i na tym poprzestanie lub 
+dalej popełnia błędy. 
+Zdający otrzymuje  ............................................................................................................... 3 p.  
+gdy przeprowadzi pełne rozumowanie. 
+ 
+Przykładowe rozwiązanie 
+ 
+III sposób 
+Niech x i y b ędą dowolnymi dodatnimi liczba mi rzeczywistymi takimi, że 22 2xy += . 
+Wykorzystując nierówność między średnią arytmetyczną i średnią kwadratową, otrzymujemy 
+22
+22
+x yx y++ ≤ . 
+Stąd i z równości 22 2xy +=  wynika, że  2 122
+xy+ ≤= , czyli 2xy+≤ . To kończy dowód. 
+ 
+
+===== PAGE 6 =====
+Strona 6 z 34 
+ 
+Schemat punktowania III sposobu rozwiązania 
+Zdający otrzymuje  .............................................................................................................. 2 p.  
+gdy zapisze nierówność między średnią arytmetyczną i średnią kwadratową  
+22
+22
+x yx y++ ≤  
+i na tym poprzestanie lub dalej popełnia błędy. 
+Zdający otrzymuje  .............................................................................................................. 3 p.  
+gdy zapisze nierówność między średnią arytmetyczną i średnią kwadratową i na tej podstawie 
+uzasadni prawdziwość nierówności 2xy+≤ . 
+Przykładowe rozwiązanie 
+ 
+IV sposób 
+Dla dowolnych liczb dodatnich x i y takich, że 22 2xy +=  nierówno ść 2xy+≤  jest 
+równoważna kolejno nierównościom 
+()
+2
+4xy+≤ , 
+22 24xx y y++ ≤ ,  
+22 4 xy+≤ ,  
+1xy ≤ , 
+22 1xy ≤ . 
+Możemy przyjąć, że 2 1x p=−  oraz 2 1y p=+ , gdzie 11 p−< < . Zatem nierówność 22 1xy ≤  
+przyjmuje posta ć () ()11 1pp−+ ≤ , czyli 211 p−≤ , co jest prawd ą dla ka żdej liczby 
+rzeczywistej p, więc, w szczególności, dla każdej liczby 1 1 p−< < . To kończy dowód. 
+ 
+ 
+Schemat punktowania IV sposobu rozwiązania 
+Zdający otrzymuje  .............................................................................................................. 1 p.  
+gdy uzasadni, że dla dowolnych liczb dodatnich x i y takich, że 22 2xy +=  nierówno ść 
+2xy+≤  jest równoważna nierówności 1xy ≤  i na tym poprzestanie lub dalej popełnia błędy.  
+Zdający otrzymuje  .............................................................................................................. 2 p.  
+gdy uzasadni, że dla dowolnych liczb dodatnich x i y takich, że 22 2xy +=  nierówno ść 
+2xy+≤  jest równoważna nierówności 22 1xy ≤  oraz przyjmie, że 2 1x p=−  oraz 2 1y p=+ , 
+gdzie 1 1 p−< < , i na tym poprzestanie lub dalej popełnia błędy. 
+Zdający otrzymuje  .............................................................................................................. 3 p.  
+gdy przeprowadzi pełne rozumowanie. 
+
+===== PAGE 7 =====
+Strona 7 z 34 
+ 
+Przykładowe rozwiązanie 
+ 
+V sposób 
+Niech x i y będą dowolnymi dodatnimi liczbami rzeczywistymi takimi, że 22 2xy += . 
+Stąd  
+22 22 2x xy y xy++ = + , 
+()
+2
+22x yx y+= + , 
+22x yx y+= + . 
+Dla dowolnych liczb rzeczywistych x i y prawdziwa jest nierówno ść ()
+2 0xy−≥ , a st ąd 
+kolejno 
+22 20xx y y−+ ≥ , 
+222xyx y≤+ . 
+Zatem dla dowolnych dodatnich liczb rzeczywistymi x i y takich, że 22 2xy +=  prawdziwa 
+jest nierówność 
+22xy ≤ , 
+1xy ≤ . 
+Stąd wynika, że  
+22 22 1 4 2xy x y+= + ≤ + ⋅ = = . 
+To kończy dowód. 
+ 
+ 
+Schemat punktowania V sposobu rozwiązania 
+Zdający otrzymuje  ............................................................................................................... 1 p.  
+gdy  
+• uzasadni, że dla dowolnych liczb dodatnich x i y takich, że 22 2xy +=  nierówno ść 
+2xy+≤  równoważna nierówności 1xy ≤   
+albo 
+• zapisze, że dla dowolnych liczb dodatnich x i y takich, że 22 2xy +=  suma liczb x i y 
+jest równa 22x yx y+= +  
+i na tym poprzestanie lub dalej popełnia błędy. 
+Zdający otrzymuje  ............................................................................................................... 2 p.  
+gdy uzasadni, że dla dowolnych liczb dodatnich x i y takich, że 22 2xy +=  nierówno ść 
+2xy+≤  równowa żna nierówno ści 1xy ≤  oraz zapisze sum ę liczb x i y w postaci 
+22x yx y+= +  i na tym poprzestanie lub dalej popełnia błędy. 
+Zdający otrzymuje  ............................................................................................................... 3 p.  
+gdy przeprowadzi pełne rozumowanie. 
+ 
+
+===== PAGE 8 =====
+Strona 8 z 34 
+ 
+Przykładowe rozwiązanie 
+ 
+VI sposób 
+Niech x i y b ędą dowolnymi dodatnimi liczbami rzeczywistymi takimi, że 22 2xy += .  To 
+oznacza, że ka żda para liczb () ,x y  spe łniająca to równanie stanowi wspó łrzędne punktu 
+leżącego w I ćwiartce uk ładu wspó łrzędnych na okr ęgu o środku ()0, 0S =  i promieniu 
+2r = . Punkt ()1,1A =   leży na tym okręgu, więc prosta o równaniu yx=  zawiera średnicę 
+tego okr ęgu. Oznacza to, że prosta prostopad ła do niej i przechodz ąca przez punkt A jest 
+styczna do okr ęgu. Ma ona równanie () 11yx=− − + , czyli 2xy+= . Ta prosta wyznacza 
+dwie półpłaszczyzny, z których jedn a opisana jest nierówno ścią 2xy+≤ . Środek S okr ęgu 
+leży w tej półpłaszczyźnie, gdyż 0002+=< . Stąd wynika, że w tej półpłaszczyźnie leżą też 
+wszystkie punkty okręgu. 
+ 
+12
+1
+2
+x
+y
+0
+ 
+To kończy dowód.  
+ 
+ 
+Schemat punktowania VI sposobu rozwiązania 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+gdy zapisze, że wszystkie punkty () ,Px y= , których wspó łrzędne spe łniają równanie 
+22 2xy += , le żą na okr ęgu o środku ()0, 0S =  i promieniu 2r =  i na tym zako ńczy lub 
+dalej popełnia błędy. 
+Zdający otrzymuje  .............................................................................................................. 2 p.  
+gdy zapisze, że wszystkie punkty () ,Px y= , których wspó łrzędne spe łniają równanie 
+22 2xy += , le żą na okr ęgu o środku ()0, 0S =  i promieniu 2r =  oraz że ka żdy punkt 
+okręgu leży w półpłaszczyźnie opisanej nierównością 2xy+≤ , ale nie stwierdzi, że krawędź 
+tej półpłaszczyzny jest styczna do okręgu i na tym zakończy lub dalej popełnia błędy. 
+Zdający otrzymuje  .............................................................................................................. 3 p.  
+gdy zapisze, że wszystkie punkty () ,Px y= , których wspó łrzędne spe łniają równanie 
+22 2xy += , le żą na okr ęgu o środku ()0, 0S =  i promieniu 2r =  oraz że ka żdy punkt 
+okręgu leży w pó łpłaszczyźnie opisanej nierówno ścią 2xy+≤ , a tak że stwierdzi, że prosta 
+o równaniu 2xy+=  jest styczna do tego okręgu. 
+
+===== PAGE 9 =====
+Strona 9 z 34 
+ 
+Przykładowe rozwiązanie 
+ 
+VII sposób 
+Niech x i y będą dowolnymi dodatnimi liczbami rzeczywistymi takimi, że 22 2xy += . Stąd 
+otrzymujemy 22 2y x=− , wi ęc 22y x=−  dla 02 x<< , gdy ż 0 y > . Wówczas 
+nierówność 2xy+≤  jest równoważna nierówności  
+222xx+− ≤ , 
+222 x x−≤ − . 
+Obie strony tej nierówno ści s ą dodatnie, gdy ż 02 x<< , wi ęc, podnosz ąc obie strony 
+nierówności do kwadratu, otrzymujmy nierówność równoważną 
+2224 4x xx−≤ −+ , 
+224 2 0xx −+ ≥ , 
+2 21 0xx −+ ≥ , 
+()
+2
+10x −≥ , 
+która jest prawdziwa dla każdej liczby rzeczywistej x. To kończy dowód. 
+ 
+Schemat punktowania VII sposobu rozwiązania 
+Zdający otrzymuje  ............................................................................................................... 1 p. 
+gdy wyznaczy z równości 22 2xy +=  jedną z liczb w zale żności od drugiej: 22y x=−  dla 
+02 x<<   
+i na tym poprzestanie lub dalej popełnia błędy. 
+Zdający otrzymuje  ............................................................................................................... 2 p. 
+gdy zapisze nierówno ść z jedn ą niewiadomą, np. 22 22xx +−≤  i na tym poprzestanie lub 
+dalej popełnia błędy. 
+Zdający otrzymuje  ............................................................................................................... 3 p.  
+gdy przeprowadzi pełne rozumowanie. 
+ 
+Przykładowe rozwiązanie 
+ 
+VIII sposób 
+Niech x i y będą dowolnymi dodatnimi liczbami rzeczywistymi takimi, że 22 2xy += . Stąd 
+otrzymujemy 22y x=−  dla 02 x<< , gdy ż 0y > . Do obu stron równania 22 2xy +=  
+dodajemy 2xy , otrzymując 
+22 22 2x yx y x y++ = + , 
+()
+2
+22x yx y+= + . 
+Stąd  
+22 422 22 2 22 2x yx yx x x x+= + = + − = + − . 
+Rozważmy funkcj ę f okre śloną dla 02 x<<  wzorem  () 2422 2f xx x=+ − . 
+Wyznaczymy najwi ększą warto ść tej funkcji. Poniewa ż funkcja 22yt=+  jest rosn ąca, 
+
+===== PAGE 10 =====
+Strona 10 z 34 
+ 
+więc funkcja f osiąga największą wartość wtedy i tylko wtedy, gdy największą wartość osiąga 
+funkcja g okre ślona dla 02 x<<  wzorem  () 242gx x x=− . Obliczamy pochodn ą tej 
+funkcji  
+() 344gx x x′ =−  dla 02 x<< . 
+Obliczamy miejsca zerowe pochodnej i badamy jej znak.  
+Ponieważ () ( ) ( )41 1gx x x x′ =− +  oraz ()41 0xx +>  dla każdego 02 x<< , więc: 
+() 0gx′ =  wtedy i tylko wtedy, gdy 10 x−= , czyli 1x = , 
+() 0gx′ >  wtedy i tylko wtedy, gdy 10 x−>  i 02 x<< , czyli gdy 01 x<< , 
+() 0gx′ <  wtedy i tylko wtedy, gdy 10 x−<  i 02 x<< , czyli gdy 12 x<< . 
+Zatem w przedziale (0,1  funkcja g jest rosn ąca, w przedziale )1, 2  jest malej ąca,  
+a w punkcie 1x =  przyjmuje maksimum lokalne, które jest jednocze śnie najwi ększą 
+wartością tej funkcji. 
+Gdy 1x = , to  
+() 2412 2 2 11 4f =+ ⋅ − = . 
+Zatem 
+42xy+≤ = , 
+co kończy dowód. 
+Schemat punktowania VIII sposobu rozwiązania 
+ 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+gdy wyznaczy sumę liczb x i y w zależności od jednej zmiennej, np. 222 2x yx x+= + −  
+dla 02 x<<  i na tym poprzestanie lub dalej popełnia błędy. 
+Zdający otrzymuje  .............................................................................................................. 2 p. 
+gdy obliczy miejsca zerowe pochodnej i zbada jej znak, np.: 
+() 0gx′ =  dla 1x = , () 0gx′ >  dla 01 x<< , () 0gx′ <  dla 12 x<<   
+i na tym poprzestanie lub dalej popełnia błędy. 
+Zdający otrzymuje  .............................................................................................................. 3 p.  
+gdy przeprowadzi pełne rozumowanie. 
+ 
+ 
+ 
+Uwagi: 
+1. Je żeli zdaj ący jako jedyne uzasa dnienie prawdziwo ści nierówno ści przywo łuje 
+„nierówność Cauchy’ego” i nie zapisuje tej nierówno ści ani żadnych wniosków p łynących 
+z zastosowania tej nierówności, to otrzymuje 0 punktów.  
+2. Je żeli zdaj ący, oprócz powo łania si ę na nazwisko Cauchy,  zapisze odpowiedni ą 
+nierówność Cauchy’ego, to przedstawione rozwi ązanie jest oceniane tak, jak to przewiduje 
+schemat. 
+3. Je żeli zdaj ący nie zapisze koniecznego za łożenia o mo żliwych warto ściach x przy 
+wyznaczaniu y w zależności od x, to otrzymuje co najwyżej 
+2 punkty.  
+ 
+
+===== PAGE 11 =====
+Strona 11 z 34 
+ 
+Zadanie 9. (0−3) 
+V. Rozumowanie 
+i argumentacja. 
+7. Planimetria. Zdający rozpoznaje figury podobne i jednokładne; 
+wykorzystuje (także w kontekstach praktycznych) ich własności 
+(R7.4). 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób 
+Poprowadźmy promienie SE i SF okręgu o środku S do punktów E i F styczności tego okręgu 
+odpowiednio z przek ątną BD i bokiem AB prostok ąta. Niech G b ędzie rzutem punktu N na 
+bok AB, jak na rysunku. 
+ 
+Wówczas SM SE SF MA NG=== =  oraz DEB N= .  
+Trójkąty DMS i DES s ą prostok ątne, wi ęc z twierdzenia Pitagorasa dla tych trójk ątów 
+otrzymujemy  
+22 2 2
+DMD S S M D S S E D E=− =− = . 
+Odcinek MN jest równoległy do AB, więc kąty GBN i ENS są równe. Trójkąty BGN i NES są 
+prostokątne, wi ęc k ąty BNG i NSE tak że s ą równe. To z kolei wraz z równo ścią 
+SE NG= oznacza, że trójkąty BGN i NES są przystające. Zatem BN NS= . 
+Stąd  
+MNM S S NM A B NM A D EM A D MA D=+ =+=+=+ = . 
+To kończy dowód. 
+ 
+Uwaga: 
+Równość odcinków DM i DE wynika też bezpośrednio z twierdzenia o odcinkach stycznych.  
+ 
+A B
+CD 
+SM N
+E
+GF
+r
+r
+r
+r α
+α
+
+===== PAGE 12 =====
+Strona 12 z 34 
+ 
+II sposób 
+Poprowadźmy promienie SE i SF okręgu o środku S do punktów E i F styczności tego okręgu 
+odpowiednio z przek ątną BD i bokiem AB prostok ąta. Po łączmy punkty S oraz B, jak na 
+rysunku. 
+ 
+ 
+Wówczas SM SE SF MA===  oraz DE BN= .  
+Ponieważ MNr S N=+  oraz ADrD M=+ , wystarczy wykazać, że DMS N= . 
+Z przystawania trójk ątów prostok ątnych BFS i BES (wspólna przeciwprostok ątna i równe 
+przyprostokątne SF SE= ) otrzymujemy EBS FBS α== .  
+Odcinek MN jest równoleg ły do AB, zatem k ąty FBS i NSB s ą równe, jako k ąty 
+naprzemianległe, czyli k ąty NSB i SBN także są równe. Wobec powy ższego trójkąt BSN jest 
+równoramienny i BNN S=  oraz BND M= , a st ąd wynika równo ść DM SN= . To 
+kończy dowód. 
+ 
+III sposób 
+Poprowadźmy promienie okr ęgu o środku S do punktów E i F styczno ści tego okr ęgu 
+z bokami BD i AB trójkąta DAB. Niech r oznacza promień tego okręgu,  x MD= ,  yS N=  
+i zE N= . 
+ 
+Z twierdzenia o odcinkach stycznych wynika, że EDM D x== . Trójkąty DAB i CBD są 
+przystające, więc NB ED x== . Czworokąt AFSM jest kwadratem, więc MAA Fr== . 
+Ponadto BFB E x z== + . 
+Trójkąty DAB i DMN są podobne (oba są prostokątne i mają wspólny kąt ostry przy 
+wierzchołku D). Zatem 
+ADM D
+DBD N= , czyli 2
+rx x
+x zx z
++ =++ . 
+A B
+CD 
+S M N
+E
+F
+r
+r
+r  
+x
+x
+y
+x
+z
+r
+r
+A B
+CD 
+S M N
+E
+F
+r
+r
+r
+α  
+α
+α
+
+===== PAGE 13 =====
+Strona 13 z 34 
+ 
+Stąd  
+() () ( ) 2rxxz xz x++ = + , 
+22 2rx rz x xz x xz+++ = + , 
+ (1) 
+2x rxz r
+−= . 
+Z podobieństwa trójkątów MDN i ESN  (oba są prostokątne i mają wspólny kąt ostry przy 
+wierzchołku N) wynika , że  
+SE MD
+SN DN= , czyli rx
+yx z= + . 
+Stąd i z (1) otrzymujemy 
+() 22xr xrrx z rx r rx x rxyx x xx
+−+ +⋅ +−== = = . 
+To oznacza, że ADr x r yM N=+=+ = . To kończy dowód. 
+ 
+Schemat punktowania 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze  
+do pełnego rozwiązania zadania  ......................................................................................... 1 p. 
+Zdający  
+• poprowadzi odcinki SE i NG  
+albo 
+• zapisze równość DMD E= ,  
+albo  
+• zapisze równość DEB N= , 
+albo 
+• zapisze równość SM SE MA NG== = , 
+albo 
+• zapisze, że trójkąty BFS i BES są przystające, 
+albo 
+• zapisze proporcję wynikającą z podobieństwa trójkątów DAB i DMN : ADM D
+DBD N= , 
+albo 
+• zapisze proporcję wynikającą z podobieństwa trójkątów MDN i ESN : SE MD
+SN DN= , 
+albo 
+• zauważy, że odcinek BS jest dwusieczną kąta ABD,  
+albo 
+• zapisze, że trójkąt BNS jest równoramienny  
+i na tym zakończy lub dalej popełni błędy. 
+Pokonanie zasadniczych trudności zadania ....................................................................... 2 p. 
+Zdający 
+• zapisze, że trójkąty BGN i NES są przystające 
+albo  
+
+===== PAGE 14 =====
+Strona 14 z 34 
+ 
+• zapisze, że trójkąt BSN jest równoramienny i BND M= , 
+albo 
+• zapisze proporcje: 2
+rx x
+x zx z
++ =++  i rx
+yx z= + , 
+albo  
+• zauważy, że MNrS N=+  i ENA B A D=− , 
+albo 
+• zapisze proporcje: 
+22
+rx x
+ryry x r
++ = +++ −
+ i rx
+zr y= +  oraz zapisze równanie 
+wynikające z twierdzenia Pitagorasa w jednym z trójkątów BGN i ENS 
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Rozwiązanie pełne ................................................................................................................ 3 p. 
+Zdający wykaże, że MNA D= . 
+ 
+ 
+Zadanie 10. (0−4) 
+IV. Użycie i tworzenie 
+strategii. 
+4. Funkcje. Zdający wykorzystuje własności funkcji liniowej 
+i kwadratowej do interpretacji zagadnień geometrycznych, 
+fizycznych itp. także osadzonych w kontekście praktycznym) 
+(4.12). 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób 
+Wyznaczymy najpierw wspó łrzędne punktu przeci ęcia. Przyrównujemy ()f x i ()gx , 
+a otrzymane równanie zapisujemy w postaci  
+() 17ax+= . 
+Ponieważ 0x > , więc 10a +> , czyli 1a >− .  
+Zatem 
+75 2() 2 11
+−==− = ++
+ayf x aa . 
+Ponieważ 0y > , a ponadto 10a +> , więc wynika stąd, że 52 0a−> , skąd otrzymujemy  
+5
+2a < . 
+Łączymy oba warunki 0x >  i 0y >  i zapisujemy odpowied ź: punkt przeci ęcia wykresów 
+funkcji ma obie współrzędne dodatnie dla 51 2a−< < . 
+ 
+
+===== PAGE 15 =====
+Strona 15 z 34 
+ 
+II sposób 
+Zilustrujmy w układzie współrzędnych sytuację opisaną w treści zadania. 
+ 
+- 7 - 6 - 5 - 4 - 3 - 2 - 1 123456789 1 0 1 1 1 2 1 3
+-3
+-2
+-1
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+x
+y
+0
+5 52yx=− +
+2yx=−
+5yx=+
+ 
+ 
+Ponieważ równanie 5ya x=− +  opisuje p ęk prostych przechodz ących przez punkt 
+o współrzędnych ()0, 5 , więc rysując proste o równaniach 5yx=+  oraz 5 52yx=− +  (linie 
+przerywane) otrzymujemy graniczne po łożenia linii prostych nale żących do tego p ęku – 
+prosta o równaniu 5yx=+  nie ma żadnego punktu wspólnego z prostą o równaniu 2yx=− , 
+natomiast prosta o równaniu 5 52yx=− +  ma jeden punkt wspólny z prost ą o równaniu 
+2yx=− , jest nim punkt ()2, 0 , którego wspó łrzędne nie spe łniają warunku okre ślonego 
+w treści tego zadania.  
+Zapisujemy odpowied ź: Punkty przeci ęcia wykresów funkcji maj ą dwie dodatnie 
+współrzędne wtedy i tylko wtedy, gdy  51 2a−< < .  
+Schemat punktowania 
+ 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania zadania  ............................................................................................................ 1 p. 
+Zdający wyznaczy jedną ze współrzędnych punktu przecięcia w zależności od a  oraz zapisze: 
+• 7
+1x a= +
+  
+albo 
+• 7 21y a=− +
+ 
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+
+===== PAGE 16 =====
+Strona 16 z 34 
+ 
+Rozwiązanie, w którym jest istotny postęp ........................................................................ 2 p. 
+Zdający  
+• wyznaczy obie wspó łrzędne punktu przeci ęcia w zale żności od a i zapisze: 7
+1x a= +  
+i 52
+1
+ay a
+−= +   dla 1a ≠−  
+albo 
+• wyznaczy pierwsz ą wspó łrzędną punktu przeci ęcia w zale żności od a: 7
+1x a= +  
+i zapisze, że druga wspó łrzędna jest doda tnia, gdy 2x >  (o ile wynika to 
+z przywołanej koniunkcji 02xx>∧> ), 
+albo 
+•  zapisze, że 0x > , gdy 1a >−  i nie wyznaczy drugiej współrzędnej punktu przecięcia, 
+albo 
+• sporządzi ilustrację graficzną jednej pary prostych o równaniach: 2y x=−  i 5y x=+   
+lub 2y x=−  i  5 52yx=− +  
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p. 
+Zdający: 
+• zapisze, że dla 1a >−  spe łniona jest nierówno ść 0x >  i wyznaczy drug ą 
+współrzędną 
+albo 
+• zapisze, że dla 51 2a−< < spełniona jest nierówno ść 0y >  i nie rozwa ży warunku 
+0x > , 
+albo 
+• sporządzi ilustrację graficzną, na której znajdą się proste o równaniach: 
+5yx=+     i    5 52yx=− +     i    2yx=−  
+oraz zapisze przynajmniej jedną poprawną nierówność, którą spełnia współczynnik a, 
+albo 
+• sporządzi ilustracj ę graficzn ą prostej o równaniu: 2yx=−  i p ęku prostych 
+przechodzących przez punkt o wspó łrzędnych (0, 5) oraz  zapisze przynajmniej jedn ą 
+poprawną nierówność, którą spełnia współczynnik a  
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Rozwiązanie pełne ................................................................................................................ 4 p. 
+Zdający zapisze, że dla 51 2a−< <  obie współrzędne punktu przecięcia są dodatnie. 
+ 
+
+===== PAGE 17 =====
+Strona 17 z 34 
+ 
+Uwagi:  
+1. Jeżeli zdający podstawia do równania p ęku prostych współrzędne punktu (0, 2), otrzymuje 
+5
+2a =  i na tym zako ńczy lub dalej pope łni b łędy, to otrzymuje 1 punkt . Je śli dodatkowo 
+poda, że 5
+2a < , to otrzymuje 2 punkty. 
+2. Je żeli zdaj ący przedstawia rysunek, na którym  jest tylko prosta o równaniu 2yx=− , 
+i odpowiedź 51,2a ∈−
+ bez żadnych wyjaśnień, to otrzymuje 1 punkt.  
+ 
+ 
+Zadanie 11. (0−4) 
+IV. Użycie i tworzenie 
+strategii. 
+6. Trygonometria. Zdający rozwiązuje równania i nierówności 
+trygonometryczne oraz posługuje się wykresami funkcji 
+trygonometrycznych (R6.6, R6.4). 
+ 
+Przykładowe rozwiązanie 
+Ponieważ 2cos 0x ≥  dla ka żdego x, to nierówno ść 2
+2cos 3 0cos
+x
+x
+− <  jest równowa żna 
+koniunkcji 2cos 3 0x −<  i cos 0x ≠ , czyli 3cos 2x <  i cos 0x ≠ . 
+Zatem π 11π2 π,2 π66x kk∈+ +
+, gdzie k jest liczb ą ca łkowitą, i π π2x m≠+ , gdzie m jest 
+liczbą całkowitą.  
+ 
+W przedziale 0, 2π  rozwiązaniem tej nierówności jest każda liczba  
+ππ π 3π 3π 11π,, ,62 2 2 2 6x     ∈∪ ∪        
+. 
+Uwaga: 
+Nierówności 3cos 2x <  i cos 0x ≠  mo żemy rozwi ązać, np. odczytuj ąc odpowiednie 
+argumenty funkcji () cosf xx = , dla których przyjmuje ona wartości mniejsze od 3
+2  i różne 
+od zera. 
+ 
+π/6 π/3 π/2 2 π/3 5 π/6 π 7π/6 4 π/3 3 π/2 5 π/3 11 π/6 2 π
+-1
+1
+x
+y
+0
+ 
+
+===== PAGE 18 =====
+Strona 18 z 34 
+ 
+Funkcja cosinus przyjmuje w przedziale 0, 2π  wartość 3
+2
+ dla dwóch argumentów: π
+6x = , 
+11π
+6x = .  Ma również w tym przedziale dwa miejsca zerowe: π
+2x = , 3π
+2x = .  
+Zatem zbiorem rozwi ązań nierówno ści 2
+2cos 3 0cos
+x
+x
+− <  w przedziale 0, 2π  jest suma 
+przedziałów  
+ππ π 3π 3π 11π,, ,62 2 2 2 6
+    ∪∪        
+. 
+Schemat punktowania 
+ 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania zadania  ............................................................................................................ 1 p. 
+Zdający zapisze, że nierówno ść ()
+2cos 2cos 3 0xx −<  jest równowa żna koniunkcji 
+2cos 0x ≠  i 2cos 3 0x −<  i na tym zakończy lub dalej popełnia błędy. 
+Rozwiązanie, w którym jest istotny postęp  ....................................................................... 2 p. 
+Zdający 
+• zapisze, że 2cos 0x ≠  dla π π2x k≠+ , gdzie k jest liczbą całkowitą 
+albo 
+• zapisze, że 2cos 0x ≠  dla π
+2x ≠  i 3π
+2x ≠  lub cos 0x ≠  dla π
+2x ≠  i 3π
+2x ≠ , 
+albo 
+• rozwiąże nierówność 3cos 2x <  w zbiorze liczb rzeczywistych:  
+π 11π2 π,2 π66x kk∈+ +
+,  gdzie k jest liczbą całkowitą, 
+albo 
+• rozwiąże nierówność 3cos 2x <  w  przedziale 0, 2π : π 11π,66x ∈ 
+ 
+i na tym zakończy lub dalej popełnia błędy. 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p. 
+Zdający zapisze, że 2cos 0x ≠  dla π π2x k≠+ , gdzie k jest liczb ą ca łkowitą oraz rozwi ąże 
+nierówność 3cos 2x < w zbiorze liczb rzeczywistych: π 11π2 π,2 π66x kk∈+ +
+, gdzie k jest 
+liczbą całkowitą i na tym zakończy lub dalej popełnia błędy. 
+ 
+Rozwiązanie pełne ................................................................................................................ 4 p. 
+Zdający rozwiąże nierówność ()
+2cos 2cos 3 0xx −<  w przedziale 0, 2π : 
+
+===== PAGE 19 =====
+Strona 19 z 34 
+ 
+ππ π 3π 3π 11π,, ,62 2 2 2 6x     ∈∪ ∪        
+ lub () ( ) ( )30 ,90 90 , 270 270 ,330x ∈∪ ∪      . 
+ 
+Uwagi: 
+1. Zdaj ący nie musi podawa ć rozwi ązań ogólnych. Na ka żdym etapie rozwi ązania mo że 
+ograniczyć rozumowanie do przedziału 0, 2π . 
+2. Je żeli zdaj ący zapisze, że 2cos 0x ≠  i podaje zbiór rozwi ązań nierówno ści w postaci 
+π 11π,66x ∈ 
+ lub  π 11π2 π,2 π66x kk∈+ +
+, to za całe rozwiązanie otrzymuje 3 punkty. 
+3. Je żeli zdaj ący poda wszystkie rozwi ązania równania cos 0x =  w przedziale 0, 2π  lub 
+wszystkie rozwiązania równania 3cos 2x =  w przedziale 0, 2π  i na tym zakończy lub dalej 
+popełni błędy, to otrzymuje 1 punkt. 
+4. Je żeli zdaj ący zapisze warunek cos 0x ≠  i poda tylko π π2x k≠+  lub π
+2x ≠  i na tym 
+zakończy lub dalej popełni błędy, to otrzymuje 1 punkt. 
+5. Je żeli zdaj ący zapisze nierówno ść w postaci równowa żnej ()
+2cos 2cos 3 0xx −< , 
+wykona podstawienie costx= , a nast ępnie rozwi ązując nierówno ść 2 3 02tt  −<
+ 
+przyjmuje, że 0 jest pierwiastkiem jednokrotnym wielomianu i konsekwentnie rozwi ąże 
+nierówność do końca, otrzymując ππ 3π 11π,,62 2 6x   ∈∪    
+, to otrzymuje 2 punkty. 
+ 
+ 
+
+===== PAGE 20 =====
+Strona 20 z 34 
+ 
+Zadanie 12. (0−6) 
+III. Modelowanie 
+matematyczne. 
+3. Równania i nierówności. Zdający stosuje wzory Viète’a, 
+rozwiązuje równania i nierówności liniowe i kwadratowe 
+z parametrem, rozwiązuje nierówności kwadratowe z jedną 
+niewiadomą oraz równania i nierówności z wartością bezwzględną 
+(R3.1, R3.2, 3.5, R3.9). 
+ 
+Przykładowe rozwiązanie 
+Rozwiązanie zadania dzielimy na cztery etapy. W pierwszym etapie wyznaczymy wszystkie 
+wartości parametru m, dla których trójmian f ma dwa ró żne pierwiastki. W drugim, 
+wyznaczymy te warto ści parametru m, dla których pierwi astki trójmianu spe łniają warunek 
+12 3xx−< . W trzecim wyznaczamy te warto ści parametru m, dla których pierwiastki 12,x x  
+są tego samego znaku. W czwartym – ko ńcowym etapie, wyznaczymy wszystkie szukane 
+wartości parametru m.  
+I etap 
+Ponieważ trójmian f ma dwa różne pierwiastki, więc wyróżnik Δ  tego trójmianu jest dodatni, 
+zatem  
+ ()() ()
+2
+214 1 6 1 0mmΔ= + − ⋅ ⋅ + > . 
+Nierówność ()() ()
+2
+214 1 6 1 0mm+− ⋅ ⋅+ >  przekształcamy w sposób równoważny  
+() ()
+242 1 4 6 1 0mm m++ − ⋅ + > , 
+2 21 61 0mm m++ −− > , 
+2 40mm−> , 
+() 40mm −> . 
+Rozwiązaniem tej nierówności jest każda liczba () (),0 4 ,m ∈− ∞ ∪ + ∞ .  
+II etap 
+I sposób 
+Nierówność 12 3xx−<  mo żna zapisa ć, stosuj ąc wzory na pierwiastki trójmianu 
+kwadratowego, w postaci 
+322
+bb
+aa
+−− Δ −+ Δ−< , 
+3a
+−Δ < ,  
+31
+−Δ < , 
+3Δ< . 
+Ponieważ 0Δ> , więc 0Δ> . Zatem obie strony nierówności są dodatnie. Stąd 09<Δ< . 
+Zatem 
+() ()
+242 1 4 6 1 9 0mm m++ − + − < , 
+241 6 9 0mm−− < , 
+19,22m ∈−
+. 
+
+===== PAGE 21 =====
+Strona 21 z 34 
+ 
+II sposób 
+Obie strony nierówno ści 12 3xx−<  są dodatnie, wi ęc podnosz ąc je do kwadratu, 
+otrzymujemy nierówność równoważną 
+()
+2
+12 9xx−< . 
+Tę nierówność możemy z kolei zapisać w postaci  
+()
+2
+12 1 2 49xx x x+− < . 
+Ze wzorów Viète’a otrzymujemy nierówność z niewiadomą m: 
+() ()
+242 1 4 6 1 9 0mm m++ − + − < , 
+19,22m ∈−
+ . 
+III etap  
+Ponieważ pierwiastki 1x , 2x  s ą tego samego znaku, wi ęc 12 0xx⋅> . Ze wzoru Viète’a, 
+otrzymujemy nierówność 
+61 01
+m + > , skąd  1
+6m >− . 
+IV etap  
+Wyznaczamy część wspólną zbiorów: 
+1 ,6
+−+ ∞
+, 
+19,22
+−
+, 
+() (),0 4 ,−∞ ∪ +∞ . 
+Ostatecznie 19,0 4 ,62m   ∈− ∪    
+.  
+Schemat punktowania 
+Rozwiązanie zadania składa się z czterech etapów.  
+• Pierwszy z nich polega na rozwiązaniu nierówności 0>Δ : 
+() (),0 4 ,m ∈− ∞ ∪ + ∞ . 
+Za poprawne rozwiązanie tego etapu zdający otrzymuje 1 punkt. 
+• Drugi etap polega na rozwi ązaniu nierówno ści 12 3xx−< . Za t ę cz ęść rozwi ązania 
+zdający otrzymuje 3 punkty. 
+Podział punktów za drugi etap rozwiązania: 
+1 punkt zdający otrzymuje, gdy: 
+•  zapisze nierówność 12 3xx−<  w postaci 3−Δ <  lub 3Δ< , lub()
+2
+12 9xx−<  
+albo 
+• zapisze nierówno ść 12 3xx−<  w postaci: 322
+bb
+aa
+−− Δ −+ Δ−< 9Δ<  lub 
+()
+2
+12 1 2 49xx x x+− < . 
+
+===== PAGE 22 =====
+Strona 22 z 34 
+ 
+2 punkty zdający otrzymuje, gdy zapisze nierówność z jedną niewiadomą m, np. 
+()
+2
+21 614911
+m m+ +−− ⋅ <
+
+ 
+3 punkty zdający otrzymuje za rozwiązanie tej nierówności: 19,22m ∈−
+. 
+ 
+• Trzeci etap polega na ustaleniu, dla jakich m pierwiastki trójmianu s ą tego samego 
+znaku.  
+1 punkt zdający otrzymuje za rozwiązanie nierówności 61 01
+m + > : 1 ,6m ∈− + ∞
+. 
+• Czwarty etap  polega na ustaleniu, dla których warto ści parametru m pierwiastki 
+trójmianu spełniają wszystkie warunki zadania. Wyznaczamy cz ęść wspólną zbiorów: 
+1 ,6
+−+ ∞
+, 19,22
+−
+ i () (),0 4 ,−∞ ∪ +∞ . 
+Za ten etap zdający może otrzymać 1 punkt, gdy: 
+• poprawnie wykonał przynajmniej dwa etapy spo śród I, II i III, a ponadto w ka żdym 
+z etapów otrzymał niepusty i różny od zbioru liczb rzeczywistych (R) zbiór rozwiązań 
+albo 
+• poprawnie wykona ł etapy I lub III i otrzyma ł co najmniej 2 punkty za II etap, 
+a ponadto w ka żdym z etapów otrzyma ł niepusty i ró żny od zbioru liczb 
+rzeczywistych (R) zbiór rozwiązań. 
+ 
+Uwaga: 
+Jeżeli zdaj ący pope łni b łąd merytoryczny w trakcie rozwi ązywania warunku 3−Δ <  lub 
+3Δ< , np. podniesie obie strony nierówno ści do kwadratu i otrzyma Δ > 9, to za II etap 
+otrzymuje co najwyżej 1 punkt.  
+ 
+  
+ 
+
+===== PAGE 23 =====
+Strona 23 z 34 
+ 
+Zadanie 13. (0−5) 
+IV. Użycie i tworzenie 
+strategii. 
+8. Geometria na płaszczyźnie kartezjańskiej. Zdający wyznacza 
+równanie prostej, która jest równoległa lub prostopadła do prostej 
+danej w postaci kierunkowej i przechodzi przez dany punkt, 
+oblicza współrzędne punktu przecięcia dwóch prostych oraz 
+wyznacza współrzędne środka odcinka (8.3, 8.4, 8.5). 
+ 
+Przykładowe rozwiązanie 
+Zauważamy, że je żeli AC  jest przek ątną czworok ąta ABCD, wpisanego w okr ąg i prosta 
+AC  jest osi ą symetrii tego czworok ąta, to ten czworok ąt jest deltoidem, a trójk ąty ABC  
+i ADC są prostokątne. Obliczymy najpierw współrzędne wierzchołka D , który jest obrazem 
+wierzchołka B , w symetrii osiowej wzgl ędem prostej AC . Poniewa ż prosta BD  jest 
+prostopadła do prostej AC  i przechodzi przez punkt B , więc  jej równanie ma postać 
+8yx=− + . 
+Obliczamy wspó łrzędne środka S  przek ątnej BD . Poniewa ż jest to punkt przeci ęcia 
+prostych AC i BD , więc wystarczy rozwiązać układ równań 
+2
+8
+yx
+yx
+=+
+ =− +
+ 
+Otrzymujemy st ąd 3x =  i 5y = . Zatem punkt S  ma wspó łrzędne ()3, 5S = . Wspó łrzędne 
+punktu D  spełniają zatem równania 
+0 32
+Dx + =     i    8 52
+Dy + = . 
+Stąd wynika, że 6Dx =  i 2Dy = , czyli ()6, 2D = . 
+Obliczymy teraz współrzędne wierzchołka C . Zauważamy, że jest to punkt przecięcia prostej 
+AC i prostej CD , która jest prostopadła do prostej AD i przechodzi przez punkt D .  
+Ponieważ współczynnik kierunkowy prostej AD jest równy 23 2 5
+63 0 4
+− =−
+, więc prosta CD  ma 
+równanie postaci 
+()4 625yx=− − + . 
+Rozwiązujemy układ równań 
+()
+2
+4 625
+yx
+yx
+=+ =− − +
+ i otrzymujemy 
+824
+93
+42 14
+93
+x
+y
+ == ==
+.  
+Zatem ()8 14
+33,C = . 
+ 
+Schemat punktowania 
+Rozwiązanie zadania sk łada si ę z dwóch cz ęści. Pierwsza, to obliczenie wspó łrzędnych 
+punktu D , druga, to obliczenie wspó łrzędnych punktu C . Mog ą by ć one wykonane 
+niezależnie od siebie, w dowolnej kolejno ści. Za pierwsz ą cz ęść rozwi ązania zdaj ący 
+otrzymuje 2 punkty, a za drugą 3 punkty. 
+ 
+
+===== PAGE 24 =====
+Strona 24 z 34 
+ 
+Schemat punktowania pierwszej części 
+1 punkt przyznajemy zdaj ącemu, który wyznaczy równanie prostej BD : 8yx=− +  
+i zapisze, że punkt przecięcia prostych AC  i BD  jest środkiem odcinka BD  lub wykorzysta 
+ten fakt. 
+2 punkty przyznajemy zdającemu za obliczenie współrzędnych punktu D : ()6, 2D = . 
+Schemat punktowania drugiej części 
+1 punkt przyznajemy zdającemu, który zapisze, że trójkąt ADC jest trójkątem prostokątnym  
+lub wykorzysta ten fakt. 
+2 punkty przyznajemy zdającemu za wyznaczenie równania prostej CD : ()4 625yx=− − + . 
+3 punkty przyznajemy zdającemu za obliczenie współrzędnych punktu C : ()8 14
+33,C = . 
+ 
+Uwaga: 
+Współrzędne punktu C zdaj ący mo że oblicza ć inaczej. Poni żej schematy przydzia łu 
+3 punktów za obliczenie współrzędnych wierzchołka C. 
+ 
+• W przypadku obliczenia w pierwszej kolejno ści współrzędnych środka okręgu opisanego 
+na danym czworokącie, który jest środkiem odcinka AC.  
+ 
+1 punkt  – gdy zdaj ący zapisze równanie z jedn ą niewiadom ą opisuj ące zale żność 
+22
+SA SB= , 
+2 punkty – gdy zdający obliczy współrzędne punktu S, 
+3 punkty – gdy zdający obliczy współrzędne punktu C. 
+ 
+• W przypadku obliczenia wspó łrzędnych punktu C, z wykorzystaniem twierdzenia 
+Pitagorasa w trójkącie ABC.   
+ 
+1 punkt  – gdy zdaj ący zauwa ży, że trójk ąt ABC jest prostok ątny, np. zapisze 
+222
+AC AB BC=+ , 
+2 punkty – gdy zdaj ący zapisze równanie z jedn ą niewiadom ą, wynikaj ące z twierdzenia 
+Pitagorasa w trójkącie ABC, 
+3 punkty – gdy zdający obliczy współrzędne punktu C. 
+ 
+• W przypadku obliczenia wspó łrzędnych punktu C, z wykorzystaniem symetralnej odcinka 
+AB i środka okręgu opisanego na czworokącie ABCD.   
+ 
+1 punkt – gdy zdający zapisze równanie symetralnej odcinka AB, 
+2 punkty – gdy zdaj ący wyznaczy współrzędne środka okręgu przechodzącego przez punkty 
+A, B, C, D, 
+3 punkty – gdy zdający obliczy współrzędne punktu C. 
+ 
+• W przypadku obliczenia wspó łrzędnych punktu C, z wykorzystaniem k ąta pomi ędzy 
+prostymi AD i AB.   
+ 
+1 punkt – gdy zdający obliczy tangens kąta DAB, 
+2 punkty – gdy zdaj ący zapisze równanie z jedn ą niewiadom ą z wykorzystaniem 
+współczynników kierunkowych prostych BC i CD jako tangensów odpowiednich kątów, 
+3 punkty – gdy zdający obliczy współrzędne punktu C. 
+ 
+
+===== PAGE 25 =====
+Strona 25 z 34 
+ 
+• W przypadku obliczenia wspó łrzędnych punktu C, z wykorzystaniem iloczynu skalarnego 
+wektorów BC i BA (albo, po wyznaczeniu współrzędnych punktu D, wektorów DA i DC).   
+ 
+1 punkt  – gdy zdaj ący zapisze, że wektory BC i BA albo DA i DC s ą prostopad łe lub 
+wyznaczy ich współrzędne, 
+2 punkty – gdy zdaj ący zapisze równanie z jedn ą niewiadom ą wynikaj ące z zerowania si ę 
+iloczynu skalarnego wektorów, 
+3 punkty – gdy zdający obliczy współrzędne punktu C. 
+ 
+• W przypadku obliczenia wspó łrzędnych punktu C, z wykorzystaniem równania okr ęgu 
+przechodzącego przez punkty A, B, D.   
+ 
+1 punkt – gdy zdający zapisze układ trzech równań z trzema niewiadomymi, z którego można 
+obliczyć współczynniki w równaniu okręgu, 
+2 punkty – gdy zdający wyznaczy równanie okręgu opisanego na trójkącie ABD, 
+3 punkty – gdy zdający obliczy współrzędne punktu C. 
+ 
+• W przypadku obliczenia wspó łrzędnych punktu C, z wykorzystaniem twierdzenia 
+cosinusów.   
+ 
+1 punkt – gdy zdający wyznaczy cosinus kąta BAD, 
+2 punkty – gdy zdający zastosuje twierdzenie cosinusów w trójkącie BCD i zapisze równanie 
+z jedną niewiadomą, 
+3 punkty – gdy zdający obliczy współrzędne punktu C. 
+ 
+• W przypadku obliczenia wspó łrzędnych punktu C, z wykorzystaniem twierdzenia 
+o wysokości w trójk ącie prostok ątnym ABC (albo, po wyznaczeniu wspó łrzędnych 
+punktu D, w trójkącie ACD).   
+ 
+1 punkt  – gdy zdaj ący wyznaczy d ługości odcinków AS i BS, lub AS i DS, gdzie S jest 
+spodkiem wysokości trójkąta należącym do boku AC, 
+2 punkty – gdy zdaj ący zastosuje twierdzenie o wysoko ści w trójk ącie prostok ątnym 
+i zapisze równanie z jedną niewiadomą, 
+3 punkty – gdy zdający obliczy współrzędne punktu C. 
+ 
+
+===== PAGE 26 =====
+Strona 26 z 34 
+ 
+Zadanie 14. (0−3) 
+III. Modelowanie 
+matematyczne. 
+10. Elementy statystyki opisowej. Teoria prawdopodobieństwa 
+i kombinatoryka. Zdający wykorzystuje wzory na liczbę 
+permutacji, kombinacji, wariacji i wariacji z powtórzeniami do 
+zliczania obiektów w bardziej złożonych sytuacjach 
+kombinatorycznych (R10.1).
+ 
+ 
+Przykładowe rozwiązania 
+I sposób 
+Miejsce dla cyfry 1 wybieramy na ( )
+10
+3  sposobów. Na pozosta łych siedmiu miejscach 
+rozmieszczamy cyfry 2 lub 3 w dowolnym porz ądku na 
+72  sposobów. Stosujemy regu łę 
+mnożenia i otrzymujemy  
+( )
+710
+3 2 120 128 15360⋅= ⋅ =  
+różnych liczb dziesi ęciocyfrowych, które mo żna zapisa ć za pomoc ą cyfr 1, 2, 3, w zapisie 
+których cyfra 1 występuje w dokładnie trzy razy.  
+ 
+II sposób 
+Rozpatrzymy trzy roz łączne przypadki, w zale żności od tego, jaka cyfra zosta ła zapisana na 
+pierwszym miejscu. 
+1. Je żeli na pierwszym miejscu jest cyfra 1, to miejsce dla pozosta łych dwóch jedynek 
+wybieramy na 
+( )
+9
+2  sposobów, na pozosta łych siedmiu miejscach rozmieszczamy cyfr ę 2 lub 
+cyfrę 3 w dowolnym porządku na 
+72  sposobów. Stosujemy regułę mnożenia i otrzymujemy 
+( )
+79
+21 2 36 128 4608⋅⋅ = ⋅ =  
+liczb dziesi ęciocyfrowych, które mo żna zapisa ć za pomoc ą cyfr 1, 2, 3, w których zapisie 
+cyfra 1 występuje w dokładnie trzy razy, przy czym na pierwszym miejscu jest cyfra 1.    
+2. jeżeli na pierwszym miejscu jest cyfra 2, to  miejsce dla trzech jedynek wybieramy na ( )
+9
+3  
+sposobów, na pozostałych sześciu miejscach rozmieszczamy cyfrę 2 lub cyfrę 3 w dowolnym 
+porządku na 62  sposobów. Stosujemy regułę mnożenia i otrzymujemy 
+( )
+69
+31 2 84 64 5376⋅⋅ = ⋅ =  
+liczb dziesi ęciocyfrowych, które mo żna zapisa ć za pomoc ą cyfr 1, 2, 3, w których zapisie 
+cyfra 1 występuje w dokładnie trzy razy, przy czym na pierwszym miejscu jest cyfra 2. 
+3. (rozumowanie analogiczne jak w p. 2.). Je żeli na pierwszym miejscu jest cyfra 3, to 
+miejsce dla trzech jedynek wybieramy na ( )
+9
+3  sposobów, na pozosta łych sze ściu miejscach 
+rozmieszczamy cyfrę 2 lub cyfrę 3 w dowolnym porządku na 62  sposobów.  
+Stosujemy regułę mnożenia i otrzymujemy 
+( )
+69
+31 2 84 64 5376⋅⋅ = ⋅ =  
+liczb dziesi ęciocyfrowych, które mo żna zapisa ć za pomoc ą cyfr 1, 2, 3, w zapisie których 
+cyfra 1 występuje w dokładnie trzy razy, przy czym na pierwszym miejscu jest cyfra 3. 
+Sumujemy liczby powstałe w każdym z trzech przypadków i otrzymujemy: 
+
+===== PAGE 27 =====
+Strona 27 z 34 
+ 
+4608 2 5376 15360+⋅ =  
+liczb dziesi ęciocyfrowych zapisanych wy łącznie za pomoc ą cyfr 1, 2, 3, w zapisie których 
+cyfra 1 występuje dokładnie trzy razy.  
+ 
+III sposób 
+Rozpatrzymy osiem roz łącznych przypadków, wyczerpuj ących wszystkie mo żliwości zapisu 
+liczby dziesi ęciocyfrowej za pomoc ą cyfr 1, 2, 3, w których zapisie cyfra 1 wyst ępuje 
+dokładnie trzy razy: 
+1. w zapisie tej liczby występują 3 jedynki i 7 trójek, wtedy takich liczb jest 10! 1203! 7! =⋅
+, 
+2. w zapisie tej liczby wyst ępują 3 jedynki, 1 dwójka i 6 trójek, wtedy takich liczb jest 
+10! 8403! 6! =⋅
+, 
+3. w zapisie tej liczby wyst ępują 3 jedynki, 2 dwójki i 5 trójek, wtedy takich liczb jest 
+10! 25203! 2! 5! =⋅⋅
+, 
+4. w zapisie tej liczby wyst ępują 3 jedynki, 3 dwójki i 4 trójki , wtedy takich liczb jest 
+10! 42003! 3! 4! =⋅⋅
+, 
+5. w zapisie tej liczby wyst ępują 3 jedynki, 4 dwójki i 3 trójki , wtedy takich liczb jest 
+10! 42003! 4! 3! =⋅⋅
+, 
+6. w zapisie tej liczby wyst ępują 3 jedynki, 5 dwójek i 2 trójki, wtedy takich liczb jest 
+10! 25203! 5! 2! =⋅⋅
+, 
+7. w zapisie tej liczby wyst ępują 3 jedynki, 6 dwójek i 1 trójka, wtedy takich liczb jest 
+10! 8403! 6! =⋅
+, 
+8. w zapisie tej liczby występują 3 jedynki i 7 dwójek, wtedy takich liczb jest 10! 1203! 7! =⋅
+. 
+Sumujemy liczby otrzymane w każdym przypadku  i otrzymujemy: 
+()2 120 840 2520 4200 2 7680 15360⋅+ + + = ⋅ =  
+różnych liczb dziesi ęciocyfrowych zapisanych wy łącznie za pomoc ą cyfr 1, 2 , 3, w zapisie 
+których cyfra 1 występuje dokładnie trzy razy. 
+Schemat punktowania 
+Rozwiązanie, w którym jest istotny postęp  ......................................................................  1 p. 
+Zdający zapisze, że: 
+• miejsce dla cyfry 1 można wybrać na ( )
+10
+3  sposobów  
+albo 
+• miejsca dla cyfr 2 lub 3 można wybrać na ( )
+10
+7  sposobów, 
+albo 
+• cyfry 2 lub 3 można rozmieścić na 72  sposobów, 
+ 
+albo 
+
+===== PAGE 28 =====
+Strona 28 z 34 
+ 
+• jeżeli cyfra 1 jest na ustalonym (np.  pierwszym) miejscu, to pozosta łe dwie cyfry 1 
+można rozmieścić na ( )
+9
+2  sposobów,  
+albo 
+• jeżeli na ustalonym miejscu stoi jedna z cyfr 2 lub 3, to trzy cyfry 1 mo żna rozmieścić 
+na ( )
+9
+3  sposobów, 
+albo 
+•  jeżeli cyfry 1 stoją na ustalonych trzech miejscach, to je śli w liczbie występuje n cyfr 
+2, to cyfry 2 i 3 mo żna rozmie ścić na ( )
+7
+n  sposobów dla przynajmniej jednej 
+konkretnej liczby n, 
+albo 
+• jest 8 roz łącznych przypadków wyczerpuj ących wszystkie mo żliwości zapisu liczby 
+dziesięciocyfrowej za pomoc ą cyfr 1, 2, 3, w których zapisie cyfra 1 wyst ępuje 
+dokładnie trzy razy 
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Pokonanie zasadniczych trudności zadania  .....................................................................  2 p. 
+Zdający  
+• zapisze, że liczba rozpatrywanych liczb dziesięciocyfrowych jest równa np. ( )
+710
+3 2⋅  
+albo 
+• zapisze, ile jest liczb w ka żdym z rozpatrywanych przypadków wyczerpuj ących 
+wszystkie mo żliwości zapisu liczby dziesi ęciocyfrowej za pomoc ą c y f r  1 ,  2 ,  3 ,  
+w których zapisie cyfra 1 występuje dokładnie trzy razy, 
+albo 
+• zapisze osiem roz łącznych przypadków wyczerpuj ących wszystkie mo żliwości zapisu 
+liczby dziesięciocyfrowej za pomocą cyfr 1, 2, 3, w których zapisie cyfra 1 występuje 
+dokładnie trzy razy oraz w przyna jmniej jednym przypadku zapisze liczb ę takich 
+liczb, np. ( )
+10
+3 1⋅  
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Rozwiązanie pełne  ..............................................................................................................  3 p. 
+Zdający  
+• zapisze, że jest ( )
+710
+3 2 15360⋅=  liczb dziesi ęciocyfrowych zapisanych wy łącznie za 
+pomocą cyfr 1, 2, 3, w zapisie których cyfra 1 występuje dokładnie trzy razy 
+albo 
+• zsumuje liczby otrzymane w ka żdym z rozpatrywanych przypadków wyczerpuj ących 
+wszystkie mo żliwości zapisu liczby dziesi ęciocyfrowej za pomoc ą c y f r  1 ,  2 ,  3 ,  
+w których zapisie cyfra 1 występuje dokładnie trzy razy i zapisze, że jest ich 15360. 
+ 
+Uwagi: 
+1. Rozwi ązanie uznajemy za pe łne, je żeli zdaj ący zapisze liczb ę rozpatrywanych liczb 
+dziesięciocyfrowych bez użycia symbolu Newtona. 
+2. Je żeli zdaj ący w swoim rozwi ązaniu przedstawia zapisy, dla których brak bezpo średniej 
+interpretacji kombinatorycznej i zapisom tym nie towarzysz ą stosowne obja śnienia, to nie 
+może otrzyma ć maksymalnej liczby punkt ów, przy czym za rozwi ązanie, zawieraj ące 
+
+===== PAGE 29 =====
+Strona 29 z 34 
+ 
+jedynie zapisy pojedynczych liczb l ub symboli Newtona (typu 120, 128, ( )
+10
+7 ), bez 
+stosownych obja śnień, zdaj ący otrzymuje 0 punktów , a za rozwi ązanie, zawieraj ące 
+jedynie zapisy dzia łań na liczbach (typu 120 128 15 360⋅= ), bez stosownych obja śnień 
+zdający może otrzymać co najwyżej 1 punkt.  
+3. Je żeli zdaj ący przedstawia rozwi ązanie, w którym cz ęści zapisanych liczb lub dzia łań na 
+liczbach nie towarzysz ą stosowne obja śnienia, to za takie rozwi ązanie może otrzymać co 
+najwyżej 2 punkty. 
+4. Zdający może skorzystać ze wzoru dwumianowego Newtona i zapisać: 
+( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ) ( ){ } ( )
+71 077777777 1 0
+7536 4 3 2 1 0 3 2 120 128 15360⋅ +++++++ = ⋅ =⋅= . 
+ 
+
+===== PAGE 30 =====
+Strona 30 z 34 
+ 
+Zadanie 15. (0−6) 
+IV. Użycie i tworzenie 
+strategii. 
+9. Stereometria. Zdający rozpoznaje w graniastosłupach 
+i ostrosłupach kąty między ścianami, stosuje trygonometrię do 
+obliczeń długości odcinków, miar kątów, pól powierzchni 
+i objętości (9.4, 9.6). 
+ 
+Przykładowe rozwiązanie 
+Strategię rozwiązania zadania można zrealizować na wiele sposobów. Ka żdy z nich ró żni się 
+zestawem i kolejno ścią zastosowanych zwi ązków mi ędzy odcinkami w ostros łupie. 
+Przyjmijmy następujące oznaczenia jak na rysunku. 
+ 
+Wtedy 2
+2
+aOB = , 2
+aOE = , 60BFO =° . 
+Ponieważ trójkąt BFO jest prostokątny, stąd sin 60BO
+BF =° . Zatem  
+2
+22 62
+sin 60 2 3 33
+2
+a
+BO aaBF == = ⋅ =° . 
+Trójkąty SEC i BFC są podobne, stąd SE BF
+SC BC= , czyli 
+6
+3
+a
+l
+ba= . Zatem 6
+3
+bl = . 
+Korzystamy z twierdzenia Pitagorasa w trójk ątach prostok ątnych EOS i BOS, sk ąd 
+otrzymujemy układ równań:  
+ 
+22
+2
+2
+22
+6
+23
+2
+2
+abH
+aHb
+  +=    
+ +=  
+ 
+A 
+S 
+C D 
+F 
+a B 
+O 
+H b l 
+E 
+α
+
+===== PAGE 31 =====
+Strona 31 z 34 
+ 
+ 
+22
+2
+2
+625 23
+225 2
+ab
+a b
+  +=    
+ +=  
+ 
+  
+22
+2
+2
+225 43
+25 2
+ab
+a b
+ +=
+ +=
+ 
+ 
+22
+22
+300 3 8
+50 2
+ab
+ab
+ += +=
+ 
+ 
+2
+2
+75
+100
+b
+a
+ = =
+ 
+ 53
+10
+b
+a
+ = =
+ 
+Stąd pole P podstawy ABCD ostrosłupa jest równe 2 100Pa== , więc objętość ostrosłupa jest 
+równa: 1 500100 533V =⋅ ⋅ = . 
+Schemat punktowania 
+Rozwiązanie, w którym post ęp jest niewielki, ale ko nieczny na drodze do pe łnego 
+rozwiązania zadania ............................................................................................................. 1 p. 
+Zdający  
+• zastosuje twierdzenie Pitagorasa w trójkącie SOC 
+albo 
+• zastosuje twierdzenie Pitagorasa w trójkącie SOE, 
+albo 
+• zastosuje twierdzenie cosinusów w trójkącie BFD, 
+albo 
+• zapisze funkcję trygonometryczną kąta ostrego w trójkącie OBF, 
+albo 
+• zapisze proporcję wynikającą z podobieństwa trójkątów SEC i BCF, 
+albo 
+• zapisze proporcję wynikającą z podobieństwa trójkątów SOC i OFC 
+ 
+i na tym zakończy lub dalej popełnia błędy. 
+ 
+Uwaga: 
+Jeżeli zdaj ący zapisze zwi ązki, z których mo żna obliczy ć d ługość kraw ędzi podstawy lub 
+długość przek ątnej podstawy ostros łupa, ale pominie jedno równanie potrzebne do 
+zakończenia obliczeń, to otrzymuje 2 punkty. 
+
+===== PAGE 32 =====
+Strona 32 z 34 
+ 
+Rozwiązanie, w którym jest istotny postęp  ......................................................................  3 p. 
+Zdający zapisze uk ład równa ń, z którego mo żna obliczy ć d ługość kraw ędzi podstawy lub 
+długość przekątnej podstawy ostrosłupa i na tym zakończy lub dalej popełnia błędy. 
+Pokonanie zasadniczych trudności zadania  .....................................................................  4 p. 
+Zdający zapisze równanie z jedn ą niewiadomą oznaczającą wielkość, która pozwala obliczy ć 
+pole podstawy ostrosłupa i na tym zakończy lub dalej popełnia błędy. 
+Rozwiązanie prawie pełne  .................................................................................................  5 p. 
+Zdający  
+• obliczy długość krawędzi podstawy lub długość przekątnej podstawy ostrosłupa 
+albo 
+• obliczy d ługość kraw ędzi podstawy lub d ługość przek ątnej podstawy ostros łupa, 
+popełniając błędy rachunkowe i konsekwentnie do tego obliczy objętość ostrosłupa. 
+Rozwiązanie pełne  ..............................................................................................................  6 p. 
+Zdający obliczy objętość ostrosłupa: 500
+3V = . 
+ 
+Uwagi: 
+1. Jeżeli zdający rozpatruje inn ą bryłę, np. ostros łup, którego podstaw ą nie jest kwadrat albo 
+ostrosłup, którego ściany boczne są trójkątami równobocznymi, to otrzymuje 0 punktów.  
+2. Je żeli zdaj ący b łędnie interpretuje k ąt mi ędzy s ąsiednimi ścianami bocznymi, ale przy 
+korzystaniu z w łasności figur, w których ten k ąt nie wyst ępuje, wykazuje si ę innymi 
+umiejętnościami matematycznymi, to otrzymuje co najwyżej 1 punkt.  
+3. Jeżeli zdaj ący odczyta warto ść sin sin 60BFO =°  z tablic i wykona obliczenia na 
+przybliżeniach, to otrzymuje co najwyżej 5 punktów. 
+ 
+ 
+Zadanie 16. (0−7) 
+III. Modelowanie 
+matematyczne. 
+11. Rachunek różniczkowy. Zdający stosuje pochodne do 
+rozwiązywania zagadnień optymalizacyjnych (R11.6). 
+ 
+Przykładowe rozwiązanie 
+Niech () ,Cx y=  b ędzie wierzcho łkiem trapezu ABCD. Wówczas ()
+21
+2,2Cx x=− , gdzie 
+02 x<< . Poniewa ż 4AB = , 2CD x= , a wysoko ść trapezu jest równa 21
+22hx=− , wi ęc 
+pole P tego trapezu określone jest wzorem  
+() () () () ()
+22 2 3 2 311 1 1
+22 2 2
+42 22 4 8 4 2 4 22
+xPx x x x x x x x x x+= ⋅ − =+ ⋅ − = +− − = +−−  
+dla każdej liczby rzeczywistej 02 x<< . 
+Pochodna funkcji ()
+23 1
+242Px x x x=+ − −  jest równa ()
+23
+222Px x x′ =− −  dla ()0, 2x ∈ . 
+Obliczamy miejsca zerowe pochodnej i badamy jej znak.  
+Ponieważ () () ()() () ()
+2233 1 6 344 2 2
+23 3 23 92 3 2Px x x x x x′ =− + − =− + − =− − +  
+
+===== PAGE 33 =====
+Strona 33 z 34 
+ 
+oraz ()3 202 x−+ <  dla każdego ()0, 2x ∈ , więc:  
+() 0Px′ =  wtedy i tylko wtedy, gdy 2
+3x = ,  
+() 0Px′ >  wtedy i tylko wtedy, gdy 2
+3 0x −<  i ()0, 2x ∈ , czyli dla  () 2
+30,x ∈ , 
+() 0Px′ <  wtedy i tylko wtedy, gdy 2
+3 0x −>  i ()0, 2x ∈ , czyli dla  ()2
+3 ,2x ∈ . 
+Zatem w przedziale ( 2
+30,  funkcja P jest rosn ąca, w przedziale )2
+3 , 2  jest malej ąca,  
+a w punkcie 2
+3x =  osiąga maksimum. Jeżeli 2
+3x = , to ()( ) ()
+2 1621 2 2
+32 3 3 9,2 ,C =− ⋅ = . 
+Uwaga: 
+Zdający mo że zauwa żyć, że z nierówno ści dla średniej arytmetycznej i średniej 
+geometrycznej wynika, że dla ()0, 2x ∈  iloczyn  
+() () () () () () () ()
+2
+2224 2 22 4 1 12 xxx xxx x x+− = ++− = ++ −  
+przyjmuje największą wartość równą  
+()
+3
+34
+3
+22 11 2
+44 3
+xx x++ ++ − =⋅
+
+, gdy 2 12x x+= − , czyli dla 2
+3x = . 
+Takie rozumowanie zastępuje drugi etap rozwiązania. 
+Schemat punktowania 
+Rozwiązanie zadania składa się z trzech etapów. 
+ 
+• Pierwszy etap składa się z trzech części: 
+a) zapisanie d ługości podstawy CD i wysoko ści trapezu ABCD w zale żności od 
+zmiennej x: 2CD x= , 
+21
+22hx=− , 
+b) zapisanie pola trapezu ABCD jako funkcji zmiennej x: () ()
+21
+2
+42 22
+xPx x +=⋅ −  lub   
+()
+23 1
+242Px x x x=+ − − , 
+c) określenie dziedziny funkcji P: ()0, 2 . 
+Za każdą część tego etapu zdający otrzymuje po 1 punkcie, przy czym, jeżeli zdający od razu 
+zapisze poprawnie pole trapezu w zale żności od jednej zmiennej, to otrzymuje punkt za cz ęść 
+a) i punkt za część b). 
+ 
+• Drugi etap składa się z trzech części: 
+a) wyznaczenie pochodnej funkcji wielomianowej ()
+23 1
+242f xx x x=+ − − :  
+()
+23
+222f xx x′ =− −  , 
+b) obliczenie miejsc zerowych pochodnej funkcji P: 2
+3x =  lub pochodnej funkcji  f :  
+2x =− , 2
+3x = , 
+
+===== PAGE 34 =====
+Strona 34 z 34 
+ 
+c) zbadanie znaku pochodnej funkcji P i uzasadnienie, że dla 2
+3x =  funkcja P osi ąga 
+wartość największą. 
+ 
+Uwaga: 
+Znak pochodnej zdaj ący mo że zaznaczy ć w inny sposób, np. na rysunku szkicuj ąc krzyw ą 
+zbliżoną do wykresu pochodnej. 
+ 
+• Trzeci etap.  
+Obliczenie wspó łrzędnych wierzcho łka C tego z rozpatrywanych trapezów, którego pole 
+jest największe:  
+() 162
+39,C = . 
+Za poprawne rozwiązanie tego etapu zdający otrzymuje 1 punkt. 
+ 
+Uwagi: 
+1. Je żeli zdaj ący zapisze pole trapezu  P  z pomini ęciem czynnika 1
+2 , we wzorze na pole 
+trapezu, lub z błędem rachunkowym, to może otrzymać co najwyżej 6 punktów.  
+ 
+2. Je żeli zdaj ący zapisze pole trapezu P z b łędem rzeczowym, innym ni ż opisany 
+w uwadze 1., to może otrzymać co najwyżej 1 punkt za całe rozwiązanie, a jeżeli dodatkowo 
+wyznaczy dziedzinę funkcji P, to może otrzymać co najwyżej 2 punkty za całe rozwiązanie.  
+ 
+3. Je żeli zdaj ący obliczy pochodn ą funkcji P z b łędem rachunkowym i otrzyma jako P′ 
+funkcję liniow ą albo funkcj ę kwadratow ą o ujemnym wyró żniku Δ lub o wyró żniku Δ 
+równym 0, to może otrzymać punkty jedynie za I etap rozwiązania. 
+ 
+4. Je żeli zdaj ący poprawnie wyznaczy pochodn ą P′ i wspó łrzędne punktu C, ale nie poda 
+poprawnego uzasadnienia, dotycz ącego istnienia najwi ększej warto ści funkcji P dla 
+obliczonych współrzędnych, to może otrzymać co najwyżej 5 punktów. 
+ 

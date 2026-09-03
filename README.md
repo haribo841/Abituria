@@ -5,7 +5,7 @@ Abituria to działająca offline aplikacja desktopowa wspierająca naukę matema
 Bieżące publiczne wydanie beta: [`0.9.3`](https://github.com/haribo841/Abituria/releases/tag/v0.9.3).
 
 > [!IMPORTANT]
-> Manifest ma `releaseEligible=true`. Rozszerzenie deklaracji praw właściciela z 1 września 2026 r. obejmuje wszystkie paczkowane transkrypcje arkuszy CKE oraz 195 diagramów wektorowych wyłącznie jako integralną część Abiturii. Każde kolejne wydanie nadal wymaga pełnej bramy proweniencji.
+> Wydanie `v0.9.3` powstało z commita o spełnionej bramie prawnej. Bieżący lokalny worktree ma `releaseEligible=false`, ponieważ dodane transkrypcje i diagramy arkuszy CKE 2017-2016 oczekują na odrębne rozszerzenie deklaracji praw właściciela. Nie należy z niego tworzyć publicznej paczki.
 
 ## Pobieranie
 
@@ -30,8 +30,8 @@ Artefakty są samowystarczalne i nie wymagają instalacji środowiska .NET. Wind
 - 18 tablic matematycznych zgodnych zakresem z oficjalnym dokumentem CKE dla Formuły 2023;
 - pełny kurs Formuły 2023: 4 grupy, 13 obszarów, 119 wymagań, 238 rozwiązanych przykładów i 357 ćwiczeń;
 - filtr poziomu podstawowego i rozszerzonego oraz tryby odpowiedzi: wybór, wynik liczbowy, odpowiedź złożona i ujawnienie rozwiązania;
-- matury główne i poprawkowe 2018, 2019 i 2020 PP oraz PR, matury główne 2021 PP i PR, matury główne i poprawkową 2022 PP oraz PR, maturę główną i poprawkową 2023 PP, maturę główną 2023 PR, matury główne 2024, 2025 i 2026 na poziomie podstawowym i rozszerzonym, matury poprawkowe 2024 i 2025 PP oraz zachowane 35 zadań matury poprawkowej 2021 - łącznie 26 arkuszy i 722 jednostki postępu;
-- wybór arkusza, losowanie w obrębie wybranego arkusza i agregacja dwudziestu sześciu arkuszy według 17 tematów;
+- matury główne PP i PR oraz poprawkowe PP Formuły 2015 z lat 2016-2022, matury Formuły 2023 z lat 2023-2026 oraz zachowane 35 zadań matury poprawkowej 2021 - łącznie 32 arkusze i 889 jednostek postępu;
+- wybór arkusza, losowanie w obrębie wybranego arkusza i agregacja trzydziestu dwóch arkuszy według 17 tematów;
 - sprawdzanie odpowiedzi A-D, podpowiedzi, ujawnianie odpowiedzi i brudnopis przechowywany osobno dla profilu i zadania do zamknięcia aplikacji;
 - kalkulator ogólny z nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią, powtarzaniem `=` i automatycznym kopiowaniem wyniku;
 - pojedynczy kalkulator Picture in Picture w oknie nad Abiturią, oknie zawsze na wierzchu albo panelu aplikacji;

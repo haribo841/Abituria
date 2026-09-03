@@ -52,14 +52,14 @@ Kurs zachowuje odrębną warstwę autorską. Audyt potwierdza dokładnie 4 grupy
 
 ## Proweniencja i Issue #7
 
-Transkrypcja arkusza rozszerzonego ma status `approved` w `Content/provenance.json` na podstawie rozszerzenia `docs/ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r. Trzy figury są autorskimi implementacjami wektorowymi Avalonia, bez aktywnych rastrów, `Image` lub `Bitmap`. Bieżący worktree ma `releaseEligible=true`, a wszystkie paczkowane grupy arkuszy oraz diagramów są objęte deklaracją właściciela z 1 września 2026 r.
+Transkrypcja arkusza rozszerzonego ma status `approved` w `Content/provenance.json` na podstawie rozszerzenia `docs/ASSET_RIGHTS_DECLARATION.md` z 3 sierpnia 2026 r. Trzy figury są autorskimi implementacjami wektorowymi Avalonia, bez aktywnych rastrów, `Image` lub `Bitmap`. Bieżący worktree ma `releaseEligible=false`, ponieważ do wspólnego katalogu diagramów dodano figury pochodne z arkuszy 2017 i 2016 nieobjętych dotychczasową deklaracją.
 
-Deklaracja wskazuje oba arkusze 2026, oba zestawy zasad oceniania, cztery adresy, cztery sumy SHA-256, zakres redystrybucji transkrypcji w Abiturii oraz dziesięć autorskich implementacji wektorowych Avalonia. Grupy `cke-2026-main-basic-exam` i `cke-2026-main-extended-exam` mają status `approved`, ale `runtime-vector-diagrams` ma status `approved` z powodu nowych definicji matury głównej i poprawkowej 2023 PP.
+Deklaracja wskazuje oba arkusze 2026, oba zestawy zasad oceniania, cztery adresy, cztery sumy SHA-256, zakres redystrybucji transkrypcji w Abiturii oraz dziesięć autorskich implementacji wektorowych Avalonia. Grupy `cke-2026-main-basic-exam` i `cke-2026-main-extended-exam` zachowują status `approved`, ale `runtime-vector-diagrams` ma obecnie status `blocked` z powodu nowych definicji matur 2017 i 2016.
 
 ## Testy
 
 - `Matura2026ExtendedContentTests` sprawdza kontrakt `12/13/50`, źródła, sumy, etykiety, strony, punktację, tryby odpowiedzi, wyniki i trzy diagramy.
 - `Matura2026ContentTests` zachowuje kontrakt `33/37/50` poziomu podstawowego oraz komplet 35 zadań `mp21-*`.
-- `Matura2026UiTests` sprawdza dwadzieścia sześć arkuszy, 722 jednostki postępu, agregację 17 tematów, kontekst nawigacji, osobne liczniki i odpowiedzi złożone.
-- `DiagramCatalogTests` renderuje wszystkie 195 diagramów w trzech motywach i przy rozmiarach `720x520`, `960x640` oraz `1280x820`.
-- `ReleaseRuntimeTests` wymaga dwudziestu sześciu arkuszy i 722 jednostek postępu.
+- `Matura2026UiTests` sprawdza trzydzieści dwa arkusze, 889 jednostek postępu, agregację 17 tematów, kontekst nawigacji, osobne liczniki i odpowiedzi złożone.
+- `DiagramCatalogTests` renderuje wszystkie 226 diagramów w trzech motywach i przy rozmiarach `720x520`, `960x640` oraz `1280x820`.
+- `ReleaseRuntimeTests` wymaga trzydziestu dwóch arkuszy i 889 jednostek postępu.

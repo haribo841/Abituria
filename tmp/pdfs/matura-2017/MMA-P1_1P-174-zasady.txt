@@ -1,0 +1,1031 @@
+
+
+===== PDF PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EGZAMIN MATURALNY 
+W ROKU SZKOLNYM 2016/2017 
+ 
+FORMUŁA OD 2015 i DO 2014 
+(„NOWA MATURA” i „STARA MATURA”) 
+ 
+ 
+MATEMATYKA 
+POZIOM PODSTAWOWY 
+ 
+ 
+ 
+ZASADY OCENIANIA ROZWIĄZAŃ ZADAŃ 
+ARKUSZ MMA-P1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SIERPIEŃ 2017 
+  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 2 =====
+Strona 2 z 20 
+ 
+Zadania zamknięte  
+ 
+Punkt przyznaje się za wskazanie poprawnej odpowiedzi. 
+ 
+Nr 
+zad. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 
+Odp. C C B D A D A D A A C B B D C C C A B A A B B D D 
+ 
+ 
+Ogólne zasady oceniania zadań otwartych 
+ 
+Uwaga: Akceptowane są wszystkie odpowiedzi merytorycznie poprawne i spełniające warunki 
+zadania. 
+ 
+Zadanie 26. (0–2) 
+Rozwiąż nierówność 
+226 0+−≤xx . 
+ 
+Przykładowe rozwiązanie 
+Rozwiązanie nierówności kwadratowej składa się z dwóch etapów.  
+ 
+Pierwszy etap rozwi ązania polega na wyznaczeniu pierwiastków trójmianu kwadratowego 
+226x x+− . 
+Na przykład obliczamy wyróżnik tego trójmianu, a następnie stosujemy wzory na pierwiastki:  
+2Δ 7= , 1
+17 2
+4
+x −−== − ,  2
+17 3
+42
+x −+== . 
+Drugi etap rozwiązania polega na wyznaczeniu zbioru rozwiązań nierówności 
+. 
+Podajemy zbiór rozwi ązań nierówno ści: 3
+22 x−≤ ≤   l u b  3
+22,−   lub  
+3
+2
+2x ,∈−  , np. 
+odczytując go ze szkicu wykresu funkcji ()
+226fx x x=+ − . 
+ 
+ 
+ 
+Schemat punktowania 
+ 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+gdy: 
+• zrealizuje pierwszy etap rozwi ązania i na tym zako ńczy lub b łędnie zapisze zbiór 
+rozwiązań nierówności, np. 
+ 
+o obliczy lub poda pierwiastki trójmianu kwadratowego 1 2x =− , 2
+3
+2x =  i na tym 
+zakończy lub błędnie zapisze zbiór rozwiązań nierówności, 
+ 
+226 0+−≤xx
+2 
+    x 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 3 =====
+Strona 3 z 20 
+ 
+o zaznaczy na wykresie miejsca zerowe funkcji ()
+226fx x x=+ −  i na tym 
+zakończy lub błędnie zapisze zbiór rozwiązań nierówności 
+albo  
+• realizując pierwszy etap b łędnie wyznaczy pierwiastki (ale otrzyma dwa ró żne 
+pierwiastki) i konsekwentnie do tego rozwi ąże nierówno ść, np. pope łni b łąd 
+rachunkowy przy obliczaniu wyró żnika lub pierwiastków trójmianu kwadratowego 
+i konsekwentnie do popełnionego błędu rozwiąże nierówność. 
+ 
+Zdający otrzymuje  ............................................................................................................... 2 p. 
+gdy:  
+• poda zbiór rozwiązań nierówności: 3
+22 x−≤ ≤   lub 3
+22,−   lub 
+3
+2
+2x ,∈−  
+albo 
+• poda zbiór rozwi ązań nierówno ści w postaci graficznej  z poprawnie zaznaczonymi 
+końcami przedziałów 
+ 
+ 
+Uwagi 
+1. Jeżeli zdaj ący podaje pierwiastki bez zwi ązku z trójmianem kwad ratowym z zadania, to 
+oznacza, że nie podj ął realizacji 1. etapu rozwi ązania i w konsekwencji otrzymuje 
+0 punktów za całe rozwiązanie. 
+2. Je śli zdaj ący wyznacza ujemn ą delt ę trójmianu kwadratowego, to otrzymuje 0 punktów 
+za całe rozwiązanie. 
+ 
+ 
+ Kryteria oceniania uwzględniające specyficzne trudności w uczeniu się matematyki 
+1. Akceptujemy sytuacj ę, gdy zdaj ący poprawnie obliczy lub poda  pierwiastki trójmianu 
+1 2x =− , 2
+3
+2x =  i zapisze, np. 3
+22x,∈− − , pope łniając tym samym b łąd przy 
+przepisywaniu jednego z pierwiastków, to za takie rozwiązanie otrzymuje 2 punkty. 
+2. Je śli zdaj ący pomyli porz ądek liczb na osi liczbowej, np. zapisze zbiór rozwi ązań 
+nierówności w postaci 3
+2
+2x,∈− , to przyznajemy 2 punkty. 
+ 
+ 
+  
+    
+   x 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 4 =====
+Strona 4 z 20 
+ 
+Zadanie 27. (0–2) 
+Rozwiąż równanie () ()
+2 63 2 0xx −+ = . 
+Przykładowe rozwiązanie 
+Lewa strona równania jest iloczynem dwóch czynników 2 6x −  oraz 32x + . Zatem iloczyn ten 
+jest równy 0, gdy co najmniej jeden z tych czynników jest równy 0, czyli  
+2 60x −=  lub 32 0x += . 
+Rozwiązaniem równania 32 0x +=  jest 2
+3x =− . 
+Rozwiązania równania 2 60x −= możemy wyznaczyć, korzystając: 
+• z postaci iloczynowej trójmianu 2 6x −  (wzoru skróconego mno żenia na ró żnicę 
+kwadratów) 
+() ()66 0xx−+ = , stąd 6x =  lub 6x =−  
+albo 
+• ze wzorów na pierwiastki trójmianu kwadratowego:  
+Δ 24= , 
+1
+02 6 6
+2
+x −== − ,  2
+02 6 6
+2
+x +== , 
+albo 
+• z w łasności warto ści bezwzgl ędnej, przekszta łcając najpierw równanie do postaci 
+równoważnej 6x = , skąd 6x =  lub 6x =− .  
+Zatem wszystkie rozwiązania równania to: 2
+3
+x =−  lub 6x = , lub 6x =− . 
+ 
+Schemat punktowania 
+ 
+Zdający otrzymuje  .............................................................................................................. 1 p.  
+gdy: 
+• zapisze dwa równania: 2 60x −=  lub 32 0x +=  (wystarczy, że z rozwiązania wynika, 
+że zdający wyznacza pierwiastki każdego z wielomianów: 2 6x −  oraz 32x + ) 
+albo 
+• zapisze rozwiązanie 2
+3x =− , 
+albo 
+• wyznaczy dwa pierwiastki wielomianu 2 6x − , 
+i na tym zakończy lub dalej popełnia błędy.   
+Zdający otrzymuje  .............................................................................................................. 2 p. 
+gdy wyznaczy bezbłędnie wszystkie rozwiązania równania: 2
+3
+x =−  lub 6x = , lub 6x =− . 
+ 
+Uwagi 
+1. Jeżeli zdający zapisuje zamiast znaku = znak ≠ i zamieszcza zapisy typu: x2 – 6 ≠ 0 lub 
+3x + 2 ≠ 0, to oznacza, że podejmuje prób ę wyznaczenia miejsc zerowych dwóch 
+wielomianów i otrzymuje przynajmniej 1 punkt. 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 5 =====
+Strona 5 z 20 
+ 
+2. Jeżeli zdający nie zapisuje warunku x2 – 6 = 0, ale pisze od razu b łędną postać iloczynową 
+x2 – 6, np. (x – 3)(x – 2) = 0, (x – 6)(x + 6) = 0, i nie wyznacza poprawnie miejsca zerowego 
+drugiego wielomianu, to otrzymuje 0 punktów. 
+ 
+Zadanie 28. (0–2) 
+Udowodnij, że dla dowolnej dodatniej liczby rzeczywistej x prawdziwa jest nierówność 
+144x
+x
++≥ . 
+Przykładowe rozwiązanie 
+I sposób rozwiązania 
+Dla dodatnich liczb x nierówność 144 xx +≥  jest równoważna kolejno nierównościom  
+241 4x x+≥ , 
+244 1 0xx −+ ≥ , 
+()
+2
+21 0x −≥ . 
+Ta nierówno ść jest prawdziwa, gdy ż lewa strona tej nierówno ści jest kwadratem liczby 
+rzeczywistej. To kończy dowód. 
+II sposób rozwiązania 
+Dla dodatnich liczb x nierówność 144 xx +≥  jest równoważna kolejno nierównościom  
+144 0 xx −+ ≥ , 
+()
+2
+120 xx −≥  
+Ta nierówno ść jest prawdziwa, gdy ż lewa strona tej nierówno ści jest kwadratem liczby 
+rzeczywistej. To kończy dowód. 
+III sposób rozwiązania 
+Dla dodatnich liczb x nierówność 144 xx +≥  jest równoważna kolejno nierównościom  
+241 4x x+≥ , 
+244 1 0xx −+ ≥ . 
+Ponieważ wyró żnik trójmianu kwadratowego 244 1x x−+  jest równy ()
+2
+Δ 44 1 4 0=− − ⋅⋅ =  
+i współczynnik przy 2x  jest dodatni, wi ęc nierówno ść jest prawdziwa dla ka żdej liczby 
+rzeczywistej x. To kończy dowód. 
+Uwaga 
+Możemy też naszkicować wykres tego trójmianu 244 1y xx=− + . 
+ 
+IV sposób rozwiązania 
+Z twierdzenia o średniej arytmetycznej i geometrycznej dla liczb dodatnich 4x  i 1x  wynika, że 
+prawdziwa jest nierówność  
+ x
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 6 =====
+Strona 6 z 20 
+ 
+1 14 42
+2
+x x
+x x+ ≥⋅ = . 
+Stąd otrzymujemy 144 xx +≥ . To kończy dowód. 
+ 
+ 
+ 
+Schemat punktowania 
+ 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+gdy:  
+• przekształci poprawnie nierówność do postaci ()
+2
+21 0x −≥   
+albo 
+• przekształci poprawnie nierówność do postaci ()
+2
+120 xx −≥ ,  
+albo 
+• przekształci poprawnie nierówno ść do postaci 244 1 0xx −+ ≥  i obliczy wyró żnik 
+trójmianu 244 1x x−+ : Δ 0=  
+albo  
+• obliczy pochodn ą funkcji () 14 xfx x =+  i wyka że, że dla 1
+2x =  funkcja f osi ąga 
+minimum lokalne  
+i na tym zakończy lub dalej popełnia błędy. 
+Zdający otrzymuje  .............................................................................................................. 2 p. 
+gdy przeprowadzi pełne rozumowanie. 
+ 
+Uwaga  
+Jeżeli zdający sprawdzi prawdziwość tezy tylko dla konkretnych przypadków, to otrzymuje  
+0 punktów. 
+ 
+ 
+  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 7 =====
+Strona 7 z 20 
+ 
+Zadanie 29. (0–2) 
+Dany jest trójk ąt prostok ątny ABC , w którym 90ACB =°  i 60ABC =° . Niech D  
+oznacza punkt wspólny wysoko ści poprowadzonej z wierzcho łka C  k ąta prostego  
+i przeciwprostokątnej AB  tego trójkąta. Wykaż, że :3 : 1AD DB = . 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób rozwiązania 
+Sporządzamy pomocniczy rysunek ilustrujący treść zadania. 
+                                                               
+Ponieważ 60ABC =° , więc 1
+2BC AB= . Podobnie, ponieważ 60DBC =° , więc 
+1
+2DB BC= . Otrzymujemy zatem ciąg równości 
+()11 1 1
+22 2 4DBB C A B A B== = .  
+Zatem 3
+4ADA B= . Stąd wynika, że 3 1
+44:: 3 : 1AD DB AB AB== . To kończy dowód. 
+ 
+Schemat punktowania I sposobu rozwiązania 
+Zdający otrzymuje  ............................................................................................................... 1 p. 
+gdy zauważy i zapisze, że 
+1
+2BC AB=   i  1
+2DB BC=  
+i na tym poprzestanie lub dalej popełni błędy. 
+ 
+Zdający otrzymuje  ............................................................................................................... 2 p. 
+gdy przeprowadzi pełne, poprawne rozumowanie.   
+ 
+II sposób rozwiązania 
+Sporządzamy pomocniczy rysunek ilustrujący treść zadania. 
+                                                                
+Z trójkątów prostokątnych 
+ADC  i BDC  otrzymujemy równości 
+A 
+B
+C
+D
+ 
+ 
+A 
+B
+C
+D
+ 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 8 =====
+Strona 8 z 20 
+ 
+tg30 CD
+AD°=  i tg 60 CD
+DB°= , 
+czyli równości   
+3
+3CD AD=  i 3CD DB= . 
+Porównujemy prawe strony obu równań i zapisujemy równanie  
+3 33 ADD B= ,  
+równoważne równaniu 
+3
+3
+3 3AD
+DB == . 
+Otrzymana równość oznacza tezę twierdzenia. 
+ 
+Schemat punktowania II sposobu rozwiązania 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+gdy zauważy i zapisze, że 
+3
+3CD AD=  i 3CD DB=  
+i na tym poprzestanie lub dalej popełni błędy. 
+ 
+Zdający otrzymuje  .............................................................................................................. 2 p. 
+gdy przeprowadzi pełne, poprawne rozumowanie.   
+ 
+III sposób rozwiązania 
+Sporządzamy pomocniczy rysunek ilustrujący treść zadania. 
+ 
+Niech 
+ACb= . Wtedy w trójkącie ACD  mamy: 
+2
+bCD =  i 3
+2
+bAD = . 
+Ponadto, w trójkącie ABC :  
+3
+3
+bBC = . 
+Ponieważ 60DBC =° , więc 3
+6
+bDB = . Zatem 33:326
+AD bb
+DB == .  
+To kończy dowód. 
+ 
+A
+B 
+C 
+D
+ 
+ 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 9 =====
+Strona 9 z 20 
+ 
+Schemat punktowania III sposobu rozwiązania 
+Zdający otrzymuje  ............................................................................................................... 1 p. 
+gdy zapisze d ługość odcinków AD i DB w zale żności od d ługości odcinka AC, np. oznaczy 
+ACb=  i zapisze długości odcinków AD  i DB  w zależności od b : 
+3
+2
+bAD =  i 3
+6
+bDB =  
+i na tym poprzestanie lub dalej popełni błędy. 
+ 
+Zdający otrzymuje  ............................................................................................................... 2 p. 
+gdy przeprowadzi pełne, poprawne rozumowanie.   
+ 
+IV sposób rozwiązania 
+Niech 
+BC a= . Ponieważ trójkąt ABC jest połową trójkąta równobocznego, więc 3ACa= .  
+ 
+Trójkąty ADC i CDB są podobne, a skala ich podobieństwa jest równa 3 3AC a
+BC a== , więc 
+stosunek pól tych trójkątów jest kwadratem tej skali, czyli ()
+2
+33ADC
+CDB
+P
+P == . Te trójkąty mają 
+wspólną wysoko ść CD, wi ęc stosunek ich pól jest równy stosunkowi d ługości ich podstaw, 
+czyli 3ADC
+CDB
+ADP
+PB D==  co kończy dowód. 
+ 
+Schemat punktowania IV sposobu rozwiązania 
+ 
+Zdający otrzymuje  ............................................................................................................... 1 p. 
+gdy zapisze, że trójkąty ADC i CDB są podobne, obliczy stosunek pól tych trójkątów i zapisze, 
+że CD jest wspólną wysokością tych trójkątów i na tym poprzestanie lub dalej popełni błędy. 
+ 
+Zdający otrzymuje  ............................................................................................................... 2 p. 
+gdy przeprowadzi pełne, poprawne rozumowanie.   
+ 
+Uwagi  
+1. Jeżeli zdaj ący sprawdzi prawdziwo ść tezy tylko dla konkre tnych przypadków, to 
+otrzymuje 0 punktów. Uwaga ta nie dotyczy sytuacji, gdy zdaj ący zapisuje stosown ą 
+własność: podobieństwo trójkątów o kątach 30° , 60° , 90° . 
+a 
+ 
+ A
+B 
+C 
+D
+ 
+ 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 10 =====
+Strona 10 z 20 
+ 
+2. Jeżeli zdający ustali, że długości odcinków s ą równe: BD = x, BC = 2x, AB = 4x lub 
+BD = x, BC = 2x, AD = 3x i nie towarzyszą tym ustaleniom zapisy świadczące o błędnym 
+rozumowaniu, to może otrzymać 2 punkty. 
+3. Jeżeli zdaj ący przeprowadzi uzasadnienie, rozwa żając konkretne d ługości odcinków 
+i zapisze, że ze wzgl ędu na podobie ństwo figur teza jest prawdziwa dla dowolnych 
+długości boków, spełniających podane warunki, to może otrzymać 2 punkty. 
+ 
+Zadanie 30. (0–2) 
+Ze zbioru liczb { }12451 0,,,,  losujemy dwa razy po jednej liczbie ze zwracaniem. Oblicz 
+prawdopodobieństwo zdarzenia A polegającego na tym, że iloraz pierwszej wylosowanej liczby 
+przez drugą wylosowaną liczbę jest liczbą całkowitą.  
+ 
+Przykładowe rozwiązania 
+ 
+I sposób rozwiązania („metoda klasyczna”) 
+Zdarzeniami elementarnymi s ą wszystkie pary uporz ądkowane () ,x y  liczb ze zbioru 
+{ }1, 2, 4, 5, 10. Jest to model klasyczny. Liczba wszystkich zdarze ń elementarnych jest równa 
+55 2 5Ω= ⋅ = . 
+Zdarzeniu A  sprzyjają następujące zdarzenia elementarne: 
+( ) ( ) ( ) ( ) ( ) () () ( ) () () ( ) ( )1,1 , 2,1 , 4,1 , 5,1 , 10,1 , 2, 2 , 4, 2 , 10, 2 , 4, 4 , 5,5 , 10,5 , 10,10  
+Zatem 12A =  i stąd () 12 0, 4825
+APA ===Ω . 
+II sposób rozwiązania („metoda tabeli”) 
+Zdarzeniami elementarnymi s ą wszystkie pary uporz ądkowane () ,x y  liczb ze zbioru 
+{ }1, 2, 4, 5, 10. Jest to model klasyczny. Budujemy tabel ę ilustruj ącą sytuacj ę opisan ą 
+w zadaniu. 
+  I losowanie 
+  1 2 4 5 10 
+II losowanie 
+1 × × × × × 
+2  × ×  × 
+4   ×   
+5    × × 
+10     ×  
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 11 =====
+Strona 11 z 20 
+ 
+Symbolem × oznaczono zdarzenia elementarne sprzyjaj ące zdarzeniu A. Mamy wi ęc 25, 
+wszystkich zdarze ń elementarnych, czyli 25Ω= , oraz 12 zdarze ń elementarnych 
+sprzyjających zdarzeniu A , czyli 12A = .  Stąd  () 12 0, 4825
+APA ===Ω . 
+Schemat punktowania I i II sposobu rozwiązania 
+Zdający otrzymuje  ............................................................................................................... 1 p.  
+gdy  
+• obliczy liczbę wszystkich możliwych zdarzeń elementarnych 25Ω=   
+albo 
+• przedstawi poprawny sposób wyznaczenia wszystkich elementów zbioru A lub wypisze 
+wszystkie te zdarzenia elementarne: 
+            ( ) ( ) ( ) ( ) ( ) () () ( ) () () ( ) ( )1,1 , 2,1 , 4,1 , 5,1 , 10,1 , 2, 2 , 4, 2 , 10, 2 , 4, 4 , 5,5 , 10,5 , 10,10  
+i na tym zakończy lub dalej popełnia błędy. 
+Zdający otrzymuje  ............................................................................................................... 2 p. 
+gdy obliczy prawdopodobieństwo zdarzenia A : () 12 0, 4825
+APA ===Ω . 
+ 
+III sposób rozwiązania („metoda drzewa”) 
+Drzewo z istotnymi gałęziami 
+  
+ 
+ 
+I losowanie 
+ 
+ 
+ 
+II losowanie 
+ 
+ 
+ 
+ 
+() 11 1 212 0, 4855 2 5PA =⋅ ⋅ = = . 
+1 2 4 5 10 
+1 1 2 2 1 5 1 10 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+  
+1 4 
+ 
+2 5 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 12 =====
+Strona 12 z 20 
+ 
+Schemat punktowania III sposobu rozwiązania 
+Zdający otrzymuje  .............................................................................................................. 1 p.  
+gdy narysuje drzewo uwzgl ędniające wszystkie istotne ga łęzie i zapisze poprawne 
+prawdopodobieństwo przynajmniej przy jednej gałęzi. 
+ 
+Zdający otrzymuje  .............................................................................................................. 2 p.  
+gdy obliczy prawdopodobieństwo zdarzenia A : () 11 1 212 0, 4855 2 5PA =⋅ ⋅ = = . 
+Uwagi 
+1. Je śli zdaj ący rozwi ąże zadanie do ko ńca i otrzyma () 1PA > , to otrzymuje za ca łe 
+rozwiązanie 0 punktów.  
+ 
+2. Jeżeli zdający poprawnie obliczy prawdopodobieństwo w sytuacji rozważania losowania bez 
+zwracania i uzyska wynik 7
+20 , to może otrzymać 1 punkt. 
+3. Jeżeli zdający przy opisie elementów zbioru A zmienia kolejność liczb i pisze na przykład 
+(1, 2) zamiast (2, 1), to może otrzymać 2 punkty. 
+ 
+Zadanie 31. (0–2) 
+Dany jest ci ąg arytmetyczny () na , okre ślony dla 1n ≥ , w którym spe łniona jest równo ść 
+21 24 27 30 100aaaa+++= . Oblicz sumę 25 26aa + . 
+ 
+Przykładowe rozwiązanie 
+Ponieważ w zadaniu należy obliczyć sumę 25 26aa + , więc zapiszemy daną równość 
+21 24 27 30 100aaaa+++=  w postaci równoważnej 
+25 25 26 2644 1 0 0ar a r a r ar−+ − + + + += , 
+gdzie r  oznacza odpowiednio różnicę danego ciągu. Stąd wynika, że 
+25 26 50aa += . 
+ 
+Schemat punktowania 
+ 
+Zdający otrzymuje  .............................................................................................................. 1 p. 
+gdy:  
+• zapisze równość 
+21 24 27 30 100aaaa+++=  w postaci równoważnej 
+25 25 26 2644 1 0 0ar a r a r ar−+ − + + + +=  lub 14 98 100ar+= , lub 124 9 5 0ar+=  
+i na tym zakończy lub dalej popełni błędy 
+albo 
+• zapisze, że 25 26 1 1 1 24 25 2 49a a ar ar ar+= + + + =+   
+i na tym zakończy lub dalej popełni błędy, 
+albo 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 13 =====
+Strona 13 z 20 
+ 
+• popełni b łąd rachunkowy w przekszta łcaniu równo ści 21 24 27 30 100aaaa+++=  do 
+postaci równoważnej i konsekwentnie do popełnionego błędu obliczy sumę 25 26aa + .    
+ 
+Zdający otrzymuje  ............................................................................................................... 2 p. 
+gdy obliczy i zapisze, że 25 26 50aa += .  
+ 
+Uwagi  
+1. Jeżeli zdaj ący zapisze równo ść 
+21 24 27 30 100aaaa+++=  w postaci równowa żnej 
+14 98 100ar+= , a następnie wprowadzi konkretne wartości liczbowe do równania z dwiema 
+niewiadomymi, np. 1r = , i nawet poprawnie obliczy 25 26aa + , to otrzymuje 1 punkt za takie 
+rozwiązanie. 
+2. Jeżeli zdający myli własności ciągu arytmetycznego z własnościami ciągu geometrycznego, 
+to za całe zadanie otrzymuje 0 punktów.    
+3. Jeżeli zdający rozważa wyłącznie konkretne ciągi i nie podaje stosownego uzasadnienia na 
+temat zastosowania tych rozważań do sytuacji ogólnej, to otrzymuje 0 punktów. 
+4. Jeżeli zdający zapisuje wyłącznie 25 26 50aa += , to otrzymuje 0 punktów. 
+ 
+Zadanie 32. (0–4) 
+Funkcja kwadratowa ()
+2f xa xb x c=+ +  ma dwa miejsca zerowe 1 2x =−  i 2 6x = . Wykres 
+funkcji f przechodzi przez punkt ()1, 5A =− . Oblicz najmniejszą wartość funkcji f. 
+ 
+Przykładowe rozwiązania 
+ 
+I sposób rozwiązania 
+Ponieważ znamy miejsca zerowe f unkcji kwadratowej, to mo żemy zapisa ć wzór funkcji f 
+w postaci iloczynowej () ( ) ( ) 62fx a x x=− + . 
+Wykres tej funkcji przechodzi przez punkt ()1, 5A =− , więc otrzymujemy równanie 
+() ()51 6 1 2a−= − + , 
+51 5 a−= − , 
+1
+3a = . 
+Funkcja określona jest wzorem: () () () 621
+3fx x x =− + . 
+Najmniejsza wartość jest przyjmowana przez funkcj ę f dla argumentu 0x , który jest średnią 
+arytmetyczną miejsc zerowych tej funkcji. 
+Wyznaczamy 0x  i najmniejszą wartość funkcji () 0f x : 
+0 262
+2x == − , () () () ()0 22 6 2 2 161
+33fx f == − + = − . 
+ 
+  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 14 =====
+Strona 14 z 20 
+ 
+II sposób rozwiązania 
+Z treści zadania wynika, że możemy zapisać układ trzech równań: 
+() ()
+2
+2
+2
+22 0
+660
+11 5
+ab c
+ab c
+ab c
+ ⋅− + ⋅− + = ⋅+ ⋅ + =
+ ⋅+ ⋅ + = −
+ 
+Po rozwiązaniu układu równań otrzymujemy 1
+3a = , 4
+3b =−  i 4c =− . 
+Stąd wynika, że funkcja  f określona jest wzorem: () 2 414
+33f xxx=− − . 
+Funkcja ta przyjmuje najmniejszą wartość dla argumentu 0 22 2
+4
+3
+1
+3
+bx a
+−== =
+⋅
+. 
+Obliczamy najmniejszą wartość funkcji: () 2222 4 1614
+33 3f =⋅ −⋅ −= − . 
+Uwaga 
+Po obliczeniu współczynników a, b i c możemy najmniejszą wartość funkcji obliczyć ze 
+wzoru 4q a=− Δ . Wtedy otrzymujemy 
+() ()
+2
+min
+44 16
+34
+41 16 1633 93
+14
+33
+f
+−− ⋅ ⋅ − +
+=− =− =−
+⋅
+. 
+Schemat punktowania 
+ 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze do pełnego 
+rozwiązania ........................................................................................................................... 1 p. 
+Zdający  
+• obliczy pierwszą współrzędną wierzchołka paraboli: 2p =  
+albo 
+• zapisze wzór funkcji  f w postaci iloczynowej, z jednym nieznanym wspó łczynnikiem: 
+() ( ) ( ) 62fx a x x=− + , 
+albo 
+• zapisze trzy równania, w których niewiadomymi s ą wspó łczynniki a, b, c trójmianu 
+kwadratowego:  
+() ()
+2
+2
+2
+22 0
+660
+11 5
+ab c
+ab c
+ab c
+⋅− + ⋅− + =
+⋅+ ⋅ + =
+⋅+ ⋅ + = −
+ 
+i na tym poprzestanie lub dalej popełnia błędy. 
+Rozwiązanie, w którym jest istotny postęp  ....................................................................... 2 p. 
+Zdający  
+• zapisze wzór funkcji  f w postaci iloczynowej, z jednym nieznanym wspó łczynnikiem: 
+() ( ) ( ) 62fx a x x=− +  i obliczy wartość a: 1
+3a =  
+albo 
+• obliczy współczynniki trójmianu kwadratowego: 1
+3a = , 4
+3b =−  i 4c =−  
+i na tym poprzestanie lub dalej popełnia błędy. 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 15 =====
+Strona 15 z 20 
+ 
+ 
+Pokonanie zasadniczych trudności zadania  ................................................................. 3 p. 
+Zdający 
+•  obliczy współczynniki trójmianu kwadratowego: 1
+3a = , 4
+3b =−  i 4c =−  oraz obliczy 
+pierwszą współrzędną wierzchołka paraboli: 2p =  
+albo 
+• obliczy współczynniki trójmianu kwadratowego: 1
+3a = , 4
+3
+b =−  i 4c =−  oraz zapisze, 
+że najmniejsza wartość funkcji jest równa 
+4a
+Δ−  oraz obliczy () ()
+2
+4441
+33Δ= − − ⋅ ⋅ −  
+albo 
+•  zapisze wzór funkcji  f w postaci iloczynowej, z jednym nieznanym wspó łczynnikiem: 
+() ( ) ( ) 62fx a x x=− +  i obliczy warto ść a: 1
+3a =  oraz obliczy pierwsz ą współrzędną 
+wierzchołka paraboli: 2p =  
+i na tym poprzestanie lub dalej popełnia błędy. 
+ 
+Rozwiązanie pełne ........................................................................................................... 4 p. 
+Zdający obliczy najmniejszą wartość funkcji f: 16
+3− . 
+Uwagi 
+1. Je żeli zdaj ący pope łni b łędy (rachunkowe, w przepisywaniu), które nie przekre ślają 
+poprawności rozumowania i konsekwentnie rozwiąże zadanie do końca, to może otrzymać 
+co najwyżej 3 punkty za takie rozwiązanie. 
+2.  Jeżeli zdający przyjmuje konkretna wartość a > 0, to może otrzymać co najwyżej 1 punkt. 
+3.  Jeżeli zdający przy wyznaczaniu a popełnia błąd rachunkowy i otrzymuje  a > 0, to mo że 
+otrzymać co najwyżej 3 punkty. 
+4.  Jeżeli zdający przy wyznaczaniu a popełnia błąd rachunkowy i otrzymuje a < 0, to mo że 
+otrzymać co najwyżej 2 punkty. 
+ 
+ 
+  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 16 =====
+Strona 16 z 20 
+ 
+Zadanie 33. (0–4) 
+Punkt  jest wierzcho łkiem trójkąta prostokątnego ABC, którego wierzchołek A leży na 
+osi Ox, a wierzchołek B na osi Oy uk ładu współrzędnych. Prosta zawierająca wysokość tego 
+trójkąta opuszczoną z wierzchołka C przecina przeciwprostokątną AB w punkcie . 
+ 
+ 
+ 
+Oblicz współrzędne wierzchołków A i B tego trójkąta oraz długość przeciwprostokątnej AB. 
+ 
+Przykładowe rozwiązania 
+I sposób rozwiązania 
+Współczynnik kierunkowy prostej CD jest równy 
+40 4
+30 3
+DC
+CD
+DC
+yya xx
+− −== = −− . 
+Prosta AB jest prostopadła do prostej CD, więc jej współczynnik kierunkowy jest równy  
+3
+4ABa =− . 
+Prosta ta przechodzi przez punkt , wi ęc jej równanie ma postać 
+()3
+4 34yx=− − + , 
+32 5
+44
+yx=− + .  
+Ponieważ prosta AB przecina oś Oy w punkt B, więc () 25
+40,B = , natomiast oś Ox w punkcie 
+A, więc () ,0AAx= . Zatem  
+32 5
+44
+0 Ax=− + , 
+25
+3Ax = , 
+czyli ()25
+3 ,0A = .  
+Długość przeciwprostokątnej AB jest zatem równa  
+()0, 0C =
+()3, 4D =
+()3, 4D =
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 17 =====
+Strona 17 z 20 
+ 
+() () ()
+22
+25 25 625 625 11
+34 9 1 6 9 1 60 0 625AB =− + − =+ =⋅ + =  
+25 5 125 5
+916 34 12 12625 25 10⋅⋅=⋅ = ⋅ = = . 
+ 
+Schemat punktowania I sposobu rozwiązania 
+Rozwiązanie, w którym post ęp jest niewielki, ale ko nieczny na drodze do pe łnego 
+rozwiązania ........................................................................................................................... 1 p. 
+Zdający zapisze współczynnik kierunkowy prostej CD: 4
+3CDa =   
+i na tym poprzestanie lub dalej popełnia błędy. 
+Rozwiązanie, w którym jest istotny postęp  ....................................................................... 2 p. 
+Zdający zapisze równanie prostej AB: ()3
+4 34yx=− − +  
+i na tym poprzestanie lub dalej popełnia błędy. 
+ 
+Pokonanie zasadniczych trudności zadania  ...................................................................... 3 p. 
+Zdający obliczy współrzędne punktów A i B: ()25
+3 ,0A = , () 25
+40,B = . 
+ 
+Rozwiązanie pełne ................................................................................................................ 4 p. 
+Zdający obliczy długość przeciwprostokątnej AB trójkąta ABC: 5
+1210AB = . 
+ 
+II sposób rozwiązania  
+Niech () ,0AAx=  i ()0, BBy= . Długość odcinka CD jest równa 
+() ()
+22
+30 40 5CD =− + − = . 
+Z twierdzenia dla trójkątów ACD i BDC otrzymujemy 
+22 2
+ADC D A C+=  i 
+22 2
+CD BD BC+= , 
+() ( )()
+2
+22 2234 0 5AAx x−+ − + =  i () ( )()
+2
+22 2230 4 5 BBy y−+ − + = , 
+2296 1 62 5A AAx xx−+ + + =  i 2291 68 2 5 BB Byy y+− + + = , 
+50 6 Ax=  i 50 8 By= , 
+50 25 1
+63 3 8Ax ===  i 50 25 1
+84 4 6By === .  
+Zatem ()25
+3 ,0A =  i () 25
+40,B = . 
+Długość przeciwprostokątnej AB jest zatem równa  
+() () ()
+22
+25 25 625 625 11
+34 9 1 6 9 1 60 0 625AB =− + − =+ =⋅ + =  
+25 5 125 5
+916 34 12 12625 25 10⋅⋅=⋅ = ⋅ = = . 
+ 
+  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 18 =====
+Strona 18 z 20 
+ 
+Schemat punktowania II sposobu rozwiązania 
+Rozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze  
+do pełnego rozwiązania ........................................................................................................ 1 p. 
+Zdający zapisze jedno z równań: () ( )()
+2
+22 2234 0 5AAx x−+ − + = , 
+() ( )()
+2
+22 2230 4 5 BBy y−+ − + =  z niewiadomą odpowiednio Ax , By  
+i na tym poprzestanie lub dalej popełnia błędy. 
+ 
+Rozwiązanie, w którym jest istotny postęp  ....................................................................... 2 p. 
+Zdający zapisze oba równania: () ( )()
+2
+22 2234 0 5AAx x−+ − + = , 
+() ( )()
+2
+22 2230 4 5 BBy y−+ − + =  z niewiadomą odpowiednio Ax , By  
+i na tym poprzestanie lub dalej popełnia błędy. 
+ 
+Pokonanie zasadniczych trudności zadania  ...................................................................... 3 p. 
+Zdający obliczy współrzędne punktów A i B: ()25
+3 ,0A = , () 25
+40,B =  i na tym poprzestanie 
+lub dalej popełnia błędy. 
+ 
+ 
+Rozwiązanie pełne ................................................................................................................ 4 p. 
+Zdający obliczy długość przeciwprostokątnej AB trójkąta ABC: 5
+1210AB = . 
+ 
+Uwaga (do schematów punktowania I i II sposobu rozwiązania) 
+Jeżeli zdaj ący pope łni b łędy (rachunkowe, w przepisywaniu), które nie przekre ślają 
+poprawności rozumowania i konsekwentnie rozwi ąże zadanie do końca, to może otrzymać co 
+najwyżej 3 punkty za takie rozwiązanie. 
+ 
+ 
+  
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 19 =====
+Strona 19 z 20 
+ 
+Zadanie 34. (0–5) 
+Podstawą graniastos łupa prostego  jest trójk ąt prostok ątny , w którym 
+90=°ACB  (zobacz rysunek). Stosunek d ługości przyprostok ątnej AC tego trójk ąta do 
+długości przyprostok ątnej BC jest równy 4 : 3. Punkt S jest środkiem okr ęgu opisanego na 
+trójkącie ABC, a długość odcinka SC jest równa 5. Pole ściany bocznej BEFC graniastosłupa 
+jest równe 48. Oblicz objętość tego graniastosłupa.  
+ 
+Przykładowe rozwiązanie 
+Odcinek CS jest promieniem okręgu opisanego na trójkącie ABC. Zatem  
+5CS AS BS=== , 
+skąd otrzymujemy 10AB = . 
+Ponieważ stosunek długości przyprostokątnej AC do długości przyprostokątnej BC jest równy 
+4 : 3, wi ęc mo żemy przyj ąć 4ACx=  oraz 3BC x= , gdzie x oznacza wspó łczynnik 
+proporcjonalności. Z twierdzenia Pitagorasa otrzymujemy równanie 
+() ()
+22210 4 3 x x=+ , 
+2100 25 x= , 
+2 4x = , 
+2x = . 
+Zatem 8AB = oraz 6BC = . Pole trójkąta ABC jest równe 1 86 2 42P =⋅ ⋅ = . 
+Pole ściany bocznej BEFC jest równe 48, więc 
+48BC H⋅= , gdzie BE H=  to wysokość graniastosłupa. 
+64 8H⋅= , 
+8H = . 
+Objętość graniastosłupa jest równa 24 8 192pVP H=⋅=⋅ = . 
+ABCDEF ABC
+C
+B A 
+S 
+D E 
+F 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl
+
+===== PDF PAGE 20 =====
+Strona 20 z 20 
+ 
+Schemat punktowania 
+Rozwiązanie, w którym postęp jest wprawdzie niewielki, ale konieczny na drodze do 
+pełnego rozwiązania ............................................................................................................. 1 p. 
+Zdający  
+• obliczy długość przeciwprostokątnej trójkąta ABC: 10AB =  
+albo 
+• zapisze zależność między długościami przyprostokątnych trójkąta ABC, np.:  
+4
+3
+b
+a =  lub ( 4ACx=  i 3BC x= )  
+i na tym poprzestanie lub dalej popełnia błędy.   
+ 
+Rozwiązanie, w którym postęp jest istotny ........................................................................ 2 p. 
+Zdający zapisze  
+• równanie pozwalające obliczyć długości przyprostokątnych, np.: () ()
+22 234 1 0xx +=   
+albo 
+• układ równań pozwalający obliczyć długości przyprostokątnych, np.:  
+4
+3
+b
+a =  i 
+22 2 10ab+=   
+i na tym poprzestanie lub dalej popełnia błędy.   
+ 
+Pokonanie zasadniczych trudności zadania ....................................................................... 3 p. 
+Zdający obliczy d ługości boków trójk ąta ABC: 10AB = , 8AC = , 6BC =  i na tym 
+poprzestanie lub dalej popełnia błędy.   
+ 
+Uwaga 
+Akceptujemy rozwiązanie, w którym zdający wykorzystuje trójkę pitagorejską (6, 8, 10).  
+Rozwiązanie prawie pełne ................................................................................................... 4 p. 
+Zdający  
+• nie obliczy objętości bryły, ale obliczy wysokość graniastosłupa: 8H =  
+albo 
+• obliczy objętość graniastosłupa, popełniając w trakcie rozwiązania błędy rachunkowe.  
+ 
+Rozwiązanie pełne ................................................................................................................ 5 p. 
+Zdający obliczy objętość graniastosłupa: 192V = . 
+ 
+Uwagi 
+1. Jeżeli zdaj ący rozwa ża w podstawie graniastos łupa trójk ąt inny ni ż do trójk ąta o bokach  
+6, 8, 10, ale podobny do tego trójk ąta o bokach 6, 8, 10, to mo że otrzyma ć co najwy żej  
+2 punkty. 
+2. Jeżeli zdaj ący rozk łada liczb ę 48 na iloczyn 8 · 6 i przyjmuje, że 6 jest d ługością BC, 
+a następnie wyznacza pole podstawy i obj ętość bry ły, to mo że otrzyma ć co najwy żej 
+3 punkty. 
+ 
+Więcej arkuszy znajdziesz na stronie: arkusze.pl

@@ -71,6 +71,6 @@ Każdy diagram ma niepusty opis alternatywny, stronę źródłową i `sourceId: 
 
 ## Prawa i weryfikacja
 
-`Content/provenance.json` ma osobną grupę `cke-2025-correction-basic-exam` oraz katalog `runtime-vector-diagrams` ze statusem `approved`. Rozszerzenie deklaracji właściciela z 1 września 2026 r. obejmuje wszystkie 195 definicji, w tym sześć definicji dla `MMAP-P0-100-2508`. Manifest ma `releaseEligible=true`.
+`Content/provenance.json` ma osobną grupę `cke-2025-correction-basic-exam` ze statusem `approved`. Rozszerzenie deklaracji właściciela z 1 września 2026 r. obejmuje sześć definicji dla `MMAP-P0-100-2508`. Wspólny katalog `runtime-vector-diagrams` jest obecnie `blocked`, ponieważ zawiera także figury z arkuszy 2017 i 2016 nieobjętych deklaracją, więc manifest ma `releaseEligible=false`.
 
-Test `Matura2025CorrectionBasicContentTests` kontroluje liczniki, kolejność, strony, punkty, identyfikatory, URL-e, sumy SHA-256, metody odpowiedzi, diagramy, proweniencję i link w spisie dokumentacji. Testy katalogu i UI dodatkowo kontrolują 26 aktywnych arkuszy oraz 722 jednostki postępu.
+Test `Matura2025CorrectionBasicContentTests` kontroluje liczniki, kolejność, strony, punkty, identyfikatory, URL-e, sumy SHA-256, metody odpowiedzi, diagramy, proweniencję i link w spisie dokumentacji. Testy katalogu i UI dodatkowo kontrolują 32 aktywne arkusze oraz 889 jednostek postępu.

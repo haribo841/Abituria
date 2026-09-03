@@ -136,24 +136,24 @@ public sealed class Matura2019ContentTests
             Assert.NotEmpty(definition.Primitives);
             Assert.Contains(definition.SourceId, ExpectedDiagramSourceIds);
         });
-        Assert.True(provenance.RootElement.GetProperty("releaseEligible").GetBoolean());
+        Assert.False(provenance.RootElement.GetProperty("releaseEligible").GetBoolean());
         Assert.Equal("approved", groups["cke-2019-main-basic-exam"].GetProperty("distributionStatus").GetString());
         Assert.Equal("approved", groups["cke-2019-main-extended-exam"].GetProperty("distributionStatus").GetString());
         Assert.Equal("approved", groups["cke-2019-correction-basic-exam"].GetProperty("distributionStatus").GetString());
-        Assert.Equal("approved", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
+        Assert.Equal("blocked", groups["runtime-vector-diagrams"].GetProperty("distributionStatus").GetString());
         DiagramCatalogValidator.Validate(diagrams);
     }
 
     [AvaloniaFact]
-    public void Catalog_retains_2019_formula_2015_exams_when_2018_is_added()
+    public void Catalog_retains_2019_formula_2015_exams_when_2017_is_added()
     {
         var repository = new ContentRepository();
 
-        Assert.Equal(26, repository.Exams.Count);
+        Assert.Equal(32, repository.Exams.Count);
         Assert.Equal("matura-maj-2019-podstawowa", repository.Exams[20].Id);
         Assert.Equal("matura-maj-2019-rozszerzona", repository.Exams[21].Id);
         Assert.Equal("matura-poprawkowa-2019-podstawowa", repository.Exams[22].Id);
-        Assert.Equal(722, repository.Exams.Sum(exam => exam.Exercises.Count));
+        Assert.Equal(889, repository.Exams.Sum(exam => exam.Exercises.Count));
     }
 
     private static T Read<T>(string relativePath) => JsonSerializer.Deserialize<T>(

@@ -89,7 +89,7 @@ public sealed class Issue4NavigationTests
                 item => openedPlaceholders.Add(item.Id),
                 (exercise, topicId) => randomized.Add((exercise.Id, topicId))));
 
-        Assert.Equal(26, repository.Exams.Count);
+        Assert.Equal(32, repository.Exams.Count);
         Assert.Equal(17, repository.ExamTopics.Count);
         Assert.Contains(matura.GetLogicalDescendants().OfType<Button>(), button =>
             button.Content is string text && text.Contains("33 zadania, 37 części ocenianych", StringComparison.Ordinal));
@@ -116,6 +116,18 @@ public sealed class Issue4NavigationTests
             text.Text == "Matura maj 2018 - poziom rozszerzony (Formuła 2015)");
         Assert.Contains(matura.GetLogicalDescendants().OfType<TextBlock>(), text =>
             text.Text == "Matura poprawkowa 2018 - poziom podstawowy (Formuła 2015)");
+        Assert.Contains(matura.GetLogicalDescendants().OfType<TextBlock>(), text =>
+            text.Text == "Matura maj 2017 - poziom podstawowy (Formuła 2015)");
+        Assert.Contains(matura.GetLogicalDescendants().OfType<TextBlock>(), text =>
+            text.Text == "Matura maj 2017 - poziom rozszerzony (Formuła 2015)");
+        Assert.Contains(matura.GetLogicalDescendants().OfType<TextBlock>(), text =>
+            text.Text == "Matura poprawkowa 2017 - poziom podstawowy (Formuła 2015)");
+        Assert.Contains(matura.GetLogicalDescendants().OfType<TextBlock>(), text =>
+            text.Text == "Matura maj 2016 - poziom podstawowy (Formuła 2015)");
+        Assert.Contains(matura.GetLogicalDescendants().OfType<TextBlock>(), text =>
+            text.Text == "Matura maj 2016 - poziom rozszerzony (Formuła 2015)");
+        Assert.Contains(matura.GetLogicalDescendants().OfType<TextBlock>(), text =>
+            text.Text == "Matura poprawkowa sierpień 2016 - poziom podstawowy (Formuła 2015)");
         Assert.Equal(17, tasks.GetLogicalDescendants().OfType<Button>().Count(button =>
             button.Content is string text && text.StartsWith("Losuj zadanie z tematu:", StringComparison.Ordinal)));
         Assert.Single(tasks.GetLogicalDescendants().OfType<Button>(), button =>

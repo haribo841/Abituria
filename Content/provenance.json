@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "releaseEligible": true,
+  "releaseEligible": false,
   "policy": {
     "approvedStatus": "approved",
     "blockingStatus": "blocked",
@@ -457,14 +457,111 @@
       ]
     },
     {
+      "id": "cke-2017-main-basic-exam",
+      "paths": [
+        "Content/exam-2017-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-P1_1P-172, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_od_2015/matematyka/MMA-P1_1P-172.pdf, SHA-256 AA9506313B735854BBFEC309F8C0C6496AD168E332AF63B9A58CDA7822F0BBAF; zasady oceniania CKE MMA-P1-N, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_od_2015/zasady_oceniania/MMA-P1-N.pdf, SHA-256 76866211FF1979E816A5F2091DB29ED0123D6921A51AE2BD2C928808601CD693; weryfikacja 2026-09-01",
+      "license": "Prawa do publicznej redystrybucji arkusza i zasad oceniania CKE z 2017 r. nie zostały jeszcze odrębnie potwierdzone.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz i zasady oceniania CKE z maja 2017 r.",
+      "evidence": [
+        "docs/MATURA_2017_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2017-main-extended-exam",
+      "paths": [
+        "Content/exam-2017-main-extended.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-R1_1P-172, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_od_2015/matematyka/MMA-R1_1P-172.pdf, SHA-256 4D6F682AA0BB350CA67CA4F2CAE967332264339DA1AF006D5A4F0C5F23EB0277; zasady oceniania CKE MMA-R1-N, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_od_2015/zasady_oceniania/MMA-R1-N.pdf, SHA-256 2B3DDFC0161632B6F6E5FD5CBC47BAE14FE618942D7636D4B870F9C8B3F4E36C; weryfikacja 2026-09-01",
+      "license": "Prawa do publicznej redystrybucji arkusza i zasad oceniania CKE z 2017 r. nie zostały jeszcze odrębnie potwierdzone.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz i zasady oceniania CKE z maja 2017 r.",
+      "evidence": [
+        "docs/MATURA_2017_EXTENDED_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2017-correction-basic-exam",
+      "paths": [
+        "Content/exam-2017-correction-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-P1_1P-174 i zasady oceniania terminu poprawkowego z sierpnia 2017 r., pobrane z publicznego archiwum arkusze.pl; URL arkusza https://arkusze.pl/maturalne/matematyka-2017-sierpien-poprawkowa-podstawowa.pdf, SHA-256 D3975FF6D80430737C1D7186143BFC79F42EFBA06E749128447E2D39E42BD4A9; URL zasad https://arkusze.pl/maturalne/matematyka-2017-sierpien-poprawkowa-podstawowa-odpowiedzi.pdf, SHA-256 1295525A054ECDD6E1CF132AD4C13B54E29C79AAFC63C723508061A7C211266C; weryfikacja 2026-09-01",
+      "license": "Prawa do publicznej redystrybucji arkusza i zasad oceniania CKE z 2017 r. nie zostały jeszcze odrębnie potwierdzone.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz i zasady oceniania CKE z sierpnia 2017 r.",
+      "evidence": [
+        "docs/MATURA_2017_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2016-main-basic-exam",
+      "paths": [
+        "Content/exam-2016-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-P1_1P-162 i zasady oceniania MMA-P1-N z maja 2016 r., pobrane z publicznego archiwum OKE Warszawa; URL arkusza https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2016/Matematyka/MMA-P1_1P-162.pdf, SHA-256 3AD62333A0E84B0AB344D71449EAE8A051A2A90666D5578F04157812C99E5989; URL zasad https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2016/Matematyka/MMA-P1-N.pdf, SHA-256 CF772FEFB9321A6FB9E052C778AB8E4E54D2EEDCAEC050958DEAF84ABE386ED3; weryfikacja 2026-09-02",
+      "license": "Prawa do publicznej redystrybucji arkusza i zasad oceniania CKE z 2016 r. nie zostały jeszcze odrębnie potwierdzone.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz i zasady oceniania CKE z maja 2016 r.",
+      "evidence": [
+        "docs/MATURA_2016_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2016-main-extended-exam",
+      "paths": [
+        "Content/exam-2016-main-extended.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-R1_1P-162 i zasady oceniania MMA-R1-N z maja 2016 r., pobrane z publicznego archiwum OKE Warszawa; URL arkusza https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2016/Matematyka/MMA-R1_1P-162.pdf, SHA-256 94D1D433D16FB9FAF91F0B68B548CCD2D2F833317BCD6E7023FB3EB44C57B34B; URL zasad https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2016/Matematyka/MMA-R1-N.pdf, SHA-256 45A857F24A2919FE97CE5D7BA4EE6563F28FB47E70B52D196A9FEFF5F127B6F0; weryfikacja 2026-09-02",
+      "license": "Prawa do publicznej redystrybucji arkusza i zasad oceniania CKE z 2016 r. nie zostały jeszcze odrębnie potwierdzone.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz i zasady oceniania CKE z maja 2016 r.",
+      "evidence": [
+        "docs/MATURA_2016_EXTENDED_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2016-correction-basic-exam",
+      "paths": [
+        "Content/exam-2016-correction-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-P1_1P-164 i zasady oceniania terminu poprawkowego z sierpnia 2016 r., pobrane z publicznego archiwum arkusze.pl; URL arkusza https://arkusze.pl/maturalne/matematyka-2016-sierpien-poprawkowa-podstawowa.pdf, SHA-256 82EB6402EE0422B09DF15CB5F65D22431FDC6F064ED8FBF250BB59888211975D; URL zasad https://arkusze.pl/maturalne/matematyka-2016-sierpien-poprawkowa-podstawowa-odpowiedzi.pdf, SHA-256 BA3BD6A4B2AE4C1D87AE5BF499A8ECB533AA80791C8058DC58CB721CD87DCB82; weryfikacja 2026-09-02",
+      "license": "Prawa do publicznej redystrybucji arkusza i zasad oceniania CKE z 2016 r. nie zostały jeszcze odrębnie potwierdzone.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz i zasady oceniania CKE z sierpnia 2016 r.",
+      "evidence": [
+        "docs/MATURA_2016_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
       "id": "runtime-vector-diagrams",
       "paths": [
         "Content/diagrams.json"
       ],
       "author": "Adam Kubiś - implementacje wektorowe Avalonia i nowe definicje kursu; Centralna Komisja Egzaminacyjna - źródłowa treść tablic i arkuszy; historyczni autorzy projektu Ich Troje - źródła zachowanych diagramów",
-      "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym osiem figur dla arkusza CKE EMAP-P0-100-2105, trzy figury dla EMAP-R0-100-2105, sześć figur dla EMAP-P0-100-2205, jedna figura dla EMAP-R0-100-2205, pięć figur dla EMAP-P0-100-2208, osiem figur dla MMAP-P0-100-2305, pięć figur dla MMAP-P0-100-2308, pięć figur dla MMAP-P0-100-2408, sześć figur dla MMAP-P0-100-2508, cztery figury dla MMAP-R0-100-2305, jedenaście figur dla MMAP-P0-100-A-2405, jedna figura dla MMAP-R0-100-A-2405, dziewięć figur dla MMAP-P0-100-A-2505, siedem figur dla MMAP-P0-100-A-2605, trzy figury dla MMAP-R0-100-A-2605, osiem figur dla MMA-P1_1P-202, cztery figury dla MMA-R1_1P-202, sześć figur dla MMA-P1_1P-204, osiem figur dla MMA-P1_1P-192, pięć figur dla MMA-R1_1P-192, sześć figur dla MMA-P1_1P-194, osiem figur dla MMA-P1_1P-182, cztery figury dla MMA-R1_1P-182 i siedem figur dla MMA-P1_1P-184; bez aktywnych rastrów, Image ani Bitmap",
-      "license": "MIT dla implementacji wektorowych i deklaracja uprawnienia do publicznej redystrybucji w ramach Abiturii rozszerzona 2026-09-01 dla wszystkich 195 definicji",
-      "distributionStatus": "approved",
+      "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym zatwierdzone 195 definicji dla wcześniejszego katalogu oraz siedem figur dla MMA-P1_1P-172, trzy figury dla MMA-R1_1P-172, sześć figur dla MMA-P1_1P-174, siedem figur dla MMA-P1_1P-162, trzy figury dla MMA-R1_1P-162 i pięć figur dla MMA-P1_1P-164; bez aktywnych rastrów, Image ani Bitmap",
+      "license": "MIT dla implementacji wektorowych. Deklaracja z 2026-09-01 obejmuje 195 wcześniejszych definicji, ale nie rozszerza jeszcze praw do 31 nowych figur pochodnych z arkuszy CKE 2017 i 2016.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Katalog zawiera 31 nowych figur pochodnych z arkuszy CKE 2017 i 2016, dla których nie ma jeszcze odrębnego rozszerzenia deklaracji praw właściciela.",
       "evidence": [
         "docs/ASSET_RIGHTS_DECLARATION.md",
         "docs/MATURA_2026_COVERAGE.md",
@@ -491,6 +588,12 @@
         "docs/MATURA_2018_BASIC_COVERAGE.md",
         "docs/MATURA_2018_EXTENDED_COVERAGE.md",
         "docs/MATURA_2018_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_2017_BASIC_COVERAGE.md",
+        "docs/MATURA_2017_EXTENDED_COVERAGE.md",
+        "docs/MATURA_2017_CORRECTION_BASIC_COVERAGE.md",
+        "docs/MATURA_2016_BASIC_COVERAGE.md",
+        "docs/MATURA_2016_EXTENDED_COVERAGE.md",
+        "docs/MATURA_2016_CORRECTION_BASIC_COVERAGE.md",
         "docs/MATURA_2023_EXTENDED_COVERAGE.md",
         "docs/CONTENT_PROVENANCE.md",
         "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",

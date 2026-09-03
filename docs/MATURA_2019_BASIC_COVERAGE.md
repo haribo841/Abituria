@@ -38,6 +38,6 @@ Do odtworzenia informacji graficznej służą deterministyczne definicje Avaloni
 
 ## Testy i proweniencja
 
-`Matura2019ContentTests` kontroluje źródła, sumy SHA-256, kontrakt `34/34/50`, strony, punktację, tryby odpowiedzi, odpowiedź liczbową i osiem używanych diagramów. Testy katalogu, UI i smoke testu kontrolują 26 aktywnych arkuszy, 722 jednostki postępu i 195 diagramów.
+`Matura2019ContentTests` kontroluje źródła, sumy SHA-256, kontrakt `34/34/50`, strony, punktację, tryby odpowiedzi, odpowiedź liczbową i osiem używanych diagramów. Testy katalogu, UI i smoke testu kontrolują 32 aktywne arkusze, 889 jednostek postępu i 226 diagramów.
 
-Grupa `cke-2019-main-basic-exam` oraz katalog `runtime-vector-diagrams` mają status `approved`. Manifest ma `releaseEligible=true` na podstawie rozszerzenia deklaracji właściciela z 1 września 2026 r. Każda zmiana źródeł, zakresu lub sposobu pakowania wymaga ponownej oceny i pełnej bramy proweniencji.
+Grupa `cke-2019-main-basic-exam` zachowuje status `approved`. Wspólny katalog `runtime-vector-diagrams` ma obecnie status `blocked`, ponieważ obejmuje także pochodne diagramy z nieobjętych deklaracją arkuszy 2017 i 2016. Manifest ma więc `releaseEligible=false`; status tej historycznej grupy 2019 nie uległ zmianie. Każda zmiana źródeł, zakresu lub sposobu pakowania wymaga ponownej oceny i pełnej bramy proweniencji.

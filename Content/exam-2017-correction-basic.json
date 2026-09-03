@@ -1,0 +1,979 @@
+{
+  "schemaVersion": 4,
+  "exam": {
+    "id": "matura-poprawkowa-2017-podstawowa",
+    "title": "Matura poprawkowa 2017 - poziom podstawowy (Formuła 2015)",
+    "progressLabel": "Matura poprawkowa 2017 PP (F2015)",
+    "year": 2017,
+    "session": "poprawkowa",
+    "formula": "2015",
+    "level": "basic",
+    "durationMinutes": 170,
+    "maximumPoints": 50,
+    "officialTaskCount": 34,
+    "progressItemCount": 34,
+    "introduction": [
+      {
+        "type": "richText",
+        "text": "Arkusz poprawkowy z matematyki na poziomie podstawowym z 22 sierpnia 2017 r. w Formule 2015 obejmuje 34 zadania, 50 punktów i 170 minut."
+      },
+      {
+        "type": "richText",
+        "text": "Treść zadań, odpowiedzi, rozwiązań i kryteriów pochodzi z zachowanego publicznego archiwum arkusza i zasad oceniania. Publiczna redystrybucja tej nowej transkrypcji oczekuje na odrębne rozszerzenie deklaracji praw właściciela."
+      }
+    ],
+    "topicIntroduction": [],
+    "source": {
+      "publisher": "Centralna Komisja Egzaminacyjna",
+      "documentCode": "MMA-P1_1P-174",
+      "examDate": "2017-08-22",
+      "questionPaperUrl": "https://arkusze.pl/maturalne/matematyka-2017-sierpien-poprawkowa-podstawowa.pdf",
+      "questionPaperSha256": "D3975FF6D80430737C1D7186143BFC79F42EFBA06E749128447E2D39E42BD4A9",
+      "answerKeyUrl": "https://arkusze.pl/maturalne/matematyka-2017-sierpien-poprawkowa-podstawowa-odpowiedzi.pdf",
+      "answerKeySha256": "1295525A054ECDD6E1CF132AD4C13B54E29C79AAFC63C723508061A7C211266C",
+      "verifiedOn": "2026-09-01"
+    },
+    "topics": [],
+    "exercises": [
+      {
+        "id": "mm17-p0p-z01",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 1,
+        "displayNumber": "1",
+        "order": 1,
+        "points": 1,
+        "title": "Zadanie 1",
+        "topicId": "percentages",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Niech a = -2, b = 3. Wartość aᵇ - bᵃ jest równa:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "aᵇ - bᵃ = (-2)³ - 3⁻² = -8 - 1/9 = -73/9. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "73/9",
+          "71/9",
+          "-73/9",
+          "-71/9"
+        ],
+        "correctOption": 3,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z02",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 2,
+        "displayNumber": "2",
+        "order": 2,
+        "points": 1,
+        "title": "Zadanie 2",
+        "topicId": "powers",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Liczba 9⁹ · 81² jest równa:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "81² = 9⁴, zatem 9⁹ · 9⁴ = 9¹³. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "81⁴",
+          "81",
+          "9¹³",
+          "9³⁶"
+        ],
+        "correctOption": 3,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z03",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 3,
+        "displayNumber": "3",
+        "order": 3,
+        "points": 1,
+        "title": "Zadanie 3",
+        "topicId": "logarithms",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Wartość log₄8 + 5log₄2 jest równa:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "log₄8 = 3/2, a 5log₄2 = 5/2. Suma wynosi 4. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "2",
+          "4",
+          "2 + log₄5",
+          "1 + log₄10"
+        ],
+        "correctOption": 2,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z04",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 4,
+        "displayNumber": "4",
+        "order": 4,
+        "points": 1,
+        "title": "Zadanie 4",
+        "topicId": "percentages",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Promień pierwszego koła jest większy od promienia drugiego o 30%. Pole pierwszego jest większe:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Pole zmienia się jak kwadrat promienia: 1,3² = 1,69, czyli wzrost o 69%. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "o mniej niż 50%, ale więcej niż 40%",
+          "o mniej niż 60%, ale więcej niż 50%",
+          "dokładnie o 60%",
+          "o więcej niż 60%"
+        ],
+        "correctOption": 4,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z05",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 5,
+        "displayNumber": "5",
+        "order": 5,
+        "points": 1,
+        "title": "Zadanie 5",
+        "topicId": "powers",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Liczba (2√7 - 5)² · (2√7 + 5)² jest równa:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Jest to ((2√7)² - 5²)² = (28 - 25)² = 9. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "9",
+          "3",
+          "2809",
+          "28 - 20√7"
+        ],
+        "correctOption": 1,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z06",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 6,
+        "displayNumber": "6",
+        "order": 6,
+        "points": 1,
+        "title": "Zadanie 6",
+        "topicId": "inequalities",
+        "sourcePage": 4,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Wskaż zbiór liczb spełniających 11 ≤ 2x - 7 ≤ 15.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Dodajemy 7, a następnie dzielimy przez 2: 9 ≤ x ≤ 11. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "[-11, -9]",
+          "[9, 11] z wyłączeniem końców",
+          "[-11, -9]",
+          "[9, 11]"
+        ],
+        "correctOption": 4,
+        "diagramIds": [
+          "exam-mm17-p0p-z06"
+        ]
+      },
+      {
+        "id": "mm17-p0p-z07",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 7,
+        "displayNumber": "7",
+        "order": 7,
+        "points": 1,
+        "title": "Zadanie 7",
+        "topicId": "equations",
+        "sourcePage": 4,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Prostokąt ma obwód 60, a jeden bok jest o 10 dłuższy od drugiego. Który układ równań opisuje dane?",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Obwód daje 2(a + b) = 60, a różnica boków b - a = 10, czyli a + 10 = b. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "2(a + b) = 60 oraz a + 10 = b",
+          "2a + b = 60 oraz 10b = a",
+          "2ab = 60 oraz a - b = 10",
+          "2(a + b) = 60 oraz 10a = b"
+        ],
+        "correctOption": 1,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z08",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 8,
+        "displayNumber": "8",
+        "order": 8,
+        "points": 1,
+        "title": "Zadanie 8",
+        "topicId": "equations",
+        "sourcePage": 4,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Rozwiązaniem równania (x + 1)/(x + 2) = 3, gdzie x ≠ -2, jest liczba należąca do przedziału:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "x + 1 = 3x + 6, zatem x = -5/2. Leży on w przedziale ⟨-5, -2). Odpowiedź D.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "(-2, 1)",
+          "⟨1, +∞)",
+          "(-∞, -5)",
+          "⟨-5, -2)"
+        ],
+        "correctOption": 4,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z09",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 9,
+        "displayNumber": "9",
+        "order": 9,
+        "points": 1,
+        "title": "Zadanie 9",
+        "topicId": "percentages",
+        "sourcePage": 4,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Linię długości 100 m rozcięto na części w stosunku 3:4:5. Najdłuższa część ma długość:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Suma części to 12, więc najdłuższa ma długość 100·5/12 = 125/3 = 41 2/3. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "41 2/3 m",
+          "33 1/3 m",
+          "60 m",
+          "25 m"
+        ],
+        "correctOption": 1,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z10",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 10,
+        "displayNumber": "10",
+        "order": 10,
+        "points": 1,
+        "title": "Zadanie 10",
+        "topicId": "quadratic-function",
+        "sourcePage": 6,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Na rysunku jest wykres f(x) = x² + bx + c. Które warunki spełniają b i c?",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Wierzchołek leży na prawo od osi Oy, więc -b/2 > 0 i b < 0. Punkt przecięcia z Oy leży powyżej Ox, więc c > 0. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "b < 0, c > 0",
+          "b < 0, c < 0",
+          "b > 0, c > 0",
+          "b > 0, c < 0"
+        ],
+        "correctOption": 1,
+        "diagramIds": [
+          "exam-mm17-p0p-z10"
+        ]
+      },
+      {
+        "id": "mm17-p0p-z11",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 11,
+        "displayNumber": "11",
+        "order": 11,
+        "points": 1,
+        "title": "Zadanie 11",
+        "topicId": "sequences",
+        "sourcePage": 6,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Ciąg arytmetyczny spełnia a₁ = 2 i a₂ = 9. Dla jakiego n zachodzi aₙ = 79?",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Różnica wynosi 7, więc 2 + 7(n - 1) = 79. Stąd n = 12. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "10",
+          "11",
+          "12",
+          "13"
+        ],
+        "correctOption": 3,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z12",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 12,
+        "displayNumber": "12",
+        "order": 12,
+        "points": 1,
+        "title": "Zadanie 12",
+        "topicId": "sequences",
+        "sourcePage": 6,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Dany jest dodatni ciąg geometryczny (81, 3x, 4). Wtedy:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "(3x)² = 81·4, więc 9x² = 324 i z dodatniości x = 6. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "x = 18",
+          "x = 6",
+          "x = 85/6",
+          "x = 6/85"
+        ],
+        "correctOption": 2,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z13",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 13,
+        "displayNumber": "13",
+        "order": 13,
+        "points": 1,
+        "title": "Zadanie 13",
+        "topicId": "trigonometry",
+        "sourcePage": 6,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Kąt α jest ostry i sin α = 2√6/7. Wtedy cos α jest równy:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "cos² α = 1 - 24/49 = 25/49. Kąt jest ostry, więc cos α = 5/7. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "24/49",
+          "5/7",
+          "25/49",
+          "5√6/7"
+        ],
+        "correctOption": 2,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z14",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 14,
+        "displayNumber": "14",
+        "order": 14,
+        "points": 1,
+        "title": "Zadanie 14",
+        "topicId": "plane-geometry",
+        "sourcePage": 8,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Na okręgu leżą A, B, C. ∠ABC = 121°, a ∠BOC = 40°. Miara ∠AOB wynosi:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Kąt wpisany ABC opiera się na łuku AC bez B o mierze 242°. Pozostały łuk AC ma 118°, z czego łuk BC ma 40°, więc łuk AB ma 78°. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "59°",
+          "50°",
+          "81°",
+          "78°"
+        ],
+        "correctOption": 4,
+        "diagramIds": [
+          "exam-mm17-p0p-z14"
+        ]
+      },
+      {
+        "id": "mm17-p0p-z15",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 15,
+        "displayNumber": "15",
+        "order": 15,
+        "points": 1,
+        "title": "Zadanie 15",
+        "topicId": "plane-geometry",
+        "sourcePage": 8,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "W trójkącie ABC, D leży na BC, E na AC, DE ∥ AB, AE = DE = 4 i AB = 6. Długość CE wynosi:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Z podobieństwa CDE i CBA: DE/AB = CE/CA = 4/6. Ponieważ CA = CE + 4, otrzymujemy CE/(CE + 4) = 2/3, więc CE = 8. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "16/3",
+          "8/3",
+          "8",
+          "6"
+        ],
+        "correctOption": 3,
+        "diagramIds": [
+          "exam-mm17-p0p-z15"
+        ]
+      },
+      {
+        "id": "mm17-p0p-z16",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 16,
+        "displayNumber": "16",
+        "order": 16,
+        "points": 1,
+        "title": "Zadanie 16",
+        "topicId": "plane-geometry",
+        "sourcePage": 8,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Pole trójkąta równobocznego jest równe 6√3. Długość jego boku wynosi:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "√3a²/4 = 6√3, więc a² = 24 i a = 2√6. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "3√2",
+          "2√3",
+          "2√6",
+          "6√2"
+        ],
+        "correctOption": 3,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z17",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 17,
+        "displayNumber": "17",
+        "order": 17,
+        "points": 1,
+        "title": "Zadanie 17",
+        "topicId": "lines-and-segments",
+        "sourcePage": 10,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Punkty B = (-2, 4) i C = (5, 1) są sąsiednimi wierzchołkami kwadratu. Pole tego kwadratu wynosi:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "|BC|² = 7² + (-3)² = 58, a pole kwadratu jest równe kwadratowi boku. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "29",
+          "40",
+          "58",
+          "74"
+        ],
+        "correctOption": 3,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z18",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 18,
+        "displayNumber": "18",
+        "order": 18,
+        "points": 1,
+        "title": "Zadanie 18",
+        "topicId": "solid-geometry",
+        "sourcePage": 10,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "W ostrosłupie prawidłowym czworokątnym kąt nachylenia krawędzi SA do podstawy ABCD to:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Rzutem krawędzi SA na płaszczyznę podstawy jest AO. Szukany kąt tworzą SA i AO. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "∠SAO",
+          "∠SAB",
+          "∠SOA",
+          "∠ASB"
+        ],
+        "correctOption": 1,
+        "diagramIds": [
+          "exam-mm17-p0p-z18"
+        ]
+      },
+      {
+        "id": "mm17-p0p-z19",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 19,
+        "displayNumber": "19",
+        "order": 19,
+        "points": 1,
+        "title": "Zadanie 19",
+        "topicId": "solid-geometry",
+        "sourcePage": 10,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Graniastosłup ma 14 wierzchołków. Liczba jego krawędzi jest równa:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Podstawa ma 7 boków, a graniastosłup ma 3·7 = 21 krawędzi. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "14",
+          "21",
+          "28",
+          "26"
+        ],
+        "correctOption": 2,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z20",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 20,
+        "displayNumber": "20",
+        "order": 20,
+        "points": 1,
+        "title": "Zadanie 20",
+        "topicId": "lines-and-segments",
+        "sourcePage": 10,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Prosta k przechodzi przez A = (4, -4) i jest prostopadła do osi Ox. Ma równanie:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Prosta prostopadła do osi Ox jest pionowa i ma stałą współrzędną x = 4. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "x - 4 = 0",
+          "x - y = 0",
+          "y + 4 = 0",
+          "x + y = 0"
+        ],
+        "correctOption": 1,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z21",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 21,
+        "displayNumber": "21",
+        "order": 21,
+        "points": 1,
+        "title": "Zadanie 21",
+        "topicId": "lines-and-segments",
+        "sourcePage": 12,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Prosta l jest nachylona do osi Ox pod kątem 30° i przecina Oy w punkcie (0, -√3). Ma równanie:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Współczynnik kierunkowy to tan 30° = √3/3, a wyraz wolny -√3. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "y = √3x/3 - √3",
+          "y = √3x/3 + √3",
+          "y = x/2 - √3",
+          "y = x/2 + √3"
+        ],
+        "correctOption": 1,
+        "diagramIds": [
+          "exam-mm17-p0p-z21"
+        ]
+      },
+      {
+        "id": "mm17-p0p-z22",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 22,
+        "displayNumber": "22",
+        "order": 22,
+        "points": 1,
+        "title": "Zadanie 22",
+        "topicId": "solid-geometry",
+        "sourcePage": 12,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Stożek ma wysokość 6 i tworzącą 3√5. Jego objętość jest równa:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "r² = (3√5)² - 6² = 9, więc V = π·9·6/3 = 18π. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "36π",
+          "18π",
+          "108π",
+          "54π"
+        ],
+        "correctOption": 2,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z23",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 23,
+        "displayNumber": "23",
+        "order": 23,
+        "points": 1,
+        "title": "Zadanie 23",
+        "topicId": "statistics",
+        "sourcePage": 12,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Średnia danych x, 2, 4, 6, 8, 10, 12, 14 wynosi 9. Mediana jest równa:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Suma wszystkich danych wynosi 72, więc x = 16. Po uporządkowaniu środkowe dane to 8 i 10, a mediana 9. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "8",
+          "9",
+          "10",
+          "16"
+        ],
+        "correctOption": 2,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z24",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 24,
+        "displayNumber": "24",
+        "order": 24,
+        "points": 1,
+        "title": "Zadanie 24",
+        "topicId": "combinatorics",
+        "sourcePage": 12,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Ile jest czterocyfrowych liczb naturalnych mniejszych niż 2017?",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Są to liczby od 1000 do 2016, zatem jest ich 2016 - 1000 + 1 = 1017. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "2016",
+          "2017",
+          "1016",
+          "1017"
+        ],
+        "correctOption": 4,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z25",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 25,
+        "displayNumber": "25",
+        "order": 25,
+        "points": 1,
+        "title": "Zadanie 25",
+        "topicId": "probability",
+        "sourcePage": 12,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "W pudełku jest 6 kul białych i n czarnych. Prawdopodobieństwo wylosowania białej kuli wynosi 1/3. Liczba kul czarnych wynosi:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "6/(6 + n) = 1/3, zatem 18 = 6 + n i n = 12. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "9",
+          "2",
+          "18",
+          "12"
+        ],
+        "correctOption": 4,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z26",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 26,
+        "displayNumber": "26",
+        "order": 26,
+        "points": 2,
+        "title": "Zadanie 26",
+        "topicId": "inequalities",
+        "sourcePage": 14,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "Rozwiąż nierówność 2x² + x - 6 ≤ 0.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "2x² + x - 6 = (2x - 3)(x + 2). Parabola jest skierowana w górę, więc rozwiązaniem jest przedział ⟨-2, 3/2⟩.",
+        "scoringCriteria": "2 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z27",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 27,
+        "displayNumber": "27",
+        "order": 27,
+        "points": 2,
+        "title": "Zadanie 27",
+        "topicId": "equations",
+        "sourcePage": 15,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "Rozwiąż równanie (x² - 6)(3x + 2) = 0.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Z pierwszego czynnika mamy x = ±√6, a z drugiego x = -2/3. Zbiór rozwiązań to {-√6, √6, -2/3}.",
+        "scoringCriteria": "2 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z28",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 28,
+        "displayNumber": "28",
+        "order": 28,
+        "points": 2,
+        "title": "Zadanie 28",
+        "topicId": "proofs",
+        "sourcePage": 16,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "Udowodnij, że dla każdej dodatniej liczby rzeczywistej x zachodzi x + 1/(4x) ≥ 1.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Po pomnożeniu przez 4x > 0 otrzymujemy 4x² + 1 ≥ 4x, czyli (2x - 1)² ≥ 0. To kończy dowód.",
+        "scoringCriteria": "2 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z29",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 29,
+        "displayNumber": "29",
+        "order": 29,
+        "points": 2,
+        "title": "Zadanie 29",
+        "topicId": "proofs",
+        "sourcePage": 17,
+        "solutionSourcePage": 7,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "W trójkącie prostokątnym ABC, ∠ACB = 90°, ∠ABC = 60°, a D jest rzutem C na AB. Wykaż, że AD : DB = 3 : 1.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Dla wysokości na przeciwprostokątną zachodzi AD = AC²/AB i DB = BC²/AB. W trójkącie 30°-60°-90° mamy AC:BC = √3:1, więc AD:DB = AC²:BC² = 3:1.",
+        "scoringCriteria": "2 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z30",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 30,
+        "displayNumber": "30",
+        "order": 30,
+        "points": 2,
+        "title": "Zadanie 30",
+        "topicId": "probability",
+        "sourcePage": 18,
+        "solutionSourcePage": 10,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "numeric",
+        "prompt": "Ze zbioru {1, 2, 4, 5, 10} losujemy dwa razy ze zwracaniem. Oblicz prawdopodobieństwo, że iloraz pierwszej liczby przez drugą jest całkowity.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Spośród 25 uporządkowanych par 12 daje całkowity iloraz pierwszej liczby przez drugą. Zatem P = 12/25.",
+        "scoringCriteria": "2 pkt - poprawny wynik 12/25. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "expectedValue": 0.48,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z31",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 31,
+        "displayNumber": "31",
+        "order": 31,
+        "points": 2,
+        "title": "Zadanie 31",
+        "topicId": "sequences",
+        "sourcePage": 19,
+        "solutionSourcePage": 12,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "numeric",
+        "prompt": "Ciąg arytmetyczny spełnia a₂₁ + a₂₄ + a₂₇ + a₃₀ = 100. Oblicz a₂₅ + a₂₆.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Suma a₂₁ + a₂₄ + a₂₇ + a₃₀ jest równa 2(a₂₅ + a₂₆), więc a₂₅ + a₂₆ = 50.",
+        "scoringCriteria": "2 pkt - poprawny wynik 50. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "expectedValue": 50,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z32",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 32,
+        "displayNumber": "32",
+        "order": 32,
+        "points": 4,
+        "title": "Zadanie 32",
+        "topicId": "quadratic-function",
+        "sourcePage": 20,
+        "solutionSourcePage": 13,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "numeric",
+        "prompt": "Funkcja kwadratowa ma miejsca zerowe -2 i 6 oraz przechodzi przez A = (1, -5). Oblicz jej najmniejszą wartość.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "f(x) = a(x + 2)(x - 6). Z warunku f(1) = -5 wynika -15a = -5, więc a = 1/3. Wierzchołek ma x = 2 i f(2) = (1/3)·4·(-4) = -16/3.",
+        "scoringCriteria": "4 pkt - poprawny wynik -16/3. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "expectedValue": -5.333333333333333,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z33",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 33,
+        "displayNumber": "33",
+        "order": 33,
+        "points": 4,
+        "title": "Zadanie 33",
+        "topicId": "lines-and-segments",
+        "sourcePage": 22,
+        "solutionSourcePage": 16,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "C = (0, 0) jest wierzchołkiem trójkąta prostokątnego, A leży na Ox, B na Oy, a wysokość z C przecina AB w D = (3, 4). Oblicz A, B oraz |AB|.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Niech A = (a, 0), B = (0, b). Prosta wysokości CD ma nachylenie 4/3, więc AB ma nachylenie -3/4. Z równania prostej przez D dostajemy A = (25/3, 0), B = (0, 25/4), a |AB| = 125/12.",
+        "scoringCriteria": "4 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0p-z34",
+        "examId": "matura-poprawkowa-2017-podstawowa",
+        "number": 34,
+        "displayNumber": "34",
+        "order": 34,
+        "points": 5,
+        "title": "Zadanie 34",
+        "topicId": "solid-geometry",
+        "sourcePage": 24,
+        "solutionSourcePage": 19,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "numeric",
+        "prompt": "Podstawa graniastosłupa prostego jest trójkątem prostokątnym o stosunku przyprostokątnych 4:3, a promień okręgu opisanego na podstawie wynosi 5. Pole ściany bocznej o dłuższej przyprostokątnej wynosi 48. Oblicz objętość.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Przeciwprostokątna ma długość 10, więc przyprostokątne 6 i 8. Z pola ściany 6h = 48 wynika h = 8. Objętość to (1/2)·6·8·8 = 192.",
+        "scoringCriteria": "5 pkt - poprawny wynik 192. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "expectedValue": 192,
+        "diagramIds": []
+      }
+    ]
+  }
+}

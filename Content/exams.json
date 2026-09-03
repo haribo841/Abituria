@@ -207,6 +207,48 @@
       "level": "basic",
       "order": 26,
       "isActive": true
+    },
+    {
+      "id": "matura-maj-2017-podstawowa",
+      "contentPath": "Content/exam-2017-main-basic.json",
+      "level": "basic",
+      "order": 27,
+      "isActive": true
+    },
+    {
+      "id": "matura-maj-2017-rozszerzona",
+      "contentPath": "Content/exam-2017-main-extended.json",
+      "level": "extended",
+      "order": 28,
+      "isActive": true
+    },
+    {
+      "id": "matura-poprawkowa-2017-podstawowa",
+      "contentPath": "Content/exam-2017-correction-basic.json",
+      "level": "basic",
+      "order": 29,
+      "isActive": true
+    },
+    {
+      "id": "matura-maj-2016-podstawowa",
+      "contentPath": "Content/exam-2016-main-basic.json",
+      "level": "basic",
+      "order": 30,
+      "isActive": true
+    },
+    {
+      "id": "matura-maj-2016-rozszerzona",
+      "contentPath": "Content/exam-2016-main-extended.json",
+      "level": "extended",
+      "order": 31,
+      "isActive": true
+    },
+    {
+      "id": "matura-poprawkowa-2016-podstawowa",
+      "contentPath": "Content/exam-2016-correction-basic.json",
+      "level": "basic",
+      "order": 32,
+      "isActive": true
     }
   ]
 }

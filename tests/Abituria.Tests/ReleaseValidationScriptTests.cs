@@ -161,7 +161,17 @@ public sealed class ReleaseValidationScriptTests
             "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/EMAP-P0-100-2205_compressed.pdf",
             "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/EMAP-P0-100-2205-zasady.pdf",
             "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/EMAP-R0-100-2205_compressed.pdf",
-            "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/EMAP-R0-100-2205-zasady.pdf"
+            "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/EMAP-R0-100-2205-zasady.pdf",
+            "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_od_2015/matematyka/MMA-P1_1P-172.pdf",
+            "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_od_2015/zasady_oceniania/MMA-P1-N.pdf",
+            "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_od_2015/matematyka/MMA-R1_1P-172.pdf",
+            "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_od_2015/zasady_oceniania/MMA-R1-N.pdf",
+            "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2016/Matematyka/MMA-P1_1P-162.pdf",
+            "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2016/Matematyka/MMA-P1-N.pdf",
+            "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2016/Matematyka/MMA-R1_1P-162.pdf",
+            "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2016/Matematyka/MMA-R1-N.pdf",
+            "https://arkusze.pl/maturalne/matematyka-2016-sierpien-poprawkowa-podstawowa.pdf",
+            "https://arkusze.pl/maturalne/matematyka-2016-sierpien-poprawkowa-podstawowa-odpowiedzi.pdf"
         ]);
     }
 

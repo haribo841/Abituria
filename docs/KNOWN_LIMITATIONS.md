@@ -4,8 +4,8 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 
 ## Status publikacji
 
-- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=true`. Wszystkie paczkowane transkrypcje arkuszy CKE oraz katalog `runtime-vector-diagrams` mają status `approved` na podstawie deklaracji właściciela z 1 września 2026 r. Każda zmiana źródła, zakresu lub sposobu pakowania wymaga ponownej oceny i pełnej bramy wydania.
-- Rzeczywiste autorstwo i źródła są przypisane w `Content/provenance.json`. Przed tagiem trzeba ponownie przejść bramę `-RequireReleaseEligible` na dokładnym commicie wydania.
+- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=false`. Trzy grupy arkuszy CKE z 2017 r., trzy grupy z 2016 r. oraz katalog `runtime-vector-diagrams` są `blocked`, ponieważ deklaracja właściciela z 1 września 2026 r. nie obejmuje nowo dodanych transkrypcji ani figur pochodnych. Każda zmiana źródła, zakresu lub sposobu pakowania wymaga ponownej oceny i pełnej bramy wydania.
+- Rzeczywiste autorstwo i źródła są przypisane w `Content/provenance.json`. Przed tagiem trzeba przejść bramę `-RequireReleaseEligible` na dokładnym commicie wydania, więc bieżący worktree nie jest kandydatem do wydania.
 - Lokalnie zbudowany artefakt nie jest oficjalnym wydaniem, nawet jeśli przechodzi testy techniczne.
 
 ## Platformy i dystrybucja

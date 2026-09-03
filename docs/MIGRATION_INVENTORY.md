@@ -36,7 +36,7 @@
 | Matura główna 2024 PR | nowe źródła CKE `MMAP-R0-100-A-2405` i `MMAP-R0-100-2405` | 13 zadań, 14 jednostek postępu, 50 punktów, rozwiązania, kryteria i 1 diagram wektorowy; nie pochodzi ze starego repozytorium |
 | Matura główna 2026 PP | nowe źródła CKE `MMAP-P0-100-A-2605` i `MMAP-P0-100-2605` | 33 zadania, 37 jednostek postępu, 50 punktów, rozwiązania, kryteria i 7 diagramów wektorowych; nie pochodzi ze starego repozytorium |
 | Matura główna 2026 PR | nowe źródła CKE `MMAP-R0-100-A-2605` i `MMAP-R0-100-2605` | 12 zadań, 13 jednostek postępu, 50 punktów, rozwiązania, kryteria i 3 diagramy wektorowe; nie pochodzi ze starego repozytorium |
-| Zadania według tematów | `ZadaniaPage.xaml` oraz nowy indeks arkuszy | 17 kategorii agregujących 722 jednostki postępu z dwudziestu sześciu arkuszy 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 i 2026 |
+| Zadania według tematów | `ZadaniaPage.xaml` oraz nowy indeks arkuszy | 17 kategorii agregujących 889 jednostek postępu z trzydziestu dwóch arkuszy 2016-2026 |
 | Brudnopis | pola tekstowe ekranów zadań | Wielowierszowe pole robocze przechowywane osobno dla profilu i zadania do zamknięcia aplikacji, z `Ctrl+V` lub `Cmd+V` i menu `Wklej` |
 | Zadania 1–28 | checkboxy i `correctAnsw` | Cztery opcje, sprawdzanie i zapis po poprawnej odpowiedzi |
 | Zadania 29–35 | `ShowAnsBtn`/`ConfirmBtn` | Tryb `revealOnly`; zapis po ujawnieniu odpowiedzi |

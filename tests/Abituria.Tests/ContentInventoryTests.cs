@@ -76,6 +76,18 @@ public sealed class ContentInventoryTests
         var extended2018 = extended2018Catalog.Exam;
         var correction2018Catalog = Read<ExamCatalog>("Content/exam-2018-correction-basic.json");
         var correction2018 = correction2018Catalog.Exam;
+        var basic2017Catalog = Read<ExamCatalog>("Content/exam-2017-main-basic.json");
+        var basic2017 = basic2017Catalog.Exam;
+        var extended2017Catalog = Read<ExamCatalog>("Content/exam-2017-main-extended.json");
+        var extended2017 = extended2017Catalog.Exam;
+        var correction2017Catalog = Read<ExamCatalog>("Content/exam-2017-correction-basic.json");
+        var correction2017 = correction2017Catalog.Exam;
+        var basic2016Catalog = Read<ExamCatalog>("Content/exam-2016-main-basic.json");
+        var basic2016 = basic2016Catalog.Exam;
+        var extended2016Catalog = Read<ExamCatalog>("Content/exam-2016-main-extended.json");
+        var extended2016 = extended2016Catalog.Exam;
+        var correction2016Catalog = Read<ExamCatalog>("Content/exam-2016-correction-basic.json");
+        var correction2016 = correction2016Catalog.Exam;
         var placeholders = Read<PlaceholderCatalog>("Content/placeholders.json");
         var roadmap = Read<RoadmapCatalog>("Content/roadmap.json");
 
@@ -111,6 +123,12 @@ public sealed class ContentInventoryTests
         Assert.Equal(4, basic2018Catalog.SchemaVersion);
         Assert.Equal(4, extended2018Catalog.SchemaVersion);
         Assert.Equal(4, correction2018Catalog.SchemaVersion);
+        Assert.Equal(4, basic2017Catalog.SchemaVersion);
+        Assert.Equal(4, extended2017Catalog.SchemaVersion);
+        Assert.Equal(4, correction2017Catalog.SchemaVersion);
+        Assert.Equal(4, basic2016Catalog.SchemaVersion);
+        Assert.Equal(4, extended2016Catalog.SchemaVersion);
+        Assert.Equal(4, correction2016Catalog.SchemaVersion);
         Assert.Equal(1, examIndex.SchemaVersion);
         Assert.Equal(17, examIndex.Topics.Count);
         Assert.Equal(
@@ -140,7 +158,13 @@ public sealed class ContentInventoryTests
                 "matura-poprawkowa-2019-podstawowa",
                 "matura-maj-2018-podstawowa",
                 "matura-maj-2018-rozszerzona",
-                "matura-poprawkowa-2018-podstawowa"
+                "matura-poprawkowa-2018-podstawowa",
+                "matura-maj-2017-podstawowa",
+                "matura-maj-2017-rozszerzona",
+                "matura-poprawkowa-2017-podstawowa",
+                "matura-maj-2016-podstawowa",
+                "matura-maj-2016-rozszerzona",
+                "matura-poprawkowa-2016-podstawowa"
             ],
             examIndex.Exams.OrderBy(item => item.Order).Select(item => item.Id));
         Assert.Equal(4, course.Groups.Count);
@@ -242,6 +266,24 @@ public sealed class ContentInventoryTests
         Assert.Equal(34, correction2018.Exercises.Count);
         Assert.Equal(34, correction2018.OfficialTaskCount);
         Assert.Equal(50, correction2018.MaximumPoints);
+        Assert.Equal(34, basic2017.Exercises.Count);
+        Assert.Equal(34, basic2017.OfficialTaskCount);
+        Assert.Equal(50, basic2017.MaximumPoints);
+        Assert.Equal(15, extended2017.Exercises.Count);
+        Assert.Equal(15, extended2017.OfficialTaskCount);
+        Assert.Equal(50, extended2017.MaximumPoints);
+        Assert.Equal(34, correction2017.Exercises.Count);
+        Assert.Equal(34, correction2017.OfficialTaskCount);
+        Assert.Equal(50, correction2017.MaximumPoints);
+        Assert.Equal(34, basic2016.Exercises.Count);
+        Assert.Equal(34, basic2016.OfficialTaskCount);
+        Assert.Equal(50, basic2016.MaximumPoints);
+        Assert.Equal(16, extended2016.Exercises.Count);
+        Assert.Equal(16, extended2016.OfficialTaskCount);
+        Assert.Equal(50, extended2016.MaximumPoints);
+        Assert.Equal(34, correction2016.Exercises.Count);
+        Assert.Equal(34, correction2016.OfficialTaskCount);
+        Assert.Equal(50, correction2016.MaximumPoints);
         Assert.Contains(roadmap.Items, item => item.Status == RoadmapStatus.Migrated);
         Assert.Contains(roadmap.Items, item => item.Status == RoadmapStatus.Planned);
         Assert.Contains(roadmap.Items, item => item.Status == RoadmapStatus.Superseded);
@@ -256,8 +298,8 @@ public sealed class ContentInventoryTests
 
         var diagrams = Read<DiagramCatalog>("Content/diagrams.json");
         Assert.Equal(1, diagrams.SchemaVersion);
-        Assert.Equal(195, diagrams.Diagrams.Count);
-        Assert.Equal(195, diagrams.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(226, diagrams.Diagrams.Count);
+        Assert.Equal(226, diagrams.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
     }
 
     [Fact]
@@ -390,6 +432,12 @@ public sealed class ContentInventoryTests
         var basic2018 = Read<ExamCatalog>("Content/exam-2018-main-basic.json").Exam;
         var extended2018 = Read<ExamCatalog>("Content/exam-2018-main-extended.json").Exam;
         var correction2018 = Read<ExamCatalog>("Content/exam-2018-correction-basic.json").Exam;
+        var basic2017 = Read<ExamCatalog>("Content/exam-2017-main-basic.json").Exam;
+        var extended2017 = Read<ExamCatalog>("Content/exam-2017-main-extended.json").Exam;
+        var correction2017 = Read<ExamCatalog>("Content/exam-2017-correction-basic.json").Exam;
+        var basic2016 = Read<ExamCatalog>("Content/exam-2016-main-basic.json").Exam;
+        var extended2016 = Read<ExamCatalog>("Content/exam-2016-main-extended.json").Exam;
+        var correction2016 = Read<ExamCatalog>("Content/exam-2016-correction-basic.json").Exam;
         var diagrams = Read<DiagramCatalog>("Content/diagrams.json");
         var referencedDiagramIds = formulas.Articles.SelectMany(item => item.Blocks)
             .Concat(course.Lessons.SelectMany(item => item.Blocks))
@@ -421,6 +469,12 @@ public sealed class ContentInventoryTests
             .Concat(basic2018.Exercises.SelectMany(item => item.DiagramIds))
             .Concat(extended2018.Exercises.SelectMany(item => item.DiagramIds))
             .Concat(correction2018.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(basic2017.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(extended2017.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(correction2017.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(basic2016.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(extended2016.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(correction2016.Exercises.SelectMany(item => item.DiagramIds))
             .Concat(courseExercises.Exercises.SelectMany(item => item.DiagramIds))
             .Distinct(StringComparer.Ordinal)
             .Order(StringComparer.Ordinal)
@@ -501,7 +555,13 @@ public sealed class ContentInventoryTests
             Read<ExamCatalog>("Content/exam-2019-correction-basic.json").Exam,
             Read<ExamCatalog>("Content/exam-2018-main-basic.json").Exam,
             Read<ExamCatalog>("Content/exam-2018-main-extended.json").Exam,
-            Read<ExamCatalog>("Content/exam-2018-correction-basic.json").Exam
+            Read<ExamCatalog>("Content/exam-2018-correction-basic.json").Exam,
+            Read<ExamCatalog>("Content/exam-2017-main-basic.json").Exam,
+            Read<ExamCatalog>("Content/exam-2017-main-extended.json").Exam,
+            Read<ExamCatalog>("Content/exam-2017-correction-basic.json").Exam,
+            Read<ExamCatalog>("Content/exam-2016-main-basic.json").Exam,
+            Read<ExamCatalog>("Content/exam-2016-main-extended.json").Exam,
+            Read<ExamCatalog>("Content/exam-2016-correction-basic.json").Exam
         };
         var placeholders = Read<PlaceholderCatalog>("Content/placeholders.json");
         var roadmap = Read<RoadmapCatalog>("Content/roadmap.json");

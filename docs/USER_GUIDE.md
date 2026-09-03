@@ -12,7 +12,7 @@ Górna nawigacja po zalogowaniu zawiera:
 
 - **Start** - skróty do głównych funkcji;
 - **Wzory** - tablice matematyczne;
-- **Matura** - wybór matur 2018-2026, na poziomie podstawowym lub rozszerzonym zależnie od roku, oraz archiwalnych placeholderów;
+- **Matura** - wybór matur 2016-2026, na poziomie podstawowym lub rozszerzonym zależnie od roku, oraz archiwalnych placeholderów;
 - **Zadania** - zadania z dwudziestu sześciu aktywnych arkuszy pogrupowane według 17 tematów;
 - **Działy** - materiały edukacyjne;
 - **Kalkulator** - funkcja kwadratowa i kalkulator ogólny;
@@ -108,7 +108,7 @@ Strona „Matura” pokazuje kolejno matury 2026 PP i PR, matury 2025 PP i PR or
 
 Strona „Zadania” agreguje dwadzieścia sześć aktywnych arkuszy według 17 tematów. Każdy wpis na liście pokazuje źródłowy arkusz. Losowanie tematyczne nie wychodzi poza wybrany temat, ale może zwrócić zadanie z 2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019 albo 2018. Strzałki poprzedniego i następnego zadania pozostają w puli wynikającej z drogi wejścia, a przycisk powrotu prowadzi odpowiednio do „Matury” lub „Zadań”.
 
-Lista oznacza ukończone zadania znakiem wyboru. Arkusze mają odpowiednio: 2026 PP `33/37/50`, 2026 PR `12/13/50`, 2025 PP `31/35/50`, 2025 PR `12/13/50`, poprawkowa 2025 PP `31/36/50`, 2024 PP `31/35/46`, 2024 PR `13/14/50`, poprawkowa 2024 PP `30/36/46`, 2023 PP `31/34/46`, poprawkowa 2023 PP `33/36/46`, 2023 PR `13/14/50`, 2022 PP Formuły 2015 `35/35/45`, 2022 PR Formuły 2015 `15/15/50`, poprawkowa 2022 PP Formuły 2015 `35/35/45`, 2021 PP Formuły 2015 `35/35/45`, 2021 PR Formuły 2015 `15/15/50`, poprawkowa 2021 `35/35/45`, 2020 PP Formuły 2015 `34/34/50`, 2020 PR Formuły 2015 `15/15/50`, poprawkowa 2020 PP Formuły 2015 `34/34/50`, 2019 PP Formuły 2015 `34/34/50`, 2019 PR Formuły 2015 `15/15/50`, poprawkowa 2019 PP Formuły 2015 `34/34/50`, 2018 PP Formuły 2015 `34/34/50`, 2018 PR Formuły 2015 `15/15/50` i poprawkowa 2018 PP Formuły 2015 `34/34/50`. Szczegóły źródeł i liczników zawierają osobne macierze pokrycia matur 2018-2026.
+Lista oznacza ukończone zadania znakiem wyboru. Arkusze mają odpowiednio: 2026 PP `33/37/50`, 2026 PR `12/13/50`, 2025 PP `31/35/50`, 2025 PR `12/13/50`, poprawkowa 2025 PP `31/36/50`, 2024 PP `31/35/46`, 2024 PR `13/14/50`, poprawkowa 2024 PP `30/36/46`, 2023 PP `31/34/46`, poprawkowa 2023 PP `33/36/46`, 2023 PR `13/14/50`, 2022 PP Formuły 2015 `35/35/45`, 2022 PR Formuły 2015 `15/15/50`, poprawkowa 2022 PP Formuły 2015 `35/35/45`, 2021 PP Formuły 2015 `35/35/45`, 2021 PR Formuły 2015 `15/15/50`, poprawkowa 2021 `35/35/45`, 2020 PP Formuły 2015 `34/34/50`, 2020 PR Formuły 2015 `15/15/50`, poprawkowa 2020 PP Formuły 2015 `34/34/50`, 2019 PP Formuły 2015 `34/34/50`, 2019 PR Formuły 2015 `15/15/50`, poprawkowa 2019 PP Formuły 2015 `34/34/50`, 2018 PP Formuły 2015 `34/34/50`, 2018 PR Formuły 2015 `15/15/50`, poprawkowa 2018 PP Formuły 2015 `34/34/50`, 2017 PP Formuły 2015 `34/34/50`, 2017 PR Formuły 2015 `15/15/50`, poprawkowa 2017 PP Formuły 2015 `34/34/50`, 2016 PP Formuły 2015 `34/34/50`, 2016 PR Formuły 2015 `16/16/50` i poprawkowa 2016 PP Formuły 2015 `34/34/50`. Szczegóły źródeł i liczników zawierają osobne macierze pokrycia matur 2016-2026.
 
 ### Tryby odpowiedzi
 

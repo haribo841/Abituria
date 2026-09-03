@@ -1,0 +1,982 @@
+{
+  "schemaVersion": 4,
+  "exam": {
+    "id": "matura-maj-2017-podstawowa",
+    "title": "Matura maj 2017 - poziom podstawowy (Formuła 2015)",
+    "progressLabel": "Matura maj 2017 PP (F2015)",
+    "year": 2017,
+    "session": "główna",
+    "formula": "2015",
+    "level": "basic",
+    "durationMinutes": 170,
+    "maximumPoints": 50,
+    "officialTaskCount": 34,
+    "progressItemCount": 34,
+    "introduction": [
+      {
+        "type": "richText",
+        "text": "Arkusz główny z matematyki na poziomie podstawowym z 5 maja 2017 r. w Formule 2015 obejmuje 34 zadania, 50 punktów i 170 minut."
+      },
+      {
+        "type": "richText",
+        "text": "Treść zadań, odpowiedzi, rozwiązań i kryteriów pochodzi z arkusza oraz zasad oceniania CKE. Publiczna redystrybucja tej nowej transkrypcji oczekuje na odrębne rozszerzenie deklaracji praw właściciela."
+      }
+    ],
+    "topicIntroduction": [],
+    "source": {
+      "publisher": "Centralna Komisja Egzaminacyjna",
+      "documentCode": "MMA-P1_1P-172",
+      "examDate": "2017-05-05",
+      "questionPaperUrl": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_od_2015/matematyka/MMA-P1_1P-172.pdf",
+      "questionPaperSha256": "AA9506313B735854BBFEC309F8C0C6496AD168E332AF63B9A58CDA7822F0BBAF",
+      "answerKeyUrl": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2017/formula_od_2015/zasady_oceniania/MMA-P1-N.pdf",
+      "answerKeySha256": "76866211FF1979E816A5F2091DB29ED0123D6921A51AE2BD2C928808601CD693",
+      "verifiedOn": "2026-09-01"
+    },
+    "topics": [],
+    "exercises": [
+      {
+        "id": "mm17-p0-z01",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 1,
+        "displayNumber": "1",
+        "order": 1,
+        "points": 1,
+        "title": "Zadanie 1",
+        "topicId": "powers",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Liczba 5⁸ · 16⁻² jest równa:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "16⁻² = 2⁻⁸, zatem 5⁸ · 2⁻⁸ = (5/2)⁸. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "(5/2)⁸",
+          "5/2",
+          "10⁸",
+          "10"
+        ],
+        "correctOption": 1,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z02",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 2,
+        "displayNumber": "2",
+        "order": 2,
+        "points": 1,
+        "title": "Zadanie 2",
+        "topicId": "powers",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Liczba ∛54 - ∛2 jest równa:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "∛54 = ∛(27·2) = 3∛2, więc różnica wynosi 2∛2. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "∛52",
+          "3",
+          "2∛2",
+          "2"
+        ],
+        "correctOption": 3,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z03",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 3,
+        "displayNumber": "3",
+        "order": 3,
+        "points": 1,
+        "title": "Zadanie 3",
+        "topicId": "logarithms",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Liczba 2 log₂3 - 2 log₂5 jest równa:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "2 log₂3 - 2 log₂5 = log₂9 - log₂25 = log₂(9/25). Odpowiedź A.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "log₂(9/25)",
+          "log₂(3/5)",
+          "log₂(9/5)",
+          "log₂(6/25)"
+        ],
+        "correctOption": 1,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z04",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 4,
+        "displayNumber": "4",
+        "order": 4,
+        "points": 1,
+        "title": "Zadanie 4",
+        "topicId": "percentages",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Liczba osobników wzrosła o 120% i wynosi 8910. Ile wynosiła przed wzrostem?",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Po wzroście liczba wynosi 220% wartości początkowej, więc 8910/2,2 = 4050. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "4050",
+          "1782",
+          "7425",
+          "7128"
+        ],
+        "correctOption": 1,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z05",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 5,
+        "displayNumber": "5",
+        "order": 5,
+        "points": 1,
+        "title": "Zadanie 5",
+        "topicId": "equations",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Równość (x√2 - 2)² = (2 + √2)² jest:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Dla x = -1 lewa strona to (-√2 - 2)² = (2 + √2)². Odpowiedź C.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "prawdziwa dla x = -√2",
+          "prawdziwa dla x = √2",
+          "prawdziwa dla x = -1",
+          "fałszywa dla każdej liczby x"
+        ],
+        "correctOption": 3,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z06",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 6,
+        "displayNumber": "6",
+        "order": 6,
+        "points": 1,
+        "title": "Zadanie 6",
+        "topicId": "inequalities",
+        "sourcePage": 4,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Do zbioru rozwiązań nierówności (x⁴ + 1)(2 - x) > 0 nie należy liczba:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Pierwszy czynnik jest zawsze dodatni, więc x < 2. Liczba 3 nie spełnia nierówności. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "-3",
+          "-1",
+          "1",
+          "3"
+        ],
+        "correctOption": 4,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z07",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 7,
+        "displayNumber": "7",
+        "order": 7,
+        "points": 1,
+        "title": "Zadanie 7",
+        "topicId": "inequalities",
+        "sourcePage": 4,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Wskaż zbiór rozwiązań nierówności 2 - 3x ≥ 4.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Po odjęciu 2 i podzieleniu przez -3, ze zmianą znaku nierówności, otrzymujemy x ≤ -2/3. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "x ≥ 2/3",
+          "x > 2/3",
+          "x < -2/3",
+          "x ≤ -2/3"
+        ],
+        "correctOption": 4,
+        "diagramIds": [
+          "exam-mm17-p0-z07"
+        ]
+      },
+      {
+        "id": "mm17-p0-z08",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 8,
+        "displayNumber": "8",
+        "order": 8,
+        "points": 1,
+        "title": "Zadanie 8",
+        "topicId": "equations",
+        "sourcePage": 4,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Ile rozwiązań rzeczywistych ma równanie x(x² - 4)(x² + 4) = 0?",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Rozwiązania rzeczywiste to -2, 0 i 2. Czynnik x² + 4 nie ma zer rzeczywistych. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "0",
+          "2",
+          "3",
+          "5"
+        ],
+        "correctOption": 3,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z09",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 9,
+        "displayNumber": "9",
+        "order": 9,
+        "points": 1,
+        "title": "Zadanie 9",
+        "topicId": "linear-function",
+        "sourcePage": 4,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Miejscem zerowym funkcji f(x) = √3(x + 1) - 12 jest:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "√3(x + 1) = 12, więc x + 1 = 4√3 oraz x = 4√3 - 1. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "√3 - 4",
+          "-2√3 + 1",
+          "4√3 - 1",
+          "-√3 + 12"
+        ],
+        "correctOption": 3,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z10",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 10,
+        "displayNumber": "10",
+        "order": 10,
+        "points": 1,
+        "title": "Zadanie 10",
+        "topicId": "quadratic-function",
+        "sourcePage": 6,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Na wykresie funkcji kwadratowej miejsca zerowe to -3 i 1. Współczynnik c wynosi:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Dla f(x) = (x + 3)(x - 1) wyraz wolny wynosi -3, lecz z wykresu parabola jest skierowana w dół: f(x) = -(x + 3)(x - 1), więc c = 3. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "correctOption": 3,
+        "diagramIds": [
+          "exam-mm17-p0-z10"
+        ]
+      },
+      {
+        "id": "mm17-p0-z11",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 11,
+        "displayNumber": "11",
+        "order": 11,
+        "points": 1,
+        "title": "Zadanie 11",
+        "topicId": "powers",
+        "sourcePage": 6,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Punkt A = (1, 2) należy do wykresu f(x) = aˣ. Podstawa a jest równa:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "f(1) = a, a punkt ma rzędną 2. Stąd a = 2. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "-1/2",
+          "1/2",
+          "-2",
+          "2"
+        ],
+        "correctOption": 4,
+        "diagramIds": [
+          "exam-mm17-p0-z11"
+        ]
+      },
+      {
+        "id": "mm17-p0-z12",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 12,
+        "displayNumber": "12",
+        "order": 12,
+        "points": 1,
+        "title": "Zadanie 12",
+        "topicId": "sequences",
+        "sourcePage": 6,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Dla ciągu arytmetycznego a₁ = 5 i a₂ = 11. Który wyraz jest równy 71?",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Różnica wynosi 6. Z równania 5 + 6(n - 1) = 71 otrzymujemy n = 12. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "a₁₄",
+          "a₁₂",
+          "a₁₁",
+          "a₁₀"
+        ],
+        "correctOption": 2,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z13",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 13,
+        "displayNumber": "13",
+        "order": 13,
+        "points": 1,
+        "title": "Zadanie 13",
+        "topicId": "sequences",
+        "sourcePage": 6,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Kolejne wyrazy ciągu geometrycznego to 24, 6, a - 1. Wtedy a jest równe:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Iloraz wynosi 1/4, więc trzeci wyraz to 3/2. Stąd a - 1 = 3/2 i a = 5/2. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "5/2",
+          "2/5",
+          "3/2",
+          "2/3"
+        ],
+        "correctOption": 1,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z14",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 14,
+        "displayNumber": "14",
+        "order": 14,
+        "points": 1,
+        "title": "Zadanie 14",
+        "topicId": "trigonometry",
+        "sourcePage": 8,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Jeżeli m = sin 50°, to m jest równe:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Korzystamy z tożsamości sin α = cos(90° - α): sin 50° = cos 40°. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "sin 40°",
+          "cos 40°",
+          "cos 50°",
+          "tg 50°"
+        ],
+        "correctOption": 2,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z15",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 15,
+        "displayNumber": "15",
+        "order": 15,
+        "points": 1,
+        "title": "Zadanie 15",
+        "topicId": "plane-geometry",
+        "sourcePage": 8,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "W okręgu AB jest średnicą, a kąt wpisany oparty na łuku ma 56°. Miara kąta środkowego α wynosi:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Kąt środkowy oparty na tym samym łuku jest dwa razy większy od kąta wpisanego: α = 112°. Odpowiedź C.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "56°",
+          "68°",
+          "112°",
+          "124°"
+        ],
+        "correctOption": 3,
+        "diagramIds": [
+          "exam-mm17-p0-z15"
+        ]
+      },
+      {
+        "id": "mm17-p0-z16",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 16,
+        "displayNumber": "16",
+        "order": 16,
+        "points": 1,
+        "title": "Zadanie 16",
+        "topicId": "plane-geometry",
+        "sourcePage": 8,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "W trójkącie ABC, DE ∥ AC, BD = 10, BC = 12 i AC = 24. Długość DE wynosi:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Trójkąty BDE i BCA są podobne w skali 10/12, więc DE = 24·10/12 = 20. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "22",
+          "20",
+          "12",
+          "11"
+        ],
+        "correctOption": 2,
+        "diagramIds": [
+          "exam-mm17-p0-z16"
+        ]
+      },
+      {
+        "id": "mm17-p0-z17",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 17,
+        "displayNumber": "17",
+        "order": 17,
+        "points": 1,
+        "title": "Zadanie 17",
+        "topicId": "plane-geometry",
+        "sourcePage": 10,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "W trójkącie z rysunku długość jednego boku wynosi a, a kąt ma 30°. Obwód trójkąta wynosi:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Z zależności w trójkącie 30°-60°-90° kolejne boki wyrażamy przez a. Ich suma wynosi a(3 + √3). Odpowiedź C.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "a(2 + √3)",
+          "a(1 + 2√3)",
+          "a(3 + √3)",
+          "a(2 + 2√3)"
+        ],
+        "correctOption": 3,
+        "diagramIds": [
+          "exam-mm17-p0-z17"
+        ]
+      },
+      {
+        "id": "mm17-p0-z18",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 18,
+        "displayNumber": "18",
+        "order": 18,
+        "points": 1,
+        "title": "Zadanie 18",
+        "topicId": "trigonometry",
+        "sourcePage": 10,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Prosta przechodzi przez A = (-2, 3) i początek układu. Tangens kąta jej nachylenia jest równy:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Współczynnik kierunkowy prostej wynosi 3/(-2) = -3/2. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "-2/3",
+          "-3/2",
+          "2/3",
+          "3/2"
+        ],
+        "correctOption": 2,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z19",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 19,
+        "displayNumber": "19",
+        "order": 19,
+        "points": 1,
+        "title": "Zadanie 19",
+        "topicId": "lines-and-segments",
+        "sourcePage": 10,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Prosta k ma równanie y = -x/4 + 17/2. Prosta prostopadła do k i przechodząca przez A = (-2, 4) ma równanie:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Prosta prostopadła ma współczynnik 4. Po podstawieniu punktu A otrzymujemy y = 4x + 12. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "y = x/4 + 17/2",
+          "y = -x/4 - 17/2",
+          "y = -4x + 12",
+          "y = 4x + 12"
+        ],
+        "correctOption": 4,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z20",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 20,
+        "displayNumber": "20",
+        "order": 20,
+        "points": 1,
+        "title": "Zadanie 20",
+        "topicId": "lines-and-segments",
+        "sourcePage": 12,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Dany jest okrąg o środku S = (2, 3) i promieniu 5. Który punkt leży na tym okręgu?",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Dla A zachodzi (-1 - 2)² + (7 - 3)² = 9 + 16 = 25. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "A = (-1, 7)",
+          "B = (-2, -3)",
+          "C = (3, 2)",
+          "D = (5, 3)"
+        ],
+        "correctOption": 1,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z21",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 21,
+        "displayNumber": "21",
+        "order": 21,
+        "points": 1,
+        "title": "Zadanie 21",
+        "topicId": "solid-geometry",
+        "sourcePage": 12,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Pole całkowite graniastosłupa prawidłowego czworokątnego wynosi 140, a wysokość jest trzy razy dłuższa od krawędzi podstawy. Krawędź podstawy ma długość:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Pola dają 2a² + 4a·3a = 14a² = 140, zatem a = √10. Odpowiedź A.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "√10",
+          "√30",
+          "4√2",
+          "4√3"
+        ],
+        "correctOption": 1,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z22",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 22,
+        "displayNumber": "22",
+        "order": 22,
+        "points": 1,
+        "title": "Zadanie 22",
+        "topicId": "solid-geometry",
+        "sourcePage": 14,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Promień AS podstawy walca jest równy wysokości OS. Sinus kąta OAS jest równy:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Trójkąt OAS jest prostokątny równoramienny, więc sin ∠OAS = √2/2. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "√3/2",
+          "√2/2",
+          "1/2",
+          "1"
+        ],
+        "correctOption": 2,
+        "diagramIds": [
+          "exam-mm17-p0-z22"
+        ]
+      },
+      {
+        "id": "mm17-p0-z23",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 23,
+        "displayNumber": "23",
+        "order": 23,
+        "points": 1,
+        "title": "Zadanie 23",
+        "topicId": "solid-geometry",
+        "sourcePage": 14,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Stożek ma wysokość 4 i średnicę podstawy 12. Jego objętość jest równa:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "r = 6, więc V = (1/3)π·6²·4 = 48π. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "576π",
+          "192π",
+          "144π",
+          "48π"
+        ],
+        "correctOption": 4,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z24",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 24,
+        "displayNumber": "24",
+        "order": 24,
+        "points": 1,
+        "title": "Zadanie 24",
+        "topicId": "statistics",
+        "sourcePage": 14,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Średnia arytmetyczna liczb 3, 5, 7, 9, x, 15, 17, 19 jest równa 11. Wtedy x jest równe:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Suma ma wynosić 88. Znane liczby dają 75, więc x = 13. Odpowiedź D.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "1",
+          "2",
+          "11",
+          "13"
+        ],
+        "correctOption": 4,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z25",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 25,
+        "displayNumber": "25",
+        "order": 25,
+        "points": 1,
+        "title": "Zadanie 25",
+        "topicId": "probability",
+        "sourcePage": 14,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "multipleChoice",
+        "prompt": "Ze zbioru liczb od 1 do 24 losujemy jedną liczbę. Prawdopodobieństwo wylosowania dzielnika liczby 24 wynosi:",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Liczba 24 ma osiem dodatnich dzielników, zatem P = 8/24 = 1/3. Odpowiedź B.",
+        "scoringCriteria": "1 pkt - poprawna odpowiedź. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "options": [
+          "1/4",
+          "1/3",
+          "1/8",
+          "1/6"
+        ],
+        "correctOption": 2,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z26",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 26,
+        "displayNumber": "26",
+        "order": 26,
+        "points": 2,
+        "title": "Zadanie 26",
+        "topicId": "inequalities",
+        "sourcePage": 16,
+        "solutionSourcePage": 6,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "Rozwiąż nierówność 8x² - 72x ≤ 0.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "8x(x - 9) ≤ 0. Ponieważ współczynnik przy x² jest dodatni, rozwiązaniem jest przedział [0, 9].",
+        "scoringCriteria": "2 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z27",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 27,
+        "displayNumber": "27",
+        "order": 27,
+        "points": 2,
+        "title": "Zadanie 27",
+        "topicId": "proofs",
+        "sourcePage": 17,
+        "solutionSourcePage": 8,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "Wykaż, że liczba 4²⁰¹⁷ + 4²⁰¹⁸ + 4²⁰¹⁹ + 4²⁰²⁰ jest podzielna przez 17.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Wyłączamy 4²⁰¹⁷: 4²⁰¹⁷(1 + 4 + 4² + 4³) = 4²⁰¹⁷·85 = 17·(5·4²⁰¹⁷), więc liczba jest podzielna przez 17.",
+        "scoringCriteria": "2 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z28",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 28,
+        "displayNumber": "28",
+        "order": 28,
+        "points": 2,
+        "title": "Zadanie 28",
+        "topicId": "proofs",
+        "sourcePage": 18,
+        "solutionSourcePage": 8,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "Dwa okręgi są styczne zewnętrznie i do wspólnej prostej stycznej. Wykaż, że α = 180° - 2β.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Promienie do punktów styczności są prostopadłe do AB. Z sum kątów w odpowiednich trójkątach i z równoległości promieni otrzymujemy α + 2β = 180°, czyli α = 180° - 2β.",
+        "scoringCriteria": "2 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z29",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 29,
+        "displayNumber": "29",
+        "order": 29,
+        "points": 4,
+        "title": "Zadanie 29",
+        "topicId": "quadratic-function",
+        "sourcePage": 19,
+        "solutionSourcePage": 13,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "numeric",
+        "prompt": "Funkcja kwadratowa ma wartość największą 6 oraz f(-3) = f(0) = 2. Oblicz współczynnik a.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Oś symetrii ma równanie x = -3/2. Zatem f(x) = a(x + 3/2)² + 6. Po podstawieniu f(0) = 2: 9a/4 + 6 = 2, więc a = -16/9.",
+        "scoringCriteria": "4 pkt - poprawny wynik -16/9. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "expectedValue": -1.7777777777777777,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z30",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 30,
+        "displayNumber": "30",
+        "order": 30,
+        "points": 2,
+        "title": "Zadanie 30",
+        "topicId": "plane-geometry",
+        "sourcePage": 20,
+        "solutionSourcePage": 15,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "numeric",
+        "prompt": "Przeciwprostokątna trójkąta prostokątnego ma długość 26 cm, a jedna przyprostokątna jest o 14 cm dłuższa od drugiej. Oblicz obwód trójkąta.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Dla przyprostokątnych x i x + 14: x² + (x + 14)² = 26². Stąd x = 10 i druga przyprostokątna wynosi 24. Obwód to 10 + 24 + 26 = 60.",
+        "scoringCriteria": "2 pkt - poprawny wynik 60. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "expectedValue": 60,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z31",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 31,
+        "displayNumber": "31",
+        "order": 31,
+        "points": 2,
+        "title": "Zadanie 31",
+        "topicId": "sequences",
+        "sourcePage": 21,
+        "solutionSourcePage": 16,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "numeric",
+        "prompt": "Dla ciągu arytmetycznego a₁ = 8 i S₃ = 33. Oblicz a₁₆ - a₁₃.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "S₃ = 3(a₁ + r) = 33, więc r = 3. Różnica a₁₆ - a₁₃ = 3r = 9.",
+        "scoringCriteria": "2 pkt - poprawny wynik 9. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "expectedValue": 9,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z32",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 32,
+        "displayNumber": "32",
+        "order": 32,
+        "points": 5,
+        "title": "Zadanie 32",
+        "topicId": "lines-and-segments",
+        "sourcePage": 22,
+        "solutionSourcePage": 17,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "numeric",
+        "prompt": "Dane są A = (-4, 0), M = (2, 9) i prosta k: y = -2x + 10. Punkt B jest przecięciem k z osią Ox, a C - przecięciem k z AM. Oblicz pole trójkąta ABC.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "B = (5, 0). Prosta AM ma równanie y = 3x/2 + 6, więc C = (8/7, 54/7). Pole o podstawie AB długości 9 i wysokości 54/7 wynosi 243/7.",
+        "scoringCriteria": "5 pkt - poprawny wynik 243/7. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "expectedValue": 34.714285714285715,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z33",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 33,
+        "displayNumber": "33",
+        "order": 33,
+        "points": 2,
+        "title": "Zadanie 33",
+        "topicId": "probability",
+        "sourcePage": 23,
+        "solutionSourcePage": 22,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "numeric",
+        "prompt": "Losujemy liczbę naturalną dwucyfrową. Oblicz prawdopodobieństwo, że jest mniejsza od 40 i podzielna przez 3.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Liczb dwucyfrowych jest 90. Sprzyjające to 12, 15, ..., 39, czyli 10 liczb. P = 10/90 = 1/9.",
+        "scoringCriteria": "2 pkt - poprawny wynik 1/9. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi.",
+        "expectedValue": 0.1111111111111111,
+        "diagramIds": []
+      },
+      {
+        "id": "mm17-p0-z34",
+        "examId": "matura-maj-2017-podstawowa",
+        "number": 34,
+        "displayNumber": "34",
+        "order": 34,
+        "points": 4,
+        "title": "Zadanie 34",
+        "topicId": "solid-geometry",
+        "sourcePage": 24,
+        "solutionSourcePage": 23,
+        "verificationSource": "CKE - arkusz i zasady oceniania, wersja zweryfikowana 2026-09-01",
+        "mode": "revealOnly",
+        "prompt": "W ostrosłupie prawidłowym trójkątnym wysokość ściany bocznej wynosi 5√3/4, a pole powierzchni bocznej 15√3/4. Oblicz objętość.",
+        "hints": [
+          "Wypisz dane i określ, czego szukasz.",
+          "Wykonaj przekształcenie krok po kroku, kontrolując warunki zadania."
+        ],
+        "solution": "Z pola bocznego wynika bok podstawy a = 2. Promień wpisanego w podstawę okręgu to √3/3, więc z twierdzenia Pitagorasa H = √209/(4√3). Pole podstawy wynosi √3, a objętość V = (1/3)·√3·√209/(4√3) = √209/12.",
+        "scoringCriteria": "4 pkt - pełne rozwiązanie zgodne z zasadami oceniania CKE. Częściowa punktacja zgodnie z kolejnymi poprawnymi krokami.",
+        "diagramIds": []
+      }
+    ]
+  }
+}
