@@ -26,8 +26,8 @@ public sealed class DiagramCatalogTests
 
         DiagramCatalogValidator.Validate(catalog);
         Assert.Equal(1, catalog.SchemaVersion);
-        Assert.Equal(226, catalog.Diagrams.Count);
-        Assert.Equal(226, catalog.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(249, catalog.Diagrams.Count);
+        Assert.Equal(249, catalog.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
         Assert.Equal(36, catalog.Diagrams.Count(item => item.SourceId == "cke-formula-2023"));
         Assert.Equal(9, catalog.Diagrams.Count(item => item.SourceId == "cke-2021-correction"));
         Assert.Equal(8, catalog.Diagrams.Count(item => item.SourceId == "cke-2021-main-basic"));
@@ -60,6 +60,17 @@ public sealed class DiagramCatalogTests
         Assert.Equal(7, catalog.Diagrams.Count(item => item.SourceId == "cke-2026-main-basic"));
         Assert.Equal(3, catalog.Diagrams.Count(item => item.SourceId == "cke-2026-main-extended"));
         Assert.Equal(9, catalog.Diagrams.Count(item => item.SourceId == "cke-2025-main-basic"));
+        Assert.Equal(4, catalog.Diagrams.Count(item => item.SourceId == "cke-2015-main-basic-exam"));
+        Assert.Equal(1, catalog.Diagrams.Count(item => item.SourceId == "cke-2015-main-extended-exam"));
+        Assert.Equal(2, catalog.Diagrams.Count(item => item.SourceId == "cke-2015-correction-basic-exam"));
+        Assert.Equal(3, catalog.Diagrams.Count(item => item.SourceId == "cke-2023-f2015-main-basic-exam"));
+        Assert.Equal(1, catalog.Diagrams.Count(item => item.SourceId == "cke-2023-f2015-main-extended-exam"));
+        Assert.Equal(2, catalog.Diagrams.Count(item => item.SourceId == "cke-2023-f2015-correction-basic-exam"));
+        Assert.Equal(3, catalog.Diagrams.Count(item => item.SourceId == "cke-2024-f2015-main-basic-exam"));
+        Assert.Equal(2, catalog.Diagrams.Count(item => item.SourceId == "cke-2024-f2015-correction-basic-exam"));
+        Assert.Equal(2, catalog.Diagrams.Count(item => item.SourceId == "cke-2025-f2015-main-basic-exam"));
+        Assert.Equal(1, catalog.Diagrams.Count(item => item.SourceId == "cke-2025-f2015-correction-basic-exam"));
+        Assert.Equal(2, catalog.Diagrams.Count(item => item.SourceId == "cke-2026-f2015-main-basic-exam"));
         Assert.Equal(4, catalog.Diagrams.Count(item => item.SourceId == "adam-course"));
         Assert.Equal(8, catalog.Diagrams.Count(item => item.SourceId == "legacy-vectors"));
         Assert.All(

@@ -60,6 +60,6 @@ Deklaracja wskazuje oba arkusze 2026, oba zestawy zasad oceniania, cztery adresy
 
 - `Matura2026ExtendedContentTests` sprawdza kontrakt `12/13/50`, źródła, sumy, etykiety, strony, punktację, tryby odpowiedzi, wyniki i trzy diagramy.
 - `Matura2026ContentTests` zachowuje kontrakt `33/37/50` poziomu podstawowego oraz komplet 35 zadań `mp21-*`.
-- `Matura2026UiTests` sprawdza trzydzieści dwa arkusze, 889 jednostek postępu, agregację 17 tematów, kontekst nawigacji, osobne liczniki i odpowiedzi złożone.
-- `DiagramCatalogTests` renderuje wszystkie 226 diagramów w trzech motywach i przy rozmiarach `720x520`, `960x640` oraz `1280x820`.
-- `ReleaseRuntimeTests` wymaga trzydziestu dwóch arkuszy i 889 jednostek postępu.
+- `Matura2026UiTests` sprawdza czterdzieści sześć arkuszy, 1 281 jednostek postępu, agregację 17 tematów, kontekst nawigacji, osobne liczniki i odpowiedzi złożone.
+- `DiagramCatalogTests` renderuje wszystkie 249 diagramów w trzech motywach i przy rozmiarach `720x520`, `960x640` oraz `1280x820`.
+- `ReleaseRuntimeTests` wymaga czterdziestu sześciu arkuszy i 1 281 jednostek postępu.

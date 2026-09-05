@@ -63,7 +63,7 @@ Suma punktów wynosi 46. Wszystkie identyfikatory mają mniej niż 80 znaków i 
 
 Content/exam-2024-main-basic.json zawiera tekst każdego zadania, wynik, pełne rozwiązanie, kryteria punktowania oraz strony obu dokumentów źródłowych. Tryby multipleChoice, numeric, compound i revealOnly są istniejącymi mechanizmami katalogu matur i nie wymagają zmiany schematu bazy.
 
-Jedenaście odwołań do diagramów w Content/diagrams.json odtwarza osie liczbowe zadania 1, układ prostych zadania 11, wykresy zadania 14, kąt zadania 18, figury zadań 20, 22 i 25, wykres słupkowy zadania 29 oraz układ wybiegów zadania 31. Każdy diagram jest deterministyczną definicją wektorową Avalonia z opisem alternatywnym i stroną źródłową. Aktualny katalog diagramów zawiera 226 definicji; nie dodano aktywnego rastra.
+Jedenaście odwołań do diagramów w Content/diagrams.json odtwarza osie liczbowe zadania 1, układ prostych zadania 11, wykresy zadania 14, kąt zadania 18, figury zadań 20, 22 i 25, wykres słupkowy zadania 29 oraz układ wybiegów zadania 31. Każdy diagram jest deterministyczną definicją wektorową Avalonia z opisem alternatywnym i stroną źródłową. Aktualny katalog diagramów zawiera 249 definicji; nie dodano aktywnego rastra.
 
 ## Walidacja
 
@@ -75,7 +75,7 @@ Matura2024BasicContentTests sprawdza:
 - kompletność 11 diagramów, opisów alternatywnych, źródeł i renderowania bez rastra;
 - zatwierdzoną proweniencję nowej transkrypcji.
 
-Testy interfejsu obejmują wybór trzydziestu dwóch arkuszy, losowanie ograniczone do wybranego arkusza, agregację 889 jednostek postępu według 17 tematów, powrót do właściwego kontekstu oraz osobny licznik Matura maj 2024 PP: x/35.
+Testy interfejsu obejmują wybór czterdziestu sześciu arkuszy, losowanie ograniczone do wybranego arkusza, agregację 1 281 jednostek postępu według 17 tematów, powrót do właściwego kontekstu oraz osobny licznik Matura maj 2024 PP: x/35.
 
 ## Prawa i wydanie
 

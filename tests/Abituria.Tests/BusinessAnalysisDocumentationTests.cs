@@ -41,7 +41,7 @@ public sealed class BusinessAnalysisDocumentationTests
             StringComparison.Ordinal);
         Assert.Contains("legacy/analiza-biznesowa-pelna.md", text, StringComparison.Ordinal);
         Assert.DoesNotContain("Issue #38", text, StringComparison.Ordinal);
-        Assert.Contains("razem 32 arkusze i 889 jednostek postępu", text, StringComparison.Ordinal);
+        Assert.Contains("razem 46 arkuszy i 1 281 jednostek postępu", text, StringComparison.Ordinal);
         Assert.Contains("releases/tag/v0.9.3", text, StringComparison.Ordinal);
         Assert.DoesNotContain("interfejs użytkownika: WPF", text, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("kalkulator może działać jako osobne okno", text, StringComparison.OrdinalIgnoreCase);

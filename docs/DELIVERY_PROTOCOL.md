@@ -12,9 +12,9 @@ Na podstawie tego poświadczenia historyczne przekazanie było autoryzowane prze
 
 Stan bieżącego procesu publikacji jest odrębny. Publiczny prerelease [`v0.9.0-beta.1`](https://github.com/haribo841/Abituria/releases/tag/v0.9.0-beta.1) zawiera paczki Windows, Ubuntu i macOS zweryfikowane przez build, testy, SonarCloud, dokumentację oraz instalacyjny smoke test na trzech systemach.
 
-Deklaracja właściciela została zapisana w `ASSET_RIGHTS_DECLARATION.md`, a rozszerzenia z 3 i 5 sierpnia 2026 r. obejmują arkusze CKE 2025 i 2026 na obu poziomach, ich zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Manifest dokładnego commita wydania miał `releaseEligible=true`; zwykły walidator i `Test-ContentProvenance.ps1 -RequireReleaseEligible` zakończyły się wtedy powodzeniem. Bieżący stan z późniejszą warstwą przykładów CKE oraz transkrypcjami matur 2024, 2017 i 2016 jest opisany osobno w `CONTENT_PROVENANCE.md`; przed rozszerzeniem deklaracji na 2017-2016 ma on `releaseEligible=false`.
+Deklaracja właściciela została zapisana w `ASSET_RIGHTS_DECLARATION.md`, a rozszerzenia z 3 i 5 sierpnia 2026 r. obejmują arkusze CKE 2025 i 2026 na obu poziomach, ich zasady oceniania oraz dziewiętnaście autorskich implementacji wektorowych Avalonia. Manifest dokładnego commita wydania miał `releaseEligible=true`; zwykły walidator i `Test-ContentProvenance.ps1 -RequireReleaseEligible` zakończyły się wtedy powodzeniem. Bieżący stan z późniejszą warstwą przykładów CKE oraz transkrypcjami matur 2024, 2017, 2016 i Formuły 2015 z 2015 oraz lat równoległych 2023-2026 jest opisany osobno w `CONTENT_PROVENANCE.md`; przed rozszerzeniem deklaracji ma on `releaseEligible=false`.
 
-Techniczna i formalna blokada proweniencji została usunięta dla historycznego wydania `0.9.3`. Bieżący worktree wymaga rozszerzenia deklaracji na arkusze 2017 i 2016; publikacja pozostaje procesem odrębnym od historycznego przekazania z 2022 r.
+Techniczna i formalna blokada proweniencji została usunięta dla historycznego wydania `0.9.3`. Bieżący worktree wymaga rozszerzenia deklaracji na arkusze 2017, 2016 oraz nowo dodane arkusze Formuły 2015 z 2015 i lat równoległych 2023-2026; publikacja pozostaje procesem odrębnym od historycznego przekazania z 2022 r.
 
 ## Dopuszczalne warianty przekazania
 

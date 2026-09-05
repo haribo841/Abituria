@@ -5,7 +5,7 @@ Abituria to działająca offline aplikacja desktopowa wspierająca naukę matema
 Bieżące publiczne wydanie beta: [`0.9.3`](https://github.com/haribo841/Abituria/releases/tag/v0.9.3).
 
 > [!IMPORTANT]
-> Wydanie `v0.9.3` powstało z commita o spełnionej bramie prawnej. Bieżący lokalny worktree ma `releaseEligible=false`, ponieważ dodane transkrypcje i diagramy arkuszy CKE 2017-2016 oczekują na odrębne rozszerzenie deklaracji praw właściciela. Nie należy z niego tworzyć publicznej paczki.
+> Wydanie `v0.9.3` powstało z commita o spełnionej bramie prawnej. Bieżący lokalny worktree ma `releaseEligible=false`, ponieważ transkrypcje arkuszy CKE z 2015-2017 oraz równoległej Formuły 2015 z lat 2023-2026 oczekują na odrębne rozszerzenie deklaracji praw właściciela. Nie należy z niego tworzyć publicznej paczki.
 
 ## Pobieranie
 
@@ -30,8 +30,8 @@ Artefakty są samowystarczalne i nie wymagają instalacji środowiska .NET. Wind
 - 18 tablic matematycznych zgodnych zakresem z oficjalnym dokumentem CKE dla Formuły 2023;
 - pełny kurs Formuły 2023: 4 grupy, 13 obszarów, 119 wymagań, 238 rozwiązanych przykładów i 357 ćwiczeń;
 - filtr poziomu podstawowego i rozszerzonego oraz tryby odpowiedzi: wybór, wynik liczbowy, odpowiedź złożona i ujawnienie rozwiązania;
-- matury główne PP i PR oraz poprawkowe PP Formuły 2015 z lat 2016-2022, matury Formuły 2023 z lat 2023-2026 oraz zachowane 35 zadań matury poprawkowej 2021 - łącznie 32 arkusze i 889 jednostek postępu;
-- wybór arkusza, losowanie w obrębie wybranego arkusza i agregacja trzydziestu dwóch arkuszy według 17 tematów;
+- matury główne PP i PR oraz poprawkowe PP Formuły 2015 z lat 2015-2025, główne PP i PR Formuły 2015 z 2026, równoległe matury Formuły 2023 z lat 2023-2026 oraz zachowane 35 zadań matury poprawkowej 2021 - łącznie 46 arkuszy i 1 281 jednostek postępu;
+- wybór arkusza, losowanie w obrębie wybranego arkusza i agregacja czterdziestu sześciu arkuszy według 17 tematów;
 - sprawdzanie odpowiedzi A-D, podpowiedzi, ujawnianie odpowiedzi i brudnopis przechowywany osobno dla profilu i zadania do zamknięcia aplikacji;
 - kalkulator ogólny z nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią, powtarzaniem `=` i automatycznym kopiowaniem wyniku;
 - pojedynczy kalkulator Picture in Picture w oknie nad Abiturią, oknie zawsze na wierzchu albo panelu aplikacji;
@@ -113,7 +113,8 @@ Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalneg
 | [Przekazanie](docs/DELIVERY_PROTOCOL.md) | publiczne wydanie albo ograniczona, prawnie dopuszczalna forma przekazania |
 | [Zależności](docs/DEPENDENCIES.md) | dokładnie rozwiązane pakiety produkcyjne i testowe |
 | [Pochodzenie treści](docs/CONTENT_PROVENANCE.md) | zasady dopuszczania treści, fontów i obrazów do paczek oraz oświadczenie o prawach |
-| [Plan archiwum matur 2026-2018](docs/MATURA_ARCHIVE_PLAN.md) | stan arkuszy na `origin/main` i lokalnie, braki oraz etapy uzupełnienia Formuł 2023 i 2015 |
+| [Plan archiwum matur 2026-2015](docs/MATURA_ARCHIVE_PLAN.md) | stan arkuszy na `origin/main` i lokalnie, braki oraz etapy uzupełnienia Formuł 2023 i 2015 |
+| [Pełne archiwum Formuły 2015](docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md) | 14 uzupełnionych arkuszy, przypięte źródła i SHA-256, 23 diagramy wektorowe oraz status proweniencji |
 | [Matura maj 2019 PP - Formuła 2015](docs/MATURA_2019_BASIC_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 34/34/50, diagramy i status proweniencji |
 | [Matura maj 2019 PR - Formuła 2015](docs/MATURA_2019_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 15/15/50, diagramy i status proweniencji |
 | [Matura poprawkowa 2019 PP - Formuła 2015](docs/MATURA_2019_CORRECTION_BASIC_COVERAGE.md) | przypięte źródła z archiwum publicznego, SHA-256, kontrakt 34/34/50, diagramy i status proweniencji |
@@ -136,7 +137,7 @@ Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalneg
 | [Wsparcie](SUPPORT.md) | zgłaszanie błędów i wymagane dane diagnostyczne |
 | [Bezpieczeństwo](SECURITY.md) | prywatne zgłoszenia podatności i wspierane wersje |
 
-Kompletność kursu rozwijanego w ramach Issue #3, zachowanie treści historycznego Issue #35 oraz regresje opisują [macierz kursu](docs/MATH_COURSE_2023_COVERAGE.md) i [inwentarz migracji](docs/MIGRATION_INVENTORY.md). Stan pełnego archiwum matur 2026-2018, w tym rozróżnienie Formuł 2023 i 2015, opisuje [plan archiwum](docs/MATURA_ARCHIVE_PLAN.md). Zakres arkuszy 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 i 2026 opisują osobne macierze poziomu podstawowego lub rozszerzonego wymienione powyżej. Wszystkie obecnie paczkowane arkusze są objęte deklaracją praw właściciela z 1 września 2026 r.
+Kompletność kursu rozwijanego w ramach Issue #3, zachowanie treści historycznego Issue #35 oraz regresje opisują [macierz kursu](docs/MATH_COURSE_2023_COVERAGE.md) i [inwentarz migracji](docs/MIGRATION_INVENTORY.md). Stan pełnego technicznego archiwum matur 2026-2015, w tym rozróżnienie Formuł 2023 i 2015, opisują [plan archiwum](docs/MATURA_ARCHIVE_PLAN.md) i [macierz Formuły 2015](docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md). Część nowych arkuszy i powiązanych diagramów pozostaje `blocked` w proweniencji, więc bieżący worktree nie jest podstawą publicznego wydania.
 
 ## Autor i licencje
 

@@ -1,91 +1,45 @@
-# Plan uzupełnienia archiwum matur 2026-2016
+# Katalog matur matematycznych Formuły 2015 i Formuły 2023
 
-## Cel i zakres
+## Stan katalogu
 
-Plan porządkuje archiwum oficjalnych arkuszy matematyki CKE od aktualnego roku 2026 do roku 2016 włącznie. Obejmuje wyłącznie:
+Katalog obejmuje wszystkie możliwe do zweryfikowania arkusze matematyki od wprowadzenia Formuły 2015 w 2015 r. do aktualnej sesji 2026 r. Aktywne są 46 arkusze i 1 281 osobno śledzonych jednostek postępu:
 
-- termin główny - poziom podstawowy i rozszerzony;
-- termin poprawkowy - poziom podstawowy.
+- 35 arkuszy Formuły 2015 - główne PP i PR z lat 2015-2026 oraz poprawkowe PP z lat 2015-2025;
+- 11 arkuszy Formuły 2023 - główne PP i PR z lat 2023-2026 oraz poprawkowe PP z lat 2023-2025.
 
-Matematyka na poziomie rozszerzonym nie jest przedmiotem obowiązkowym, dlatego nie istnieje osobny arkusz poprawkowy PR. Termin dodatkowy nie jest częścią tego planu.
-
-Arkusze od 2023 r. występują w dwóch formułach. Formuła 2023 jest przeznaczona dla osób zdających według nowej podstawy, natomiast Formuła 2015 pozostaje dostępna dla części osób zdających ponownie. Lata 2016-2022 należą wyłącznie do Formuły 2015. Aplikacja musi zawsze pokazywać formułę przy arkuszu, aby nie mieszać zakresów egzaminacyjnych.
-
-## Legenda stanu
-
-- **na `origin/main`** - arkusz jest opublikowany na gałęzi głównej;
-- **lokalnie, bez commita** - komplet zmian znajduje się w bieżącym worktree, ale nie jest jeszcze opublikowany;
-- **brak** - arkusz nie jest obecnie zaimplementowany;
-- **nie dotyczy** - dana formuła nie obowiązywała w tym roku.
-
-## Stan bieżący
-
-Na bieżącym worktree znajdują się 32 aktywne arkusze: 11 w Formule 2023 i 21 w Formule 2015. Katalog obejmuje matury główne i poprawkowe Formuły 2023 z lat 2023-2025, matury główne PP i PR z 2026 oraz pełny ciąg głównych PP i PR oraz poprawek PP Formuły 2015 z lat 2016-2022. Arkusze 2016 i 2017 są technicznie kompletne, lecz mają status `blocked` w `Content/provenance.json`; dlatego cały worktree ma `releaseEligible=false`.
+Arkusze poprawkowe obejmują wyłącznie poziom podstawowy. W chwili weryfikacji 4 września 2026 r. CKE nie opublikowała zasad oceniania dla obu poprawek z sierpnia 2026 r. Te dwa arkusze nie są aktywne, ponieważ nie zawieramy zgadywanych odpowiedzi, rozwiązań ani kryteriów punktowania.
 
 | Rok | F2023 główna PP | F2023 główna PR | F2023 poprawkowa PP | F2015 główna PP | F2015 główna PR | F2015 poprawkowa PP |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2026 | na `origin/main` | na `origin/main` | brak | brak | brak | brak |
-| 2025 | na `origin/main` | na `origin/main` | na `origin/main` | brak | brak | brak |
-| 2024 | na `origin/main` | na `origin/main` | na `origin/main` | brak | brak | brak |
-| 2023 | na `origin/main` | na `origin/main` | na `origin/main` | brak | brak | brak |
-| 2022 | nie dotyczy | nie dotyczy | nie dotyczy | na `origin/main` | na `origin/main` | na `origin/main` |
-| 2021 | nie dotyczy | nie dotyczy | nie dotyczy | na `origin/main` | na `origin/main` | na `origin/main` |
-| 2020 | nie dotyczy | nie dotyczy | nie dotyczy | na `origin/main` | na `origin/main` | na `origin/main` |
-| 2019 | nie dotyczy | nie dotyczy | nie dotyczy | na `origin/main` | na `origin/main` | na `origin/main` |
-| 2018 | nie dotyczy | nie dotyczy | nie dotyczy | na `origin/main` | na `origin/main` | na `origin/main` |
-| 2017 | nie dotyczy | nie dotyczy | nie dotyczy | lokalnie, bez commita | lokalnie, bez commita | lokalnie, bez commita |
-| 2016 | nie dotyczy | nie dotyczy | nie dotyczy | lokalnie, bez commita | lokalnie, bez commita | lokalnie, bez commita |
+| 2026 | aktywna | aktywna | oczekuje na zasady | aktywna | aktywna | oczekuje na zasady |
+| 2025 | aktywna | aktywna | aktywna | aktywna | aktywna | aktywna |
+| 2024 | aktywna | aktywna | aktywna | aktywna | aktywna | aktywna |
+| 2023 | aktywna | aktywna | aktywna | aktywna | aktywna | aktywna |
+| 2022 | nie dotyczy | nie dotyczy | nie dotyczy | aktywna | aktywna | aktywna |
+| 2021 | nie dotyczy | nie dotyczy | nie dotyczy | aktywna | aktywna | aktywna |
+| 2020 | nie dotyczy | nie dotyczy | nie dotyczy | aktywna | aktywna | aktywna |
+| 2019 | nie dotyczy | nie dotyczy | nie dotyczy | aktywna | aktywna | aktywna |
+| 2018 | nie dotyczy | nie dotyczy | nie dotyczy | aktywna | aktywna | aktywna |
+| 2017 | nie dotyczy | nie dotyczy | nie dotyczy | aktywna | aktywna | aktywna |
+| 2016 | nie dotyczy | nie dotyczy | nie dotyczy | aktywna | aktywna | aktywna |
+| 2015 | nie dotyczy | nie dotyczy | nie dotyczy | aktywna | aktywna | aktywna |
 
-Węższy zakres, bez równoległych arkuszy Formuły 2015 z lat 2023-2026, obejmuje 33 arkusze. Wobec 32 zaimplementowanych arkuszy brakuje tylko matury poprawkowej PP Formuły 2023 z 2026 r. Stan `lokalnie, bez commita` nie oznacza upoważnienia do publicznej redystrybucji.
-## Kolejność wdrożenia
+Kolejność w `Content/exams.json` jest malejąca według roku. Dla lat z równoległymi formułami najpierw występuje Formuła 2023, następnie Formuła 2015, a wewnątrz każdej formuły PP, PR i poprawka PP. Identyfikatory dotychczasowych arkuszy i postępu SQLite pozostają niezmienione.
 
-### Etap 0 - domknięcie obecnego 2023 PR
+## Źródła i kontrakt danych
 
-1. Zachować istniejący lokalny arkusz `matura-maj-2023-rozszerzona` i jego identyfikatory `mm23-r0-*`.
-2. Dokończyć jego pełną bramkę jakości przed łączeniem z kolejnymi arkuszami.
-3. Nie zmieniać identyfikatorów ani postępu istniejących matur 2021 oraz 2024-2026.
+Każdy aktywny arkusz ma osobny plik `Content/exam-*.json`, wpis indeksu, datę egzaminu, czas, punktację, numerowane jednostki postępu, stronę arkusza, stronę zasad oceniania, rozwiązanie, kryteria punktowania, dwie podpowiedzi i przypięte URL-e oraz SHA-256. Zadania są przypisane do istniejących 17 tematów, dlatego strona „Zadania” agreguje całą oś czasu bez tworzenia odrębnych kategorii historycznych.
 
-### Etap 1 - brakująca Formuła 2023
+Szczegółową macierz nowych źródeł 2015 oraz równoległych arkuszy F2015 z 2023-2026 zawiera [pokrycie pełnego archiwum Formuły 2015](MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md). Pozostałe macierze są odnośnikami w spisie dokumentacji.
 
-1. Matura maj 2023 PP - wykonana lokalnie jako `matura-maj-2023-podstawowa`, 31 zadań, 34 jednostki postępu i 46 punktów.
-2. Matura poprawkowa 2023 PP - wykonana lokalnie jako `matura-poprawkowa-2023-podstawowa`, 33 zadania, 36 jednostek postępu i 46 punktów.
-3. Matura poprawkowa 2024 PP - wykonana lokalnie jako `matura-poprawkowa-2024-podstawowa`, 30 zadań, 36 jednostek postępu i 46 punktów.
-4. Matura poprawkowa 2025 PP - wykonana lokalnie jako `matura-poprawkowa-2025-podstawowa`, 31 zadań, 36 jednostek postępu i 50 punktów.
-5. Matura poprawkowa PP Formuły 2023 z 2026 r. - dopiero po udostępnieniu zasad oceniania.
-6. Dla każdego pozostałego arkusza dodać oddzielny plik `Content/exam-<rok>-<session>-<formula>-basic.json`, wpis indeksu oraz macierz pokrycia.
+## Prawa do dystrybucji
 
-Po tym etapie komplet Formuły 2023 będzie zawierał 12 arkuszy: po PP, PR i poprawce PP dla każdego roku 2023-2026.
+Pełność katalogu technicznego nie jest zgodą na publiczną redystrybucję. Czternaście nowych grup źródłowych z 2015 oraz F2015 z 2023-2026 ma w `Content/provenance.json` status `blocked`, podobnie jak sześć wcześniej niepotwierdzonych grup z 2016-2017 i katalog diagramów zawierający ich figury pochodne. Dlatego `releaseEligible` pozostaje `false`.
 
-### Etap 2 - rdzeń historyczny Formuły 2015
+Wpis można zmienić na `approved` wyłącznie po indywidualnym, pisemnym rozszerzeniu deklaracji właściciela na konkretny arkusz i zasady oceniania. Publiczny URL, kompletna transkrypcja, suma SHA-256 ani zielone testy nie są taką zgodą.
 
-1. Matury główne PP i PR oraz poprawkowe PP z 2016, 2017, 2018, 2019, 2020 i 2022 r. są wykonane lokalnie.
-2. Matury główne PP i PR z 2021 r. są wykonane lokalnie, przy zachowaniu istniejącej poprawki 2021 bez modyfikacji identyfikatorów `mp21-*`.
+## Regresje i bramy jakości
 
-Etap zapewnia ciągłe archiwum 2016-2022 i nie miesza go z treściami kursu Formuły 2023.
+`Formula2015ArchiveContentTests` kontroluje 14 nowych arkuszy, ich źródła, skróty SHA-256, daty, liczbę zadań, punktację, identyfikatory, rozwiązania, kryteria i podpowiedzi. `ContentInventoryTests`, testy interfejsu, test wydajności i smoke test wydania sprawdzają katalog 46 arkuszy oraz 1 281 jednostek postępu, a testy proweniencji wymagają dokładnie 21 grup `blocked`.
 
-### Etap 3 - równoległe arkusze Formuły 2015 z lat 2023-2026
-
-1. Dodać po PP, PR i poprawce PP Formuły 2015 dla lat 2023, 2024, 2025 i 2026.
-2. Pokaż przy każdym arkuszu widoczny znacznik `Formuła 2015` albo `Formuła 2023` w widoku Matura, liście tematów i źródle zadania.
-3. Zachować kolejność: rok malejąco, następnie formuła, termin główny PP, termin główny PR, termin poprawkowy PP.
-
-Etap 3 jest potrzebny wyłącznie do pełnego katalogu 36 arkuszy. Nie jest wymagany dla węższego archiwum 24 arkuszy.
-
-## Kontrakt pojedynczego arkusza
-
-Każdy nowy arkusz wymaga przed dodaniem do aplikacji:
-
-1. oficjalnego PDF arkusza CKE i zasad oceniania, z zapisanym URL-em, SHA-256 oraz datą weryfikacji;
-2. odrębnego stabilnego `ExamId` i identyfikatorów zadań krótszych niż 80 znaków, niekolidujących z postępem SQLite;
-3. zgodnej transkrypcji treści, punktacji, odpowiedzi, rozwiązania, kryteriów i stron źródłowych;
-4. przypisania każdego zadania do jednego z istniejących 17 tematów;
-5. własnych diagramów wektorowych Avalonia dla każdej figury, z opisem alternatywnym, źródłem i numerem strony - bez aktywnych rastrów;
-6. osobnej macierzy pokrycia oraz grupy w `Content/provenance.json`.
-
-Nowe materiały CKE pozostają `blocked`, dopóki właściciel repozytorium nie rozszerzy indywidualnie deklaracji praw do redystrybucji na konkretne arkusze i zasady oceniania. Status `approved` nie może zostać nadany na podstawie samego publicznego adresu PDF ani przejścia testów.
-
-## Wymagane testy i bramy
-
-Każdy etap ma dodać testy kontraktowe sprawdzające liczbę zadań, jednostek postępu, punktów, źródeł, sum SHA-256, kolejności, diagramów i niekolidujących identyfikatorów. Testy UI muszą potwierdzić widoczność formuły, wybór arkusza, losowanie tylko z wybranego arkusza, agregację 17 tematów, oddzielny postęp oraz dostępność przy rozmiarach 720x520, 960x640 i 1280x820.
-
-Przed każdym commitem wymagane są: locked restore, Release build bez ostrzeżeń, wszystkie testy C# i Python z wymaganym pokryciem, formatowanie whitespace i analyzerów, audyt NuGet, walidacja proweniencji, DocFX, kontrola linków oraz `git diff --check`. Zdalny SonarCloud, CodeQL, Build i Pages są weryfikowane dopiero po autoryzowanym pushu. Żaden commit ani push nie jest częścią tego planu.
+Przed autoryzowanym commitem obowiązują locked restore, Release build bez ostrzeżeń, testy z pokryciem, formatowanie, audyt zależności, walidacja proweniencji, DocFX, kontrola linków i `git diff --check`. SonarCloud, CodeQL, Build i Pages są weryfikowane wyłącznie po autoryzowanym pushu.

@@ -1,0 +1,840 @@
+{
+  "schemaVersion": 4,
+  "exam": {
+    "id": "matura-maj-2024-podstawowa-f2015",
+    "title": "Matura maj 2024 - poziom podstawowy (Formuła 2015)",
+    "progressLabel": "Matura maj 2024 PP (F2015)",
+    "year": 2024,
+    "session": "główna",
+    "formula": "2015",
+    "level": "basic",
+    "durationMinutes": 170,
+    "maximumPoints": 46,
+    "officialTaskCount": 36,
+    "progressItemCount": 36,
+    "introduction": [
+      {
+        "type": "richText",
+        "text": "Oficjalny arkusz główna z matematyki na poziomie podstawowym z 2024-05-08 r. w Formule 2015 obejmuje 36 numerowanych zadań i 46 punktów."
+      },
+      {
+        "type": "richText",
+        "text": "Treść, rozwiązania i kryteria punktowania są transkrypcją techniczną z przypiętych źródeł. Publiczna redystrybucja tej nowej grupy CKE jest zablokowana do czasu odrębnej deklaracji praw."
+      }
+    ],
+    "topicIntroduction": [],
+    "source": {
+      "publisher": "Centralna Komisja Egzaminacyjna",
+      "documentCode": "EMAP-P0-100-2405",
+      "examDate": "2024-05-08",
+      "questionPaperUrl": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2024/Matematyka/poziom_podstawowy/EMAP-P0-100-A-2405-arkusz.pdf",
+      "questionPaperSha256": "480CEFBC34C8D8ABCAB4C671E922DE84E30628C33E44CDC84918F710F3538C35",
+      "answerKeyUrl": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2024/Matematyka/poziom_podstawowy/EMAP-P0-100-2405-zasady.pdf",
+      "answerKeySha256": "3D0C741C6F7F21FB0CAF0D2E06DBC53D0BB37D4D6FCDED0591DFEA8CDCED2587",
+      "verifiedOn": "2026-09-04"
+    },
+    "topics": [],
+    "exercises": [
+      {
+        "id": "em24-p0-z01",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 1,
+        "displayNumber": "1",
+        "order": 1,
+        "points": 1,
+        "title": "Zadanie 1",
+        "topicId": "proofs",
+        "sourcePage": 4,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 1. (0–1)\nNa początku sezonu letniego cenę 𝑥 pary sandałów podwyższono o 20%. Po miesiącu\nnową cenę obniżono o 10%. Po obu tych zmianach ta para sandałów kosztowała 81 zł.\nPoczątkowa cena 𝑥 pary sandałów była równa\nA. 45 zł B. 73,63 zł C. 75 zł D. 87,48 zł",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 1. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n1.8) wykonuje obliczenia procentowe […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC B",
+        "scoringCriteria": "Zadanie 1. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n1.8) wykonuje obliczenia procentowe […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC B",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z02",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 2,
+        "displayNumber": "2",
+        "order": 2,
+        "points": 1,
+        "title": "Zadanie 2",
+        "topicId": "proofs",
+        "sourcePage": 4,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 2. (0–1)\nLiczba ( 1\n16)\n8\n⋅ 816 jest równa\nA. 224 B. 216 C. 212 D. 28",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 2. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n1.4) oblicza potęgi o wykładnikach\nwymiernych i stosuje prawa działań na\npotęgach o wykładnikach wymiernych.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB C\n1 Rozporządzenie Ministra Edukacji i Nauki z dnia 1 sierpnia 2022 r. w sprawie wymagań egzaminacyjnych dla\negzaminu maturalnego przeprowadzanego w roku szkolnym 2022/2023 i 2023/2024 (Dz.U. 2022, poz.1698).",
+        "scoringCriteria": "Zadanie 2. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n1.4) oblicza potęgi o wykładnikach\nwymiernych i stosuje prawa działań na\npotęgach o wykładnikach wymiernych.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB C\n1 Rozporządzenie Ministra Edukacji i Nauki z dnia 1 sierpnia 2022 r. w sprawie wymagań egzaminacyjnych dla\negzaminu maturalnego przeprowadzanego w roku szkolnym 2022/2023 i 2023/2024 (Dz.U. 2022, poz.1698).",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z03",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 3,
+        "displayNumber": "3",
+        "order": 3,
+        "points": 1,
+        "title": "Zadanie 3",
+        "topicId": "logarithms",
+        "sourcePage": 4,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 3. (0–1)\nLiczba log√3 9 jest równa\nA. 2 B. 3 C. 4 D. 9",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 3. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n1.6) wykorzystuje definicję logarytmu […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC B",
+        "scoringCriteria": "Zadanie 3. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n1.6) wykorzystuje definicję logarytmu […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC B",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z04",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 4,
+        "displayNumber": "4",
+        "order": 4,
+        "points": 1,
+        "title": "Zadanie 4",
+        "topicId": "identities",
+        "sourcePage": 4,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 4. (0–1)\nDla każdej liczby rzeczywistej 𝑎 i dla każdej liczby rzeczywistej 𝑏 wartość wyrażenia\n(2𝑎 + 𝑏)2 − (2𝑎 − 𝑏)2 jest równa wartości wyrażenia\nA. 8𝑎2 B. 8𝑎𝑏 C. −8𝑎𝑏 D. 2𝑏2",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 4. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n2. używa wzorów skróconego mnożenia na\n(𝑎± 𝑏)2 oraz 𝑎2 − 𝑏2.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB D",
+        "scoringCriteria": "Zadanie 4. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n2. używa wzorów skróconego mnożenia na\n(𝑎± 𝑏)2 oraz 𝑎2 − 𝑏2.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB D",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z05",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 5,
+        "displayNumber": "5",
+        "order": 5,
+        "points": 1,
+        "title": "Zadanie 5",
+        "topicId": "inequalities",
+        "sourcePage": 4,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 5. (0–1)\nZbiorem wszystkich rozwiązań nierówności\n1 − 3\n2 𝑥 < 2\n3 − 𝑥\njest przedział\nA. (−∞, − 2\n3) B. (−∞, 2\n3) C. (− 2\n3 , +∞) D. (2\n3 , +∞)\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 5. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n3.3) rozwiązuje nierówności stopnia\npierwszego z jedną niewiadomą.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nD D",
+        "scoringCriteria": "Zadanie 5. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n3.3) rozwiązuje nierówności stopnia\npierwszego z jedną niewiadomą.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nD D",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z06",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 6,
+        "displayNumber": "6",
+        "order": 6,
+        "points": 1,
+        "title": "Zadanie 6",
+        "topicId": "equations",
+        "sourcePage": 6,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 6. (0–1)\nNajwiększą liczbą będącą rozwiązaniem rzeczywistym równania 𝑥(𝑥 + 2)(𝑥2 + 9) = 0 jest\nA. (−2) B. 0 C. 2 D. 3",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 6. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n3.6) korzysta z własności iloczynu przy\nrozwiązywaniu równań typu\n𝑥(𝑥 + 1)(𝑥 − 7) = 0.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB C",
+        "scoringCriteria": "Zadanie 6. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n3.6) korzysta z własności iloczynu przy\nrozwiązywaniu równań typu\n𝑥(𝑥 + 1)(𝑥 − 7) = 0.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB C",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z07",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 7,
+        "displayNumber": "7",
+        "order": 7,
+        "points": 1,
+        "title": "Zadanie 7",
+        "topicId": "equations",
+        "sourcePage": 6,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 7. (0–1)\nRównanie 𝑥+1\n(𝑥+2)(𝑥−3) = 0 w zbiorze liczb rzeczywistych\nA. nie ma rozwiązania.\nB. ma dokładnie jedno rozwiązanie: (−1).\nC. ma dokładnie dwa rozwiązania: (−2) oraz 3.\nD. ma dokładnie trzy rozwiązania: (−1), (−2) oraz 3.",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 7. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n3.7) rozwiązuje proste równania wymierne,\nprowadzące do równań liniowych lub\nkwadratowych […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB B",
+        "scoringCriteria": "Zadanie 7. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n3.7) rozwiązuje proste równania wymierne,\nprowadzące do równań liniowych lub\nkwadratowych […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB B",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z08",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 8,
+        "displayNumber": "8",
+        "order": 8,
+        "points": 1,
+        "title": "Zadanie 8",
+        "topicId": "trigonometry",
+        "sourcePage": 6,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 8. (0–1)\nW październiku 2022 roku założono dwa sady, w których posadzono łącznie 1960 drzew.\nPo roku stwierdzono, że uschło 5% drzew w pierwszym sadzie i 10% drzew w drugim\nsadzie. Uschnięte drzewa usunięto, a nowych nie dosadzano.\nLiczba drzew, które pozostały w drugim sadzie, stanowiła 60% liczby drzew, które\npozostały w pierwszym sadzie.\nNiech 𝑥 oraz 𝑦 oznaczają liczby drzew posadzonych – odpowiednio – w pierwszym\ni drugim sadzie.\nUkładem równań, którego poprawne rozwiązanie prowadzi do obliczenia liczby 𝑥 drzew\nposadzonych w pierwszym sadzie oraz liczby 𝑦 drzew posadzonych w drugim sadzie, jest\nA. ( 𝑥 + 𝑦 = 1960\n0,6 ⋅ 0,95𝑥 = 0,9𝑦\nB. ( 𝑥 + 𝑦 = 1960\n0,95𝑥 = 0,6 ⋅ 0,9𝑦\nC. ( 𝑥 + 𝑦 = 1960\n0,05𝑥 = 0,6 ⋅ 0,1𝑦\nD. ( 𝑥 + 𝑦 = 1960\n0,4 ⋅ 0,95𝑥 = 0,9𝑦\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 8. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\nG7.7) za pomocą równań lub układów\nrównań opisuje i rozwiązuje zadania\nosadzone w kontekście praktycznym.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA D",
+        "scoringCriteria": "Zadanie 8. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\nG7.7) za pomocą równań lub układów\nrównań opisuje i rozwiązuje zadania\nosadzone w kontekście praktycznym.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA D",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z09",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 9,
+        "displayNumber": "9",
+        "order": 9,
+        "points": 1,
+        "title": "Zadanie 9",
+        "topicId": "statistics",
+        "sourcePage": 8,
+        "solutionSourcePage": 6,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 9. (0–1)\nŚrednia arytmetyczna trzech liczb: 𝑎, 𝑏, 𝑐, jest równa 9.\nŚrednia arytmetyczna sześciu liczb: 𝑎, 𝑎, 𝑏, 𝑏, 𝑐, 𝑐, jest równa\nA. 9 B. 6 C. 4,5 D. 18",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 9. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nV. Rozumowanie i argumentacja. Zdający:\nG9.3) wyznacza średnią arytmetyczną […]\nzestawu danych.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA C",
+        "scoringCriteria": "Zadanie 9. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nV. Rozumowanie i argumentacja. Zdający:\nG9.3) wyznacza średnią arytmetyczną […]\nzestawu danych.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA C",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z10",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 10,
+        "displayNumber": "10",
+        "order": 10,
+        "points": 1,
+        "title": "Zadanie 10",
+        "topicId": "proofs",
+        "sourcePage": 8,
+        "solutionSourcePage": 6,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 10. (0–1)\nNa rysunku przedstawiono dwie proste równoległe, które są interpretacją geometryczną\njednego z poniższych układów równań A–D.\nUkładem równań, którego interpretację geometryczną przedstawiono na rysunku, jest\nA. (\n𝑦 = − 3\n2 𝑥 + 3\n𝑦 = − 3\n2 𝑥 − 1\nB. (\n𝑦 = 3\n2 𝑥 + 3\n𝑦 = − 2\n3 𝑥 − 1\nC. (\n𝑦 = 3\n2 𝑥 + 3\n𝑦 = 3\n2 𝑥 − 1\nD. (\n𝑦 = − 3\n2 𝑥 − 3\n𝑦 = 3\n2 𝑥 + 1\n1\n𝑥\n1\n𝑦\n0\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 10. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n3.2) wykorzystuje interpretację\ngeometryczną układu równań stopnia\npierwszego z dwiema niewiadomymi.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA C",
+        "scoringCriteria": "Zadanie 10. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n3.2) wykorzystuje interpretację\ngeometryczną układu równań stopnia\npierwszego z dwiema niewiadomymi.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA C",
+        "diagramIds": [
+          "exam-em24-p0-z10"
+        ]
+      },
+      {
+        "id": "em24-p0-z11",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 11,
+        "displayNumber": "11",
+        "order": 11,
+        "points": 1,
+        "title": "Zadanie 11",
+        "topicId": "proofs",
+        "sourcePage": 10,
+        "solutionSourcePage": 7,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 11. (0–1)\nNa rysunku przedstawiono wykres funkcji 𝑓.\nZbiorem wartości tej funkcji jest\nA. (−6, 6⟩ B. ⟨1, 4) C. ⟨1, 4⟩ D. ⟨−6, 6⟩",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 11. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n4.3) odczytuje z wykresu własności funkcji\n([…] zbiór wartości […]).\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC A",
+        "scoringCriteria": "Zadanie 11. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n4.3) odczytuje z wykresu własności funkcji\n([…] zbiór wartości […]).\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC A",
+        "diagramIds": [
+          "exam-em24-p0-z11"
+        ]
+      },
+      {
+        "id": "em24-p0-z12",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 12,
+        "displayNumber": "12",
+        "order": 12,
+        "points": 1,
+        "title": "Zadanie 12",
+        "topicId": "linear-function",
+        "sourcePage": 10,
+        "solutionSourcePage": 7,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 12. (0–1)\nFunkcja liniowa 𝑓 jest określona wzorem 𝑓(𝑥) = (−2𝑘 + 3)𝑥 + 𝑘 − 1, gdzie 𝑘 ∈ ℝ.\nFunkcja 𝑓 jest malejąca dla każdej liczby 𝑘 należącej do przedziału\nA. (−∞, 1) B. (−∞, − 3\n2) C. (1, +∞) D. (3\n2 , +∞)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 12. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n4.7) interpretuje współczynniki występujące\nwe wzorze funkcji liniowej.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nD B",
+        "scoringCriteria": "Zadanie 12. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n4.7) interpretuje współczynniki występujące\nwe wzorze funkcji liniowej.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nD B",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z13",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 13,
+        "displayNumber": "13",
+        "order": 13,
+        "points": 1,
+        "title": "Zadanie 13",
+        "topicId": "proofs",
+        "sourcePage": 10,
+        "solutionSourcePage": 8,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 13. (0–1)\nFunkcje liniowe 𝑓 oraz 𝑔, określone wzorami 𝑓(𝑥) = 3𝑥 + 6 oraz 𝑔(𝑥) = 𝑎𝑥 + 7, mają\nto samo miejsce zerowe.\nWspółczynnik 𝑎 we wzorze funkcji 𝑔 jest równy\nA. (− 7\n2) B. (− 2\n7) C. 2\n7 D. 7\n2\n3\n2\n𝑦\n–3\n–2\n1\n–1\n4\n5\n6\n1\n2\n3\n–1\n–2\n𝑥\n–3\n5\n4\n6\n7\n–4\n–5\n–6\n–7\n0\n𝑦 = 𝑓(𝑥)\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 13. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n4.6) wyznacza wzór funkcji liniowej na\nwykresie.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nD A",
+        "scoringCriteria": "Zadanie 13. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n4.6) wyznacza wzór funkcji liniowej na\nwykresie.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nD A",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z14",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 14,
+        "displayNumber": "14",
+        "order": 14,
+        "points": 1,
+        "title": "Zadanie 14",
+        "topicId": "quadratic-function",
+        "sourcePage": 12,
+        "solutionSourcePage": 8,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 14. (0–1)\nFunkcja kwadratowa 𝑓 jest określona wzorem\nA. 𝑓(𝑥) = −(𝑥 + 1)2 − 9 B. 𝑓(𝑥) = −(𝑥 − 1)2 + 9\nC. 𝑓(𝑥) = −(𝑥 − 1)2 − 9 D. 𝑓(𝑥) = −(𝑥 + 1)2 + 9",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 14. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n4.9) wyznacza wzór funkcji kwadratowej na\nlub o jej wykresie.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB A",
+        "scoringCriteria": "Zadanie 14. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n4.9) wyznacza wzór funkcji kwadratowej na\nlub o jej wykresie.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB A",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z15",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 15,
+        "displayNumber": "15",
+        "order": 15,
+        "points": 1,
+        "title": "Zadanie 15",
+        "topicId": "proofs",
+        "sourcePage": 12,
+        "solutionSourcePage": 9,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 15. (0–1)\nDla funkcji 𝑓 prawdziwa jest równość\nA. 𝑓(−4) = 𝑓(6) B. 𝑓(−4) = 𝑓(4)\nC. 𝑓(−4) = 𝑓(5) D. 𝑓(−4) = 𝑓(7)\n1\n2\n3\n4\n5\n6\n7\n−7\n−6\n−5\n−4\n−3\n−2\n−1\n𝑦\n𝑥\n𝑦 = 𝑓(𝑥)\n7\n6\n5\n4\n3\n2\n1\n−1\n−2\n−3\n−4\n−5\n−6\n0\n8\n9\n10\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 15. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n4.11) wykorzystuje własności funkcji […]\nkwadratowej […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA C",
+        "scoringCriteria": "Zadanie 15. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n4.11) wykorzystuje własności funkcji […]\nkwadratowej […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA C",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z16",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 16,
+        "displayNumber": "16",
+        "order": 16,
+        "points": 1,
+        "title": "Zadanie 16",
+        "topicId": "sequences",
+        "sourcePage": 14,
+        "solutionSourcePage": 9,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 16. (0–1)\nW ciągu arytmetycznym (𝑎𝑛), określonym dla każdej liczby naturalnej 𝑛 ≥ 1, dane są\nwyrazy 𝑎4 = −2 oraz 𝑎6 = 16.\nPiąty wyraz tego ciągu jest równy\nA. 7\n2 B. 9\n2 C. 7 D. 9",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 16. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nIII. Modelowanie matematyczne. Zdający:\n5.3) stosuje wzór na 𝑛-ty wyraz […] ciągu\narytmetycznego.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC C",
+        "scoringCriteria": "Zadanie 16. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nIII. Modelowanie matematyczne. Zdający:\n5.3) stosuje wzór na 𝑛-ty wyraz […] ciągu\narytmetycznego.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC C",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z17",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 17,
+        "displayNumber": "17",
+        "order": 17,
+        "points": 1,
+        "title": "Zadanie 17",
+        "topicId": "sequences",
+        "sourcePage": 14,
+        "solutionSourcePage": 10,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 17. (0–1)\nCiąg geometryczny (𝑎𝑛) jest określony wzorem 𝑎𝑛 = 2𝑛−1, dla każdej liczby naturalnej 𝑛 ≥ 1.\nIloraz tego ciągu jest równy\nA. 1\n2 B. (−2) C. 2 D. 1",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 17. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nIII. Modelowanie matematyczne. Zdający:\n5.4) stosuje wzór na 𝑛-ty wyraz […] ciągu\ngeometrycznego.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC D",
+        "scoringCriteria": "Zadanie 17. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nIII. Modelowanie matematyczne. Zdający:\n5.4) stosuje wzór na 𝑛-ty wyraz […] ciągu\ngeometrycznego.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC D",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z18",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 18,
+        "displayNumber": "18",
+        "order": 18,
+        "points": 1,
+        "title": "Zadanie 18",
+        "topicId": "sequences",
+        "sourcePage": 14,
+        "solutionSourcePage": 10,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 18. (0–1)\nCiąg (𝑏𝑛) jest określony wzorem 𝑏𝑛 = (𝑛 + 2)(7 − 𝑛), dla każdej liczby naturalnej 𝑛 ≥ 1.\nLiczba dodatnich wyrazów ciągu (𝑏𝑛) jest równa\nA. 6 B. 7 C. 8 D. 9",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 18. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n5.1) wyznacza wyrazy ciągu określonego\nwzorem ogólnym.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA D",
+        "scoringCriteria": "Zadanie 18. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n5.1) wyznacza wyrazy ciągu określonego\nwzorem ogólnym.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA D",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z19",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 19,
+        "displayNumber": "19",
+        "order": 19,
+        "points": 1,
+        "title": "Zadanie 19",
+        "topicId": "trigonometry",
+        "sourcePage": 14,
+        "solutionSourcePage": 11,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 19. (0–1)\nLiczba sin3 20° + cos2 20° ⋅ sin 20° jest równa\nA. cos 20° B. sin 20°\nC. tg 20° D. sin 20° ⋅ cos 20°",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 19. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\n6.3) stosuje proste zależności między\nfunkcjami trygonometrycznymi:\nsin2 𝛼 + cos2 𝛼 = 1 […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB A",
+        "scoringCriteria": "Zadanie 19. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\n6.3) stosuje proste zależności między\nfunkcjami trygonometrycznymi:\nsin2 𝛼 + cos2 𝛼 = 1 […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB A",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z20",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 20,
+        "displayNumber": "20",
+        "order": 20,
+        "points": 1,
+        "title": "Zadanie 20",
+        "topicId": "trigonometry",
+        "sourcePage": 14,
+        "solutionSourcePage": 11,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 20. (0–1)\nKąt 𝛼 jest ostry oraz cos 𝛼 = 5\n13 . Wtedy\nA. tg 𝛼 = 12\n13 B. tg 𝛼 = 12\n5 C. tg 𝛼 = 5\n12 D. tg 𝛼 = 13\n12\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 20. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\n6.4) znając wartość jednej z funkcji: sinus\nlub cosinus, wyznacza wartości pozostałych\nfunkcji tego samego kąta ostrego.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB B",
+        "scoringCriteria": "Zadanie 20. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\n6.4) znając wartość jednej z funkcji: sinus\nlub cosinus, wyznacza wartości pozostałych\nfunkcji tego samego kąta ostrego.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB B",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z21",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 21,
+        "displayNumber": "21",
+        "order": 21,
+        "points": 1,
+        "title": "Zadanie 21",
+        "topicId": "proofs",
+        "sourcePage": 16,
+        "solutionSourcePage": 12,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 21. (0–1)\nDany jest równoległobok o bokach długości 3 i 4 oraz o kącie między nimi o mierze 120°.\nPole tego równoległoboku jest równe\nA. 6 B. 6√3 C. 12 D. 12√3",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 21. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n7.4) korzysta z własności funkcji\ntrygonometrycznych w łatwych obliczeniach\ngeometrycznych, w tym ze wzoru na pole\ntrójkąta ostrokątnego o danych dwóch\nbokach i kącie między nimi.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB D",
+        "scoringCriteria": "Zadanie 21. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n7.4) korzysta z własności funkcji\ntrygonometrycznych w łatwych obliczeniach\ngeometrycznych, w tym ze wzoru na pole\ntrójkąta ostrokątnego o danych dwóch\nbokach i kącie między nimi.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB D",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z22",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 22,
+        "displayNumber": "22",
+        "order": 22,
+        "points": 1,
+        "title": "Zadanie 22",
+        "topicId": "lines-and-segments",
+        "sourcePage": 16,
+        "solutionSourcePage": 12,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 22. (0–1)\nW trójkącie 𝑀𝐾𝐶 bok 𝑀𝐾 ma długość 24. Prosta równoległa do boku 𝑀𝐾 przecina boki\n𝑀𝐶 i 𝐾𝐶 – odpowiednio – w punktach 𝐴 oraz 𝐵 takich, że |𝐴𝐵| = 6 i |𝐴𝐶| = 3\n(zobacz rysunek).\nDługość odcinka 𝑀𝐴 jest równa\nA. 18 B. 15 C. 9 D. 12",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 22. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\n7.3) rozpoznaje trójkąty podobne\ni wykorzystuje cechy podobieństwa\ntrójkątów.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC A",
+        "scoringCriteria": "Zadanie 22. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\n7.3) rozpoznaje trójkąty podobne\ni wykorzystuje cechy podobieństwa\ntrójkątów.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC A",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z23",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 23,
+        "displayNumber": "23",
+        "order": 23,
+        "points": 1,
+        "title": "Zadanie 23",
+        "topicId": "plane-geometry",
+        "sourcePage": 16,
+        "solutionSourcePage": 13,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 23. (0–1)\nW trójkącie 𝐴𝐵𝐶, wpisanym w okrąg o środku w punkcie 𝑆, kąt 𝐴𝐶𝐵 ma miarę 42°\n(zobacz rysunek).\nMiara kąta ostrego 𝐵𝐴𝑆 jest równa\nA. 42° B. 45° C. 48° D. 69°\n𝐵\n𝐴\n24\n6\n3\n𝐶\n𝐾\n𝑀\n𝐴\n𝐵\n𝐶\n𝑆\n42°\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 23. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\n7.1) stosuje zależności między kątem\nśrodkowym i kątem wpisanym.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC D",
+        "scoringCriteria": "Zadanie 23. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\n7.1) stosuje zależności między kątem\nśrodkowym i kątem wpisanym.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC D",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z24",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 24,
+        "displayNumber": "24",
+        "order": 24,
+        "points": 1,
+        "title": "Zadanie 24",
+        "topicId": "equations",
+        "sourcePage": 18,
+        "solutionSourcePage": 13,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 24. (0–1)\nProste 𝑘 oraz 𝑙 są określone równaniami\n𝑘: 𝑦 = (𝑚 + 1)𝑥 + 7\n𝑙: 𝑦 = −2𝑥 + 7\nProste 𝑘 oraz 𝑙 są prostopadłe, gdy liczba 𝑚 jest równa\nA. (− 1\n2) B. 1\n2 C. (−3) D. 1",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 24. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n8.2) bada […] prostopadłość prostych na\npodstawie ich równań kierunkowych.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA C",
+        "scoringCriteria": "Zadanie 24. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n8.2) bada […] prostopadłość prostych na\npodstawie ich równań kierunkowych.\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA C",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z25",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 25,
+        "displayNumber": "25",
+        "order": 25,
+        "points": 1,
+        "title": "Zadanie 25",
+        "topicId": "proofs",
+        "sourcePage": 18,
+        "solutionSourcePage": 14,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 25. (0–1)\nNa prostej 𝑙 o współczynniku kierunkowym 1\n2 leżą punkty 𝐴 = (2, −4) oraz 𝐵 = (0, 𝑏).\nWtedy liczba 𝑏 jest równa\nA. (−5) B. 10 C. (−2) D. 0",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 25. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n8.1) wyznacza równanie prostej\nprzechodzącej przez dwa dane punkty\n(w postaci kierunkowej lub ogólnej).\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA A",
+        "scoringCriteria": "Zadanie 25. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n8.1) wyznacza równanie prostej\nprzechodzącej przez dwa dane punkty\n(w postaci kierunkowej lub ogólnej).\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nA A",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z26",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 26,
+        "displayNumber": "26",
+        "order": 26,
+        "points": 1,
+        "title": "Zadanie 26",
+        "topicId": "solid-geometry",
+        "sourcePage": 18,
+        "solutionSourcePage": 14,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 26. (0–1)\nWysokość graniastosłupa prawidłowego sześciokątnego jest równa 6 (zobacz rysunek).\nPole podstawy tego graniastosłupa jest równe 15√3.\nPole jednej ściany bocznej tego graniastosłupa jest równe\nA. 36√10 B. 60 C. 6√10 D. 360\n6\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 26. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\nG11.2) oblicza pole powierzchni […]\ngraniastosłupa prostego […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC A",
+        "scoringCriteria": "Zadanie 26. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\nG11.2) oblicza pole powierzchni […]\ngraniastosłupa prostego […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC A",
+        "diagramIds": [
+          "exam-em24-p0-z26-27"
+        ]
+      },
+      {
+        "id": "em24-p0-z27",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 27,
+        "displayNumber": "27",
+        "order": 27,
+        "points": 1,
+        "title": "Zadanie 27",
+        "topicId": "solid-geometry",
+        "sourcePage": 20,
+        "solutionSourcePage": 15,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 27. (0–1)\nKąt nachylenia najdłuższej przekątnej graniastosłupa prawidłowego sześciokątnego do\npłaszczyzny podstawy jest zaznaczony na rysunku\nA. B.\nC. D.",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 27. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n9.2) rozpoznaje w graniastosłupach kąt\nmiędzy odcinkami i płaszczyznami […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nD D",
+        "scoringCriteria": "Zadanie 27. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nI. Wykorzystanie i tworzenie informacji. Zdający:\n9.2) rozpoznaje w graniastosłupach kąt\nmiędzy odcinkami i płaszczyznami […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nD D",
+        "diagramIds": [
+          "exam-em24-p0-z26-27"
+        ]
+      },
+      {
+        "id": "em24-p0-z28",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 28,
+        "displayNumber": "28",
+        "order": 28,
+        "points": 1,
+        "title": "Zadanie 28",
+        "topicId": "solid-geometry",
+        "sourcePage": 20,
+        "solutionSourcePage": 15,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 28. (0–1)\nObjętość ostrosłupa prawidłowego czworokątnego jest równa 64. Wysokość tego ostrosłupa\njest równa 12.\nDługość krawędzi podstawy tego ostrosłupa jest równa\nA. 2 B. 4 C. 6 D. 8",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 28. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\nG11.2) oblicza pole powierzchni i objętość\n[…] ostrosłupa […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB B",
+        "scoringCriteria": "Zadanie 28. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\nG11.2) oblicza pole powierzchni i objętość\n[…] ostrosłupa […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nB B",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z29",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 29,
+        "displayNumber": "29",
+        "order": 29,
+        "points": 1,
+        "title": "Zadanie 29",
+        "topicId": "proofs",
+        "sourcePage": 20,
+        "solutionSourcePage": 16,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 29. (0–1)\nRozważamy wszystkie kody czterocyfrowe utworzone tylko z cyfr 1, 3, 6, 8, przy czym\nw każdym kodzie każda z tych cyfr występuje dokładnie jeden raz.\nLiczba wszystkich takich kodów jest równa\nA. 4 B. 10 C. 24 D. 16\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 29. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nIII. Modelowanie matematyczne. Zdający:\n10.1) zlicza obiekty w prostych sytuacjach\nkombinatorycznych […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC D",
+        "scoringCriteria": "Zadanie 29. (0–1)\nWymaganie ogólne Wymaganie szczegółowe\nIII. Modelowanie matematyczne. Zdający:\n10.1) zlicza obiekty w prostych sytuacjach\nkombinatorycznych […].\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie\nC D",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z30",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 30,
+        "displayNumber": "30",
+        "order": 30,
+        "points": 2,
+        "title": "Zadanie 30",
+        "topicId": "inequalities",
+        "sourcePage": 22,
+        "solutionSourcePage": 17,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 30. (0–2)\nRozwiąż nierówność\n𝑥2 − 4 ≤ 3𝑥",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 30. (0–2)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n3.5) rozwiązuje nierówności kwadratowe\nz jedną niewiadomą.\n2 pkt – spełnienie jednego z warunków określonych w zasadach oceniania za 1 pkt oraz\nzapisanie zbioru rozwiązań nierówności: ⟨−1,4⟩ lub 𝑥 ∈ ⟨−1,4⟩\n– spełnienie jednego z warunków określonych w zasadach oceniania za 1 pkt oraz\nprzedstawienie zbioru rozwiązań nierówności w postaci graficznej z poprawnie\nzaznaczonymi końcami przedziałów\n1 pkt – obliczenie lub podanie pierwiastków trójmianu kwadratowego 𝑥2 − 3𝑥 − 4:\n𝑥1 = −1 oraz 𝑥2 = 4\n– odczytanie z wykresu funkcji 𝑓(𝑥) = 𝑥2 − 3𝑥 − 4 i zapisanie miejsc zerowych\n𝑥1 = −1 oraz 𝑥2 = 4.\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\n−1\n𝑥\n4\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nUwagi:\n1. Jeżeli zdający, realizując pierwszy etap rozwiązania zadania, popełni błędy (ale otrzyma\ndwa różne pierwiastki) i konsekwentnie do popełnionych błędów zapisze zbiór rozwiązań\nnierówności, to otrzymuje 1 punkt za całe rozwiązanie.\n2. Jeżeli zdający wyznacza pierwiastki trójmianu kwadratowego w przypadku, gdy błędnie\nobliczony przez zdającego wyróżnik 𝛥 jest ujemny, to otrzymuje 0 punktów za całe\nrozwiązanie.\n3. Jeżeli zdający, rozpoczynając realizację pierwszego etapu rozwiązania, rozpatruje inny niż\npodany w zadaniu trójmian kwadratowy, który nie wynika z błędu przekształcenia (np.\n𝑥2 − 4), i w konsekwencji rozpatruje inną nierówność (np. 𝑥2 − 4 ≤ 0), to oznacza, że\nnie podjął realizacji 1. etapu rozwiązania i otrzymuje 0 punktów za całe rozwiązanie.\n4. Akceptowane jest zapisanie pierwiastków trójmianu w postaci 𝑎 + 𝑏√𝑐, gdzie 𝑎, 𝑏, 𝑐 są\nliczbami wymiernymi.\n5. Jeżeli zdający poda zbiór rozwiązań w postaci graficznej z poprawnie zaznaczonymi\nkońcami przedziałów oraz zapisze: 𝑥 ∈ (−1,4), to otrzymuje 1 punkt za całe\nrozwiązanie.\nKryteria uwzględniające specyficzne trudności w uczeniu się matematyki\nJeśli zdający pomyli porządek liczb na osi liczbowej, np. zapisze zbiór rozwiązań nierówności\nw postaci ⟨4,−1⟩, to otrzymuje 2 punkty.\nPrzykładowe pełne rozwiązanie\nZapisujemy nierówność w postaci 𝑥2 − 3𝑥 − 4 ≤ 0 i obliczamy pierwiastki trójmianu\n𝑥2 − 3𝑥 − 4.\nObliczamy wyróżnik trójmianu: Δ = 25\ni obliczamy jego pierwiastki: 𝑥1 = −1 oraz 𝑥2 = 4\npodajemy pierwiastki trójmianu bezpośrednio, zapisując je lub zaznaczając je na wykresie:\n𝑥1 = −1 oraz 𝑥2 = 4.\nPodajemy zbiór rozwiązań nierówności: ⟨−1,4⟩ lub 𝑥 ∈ ⟨−1,4⟩, lub zaznaczamy zbiór\nrozwiązań na osi liczbowej:\n−1\n𝑥\n4\nZadanie 30.\n1 pkt – zastosowanie poprawnej metody obliczenia pierwiastków trójmianu kwadratowego\n𝑥2 − 3𝑥 − 4, tzn. zastosowanie wzorów na pierwiastki trójmianu kwadratowego\ni obliczenie tych pierwiastków\n– konsekwentne (do otrzymanego w wyniku popełnienia błędów o charakterze\ndyskalkulicznym ujemnego wyróżnika) narysowanie paraboli,\n– poprawne rozwiązanie nierówności 𝑥2 − 4 ≤ 0 (tzn. stosuje się punkt 6. ogólnych\nzasad oceniania),\n– konsekwentne (do wyznaczonych przez siebie pierwiastków oraz rozpatrywanego\ntrójmianu i nierówności) wyznaczenie zbioru rozwiązań nierówności.\nUwagi:\n1. Jeżeli zdający, rozwiązując nierówność, pomyli porządek liczb na osi liczbowej i zapisze\nzbiór rozwiązań nierówności w postaci 〈4,−1〉, to może otrzymać 2 punkty za całe\nrozwiązanie.\n2. Nie stosuje się uwag 2. i 3. z zasad oceniania arkusza standardowego.",
+        "scoringCriteria": "Zadanie 30. (0–2)\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i interpretowanie\nreprezentacji.\nZdający:\n3.5) rozwiązuje nierówności kwadratowe\nz jedną niewiadomą.\n2 pkt – spełnienie jednego z warunków określonych w zasadach oceniania za 1 pkt oraz\nzapisanie zbioru rozwiązań nierówności: ⟨−1,4⟩ lub 𝑥 ∈ ⟨−1,4⟩\n– spełnienie jednego z warunków określonych w zasadach oceniania za 1 pkt oraz\nprzedstawienie zbioru rozwiązań nierówności w postaci graficznej z poprawnie\nzaznaczonymi końcami przedziałów\n1 pkt – obliczenie lub podanie pierwiastków trójmianu kwadratowego 𝑥2 − 3𝑥 − 4:\n𝑥1 = −1 oraz 𝑥2 = 4\n– odczytanie z wykresu funkcji 𝑓(𝑥) = 𝑥2 − 3𝑥 − 4 i zapisanie miejsc zerowych\n𝑥1 = −1 oraz 𝑥2 = 4.\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\n−1\n𝑥\n4\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nUwagi:\n1. Jeżeli zdający, realizując pierwszy etap rozwiązania zadania, popełni błędy (ale otrzyma\ndwa różne pierwiastki) i konsekwentnie do popełnionych błędów zapisze zbiór rozwiązań\nnierówności, to otrzymuje 1 punkt za całe rozwiązanie.\n2. Jeżeli zdający wyznacza pierwiastki trójmianu kwadratowego w przypadku, gdy błędnie\nobliczony przez zdającego wyróżnik 𝛥 jest ujemny, to otrzymuje 0 punktów za całe\nrozwiązanie.\n3. Jeżeli zdający, rozpoczynając realizację pierwszego etapu rozwiązania, rozpatruje inny niż\npodany w zadaniu trójmian kwadratowy, który nie wynika z błędu przekształcenia (np.\n𝑥2 − 4), i w konsekwencji rozpatruje inną nierówność (np. 𝑥2 − 4 ≤ 0), to oznacza, że\nnie podjął realizacji 1. etapu rozwiązania i otrzymuje 0 punktów za całe rozwiązanie.\n4. Akceptowane jest zapisanie pierwiastków trójmianu w postaci 𝑎 + 𝑏√𝑐, gdzie 𝑎, 𝑏, 𝑐 są\nliczbami wymiernymi.\n5. Jeżeli zdający poda zbiór rozwiązań w postaci graficznej z poprawnie zaznaczonymi\nkońcami przedziałów oraz zapisze: 𝑥 ∈ (−1,4), to otrzymuje 1 punkt za całe\nrozwiązanie.\nKryteria uwzględniające specyficzne trudności w uczeniu się matematyki\nJeśli zdający pomyli porządek liczb na osi liczbowej, np. zapisze zbiór rozwiązań nierówności\nw postaci ⟨4,−1⟩, to otrzymuje 2 punkty.\nPrzykładowe pełne rozwiązanie\nZapisujemy nierówność w postaci 𝑥2 − 3𝑥 − 4 ≤ 0 i obliczamy pierwiastki trójmianu\n𝑥2 − 3𝑥 − 4.\nObliczamy wyróżnik trójmianu: Δ = 25\ni obliczamy jego pierwiastki: 𝑥1 = −1 oraz 𝑥2 = 4\npodajemy pierwiastki trójmianu bezpośrednio, zapisując je lub zaznaczając je na wykresie:\n𝑥1 = −1 oraz 𝑥2 = 4.\nPodajemy zbiór rozwiązań nierówności: ⟨−1,4⟩ lub 𝑥 ∈ ⟨−1,4⟩, lub zaznaczamy zbiór\nrozwiązań na osi liczbowej:\n−1\n𝑥\n4\nZadanie 30.\n1 pkt – zastosowanie poprawnej metody obliczenia pierwiastków trójmianu kwadratowego\n𝑥2 − 3𝑥 − 4, tzn. zastosowanie wzorów na pierwiastki trójmianu kwadratowego\ni obliczenie tych pierwiastków\n– konsekwentne (do otrzymanego w wyniku popełnienia błędów o charakterze\ndyskalkulicznym ujemnego wyróżnika) narysowanie paraboli,\n– poprawne rozwiązanie nierówności 𝑥2 − 4 ≤ 0 (tzn. stosuje się punkt 6. ogólnych\nzasad oceniania),\n– konsekwentne (do wyznaczonych przez siebie pierwiastków oraz rozpatrywanego\ntrójmianu i nierówności) wyznaczenie zbioru rozwiązań nierówności.\nUwagi:\n1. Jeżeli zdający, rozwiązując nierówność, pomyli porządek liczb na osi liczbowej i zapisze\nzbiór rozwiązań nierówności w postaci 〈4,−1〉, to może otrzymać 2 punkty za całe\nrozwiązanie.\n2. Nie stosuje się uwag 2. i 3. z zasad oceniania arkusza standardowego.",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z31",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 31,
+        "displayNumber": "31",
+        "order": 31,
+        "points": 2,
+        "title": "Zadanie 31",
+        "topicId": "inequalities",
+        "sourcePage": 23,
+        "solutionSourcePage": 19,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 31. (0–2)\nWykaż, że dla każdej liczby rzeczywistej 𝑥 i dla każdej liczby rzeczywistej 𝑦 takich,\nże 𝑥 ≠ 𝑦, prawdziwa jest nierówność\n(3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦\nWypełnia\nNr zadania 30. 31.\nMaks. liczba pkt 2 2",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 31. (0–2)\nWymaganie ogólne Wymaganie szczegółowe\nV. Rozumowanie i argumentacja. Zdający:\n2. używa wzorów skróconego mnożenia na\n(𝑎± 𝑏)2 oraz 𝑎2 − 𝑏2.\n2 pkt – przekształcenie nierówności (3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦 do postaci\n𝑐(𝑥 − 𝑦)2 > 0, gdzie 𝑐 > 0 (np. 3(𝑥 − 𝑦)2 > 0)\nlub\n𝑐(𝑥 − 𝑦)2 < 0, gdzie 𝑐 < 0 (np. −3(𝑥 − 𝑦)2 < 0),\nlub\n(𝑐𝑥 − 𝑐𝑦)2 > 0, gdzie 𝑐 ≠ 0 (np. (√3𝑥 − √3𝑦)\n2\n> 0)\noraz powołanie się na założenie i stwierdzenie, że kwadrat każdej liczby rzeczywistej\nróżnej od zera jest liczbą dodatnią\n– przekształcenie nierówności (3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦 do postaci 𝑥2 + 𝑦2 > 2𝑥𝑦\noraz powołanie się na nierówność 𝑥2 + 𝑦2 ≥ 2𝑥𝑦 i stwierdzenie, że dla 𝑥 ≠ 𝑦\nnierówność jest ostra,\n– obliczenie wyróżnika trójmianu kwadratowego 3𝑥2 − 6𝑥𝑦 + 3𝑦2 zmiennej 𝑥 oraz\nuzasadnienie, że funkcja 𝑓(𝑥) = 3𝑥2 − 6𝑥𝑦 + 3𝑦2 przyjmuje wartości dodatnie\ndla 𝑥 ≠ 𝑦,\n– obliczenie wyróżnika trójmianu kwadratowego 3𝑦2 − 6𝑥𝑦 + 3𝑥2 zmiennej 𝑦 oraz\nuzasadnienie, że funkcja 𝑓(𝑦) = 3𝑦2 − 6𝑥𝑦 + 3𝑥2 przyjmuje wartości dodatnie\ndla 𝑦 ≠ 𝑥.\n1 pkt – przekształcenie nierówności (3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦 do postaci\n3𝑥2 − 6𝑥𝑦 + 3𝑦2 > 0\n– przekształcenie nierówności (3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦 do postaci 𝑥2 + 𝑦2 > 2𝑥𝑦,\n– obliczenie wyróżnika trójmianu kwadratowego 3𝑥2 − 6𝑥𝑦 + 3𝑦2 zmiennej 𝑥,\nALBO,\n– obliczenie wyróżnika trójmianu kwadratowego 3𝑦2 − 6𝑥𝑦 + 3𝑥2 zmiennej 𝑦.\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\nUwaga:\nJeśli zdający sprawdza prawdziwość nierówności tylko dla wybranych wartości 𝑥 i 𝑦, to\notrzymuje 0 punktów za całe rozwiązanie.\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nPrzykładowe pełne rozwiązania\nSposób I\nPrzekształcamy nierówność (3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦 w sposób równoważny:\n3𝑥2 − 6𝑥𝑦 + 3𝑦2 > 0\nZauważamy, że lewą stronę nierówności można zapisać w postaci\n3(𝑥 − 𝑦)2 > 0\nZ założenia wiadomo, że 𝑥 ≠ 𝑦, więc 3(𝑥 − 𝑦)2 jest liczbą dodatnią.\nTo należało wykazać.\nSposób II (trójmian kwadratowy zmiennej 𝑥 z parametrem 𝑦)\nPrzekształcamy równoważnie nierówność (3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦 i otrzymujemy\n3𝑥2 − 6𝑥𝑦 + 3𝑦2 > 0\nWyrażenie 3𝑥2 − 6𝑥𝑦 + 3𝑦2 traktujemy jako trójmian kwadratowy zmiennej 𝑥. Obliczamy\nwyróżnik Δ trójmianu:\nΔ = (−6𝑦)2 − 4 ⋅ 3 ∙ 3𝑦2 = 0\nFunkcja 𝑓(𝑥) = 3𝑥2 − 6𝑥𝑦 + 3𝑦2 ma dokładnie jedno miejsce zerowe: 𝑥 = 𝑦. Ponieważ\nwspółczynnik przy drugiej potędze zmiennej jest dodatni, więc żaden fragment wykresu\nfunkcji 𝑓 nie leży poniżej osi odciętych. Zatem funkcja 𝑓 przyjmuje wartości dodatnie dla\nkażdego 𝑥 ≠ 𝑦.\nOznacza to, że dla każdej liczby rzeczywistej 𝑥 i dla każdej liczby rzeczywistej 𝑦 ≠ 𝑥\nnierówność 3𝑥2 − 6𝑥𝑦 + 3𝑦2 > 0 jest prawdziwa.\nZatem nierówność (3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦 również jest prawdziwa dla każdej liczby\nrzeczywistej 𝑥 i dla każdej liczby rzeczywistej 𝑦 ≠ 𝑥. To należało wykazać.\nZadanie 31.\n1 pkt – przekształcenie wyrażenia (3𝑥 + 𝑦)(𝑥 + 3𝑦) do postaci 3𝑥2 + 9𝑥𝑦 + 𝑥𝑦 + 3𝑦2.",
+        "scoringCriteria": "Zadanie 31. (0–2)\nWymaganie ogólne Wymaganie szczegółowe\nV. Rozumowanie i argumentacja. Zdający:\n2. używa wzorów skróconego mnożenia na\n(𝑎± 𝑏)2 oraz 𝑎2 − 𝑏2.\n2 pkt – przekształcenie nierówności (3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦 do postaci\n𝑐(𝑥 − 𝑦)2 > 0, gdzie 𝑐 > 0 (np. 3(𝑥 − 𝑦)2 > 0)\nlub\n𝑐(𝑥 − 𝑦)2 < 0, gdzie 𝑐 < 0 (np. −3(𝑥 − 𝑦)2 < 0),\nlub\n(𝑐𝑥 − 𝑐𝑦)2 > 0, gdzie 𝑐 ≠ 0 (np. (√3𝑥 − √3𝑦)\n2\n> 0)\noraz powołanie się na założenie i stwierdzenie, że kwadrat każdej liczby rzeczywistej\nróżnej od zera jest liczbą dodatnią\n– przekształcenie nierówności (3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦 do postaci 𝑥2 + 𝑦2 > 2𝑥𝑦\noraz powołanie się na nierówność 𝑥2 + 𝑦2 ≥ 2𝑥𝑦 i stwierdzenie, że dla 𝑥 ≠ 𝑦\nnierówność jest ostra,\n– obliczenie wyróżnika trójmianu kwadratowego 3𝑥2 − 6𝑥𝑦 + 3𝑦2 zmiennej 𝑥 oraz\nuzasadnienie, że funkcja 𝑓(𝑥) = 3𝑥2 − 6𝑥𝑦 + 3𝑦2 przyjmuje wartości dodatnie\ndla 𝑥 ≠ 𝑦,\n– obliczenie wyróżnika trójmianu kwadratowego 3𝑦2 − 6𝑥𝑦 + 3𝑥2 zmiennej 𝑦 oraz\nuzasadnienie, że funkcja 𝑓(𝑦) = 3𝑦2 − 6𝑥𝑦 + 3𝑥2 przyjmuje wartości dodatnie\ndla 𝑦 ≠ 𝑥.\n1 pkt – przekształcenie nierówności (3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦 do postaci\n3𝑥2 − 6𝑥𝑦 + 3𝑦2 > 0\n– przekształcenie nierówności (3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦 do postaci 𝑥2 + 𝑦2 > 2𝑥𝑦,\n– obliczenie wyróżnika trójmianu kwadratowego 3𝑥2 − 6𝑥𝑦 + 3𝑦2 zmiennej 𝑥,\nALBO,\n– obliczenie wyróżnika trójmianu kwadratowego 3𝑦2 − 6𝑥𝑦 + 3𝑥2 zmiennej 𝑦.\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\nUwaga:\nJeśli zdający sprawdza prawdziwość nierówności tylko dla wybranych wartości 𝑥 i 𝑦, to\notrzymuje 0 punktów za całe rozwiązanie.\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nPrzykładowe pełne rozwiązania\nSposób I\nPrzekształcamy nierówność (3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦 w sposób równoważny:\n3𝑥2 − 6𝑥𝑦 + 3𝑦2 > 0\nZauważamy, że lewą stronę nierówności można zapisać w postaci\n3(𝑥 − 𝑦)2 > 0\nZ założenia wiadomo, że 𝑥 ≠ 𝑦, więc 3(𝑥 − 𝑦)2 jest liczbą dodatnią.\nTo należało wykazać.\nSposób II (trójmian kwadratowy zmiennej 𝑥 z parametrem 𝑦)\nPrzekształcamy równoważnie nierówność (3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦 i otrzymujemy\n3𝑥2 − 6𝑥𝑦 + 3𝑦2 > 0\nWyrażenie 3𝑥2 − 6𝑥𝑦 + 3𝑦2 traktujemy jako trójmian kwadratowy zmiennej 𝑥. Obliczamy\nwyróżnik Δ trójmianu:\nΔ = (−6𝑦)2 − 4 ⋅ 3 ∙ 3𝑦2 = 0\nFunkcja 𝑓(𝑥) = 3𝑥2 − 6𝑥𝑦 + 3𝑦2 ma dokładnie jedno miejsce zerowe: 𝑥 = 𝑦. Ponieważ\nwspółczynnik przy drugiej potędze zmiennej jest dodatni, więc żaden fragment wykresu\nfunkcji 𝑓 nie leży poniżej osi odciętych. Zatem funkcja 𝑓 przyjmuje wartości dodatnie dla\nkażdego 𝑥 ≠ 𝑦.\nOznacza to, że dla każdej liczby rzeczywistej 𝑥 i dla każdej liczby rzeczywistej 𝑦 ≠ 𝑥\nnierówność 3𝑥2 − 6𝑥𝑦 + 3𝑦2 > 0 jest prawdziwa.\nZatem nierówność (3𝑥 + 𝑦)(𝑥 + 3𝑦) > 16𝑥𝑦 również jest prawdziwa dla każdej liczby\nrzeczywistej 𝑥 i dla każdej liczby rzeczywistej 𝑦 ≠ 𝑥. To należało wykazać.\nZadanie 31.\n1 pkt – przekształcenie wyrażenia (3𝑥 + 𝑦)(𝑥 + 3𝑦) do postaci 3𝑥2 + 9𝑥𝑦 + 𝑥𝑦 + 3𝑦2.",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z32",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 32,
+        "displayNumber": "32",
+        "order": 32,
+        "points": 2,
+        "title": "Zadanie 32",
+        "topicId": "quadratic-function",
+        "sourcePage": 24,
+        "solutionSourcePage": 21,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 32. (0–2)\nOsią symetrii wykresu funkcji kwadratowej 𝑓(𝑥) = 𝑥2 + 𝑏𝑥 + 𝑐 jest prosta o równaniu\n𝑥 = −2. Jednym z miejsc zerowych funkcji 𝑓 jest liczba 1.\nOblicz współczynniki 𝑏 oraz 𝑐.",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 32. (0–2)\nWymaganie ogólne Wymaganie szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\n4.9) wyznacza wzór funkcji kwadratowej na\nlub o jej wykresie.\n2 pkt – zastosowanie poprawnej metody i obliczenie współczynników: 𝑏 = 4, 𝑐 = −5.\n1 pkt – zapisanie drugiego miejsca zerowego funkcji 𝑓: 𝑥2 = −5\n– obliczenie drugiej współrzędnej wierzchołka paraboli będącej wykresem funkcji 𝑓:\n𝑞 = −9,\n– obliczenie współczynnika 𝑏: 𝑏 = 4.\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\nPrzykładowe pełne rozwiązania\nSposób I\nWykres funkcji 𝑓 jest symetryczny względem prostej o równaniu 𝑥 = −2, zatem drugie\nmiejsce zerowe jest równe 𝑥2 = −5.\nWzór funkcji 𝑓 zapisujemy w postaci iloczynowej 𝑓(𝑥) = (𝑥 − 1)(𝑥 + 5), a następnie\nw postaci ogólnej 𝑓(𝑥) = 𝑥2 + 4𝑥 − 5.\nZatem współczynniki 𝑏 i 𝑐 są równe: 𝑏 = 4, 𝑐 = −5.\nSposób II\nWykres funkcji 𝑓 jest symetryczny względem prostej o równaniu 𝑥 = −2, zatem pierwsza\nwspółrzędna wierzchołka paraboli będącej wykresem funkcji 𝑓 jest równa 𝑝 = −2.\nWzór funkcji 𝑓 zapisujemy w postaci kanonicznej 𝑓(𝑥) = (𝑥 + 2)2 + 𝑞.\nPunkt (1,0) leży na wykresie funkcji 𝑓, zatem dla argumentu 1 funkcja 𝑓 przyjmuje\nwartość 0. Stąd otrzymujemy równanie:\n0 = (1+ 2)2 + 𝑞\nZatem 𝑞 = −9.\nWzór funkcji 𝑓(𝑥) = (𝑥 + 2)2 − 9 przekształcamy do postaci ogólnej 𝑓(𝑥) = 𝑥2 + 4𝑥 − 5.\nZatem współczynniki 𝑏 i 𝑐 są równe: 𝑏 = 4, 𝑐 = −5.\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nSposób III\nWykres funkcji 𝑓 jest symetryczny względem prostej o równaniu 𝑥 = −2, zatem pierwsza\nwspółrzędna wierzchołka paraboli będącej wykresem funkcji 𝑓 jest równa 𝑝 = −2.\nObliczamy współczynnik 𝑏, korzystając ze wzoru 𝑝 = − 𝑏\n2𝑎 :\n−2 = −𝑏\n2\nStąd 𝑏 = 4.\nPunkt (1,0) leży na wykresie funkcji 𝑓, zatem dla argumentu 1 funkcja 𝑓 przyjmuje\nwartość 0. Stąd otrzymujemy równanie\n0 = 12 + 4 ∙ 1 + 𝑐\nZatem współczynniki 𝑏 i 𝑐 są równe: 𝑏 = 4, 𝑐 = −5.\nZadanie 32.\nStosuje się zasady oceniania arkusza standardowego.",
+        "scoringCriteria": "Zadanie 32. (0–2)\nWymaganie ogólne Wymaganie szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\n4.9) wyznacza wzór funkcji kwadratowej na\nlub o jej wykresie.\n2 pkt – zastosowanie poprawnej metody i obliczenie współczynników: 𝑏 = 4, 𝑐 = −5.\n1 pkt – zapisanie drugiego miejsca zerowego funkcji 𝑓: 𝑥2 = −5\n– obliczenie drugiej współrzędnej wierzchołka paraboli będącej wykresem funkcji 𝑓:\n𝑞 = −9,\n– obliczenie współczynnika 𝑏: 𝑏 = 4.\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\nPrzykładowe pełne rozwiązania\nSposób I\nWykres funkcji 𝑓 jest symetryczny względem prostej o równaniu 𝑥 = −2, zatem drugie\nmiejsce zerowe jest równe 𝑥2 = −5.\nWzór funkcji 𝑓 zapisujemy w postaci iloczynowej 𝑓(𝑥) = (𝑥 − 1)(𝑥 + 5), a następnie\nw postaci ogólnej 𝑓(𝑥) = 𝑥2 + 4𝑥 − 5.\nZatem współczynniki 𝑏 i 𝑐 są równe: 𝑏 = 4, 𝑐 = −5.\nSposób II\nWykres funkcji 𝑓 jest symetryczny względem prostej o równaniu 𝑥 = −2, zatem pierwsza\nwspółrzędna wierzchołka paraboli będącej wykresem funkcji 𝑓 jest równa 𝑝 = −2.\nWzór funkcji 𝑓 zapisujemy w postaci kanonicznej 𝑓(𝑥) = (𝑥 + 2)2 + 𝑞.\nPunkt (1,0) leży na wykresie funkcji 𝑓, zatem dla argumentu 1 funkcja 𝑓 przyjmuje\nwartość 0. Stąd otrzymujemy równanie:\n0 = (1+ 2)2 + 𝑞\nZatem 𝑞 = −9.\nWzór funkcji 𝑓(𝑥) = (𝑥 + 2)2 − 9 przekształcamy do postaci ogólnej 𝑓(𝑥) = 𝑥2 + 4𝑥 − 5.\nZatem współczynniki 𝑏 i 𝑐 są równe: 𝑏 = 4, 𝑐 = −5.\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nSposób III\nWykres funkcji 𝑓 jest symetryczny względem prostej o równaniu 𝑥 = −2, zatem pierwsza\nwspółrzędna wierzchołka paraboli będącej wykresem funkcji 𝑓 jest równa 𝑝 = −2.\nObliczamy współczynnik 𝑏, korzystając ze wzoru 𝑝 = − 𝑏\n2𝑎 :\n−2 = −𝑏\n2\nStąd 𝑏 = 4.\nPunkt (1,0) leży na wykresie funkcji 𝑓, zatem dla argumentu 1 funkcja 𝑓 przyjmuje\nwartość 0. Stąd otrzymujemy równanie\n0 = 12 + 4 ∙ 1 + 𝑐\nZatem współczynniki 𝑏 i 𝑐 są równe: 𝑏 = 4, 𝑐 = −5.\nZadanie 32.\nStosuje się zasady oceniania arkusza standardowego.",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z33",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 33,
+        "displayNumber": "33",
+        "order": 33,
+        "points": 2,
+        "title": "Zadanie 33",
+        "topicId": "sequences",
+        "sourcePage": 25,
+        "solutionSourcePage": 23,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 33. (0–2)\nCiąg arytmetyczny (𝑎𝑛) jest określony dla każdej liczby naturalnej 𝑛 ≥ 1. Trzeci wyraz\ntego ciągu jest równy (−1), a suma piętnastu początkowych kolejnych wyrazów tego ciągu\njest równa (−165).\nOblicz różnicę tego ciągu.\nWypełnia\nNr zadania 32. 33.\nMaks. liczba pkt 2 2",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 33. (0–2)\nWymaganie ogólne Wymaganie szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\n5.3) stosuje wzór na 𝑛-ty wyraz i na sumę\n𝑛 początkowych wyrazów ciągu\narytmetycznego.\n2 pkt – zastosowanie poprawnej metody i obliczenie różnicy ciągu: 𝑟 = −2.\n1 pkt – zapisanie układu równań pozwalającego obliczyć 𝑟, np.:\n−1 = 𝑎1 + 2𝑟 oraz − 165 = 2𝑎1 + 14𝑟\n2 ⋅ 15 ,\n−1 = 𝑎1 + 2𝑟 oraz 𝑎15 = 𝑎1 + 14𝑟 oraz − 165 = 𝑎1 + 𝑎15\n2 ⋅ 15 ,\n𝑎3 = −1 oraz − 165 = (𝑎3 − 2𝑟)+ (𝑎3 + 12𝑟)\n2 ⋅ 15\n– zapisanie równania z jedną niewiadomą 𝑟, np.:\n(−1− 2𝑟)+ (−1− 𝑟)+ (−1)+ (−1+ 𝑟)+ … + (−1+ 12𝑟) = −165 ,\n2(−1− 2𝑟)+ 14𝑟\n2 ⋅ 15 = −165 ,\n(−1− 2𝑟)+ (−1+ 12𝑟)\n2 ⋅ 15 = −165 ,\n– obliczenie ósmego wyrazu ciągu (𝑎𝑛) z wykorzystaniem własności ciągu\narytmetycznego: 𝑎8 = −11 (dla sposobów IV oraz V),\n– zapisanie kolejnych piętnastu początkowych wyrazów ciągu (𝑎𝑛):\n3,1,−1,−3,−5,−7,−9,−11,−13,−15,−17,−19,−21,−23,−25.\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\nUwagi:\n1. Jeżeli zdający myli ciąg arytmetyczny z geometrycznym, to otrzymuje 0 punktów za całe\nrozwiązanie, o ile nie nabył prawa do innej liczby punktów.\n2. Jeżeli zdający zapisze tylko 𝑟 = −2, to otrzymuje 1 punkt za całe rozwiązanie.\n3. Jeżeli zdający błędnie interpretuje liczbę (−165) jako piętnasty wyraz ciągu, to\notrzymuje 0 punktów za całe rozwiązanie.\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nPrzykładowe pełne rozwiązania\nSposób I\nKorzystamy ze wzorów na 𝑛-ty wyraz i sumę 𝑛 początkowych wyrazów ciągu\narytmetycznego i otrzymujemy układ równań\n(\n−1 = 𝑎1 + 2𝑟\n−165= 2𝑎1 + 14𝑟\n2 ⋅ 15\nPrzekształcając ten układ równoważnie, otrzymujemy\n( −1 = 𝑎1 + 2𝑟\n−11 = 𝑎1 + 7𝑟\nOdejmując stronami równania układu, otrzymujemy\n10 = −5𝑟\n𝑟 = −2\nRóżnica ciągu jest równa (−2).\nSposób II\nSuma kolejnych piętnastu początkowych wyrazów ciągu arytmetycznego jest równa (−165),\n𝑎1 + 𝑎2 + 𝑎3 + … + 𝑎15 = −165\n(𝑎3 − 2𝑟)+ (𝑎3 − 𝑟)+ 𝑎3 + (𝑎3 + 𝑟)+ (𝑎3 + 2𝑟)+ … + (𝑎3 + 12𝑟) = −165\n15𝑎3 + (−2𝑟− 𝑟 + 0 + 𝑟 + 2𝑟 + 3𝑟 + … + 12𝑟) = −165\ngdzie 𝑎3 = −1, a suma piętnastu liczb (−2𝑟 − 𝑟 + 0 + 𝑟 + 2𝑟 + 3𝑟 + … + 12𝑟) jest\nrówna\n−2𝑟 + 12𝑟\n2 ⋅ 15 = 75𝑟\n15∙ (−1)+ 75𝑟 = −165\n75𝑟 = −150\n𝑟 = −2\nRóżnica ciągu jest równa (−2).\nZasady oceniania rozwiązań zadań\nSposób III\nSuma kolejnych piętnastu początkowych wyrazów ciągu arytmetycznego jest równa (−165),\n𝑎1 + 𝑎15\n2 ⋅ 15 = −165\n𝑎1 + 𝑎15 = −22\n(𝑎3 − 2𝑟)+ (𝑎3 + 12𝑟) = −22\n2𝑎3 + 10𝑟 = −22\nStąd i z tego, że 𝑎3 = −1, otrzymujemy\n2 ⋅ (−1)+ 10𝑟 = −22\n10𝑟 = −20\n𝑟 = −2\nRóżnica ciągu jest równa (−2).\nSposób IV\nSuma kolejnych piętnastu początkowych wyrazów ciągu arytmetycznego jest równa (−165),\n𝑎1 + 𝑎2 + 𝑎3 + … + 𝑎15 = −165\n(𝑎8 − 7𝑟)+ (𝑎8 − 6𝑟)+ … + 𝑎8 + … + (𝑎8 + 6𝑟)+ (𝑎8 + 7𝑟) = −165\n15𝑎8 = −165\n𝑎8 = −165\n15 = −11\nKorzystamy z własności ciągu arytmetycznego i otrzymujemy\n𝑎8 = 𝑎3 + 5𝑟\n−11 = −1+ 5𝑟\n𝑟 = −2\nRóżnica ciągu jest równa (−2).\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nSposób V\nKorzystamy z własności ciągu arytmetycznego i otrzymujemy równania:\n𝑎8 = 𝑎7 + 𝑎9\n2\n𝑎8 = 𝑎6 + 𝑎10\n2\n𝑎8 = 𝑎5 + 𝑎11\n2\n𝑎8 = 𝑎4 + 𝑎12\n2\n𝑎8 = 𝑎3 + 𝑎13\n2\n𝑎8 = 𝑎2 + 𝑎14\n2\n𝑎8 = 𝑎1 + 𝑎15\n2\n𝑎1 + 𝑎2 + … + 𝑎14 + 𝑎15 = (𝑎1 + 𝑎15)+ (𝑎2 + 𝑎14)+ … + (𝑎7 + 𝑎9)+ 𝑎8 =\n= 15𝑎8 = −165\nStąd 𝑎8 = −11. Ponieważ\n𝑎8 = 𝑎3 + 5𝑟\nwięc otrzymujemy\n−11 = −1+ 5𝑟\n𝑟 = −2\nRóżnica ciągu jest równa (−2).\nZadanie 33.\n1 pkt – zapisanie równania z dwiema niewiadomymi, gdzie jedną z niewiadomych jest\nróżnica ciągu arytmetycznego, np.: −1 = 𝑎1 + 2𝑟, −165 =\n2𝑎1+14𝑟\n2 ⋅ 15 .",
+        "scoringCriteria": "Zadanie 33. (0–2)\nWymaganie ogólne Wymaganie szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\n5.3) stosuje wzór na 𝑛-ty wyraz i na sumę\n𝑛 początkowych wyrazów ciągu\narytmetycznego.\n2 pkt – zastosowanie poprawnej metody i obliczenie różnicy ciągu: 𝑟 = −2.\n1 pkt – zapisanie układu równań pozwalającego obliczyć 𝑟, np.:\n−1 = 𝑎1 + 2𝑟 oraz − 165 = 2𝑎1 + 14𝑟\n2 ⋅ 15 ,\n−1 = 𝑎1 + 2𝑟 oraz 𝑎15 = 𝑎1 + 14𝑟 oraz − 165 = 𝑎1 + 𝑎15\n2 ⋅ 15 ,\n𝑎3 = −1 oraz − 165 = (𝑎3 − 2𝑟)+ (𝑎3 + 12𝑟)\n2 ⋅ 15\n– zapisanie równania z jedną niewiadomą 𝑟, np.:\n(−1− 2𝑟)+ (−1− 𝑟)+ (−1)+ (−1+ 𝑟)+ … + (−1+ 12𝑟) = −165 ,\n2(−1− 2𝑟)+ 14𝑟\n2 ⋅ 15 = −165 ,\n(−1− 2𝑟)+ (−1+ 12𝑟)\n2 ⋅ 15 = −165 ,\n– obliczenie ósmego wyrazu ciągu (𝑎𝑛) z wykorzystaniem własności ciągu\narytmetycznego: 𝑎8 = −11 (dla sposobów IV oraz V),\n– zapisanie kolejnych piętnastu początkowych wyrazów ciągu (𝑎𝑛):\n3,1,−1,−3,−5,−7,−9,−11,−13,−15,−17,−19,−21,−23,−25.\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\nUwagi:\n1. Jeżeli zdający myli ciąg arytmetyczny z geometrycznym, to otrzymuje 0 punktów za całe\nrozwiązanie, o ile nie nabył prawa do innej liczby punktów.\n2. Jeżeli zdający zapisze tylko 𝑟 = −2, to otrzymuje 1 punkt za całe rozwiązanie.\n3. Jeżeli zdający błędnie interpretuje liczbę (−165) jako piętnasty wyraz ciągu, to\notrzymuje 0 punktów za całe rozwiązanie.\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nPrzykładowe pełne rozwiązania\nSposób I\nKorzystamy ze wzorów na 𝑛-ty wyraz i sumę 𝑛 początkowych wyrazów ciągu\narytmetycznego i otrzymujemy układ równań\n(\n−1 = 𝑎1 + 2𝑟\n−165= 2𝑎1 + 14𝑟\n2 ⋅ 15\nPrzekształcając ten układ równoważnie, otrzymujemy\n( −1 = 𝑎1 + 2𝑟\n−11 = 𝑎1 + 7𝑟\nOdejmując stronami równania układu, otrzymujemy\n10 = −5𝑟\n𝑟 = −2\nRóżnica ciągu jest równa (−2).\nSposób II\nSuma kolejnych piętnastu początkowych wyrazów ciągu arytmetycznego jest równa (−165),\n𝑎1 + 𝑎2 + 𝑎3 + … + 𝑎15 = −165\n(𝑎3 − 2𝑟)+ (𝑎3 − 𝑟)+ 𝑎3 + (𝑎3 + 𝑟)+ (𝑎3 + 2𝑟)+ … + (𝑎3 + 12𝑟) = −165\n15𝑎3 + (−2𝑟− 𝑟 + 0 + 𝑟 + 2𝑟 + 3𝑟 + … + 12𝑟) = −165\ngdzie 𝑎3 = −1, a suma piętnastu liczb (−2𝑟 − 𝑟 + 0 + 𝑟 + 2𝑟 + 3𝑟 + … + 12𝑟) jest\nrówna\n−2𝑟 + 12𝑟\n2 ⋅ 15 = 75𝑟\n15∙ (−1)+ 75𝑟 = −165\n75𝑟 = −150\n𝑟 = −2\nRóżnica ciągu jest równa (−2).\nZasady oceniania rozwiązań zadań\nSposób III\nSuma kolejnych piętnastu początkowych wyrazów ciągu arytmetycznego jest równa (−165),\n𝑎1 + 𝑎15\n2 ⋅ 15 = −165\n𝑎1 + 𝑎15 = −22\n(𝑎3 − 2𝑟)+ (𝑎3 + 12𝑟) = −22\n2𝑎3 + 10𝑟 = −22\nStąd i z tego, że 𝑎3 = −1, otrzymujemy\n2 ⋅ (−1)+ 10𝑟 = −22\n10𝑟 = −20\n𝑟 = −2\nRóżnica ciągu jest równa (−2).\nSposób IV\nSuma kolejnych piętnastu początkowych wyrazów ciągu arytmetycznego jest równa (−165),\n𝑎1 + 𝑎2 + 𝑎3 + … + 𝑎15 = −165\n(𝑎8 − 7𝑟)+ (𝑎8 − 6𝑟)+ … + 𝑎8 + … + (𝑎8 + 6𝑟)+ (𝑎8 + 7𝑟) = −165\n15𝑎8 = −165\n𝑎8 = −165\n15 = −11\nKorzystamy z własności ciągu arytmetycznego i otrzymujemy\n𝑎8 = 𝑎3 + 5𝑟\n−11 = −1+ 5𝑟\n𝑟 = −2\nRóżnica ciągu jest równa (−2).\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nSposób V\nKorzystamy z własności ciągu arytmetycznego i otrzymujemy równania:\n𝑎8 = 𝑎7 + 𝑎9\n2\n𝑎8 = 𝑎6 + 𝑎10\n2\n𝑎8 = 𝑎5 + 𝑎11\n2\n𝑎8 = 𝑎4 + 𝑎12\n2\n𝑎8 = 𝑎3 + 𝑎13\n2\n𝑎8 = 𝑎2 + 𝑎14\n2\n𝑎8 = 𝑎1 + 𝑎15\n2\n𝑎1 + 𝑎2 + … + 𝑎14 + 𝑎15 = (𝑎1 + 𝑎15)+ (𝑎2 + 𝑎14)+ … + (𝑎7 + 𝑎9)+ 𝑎8 =\n= 15𝑎8 = −165\nStąd 𝑎8 = −11. Ponieważ\n𝑎8 = 𝑎3 + 5𝑟\nwięc otrzymujemy\n−11 = −1+ 5𝑟\n𝑟 = −2\nRóżnica ciągu jest równa (−2).\nZadanie 33.\n1 pkt – zapisanie równania z dwiema niewiadomymi, gdzie jedną z niewiadomych jest\nróżnica ciągu arytmetycznego, np.: −1 = 𝑎1 + 2𝑟, −165 =\n2𝑎1+14𝑟\n2 ⋅ 15 .",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z34",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 34,
+        "displayNumber": "34",
+        "order": 34,
+        "points": 2,
+        "title": "Zadanie 34",
+        "topicId": "proofs",
+        "sourcePage": 26,
+        "solutionSourcePage": 27,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 34. (0–2)\nDany jest równoległobok 𝐴𝐵𝐶𝐷, w którym 𝐴 = (−2, 6) oraz 𝐵 = (10, 2). Przekątne 𝐴𝐶\noraz 𝐵𝐷 tego równoległoboku przecinają się w punkcie 𝑃 = (6, 7).\nOblicz długość boku 𝐵𝐶 tego równoległoboku.",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 34. (0–2)\nWymaganie ogólne Wymagania szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\n8.5) wyznacza współrzędne środka odcinka;\n8.6) oblicza odległość dwóch punktów.\n2 pkt – zastosowanie poprawnej metody i obliczenie długości boku 𝐵𝐶: |𝐵𝐶| = √52.\n1 pkt – zapisanie współrzędnych punktu 𝐶: 𝐶 = (14,8)\n– zapisanie współrzędnych punktu 𝐷: 𝐷 = (2,12),\n– zapisanie współrzędnych środka 𝑆 boku 𝐴𝐵: 𝑆 = (4,4) oraz zapisanie równości\n|𝐵𝐶| = 2|𝑃𝑆|,\n– zapisanie równości 𝐶𝐵⃗⃗⃗⃗⃗ = 2 ⋅ 𝑃𝐴⃗⃗⃗⃗⃗ + 𝐴𝐵⃗⃗⃗⃗⃗ oraz obliczenie współrzędnych wektorów\n𝑃𝐴⃗⃗⃗⃗⃗ i 𝐴𝐵⃗⃗⃗⃗⃗ : 𝑃𝐴⃗⃗⃗⃗⃗ = [−8,−1] oraz 𝐴𝐵⃗⃗⃗⃗⃗ = [12,−4],\n– obliczenie długości odcinków 𝐴𝐵, 𝐴𝑃 oraz 𝐵𝑃 i cosinusa kąta 𝛼 oraz cosinusa\nkąta (180°− 𝛼), gdzie 𝛼 = |∡𝐴𝑃𝐵|: |𝐴𝐵| = 4√10 oraz |𝐴𝑃| = √65, oraz\n|𝐵𝑃| = √41, oraz cos𝛼 = − 27\n√65⋅√41\n, oraz cos(180°− 𝛼) = 27\n√65⋅√41 .\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\nUwagi:\n1. Jeżeli zdający korzysta z punktów kratowych oraz błędnie zaznaczy w układzie\nwspółrzędnych co najmniej jeden z punktów 𝐴, 𝐵, 𝐶, 𝑃 i na tej podstawie oblicza długość\nodcinka 𝐵𝐶, to otrzymuje 0 punktów za całe rozwiązanie (o ile nie nabył praw do innej\npunktacji).\n2. Jeżeli zdający korzysta z punktów kratowych oraz poprawnie zaznaczy w układzie\nwspółrzędnych punkty 𝐴, 𝐵, 𝐶, 𝑃, lecz błędnie odczyta współrzędne jednego z tych\npunktów, i na tej podstawie oblicza długość odcinka 𝐵𝐶, to otrzymuje 1 punkt za całe\nrozwiązanie.\n3. Jeżeli zdający obliczy długość odcinka 𝐵𝐶, korzystając z przybliżonych wartości funkcji\ntrygonometrycznych, to może otrzymać co najwyżej 1 punkt za całe rozwiązanie.\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nPrzykładowe pełne rozwiązania\nSposób I\nPunkt 𝑃 jest środkiem przekątnej 𝐴𝐶. Ze wzoru na współrzędne środka odcinka\n−2 + 𝑥𝑐\n2 = 6 oraz 6 + 𝑦𝑐\n2 = 7\nZatem 𝐶 = (14,8).\nObliczamy długość odcinka 𝐵𝐶:\n|𝐵𝐶| = √(14− 10)2 + (8 − 2)2 = √16+ 36 = √52 = 2√13\nSposób II\nPunkt 𝑃 jest środkiem przekątnej 𝐵𝐷. Ze wzoru na współrzędne środka odcinka\n10+ 𝑥𝑑\n2 = 6 oraz 2 + 𝑦𝑑\n2 = 7\nZatem 𝐷 = (2,12).\nObliczamy długość odcinka 𝐵𝐶:\n|𝐵𝐶| = |𝐴𝐷| = √(2 + 2)2 + (12− 6)2 = √16+ 36 = √52 = 2√13\nSposób III\nObliczamy współrzędne punktu 𝑆 środka odcinka 𝐴𝐵:\n𝑆 = (−2 + 10\n2 ,6 + 2\n2 )\n𝑆 = (4,4)\nObliczamy długość odcinka 𝐵𝐶:\n|𝐵𝐶| = 2|𝑃𝑆| = 2√(4 − 6)2 + (4 − 7)2 = 2√4 + 9 = 2√13\nZadanie 34.\n1 pkt – poprawne zaznaczenie w kartezjańskim układzie współrzędnych punktu 𝐶\n– poprawne zaznaczenie w kartezjańskim układzie współrzędnych punktu 𝐷,\n– zapisanie współrzędnych środka 𝑆 boku 𝐴𝐵: 𝑆 = (4,4).",
+        "scoringCriteria": "Zadanie 34. (0–2)\nWymaganie ogólne Wymagania szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\n8.5) wyznacza współrzędne środka odcinka;\n8.6) oblicza odległość dwóch punktów.\n2 pkt – zastosowanie poprawnej metody i obliczenie długości boku 𝐵𝐶: |𝐵𝐶| = √52.\n1 pkt – zapisanie współrzędnych punktu 𝐶: 𝐶 = (14,8)\n– zapisanie współrzędnych punktu 𝐷: 𝐷 = (2,12),\n– zapisanie współrzędnych środka 𝑆 boku 𝐴𝐵: 𝑆 = (4,4) oraz zapisanie równości\n|𝐵𝐶| = 2|𝑃𝑆|,\n– zapisanie równości 𝐶𝐵⃗⃗⃗⃗⃗ = 2 ⋅ 𝑃𝐴⃗⃗⃗⃗⃗ + 𝐴𝐵⃗⃗⃗⃗⃗ oraz obliczenie współrzędnych wektorów\n𝑃𝐴⃗⃗⃗⃗⃗ i 𝐴𝐵⃗⃗⃗⃗⃗ : 𝑃𝐴⃗⃗⃗⃗⃗ = [−8,−1] oraz 𝐴𝐵⃗⃗⃗⃗⃗ = [12,−4],\n– obliczenie długości odcinków 𝐴𝐵, 𝐴𝑃 oraz 𝐵𝑃 i cosinusa kąta 𝛼 oraz cosinusa\nkąta (180°− 𝛼), gdzie 𝛼 = |∡𝐴𝑃𝐵|: |𝐴𝐵| = 4√10 oraz |𝐴𝑃| = √65, oraz\n|𝐵𝑃| = √41, oraz cos𝛼 = − 27\n√65⋅√41\n, oraz cos(180°− 𝛼) = 27\n√65⋅√41 .\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\nUwagi:\n1. Jeżeli zdający korzysta z punktów kratowych oraz błędnie zaznaczy w układzie\nwspółrzędnych co najmniej jeden z punktów 𝐴, 𝐵, 𝐶, 𝑃 i na tej podstawie oblicza długość\nodcinka 𝐵𝐶, to otrzymuje 0 punktów za całe rozwiązanie (o ile nie nabył praw do innej\npunktacji).\n2. Jeżeli zdający korzysta z punktów kratowych oraz poprawnie zaznaczy w układzie\nwspółrzędnych punkty 𝐴, 𝐵, 𝐶, 𝑃, lecz błędnie odczyta współrzędne jednego z tych\npunktów, i na tej podstawie oblicza długość odcinka 𝐵𝐶, to otrzymuje 1 punkt za całe\nrozwiązanie.\n3. Jeżeli zdający obliczy długość odcinka 𝐵𝐶, korzystając z przybliżonych wartości funkcji\ntrygonometrycznych, to może otrzymać co najwyżej 1 punkt za całe rozwiązanie.\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nPrzykładowe pełne rozwiązania\nSposób I\nPunkt 𝑃 jest środkiem przekątnej 𝐴𝐶. Ze wzoru na współrzędne środka odcinka\n−2 + 𝑥𝑐\n2 = 6 oraz 6 + 𝑦𝑐\n2 = 7\nZatem 𝐶 = (14,8).\nObliczamy długość odcinka 𝐵𝐶:\n|𝐵𝐶| = √(14− 10)2 + (8 − 2)2 = √16+ 36 = √52 = 2√13\nSposób II\nPunkt 𝑃 jest środkiem przekątnej 𝐵𝐷. Ze wzoru na współrzędne środka odcinka\n10+ 𝑥𝑑\n2 = 6 oraz 2 + 𝑦𝑑\n2 = 7\nZatem 𝐷 = (2,12).\nObliczamy długość odcinka 𝐵𝐶:\n|𝐵𝐶| = |𝐴𝐷| = √(2 + 2)2 + (12− 6)2 = √16+ 36 = √52 = 2√13\nSposób III\nObliczamy współrzędne punktu 𝑆 środka odcinka 𝐴𝐵:\n𝑆 = (−2 + 10\n2 ,6 + 2\n2 )\n𝑆 = (4,4)\nObliczamy długość odcinka 𝐵𝐶:\n|𝐵𝐶| = 2|𝑃𝑆| = 2√(4 − 6)2 + (4 − 7)2 = 2√4 + 9 = 2√13\nZadanie 34.\n1 pkt – poprawne zaznaczenie w kartezjańskim układzie współrzędnych punktu 𝐶\n– poprawne zaznaczenie w kartezjańskim układzie współrzędnych punktu 𝐷,\n– zapisanie współrzędnych środka 𝑆 boku 𝐴𝐵: 𝑆 = (4,4).",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z35",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 35,
+        "displayNumber": "35",
+        "order": 35,
+        "points": 2,
+        "title": "Zadanie 35",
+        "topicId": "probability",
+        "sourcePage": 27,
+        "solutionSourcePage": 29,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 35. (0–2)\nDany jest pięcioelementowy zbiór 𝐾 = (5, 6, 7, 8, 9). Wylosowanie każdej liczby z tego\nzbioru jest jednakowo prawdopodobne. Ze zbioru 𝐾 losujemy ze zwracaniem kolejno dwa\nrazy po jednej liczbie i zapisujemy je w kolejności losowania.\nOblicz prawdopodobieństwo zdarzenia 𝐴 polegającego na tym, że suma wylosowanych\nliczb jest liczbą parzystą.\nWypełnia\nNr zadania 34. 35.\nMaks. liczba pkt 2 2",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 35. (0–2)\nWymaganie ogólne Wymaganie szczegółowe\nIII. Modelowanie matematyczne. Zdający:\n10.2) oblicza prawdopodobieństwa\nw prostych sytuacjach, stosując klasyczną\ndefinicję prawdopodobieństwa.\n2 pkt – zastosowanie poprawnej metody obliczenia prawdopodobieństwa zdarzenia 𝐴\ni uzyskanie poprawnego wyniku: 𝑃(𝐴) = 13\n25 .\n1 pkt – wypisanie wszystkich zdarzeń elementarnych lub obliczenie/podanie liczby tych\nzdarzeń: |Ω| = 5 ⋅ 5 lub sporządzenie tabeli o 25 polach odpowiadających\nzdarzeniom elementarnym, z których co najmniej jedno pole jest wypełnione, lub\nsporządzenie pełnego drzewa stochastycznego\n– wypisanie (lub zaznaczenie w tabeli) wszystkich zdarzeń elementarnych\nsprzyjających zdarzeniu 𝐴 i niewypisanie żadnego niewłaściwego,\n– podanie liczby wszystkich zdarzeń elementarnych sprzyjających zdarzeniu 𝐴:\n|𝐴| = 13, o ile nie zostały zliczone błędne pary,\n– sporządzenie fragmentu drzewa stochastycznego, które zawiera wszystkie gałęzie\nsprzyjające zdarzeniu 𝐴 oraz zapisanie prawdopodobieństwa na co najmniej\njednym odcinku każdego z etapów doświadczenia,\n– podanie prawdopodobieństwa jednoelementowego zdarzenia (elementarnego): 1\n25 ,\n– zapisanie tylko 𝑃(𝐴) = 13\n25 .\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\nUwagi:\n1. Jeżeli zdający zapisuje tylko liczby 13 lub 25 i z rozwiązania nie wynika znaczenie tych\nliczb, to otrzymuje 0 punktów za całe rozwiązanie.\n2. Jeżeli zdający rozważa losowanie bez zwracania, to otrzymuje 0 punktów.\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nPrzykładowe pełne rozwiązania\nSposób I\nZdarzeniami elementarnymi są wszystkie uporządkowane pary liczb (𝑥,𝑦), gdzie\n𝑥,𝑦 ∈ (5,6,7,8,9).\nLiczbę wszystkich zdarzeń elementarnych obliczamy, korzystając z reguły mnożenia.\nMoc zbioru Ω jest równa 5 ∙ 5 = 25.\nLiczbę wszystkich zdarzeń elementarnych sprzyjających zdarzeniu 𝐴 obliczamy,\nkorzystając z reguły mnożenia i reguły dodawania. Suma dwóch liczb naturalnych jest liczbą\nparzystą, gdy sumujemy dwie liczby parzyste lub dwie liczby nieparzyste. Stąd moc zbioru 𝐴\njest równa 3 ∙ 3 + 2 ∙ 2 = 13.\nZatem prawdopodobieństwo zdarzenia 𝐴 jest równe 13\n25 .\nSposób II\nW tabeli literą 𝐴 zaznaczamy zdarzenia elementarne sprzyjające zdarzeniu 𝐴 (pary liczb,\nktórych suma jest liczbą parzystą).\n5 6 7 8 9\n5 𝐴 𝐴 𝐴\n6 𝐴 𝐴\n7 𝐴 𝐴 𝐴\n8 𝐴 𝐴\n9 𝐴 𝐴 𝐴\nMoc zbioru Ω jest równa 25.\nZdarzeń sprzyjających wylosowaniu liczb, których suma jest parzysta, jest 13.\nZatem prawdopodobieństwo zdarzenia 𝐴 jest równe 13\n25 .\nZasady oceniania rozwiązań zadań\nSposób III (drzewo stochastyczne)\nRysujemy drzewo stochastyczne rozważanego doświadczenia.\nPrawdopodobieństwo zdarzenia 𝐴 jest równe\n𝑃(𝐴) = 2\n5 ⋅ 2\n5 + 3\n5 ⋅ 3\n5 = 13\n25\n2\n5\n3\n5\n2\n5\n3\n5\n5\n2\n5\n3\n5\nZadanie 35.\n1 pkt – zapisanie jedynie liczby 25 (należy traktować to jako wyznaczenie liczby wszystkich\nzdarzeń elementarnych).\nUwagi:\n1. W ocenie rozwiązania tego zadania (dla zdających z dyskalkulią) nie stosuje się uwagi 1.\nze standardowych zasad oceniania.\n2. Jeżeli zdający poprawnie wypisze/zaznaczy wszystkie zdarzenia elementarne sprzyjające\nzdarzeniu 𝐴, lecz popełni błąd w ich zliczeniu (np. |𝐴| = 12) i konsekwentnie zapisze\nwynik (np. 12\n25), to otrzymuje 2 punkty.",
+        "scoringCriteria": "Zadanie 35. (0–2)\nWymaganie ogólne Wymaganie szczegółowe\nIII. Modelowanie matematyczne. Zdający:\n10.2) oblicza prawdopodobieństwa\nw prostych sytuacjach, stosując klasyczną\ndefinicję prawdopodobieństwa.\n2 pkt – zastosowanie poprawnej metody obliczenia prawdopodobieństwa zdarzenia 𝐴\ni uzyskanie poprawnego wyniku: 𝑃(𝐴) = 13\n25 .\n1 pkt – wypisanie wszystkich zdarzeń elementarnych lub obliczenie/podanie liczby tych\nzdarzeń: |Ω| = 5 ⋅ 5 lub sporządzenie tabeli o 25 polach odpowiadających\nzdarzeniom elementarnym, z których co najmniej jedno pole jest wypełnione, lub\nsporządzenie pełnego drzewa stochastycznego\n– wypisanie (lub zaznaczenie w tabeli) wszystkich zdarzeń elementarnych\nsprzyjających zdarzeniu 𝐴 i niewypisanie żadnego niewłaściwego,\n– podanie liczby wszystkich zdarzeń elementarnych sprzyjających zdarzeniu 𝐴:\n|𝐴| = 13, o ile nie zostały zliczone błędne pary,\n– sporządzenie fragmentu drzewa stochastycznego, które zawiera wszystkie gałęzie\nsprzyjające zdarzeniu 𝐴 oraz zapisanie prawdopodobieństwa na co najmniej\njednym odcinku każdego z etapów doświadczenia,\n– podanie prawdopodobieństwa jednoelementowego zdarzenia (elementarnego): 1\n25 ,\n– zapisanie tylko 𝑃(𝐴) = 13\n25 .\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\nUwagi:\n1. Jeżeli zdający zapisuje tylko liczby 13 lub 25 i z rozwiązania nie wynika znaczenie tych\nliczb, to otrzymuje 0 punktów za całe rozwiązanie.\n2. Jeżeli zdający rozważa losowanie bez zwracania, to otrzymuje 0 punktów.\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nPrzykładowe pełne rozwiązania\nSposób I\nZdarzeniami elementarnymi są wszystkie uporządkowane pary liczb (𝑥,𝑦), gdzie\n𝑥,𝑦 ∈ (5,6,7,8,9).\nLiczbę wszystkich zdarzeń elementarnych obliczamy, korzystając z reguły mnożenia.\nMoc zbioru Ω jest równa 5 ∙ 5 = 25.\nLiczbę wszystkich zdarzeń elementarnych sprzyjających zdarzeniu 𝐴 obliczamy,\nkorzystając z reguły mnożenia i reguły dodawania. Suma dwóch liczb naturalnych jest liczbą\nparzystą, gdy sumujemy dwie liczby parzyste lub dwie liczby nieparzyste. Stąd moc zbioru 𝐴\njest równa 3 ∙ 3 + 2 ∙ 2 = 13.\nZatem prawdopodobieństwo zdarzenia 𝐴 jest równe 13\n25 .\nSposób II\nW tabeli literą 𝐴 zaznaczamy zdarzenia elementarne sprzyjające zdarzeniu 𝐴 (pary liczb,\nktórych suma jest liczbą parzystą).\n5 6 7 8 9\n5 𝐴 𝐴 𝐴\n6 𝐴 𝐴\n7 𝐴 𝐴 𝐴\n8 𝐴 𝐴\n9 𝐴 𝐴 𝐴\nMoc zbioru Ω jest równa 25.\nZdarzeń sprzyjających wylosowaniu liczb, których suma jest parzysta, jest 13.\nZatem prawdopodobieństwo zdarzenia 𝐴 jest równe 13\n25 .\nZasady oceniania rozwiązań zadań\nSposób III (drzewo stochastyczne)\nRysujemy drzewo stochastyczne rozważanego doświadczenia.\nPrawdopodobieństwo zdarzenia 𝐴 jest równe\n𝑃(𝐴) = 2\n5 ⋅ 2\n5 + 3\n5 ⋅ 3\n5 = 13\n25\n2\n5\n3\n5\n2\n5\n3\n5\n5\n2\n5\n3\n5\nZadanie 35.\n1 pkt – zapisanie jedynie liczby 25 (należy traktować to jako wyznaczenie liczby wszystkich\nzdarzeń elementarnych).\nUwagi:\n1. W ocenie rozwiązania tego zadania (dla zdających z dyskalkulią) nie stosuje się uwagi 1.\nze standardowych zasad oceniania.\n2. Jeżeli zdający poprawnie wypisze/zaznaczy wszystkie zdarzenia elementarne sprzyjające\nzdarzeniu 𝐴, lecz popełni błąd w ich zliczeniu (np. |𝐴| = 12) i konsekwentnie zapisze\nwynik (np. 12\n25), to otrzymuje 2 punkty.",
+        "diagramIds": []
+      },
+      {
+        "id": "em24-p0-z36",
+        "examId": "matura-maj-2024-podstawowa-f2015",
+        "number": 36,
+        "displayNumber": "36",
+        "order": 36,
+        "points": 5,
+        "title": "Zadanie 36",
+        "topicId": "solid-geometry",
+        "sourcePage": 28,
+        "solutionSourcePage": 32,
+        "verificationSource": "CKE EMAP-P0-100-2405 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 36. (0–5)\nW graniastosłupie prawidłowym czworokątnym o objętości równej 108 stosunek długości\nkrawędzi podstawy do wysokości graniastosłupa jest równy 1\n4.\nPrzekątna tego graniastosłupa jest nachylona do płaszczyzny jego podstawy pod kątem 𝛼\n(zobacz rysunek).\nOblicz cosinus kąta 𝛼 oraz pole powierzchni całkowitej tego graniastosłupa.\n𝛼\nWypełnia\nNr zadania 36.\nMaks. liczba pkt 5\nBRUDNOPIS (nie podlega ocenie)\nFormuła 2015\nFormuła 2015\nFormuła 2015",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 36. (0–5)\nWymaganie ogólne Wymagania szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\nG11.2) oblicza pole powierzchni i objętość\ngraniastosłupa prostego […].\n9.2) rozpoznaje w graniastosłupach kąt\nmiędzy odcinkami i płaszczyznami […].\nCzęść I (Obliczenie cosinusa kąta 𝛼)\n2 pkt – obliczenie cosinusa kąta 𝛼: cos𝛼 = 1\n3 .\n1 pkt – zapisanie przekątnej graniastosłupa jako 3𝑎√2\n– obliczenie tangensa kąta 𝛼 nachylenia przekątnej graniastosłupa do płaszczyzny\npodstawy: tg𝛼 = 4\n√2 ,\n– obliczenie długości przekątnej graniastosłupa podobnego do rozpatrywanego.\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\nUwaga:\nJeżeli zdający obliczy wartość cosinusa kąta 𝛼, popełniając błąd, który nie jest rachunkowy\n(np. przyjmie, że przekątna podstawy jest równa 𝑎√3\n2 ), to otrzymuje za tę część rozwiązania\n0 punktów, o ile nie nabył praw do innej punktacji.\nCzęść II (Obliczenie pola powierzchni całkowitej graniastosłupa)\n3 pkt – obliczenie pola powierzchni całkowitej graniastosłupa: 𝑃𝑐 = 162.\n2 pkt – zapisanie równania z jedną niewiadomą 𝑎 lub 𝐻, np.:\n𝑎2 ⋅ 4𝑎 = 108, (1\n4𝐻)\n2\n⋅ 𝐻 = 108\n– obliczenie skali 𝑘 podobieństwa graniastosłupa podobnego do rozpatrywanego\n(gdzie 𝑘 ≠ 1).\n1 pkt – zapisanie związku pomiędzy krawędzią podstawy a wysokością graniastosłupa, np.:\n𝐻 = 4𝑎, 𝑎2 ∙ 𝐻 = 108\nZasady oceniania rozwiązań zadań\n– obliczenie objętości i pola powierzchni całkowitej graniastosłupa podobnego do\nrozpatrywanego w skali 𝑘 ≠ 1\n(np. przyjmując 𝑎 = 1, 𝐻 = 4 i wtedy 𝑉 = 4 oraz 𝑃𝑐 = 18),\n– zapisanie zależności między objętością danego graniastosłupa i graniastosłupa do\nniego podobnego, np. 108= 12 ⋅ 4 ⋅ 𝑘3 (gdzie 𝑘 to skala podobieństwa).\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\nPrzykładowe pełne rozwiązania\nSposób I\nPrzyjmujemy oznaczenia:\n𝑎 – długość krawędzi podstawy (𝑎 > 0),\n𝐻 – wysokość graniastosłupa (𝐻 > 0).\nStosunek długości krawędzi podstawy do wysokości graniastosłupa jest równy 1\n4 . Zatem\n𝐻 = 4𝑎. Objętość graniastosłupa wynosi 108, stąd otrzymujemy równanie:\n𝑎2 ∙ 4𝑎 = 108\n4𝑎3 = 108\n𝑎3 = 27\n𝑎 = 3\nNastępnie obliczamy wysokość graniastosłupa, pole powierzchni całkowitej oraz przekątną\npodstawy:\n𝐻 = 4 ∙ 3 = 12\n𝑃𝑐 = 2 ⋅ 𝑎2 + 4 ⋅ 𝑎𝐻 = 2 ⋅ 32 + 4 ⋅ 3 ⋅ 12 = 18+ 144 = 162\n𝑎√2 = 3√2\nKorzystając z twierdzenia Pitagorasa, obliczamy długość 𝑑 przekątnej graniastosłupa:\n𝑑2 = 122 + (3√2)\n2\n, gdzie 𝑑 > 0\n𝑑2 = 162\n𝑑 = √162 = 9√2\nObliczamy cos𝛼:\ncos𝛼 = 𝑎√2\n𝑑 = 3√2\n9√2\n= 1\n3\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nSposób II\nPrzyjmujemy oznaczenia:\n𝑎 – długość krawędzi podstawy (𝑎 > 0),\n𝐻 – wysokość graniastosłupa (𝐻 > 0).\nStosunek długości krawędzi podstawy do wysokości graniastosłupa jest równy 1\n4 . Zatem\n𝐻 = 4𝑎. Przekątna podstawy ma długość 𝑎√2, stąd otrzymujemy:\ntg𝛼 = 4𝑎\n𝑎√2\n= 2√2\nZatem sin𝛼\ncos𝛼 = 2√2. Stąd sin𝛼 = 2√2⋅ cos𝛼.\nWykorzystując tę zależność oraz tożsamość sin2 𝛼 + cos2 𝛼 = 1, otrzymujemy\n(2√2 ⋅ cos𝛼)\n2\n+ cos2 𝛼 = 1\n8cos2 𝛼 + cos2 𝛼 = 1\n9cos2 𝛼 = 1\ncos2 𝛼 = 1\n9\nStąd cos𝛼 = 1\n3 , ponieważ 𝛼 jest kątem ostrym.\nObjętość graniastosłupa wynosi 108, stąd otrzymujemy równanie:\n𝑎2 ∙ 4𝑎 = 108\n4𝑎3 = 108\n𝑎3 = 27\n𝑎 = 3\nNastępnie obliczamy pole powierzchni całkowitej graniastosłupa:\n𝑃𝑐 = 2 ⋅ 𝑎2 + 4 ⋅ 𝑎𝐻 = 2 ⋅ 𝑎2 + 4 ⋅ 𝑎⋅ 4𝑎 = 18⋅ 𝑎2 = 18⋅ 32 = 162\nZasady oceniania rozwiązań zadań\nSposób III\nRozważmy graniastosłup prawidłowy czworokątny 𝐺1 o wysokości 4 i krawędzi podstawy\ndługości 1. Graniastosłup 𝐺1 jest podobny do danego graniastosłupa, zatem przekątna\ngraniastosłupa 𝐺1 jest nachylona do płaszczyzny podstawy pod kątem, którego miara jest\nrówna mierze kąta 𝛼.\nPrzekątna podstawy graniastosłupa 𝐺1 ma długość √2.\nKorzystając z twierdzenia Pitagorasa, obliczamy długość 𝑑1 przekątnej graniastosłupa 𝐺1:\n𝑑1\n2 = 42 + (√2)\n2\n, gdzie 𝑑1 > 0\n𝑑1\n2 = 18\n𝑑1 = √18 = 3√2\nObliczamy cos𝛼:\ncos𝛼 = √2\n3√2\n= 1\n3\nObjętość 𝑉1 graniastosłupa 𝐺1 jest równa\n𝑉1 = 12 ⋅ 4 = 4\nPole 𝑃𝑐1 powierzchni całkowitej graniastosłupa 𝐺1 jest równe\n𝑃𝑐1 = 2 ⋅ 12 + 4 ⋅ 1 ⋅ 4 = 18\nStosunek objętości 𝑉1 graniastosłupa 𝐺1 do objętości 𝑉 danego graniastosłupa jest\nrówny sześcianowi skali podobieństwa. Zatem\n𝑘3 = 𝑉1\n𝑉 = 4\n108 = 1\n27\nStąd 𝑘 = 1\n3 .\nStosunek pola 𝑃𝑐1 powierzchni całkowitej graniastosłupa 𝐺1 do pola 𝑃𝑐 powierzchni\ncałkowitej danego graniastosłupa jest równy kwadratowi skali podobieństwa. Zatem\n𝑃𝑐1\n𝑃𝑐\n= 𝑘2\n18\n𝑃𝑐\n= 1\n9\n𝑃𝑐 = 18⋅ 9 = 162\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nOcena prac osób ze stwierdzoną dyskalkulią\nObowiązują Zasady oceniania stosowane przy sprawdzaniu prac zdających bez\nstwierdzonej dyskalkulii z dodatkowym uwzględnieniem:\na) ogólnych zasad oceniania zadań otwartych w przypadku arkuszy osób ze stwierdzoną\ndyskalkulią (punkty 1.–12.);\nb) dodatkowych szczegółowych zasad oceniania zadań otwartych w przypadku arkuszy\nosób ze stwierdzoną dyskalkulią – egzamin maturalny z matematyki, poziom podstawowy,\ntermin główny 2024.\nI. Ogólne zasady oceniania zadań otwartych w przypadku arkuszy osób ze stwierdzoną\ndyskalkulią\n1. Nie należy traktować jako błędy merytoryczne pomyłek, wynikających z:\n• błędnego przepisania\n• przestawienia cyfr\n• zapisania innej cyfry, ale o podobnym wyglądzie\n• przestawienia położenia przecinka\n• przestawienia położenia znaku liczby.\n2. W przypadku błędów, wynikających ze zmiany znaku liczby, należy w każdym zadaniu\noddzielnie przeanalizować, czy zdający opanował inne umiejętności, poza\numiejętnościami rachunkowymi, oceniane w zadaniu. W przypadku opanowania\nbadanych umiejętności zdający powinien otrzymać przynajmniej 1 punkt.\n3. We wszystkich zadaniach otwartych, w których wskazano poprawną metodę rozwiązania,\nczęści lub całości zadania, zdającemu należy przyznać przynajmniej 1 punkt, zgodnie\nz kryteriami do poszczególnych zadań.\n4. Jeśli zdający przedstawia nieprecyzyjne zapisy, na przykład pomija nawiasy lub zapisuje\nnawiasy w niewłaściwych miejscach, ale przeprowadza poprawne rozumowanie lub\nstosuje właściwą strategię, to może otrzymać przynajmniej 1 punkt za rozwiązanie\nzadania.\n5. W przypadku zadania wymagającego wyznaczenia pierwiastków trójmianu\nkwadratowego zdający może otrzymać 1 punkt, jeżeli przedstawi poprawną metodę\nwyznaczania pierwiastków trójmianu kwadratowego, przy podanych w treści zadania\nwartościach liczbowych.\n6. W przypadku zadania wymagającego rozwiązania nierówności kwadratowej zdający\nmoże otrzymać 1 punkt, jeżeli stosuje poprawny algorytm rozwiązywania nierówności\nkwadratowej, przy podanych w treści zadania wartościach liczbowych.\n7. W przypadku zadania wymagającego stosowania własności funkcji kwadratowej zdający\nmoże otrzymać 1 punkt za wykorzystanie konkretnych własności funkcji kwadratowej,\nistotnych przy poszukiwaniu rozwiązania.\n8. W przypadku zadania wymagającego zastosowania własności ciągów arytmetycznych\nlub geometrycznych zdający może otrzymać 1 punkt, jeżeli przedstawi wykorzystanie\ntakiej własności ciągu, która umożliwia znalezienie rozwiązania zadania.\nZadanie 36.\n1 pkt – zapisanie długości krawędzi podstawy oraz wysokości graniastosłupa podobnego do\nrozpatrywanego (np. 𝑎 = 1, 𝐻 = 4).",
+        "scoringCriteria": "Zadanie 36. (0–5)\nWymaganie ogólne Wymagania szczegółowe\nIV. Użycie i tworzenie strategii. Zdający:\nG11.2) oblicza pole powierzchni i objętość\ngraniastosłupa prostego […].\n9.2) rozpoznaje w graniastosłupach kąt\nmiędzy odcinkami i płaszczyznami […].\nCzęść I (Obliczenie cosinusa kąta 𝛼)\n2 pkt – obliczenie cosinusa kąta 𝛼: cos𝛼 = 1\n3 .\n1 pkt – zapisanie przekątnej graniastosłupa jako 3𝑎√2\n– obliczenie tangensa kąta 𝛼 nachylenia przekątnej graniastosłupa do płaszczyzny\npodstawy: tg𝛼 = 4\n√2 ,\n– obliczenie długości przekątnej graniastosłupa podobnego do rozpatrywanego.\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\nUwaga:\nJeżeli zdający obliczy wartość cosinusa kąta 𝛼, popełniając błąd, który nie jest rachunkowy\n(np. przyjmie, że przekątna podstawy jest równa 𝑎√3\n2 ), to otrzymuje za tę część rozwiązania\n0 punktów, o ile nie nabył praw do innej punktacji.\nCzęść II (Obliczenie pola powierzchni całkowitej graniastosłupa)\n3 pkt – obliczenie pola powierzchni całkowitej graniastosłupa: 𝑃𝑐 = 162.\n2 pkt – zapisanie równania z jedną niewiadomą 𝑎 lub 𝐻, np.:\n𝑎2 ⋅ 4𝑎 = 108, (1\n4𝐻)\n2\n⋅ 𝐻 = 108\n– obliczenie skali 𝑘 podobieństwa graniastosłupa podobnego do rozpatrywanego\n(gdzie 𝑘 ≠ 1).\n1 pkt – zapisanie związku pomiędzy krawędzią podstawy a wysokością graniastosłupa, np.:\n𝐻 = 4𝑎, 𝑎2 ∙ 𝐻 = 108\nZasady oceniania rozwiązań zadań\n– obliczenie objętości i pola powierzchni całkowitej graniastosłupa podobnego do\nrozpatrywanego w skali 𝑘 ≠ 1\n(np. przyjmując 𝑎 = 1, 𝐻 = 4 i wtedy 𝑉 = 4 oraz 𝑃𝑐 = 18),\n– zapisanie zależności między objętością danego graniastosłupa i graniastosłupa do\nniego podobnego, np. 108= 12 ⋅ 4 ⋅ 𝑘3 (gdzie 𝑘 to skala podobieństwa).\n0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.\nPrzykładowe pełne rozwiązania\nSposób I\nPrzyjmujemy oznaczenia:\n𝑎 – długość krawędzi podstawy (𝑎 > 0),\n𝐻 – wysokość graniastosłupa (𝐻 > 0).\nStosunek długości krawędzi podstawy do wysokości graniastosłupa jest równy 1\n4 . Zatem\n𝐻 = 4𝑎. Objętość graniastosłupa wynosi 108, stąd otrzymujemy równanie:\n𝑎2 ∙ 4𝑎 = 108\n4𝑎3 = 108\n𝑎3 = 27\n𝑎 = 3\nNastępnie obliczamy wysokość graniastosłupa, pole powierzchni całkowitej oraz przekątną\npodstawy:\n𝐻 = 4 ∙ 3 = 12\n𝑃𝑐 = 2 ⋅ 𝑎2 + 4 ⋅ 𝑎𝐻 = 2 ⋅ 32 + 4 ⋅ 3 ⋅ 12 = 18+ 144 = 162\n𝑎√2 = 3√2\nKorzystając z twierdzenia Pitagorasa, obliczamy długość 𝑑 przekątnej graniastosłupa:\n𝑑2 = 122 + (3√2)\n2\n, gdzie 𝑑 > 0\n𝑑2 = 162\n𝑑 = √162 = 9√2\nObliczamy cos𝛼:\ncos𝛼 = 𝑎√2\n𝑑 = 3√2\n9√2\n= 1\n3\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nSposób II\nPrzyjmujemy oznaczenia:\n𝑎 – długość krawędzi podstawy (𝑎 > 0),\n𝐻 – wysokość graniastosłupa (𝐻 > 0).\nStosunek długości krawędzi podstawy do wysokości graniastosłupa jest równy 1\n4 . Zatem\n𝐻 = 4𝑎. Przekątna podstawy ma długość 𝑎√2, stąd otrzymujemy:\ntg𝛼 = 4𝑎\n𝑎√2\n= 2√2\nZatem sin𝛼\ncos𝛼 = 2√2. Stąd sin𝛼 = 2√2⋅ cos𝛼.\nWykorzystując tę zależność oraz tożsamość sin2 𝛼 + cos2 𝛼 = 1, otrzymujemy\n(2√2 ⋅ cos𝛼)\n2\n+ cos2 𝛼 = 1\n8cos2 𝛼 + cos2 𝛼 = 1\n9cos2 𝛼 = 1\ncos2 𝛼 = 1\n9\nStąd cos𝛼 = 1\n3 , ponieważ 𝛼 jest kątem ostrym.\nObjętość graniastosłupa wynosi 108, stąd otrzymujemy równanie:\n𝑎2 ∙ 4𝑎 = 108\n4𝑎3 = 108\n𝑎3 = 27\n𝑎 = 3\nNastępnie obliczamy pole powierzchni całkowitej graniastosłupa:\n𝑃𝑐 = 2 ⋅ 𝑎2 + 4 ⋅ 𝑎𝐻 = 2 ⋅ 𝑎2 + 4 ⋅ 𝑎⋅ 4𝑎 = 18⋅ 𝑎2 = 18⋅ 32 = 162\nZasady oceniania rozwiązań zadań\nSposób III\nRozważmy graniastosłup prawidłowy czworokątny 𝐺1 o wysokości 4 i krawędzi podstawy\ndługości 1. Graniastosłup 𝐺1 jest podobny do danego graniastosłupa, zatem przekątna\ngraniastosłupa 𝐺1 jest nachylona do płaszczyzny podstawy pod kątem, którego miara jest\nrówna mierze kąta 𝛼.\nPrzekątna podstawy graniastosłupa 𝐺1 ma długość √2.\nKorzystając z twierdzenia Pitagorasa, obliczamy długość 𝑑1 przekątnej graniastosłupa 𝐺1:\n𝑑1\n2 = 42 + (√2)\n2\n, gdzie 𝑑1 > 0\n𝑑1\n2 = 18\n𝑑1 = √18 = 3√2\nObliczamy cos𝛼:\ncos𝛼 = √2\n3√2\n= 1\n3\nObjętość 𝑉1 graniastosłupa 𝐺1 jest równa\n𝑉1 = 12 ⋅ 4 = 4\nPole 𝑃𝑐1 powierzchni całkowitej graniastosłupa 𝐺1 jest równe\n𝑃𝑐1 = 2 ⋅ 12 + 4 ⋅ 1 ⋅ 4 = 18\nStosunek objętości 𝑉1 graniastosłupa 𝐺1 do objętości 𝑉 danego graniastosłupa jest\nrówny sześcianowi skali podobieństwa. Zatem\n𝑘3 = 𝑉1\n𝑉 = 4\n108 = 1\n27\nStąd 𝑘 = 1\n3 .\nStosunek pola 𝑃𝑐1 powierzchni całkowitej graniastosłupa 𝐺1 do pola 𝑃𝑐 powierzchni\ncałkowitej danego graniastosłupa jest równy kwadratowi skali podobieństwa. Zatem\n𝑃𝑐1\n𝑃𝑐\n= 𝑘2\n18\n𝑃𝑐\n= 1\n9\n𝑃𝑐 = 18⋅ 9 = 162\nEgzamin maturalny z matematyki na poziomie podstawowym – termin główny 2024 r.\nOcena prac osób ze stwierdzoną dyskalkulią\nObowiązują Zasady oceniania stosowane przy sprawdzaniu prac zdających bez\nstwierdzonej dyskalkulii z dodatkowym uwzględnieniem:\na) ogólnych zasad oceniania zadań otwartych w przypadku arkuszy osób ze stwierdzoną\ndyskalkulią (punkty 1.–12.);\nb) dodatkowych szczegółowych zasad oceniania zadań otwartych w przypadku arkuszy\nosób ze stwierdzoną dyskalkulią – egzamin maturalny z matematyki, poziom podstawowy,\ntermin główny 2024.\nI. Ogólne zasady oceniania zadań otwartych w przypadku arkuszy osób ze stwierdzoną\ndyskalkulią\n1. Nie należy traktować jako błędy merytoryczne pomyłek, wynikających z:\n• błędnego przepisania\n• przestawienia cyfr\n• zapisania innej cyfry, ale o podobnym wyglądzie\n• przestawienia położenia przecinka\n• przestawienia położenia znaku liczby.\n2. W przypadku błędów, wynikających ze zmiany znaku liczby, należy w każdym zadaniu\noddzielnie przeanalizować, czy zdający opanował inne umiejętności, poza\numiejętnościami rachunkowymi, oceniane w zadaniu. W przypadku opanowania\nbadanych umiejętności zdający powinien otrzymać przynajmniej 1 punkt.\n3. We wszystkich zadaniach otwartych, w których wskazano poprawną metodę rozwiązania,\nczęści lub całości zadania, zdającemu należy przyznać przynajmniej 1 punkt, zgodnie\nz kryteriami do poszczególnych zadań.\n4. Jeśli zdający przedstawia nieprecyzyjne zapisy, na przykład pomija nawiasy lub zapisuje\nnawiasy w niewłaściwych miejscach, ale przeprowadza poprawne rozumowanie lub\nstosuje właściwą strategię, to może otrzymać przynajmniej 1 punkt za rozwiązanie\nzadania.\n5. W przypadku zadania wymagającego wyznaczenia pierwiastków trójmianu\nkwadratowego zdający może otrzymać 1 punkt, jeżeli przedstawi poprawną metodę\nwyznaczania pierwiastków trójmianu kwadratowego, przy podanych w treści zadania\nwartościach liczbowych.\n6. W przypadku zadania wymagającego rozwiązania nierówności kwadratowej zdający\nmoże otrzymać 1 punkt, jeżeli stosuje poprawny algorytm rozwiązywania nierówności\nkwadratowej, przy podanych w treści zadania wartościach liczbowych.\n7. W przypadku zadania wymagającego stosowania własności funkcji kwadratowej zdający\nmoże otrzymać 1 punkt za wykorzystanie konkretnych własności funkcji kwadratowej,\nistotnych przy poszukiwaniu rozwiązania.\n8. W przypadku zadania wymagającego zastosowania własności ciągów arytmetycznych\nlub geometrycznych zdający może otrzymać 1 punkt, jeżeli przedstawi wykorzystanie\ntakiej własności ciągu, która umożliwia znalezienie rozwiązania zadania.\nZadanie 36.\n1 pkt – zapisanie długości krawędzi podstawy oraz wysokości graniastosłupa podobnego do\nrozpatrywanego (np. 𝑎 = 1, 𝐻 = 4).",
+        "diagramIds": []
+      }
+    ]
+  }
+}

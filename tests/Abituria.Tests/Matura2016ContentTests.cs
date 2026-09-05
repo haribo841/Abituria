@@ -212,13 +212,13 @@ public sealed class Matura2016ContentTests
         var index = Read<ExamIndexCatalog>("Content/exams.json");
         var exams = index.Exams.OrderBy(item => item.Order).Select(item => Read<ExamCatalog>(item.ContentPath).Exam).ToArray();
 
-        Assert.Equal(32, exams.Length);
-        Assert.Equal("matura-maj-2017-podstawowa", exams[26].Id);
-        Assert.Equal("matura-poprawkowa-2017-podstawowa", exams[28].Id);
-        Assert.Equal("matura-maj-2016-podstawowa", exams[29].Id);
-        Assert.Equal("matura-maj-2016-rozszerzona", exams[30].Id);
-        Assert.Equal("matura-poprawkowa-2016-podstawowa", exams[31].Id);
-        Assert.Equal(889, exams.Sum(exam => exam.Exercises.Count));
+        Assert.Equal(46, exams.Length);
+        Assert.Equal("matura-maj-2017-podstawowa", exams[37].Id);
+        Assert.Equal("matura-poprawkowa-2017-podstawowa", exams[39].Id);
+        Assert.Equal("matura-maj-2016-podstawowa", exams[40].Id);
+        Assert.Equal("matura-maj-2016-rozszerzona", exams[41].Id);
+        Assert.Equal("matura-poprawkowa-2016-podstawowa", exams[42].Id);
+        Assert.Equal(1_281, exams.Sum(exam => exam.Exercises.Count));
     }
 
     private static double ExpectedValue(ExamDefinition exam, string exerciseId) =>

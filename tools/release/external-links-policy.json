@@ -57,6 +57,18 @@
       "reason": "The OKE Warszawa 2018 Formula 2015 marking guide is pinned by SHA-256 in the exam catalog and coverage audit; transient PDF-host availability is not a content-integrity check."
     },
     {
+      "urlPrefix": "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2015/Matematyka/",
+      "reason": "The OKE Warszawa 2015 Formula 2015 papers and marking guides are pinned by SHA-256 in the exam catalogs and coverage audits; transient PDF-host availability is not a content-integrity check."
+    },
+    {
+      "urlPrefix": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2023/Matematyka/",
+      "reason": "The CKE 2023 parallel Formula 2015 papers and marking guides are pinned by SHA-256 in the exam catalogs and coverage audits; transient PDF-host availability is not a content-integrity check."
+    },
+    {
+      "urlPrefix": "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2024/Matematyka/",
+      "reason": "The CKE 2024 parallel Formula 2015 papers and marking guides are pinned by SHA-256 in the exam catalogs and coverage audits; transient PDF-host availability is not a content-integrity check."
+    },
+    {
       "urlPrefix": "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/",
       "reason": "The OKE Warszawa 2022 Formula 2015 papers and marking guides are pinned by SHA-256 in the exam catalogs and coverage audits; transient PDF-host availability is not a content-integrity check."
     },

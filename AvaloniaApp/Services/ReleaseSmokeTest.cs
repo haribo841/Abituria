@@ -174,7 +174,7 @@ public static class ReleaseSmokeTestRunner
             content.MathCourse.Requirements.Count != 119 ||
             content.MathCourse.Lessons.SelectMany(lesson => lesson.WorkedExamples).Count() != 238 ||
             content.CourseExercises.Exercises.Count != 357 ||
-            content.Exams.Count != 32 ||
+            content.Exams.Count != 46 ||
             content.GetExam("matura-maj-2026-podstawowa").Exercises.Count != 37 ||
             content.GetExam("matura-maj-2026-rozszerzona").Exercises.Count != 13 ||
             content.GetExam("matura-maj-2025-podstawowa").Exercises.Count != 35 ||
@@ -212,6 +212,8 @@ public static class ReleaseSmokeTestRunner
         {
             throw new InvalidDataException("Nie załadowano kompletu podstawowych treści aplikacji.");
         }
+
+        EnsureFormula2015ArchiveIsAvailable(content);
 
         if (!content.Formulas.Articles.Any(article => article.Id == "formula-2") ||
             !content.MathCourse.Requirements.Any(requirement => requirement.Id == "I.B.1") ||
@@ -253,9 +255,37 @@ public static class ReleaseSmokeTestRunner
         }
     }
 
+    private static void EnsureFormula2015ArchiveIsAvailable(ContentRepository content)
+    {
+        var expectedArchives = new (string Id, int ExerciseCount)[]
+        {
+            ("matura-maj-2015-podstawowa", 34),
+            ("matura-maj-2015-rozszerzona", 16),
+            ("matura-poprawkowa-2015-podstawowa", 34),
+            ("matura-maj-2023-podstawowa-f2015", 36),
+            ("matura-maj-2023-rozszerzona-f2015", 16),
+            ("matura-poprawkowa-2023-podstawowa-f2015", 36),
+            ("matura-maj-2024-podstawowa-f2015", 36),
+            ("matura-maj-2024-rozszerzona-f2015", 16),
+            ("matura-poprawkowa-2024-podstawowa-f2015", 36),
+            ("matura-maj-2025-podstawowa-f2015", 34),
+            ("matura-maj-2025-rozszerzona-f2015", 15),
+            ("matura-poprawkowa-2025-podstawowa-f2015", 34),
+            ("matura-maj-2026-podstawowa-f2015", 34),
+            ("matura-maj-2026-rozszerzona-f2015", 15)
+        };
+
+        foreach (var (id, exerciseCount) in expectedArchives)
+        {
+            var exam = content.GetExam(id);
+            if (exam.Formula != "2015" || exam.Exercises.Count != exerciseCount)
+                throw new InvalidDataException($"Nie załadowano pełnego archiwum Formuły 2015: {id}.");
+        }
+    }
+
     private static void EnsureApplicationDiagramsAreAvailable(ContentRepository content)
     {
-        if (content.Diagrams.Diagrams.Count != 226)
+        if (content.Diagrams.Diagrams.Count != 249)
             throw new InvalidDataException("Katalog diagramów aplikacji jest niekompletny.");
 
         var requiredDiagramIds = new[]

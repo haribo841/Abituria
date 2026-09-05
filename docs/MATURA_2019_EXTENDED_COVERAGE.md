@@ -34,6 +34,6 @@ Wektorowe definicje `exam-mm19-r0-z03`, `exam-mm19-r0-z09`, `exam-mm19-r0-z10`, 
 
 ## Testy i proweniencja
 
-`Matura2019ContentTests` kontroluje źródła, sumy SHA-256, kontrakt `15/15/50`, punktację, tryby odpowiedzi, wyniki liczbowe i pięć diagramów. Testy katalogu, UI i smoke testu kontrolują 32 aktywne arkusze, 889 jednostek postępu i 226 diagramów.
+`Matura2019ContentTests` kontroluje źródła, sumy SHA-256, kontrakt `15/15/50`, punktację, tryby odpowiedzi, wyniki liczbowe i pięć diagramów. Testy katalogu, UI i smoke testu kontrolują 46 aktywnych arkuszy, 1 281 jednostek postępu i 249 diagramów.
 
 Grupa `cke-2019-main-extended-exam` zachowuje status `approved`. Wspólny katalog `runtime-vector-diagrams` ma obecnie status `blocked`, ponieważ obejmuje także pochodne diagramy z nieobjętych deklaracją arkuszy 2017 i 2016. Manifest ma więc `releaseEligible=false`; status tej historycznej grupy 2019 nie uległ zmianie. Każda zmiana źródeł, zakresu lub sposobu pakowania wymaga ponownej oceny i pełnej bramy proweniencji.

@@ -226,11 +226,11 @@ public sealed class Matura2018ContentTests
     {
         var repository = new ContentRepository();
 
-        Assert.Equal(32, repository.Exams.Count);
-        Assert.Equal("matura-maj-2018-podstawowa", repository.Exams[23].Id);
-        Assert.Equal("matura-maj-2018-rozszerzona", repository.Exams[24].Id);
-        Assert.Equal("matura-poprawkowa-2018-podstawowa", repository.Exams[25].Id);
-        Assert.Equal(889, repository.Exams.Sum(exam => exam.Exercises.Count));
+        Assert.Equal(46, repository.Exams.Count);
+        Assert.Equal("matura-maj-2018-podstawowa", repository.Exams[34].Id);
+        Assert.Equal("matura-maj-2018-rozszerzona", repository.Exams[35].Id);
+        Assert.Equal("matura-poprawkowa-2018-podstawowa", repository.Exams[36].Id);
+        Assert.Equal(1_281, repository.Exams.Sum(exam => exam.Exercises.Count));
     }
 
     private static T Read<T>(string relativePath) => JsonSerializer.Deserialize<T>(

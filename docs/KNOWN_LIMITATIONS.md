@@ -4,7 +4,7 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 
 ## Status publikacji
 
-- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=false`. Trzy grupy arkuszy CKE z 2017 r., trzy grupy z 2016 r. oraz katalog `runtime-vector-diagrams` są `blocked`, ponieważ deklaracja właściciela z 1 września 2026 r. nie obejmuje nowo dodanych transkrypcji ani figur pochodnych. Każda zmiana źródła, zakresu lub sposobu pakowania wymaga ponownej oceny i pełnej bramy wydania.
+- Maszynowy inwentarz pochodzenia ma obecnie `releaseEligible=false`. Trzy grupy arkuszy CKE z 2017 r., trzy grupy z 2016 r., czternaście grup Formuły 2015 z 2015 i lat równoległych 2023-2026 oraz katalog `runtime-vector-diagrams` są `blocked`, ponieważ deklaracja właściciela z 1 września 2026 r. nie obejmuje tych nowych transkrypcji ani 54 figur pochodnych. Każda zmiana źródła, zakresu lub sposobu pakowania wymaga ponownej oceny i pełnej bramy wydania.
 - Rzeczywiste autorstwo i źródła są przypisane w `Content/provenance.json`. Przed tagiem trzeba przejść bramę `-RequireReleaseEligible` na dokładnym commicie wydania, więc bieżący worktree nie jest kandydatem do wydania.
 - Lokalnie zbudowany artefakt nie jest oficjalnym wydaniem, nawet jeśli przechodzi testy techniczne.
 
@@ -33,7 +33,7 @@ Dokument opisuje jawny zakres pierwszego prerelease. Ograniczenie nie jest autom
 
 - Kurs matematyki obejmuje Formułę 2023 na poziomie podstawowym i rozszerzonym; nie zawiera osobnego kursu Formuły 2015.
 - Warstwa 238 przykładów i 357 ćwiczeń kursowych pozostaje autorska. Obok niej działa osobny katalog 97 oficjalnych przykładów CKE - 66 podstawowych i 31 rozszerzonych - z jawnym źródłem, stronami, wymaganiami, zasadami oceniania, rozwiązaniami i opisami figur.
-- Dostępne są matury główne i poprawkowe 2019 oraz 2020 PP i PR, matury główne 2021 PP i PR, matury główne i poprawkowa 2022 PP oraz PR w Formule 2015, matury główna i poprawkowa 2023 na poziomie podstawowym, matura główna 2023 na poziomie rozszerzonym, matury główne 2024, 2025 i 2026 na poziomie podstawowym i rozszerzonym, matury poprawkowe 2024 i 2025 PP oraz arkusz poprawkowy 2021. Równoległe warianty Formuły 2015 z lat 2023-2026 pozostają w przygotowaniu.
+- Aktywny katalog obejmuje 46 arkuszy: Formułę 2015 od 2015 r., w tym arkusze główne PP i PR do 2026 r. oraz poprawkowe PP do 2025 r., a także Formułę 2023 od 2023 r. Poprawkowe arkusze PP z sierpnia 2026 pozostają nieaktywne do czasu publikacji oficjalnych zasad oceniania.
 - Generator wykresów i kalkulator funkcji trygonometrycznych pozostają placeholderami.
 - Renderer CSharpMath obsługuje używany podzbiór zapisu matematycznego, ale nie jest pełnym silnikiem TeX. Treści muszą przechodzić walidację delimitera i regresje renderowania.
 - Materiały edukacyjne nie zastępują nauczyciela, oficjalnego informatora egzaminacyjnego ani aktualnych komunikatów CKE.

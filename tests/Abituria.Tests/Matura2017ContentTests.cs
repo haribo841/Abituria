@@ -192,13 +192,13 @@ public sealed class Matura2017ContentTests
             .Select(item => Read<ExamCatalog>(item.ContentPath).Exam)
             .ToArray();
 
-        Assert.Equal(32, exams.Length);
-        Assert.Equal("matura-maj-2018-podstawowa", exams[23].Id);
-        Assert.Equal("matura-poprawkowa-2018-podstawowa", exams[25].Id);
-        Assert.Equal("matura-maj-2017-podstawowa", exams[26].Id);
-        Assert.Equal("matura-maj-2017-rozszerzona", exams[27].Id);
-        Assert.Equal("matura-poprawkowa-2017-podstawowa", exams[28].Id);
-        Assert.Equal(889, exams.Sum(exam => exam.Exercises.Count));
+        Assert.Equal(46, exams.Length);
+        Assert.Equal("matura-maj-2018-podstawowa", exams[34].Id);
+        Assert.Equal("matura-poprawkowa-2018-podstawowa", exams[36].Id);
+        Assert.Equal("matura-maj-2017-podstawowa", exams[37].Id);
+        Assert.Equal("matura-maj-2017-rozszerzona", exams[38].Id);
+        Assert.Equal("matura-poprawkowa-2017-podstawowa", exams[39].Id);
+        Assert.Equal(1_281, exams.Sum(exam => exam.Exercises.Count));
     }
 
     private static double GetExpectedValue(ExamDefinition exam, string exerciseId) =>

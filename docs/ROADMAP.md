@@ -25,7 +25,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - matura główna 2026 PR zweryfikowana z arkuszem i zasadami oceniania CKE: 12 zadań, 13 jednostek postępu i 50 punktów,
 - 35 zadań matury poprawkowej 2021 zachowanych z identyfikatorami `mp21-*`,
 - matura poprawkowa 2024 PP zweryfikowana z publicznym archiwum: 30 zadań, 36 jednostek postępu i 46 punktów,
-- wybór trzydziestu dwóch arkuszy i agregacja ich 889 jednostek postępu według 17 tematów,
+- wybór czterdziestu sześciu arkuszy i agregacja ich 1 281 jednostek postępu według 17 tematów, w tym pełny katalog Formuły 2015 od 2015 r. i równoległe arkusze F2015 z lat 2023-2026,
 - kalkulator ogólny z parserem wyrażeń, notacją naukową, Ans i historią sesji,
 - kalkulator funkcji kwadratowej,
 - losowanie zadań z całego arkusza i w obrębie wybranego tematu,
@@ -35,7 +35,6 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 ## Zaplanowane
 
 - generator wykresów i kalkulator funkcji trygonometrycznych,
-- równoległe warianty Formuły 2015 z lat 2023-2026,
 - materiały wideo i wyszukiwanie zapisu matematycznego.
 
 ## Poza zakresem wersji beta
@@ -45,7 +44,7 @@ Plan powstał z porównania wszystkich zachowanych wersji projektu. Ten dokument
 - podpisywanie kodu i paczek,
 - paczka macOS dla Apple Silicon.
 
-Manifest `Content/provenance.json` ma obecnie `releaseEligible=false`. Rozszerzenie deklaracji właściciela z 1 września 2026 r. obejmuje zatwierdzone arkusze CKE 2018-2026, lecz nie obejmuje nowych transkrypcji i figur 2017-2016. Każdy przyszły publiczny prerelease nadal wymaga pełnej checklisty wydania, zweryfikowanego workflow i ponownej oceny podstawy prawnej przy zmianie zakresu.
+Manifest `Content/provenance.json` ma obecnie `releaseEligible=false`. Rozszerzenie deklaracji właściciela z 1 września 2026 r. obejmuje zatwierdzone arkusze CKE 2018-2026, lecz nie obejmuje transkrypcji Formuły 2015 z 2015-2017 ani równoległych arkuszy F2015 z lat 2023-2026. Każdy przyszły publiczny prerelease nadal wymaga pełnej checklisty wydania, zweryfikowanego workflow i ponownej oceny podstawy prawnej przy zmianie zakresu.
 
 ## Zastąpione
 

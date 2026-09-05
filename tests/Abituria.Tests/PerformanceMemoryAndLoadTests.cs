@@ -20,8 +20,8 @@ public sealed class PerformanceMemoryAndLoadTests
     private const int CalculatorIterations = 10_000;
     private const int ParallelCalculatorOperations = 40_000;
     private const int ContentReloads = 20;
-    // 6 MiB na odczyt obejmuje pełny katalog 32 arkuszy, 889 zadań i 226 diagramów.
-    private const long MaximumContentReloadAllocationBytes = 6L * 1024L * 1024L * ContentReloads;
+    // 10 MiB na odczyt obejmuje pełny katalog 46 arkuszy, 1 281 zadań i 249 diagramów.
+    private const long MaximumContentReloadAllocationBytes = 10L * 1024L * 1024L * ContentReloads;
     private const int ProgressRecordCount = 5_000;
     private const int ProgressReadCount = 3;
 

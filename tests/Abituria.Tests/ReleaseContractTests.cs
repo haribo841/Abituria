@@ -393,6 +393,30 @@ public sealed class ReleaseContractTests
             onlineCheckExclusions.EnumerateArray(),
             item =>
                 item.GetProperty("urlPrefix").GetString() ==
+                    "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2015/Matematyka/" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "SHA-256",
+                    StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() ==
+                    "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2023/Matematyka/" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "SHA-256",
+                    StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() ==
+                    "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2024/Matematyka/" &&
+                item.GetProperty("reason").GetString()!.Contains(
+                    "SHA-256",
+                    StringComparison.Ordinal));
+        Assert.Contains(
+            onlineCheckExclusions.EnumerateArray(),
+            item =>
+                item.GetProperty("urlPrefix").GetString() ==
                     "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2022/Matematyka/" &&
                 item.GetProperty("reason").GetString()!.Contains(
                     "SHA-256",

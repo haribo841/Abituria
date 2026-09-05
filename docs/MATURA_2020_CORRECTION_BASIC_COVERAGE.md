@@ -60,4 +60,4 @@ Sześć własnych definicji wektorowych Avalonia odtwarza figury zadań 10, 15, 
 
 Grupa cke-2020-correction-basic-exam i katalog diagramów są w Content/provenance.json oznaczone jako blocked. releaseEligible pozostaje false, ponieważ nie ma osobnego rozszerzenia deklaracji praw dla arkusza, zasad oceniania i pochodnych figur.
 
-Test Matura2020CorrectionBasicContentTests kontroluje kontrakt 34/34/50, datę 8 września 2020 r., źródła, sumy SHA-256, klucz, tryby, diagramy, proweniencję i wpis w spisie dokumentacji. Testy katalogu, UI i smoke testu kontrolują 32 aktywne arkusze, 889 jednostek postępu i 226 diagramów.
+Test Matura2020CorrectionBasicContentTests kontroluje kontrakt 34/34/50, datę 8 września 2020 r., źródła, sumy SHA-256, klucz, tryby, diagramy, proweniencję i wpis w spisie dokumentacji. Testy katalogu, UI i smoke testu kontrolują 46 aktywnych arkuszy, 1 281 jednostek postępu i 249 diagramów.

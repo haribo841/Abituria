@@ -70,7 +70,7 @@ Użytkownik otrzymuje bezpłatny dostęp do lokalnej aplikacji, połączenie mat
 
 ### 4.3. Stan dystrybucji
 
-Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, a publiczne prerelease [`v0.9.3`](https://github.com/haribo841/Abituria/releases/tag/v0.9.3) stanowi kanał dystrybucji zatwierdzonej bety. Deklaracje z 3, 5, 10 i 12 sierpnia oraz 1 września 2026 r. obejmują zatwierdzone paczkowane arkusze CKE 2018-2026, zasady oceniania, transkrypcję 97 przykładów z informatorów CKE i 195 wcześniej zatwierdzonych implementacji wektorowych Avalonia. Bieżący worktree ma `releaseEligible=false`, ponieważ transkrypcje oraz figury 2017-2016 wymagają odrębnego rozszerzenia deklaracji. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), macierze matur 2016-2026 oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
+Proces techniczny tworzenia przenośnych paczek x64 dla Windows, Ubuntu i macOS jest zaimplementowany, a publiczne prerelease [`v0.9.3`](https://github.com/haribo841/Abituria/releases/tag/v0.9.3) stanowi kanał dystrybucji zatwierdzonej bety. Deklaracje z 3, 5, 10 i 12 sierpnia oraz 1 września 2026 r. obejmują zatwierdzone paczkowane arkusze CKE 2018-2026, zasady oceniania, transkrypcję 97 przykładów z informatorów CKE i 195 wcześniej zatwierdzonych implementacji wektorowych Avalonia. Bieżący worktree ma `releaseEligible=false`, ponieważ transkrypcje arkuszy z 2015-2017 oraz równoległej Formuły 2015 z lat 2023-2026 wymagają odrębnego rozszerzenia deklaracji. Szczegóły zawierają [znane ograniczenia](KNOWN_LIMITATIONS.md), [inwentarz pochodzenia](CONTENT_PROVENANCE.md), [macierz pełnego archiwum Formuły 2015](MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md) oraz [oświadczenie o prawach](ASSET_RIGHTS_DECLARATION.md).
 
 Koszty bieżącego wariantu obejmują przede wszystkim czas przygotowania treści, implementacji, testów, dokumentacji i utrzymania repozytorium. Aplikacja działa lokalnie, dlatego nie wymaga serwera aplikacyjnego ani przechowywania danych użytkowników przez zewnętrznego operatora.
 
@@ -83,14 +83,14 @@ Zakres bieżącej implementacji jest zdefiniowany normatywnie w [REQUIREMENTS.md
 - profile gościa i lokalne konta z zapisem postępu w SQLite;
 - tablice matematyczne oraz pełny kurs Formuły 2023 obejmujący 4 grupy, 13 obszarów, 119 wymagań, 238 przykładów i 357 ćwiczeń;
 - sprawdzanie odpowiedzi zamkniętych, ujawnianie odpowiedzi otwartych oraz podpowiedzi;
-- matury główne PP i PR oraz poprawkowe PP Formuły 2015 z lat 2016-2022, matury Formuły 2023 z lat 2023-2026 oraz zachowany arkusz poprawkowy 2021 - razem 32 arkusze i 889 jednostek postępu;
-- odpowiedzi złożone dla tabel P/F i zadań wielopolowych oraz agregacja trzydziestu dwóch arkuszy według 17 tematów;
+- matury główne PP i PR oraz poprawkowe PP Formuły 2015 z lat 2015-2025, główne PP i PR Formuły 2015 z 2026, równoległe matury Formuły 2023 z lat 2023-2026 oraz zachowany arkusz poprawkowy 2021 - razem 46 arkuszy i 1 281 jednostek postępu;
+- odpowiedzi złożone dla tabel P/F i zadań wielopolowych oraz agregacja czterdziestu sześciu arkuszy według 17 tematów;
 - kalkulator funkcji kwadratowej;
 - kalkulator ogólny z parserem wyrażeń, nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią i powtarzanym `=`;
 - losowanie zadań z całego arkusza albo wybranego tematu;
 - dokumentację, bramy jakości, diagnostyczny smoke test artefaktu i automatyzację przygotowania paczek.
 
-Kurs odpowiada podstawie programowej z 2024 r. stosowanej dla matury 2026. Filtr podstawowy pokazuje 73 wymagania i 219 ćwiczeń, a rozszerzony dodaje 46 wymagań oraz 138 ćwiczeń. Katalog egzaminów obejmuje pełne trójki PP, PR i poprawka PP Formuły 2015 z lat 2016-2020 i 2022, arkusze PP i PR z 2021, arkusze Formuły 2023 z lat 2023-2026 oraz zachowany arkusz poprawkowy 2021. Grupy 2016 i 2017 są `blocked`, podobnie jak wspólny katalog diagramów zawierający ich figury pochodne. Zatwierdzone grupy wcześniejszych arkuszy pozostają `approved`, lecz nie odblokowują całego worktree.
+Kurs odpowiada podstawie programowej z 2024 r. stosowanej dla matury 2026. Filtr podstawowy pokazuje 73 wymagania i 219 ćwiczeń, a rozszerzony dodaje 46 wymagań oraz 138 ćwiczeń. Katalog egzaminów obejmuje pełne trójki PP, PR i poprawka PP Formuły 2015 z lat 2015-2025, główne PP i PR Formuły 2015 z 2026, równoległe arkusze Formuły 2023 z lat 2023-2026 oraz zachowany arkusz poprawkowy 2021. Obie poprawki z sierpnia 2026 czekają na oficjalne zasady oceniania. Grupy 2015-2017 oraz nowe równoległe grupy F2015 z 2023-2026 są `blocked`, podobnie jak wspólny katalog diagramów zawierający niezatwierdzone figury pochodne. Zatwierdzone grupy wcześniejszych arkuszy pozostają `approved`, lecz nie odblokowują całego worktree.
 
 ### 5.2. Poza zakresem beta
 
@@ -116,7 +116,7 @@ Rzeczywiste daty najwcześniejszych weryfikowalnych stanów technicznych I-IV bi
 | Tydzień 3 | M2 - architektura i nawigacja | autor implementacji | zrealizowane: AvaloniaUI, jedno `MainWindow`, `AppViewModel`, testy architektury |
 | Tydzień 4-5 | M3a - ekran startowy i nawigacja | autor implementacji | zrealizowane: shell, widoki i routing |
 | Tydzień 6-7 | M3b - kalkulatory | autor implementacji | zrealizowane: kalkulator ogólny i funkcji kwadratowej z regresjami |
-| Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | zrealizowane: pełny kurs `119/238/357`, trzydzieści dwa aktywne arkusze z 889 jednostkami postępu, tablice i oddzielny postęp |
+| Tydzień 8-11 | M4 - moduł edukacyjny | autor implementacji, autor treści | zrealizowane: pełny kurs `119/238/357`, czterdzieści sześć aktywnych arkuszy z 1 281 jednostkami postępu, tablice i oddzielny postęp |
 | Tydzień 12 | M5a - testy i regresje | autor implementacji | zrealizowane ciągle: testy jednostkowe, integracyjne, UI i CI |
 | Tydzień 13 | M5b - dokumentacja i pakowanie | autor implementacji | technicznie zrealizowane: dokumentacja, workflow, paczki portable i smoke test |
 | Tydzień 14 | M6 - publiczne prerelease | autor implementacji, właściciel praw | osiągnięte: zatwierdzona proweniencja, tag, natywne workflow i publiczny GitHub Release `v0.9.3` |

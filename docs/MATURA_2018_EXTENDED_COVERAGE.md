@@ -34,6 +34,6 @@ Wektorowe definicje `exam-mm18-r0-z07`, `exam-mm18-r0-z10`, `exam-mm18-r0-z14` i
 
 ## Testy i proweniencja
 
-`Matura2018ContentTests` kontroluje źródła, sumy SHA-256, kontrakt `15/15/50`, punktację, tryby odpowiedzi, wyniki liczbowe i cztery diagramy. Testy katalogu, UI i smoke testu kontrolują 32 aktywne arkusze, 889 jednostek postępu i 226 diagramów.
+`Matura2018ContentTests` kontroluje źródła, sumy SHA-256, kontrakt `15/15/50`, punktację, tryby odpowiedzi, wyniki liczbowe i cztery diagramy. Testy katalogu, UI i smoke testu kontrolują 46 aktywnych arkuszy, 1 281 jednostek postępu i 249 diagramów.
 
 Grupa `cke-2018-main-extended-exam` zachowuje status `approved`. Wspólny katalog `runtime-vector-diagrams` ma obecnie status `blocked`, ponieważ obejmuje także pochodne diagramy z nieobjętych deklaracją arkuszy 2017 i 2016. Manifest ma więc `releaseEligible=false`; status tej historycznej grupy 2018 nie uległ zmianie. Każda zmiana źródeł, zakresu lub sposobu pakowania wymaga ponownej oceny i pełnej bramy proweniencji.

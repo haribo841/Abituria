@@ -42,7 +42,7 @@ Suma punktów w macierzy wynosi 50. Identyfikatory mają mniej niż 80 znaków i
 
 Content/exam-2023-main-extended.json zawiera treść każdego zadania, wynik, pełne rozwiązanie, kryteria punktowania oraz strony obu dokumentów źródłowych. Tryby numeric, compound i revealOnly są istniejącymi mechanizmami katalogu matur i nie wymagają zmiany schematu bazy.
 
-Zadania 5, 7, 10 i 13 odwołują się odpowiednio do exam-mm23-r0-z05, exam-mm23-r0-z07, exam-mm23-r0-z10 oraz exam-mm23-r0-z13 w Content/diagrams.json. Są to autorskie, deterministyczne definicje wektorowe Avalonia z opisami alternatywnymi i numerami stron 8, 11, 16 oraz 22. Katalog diagramów zawiera obecnie 226 definicji; nie dodano aktywnego rastra.
+Zadania 5, 7, 10 i 13 odwołują się odpowiednio do exam-mm23-r0-z05, exam-mm23-r0-z07, exam-mm23-r0-z10 oraz exam-mm23-r0-z13 w Content/diagrams.json. Są to autorskie, deterministyczne definicje wektorowe Avalonia z opisami alternatywnymi i numerami stron 8, 11, 16 oraz 22. Katalog diagramów zawiera obecnie 249 definicji; nie dodano aktywnego rastra.
 
 ## Walidacja
 
@@ -54,7 +54,7 @@ Test Matura2023ExtendedContentTests sprawdza:
 - kompletność czterech diagramów, opisy alternatywne, źródła i renderowanie bez rastra;
 - zatwierdzoną proweniencję nowej transkrypcji.
 
-Matura2026UiTests dodatkowo obejmuje wybór trzydziestu dwóch arkuszy, losowanie ograniczone do wybranego arkusza, agregację 889 jednostek postępu według 17 tematów, kontekst powrotu oraz osobny licznik Matura maj 2023 PR: x / 14.
+Matura2026UiTests dodatkowo obejmuje wybór czterdziestu sześciu arkuszy, losowanie ograniczone do wybranego arkusza, agregację 1 281 jednostek postępu według 17 tematów, kontekst powrotu oraz osobny licznik Matura maj 2023 PR: x / 14.
 
 ## Prawa i wydanie
 

@@ -12,6 +12,7 @@ public sealed class Matura2026ContentTests
     private const string PaperHash = "B7BD89434CA5CCFA33824B0CF063FF7CDDFF47B353059ECF225418E29BEEE71D";
     private const string RulesHash = "A982890CF5EA17206266E4A64B7BFDF96F46FAB08C7435B022CCE5B3908A65AC";
     private static readonly JsonSerializerOptions JsonOptions = new() { PropertyNameCaseInsensitive = true };
+    private static readonly string[] SupportedExamLevels = ["basic", "extended"];
     private static readonly string RepositoryRoot = FindRepositoryRoot();
 
     [Fact]
@@ -157,9 +158,10 @@ public sealed class Matura2026ContentTests
             .ToArray();
 
         Assert.Equal(17, topicIds.Count);
-        Assert.Equal(
-            ["basic", "extended", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "basic", "extended", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic", "basic", "extended", "basic"],
-            index.Exams.OrderBy(item => item.Order).Select(item => item.Level));
+        var orderedIndex = index.Exams.OrderBy(item => item.Order).ToArray();
+        Assert.Equal(46, orderedIndex.Length);
+        Assert.Equal(["basic", "extended", "basic", "extended"], orderedIndex.Take(4).Select(item => item.Level));
+        Assert.All(orderedIndex, item => Assert.Contains(item.Level, SupportedExamLevels));
         Assert.Equal(topicIds.Order(), exam.Exercises.Select(item => item.TopicId).Distinct(StringComparer.Ordinal).Order());
         Assert.All(exam.Exercises, item => Assert.Contains(item.TopicId, topicIds));
         Assert.Equal(7, referenced.Length);
@@ -208,51 +210,15 @@ public sealed class Matura2026ContentTests
         var basic2016 = Read<ExamCatalog>("Content/exam-2016-main-basic.json").Exam;
         var extended2016 = Read<ExamCatalog>("Content/exam-2016-main-extended.json").Exam;
         var correction2016 = Read<ExamCatalog>("Content/exam-2016-correction-basic.json").Exam;
-        var exams = new[]
-        {
-            current, extended, basic2025, extended2025, correction2025, basic2024, extended2024,
-            correction2024, basic2023, correction2023, extended2023, basic2022, extended2022,
-            correction2022, basic2021, extended2021, legacy, basic2020, extended2020, correction2020,
-            basic2019, extended2019, correction2019, basic2018, extended2018, correction2018, basic2017,
-            extended2017, correction2017, basic2016, extended2016, correction2016
-        };
+        var exams = index.Exams.Where(item => item.IsActive).OrderBy(item => item.Order)
+            .Select(item => Read<ExamCatalog>(item.ContentPath).Exam)
+            .ToArray();
 
-        Assert.Equal(
-            [
-                ExamId,
-                "matura-maj-2026-rozszerzona",
-                "matura-maj-2025-podstawowa",
-                "matura-maj-2025-rozszerzona",
-                "matura-poprawkowa-2025-podstawowa",
-                "matura-maj-2024-podstawowa",
-                "matura-maj-2024-rozszerzona",
-                "matura-poprawkowa-2024-podstawowa",
-                "matura-maj-2023-podstawowa",
-                "matura-poprawkowa-2023-podstawowa",
-                "matura-maj-2023-rozszerzona",
-                "matura-maj-2022-podstawowa",
-                "matura-maj-2022-rozszerzona",
-                "matura-poprawkowa-2022-podstawowa",
-                "matura-maj-2021-podstawowa",
-                "matura-maj-2021-rozszerzona",
-                "matura-poprawkowa-2021",
-                "matura-maj-2020-podstawowa",
-                "matura-maj-2020-rozszerzona",
-                "matura-poprawkowa-2020-podstawowa",
-                "matura-maj-2019-podstawowa",
-                "matura-maj-2019-rozszerzona",
-                "matura-poprawkowa-2019-podstawowa",
-                "matura-maj-2018-podstawowa",
-                "matura-maj-2018-rozszerzona",
-                "matura-poprawkowa-2018-podstawowa",
-                "matura-maj-2017-podstawowa",
-                "matura-maj-2017-rozszerzona",
-                "matura-poprawkowa-2017-podstawowa",
-                "matura-maj-2016-podstawowa",
-                "matura-maj-2016-rozszerzona",
-                "matura-poprawkowa-2016-podstawowa"
-            ],
-            index.Exams.Where(item => item.IsActive).OrderBy(item => item.Order).Select(item => item.Id));
+        Assert.Equal(46, exams.Length);
+        Assert.Equal([ExamId, "matura-maj-2026-rozszerzona", "matura-maj-2026-podstawowa-f2015", "matura-maj-2026-rozszerzona-f2015"],
+            exams.Take(4).Select(item => item.Id));
+        Assert.Equal(["matura-maj-2015-podstawowa", "matura-maj-2015-rozszerzona", "matura-poprawkowa-2015-podstawowa"],
+            exams.TakeLast(3).Select(item => item.Id));
         Assert.Equal(35, legacy.Exercises.Count);
         Assert.Equal(Enumerable.Range(1, 35).Select(number => $"mp21-z{number}"), legacy.Exercises.Select(item => item.Id));
         Assert.Equal(37, current.Exercises.Count);

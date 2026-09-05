@@ -58,7 +58,7 @@ Nie wolno usuwać parametru bramy, ręcznie zmieniać `releaseEligible` ani wył
 
 ## Aktualny stan
 
-`releaseEligible` ma obecnie wartość `false`. Rozszerzenie [deklaracji praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 1 września 2026 r. obejmuje wcześniej zatwierdzone grupy arkuszy CKE i 195 ówczesnych definicji `runtime-vector-diagrams`, lecz nie obejmuje sześciu nowych grup matur 2017 i 2016 ani 31 pochodnych diagramów. Zwykła walidacja kompletności przechodzi lokalnie, natomiast brama `-RequireReleaseEligible` celowo blokuje wydanie do czasu odrębnego rozszerzenia deklaracji.
+`releaseEligible` ma obecnie wartość `false`. Rozszerzenie [deklaracji praw do redystrybucji](ASSET_RIGHTS_DECLARATION.md) z 1 września 2026 r. obejmuje wcześniej zatwierdzone grupy arkuszy CKE i 195 ówczesnych definicji `runtime-vector-diagrams`, lecz nie obejmuje dwudziestu grup arkuszy Formuły 2015 z 2015-2017 oraz lat równoległych 2023-2026 ani 54 pochodnych diagramów. Zwykła walidacja kompletności przechodzi lokalnie, natomiast brama `-RequireReleaseEligible` celowo blokuje wydanie do czasu odrębnego rozszerzenia deklaracji.
 
 ### Materiały CKE
 
@@ -118,13 +118,13 @@ Grupa `mathematics-course-formula-2023` obejmuje `Content/chapters.json` i `Cont
 
 Warstwa autorska pozostaje niezmieniona: 238 przykładów, 357 ćwiczeń, podpowiedzi, pełne rozwiązania i cztery nowe definicje diagramów kursu są materiałami Adama Kubisia. Osiem zachowanych diagramów wektorowych nadal ma historyczne przypisanie. Osobna grupa `cke-formula-2023-guide-examples` obejmuje `Content/official-course-examples.json`: 66 przykładów podstawowych i 31 rozszerzonych wraz z oficjalnym brzmieniem wymagań wskazanych przy zadaniach, zasadami oceniania, rozwiązaniami, stronami PDF i 53 opisami informacji wizualnej. Autorem tych materiałów pozostaje CKE. Maszynowa macierz [MATH_COURSE_2023_COVERAGE.md](MATH_COURSE_2023_COVERAGE.md) rozdziela obie warstwy oraz dokumentuje kontrakty `119/238/357` i `66/31/97`.
 
-### Matury Formuły 2015 z 2017 i 2016
+### Matury Formuły 2015 z 2015-2017 oraz lat równoległych 2023-2026
 
-Grupy `cke-2017-main-basic-exam`, `cke-2017-main-extended-exam`, `cke-2017-correction-basic-exam`, `cke-2016-main-basic-exam`, `cke-2016-main-extended-exam` i `cke-2016-correction-basic-exam` obejmują odpowiednio lokalne transkrypcje sześciu arkuszy i zasad oceniania. Każdy arkusz ma osobną macierz pokrycia, adres źródła, sumy SHA-256 i datę weryfikacji w danych JSON. Wszystkie sześć grup ma status `blocked`, ponieważ deklaracja z 1 września 2026 r. nie wskazuje tych konkretnych arkuszy. Techniczne przejście testów nie stanowi zgody na publiczną redystrybucję.
+Grupy `cke-2016-*`, `cke-2017-*`, `cke-2015-*` oraz `cke-2023-f2015-*` do `cke-2026-f2015-*` obejmują dwadzieścia lokalnych transkrypcji arkuszy i zasad oceniania. Każdy arkusz ma przypięte adresy źródłowe, sumy SHA-256 i datę weryfikacji w danych JSON. Pełną macierz czternastu nowo dodanych arkuszy przedstawia [MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md](MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md). Wszystkie dwadzieścia grup ma status `blocked`, ponieważ deklaracja z 1 września 2026 r. nie wskazuje tych konkretnych arkuszy. Techniczne przejście testów nie stanowi zgody na publiczną redystrybucję.
 
 ### Diagramy i archiwum historyczne
 
-Grupa `runtime-vector-diagrams` obejmuje `Content/diagrams.json` z dokładnie 226 definicjami wektorowymi. Składa się z 195 wcześniej zatwierdzonych definicji oraz 16 figur pochodnych z arkuszy 2017 i 15 figur pochodnych z arkuszy 2016. Każda definicja ma stabilny identyfikator, źródło i opis alternatywny. `DiagramView` materializuje je wyłącznie jako `Line`, `Polyline`, `Polygon`, `Ellipse`, łuki i `TextBlock` Avalonia, bez ładowania rastrów, `Image` lub `Bitmap`. Implementacje figur są autorskim kodem wektorowym Adama Kubisia, ale wspólna grupa ma status `blocked`, ponieważ zawiera 31 figur pochodnych z niezatwierdzonych transkrypcji 2017-2016.
+Grupa `runtime-vector-diagrams` obejmuje `Content/diagrams.json` z dokładnie 249 definicjami wektorowymi. Składa się z 195 wcześniej zatwierdzonych definicji, 16 figur pochodnych z arkuszy 2017, 15 figur pochodnych z arkuszy 2016 oraz 23 nowych figur pochodnych z Formuły 2015 z 2015 i lat równoległych 2023-2026. Każda definicja ma stabilny identyfikator, źródło i opis alternatywny. `DiagramView` materializuje je wyłącznie jako `Line`, `Polyline`, `Polygon`, `Ellipse`, łuki i `TextBlock` Avalonia, bez ładowania rastrów, `Image` lub `Bitmap`. Implementacje figur są autorskim kodem wektorowym Adama Kubisia, ale wspólna grupa ma status `blocked`, ponieważ zawiera 54 figury pochodne z niezatwierdzonych transkrypcji.
 
 Siedemdziesiąt pięć historycznych obrazów znajduje się w `docs/legacy/originals/images/`. Pliki zachowano bajt w bajt, udokumentowano mapowaniem `PATH-MAPPING.csv` i sumami `SHA256SUMS`, ale nie są paczkowane ani publikowane przez DocFX. Jedynym statycznym wyjątkiem jest `img/icon.ico` w grupie `application-icon`, używany wyłącznie jako `ApplicationIcon`.
 
@@ -138,7 +138,7 @@ Manifest oznacza jako `approved`:
 - zatwierdzone transkrypcje arkuszy CKE 2018-2026, objęte deklaracją praw lub upoważnienia do publicznej redystrybucji wyłącznie jako części Abiturii;
 - font Mulish na licencji SIL Open Font License 1.1, potwierdzonej przez `fonts/OFL.txt` i `fonts/README.txt`.
 
-Manifest zawiera siedem grup `blocked`: sześć nowych grup arkuszy 2017-2016 oraz wspólny katalog diagramów. Każda zmiana źródeł, zakresu redystrybucji lub sposobu renderowania wymaga ponownej oceny, uruchomienia zwykłego walidatora i osobnej bramy `-RequireReleaseEligible`.
+Manifest zawiera dwadzieścia jeden grup `blocked`: dwadzieścia grup arkuszy Formuły 2015 z 2015-2017 oraz lat równoległych 2023-2026, a także wspólny katalog diagramów. Każda zmiana źródeł, zakresu redystrybucji lub sposobu renderowania wymaga ponownej oceny, uruchomienia zwykłego walidatora i osobnej bramy `-RequireReleaseEligible`.
 
 Status zatwierdzony należy ponownie ocenić po każdej zmianie źródła, zakresu plików albo sposobu pakowania.
 

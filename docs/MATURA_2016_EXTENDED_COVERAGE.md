@@ -32,6 +32,6 @@ Trzy definicje wektorowe Avalonia `exam-mm16-r0-z03`, `exam-mm16-r0-z09` i `exam
 
 ## Testy i proweniencja
 
-`Matura2016ContentTests` kontroluje źródła, sumy SHA-256, kontrakt `16/16/50`, strony, punktację, tryby odpowiedzi, klucz zadań zamkniętych, wyniki liczbowe i trzy diagramy. Testy katalogu, UI i smoke testu kontrolują 32 aktywne arkusze, 889 jednostek postępu i 226 diagramów.
+`Matura2016ContentTests` kontroluje źródła, sumy SHA-256, kontrakt `16/16/50`, strony, punktację, tryby odpowiedzi, klucz zadań zamkniętych, wyniki liczbowe i trzy diagramy. Testy katalogu, UI i smoke testu kontrolują 46 aktywnych arkuszy, 1 281 jednostek postępu i 249 diagramów.
 
 Grupa `cke-2016-main-extended-exam` ma status `blocked`. Katalog `runtime-vector-diagrams` też ma tymczasowo status `blocked`, ponieważ zawiera figury pochodne z tego arkusza i dalszych niezatwierdzonych arkuszy 2017-2016. Manifest ma `releaseEligible=false` do czasu odrębnego rozszerzenia deklaracji właściciela obejmującego arkusz, zasady oceniania i pochodne diagramy.

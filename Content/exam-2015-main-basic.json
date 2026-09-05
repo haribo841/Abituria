@@ -1,0 +1,796 @@
+{
+  "schemaVersion": 4,
+  "exam": {
+    "id": "matura-maj-2015-podstawowa",
+    "title": "Matura maj 2015 - poziom podstawowy (Formuła 2015)",
+    "progressLabel": "Matura maj 2015 PP (F2015)",
+    "year": 2015,
+    "session": "główna",
+    "formula": "2015",
+    "level": "basic",
+    "durationMinutes": 170,
+    "maximumPoints": 50,
+    "officialTaskCount": 34,
+    "progressItemCount": 34,
+    "introduction": [
+      {
+        "type": "richText",
+        "text": "Oficjalny arkusz główna z matematyki na poziomie podstawowym z 2015-05-05 r. w Formule 2015 obejmuje 34 numerowanych zadań i 50 punktów."
+      },
+      {
+        "type": "richText",
+        "text": "Treść, rozwiązania i kryteria punktowania są transkrypcją techniczną z przypiętych źródeł. Publiczna redystrybucja tej nowej grupy CKE jest zablokowana do czasu odrębnej deklaracji praw."
+      }
+    ],
+    "topicIntroduction": [],
+    "source": {
+      "publisher": "Centralna Komisja Egzaminacyjna; archiwum: OKE Warszawa",
+      "documentCode": "MMA-P1_1P-152",
+      "examDate": "2015-05-05",
+      "questionPaperUrl": "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2015/Matematyka/MMA-P1_1P-152.pdf",
+      "questionPaperSha256": "677C719F87A6E07F6C5559A218D9DB670F077BC3AEC849BAF37B288D2FEBB3EE",
+      "answerKeyUrl": "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2015/Matematyka/MMA-P1-N.pdf",
+      "answerKeySha256": "7DE249A72303E8F922A0B3FB950F25DB88578F7E226CE61EA5F55EE9ED98AC40",
+      "verifiedOn": "2026-09-04"
+    },
+    "topics": [],
+    "exercises": [
+      {
+        "id": "mm15-p0-z01",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 1,
+        "displayNumber": "1",
+        "order": 1,
+        "points": 1,
+        "title": "Zadanie 1",
+        "topicId": "inequalities",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 1. (0–1)\nWskaż rysunek, na którym przedstawiono przedzia ł, b ędący zbiorem wszystkich rozwi ązań\nnierówności 41 4x−≤ −≤ .\nA.\nB.\nC.\nD.",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 1. (0−1)\nWymagania ogólne Wymagania szczegó łowe Poprawna\nodp. (1 p.)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n1. Liczby rzeczywiste. Zdający posługuje się\npojęciem przedziału liczbowego, zaznacza\nprzedziały na osi liczbowej (1.8).\nI\nII\nC D",
+        "scoringCriteria": "Zadanie 1. (0−1)\nWymagania ogólne Wymagania szczegó łowe Poprawna\nodp. (1 p.)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n1. Liczby rzeczywiste. Zdający posługuje się\npojęciem przedziału liczbowego, zaznacza\nprzedziały na osi liczbowej (1.8).\nI\nII\nC D",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z02",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 2,
+        "displayNumber": "2",
+        "order": 2,
+        "points": 1,
+        "title": "Zadanie 2",
+        "topicId": "logarithms",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 2. (0–1)\nDane są liczby 1\n27a =− , 1\n4\nlog 64b = , 1\n3\nlog 27c = . Iloczyn abc jest równy\nA. 9− B. 1\n3− C. 1\n3 D. 3",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 2. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n1. Liczby rzeczywiste. Zdający wykorzystuje\ndefinicję logarytmu i stosuje w obliczeniach\nwzory na logarytm iloczynu, logarytm ilorazu\ni logarytm potęgi o wykładniku naturalnym\n(1.6).\nI\nII\nB C",
+        "scoringCriteria": "Zadanie 2. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n1. Liczby rzeczywiste. Zdający wykorzystuje\ndefinicję logarytmu i stosuje w obliczeniach\nwzory na logarytm iloczynu, logarytm ilorazu\ni logarytm potęgi o wykładniku naturalnym\n(1.6).\nI\nII\nB C",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z03",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 3,
+        "displayNumber": "3",
+        "order": 3,
+        "points": 1,
+        "title": "Zadanie 3",
+        "topicId": "proofs",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 3. (0–1)\nKwotę 1000 z ł ulokowano w banku na roczn ą lokat ę oprocentowan ą w wysoko ści 4%\nw stosunku rocznym. Po zako ńczeniu lokaty od naliczonych odsetek odprowadzany jest\npodatek w wysokości 19%. Maksymalna kwota, jaką po upływie roku będzie można wypłacić\nz banku, jest równa\nA. 81 41000 1 100 100\n⋅− ⋅\nB. 19 41000 1 100 100\n⋅+ ⋅\nC. 81 41000 1 100 100\n⋅+ ⋅\nD. 19 41000 1 100 100\n⋅− ⋅",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 3. (0−1)\nIII. Modelowanie\nmatematyczne.\n1. Liczby rzeczywiste. Zdający wykonuje\nobliczenia procentowe, oblicza podatki, zysk\nz lokat (1.9).\nI\nII\nC A",
+        "scoringCriteria": "Zadanie 3. (0−1)\nIII. Modelowanie\nmatematyczne.\n1. Liczby rzeczywiste. Zdający wykonuje\nobliczenia procentowe, oblicza podatki, zysk\nz lokat (1.9).\nI\nII\nC A",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z04",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 4,
+        "displayNumber": "4",
+        "order": 4,
+        "points": 1,
+        "title": "Zadanie 4",
+        "topicId": "proofs",
+        "sourcePage": 2,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 4. (0–1)\nRówność 55\n555\nm +=\n−\nA. 5m = B. 4m = C. 1m = D. 5m =−\n3 x–5\n5 x–3\n5 x–3\n–53 x\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 4. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n2. Wyrażenia algebraiczne. Zdający używa\nwzorów skróconego mnożenia na\n()\n2\nab±\noraz 22ab− (2.1).\nI\nII\nB C",
+        "scoringCriteria": "Zadanie 4. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n2. Wyrażenia algebraiczne. Zdający używa\nwzorów skróconego mnożenia na\n()\n2\nab±\noraz 22ab− (2.1).\nI\nII\nB C",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z05",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 5,
+        "displayNumber": "5",
+        "order": 5,
+        "points": 1,
+        "title": "Zadanie 5",
+        "topicId": "lines-and-segments",
+        "sourcePage": 4,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 5. (0–1)\nUkład równań 3\n20 , 5 4\nxy\nxy\n−=\n +=\nopisuje w układzie współrzędnych na płaszczyźnie\nA. zbiór pusty.\nB. dokładnie jeden punkt.\nC. dokładnie dwa różne punkty.\nD. zbiór nieskończony.",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 5. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n3. Równania i nierówności. Zdający\nwykorzystuje interpretację geometryczną\nukładu równań pierwszego stopnia z dwiema\nniewiadomymi (3.2).\nI\nII\nB C",
+        "scoringCriteria": "Zadanie 5. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n3. Równania i nierówności. Zdający\nwykorzystuje interpretację geometryczną\nukładu równań pierwszego stopnia z dwiema\nniewiadomymi (3.2).\nI\nII\nB C",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z06",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 6,
+        "displayNumber": "6",
+        "order": 6,
+        "points": 1,
+        "title": "Zadanie 6",
+        "topicId": "equations",
+        "sourcePage": 4,
+        "solutionSourcePage": 2,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 6. (0–1)\nSuma wszystkich pierwiastków równania () () ( )371 1 0xxx++− = jest równa\nA. 1− B. 21 C. 1 D. 21−",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 6. (0−1)\nI. Wykorzystanie\ni tworzenie\ninformacji.\n3. Równania i nierówności. Zdający korzysta\nz własności iloczynu przy rozwiązywaniu\nrównań typu\n() ( )17 0xx x+− = (3.7).\nI\nII\nC D",
+        "scoringCriteria": "Zadanie 6. (0−1)\nI. Wykorzystanie\ni tworzenie\ninformacji.\n3. Równania i nierówności. Zdający korzysta\nz własności iloczynu przy rozwiązywaniu\nrównań typu\n() ( )17 0xx x+− = (3.7).\nI\nII\nC D",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z07",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 7,
+        "displayNumber": "7",
+        "order": 7,
+        "points": 1,
+        "title": "Zadanie 7",
+        "topicId": "equations",
+        "sourcePage": 4,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 7. (0–1)\nRównanie 1 11\nx xx\n− =−+\nA. ma dokładnie jedno rozwiązanie: 1x = .\nB. ma dokładnie jedno rozwiązanie: 0x = .\nC. ma dokładnie jedno rozwiązanie: 1x =− .\nD. ma dokładnie dwa rozwiązania: 0x = , 1x = .",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 7. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n3. Równania i nierówności. Zdający\nrozwiązuje proste równania wymierne,\nprowadzące do równań liniowych lub\nkwadratowych, np.\n1 23\nx\nx\n+ =+ , 1 2x xx\n+ = (3.8).\nI\nII\nD A",
+        "scoringCriteria": "Zadanie 7. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n3. Równania i nierówności. Zdający\nrozwiązuje proste równania wymierne,\nprowadzące do równań liniowych lub\nkwadratowych, np.\n1 23\nx\nx\n+ =+ , 1 2x xx\n+ = (3.8).\nI\nII\nD A",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z08",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 8,
+        "displayNumber": "8",
+        "order": 8,
+        "points": 1,
+        "title": "Zadanie 8",
+        "topicId": "proofs",
+        "sourcePage": 4,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 8. (0–1)\nNa rysunku przedstawiono wykres funkcji f.\nZbiorem wartości funkcji f jest\nA. () 2, 2− B. )2, 2− C. 2, 2− D. ( 2, 2−",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 8. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n4. Funkcje. Zdający odczytuje z wykresu\nwłasności funkcji (4.3).\nI\nII\nD A",
+        "scoringCriteria": "Zadanie 8. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n4. Funkcje. Zdający odczytuje z wykresu\nwłasności funkcji (4.3).\nI\nII\nD A",
+        "diagramIds": [
+          "exam-mm15-p0-z08"
+        ]
+      },
+      {
+        "id": "mm15-p0-z09",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 9,
+        "displayNumber": "9",
+        "order": 9,
+        "points": 1,
+        "title": "Zadanie 9",
+        "topicId": "proofs",
+        "sourcePage": 4,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 9. (0–1)\nNa wykresie funkcji liniowej określonej wzorem () ( ) 13f xmx=− + leży punkt ()5, 2=−S .\nA. 1m =− B. 0m = C. 1m = D. 2m =\nx\ny\n−3 −2 −1\n5 0\n−1\n1\n2\n3\n1 2 3 4\n−4\n−2\n−3\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 9. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n4. Funkcje. Zdający wyznacza wzór funkcji\no jej wykresie (4.6).\nI\nII\nB D",
+        "scoringCriteria": "Zadanie 9. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n4. Funkcje. Zdający wyznacza wzór funkcji\no jej wykresie (4.6).\nI\nII\nB D",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z10",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 10,
+        "displayNumber": "10",
+        "order": 10,
+        "points": 1,
+        "title": "Zadanie 10",
+        "topicId": "linear-function",
+        "sourcePage": 6,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 10. (0–1)\nFunkcja liniowa f określona wzorem () 2f xx b=+ ma takie samo miejsce zerowe, jakie ma\nfunkcja liniowa () 34gx x =− + . Stąd wynika, że\nA. 4b = B. 3\n2b =− C. 8\n3b =− D. 4\n3b =",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 10. (0−1)\nI. Wykorzystanie\ni tworzenie\ninformacji.\n4. Funkcje. Zdający interpretuje\nwspółczynniki występujące we wzorze funkcji\nliniowej (4.7).\nI\nII\nC A",
+        "scoringCriteria": "Zadanie 10. (0−1)\nI. Wykorzystanie\ni tworzenie\ninformacji.\n4. Funkcje. Zdający interpretuje\nwspółczynniki występujące we wzorze funkcji\nliniowej (4.7).\nI\nII\nC A",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z11",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 11,
+        "displayNumber": "11",
+        "order": 11,
+        "points": 1,
+        "title": "Zadanie 11",
+        "topicId": "quadratic-function",
+        "sourcePage": 6,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 11. (0–1)\nFunkcja kwadratowa określona jest wzorem ()\n2f xxx c=+ + . Jeżeli ()34f = , to\nA. (1) 6f =− B. (1) 0f = C. (1) 6f = D. (1) 18f =",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 11. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n4. Funkcje. Zdający wyznacza wzór funkcji\n(4.9).\nI\nII\nA D",
+        "scoringCriteria": "Zadanie 11. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n4. Funkcje. Zdający wyznacza wzór funkcji\n(4.9).\nI\nII\nA D",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z12",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 12,
+        "displayNumber": "12",
+        "order": 12,
+        "points": 1,
+        "title": "Zadanie 12",
+        "topicId": "inequalities",
+        "sourcePage": 6,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 12. (0–1)\nIle liczb całkowitych x spełnia nierówność 24\n71 43\nx<< ?\nA. 14 B. 15 C. 16 D. 17",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 12. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n3. Równania i nierówności. Zdający\nrozwiązuje nierówności pierwszego stopnia\nz jedną niewiadomą (3.3).\nI\nII\nA D",
+        "scoringCriteria": "Zadanie 12. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n3. Równania i nierówności. Zdający\nrozwiązuje nierówności pierwszego stopnia\nz jedną niewiadomą (3.3).\nI\nII\nA D",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z13",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 13,
+        "displayNumber": "13",
+        "order": 13,
+        "points": 1,
+        "title": "Zadanie 13",
+        "topicId": "sequences",
+        "sourcePage": 6,
+        "solutionSourcePage": 3,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 13. (0–1)\nW rosn ącym ci ągu geometrycznym () na , okre ślonym dla 1≥n , spe łniony jest warunek\n41 3aa= . Iloraz q tego ciągu jest równy\nA. 1\n3q = B. 3\n1\n3\nq = C. 3 3q = D. 3q =",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 13. (0−1)\nIII. Modelowanie\nmatematyczne.\n5. Ciągi. Zdający stosuje wzór na\nn-ty wyraz\ni na sumę n początkowych wyrazów ciągu\ngeometrycznego (5.4).\nI\nII\nC D",
+        "scoringCriteria": "Zadanie 13. (0−1)\nIII. Modelowanie\nmatematyczne.\n5. Ciągi. Zdający stosuje wzór na\nn-ty wyraz\ni na sumę n początkowych wyrazów ciągu\ngeometrycznego (5.4).\nI\nII\nC D",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z14",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 14,
+        "displayNumber": "14",
+        "order": 14,
+        "points": 1,
+        "title": "Zadanie 14",
+        "topicId": "trigonometry",
+        "sourcePage": 6,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 14. (0–1)\nTangens kąta α zaznaczonego na rysunku jest równy\nA. 3\n3−\nB. 5\n4−\nC. 1−\nD. 4\n5−",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 14. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n6. Trygonometria. Zdający wykorzystuje\ndefinicje i wyznacza wartości funkcji sinus,\ncosinus i tangens kątów o miarach od 0° do\n180° (6.1).\nI\nII\nD A",
+        "scoringCriteria": "Zadanie 14. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n6. Trygonometria. Zdający wykorzystuje\ndefinicje i wyznacza wartości funkcji sinus,\ncosinus i tangens kątów o miarach od 0° do\n180° (6.1).\nI\nII\nD A",
+        "diagramIds": [
+          "exam-mm15-p0-z14"
+        ]
+      },
+      {
+        "id": "mm15-p0-z15",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 15,
+        "displayNumber": "15",
+        "order": 15,
+        "points": 1,
+        "title": "Zadanie 15",
+        "topicId": "trigonometry",
+        "sourcePage": 6,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 15. (0–1)\nJeżeli 09 0α°< < ° oraz tg 2sinαα= , to\nA. 1cos 2α = B. 2cos 2α = C. 3cos 2α = D. cos 1α =\nP = (−4, 5)\nx\ny\n4 50\n–1\n3\nP\nα\n1 2 3 –5 –1 –2 –3 –4\n1\n2\n4\n5\n6\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 15. (0−1)\nIV. Użycie\ni tworzenie\nstrategii.\n6. Trygonometria. Zdający stosuje proste\nzależności między funkcjami\ntrygonometrycznymi:\n22sin cos 1,αα+=\nα αα = oraz ()sin 90 cosαα°− = (6.4).\nI\nII\nA B",
+        "scoringCriteria": "Zadanie 15. (0−1)\nIV. Użycie\ni tworzenie\nstrategii.\n6. Trygonometria. Zdający stosuje proste\nzależności między funkcjami\ntrygonometrycznymi:\n22sin cos 1,αα+=\nα αα = oraz ()sin 90 cosαα°− = (6.4).\nI\nII\nA B",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z16",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 16,
+        "displayNumber": "16",
+        "order": 16,
+        "points": 1,
+        "title": "Zadanie 16",
+        "topicId": "proofs",
+        "sourcePage": 8,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 16. (0–1)\nMiara kąta wpisanego w okr ąg jest o 20° mniejsza od miary k ąta środkowego opartego na\ntym samym łuku. Wynika stąd, że miara kąta wpisanego jest równa\nA. 5° B. 10° C. 20° D. 30°",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 16. (0−1)\nIV. Użycie\ni tworzenie\nstrategii.\n7. Planimetria. Zdający stosuje zależności\nmiędzy kątem środkowym i kątem wpisanym\n(7.1).\nI\nII\nC B",
+        "scoringCriteria": "Zadanie 16. (0−1)\nIV. Użycie\ni tworzenie\nstrategii.\n7. Planimetria. Zdający stosuje zależności\nmiędzy kątem środkowym i kątem wpisanym\n(7.1).\nI\nII\nC B",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z17",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 17,
+        "displayNumber": "17",
+        "order": 17,
+        "points": 1,
+        "title": "Zadanie 17",
+        "topicId": "plane-geometry",
+        "sourcePage": 8,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 17. (0–1)\nPole rombu o obwodzie 8 jest równe 1. Kąt ostry tego rombu ma miarę α . Wtedy\nA. 14 15α°< < ° B. 29 30α°< < ° C. 60 61α°< < ° D. 75 76α°< < °",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 17. (0−1)\nIII. Modelowanie\nmatematyczne.\n7. Planimetria. Zdający korzysta z własności\nfunkcji trygonometrycznych w łatwych\nobliczeniach geometrycznych, w tym ze\nwzoru na pole trójkąta ostrokątnego o danych\ndwóch bokach i kącie między nimi (7.4).\nI\nII\nA B",
+        "scoringCriteria": "Zadanie 17. (0−1)\nIII. Modelowanie\nmatematyczne.\n7. Planimetria. Zdający korzysta z własności\nfunkcji trygonometrycznych w łatwych\nobliczeniach geometrycznych, w tym ze\nwzoru na pole trójkąta ostrokątnego o danych\ndwóch bokach i kącie między nimi (7.4).\nI\nII\nA B",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z18",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 18,
+        "displayNumber": "18",
+        "order": 18,
+        "points": 1,
+        "title": "Zadanie 18",
+        "topicId": "lines-and-segments",
+        "sourcePage": 8,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 18. (0–1)\nProsta l o równaniu 2 3y mx=+ jest równoleg ła do prostej k o równaniu ()44 3ymx=− − .\nA. 2m = B. 2m =− C. 22 2m =− − D. 22 2m =+",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 18. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n8. Geometria na płaszczyźnie kartezjańskiej.\nZdający bada równoległość i prostopadłość\nprostych na podstawie ich równań\nkierunkowych (8.2).\nI\nII\nA B",
+        "scoringCriteria": "Zadanie 18. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n8. Geometria na płaszczyźnie kartezjańskiej.\nZdający bada równoległość i prostopadłość\nprostych na podstawie ich równań\nkierunkowych (8.2).\nI\nII\nA B",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z19",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 19,
+        "displayNumber": "19",
+        "order": 19,
+        "points": 1,
+        "title": "Zadanie 19",
+        "topicId": "equations",
+        "sourcePage": 8,
+        "solutionSourcePage": 4,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 19. (0–1)\nProste o równaniach: 221ym x m=− − oraz 2241ym x m=+ + są prostopadłe dla\nA. 1\n2m =− B. 1\n2m = C. 1m = D. 2m =",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 19. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n8. Geometria na płaszczyźnie kartezjańskiej.\nZdający bada równoległość i prostopadłość\nprostych na podstawie ich równań\nkierunkowych (8.2).\nI\nII\nA D",
+        "scoringCriteria": "Zadanie 19. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n8. Geometria na płaszczyźnie kartezjańskiej.\nZdający bada równoległość i prostopadłość\nprostych na podstawie ich równań\nkierunkowych (8.2).\nI\nII\nA D",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z20",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 20,
+        "displayNumber": "20",
+        "order": 20,
+        "points": 1,
+        "title": "Zadanie 20",
+        "topicId": "lines-and-segments",
+        "sourcePage": 8,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 20. (0–1)\nDane s ą punkty () 2, 1=−M i () 1, 3=−N . Punkt K jest środkiem odcinka MN. Obrazem\npunktu K w symetrii względem początku układu współrzędnych jest punkt\nA. ' 32, 2K =−\nB. ' 32, 2K = \nC. ' 3 ,22K = \nD. ' 3 ,22K =−",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 20. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n8. Geometria na płaszczyźnie kartezjańskiej.\nZdający wyznacza współrzędne środka\nodcinka i znajduje obrazy niektórych figur\ngeometrycznych w symetrii środkowej\nwzględem początku układu (8.5, 8.7).\nI\nII\nD B",
+        "scoringCriteria": "Zadanie 20. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n8. Geometria na płaszczyźnie kartezjańskiej.\nZdający wyznacza współrzędne środka\nodcinka i znajduje obrazy niektórych figur\ngeometrycznych w symetrii środkowej\nwzględem początku układu (8.5, 8.7).\nI\nII\nD B",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z21",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 21,
+        "displayNumber": "21",
+        "order": 21,
+        "points": 1,
+        "title": "Zadanie 21",
+        "topicId": "solid-geometry",
+        "sourcePage": 8,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 21. (0–1)\nW graniastos łupie prawid łowym czworok ątnym EFGHIJKL wierzcho łki E, G, L po łączono\nodcinkami (tak jak na rysunku).\nWskaż kąt między wysokością OL trójkąta EGL i płaszczyzną podstawy tego graniastosłupa.\nA.  HOL B.  OGL C.  HLO D.  OHL\nJI\nF\nH G\nE\nKL\nO\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 21. (0−1)\nI. Wykorzystanie\ni tworzenie\ninformacji.\n9. Stereometria. Zdający rozpoznaje\nw graniastosłupach i ostrosłupach kąty między\nodcinkami i płaszczyznami (9.2).\nI\nII\nA B",
+        "scoringCriteria": "Zadanie 21. (0−1)\nI. Wykorzystanie\ni tworzenie\ninformacji.\n9. Stereometria. Zdający rozpoznaje\nw graniastosłupach i ostrosłupach kąty między\nodcinkami i płaszczyznami (9.2).\nI\nII\nA B",
+        "diagramIds": [
+          "exam-mm15-p0-z21"
+        ]
+      },
+      {
+        "id": "mm15-p0-z22",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 22,
+        "displayNumber": "22",
+        "order": 22,
+        "points": 1,
+        "title": "Zadanie 22",
+        "topicId": "solid-geometry",
+        "sourcePage": 10,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 22. (0–1)\nPrzekrojem osiowym sto żka jest trójk ąt równoboczny o boku d ługości 6 . Obj ętość tego\nstożka jest równa\nA. 27 3π B. 93π C. 18π D. 6π",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 22. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n9. Stereometria. Zdający stosuje\ntrygonometrię do obliczeń długości odcinków,\nmiar kątów, pól powierzchni i objętości (9.6).\nI\nII\nB C",
+        "scoringCriteria": "Zadanie 22. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n9. Stereometria. Zdający stosuje\ntrygonometrię do obliczeń długości odcinków,\nmiar kątów, pól powierzchni i objętości (9.6).\nI\nII\nB C",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z23",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 23,
+        "displayNumber": "23",
+        "order": 23,
+        "points": 1,
+        "title": "Zadanie 23",
+        "topicId": "solid-geometry",
+        "sourcePage": 10,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 23. (0–1)\nKażda kraw ędź graniastos łupa prawid łowego trójk ątnego ma d ługość równ ą 8 . Pole\npowierzchni całkowitej tego graniastosłupa jest równe\nA.\n283 332\n +\nB. 283⋅ C.\n286\n3 D. 2 383 2\n +",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 23. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n9. Stereometria. Zdający stosuje\ntrygonometrię do obliczeń długości odcinków,\nmiar kątów, pól powierzchni i objętości (9.6).\nI\nII\nD A",
+        "scoringCriteria": "Zadanie 23. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n9. Stereometria. Zdający stosuje\ntrygonometrię do obliczeń długości odcinków,\nmiar kątów, pól powierzchni i objętości (9.6).\nI\nII\nD A",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z24",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 24,
+        "displayNumber": "24",
+        "order": 24,
+        "points": 1,
+        "title": "Zadanie 24",
+        "topicId": "statistics",
+        "sourcePage": 10,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 24. (0–1)\nŚrednia arytmetyczna zestawu danych:\n2, 4, 7, 8, 9\njest taka sama jak średnia arytmetyczna zestawu danych:\n2, 4, 7, 8, 9, x.\nWynika stąd, że\nA. 0=x B. 3=x C. 5=x D. 6=x",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 24. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n10. Elementy statystyki opisowej. Teoria\nprawdopodobieństwa i kombinatoryka.\nZdający oblicza średnią ważoną i odchylenie\nstandardowe zestawu danych (10.1).\nI\nII\nD C",
+        "scoringCriteria": "Zadanie 24. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n10. Elementy statystyki opisowej. Teoria\nprawdopodobieństwa i kombinatoryka.\nZdający oblicza średnią ważoną i odchylenie\nstandardowe zestawu danych (10.1).\nI\nII\nD C",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z25",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 25,
+        "displayNumber": "25",
+        "order": 25,
+        "points": 1,
+        "title": "Zadanie 25",
+        "topicId": "probability",
+        "sourcePage": 10,
+        "solutionSourcePage": 5,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 25. (0–1)\nW ka żdym z trzech pojemników znajduje si ę para kul, z których jedna jest czerwona,\na druga – niebieska. Z ka żdego pojemnika losujemy jedn ą kul ę. Niech p oznacza\nprawdopodobieństwo zdarzenia polegaj ącego na tym, że dok ładnie dwie z trzech\nwylosowanych kul będą czerwone. Wtedy\nA. 1\n4p = B. 3\n8p = C. 1\n2p = D. 2\n3\np =\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 25. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n10. Elementy statystyki opisowej. Teoria\nprawdopodobieństwa i kombinatoryka.\nZdający oblicza prawdopodobieństwa\nw prostych sytuacjach, stosując klasyczną\ndefinicję prawdopodobieństwa (10.3).\nI\nII\nB A",
+        "scoringCriteria": "Zadanie 25. (0−1)\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n10. Elementy statystyki opisowej. Teoria\nprawdopodobieństwa i kombinatoryka.\nZdający oblicza prawdopodobieństwa\nw prostych sytuacjach, stosując klasyczną\ndefinicję prawdopodobieństwa (10.3).\nI\nII\nB A",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z26",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 26,
+        "displayNumber": "26",
+        "order": 26,
+        "points": 2,
+        "title": "Zadanie 26",
+        "topicId": "inequalities",
+        "sourcePage": 12,
+        "solutionSourcePage": 6,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 26. (0–2)\nRozwiąż nierówność ) 2)(3(42 2 −+>− xxxx .\nOdpowiedź: ................................................................................................................................ .",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 26. (0–2)\nRozwiąż nierówność ) 2)(3(42 2 −+>− xxxx .\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n3. Równania i nierówności. Zdający rozwiązuje nierówności\nkwadratowych z jedną niewiadomą (3.5).\nRozwiązanie\nRozwiązanie nierówności kwadratowej składa się z dwóch etapów.\nPierwszy etap, wyznaczenie pierwiastków trójmianu, może być realizowany na 2 sposoby:\nI sposób rozwiązania (realizacja pierwszego etapu)\nZapisujemy nierówno ść w postaci 2 56 0xx −+ > i znajdujemy pierwiastki trójmianu\n2 56xx −+\n• obliczamy wyróżnik tego trójmianu:\n161425 =⋅⋅−=Δ , stąd 1\n51\n2 2x −== oraz 2\n51\n2 3x +==\n• stosujemy wzory Viète’a:\n621 =⋅xx oraz 521 =+ xx , stąd 21 =x oraz 32 =x\n• podajemy je bezpo średnio, np. zapisuj ąc pierwiastki trójmianu lub posta ć iloczynową\ntrójmianu, lub zaznaczając je na wykresie (wystarczy szkic wykresu, oś liczbowa itp.):\n21 =x , 2 3x = lub () () [] 322 +−− xxx lub () () 32 −− xx\nlub\nII sposób rozwiązania (realizacja pierwszego etapu)\nWyznaczamy posta ć kanoniczn ą trójmianu kwadratowego 652 +− xx i zapisujemy\nnierówność w postaci, np. ()\n25 1\n24 0x −− > , a następnie\n• przekształcamy nierówno ść tak, aby jej lewa strona by ła zapisana w postaci\n() ()55 11\n22 22 0xx −−⋅ −+ >  ,\n() ()6 4\n22 0xx−− > ,\n• przekształcamy nierówność do postaci równoważnej, korzystając z własności wartości\nbezwzględnej\n()\n25 1\n24x −> ,\n-1 1 2 3 4\n-1\n1\n2\n3\ny\n0 x\n5 1\n22x −> .\nDrugi etap rozwiązania:\nPodajemy zbiór rozwiązań nierówności: () () ∞+∪∞− ,32, lub () () ∞+∪∞−∈ ,32,x .\nZdający otrzymuje ................................................................................................................ 1 p.\ngdy:\n• zrealizuje pierwszy etap rozwi ązania i na tym poprzestanie lub b łędnie zapisze zbiór\nrozwiązań nierówności, np.\no obliczy lub poda pierwiastki trójmianu kwadratowego 21 =x , 32 =x\ni na tym poprzestanie lub błędnie zapisze zbiór rozwiązań nierówności,\no zaznaczy na wykresie miejsca zerowe funkcji 6 5)( 2 +−= xxxf\ni na tym poprzestanie lub błędnie zapisze zbiór rozwiązań nierówności,\no rozłoży trójmian kwadratowy na czynniki liniowe, np. () () 32 −− xx\ni na tym poprzestanie lub błędnie zapisze zbiór rozwiązań nierówności,\no zapisze nierówność 5 1\n22x −> i na tym poprzestanie lub b łędnie zapisze zbiór\nrozwiązań nierówności,\n• realizując pierwszy etap rozwi ązania zadania pope łni b łąd (ale otrzyma dwa ró żne\npierwiastki) i konsekwentnie do tego zapisze zbiór rozwiązań nierówności, np.\no popełni b łąd rachunkowy przy obliczaniu wyró żnika lub pierwiastków\ntrójmianu kwadratowego i konsekwentnie do popełnionego błędu zapisze zbiór\nrozwiązań nierówności,\no błędnie zapisze równania wynikaj ące ze wzorów Viète’a, np.: 12\n5\n2xx+= −\ni konsekwentnie do popełnionego błędu zapisze zbiór rozwiązań nierówności,\no błędnie zapisze nierówno ść, np. 5 1\n22x +< i konsekwentnie do pope łnionego\nbłędu zapisze zbiór rozwiązań nierówności.\nZdający otrzymuje ................................................................................................................ 2 p.\ngdy:\n• poda zbiór rozwi ązań nierówno ści: () () ∞+∪∞− ,32, lub () () ∞+∪∞−∈ ,32,x\nlub ( 2<x lub 3>x ),\n• sporządzi ilustracj ę geometryczn ą (o ś liczbowa, wykres) i zapisze zbiór rozwi ązań\nnierówności w postaci: 2, 3xx<> ,\n• poda zbiór rozwi ązań nierówno ści w postaci graficznej z poprawnie zaznaczonymi\nkońcami przedziałów.\n1. Jeżeli zdaj ący dzieli obie strony nierówno ści przez 2x − bez stosownego za łożenia,\nto otrzymuje 0 punktów.\n2. Jeżeli zdaj ący dzieli obie strony nierówno ści przez 2x − , rozwa żając dwa przypadki\n20x −> oraz 20x −< , rozwi ąże nierówno ść w ka żdym z tych przypadków, ale nie\nrozważy przypadku 20x −= , to otrzymuje 1 punkt.",
+        "scoringCriteria": "Zadanie 26. (0–2)\nRozwiąż nierówność ) 2)(3(42 2 −+>− xxxx .\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n3. Równania i nierówności. Zdający rozwiązuje nierówności\nkwadratowych z jedną niewiadomą (3.5).\nRozwiązanie\nRozwiązanie nierówności kwadratowej składa się z dwóch etapów.\nPierwszy etap, wyznaczenie pierwiastków trójmianu, może być realizowany na 2 sposoby:\nI sposób rozwiązania (realizacja pierwszego etapu)\nZapisujemy nierówno ść w postaci 2 56 0xx −+ > i znajdujemy pierwiastki trójmianu\n2 56xx −+\n• obliczamy wyróżnik tego trójmianu:\n161425 =⋅⋅−=Δ , stąd 1\n51\n2 2x −== oraz 2\n51\n2 3x +==\n• stosujemy wzory Viète’a:\n621 =⋅xx oraz 521 =+ xx , stąd 21 =x oraz 32 =x\n• podajemy je bezpo średnio, np. zapisuj ąc pierwiastki trójmianu lub posta ć iloczynową\ntrójmianu, lub zaznaczając je na wykresie (wystarczy szkic wykresu, oś liczbowa itp.):\n21 =x , 2 3x = lub () () [] 322 +−− xxx lub () () 32 −− xx\nlub\nII sposób rozwiązania (realizacja pierwszego etapu)\nWyznaczamy posta ć kanoniczn ą trójmianu kwadratowego 652 +− xx i zapisujemy\nnierówność w postaci, np. ()\n25 1\n24 0x −− > , a następnie\n• przekształcamy nierówno ść tak, aby jej lewa strona by ła zapisana w postaci\n() ()55 11\n22 22 0xx −−⋅ −+ >  ,\n() ()6 4\n22 0xx−− > ,\n• przekształcamy nierówność do postaci równoważnej, korzystając z własności wartości\nbezwzględnej\n()\n25 1\n24x −> ,\n-1 1 2 3 4\n-1\n1\n2\n3\ny\n0 x\n5 1\n22x −> .\nDrugi etap rozwiązania:\nPodajemy zbiór rozwiązań nierówności: () () ∞+∪∞− ,32, lub () () ∞+∪∞−∈ ,32,x .\nZdający otrzymuje ................................................................................................................ 1 p.\ngdy:\n• zrealizuje pierwszy etap rozwi ązania i na tym poprzestanie lub b łędnie zapisze zbiór\nrozwiązań nierówności, np.\no obliczy lub poda pierwiastki trójmianu kwadratowego 21 =x , 32 =x\ni na tym poprzestanie lub błędnie zapisze zbiór rozwiązań nierówności,\no zaznaczy na wykresie miejsca zerowe funkcji 6 5)( 2 +−= xxxf\ni na tym poprzestanie lub błędnie zapisze zbiór rozwiązań nierówności,\no rozłoży trójmian kwadratowy na czynniki liniowe, np. () () 32 −− xx\ni na tym poprzestanie lub błędnie zapisze zbiór rozwiązań nierówności,\no zapisze nierówność 5 1\n22x −> i na tym poprzestanie lub b łędnie zapisze zbiór\nrozwiązań nierówności,\n• realizując pierwszy etap rozwi ązania zadania pope łni b łąd (ale otrzyma dwa ró żne\npierwiastki) i konsekwentnie do tego zapisze zbiór rozwiązań nierówności, np.\no popełni b łąd rachunkowy przy obliczaniu wyró żnika lub pierwiastków\ntrójmianu kwadratowego i konsekwentnie do popełnionego błędu zapisze zbiór\nrozwiązań nierówności,\no błędnie zapisze równania wynikaj ące ze wzorów Viète’a, np.: 12\n5\n2xx+= −\ni konsekwentnie do popełnionego błędu zapisze zbiór rozwiązań nierówności,\no błędnie zapisze nierówno ść, np. 5 1\n22x +< i konsekwentnie do pope łnionego\nbłędu zapisze zbiór rozwiązań nierówności.\nZdający otrzymuje ................................................................................................................ 2 p.\ngdy:\n• poda zbiór rozwi ązań nierówno ści: () () ∞+∪∞− ,32, lub () () ∞+∪∞−∈ ,32,x\nlub ( 2<x lub 3>x ),\n• sporządzi ilustracj ę geometryczn ą (o ś liczbowa, wykres) i zapisze zbiór rozwi ązań\nnierówności w postaci: 2, 3xx<> ,\n• poda zbiór rozwi ązań nierówno ści w postaci graficznej z poprawnie zaznaczonymi\nkońcami przedziałów.\n1. Jeżeli zdaj ący dzieli obie strony nierówno ści przez 2x − bez stosownego za łożenia,\nto otrzymuje 0 punktów.\n2. Jeżeli zdaj ący dzieli obie strony nierówno ści przez 2x − , rozwa żając dwa przypadki\n20x −> oraz 20x −< , rozwi ąże nierówno ść w ka żdym z tych przypadków, ale nie\nrozważy przypadku 20x −= , to otrzymuje 1 punkt.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z27",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 27,
+        "displayNumber": "27",
+        "order": 27,
+        "points": 2,
+        "title": "Zadanie 27",
+        "topicId": "inequalities",
+        "sourcePage": 13,
+        "solutionSourcePage": 8,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 27. (0–2)\nWykaż, że dla ka żdej liczby rzeczywistej x i dla ka żdej liczby rzeczywistej y prawdziwa jest\nnierówność 22485 0xx y y−+≥ .\nWypełnia\nNr zadania 26. 27.\nMaks. liczba pkt 2 2",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 27. (0–2)\nWykaż, że dla dowolnej liczby rzeczywistej x i dla dowolnej liczby rzeczywistej y prawdziwa\njest nierówność 22485 0xx y y−+≥ .\nV. Rozumowanie\ni argumentacja.\n2. Wyrażenia algebraiczne. Zdający używa wzorów\nskróconego mnożenia na ()\n2\nab± oraz 22ab− (2.1).\nI sposób rozwiązania\nNierówność 22485 0xx y y−+≥ przekształcamy w sposób równoważny\n22 2 484 0yxx y y+−+≥ ,\n()\n22 22 0yx y+− ≥ .\nTa nierówność jest prawdziwa dla dowolnych liczb rzeczywistych x i y, gdyż kwadrat każdej\nliczby jest nieujemny i suma kwadratów liczb nieujemnych również jest nieujemna.\nTo kończy dowód.\nSchemat oceniania I sposobu rozwiązania\nZdający otrzymuje ............................................................................................................... 1 p.\ngdy zapisze nierówność w postaci równoważnej ()\n22 22 0yx y+− ≥ i na tym poprzestanie lub\ndalej popełnia błędy.\nZdający otrzymuje ............................................................................................................... 2 p.\ngdy przeprowadzi pełny dowód.\nII sposób rozwiązania\nNierówność 22485 0xx y y−+≥ mo żemy potraktowa ć jak nierówno ść kwadratow ą\nz niewiadomą x lub – analogicznie – z niewiadomą y. Wyróżnik trójmianu stojącego po lewej\nstronie nierówności jest równy\n() ()\n2 2284 4 5 1 6 0yy yΔ= − − ⋅ ⋅ =− ≤ .\nStąd i z faktu, że wspó łczynnik przy 2x trójmianu 22() 4 8 5f xxx y y=−+ jest dodatni\nwynika, że trójmian ten przyjmuje tylko wartości nieujemne. To kończy dowód.\nZdający otrzymuje ............................................................................................................... 1 p.\ngdy wyznaczy wyró żnik trójmianu 22() 4 8 5f xxx y y=−+ : 216yΔ=− i na tym poprzestanie\nlub dalej popełnia błędy.\nZdający otrzymuje ................................................................................................................ 2 p.\ngdy wyznaczy wyró żnik trójmianu 22() 4 8 5f xxx y y=−+ , zapisze, że jest on niedodatni\ni wyciągnie wniosek, że trójmian przyjmuje tylko wartości nieujemne.\nIII sposób rozwiązania\nDla dowolnych liczb rzeczywistych x, y prawdziwa jest nierówno ść 22 2x yx y+≥ . St ąd\nwynika, że prawdziwa jest nierówność\n22448x yx y+≥ , czyli 22484 0xx y y−+ ≥ .\nZatem, dla dowolnych liczb x, y mamy\n22 22485 484 0xx y y xx y y−+≥−+ ≥ .\nTo kończy dowód.\nSchemat oceniania III sposobu rozwiązania\nZdający otrzymuje ................................................................................................................ 1 p.\ngdy zapisze, że dla dowolnych liczb rzeczywistych x, y prawdziwe s ą nierówno ści\n22 22485 484x xy y x xy y−+≥−+ oraz 22448x yx y+≥ (lub 22 2x yx y+≥ ).\nZdający otrzymuje ................................................................................................................ 2 p.\ngdy przeprowadzi pełny dowód.\nIV sposób rozwiązania\nGdy co najmniej jedna z liczb x, y jest równa 0, to nierówno ść 22485 0xx y y−+≥ jest\nprawdziwa, gdyż suma trzech liczb, z których co najmniej dwie są równe 0, a trzecia nieujemna,\njest nieujemna.\nGdy liczby x, y s ą przeciwnych znaków, to 0 xy < , wi ęc 8 0 xy−> . Zatem nierówno ść\n22485 0xx y y−+≥ jest prawdziwa, gdyż lewa jej strona jest sumą trzech liczb dodatnich.\nPozostaje wykazać prawdziwość nierówno ści w przypadku, gdy liczby x, y s ą tego samego\nznaku.\nZauważmy najpierw, że dla dowolnych liczb rzeczywistych x, y prawdziwa jest nierówność\n()\n2\n25 0xy−≥ , czyli 2244 55 0xx y y−+ ≥ .\nWykażemy teraz prawdziwość nierówności\n22 2 2485 44 55x xy y x xy y−+≥− + ,\nrównoważnie\n84 5xyx y−≥ − ,\n5\n2xyx y≤ .\nSkoro x i y s ą tego samego znaku, to 0xy > , więc dzieląc obie strony nierówno ści przez xy,\notrzymujemy nierówność równoważną 5\n21 ≤ , co jest prawdą. To kończy dowód.\nSchemat oceniania IV sposobu rozwiązania\nZdający otrzymuje ................................................................................................................ 1 p.\ngdy wykaże prawdziwość nierówności w przypadku, gdy co najmniej jedna z liczb x, y jest\nrówna 0 oraz w przypadku, gdy liczby x, y s ą przeciwnych znaków, a w przypadku,\ngdy x, y są tego samego znaku zauważy, że prawdziwa jest nierówność ()\n2\n25 0xy−≥ .",
+        "scoringCriteria": "Zadanie 27. (0–2)\nWykaż, że dla dowolnej liczby rzeczywistej x i dla dowolnej liczby rzeczywistej y prawdziwa\njest nierówność 22485 0xx y y−+≥ .\nV. Rozumowanie\ni argumentacja.\n2. Wyrażenia algebraiczne. Zdający używa wzorów\nskróconego mnożenia na ()\n2\nab± oraz 22ab− (2.1).\nI sposób rozwiązania\nNierówność 22485 0xx y y−+≥ przekształcamy w sposób równoważny\n22 2 484 0yxx y y+−+≥ ,\n()\n22 22 0yx y+− ≥ .\nTa nierówność jest prawdziwa dla dowolnych liczb rzeczywistych x i y, gdyż kwadrat każdej\nliczby jest nieujemny i suma kwadratów liczb nieujemnych również jest nieujemna.\nTo kończy dowód.\nSchemat oceniania I sposobu rozwiązania\nZdający otrzymuje ............................................................................................................... 1 p.\ngdy zapisze nierówność w postaci równoważnej ()\n22 22 0yx y+− ≥ i na tym poprzestanie lub\ndalej popełnia błędy.\nZdający otrzymuje ............................................................................................................... 2 p.\ngdy przeprowadzi pełny dowód.\nII sposób rozwiązania\nNierówność 22485 0xx y y−+≥ mo żemy potraktowa ć jak nierówno ść kwadratow ą\nz niewiadomą x lub – analogicznie – z niewiadomą y. Wyróżnik trójmianu stojącego po lewej\nstronie nierówności jest równy\n() ()\n2 2284 4 5 1 6 0yy yΔ= − − ⋅ ⋅ =− ≤ .\nStąd i z faktu, że wspó łczynnik przy 2x trójmianu 22() 4 8 5f xxx y y=−+ jest dodatni\nwynika, że trójmian ten przyjmuje tylko wartości nieujemne. To kończy dowód.\nZdający otrzymuje ............................................................................................................... 1 p.\ngdy wyznaczy wyró żnik trójmianu 22() 4 8 5f xxx y y=−+ : 216yΔ=− i na tym poprzestanie\nlub dalej popełnia błędy.\nZdający otrzymuje ................................................................................................................ 2 p.\ngdy wyznaczy wyró żnik trójmianu 22() 4 8 5f xxx y y=−+ , zapisze, że jest on niedodatni\ni wyciągnie wniosek, że trójmian przyjmuje tylko wartości nieujemne.\nIII sposób rozwiązania\nDla dowolnych liczb rzeczywistych x, y prawdziwa jest nierówno ść 22 2x yx y+≥ . St ąd\nwynika, że prawdziwa jest nierówność\n22448x yx y+≥ , czyli 22484 0xx y y−+ ≥ .\nZatem, dla dowolnych liczb x, y mamy\n22 22485 484 0xx y y xx y y−+≥−+ ≥ .\nTo kończy dowód.\nSchemat oceniania III sposobu rozwiązania\nZdający otrzymuje ................................................................................................................ 1 p.\ngdy zapisze, że dla dowolnych liczb rzeczywistych x, y prawdziwe s ą nierówno ści\n22 22485 484x xy y x xy y−+≥−+ oraz 22448x yx y+≥ (lub 22 2x yx y+≥ ).\nZdający otrzymuje ................................................................................................................ 2 p.\ngdy przeprowadzi pełny dowód.\nIV sposób rozwiązania\nGdy co najmniej jedna z liczb x, y jest równa 0, to nierówno ść 22485 0xx y y−+≥ jest\nprawdziwa, gdyż suma trzech liczb, z których co najmniej dwie są równe 0, a trzecia nieujemna,\njest nieujemna.\nGdy liczby x, y s ą przeciwnych znaków, to 0 xy < , wi ęc 8 0 xy−> . Zatem nierówno ść\n22485 0xx y y−+≥ jest prawdziwa, gdyż lewa jej strona jest sumą trzech liczb dodatnich.\nPozostaje wykazać prawdziwość nierówno ści w przypadku, gdy liczby x, y s ą tego samego\nznaku.\nZauważmy najpierw, że dla dowolnych liczb rzeczywistych x, y prawdziwa jest nierówność\n()\n2\n25 0xy−≥ , czyli 2244 55 0xx y y−+ ≥ .\nWykażemy teraz prawdziwość nierówności\n22 2 2485 44 55x xy y x xy y−+≥− + ,\nrównoważnie\n84 5xyx y−≥ − ,\n5\n2xyx y≤ .\nSkoro x i y s ą tego samego znaku, to 0xy > , więc dzieląc obie strony nierówno ści przez xy,\notrzymujemy nierówność równoważną 5\n21 ≤ , co jest prawdą. To kończy dowód.\nSchemat oceniania IV sposobu rozwiązania\nZdający otrzymuje ................................................................................................................ 1 p.\ngdy wykaże prawdziwość nierówności w przypadku, gdy co najmniej jedna z liczb x, y jest\nrówna 0 oraz w przypadku, gdy liczby x, y s ą przeciwnych znaków, a w przypadku,\ngdy x, y są tego samego znaku zauważy, że prawdziwa jest nierówność ()\n2\n25 0xy−≥ .",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z28",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 28,
+        "displayNumber": "28",
+        "order": 28,
+        "points": 2,
+        "title": "Zadanie 28",
+        "topicId": "quadratic-function",
+        "sourcePage": 14,
+        "solutionSourcePage": 10,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 28. (0–2)\nDany jest kwadrat ABCD. Przekątne AC i BD przecinają się w punkcie E. Punkty K i M są\nśrodkami odcinków – odpowiednio – AE i EC. Punkty L i N leżą na przek ątnej BD tak, że\n1= i DEDN 3\n1= (zobacz rysunek). Wyka ż, że stosunek pola czworok ąta KLMN\ndo pola kwadratu ABCD jest równy 3:1 .\nA B\nC D\nE\nN\nM\nK L",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 28. (0–2)\nDany jest kwadrat ABCD. Przek ątne AC i BD przecinają się w punkcie E. Punkty K i M są\nśrodkami odcinków – odpowiednio – AE i EC. Punkty L i N leżą na przek ątnej BD tak, że\n1= i DEDN 3\n1= (zobacz rysunek). Wyka ż, że stosunek pola czworok ąta KLMN\ndo pola kwadratu ABCD jest równy 3:1 .\nV. Rozumowanie\ni argumentacja.\nG10. Figury płaskie. Zdający oblicza pola i obwody trójkątów\ni czworokątów. (G10.9).\nI sposób rozwiązania\nPrzekątne w kwadracie ABCD są równe, więc 2AC BD d a== = .\nPole kwadratu ABCD jest równe 2\nABCDPa = . Czworokąt KLMN składa się z czterech\ntrójkątów prostokątnych przystających do trójkąta KEN. Pole każdego z nich jest równe\n()\n222 211 2 1 1 1 1 2224 6 2 4 2 4 2 4 1 2Pd d d a a a =⋅ ⋅ = = = ⋅ =  \n.\nZatem pole czworokąta KLMN jest równe\nA B\nC D\nK L\nM\nN\nE 1\n4 d\n2\n6 d\na\nA B\nC D\nE\nN\nM\nK L\n22114 12 3\nKLMNPa a =⋅ = .\nStąd\n2\n2\n1\n3 1\n3\naP\nPa == .\nII sposób rozwiązania\nPrzekątne w kwadracie ABCD są równe, więc 2AC BD d a== = .\nPole kwadratu ABCD jest równe 2\nABCDPa = . Czworokąt KLMN składa się z dwóch trójkątów\nprzystających do trójkąta KLN. Pole każdego z nich jest równe\n()\n222 214 1 1 1 1 1 2226 4 1 2 1 2 1 2 6Pd d d a a a =⋅ ⋅ = = = ⋅ =  \n.\nZatem pole czworokąta KLMN jest równe\n22112 63\nKLMNPa a =⋅ = .\nStąd\n2\n2\n1\n3 1\n3\naP\nPa == .\nIII sposób rozwiązania\nPrzekątne w kwadracie ABCD są równe, więc 2AC BD d a== = .\nA B\nC D\nK L\nM\nN\nE\na\n1\n4 d\n4\n6 d\nA B\nC D\nK L\nM\nN\nE\na\n1\n2 d\n2\n6 d\nPole kwadratu ABCD jest równe 2\nABCDPa = . Czworokąt KLMN składa się z dwóch trójkątów\nprzystających do trójkąta KMN. Pole każdego z nich jest równe\n()\n222 211 2 1 1 1 1 2222 6 1 2 1 2 1 2 6Pd d d a a a =⋅ ⋅ = = = ⋅ =  \n.\nZatem pole czworokąta KLMN jest równe\n22112 63\nKLMNPa a =⋅ = .\nStąd\n2\n2\n1\n3 1\n3\naP\nPa == .\nIV sposób rozwiązania\nPonieważ przekątne w kwadracie są równe, więc AE ED= . Niech 6AE ED x== .\nxMCEMKEAK 3==== , xLBDN 2== oraz xELNE 4== .\nStąd\n6KM KE EM x=+ = oraz 8NL NE EL x=+ = .\nPole kwadratu ABCD jest równe\n27212122\n1\n2\n1 xxxBDACPABCD =⋅⋅=⋅= .\nPole czworokąta KLMN jest równe\n211 68 2 422\nKLMNPK M N L x x x=⋅ = ⋅ ⋅ = .\nStąd\n3\n1\n72\n24\n2\n2\n== x\nx\nP\nP\nKLMN .\nA B\nC D\nK L\nM N\nE\n2x\n4x\n3x\n3x\nZdający otrzymuje ................................................................................................................ 1 p.\n• gdy wyznaczy pole jednego z trójkątów: KLE, LME, MNE, NKE ( 21\n12Pa= )\n• gdy wyznaczy pole jednego z trójkątów: NLM, LNK ( 21\n6Pa= )\n• gdy wyznaczy pole jednego z trójkątów: KMN, KLM ( 21\n6Pa= )\n• gdy wyznaczy pole czworokąta KLMN w zależności od jego przekątnych, np.\n224862\n1\n2\n1 xxxLNKMPKLMN =⋅⋅=⋅=\ni na tym poprzestanie lub dalej popełnia błędy.\nZdający otrzymuje ................................................................................................................ 2 p.\ngdy wykaże, że 3\n1=\nP\nP .\n1. Jeżeli zdaj ący przy wyznaczaniu pola kwadratu i pola czworok ąta KLMN przyjmuje\nkonkretne wartości liczbowe bez stosownego komentarza i rozwi ązuje zadanie do ko ńca,\nto otrzymuje 1 punkt.\n2. Jeżeli zdaj ący przy wyznaczaniu pól trójk ątów lub pól czworok ątów o prostopad łych\nprzekątnych pomija wspó łczynnik 1\n2 , otrzymuj ąc poprawny stosunek pola czworok ąta\nKLMN do pola kwadratu ABCD, to otrzymuje 1 punkt.\n3. Jeżeli zdający w swoim rozumowaniu wykorzystuje tezę, to za całe rozwiązanie otrzymuje\n0 punktów.",
+        "scoringCriteria": "Zadanie 28. (0–2)\nDany jest kwadrat ABCD. Przek ątne AC i BD przecinają się w punkcie E. Punkty K i M są\nśrodkami odcinków – odpowiednio – AE i EC. Punkty L i N leżą na przek ątnej BD tak, że\n1= i DEDN 3\n1= (zobacz rysunek). Wyka ż, że stosunek pola czworok ąta KLMN\ndo pola kwadratu ABCD jest równy 3:1 .\nV. Rozumowanie\ni argumentacja.\nG10. Figury płaskie. Zdający oblicza pola i obwody trójkątów\ni czworokątów. (G10.9).\nI sposób rozwiązania\nPrzekątne w kwadracie ABCD są równe, więc 2AC BD d a== = .\nPole kwadratu ABCD jest równe 2\nABCDPa = . Czworokąt KLMN składa się z czterech\ntrójkątów prostokątnych przystających do trójkąta KEN. Pole każdego z nich jest równe\n()\n222 211 2 1 1 1 1 2224 6 2 4 2 4 2 4 1 2Pd d d a a a =⋅ ⋅ = = = ⋅ =  \n.\nZatem pole czworokąta KLMN jest równe\nA B\nC D\nK L\nM\nN\nE 1\n4 d\n2\n6 d\na\nA B\nC D\nE\nN\nM\nK L\n22114 12 3\nKLMNPa a =⋅ = .\nStąd\n2\n2\n1\n3 1\n3\naP\nPa == .\nII sposób rozwiązania\nPrzekątne w kwadracie ABCD są równe, więc 2AC BD d a== = .\nPole kwadratu ABCD jest równe 2\nABCDPa = . Czworokąt KLMN składa się z dwóch trójkątów\nprzystających do trójkąta KLN. Pole każdego z nich jest równe\n()\n222 214 1 1 1 1 1 2226 4 1 2 1 2 1 2 6Pd d d a a a =⋅ ⋅ = = = ⋅ =  \n.\nZatem pole czworokąta KLMN jest równe\n22112 63\nKLMNPa a =⋅ = .\nStąd\n2\n2\n1\n3 1\n3\naP\nPa == .\nIII sposób rozwiązania\nPrzekątne w kwadracie ABCD są równe, więc 2AC BD d a== = .\nA B\nC D\nK L\nM\nN\nE\na\n1\n4 d\n4\n6 d\nA B\nC D\nK L\nM\nN\nE\na\n1\n2 d\n2\n6 d\nPole kwadratu ABCD jest równe 2\nABCDPa = . Czworokąt KLMN składa się z dwóch trójkątów\nprzystających do trójkąta KMN. Pole każdego z nich jest równe\n()\n222 211 2 1 1 1 1 2222 6 1 2 1 2 1 2 6Pd d d a a a =⋅ ⋅ = = = ⋅ =  \n.\nZatem pole czworokąta KLMN jest równe\n22112 63\nKLMNPa a =⋅ = .\nStąd\n2\n2\n1\n3 1\n3\naP\nPa == .\nIV sposób rozwiązania\nPonieważ przekątne w kwadracie są równe, więc AE ED= . Niech 6AE ED x== .\nxMCEMKEAK 3==== , xLBDN 2== oraz xELNE 4== .\nStąd\n6KM KE EM x=+ = oraz 8NL NE EL x=+ = .\nPole kwadratu ABCD jest równe\n27212122\n1\n2\n1 xxxBDACPABCD =⋅⋅=⋅= .\nPole czworokąta KLMN jest równe\n211 68 2 422\nKLMNPK M N L x x x=⋅ = ⋅ ⋅ = .\nStąd\n3\n1\n72\n24\n2\n2\n== x\nx\nP\nP\nKLMN .\nA B\nC D\nK L\nM N\nE\n2x\n4x\n3x\n3x\nZdający otrzymuje ................................................................................................................ 1 p.\n• gdy wyznaczy pole jednego z trójkątów: KLE, LME, MNE, NKE ( 21\n12Pa= )\n• gdy wyznaczy pole jednego z trójkątów: NLM, LNK ( 21\n6Pa= )\n• gdy wyznaczy pole jednego z trójkątów: KMN, KLM ( 21\n6Pa= )\n• gdy wyznaczy pole czworokąta KLMN w zależności od jego przekątnych, np.\n224862\n1\n2\n1 xxxLNKMPKLMN =⋅⋅=⋅=\ni na tym poprzestanie lub dalej popełnia błędy.\nZdający otrzymuje ................................................................................................................ 2 p.\ngdy wykaże, że 3\n1=\nP\nP .\n1. Jeżeli zdaj ący przy wyznaczaniu pola kwadratu i pola czworok ąta KLMN przyjmuje\nkonkretne wartości liczbowe bez stosownego komentarza i rozwi ązuje zadanie do ko ńca,\nto otrzymuje 1 punkt.\n2. Jeżeli zdaj ący przy wyznaczaniu pól trójk ątów lub pól czworok ątów o prostopad łych\nprzekątnych pomija wspó łczynnik 1\n2 , otrzymuj ąc poprawny stosunek pola czworok ąta\nKLMN do pola kwadratu ABCD, to otrzymuje 1 punkt.\n3. Jeżeli zdający w swoim rozumowaniu wykorzystuje tezę, to za całe rozwiązanie otrzymuje\n0 punktów.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z29",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 29,
+        "displayNumber": "29",
+        "order": 29,
+        "points": 2,
+        "title": "Zadanie 29",
+        "topicId": "quadratic-function",
+        "sourcePage": 15,
+        "solutionSourcePage": 14,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 29. (0–2)\nOblicz najmniejsz ą i najwi ększą warto ść funkcji kwadratowej ()\n2 63f xx x=−+\nw przedziale 0, 4 .\nOdpowiedź: ................................................................................................................................ .\nWypełnia\nNr zadania 28. 29.\nMaks. liczba pkt 2 2",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 29. (0–2)\nOblicz najmniejsz ą i najwi ększą warto ść funkcji kwadratowej ()\n2 63f xx x=−+\nw przedziale 0, 4 .\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n4. Funkcje. Zdający wyznacza wartość najmniejszą i wartość\nnajwiększą funkcji kwadratowej w przedziale domkniętym\n(4.11).\nRozwiązanie\nObliczamy pierwsz ą wspó łrzędną wierzcho łka paraboli o równaniu 2 63y xx=−+ :\n6\n2 3wx == . Argument 3 wx = nale ży do przedzia łu 0, 4 , wi ęc najmniejsz ą warto ścią\nfunkcji f w przedziale 0, 4 jest ()36f =− . Obliczamy warto ści funkcji f na ko ńcach\nprzedziału 0, 4 :\n()03f = oraz ()45f =− .\nNajwiększą wartością jaką przyjmuje funkcja f w przedziale 0, 4 jest ()03f = .\nZdający otrzymuje ............................................................................................................... 1 p.\ngdy\n• obliczy pierwszą współrzędną wierzchołka paraboli 3wx = i stwierdzi, że 0, 4wx ∈ ,\n• obliczy wartości funkcji f na końcach przedziału 0, 4 : ()03f = oraz ()45f =− .\nZdający otrzymuje ............................................................................................................... 2 p.\ngdy zapisze odpowiedź: najmniejsza wartość funkcji f w przedziale 0, 4 jest równa\n()36f =− , a największa wartość funkcji w tym przedziale jest równa ()03f = .\n1. Jeżeli zdaj ący obliczy jedynie trzy warto ści funkcji: ()03f = , ()36f =− i ()45f =−\noraz sformułuje odpowiedź: największa wartość funkcji w przedziale 0, 4 jest równa 3,\na najmniejsza wartość funkcji jest równa 6− , to otrzymuje 2 punkty.\n2. Jeżeli zdający obliczy tylko wspó łrzędne wierzchołka paraboli 3 wx = , ()36f =− , ale nie\nzapisze, że 0, 4wx ∈ , to otrzymuje 0 punktów.",
+        "scoringCriteria": "Zadanie 29. (0–2)\nOblicz najmniejsz ą i najwi ększą warto ść funkcji kwadratowej ()\n2 63f xx x=−+\nw przedziale 0, 4 .\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n4. Funkcje. Zdający wyznacza wartość najmniejszą i wartość\nnajwiększą funkcji kwadratowej w przedziale domkniętym\n(4.11).\nRozwiązanie\nObliczamy pierwsz ą wspó łrzędną wierzcho łka paraboli o równaniu 2 63y xx=−+ :\n6\n2 3wx == . Argument 3 wx = nale ży do przedzia łu 0, 4 , wi ęc najmniejsz ą warto ścią\nfunkcji f w przedziale 0, 4 jest ()36f =− . Obliczamy warto ści funkcji f na ko ńcach\nprzedziału 0, 4 :\n()03f = oraz ()45f =− .\nNajwiększą wartością jaką przyjmuje funkcja f w przedziale 0, 4 jest ()03f = .\nZdający otrzymuje ............................................................................................................... 1 p.\ngdy\n• obliczy pierwszą współrzędną wierzchołka paraboli 3wx = i stwierdzi, że 0, 4wx ∈ ,\n• obliczy wartości funkcji f na końcach przedziału 0, 4 : ()03f = oraz ()45f =− .\nZdający otrzymuje ............................................................................................................... 2 p.\ngdy zapisze odpowiedź: najmniejsza wartość funkcji f w przedziale 0, 4 jest równa\n()36f =− , a największa wartość funkcji w tym przedziale jest równa ()03f = .\n1. Jeżeli zdaj ący obliczy jedynie trzy warto ści funkcji: ()03f = , ()36f =− i ()45f =−\noraz sformułuje odpowiedź: największa wartość funkcji w przedziale 0, 4 jest równa 3,\na najmniejsza wartość funkcji jest równa 6− , to otrzymuje 2 punkty.\n2. Jeżeli zdający obliczy tylko wspó łrzędne wierzchołka paraboli 3 wx = , ()36f =− , ale nie\nzapisze, że 0, 4wx ∈ , to otrzymuje 0 punktów.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z30",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 30,
+        "displayNumber": "30",
+        "order": 30,
+        "points": 2,
+        "title": "Zadanie 30",
+        "topicId": "lines-and-segments",
+        "sourcePage": 16,
+        "solutionSourcePage": 15,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 30. (0–2)\nW układzie współrzędnych są dane punkty () 43, 12A =− − , ()50,19B = . Prosta AB przecina\noś Ox w punkcie P . Oblicz pierwszą współrzędną punktu P .\nOdpowiedź: ................................................................................................................................ .",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 30. (0–2)\nW układzie współrzędnych są dane punkty () 43, 12A =− − , ()50,19B = . Prosta AB przecina\noś Ox w punkcie P . Oblicz pierwszą współrzędną punktu P .\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n3. Równania i nierówności. Zdający wyznacza równanie\nprostej przechodzącej przez dwa dane punkty. (8.1).\nI sposób rozwiązania\nWyznaczamy równanie prostej AB\n17\n33yx=+ lub 37 0xy−+ = .\nPierwsza współrzędna punktu P jest miejscem zerowym funkcji liniowej okre ślonej wzorem\n17\n33yx=+ .\nRozwiązujemy zatem równanie\n17 033x += .\nStąd 7x =− .\nSchemat oceniania I sposobu rozwiązania\nZdający otrzymuje ............................................................................................................... 1 p.\ngdy wyznaczy równanie prostej AB , np. w postaci 17\n33yx=+ i na tym poprzestanie lub\ndalej popełnia błędy.\nZdający otrzymuje ............................................................................................................... 2 p.\ngdy obliczy pierwszą współrzędną punktu P: 7x =− .\n1. Jeżeli zdaj ący przy wyznaczaniu równania prostej AB, pope łni b łąd rzeczowy, to\notrzymuje 0 punktów.\n2. Jeżeli zdający wyznaczy równanie prostej AB, popełniając błędy rachunkowe (np. zapisze\n() ( ) ( ) ( )19 12 50 50 43 19 0xy−− − − − = ) i konsekwentnie obliczy pierwsz ą wspó łrzędną\npunktu P, to otrzymuje 1 punkt.\nII sposób rozwiązania\nNiech () ,0Pp= b ędzie punktem przeci ęcia prostej AB z osi ą Ox uk ładu wspó łrzędnych,\na punkty C i D będą rzutami prostokątnymi punktów odpowiednio A i B na tę oś.\ny\n0 x\nB\nP\nA\np\nD C\n-43\n-12\n19\n50\nWtedy () 43,0C =− i ()50,0D = . Trójkąty PAC i PBD są podobne (oba są prostokątne, a ich\nkąty ostre przy wierzchołku P są równe). Zatem\nPD PC\nBDA C= , czyli () 4350\n19 12\npp −−− = .\nStąd\n() ()12 50 19 43pp−= + ,\n600 12 19 817pp−=+ ,\n31 217p−= ,\n7p =− .\nSchemat oceniania II sposobu rozwiązania\nZdający otrzymuje .............................................................................................................. 1 p.\ngdy zapisze równanie, w którym niewiadomą jest pierwsza współrzędna punktu P, np.:\n() 4350\n19 12\npp −−− = i na tym poprzestanie lub dalej popełnia błędy.\nZdający otrzymuje .............................................................................................................. 2 p.\ngdy obliczy pierwszą współrzędną punktu P: 7p =− .\nKryteria uwzględniające specyficzne trudności w uczeniu się matematyki\nJeżeli zdający obliczy pierwszą współrzędną punktu P, zapisując np. 7x =− , ale popełni błąd\nformułując odpowiedź, np. ()7,0P = , ()0, 7P =− , to otrzymuje 2 punkty.",
+        "scoringCriteria": "Zadanie 30. (0–2)\nW układzie współrzędnych są dane punkty () 43, 12A =− − , ()50,19B = . Prosta AB przecina\noś Ox w punkcie P . Oblicz pierwszą współrzędną punktu P .\nII. Wykorzystanie\ni interpretowanie\nreprezentacji.\n3. Równania i nierówności. Zdający wyznacza równanie\nprostej przechodzącej przez dwa dane punkty. (8.1).\nI sposób rozwiązania\nWyznaczamy równanie prostej AB\n17\n33yx=+ lub 37 0xy−+ = .\nPierwsza współrzędna punktu P jest miejscem zerowym funkcji liniowej okre ślonej wzorem\n17\n33yx=+ .\nRozwiązujemy zatem równanie\n17 033x += .\nStąd 7x =− .\nSchemat oceniania I sposobu rozwiązania\nZdający otrzymuje ............................................................................................................... 1 p.\ngdy wyznaczy równanie prostej AB , np. w postaci 17\n33yx=+ i na tym poprzestanie lub\ndalej popełnia błędy.\nZdający otrzymuje ............................................................................................................... 2 p.\ngdy obliczy pierwszą współrzędną punktu P: 7x =− .\n1. Jeżeli zdaj ący przy wyznaczaniu równania prostej AB, pope łni b łąd rzeczowy, to\notrzymuje 0 punktów.\n2. Jeżeli zdający wyznaczy równanie prostej AB, popełniając błędy rachunkowe (np. zapisze\n() ( ) ( ) ( )19 12 50 50 43 19 0xy−− − − − = ) i konsekwentnie obliczy pierwsz ą wspó łrzędną\npunktu P, to otrzymuje 1 punkt.\nII sposób rozwiązania\nNiech () ,0Pp= b ędzie punktem przeci ęcia prostej AB z osi ą Ox uk ładu wspó łrzędnych,\na punkty C i D będą rzutami prostokątnymi punktów odpowiednio A i B na tę oś.\ny\n0 x\nB\nP\nA\np\nD C\n-43\n-12\n19\n50\nWtedy () 43,0C =− i ()50,0D = . Trójkąty PAC i PBD są podobne (oba są prostokątne, a ich\nkąty ostre przy wierzchołku P są równe). Zatem\nPD PC\nBDA C= , czyli () 4350\n19 12\npp −−− = .\nStąd\n() ()12 50 19 43pp−= + ,\n600 12 19 817pp−=+ ,\n31 217p−= ,\n7p =− .\nSchemat oceniania II sposobu rozwiązania\nZdający otrzymuje .............................................................................................................. 1 p.\ngdy zapisze równanie, w którym niewiadomą jest pierwsza współrzędna punktu P, np.:\n() 4350\n19 12\npp −−− = i na tym poprzestanie lub dalej popełnia błędy.\nZdający otrzymuje .............................................................................................................. 2 p.\ngdy obliczy pierwszą współrzędną punktu P: 7p =− .\nKryteria uwzględniające specyficzne trudności w uczeniu się matematyki\nJeżeli zdający obliczy pierwszą współrzędną punktu P, zapisując np. 7x =− , ale popełni błąd\nformułując odpowiedź, np. ()7,0P = , ()0, 7P =− , to otrzymuje 2 punkty.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z31",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 31,
+        "displayNumber": "31",
+        "order": 31,
+        "points": 2,
+        "title": "Zadanie 31",
+        "topicId": "proofs",
+        "sourcePage": 17,
+        "solutionSourcePage": 17,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 31. (0–2)\nJeżeli do licznika i do mianownika nieskracalnego dodatniego u łamka dodamy po łowę jego\nlicznika, to otrzymamy 4\n7 , a jeżeli do licznika i do mianowni ka dodamy 1, to otrzymamy 1\n2 .\nWyznacz ten ułamek.\nOdpowiedź: ................................................................................................................................ .\nWypełnia\nNr zadania 30. 31.\nMaks. liczba pkt 2 2",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 31. (0–2)\nJeżeli do licznika i do mianownika nieskracalnego dodatniego u łamka dodamy po łowę jego\nlicznika, to otrzymamy 4\n7 , a jeżeli do licznika i do mianowni ka dodamy 1, to otrzymamy 1\n2 .\nWyznacz ten ułamek.\nIII. Modelowanie\nmatematyczne.\nG7. Równania. Zdający za pomocą równań lub układów\nrównań opisuje i rozwiązuje zadania osadzone w kontekście\npraktycznym, a także rozwiązuje układy równań stopnia\npierwszego z dwiema niewiadomymi (G7.7, G7.6).\nI sposób rozwiązania\nNiech x i y oznaczaj ą odpowiednio licznik i mianownik szukanego u łamka nieskracalnego.\nZ treści zadania otrzymujemy układ równań\n1\n42\n1 7\n2\nxx\nyx\n+\n=\n+\n12\nx\ny\n+ =+ ,\n317422x yx⋅= + \noraz ()21 1x y+= + ,\n21 422 x yx=+ oraz 2 1x y+= .\nStąd\n()17 42 12 xx=+ ,\n17 16 8x x=+ ,\n8x = , więc 28 1 1 7y =⋅ + = .\nZatem szukany ułamek to 8\n17 . Jest to ułamek nieskracalny.\nSchemat oceniania I sposobu rozwiązania\nZdający otrzymuje ............................................................................................................... 1 p.\ngdy\n• zapisze układ równań z dwiema niewiadomymi, np.:\n1\n42\n1 7\n2\nxx\nyx\n+\n=\n+\ni 11\n12\nx\ny\n+ =+\n• zapisze równanie z jedną niewiadomą, np.: ()17 42 12 xx=+ .\nZdający otrzymuje ............................................................................................................... 2 p.\ngdy wyznaczy szukany ułamek: 8\n17 .\nII sposób rozwiązania\nNiech x i y oznaczaj ą odpowiednio licznik i mianownik szukanego u łamka nieskracalnego.\nZ treści zadania otrzymujemy równanie\n1\n2\n1\n2\n4\n7\nxx\nyx\n+ =+ ,\n3\n2\n1\n2\n4\n7\nx\nyx =+ ,\n21 422 x yx=+ ,\n17 42 x y= .\nStąd\n8\n17\nx\ny = .\nOtrzymany ułamek jest nieskracalny oraz 191\n11 8 2\nx\ny\n+ ==+ .\nStąd wynika, że 8\n17 to jedyny szukany ułamek.\nSchemat oceniania II sposobu rozwiązania\nZdający otrzymuje .............................................................................................................. 1 p.\ngdy zapisze równanie z dwiema niewiadomymi:\n1\n2\n1\n2\n4\n7\nxx\nyx\n+ =+ i doprowadzi je postaci 8\n17\nx\ny =\ni na tym zakończy\nZdający otrzymuje .............................................................................................................. 2 p.\ngdy zapisze równanie z dwiema niewiadomymi:\n1\n2\n1\n2\n4\n7\nxx\nyx\n+ =+ , doprowadzi je postaci 8\n17\nx\ny =\ni sprawdzi, że ułamek ten spełnia drugi z warunków podanych w treści zadania: 191\n11 8 2\nx\ny\n+ ==+ .\nUwagi:\n1. Jeżeli zdaj ący od razu poda u łamek 8\n17 i nie sprawdzi, że 81 1\n17 1 2\n+\n+ = , to otrzymuje\n0 punktów.\n2. Jeżeli zdaj ący od razu poda u łamek 8\n17 i sprawdzi, że spe łnia on drugi z warunków\npodanych w treści zadania 81 1\n17 1 2\n+\n+ = , to otrzymuje 1 punkt.",
+        "scoringCriteria": "Zadanie 31. (0–2)\nJeżeli do licznika i do mianownika nieskracalnego dodatniego u łamka dodamy po łowę jego\nlicznika, to otrzymamy 4\n7 , a jeżeli do licznika i do mianowni ka dodamy 1, to otrzymamy 1\n2 .\nWyznacz ten ułamek.\nIII. Modelowanie\nmatematyczne.\nG7. Równania. Zdający za pomocą równań lub układów\nrównań opisuje i rozwiązuje zadania osadzone w kontekście\npraktycznym, a także rozwiązuje układy równań stopnia\npierwszego z dwiema niewiadomymi (G7.7, G7.6).\nI sposób rozwiązania\nNiech x i y oznaczaj ą odpowiednio licznik i mianownik szukanego u łamka nieskracalnego.\nZ treści zadania otrzymujemy układ równań\n1\n42\n1 7\n2\nxx\nyx\n+\n=\n+\n12\nx\ny\n+ =+ ,\n317422x yx⋅= + \noraz ()21 1x y+= + ,\n21 422 x yx=+ oraz 2 1x y+= .\nStąd\n()17 42 12 xx=+ ,\n17 16 8x x=+ ,\n8x = , więc 28 1 1 7y =⋅ + = .\nZatem szukany ułamek to 8\n17 . Jest to ułamek nieskracalny.\nSchemat oceniania I sposobu rozwiązania\nZdający otrzymuje ............................................................................................................... 1 p.\ngdy\n• zapisze układ równań z dwiema niewiadomymi, np.:\n1\n42\n1 7\n2\nxx\nyx\n+\n=\n+\ni 11\n12\nx\ny\n+ =+\n• zapisze równanie z jedną niewiadomą, np.: ()17 42 12 xx=+ .\nZdający otrzymuje ............................................................................................................... 2 p.\ngdy wyznaczy szukany ułamek: 8\n17 .\nII sposób rozwiązania\nNiech x i y oznaczaj ą odpowiednio licznik i mianownik szukanego u łamka nieskracalnego.\nZ treści zadania otrzymujemy równanie\n1\n2\n1\n2\n4\n7\nxx\nyx\n+ =+ ,\n3\n2\n1\n2\n4\n7\nx\nyx =+ ,\n21 422 x yx=+ ,\n17 42 x y= .\nStąd\n8\n17\nx\ny = .\nOtrzymany ułamek jest nieskracalny oraz 191\n11 8 2\nx\ny\n+ ==+ .\nStąd wynika, że 8\n17 to jedyny szukany ułamek.\nSchemat oceniania II sposobu rozwiązania\nZdający otrzymuje .............................................................................................................. 1 p.\ngdy zapisze równanie z dwiema niewiadomymi:\n1\n2\n1\n2\n4\n7\nxx\nyx\n+ =+ i doprowadzi je postaci 8\n17\nx\ny =\ni na tym zakończy\nZdający otrzymuje .............................................................................................................. 2 p.\ngdy zapisze równanie z dwiema niewiadomymi:\n1\n2\n1\n2\n4\n7\nxx\nyx\n+ =+ , doprowadzi je postaci 8\n17\nx\ny =\ni sprawdzi, że ułamek ten spełnia drugi z warunków podanych w treści zadania: 191\n11 8 2\nx\ny\n+ ==+ .\nUwagi:\n1. Jeżeli zdaj ący od razu poda u łamek 8\n17 i nie sprawdzi, że 81 1\n17 1 2\n+\n+ = , to otrzymuje\n0 punktów.\n2. Jeżeli zdaj ący od razu poda u łamek 8\n17 i sprawdzi, że spe łnia on drugi z warunków\npodanych w treści zadania 81 1\n17 1 2\n+\n+ = , to otrzymuje 1 punkt.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z32",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 32,
+        "displayNumber": "32",
+        "order": 32,
+        "points": 4,
+        "title": "Zadanie 32",
+        "topicId": "solid-geometry",
+        "sourcePage": 18,
+        "solutionSourcePage": 19,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 32. (0–4)\nWysokość graniastosłupa prawidłowego czworokątnego jest równa 16 . Przekątna graniastosłupa\njest nachylona do płaszczyzny jego podstawy pod kątem, którego cosinus jest równy 3\n5 . Oblicz\npole powierzchni całkowitej tego graniastosłupa.\nOdpowiedź: ................................................................................................................................ .\nWypełnia\nNr zadania 32.\nMaks. liczba pkt 4",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 32. (0–4)\nWysokość graniastos łupa prawid łowego czworok ątnego jest równa 16 . Przek ątna\ngraniastosłupa jest nachylona do p łaszczyzny jego podstawy pod k ątem, którego cosinus jest\nrówny 3\n5 . Oblicz pole powierzchni całkowitej tego graniastosłupa.\nIV. Użycie i tworzenie\nstrategii.\n9. Stereometria. Zdający stosuje trygonometrię do obliczeń\ndługości odcinków, miar kątów, pól powierzchni i objętości\n(9.6).\nI sposób rozwiązania\nNiech a oznacza d ługość kraw ędzi podstawy tego graniastos łupa i niech α b ędzie k ątem\nnachylenia przekątnej graniastosłupa do płaszczyzny jego podstawy (zobacz rysunek).\nPonieważ 3cos 5α = , wi ęc k ąt α jest ostry oraz 4sin 5α = . St ąd wynika, że 4tg 3α = .\nZ drugiej strony 16tg\n2a\nα = . Obliczamy d ługość kraw ędzi podstawy graniastos łupa.\nRozwiązujemy równanie:\n16 4\n32a\n= , skąd 62a = .\nSzukane pole powierzchni całkowitej tego graniastosłupa jest równe:\n() ()\n2\n2 6 2 4 6 2 16 144 384 2 48 3 8 2cP =⋅ +⋅ ⋅ = + = + .\nII sposób rozwiązania\nNiech a oznacza d ługość kraw ędzi podstawy tego graniastos łupa, α – k ąt nachylenia\nprzekątnej graniastos łupa do p łaszczyzny jego podsta wy oraz niech przek ątna podstawy\ngraniastosłupa ma długość 3x, a przekątna graniastosłupa 5x (zobacz rysunek).\nα\na\na\n16\nZ twierdzenia Pitagorasa otrzymujemy równanie\n() ()\n22 231 6 5x x+= ,\n229 256 25x x+= ,\n2256 16 x= ,\n216 x= .\nStąd 4x = . Zatem przekątna podstawy graniastosłupa ma długość 33 4 1 2x =⋅= .\nObliczamy długość krawędzi podstawy graniastosłupa:\n21 2a = , skąd 62a = .\nSzukane pole powierzchni całkowitej tego graniastosłupa jest równe:\n() ()\n2\n2 6 2 4 6 2 16 144 384 2 48 3 8 2cP =⋅ +⋅ ⋅ = + = + .\n3Możemy również zauważyć, że trójkąt prostokątny o kącie ostrym α takim, że cos 5α = jest\npodobny do trójkąta pitagorejskiego o bokach długości 3, 4 i 5. Skala tego podobieństwa jest\nrówna 16\n4 4x == . W rezultacie szukane pole cP powierzchni całkowitej graniastosłupa jest\nrówne 2\nmx P , gdzie mP to pole powierzchni całkowitej graniastosłupa, którego przekątna ma\ndługość 5, a przekątna podstawy długość 3. Długość krawędzi podstawy tego graniastosłupa\njest równa 33\n22 2= , więc ()\n2\n33\n2222 4 2 4 9 2 4 2mP =⋅ +⋅ ⋅=+ .\nZatem () ()\n241 6 9 2 4 2 4 8 3 8 2cmPP=⋅= + = + .\niązania\nRozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze\ndo pełnego rozwiązania ........................................................................................................ 1 p.\nZdający:\n• zapisze, że 4tg 3α =\n• zapisze rów\nnanie, z którego mo żna obliczyć skalę x podobieństwa trójkąta o bokach\ndługo ści 3, 4 i 5 do trójk ąta o przyprostokątnej długości 16 leżącej napr\nzeciw kąta α ,\nnp. () ()\n22 231 6 5x x+=\n3x\n5x\nα\na\na\n16\n• poda skal ę x podobie ństwa trójk ąta o bokach d ługości 3, 4 i 5 do trójk ąta\no przyprostokątnej długości 16 leżącej naprzeciw kąta α , 4x =\n• zaznaczy na rysunku k ąt nachylenia przek ątnej graniastos łupa do p łaszczyzny jego\n• zapisze, że długość d przekątnej graniastosłupa jest równa 20\ni na tym zakończy lub dalej popełni błędy.\nRozwiązanie, w którym jest istotny postęp ........................................................................ 2 p.\nZdający:\n• obliczy długość e przekątnej podstawy tego graniastosłupa e =12\n• zapisze równanie, z którego mo żna obliczy ć d ługość kraw ędzi podstawy tego\ngraniastosłupa, np. ()\n2\n22 5216 2 3\naa += \n()\n22216 2 20a+= lub 16 4\n32a\n=\n• zapisze uk ład równa ń, z którego mo żna obliczy ć d ługość kraw ędzi podstawy tego\ngraniastosłupa, np.\n()\n2 22\n23\n5\n21 6\n =\n +=\na\nd\nad\ngdzie d oznacza długość przekątnej tego graniastosłupa\ni na tym zakończy lub dalej popełni błędy.\nPokonanie zasadniczych trudności zadania ....................................................................... 3 p.\nZdający obliczy d ługość krawędzi podstawy graniastos łupa: 62a = i na tym zako ńczy lub\ndalej popełni błędy.\nRozwiązanie pełne ................................................................................................................ 4 p.\nZdający obliczy pole powierzchni całkowitej tego graniastosłupa: ()48 3 8 2cP =+ .\n1. Akceptujemy sytuację, w której zdający wprowadza do rozwiązania poprawne przybliżenia\ndziesiętne liczb rzeczywistych.\n2. Jeżeli zdaj ący przyjmie miar ę k ąta nachylenia, któr a nie wynika z tre ści zadania (np.\n30α =° ), i w rozwiązaniu z tego korzysta, to za całe rozwiązanie otrzymuje 0 punktów.\n3. Jeżeli zdaj ący b łędnie zaznaczy na rysunku podany k ąt i korzysta z tego k ąta, to za ca łe\nrozwiązanie otrzymuje 0 punktów.\n4. Jeżeli zdający zapisze, że 3\n5sinα = i korzysta z tej równo ści, to za ca łe rozwiązanie może\notrzymać co najwyżej 1 punkt.",
+        "scoringCriteria": "Zadanie 32. (0–4)\nWysokość graniastos łupa prawid łowego czworok ątnego jest równa 16 . Przek ątna\ngraniastosłupa jest nachylona do p łaszczyzny jego podstawy pod k ątem, którego cosinus jest\nrówny 3\n5 . Oblicz pole powierzchni całkowitej tego graniastosłupa.\nIV. Użycie i tworzenie\nstrategii.\n9. Stereometria. Zdający stosuje trygonometrię do obliczeń\ndługości odcinków, miar kątów, pól powierzchni i objętości\n(9.6).\nI sposób rozwiązania\nNiech a oznacza d ługość kraw ędzi podstawy tego graniastos łupa i niech α b ędzie k ątem\nnachylenia przekątnej graniastosłupa do płaszczyzny jego podstawy (zobacz rysunek).\nPonieważ 3cos 5α = , wi ęc k ąt α jest ostry oraz 4sin 5α = . St ąd wynika, że 4tg 3α = .\nZ drugiej strony 16tg\n2a\nα = . Obliczamy d ługość kraw ędzi podstawy graniastos łupa.\nRozwiązujemy równanie:\n16 4\n32a\n= , skąd 62a = .\nSzukane pole powierzchni całkowitej tego graniastosłupa jest równe:\n() ()\n2\n2 6 2 4 6 2 16 144 384 2 48 3 8 2cP =⋅ +⋅ ⋅ = + = + .\nII sposób rozwiązania\nNiech a oznacza d ługość kraw ędzi podstawy tego graniastos łupa, α – k ąt nachylenia\nprzekątnej graniastos łupa do p łaszczyzny jego podsta wy oraz niech przek ątna podstawy\ngraniastosłupa ma długość 3x, a przekątna graniastosłupa 5x (zobacz rysunek).\nα\na\na\n16\nZ twierdzenia Pitagorasa otrzymujemy równanie\n() ()\n22 231 6 5x x+= ,\n229 256 25x x+= ,\n2256 16 x= ,\n216 x= .\nStąd 4x = . Zatem przekątna podstawy graniastosłupa ma długość 33 4 1 2x =⋅= .\nObliczamy długość krawędzi podstawy graniastosłupa:\n21 2a = , skąd 62a = .\nSzukane pole powierzchni całkowitej tego graniastosłupa jest równe:\n() ()\n2\n2 6 2 4 6 2 16 144 384 2 48 3 8 2cP =⋅ +⋅ ⋅ = + = + .\n3Możemy również zauważyć, że trójkąt prostokątny o kącie ostrym α takim, że cos 5α = jest\npodobny do trójkąta pitagorejskiego o bokach długości 3, 4 i 5. Skala tego podobieństwa jest\nrówna 16\n4 4x == . W rezultacie szukane pole cP powierzchni całkowitej graniastosłupa jest\nrówne 2\nmx P , gdzie mP to pole powierzchni całkowitej graniastosłupa, którego przekątna ma\ndługość 5, a przekątna podstawy długość 3. Długość krawędzi podstawy tego graniastosłupa\njest równa 33\n22 2= , więc ()\n2\n33\n2222 4 2 4 9 2 4 2mP =⋅ +⋅ ⋅=+ .\nZatem () ()\n241 6 9 2 4 2 4 8 3 8 2cmPP=⋅= + = + .\niązania\nRozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze\ndo pełnego rozwiązania ........................................................................................................ 1 p.\nZdający:\n• zapisze, że 4tg 3α =\n• zapisze rów\nnanie, z którego mo żna obliczyć skalę x podobieństwa trójkąta o bokach\ndługo ści 3, 4 i 5 do trójk ąta o przyprostokątnej długości 16 leżącej napr\nzeciw kąta α ,\nnp. () ()\n22 231 6 5x x+=\n3x\n5x\nα\na\na\n16\n• poda skal ę x podobie ństwa trójk ąta o bokach d ługości 3, 4 i 5 do trójk ąta\no przyprostokątnej długości 16 leżącej naprzeciw kąta α , 4x =\n• zaznaczy na rysunku k ąt nachylenia przek ątnej graniastos łupa do p łaszczyzny jego\n• zapisze, że długość d przekątnej graniastosłupa jest równa 20\ni na tym zakończy lub dalej popełni błędy.\nRozwiązanie, w którym jest istotny postęp ........................................................................ 2 p.\nZdający:\n• obliczy długość e przekątnej podstawy tego graniastosłupa e =12\n• zapisze równanie, z którego mo żna obliczy ć d ługość kraw ędzi podstawy tego\ngraniastosłupa, np. ()\n2\n22 5216 2 3\naa += \n()\n22216 2 20a+= lub 16 4\n32a\n=\n• zapisze uk ład równa ń, z którego mo żna obliczy ć d ługość kraw ędzi podstawy tego\ngraniastosłupa, np.\n()\n2 22\n23\n5\n21 6\n =\n +=\na\nd\nad\ngdzie d oznacza długość przekątnej tego graniastosłupa\ni na tym zakończy lub dalej popełni błędy.\nPokonanie zasadniczych trudności zadania ....................................................................... 3 p.\nZdający obliczy d ługość krawędzi podstawy graniastos łupa: 62a = i na tym zako ńczy lub\ndalej popełni błędy.\nRozwiązanie pełne ................................................................................................................ 4 p.\nZdający obliczy pole powierzchni całkowitej tego graniastosłupa: ()48 3 8 2cP =+ .\n1. Akceptujemy sytuację, w której zdający wprowadza do rozwiązania poprawne przybliżenia\ndziesiętne liczb rzeczywistych.\n2. Jeżeli zdaj ący przyjmie miar ę k ąta nachylenia, któr a nie wynika z tre ści zadania (np.\n30α =° ), i w rozwiązaniu z tego korzysta, to za całe rozwiązanie otrzymuje 0 punktów.\n3. Jeżeli zdaj ący b łędnie zaznaczy na rysunku podany k ąt i korzysta z tego k ąta, to za ca łe\nrozwiązanie otrzymuje 0 punktów.\n4. Jeżeli zdający zapisze, że 3\n5sinα = i korzysta z tej równo ści, to za ca łe rozwiązanie może\notrzymać co najwyżej 1 punkt.",
+        "diagramIds": []
+      },
+      {
+        "id": "mm15-p0-z33",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 33,
+        "displayNumber": "33",
+        "order": 33,
+        "points": 4,
+        "title": "Zadanie 33",
+        "topicId": "probability",
+        "sourcePage": 20,
+        "solutionSourcePage": 22,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 33. (0–4)\nWśród 115 osób przeprowadzono badania ankietowe, zwi ązane z zakupami w pewnym\nkiosku. W poni ższej tabeli przedstawiono informacje o tym, ile osób kupi ło bilety\ntramwajowe ulgowe oraz ile osób kupiło bilety tramwajowe normalne.\nbiletów Liczba osób\nUwaga! 27 osób spośród ankietowanych kupiło oba rodzaje biletów.\nOblicz prawdopodobie ństwo zdarzenia polegaj ącego na tym, że osoba losowo wybrana\nspośród ankietowanych nie kupiła żadnego biletu. Wynik przedstaw w formie nieskracalnego\nułamka.\nOdpowiedź: ................................................................................................................................ .\nWypełnia\nNr zadania 33.\nMaks. liczba pkt 4",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 33. (0–4)\nWśród 115 osób przeprowadzono badania ankietowe, zwi ązane z zakupami w pewnym\nkiosku. W poni ższej tabeli przedstawiono informacje o tym, ile osób kupi ło bilety\ntramwajowe ulgowe oraz ile osób kupiło bilety tramwajowe normalne.\nbiletów Liczba osób\nUwaga! 27 osób spośród ankietowanych kupiło oba rodzaje biletów.\nOblicz prawdopodobie ństwo zdarzenia polegaj ącego na tym, że osoba losowo wybrana\nspośród ankietowanych nie kupi ła żadnego biletu. Wynik przedstaw w formie nieskracalnego\nułamka.\nIII. Modelowanie\nmatematyczne.\n10. Elementy statystyki opisowej. Teoria prawdopodobieństwa\ni kombinatoryka. Zdający oblicza prawdopodobieństwa\nw prostych sytuacjach, stosując klasyczną definicję\nprawdopodobieństwa (10.3).\nI sposób rozwiązania\nOznaczmy:\nA – zdarzenie polegające na wylosowaniu osoby, która kupiła bilet ulgowy,\nB – zdarzenie polegające na wylosowaniu osoby, która kupiła bilet normalny,\nC – zdarzenie polegaj ące na wylosowaniu osoby, która nie kupi ła żadnego z wymienionych\nbiletów.\nAnkietę przeprowadzono wśród 115 osób, zatem 115=Ω .\nPonieważ wśród badanych występują osoby, które kupiły bilety obu rodzajów, więc\nBABABA ∩−+=∪ .\nStąd 90274176 =−+=∪ BA .\nZatem 25=∪−Ω= BAC , więc\n23\n5\n115\n25)( ==CP\nOdp. Prawdopodobie ństwo zdarzenia, polegaj ącego na tym, że losowo wybrana spo śród\nbadanych osoba nie zakupiła żadnego z wymienionych biletów jest równe 23\n5 .\nII sposób rozwiązania\nOznaczmy:\nC – zdarzenie polegające na wylosowaniu osoby, która nie kupiła żadnego biletu.\nLiczba wszystkich zdarzeń elementarnych jest równa 115=Ω .\nLiczba wszystkich osób, które kupiły co najmniej jeden bilet jest równa\n90142749 =++ .\nZatem 2590115 =−=C .\nStąd 23\n5\n115\n25)( ==CP .\nOdp. Prawdopodobie ństwo zdarzenia, polegaj ącego na tym, że losowo wybrana spo śród\nbadanych osoba nie zakupiła żadnego z wymienionych biletów jest równe 23\n5 .\nSchemat oceniania I i II sposobu rozwiązania\nRozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze\ndo pełnego rozwiązania ........................................................................................................ 1 p.\nZdający:\n• zapisze liczbę wszystkich zdarzeń elementarnych: 115=Ω\n• obliczy, ile jest wszystkich osób, które kupiły tylko bilety ulgowe: 49\n• obliczy, ile jest wszystkich osób, które kupiły tylko bilety normalne: 14\n• obliczy, ile jest wszystkich osób, które kupiły co najmniej jeden bilet: 90.\nRozwiązanie, w którym jest istotny postęp ........................................................................ 2 p.\nZdający:\n• zapisze liczb ę wszystkich zdarze ń elementarnych oraz obliczy, ile jest wszystkich\nosób, które kupiły tylko bilety ulgowe: 115=Ω , 49\n• zapisze liczb ę wszystkich zdarze ń elementarnych oraz obliczy, ile jest wszystkich\nosób, które kupiły tylko bilety normalne: 115=Ω , 14\n• zapisze liczbę wszystkich zdarzeń elementarnych oraz obliczy, ile jest wszystkich\nosób, które kupiły co najmniej jeden bilet: 115=Ω , 90\n• obliczy, ile jest wszystkich osób, które nie kupiły żadnego biletu: 25.\n49 14 27\n25\nPokonanie zasadniczych trudności zadania ....................................................................... 3 p.\nZdający zapisze liczbę wszystkich zdarzeń elementarnych oraz obliczy, ile jest wszystkich\nosób, które nie kupiły żadnego biletu: 115=Ω , 25.\nRozwiązanie pełne ................................................................................................................ 4 p.\nZdający obliczy prawdopodobieństwo wylosowania osoby, która nie kupiła żadnego biletu\ni zapisze je w postaci ułamka nieskracalnego: 5\n23 .\n1. Jeśli zdający rozwiąże zadanie do końca i otrzyma () 1>CP lub () 0<CP , to za całe\nrozwiązanie otrzymuje 0 punktów.\n2. Jeżeli zdający poda tylko wynik końcowy () 5\n23PC = lub () 25\n115PC = , to otrzymuje 1 punkt.\n3. Jeżeli zdający obliczy 115\n25)( =CP i nie przedstawi wyniku w postaci ułamka\nnieskracalnego, to otrzymuje 3 punkty.\n4. Jeżeli zdający popełni błąd rachunkowy przy wyznaczaniu BA ∪ lub C ,\ni konsekwentnie do popełnionego błędu rozwiąże zadanie do końca, to otrzymuje\nco najwyżej 3 punkty.\n5. Jeżeli zdający sporządził diagram, na którym zapisał liczby 49, 27, 14 i 25,\ni na tym zakończył, to otrzymuje 2 punkty.\n49 14 27\n25",
+        "scoringCriteria": "Zadanie 33. (0–4)\nWśród 115 osób przeprowadzono badania ankietowe, zwi ązane z zakupami w pewnym\nkiosku. W poni ższej tabeli przedstawiono informacje o tym, ile osób kupi ło bilety\ntramwajowe ulgowe oraz ile osób kupiło bilety tramwajowe normalne.\nbiletów Liczba osób\nUwaga! 27 osób spośród ankietowanych kupiło oba rodzaje biletów.\nOblicz prawdopodobie ństwo zdarzenia polegaj ącego na tym, że osoba losowo wybrana\nspośród ankietowanych nie kupi ła żadnego biletu. Wynik przedstaw w formie nieskracalnego\nułamka.\nIII. Modelowanie\nmatematyczne.\n10. Elementy statystyki opisowej. Teoria prawdopodobieństwa\ni kombinatoryka. Zdający oblicza prawdopodobieństwa\nw prostych sytuacjach, stosując klasyczną definicję\nprawdopodobieństwa (10.3).\nI sposób rozwiązania\nOznaczmy:\nA – zdarzenie polegające na wylosowaniu osoby, która kupiła bilet ulgowy,\nB – zdarzenie polegające na wylosowaniu osoby, która kupiła bilet normalny,\nC – zdarzenie polegaj ące na wylosowaniu osoby, która nie kupi ła żadnego z wymienionych\nbiletów.\nAnkietę przeprowadzono wśród 115 osób, zatem 115=Ω .\nPonieważ wśród badanych występują osoby, które kupiły bilety obu rodzajów, więc\nBABABA ∩−+=∪ .\nStąd 90274176 =−+=∪ BA .\nZatem 25=∪−Ω= BAC , więc\n23\n5\n115\n25)( ==CP\nOdp. Prawdopodobie ństwo zdarzenia, polegaj ącego na tym, że losowo wybrana spo śród\nbadanych osoba nie zakupiła żadnego z wymienionych biletów jest równe 23\n5 .\nII sposób rozwiązania\nOznaczmy:\nC – zdarzenie polegające na wylosowaniu osoby, która nie kupiła żadnego biletu.\nLiczba wszystkich zdarzeń elementarnych jest równa 115=Ω .\nLiczba wszystkich osób, które kupiły co najmniej jeden bilet jest równa\n90142749 =++ .\nZatem 2590115 =−=C .\nStąd 23\n5\n115\n25)( ==CP .\nOdp. Prawdopodobie ństwo zdarzenia, polegaj ącego na tym, że losowo wybrana spo śród\nbadanych osoba nie zakupiła żadnego z wymienionych biletów jest równe 23\n5 .\nSchemat oceniania I i II sposobu rozwiązania\nRozwiązanie, w którym postęp jest niewielki, ale konieczny na drodze\ndo pełnego rozwiązania ........................................................................................................ 1 p.\nZdający:\n• zapisze liczbę wszystkich zdarzeń elementarnych: 115=Ω\n• obliczy, ile jest wszystkich osób, które kupiły tylko bilety ulgowe: 49\n• obliczy, ile jest wszystkich osób, które kupiły tylko bilety normalne: 14\n• obliczy, ile jest wszystkich osób, które kupiły co najmniej jeden bilet: 90.\nRozwiązanie, w którym jest istotny postęp ........................................................................ 2 p.\nZdający:\n• zapisze liczb ę wszystkich zdarze ń elementarnych oraz obliczy, ile jest wszystkich\nosób, które kupiły tylko bilety ulgowe: 115=Ω , 49\n• zapisze liczb ę wszystkich zdarze ń elementarnych oraz obliczy, ile jest wszystkich\nosób, które kupiły tylko bilety normalne: 115=Ω , 14\n• zapisze liczbę wszystkich zdarzeń elementarnych oraz obliczy, ile jest wszystkich\nosób, które kupiły co najmniej jeden bilet: 115=Ω , 90\n• obliczy, ile jest wszystkich osób, które nie kupiły żadnego biletu: 25.\n49 14 27\n25\nPokonanie zasadniczych trudności zadania ....................................................................... 3 p.\nZdający zapisze liczbę wszystkich zdarzeń elementarnych oraz obliczy, ile jest wszystkich\nosób, które nie kupiły żadnego biletu: 115=Ω , 25.\nRozwiązanie pełne ................................................................................................................ 4 p.\nZdający obliczy prawdopodobieństwo wylosowania osoby, która nie kupiła żadnego biletu\ni zapisze je w postaci ułamka nieskracalnego: 5\n23 .\n1. Jeśli zdający rozwiąże zadanie do końca i otrzyma () 1>CP lub () 0<CP , to za całe\nrozwiązanie otrzymuje 0 punktów.\n2. Jeżeli zdający poda tylko wynik końcowy () 5\n23PC = lub () 25\n115PC = , to otrzymuje 1 punkt.\n3. Jeżeli zdający obliczy 115\n25)( =CP i nie przedstawi wyniku w postaci ułamka\nnieskracalnego, to otrzymuje 3 punkty.\n4. Jeżeli zdający popełni błąd rachunkowy przy wyznaczaniu BA ∪ lub C ,\ni konsekwentnie do popełnionego błędu rozwiąże zadanie do końca, to otrzymuje\nco najwyżej 3 punkty.\n5. Jeżeli zdający sporządził diagram, na którym zapisał liczby 49, 27, 14 i 25,\ni na tym zakończył, to otrzymuje 2 punkty.\n49 14 27\n25",
+        "diagramIds": [
+          "exam-mm15-p0-z33"
+        ]
+      },
+      {
+        "id": "mm15-p0-z34",
+        "examId": "matura-maj-2015-podstawowa",
+        "number": 34,
+        "displayNumber": "34",
+        "order": 34,
+        "points": 5,
+        "title": "Zadanie 34",
+        "topicId": "statistics",
+        "sourcePage": 22,
+        "solutionSourcePage": 25,
+        "verificationSource": "CKE MMA-P1_1P-152 - arkusz i zasady oceniania, zweryfikowane 2026-09-04",
+        "mode": "revealOnly",
+        "prompt": "Zadanie 34. (0–5)\nW niesko ńczonym ci ągu arytmetycznym () na , okre ślonym dla 1n ≥ , suma jedenastu\npoczątkowych wyrazów tego ci ągu jest równa 187. Średnia arytmetyczna pierwszego,\ntrzeciego i dziewi ątego wyrazu tego ci ągu, jest równa 12. Wyrazy 1a , 3a , ka ci ągu () na ,\nw podanej kolejności, tworzą nowy ciąg – trzywyrazowy ciąg geometryczny () nb . Oblicz k.\nOdpowiedź: ................................................................................................................................ .\nWypełnia\nNr zadania 34.\nMaks. liczba pkt 5\nBRUDNOPIS (nie podlega ocenie)",
+        "hints": [
+          "Wypisz dane oraz określ, jaką wielkość należy wyznaczyć.",
+          "Porównaj swój tok rozumowania z ujawnionym rozwiązaniem i kryteriami punktowania."
+        ],
+        "solution": "Zadanie 34. (0–5)\nW niesko ńczonym ci ągu arytmetycznym () na , okre ślonym dla 1n ≥ , suma jedenastu\npoczątkowych wyrazów tego ci ągu jest równa 187. Średnia arytmetyczna pierwszego,\ntrzeciego i dziewi ątego wyrazu tego ci ągu, jest równa 12. Wyrazy 1a , 3a , ka ci ągu () na ,\nw podanej kolejności, tworzą nowy ciąg – trzywyrazowy ciąg geometryczny () nb . Oblicz k.\nIV. Użycie i tworzenie\nstrategii.\n5. Ciągi. Zdający stosuje wzór na n-ty wyraz i na sumę\nn początkowych wyrazów ciągu arytmetycznego stosuje wzór\nna n-ty wyraz i na sumę n początkowych wyrazów ciągu\ngeometrycznego (5.3, 5.4).\nRozwiązanie\nKorzystamy ze wzoru na sum ę n początkowych wyrazów ciągu arytmetycznego i zapisujemy\nrównanie:\n121 0 11 1872\nar+ ⋅= ,\n() 1 51 1 1 8 7ar+⋅ = ,\n1 51 7ar+= .\nKorzystamy z informacji o średniej arytmetycznej trzech wyrazów i zapisujemy równanie:\n11 1 28 123\naa r a r++ ++ = ,\n131 0 123\nar+ = ,\n1\n10 123ar+= .\nZapisujemy układ równań:\n1\n1\n51 7\n10 12.3\nar\nar\n+= +=\nZ pierwszego równania otrzymujemy 1 17 5ar =− .\nOtrzymaną warto ść 1a podstawiamy do drugiego równan ia i otrzymujemy równanie\nz niewiadomą r:\n1017 5 12 3rr−+ = ,\n3r = .\nObliczamy pierwszy wyraz: 1 2a = .\nW rozwiązaniu układu równań zdający może najpierw wyznaczy ć niewiadomą 1\n5\n1\n5\n17 ar −= .\nOtrzymaną warto ść r podstawiamy do drugiego równania i otrzymujemy równanie\nz niewiadomą 1a :\n11\n10 17 1 12355aa +− =\n,\n11\n170 10 1215 15aa+− = ,\n1\n12\n33a = ,\n1 2a = .\nDla 21 =a mamy 3=r .\nWyznaczamy pozostałe wyrazy tworzące ciąg geometryczny:\n8213 =+= raa , () ()1 12 1 3kaa k r k=+− = +− ⋅ .\nKolejne wyrazy 1a , 3a , ka ciągu geometrycznego spełniają warunek: kaaa ⋅= 1\n2\n3 , stąd\n()\n282 2 1 3 k=⋅ + − ⋅ ,\n32 3 1k=− ,\n11=k .\nDla 11=k wyrazy 1a , 3a , ka w podanej kolejności tworzą ciąg geometryczny.\nRozwiązanie, w którym postęp ........................................................................................... 1 p.\nZdający wykorzysta\n• wzór na sumę n-początkowych wyrazów ciągu arytmetycznego i zapisze równanie\nz dwiema niewiadomymi 1a i r, np.: 121 0 11 1872\nar+ ⋅= lub 1 51 7ar+=\n• średnią arytmetyczną pierwszego, trzeciego oraz dziewiątego wyrazu ciągu () na\ni zapisze równanie z dwiema niewiadomymi 1a i r, np.:\n11 1 28 123\naa r a r++ ++ = lub 1\n10 123ar+=\n• zależność między pierwszym, trzecim i k-tym wyrazem ciągu () na wynikającą\nz faktu, że ciąg () 13,, kaaa jest geometryczny i zapisze np.: kaaa ⋅= 1\n2\n3 .\nRozwiązanie, w którym jest istotny postęp ........................................................................ 2 p.\nZdający zapisze układ równań z dwiema niewiadomymi 1a i r, np.:\n1\n1\n51 7\n10 123\nar\nar\n+= +=\n.\nPokonanie zasadniczych trudności zadania ....................................................................... 3 p.\nZdający rozwi ąże uk ład równa ń 21 =a i 3=r oraz zapisze zale żność mi ędzy pierwszym,\ntrzecim i k-tym wyrazem ci ągu () na wynikaj ącą z faktu, że ci ąg () 13,, kaaa jest\ngeometryczny, np.: kaaa ⋅= 1\n2\n3 .\nRozwiązanie zadania do ko ńca, lecz z usterkami, które jednak nie przekre ślają\npoprawności rozwiązania (np. błędy rachunkowe) ........................................................... 4 p.\nZdający\n• zapisze równanie z niewiadomą k wynikające z faktu, że ciąg () 13,, kaaa jest\ngeometryczny oraz ka jest k-tym wyrazem ciągu arytmetycznego, np.:\n()()\n282 2 1 3 k=+ − ⋅\n• rozwiąże uk ład równa ń z b łędem rachunkowym i konsekwentnie do pope łnionego\nbłędu obliczy k, o ile otrzymana wartość k jest całkowita dodatnia.\nRozwiązanie pełne ................................................................................................................ 5 p.\nZdający obliczy 11=k .\n1. Jeżeli zdaj ący od razu poda 21 =a i 3=r lub wypisze kolejne wyrazy ci ągu\narytmetycznego: 2, 5, 8, 11, …, ale nie uzasadni, że jest to jedyny ciąg spełniający warunki\nzadania i na tym zakończy, to otrzymuje 1 punkt.\n2. Jeżeli zdaj ący od razu poda 21 =a i 3=r lub wypisze kolejne wyrazy ci ągu\narytmetycznego: 2, 5, 8, 11, …, ale nie uzasadni, że jest to jedyny ciąg spełniający warunki\nzadania i wskaże lub obliczy 11=k , to otrzymuje 3 punkty.\n3. Jeżeli zdaj ący od razu poda 21 =a i 3=r lub wypisze kolejne wyrazy ci ągu\narytmetycznego: 2, 5, 8, 11, …, ale nie uzasadni, że jest to jedyny ciąg spełniający warunki\nzadania i zapisze równanie z niewiadom ą k i pope łni b łąd rachunkowy w trakcie jego\nrozwiązywania, to otrzymuje 2 punkty.\n4. Jeżeli zdaj ący od razu przyjmie ci ąg arytmetyczny nie spe łniający warunków zadania\n(suma 11 początkowych jego wyrazów jest różna od 187 lub średnia pierwszego, trzeciego\ni dziewiątego wyrazu jest różna od 12), to za całe zadanie otrzymuje 0 punktów.",
+        "scoringCriteria": "Zadanie 34. (0–5)\nW niesko ńczonym ci ągu arytmetycznym () na , okre ślonym dla 1n ≥ , suma jedenastu\npoczątkowych wyrazów tego ci ągu jest równa 187. Średnia arytmetyczna pierwszego,\ntrzeciego i dziewi ątego wyrazu tego ci ągu, jest równa 12. Wyrazy 1a , 3a , ka ci ągu () na ,\nw podanej kolejności, tworzą nowy ciąg – trzywyrazowy ciąg geometryczny () nb . Oblicz k.\nIV. Użycie i tworzenie\nstrategii.\n5. Ciągi. Zdający stosuje wzór na n-ty wyraz i na sumę\nn początkowych wyrazów ciągu arytmetycznego stosuje wzór\nna n-ty wyraz i na sumę n początkowych wyrazów ciągu\ngeometrycznego (5.3, 5.4).\nRozwiązanie\nKorzystamy ze wzoru na sum ę n początkowych wyrazów ciągu arytmetycznego i zapisujemy\nrównanie:\n121 0 11 1872\nar+ ⋅= ,\n() 1 51 1 1 8 7ar+⋅ = ,\n1 51 7ar+= .\nKorzystamy z informacji o średniej arytmetycznej trzech wyrazów i zapisujemy równanie:\n11 1 28 123\naa r a r++ ++ = ,\n131 0 123\nar+ = ,\n1\n10 123ar+= .\nZapisujemy układ równań:\n1\n1\n51 7\n10 12.3\nar\nar\n+= +=\nZ pierwszego równania otrzymujemy 1 17 5ar =− .\nOtrzymaną warto ść 1a podstawiamy do drugiego równan ia i otrzymujemy równanie\nz niewiadomą r:\n1017 5 12 3rr−+ = ,\n3r = .\nObliczamy pierwszy wyraz: 1 2a = .\nW rozwiązaniu układu równań zdający może najpierw wyznaczy ć niewiadomą 1\n5\n1\n5\n17 ar −= .\nOtrzymaną warto ść r podstawiamy do drugiego równania i otrzymujemy równanie\nz niewiadomą 1a :\n11\n10 17 1 12355aa +− =\n,\n11\n170 10 1215 15aa+− = ,\n1\n12\n33a = ,\n1 2a = .\nDla 21 =a mamy 3=r .\nWyznaczamy pozostałe wyrazy tworzące ciąg geometryczny:\n8213 =+= raa , () ()1 12 1 3kaa k r k=+− = +− ⋅ .\nKolejne wyrazy 1a , 3a , ka ciągu geometrycznego spełniają warunek: kaaa ⋅= 1\n2\n3 , stąd\n()\n282 2 1 3 k=⋅ + − ⋅ ,\n32 3 1k=− ,\n11=k .\nDla 11=k wyrazy 1a , 3a , ka w podanej kolejności tworzą ciąg geometryczny.\nRozwiązanie, w którym postęp ........................................................................................... 1 p.\nZdający wykorzysta\n• wzór na sumę n-początkowych wyrazów ciągu arytmetycznego i zapisze równanie\nz dwiema niewiadomymi 1a i r, np.: 121 0 11 1872\nar+ ⋅= lub 1 51 7ar+=\n• średnią arytmetyczną pierwszego, trzeciego oraz dziewiątego wyrazu ciągu () na\ni zapisze równanie z dwiema niewiadomymi 1a i r, np.:\n11 1 28 123\naa r a r++ ++ = lub 1\n10 123ar+=\n• zależność między pierwszym, trzecim i k-tym wyrazem ciągu () na wynikającą\nz faktu, że ciąg () 13,, kaaa jest geometryczny i zapisze np.: kaaa ⋅= 1\n2\n3 .\nRozwiązanie, w którym jest istotny postęp ........................................................................ 2 p.\nZdający zapisze układ równań z dwiema niewiadomymi 1a i r, np.:\n1\n1\n51 7\n10 123\nar\nar\n+= +=\n.\nPokonanie zasadniczych trudności zadania ....................................................................... 3 p.\nZdający rozwi ąże uk ład równa ń 21 =a i 3=r oraz zapisze zale żność mi ędzy pierwszym,\ntrzecim i k-tym wyrazem ci ągu () na wynikaj ącą z faktu, że ci ąg () 13,, kaaa jest\ngeometryczny, np.: kaaa ⋅= 1\n2\n3 .\nRozwiązanie zadania do ko ńca, lecz z usterkami, które jednak nie przekre ślają\npoprawności rozwiązania (np. błędy rachunkowe) ........................................................... 4 p.\nZdający\n• zapisze równanie z niewiadomą k wynikające z faktu, że ciąg () 13,, kaaa jest\ngeometryczny oraz ka jest k-tym wyrazem ciągu arytmetycznego, np.:\n()()\n282 2 1 3 k=+ − ⋅\n• rozwiąże uk ład równa ń z b łędem rachunkowym i konsekwentnie do pope łnionego\nbłędu obliczy k, o ile otrzymana wartość k jest całkowita dodatnia.\nRozwiązanie pełne ................................................................................................................ 5 p.\nZdający obliczy 11=k .\n1. Jeżeli zdaj ący od razu poda 21 =a i 3=r lub wypisze kolejne wyrazy ci ągu\narytmetycznego: 2, 5, 8, 11, …, ale nie uzasadni, że jest to jedyny ciąg spełniający warunki\nzadania i na tym zakończy, to otrzymuje 1 punkt.\n2. Jeżeli zdaj ący od razu poda 21 =a i 3=r lub wypisze kolejne wyrazy ci ągu\narytmetycznego: 2, 5, 8, 11, …, ale nie uzasadni, że jest to jedyny ciąg spełniający warunki\nzadania i wskaże lub obliczy 11=k , to otrzymuje 3 punkty.\n3. Jeżeli zdaj ący od razu poda 21 =a i 3=r lub wypisze kolejne wyrazy ci ągu\narytmetycznego: 2, 5, 8, 11, …, ale nie uzasadni, że jest to jedyny ciąg spełniający warunki\nzadania i zapisze równanie z niewiadom ą k i pope łni b łąd rachunkowy w trakcie jego\nrozwiązywania, to otrzymuje 2 punkty.\n4. Jeżeli zdaj ący od razu przyjmie ci ąg arytmetyczny nie spe łniający warunków zadania\n(suma 11 początkowych jego wyrazów jest różna od 187 lub średnia pierwszego, trzeciego\ni dziewiątego wyrazu jest różna od 12), to za całe zadanie otrzymuje 0 punktów.",
+        "diagramIds": []
+      }
+    ]
+  }
+}

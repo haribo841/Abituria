@@ -175,6 +175,19 @@ public sealed class ReleaseValidationScriptTests
         ]);
     }
 
+    [Fact]
+    public void Documentation_validator_uses_pinned_hashes_for_new_formula_2015_archive_pdfs()
+    {
+        AssertLinksAreExcludedFromOnlineProbe(
+        [
+            "https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2015/Matematyka/MMA-P1_1P-152.pdf",
+            "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2023/Matematyka/poziom_podstawowy/EMAP-P0-100-2305.pdf",
+            "https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2024/Matematyka/poziom_rozszerzony/EMAP-R0-100-A-2405-arkusz.pdf",
+            "https://arkusze.pl/maturalne/matematyka-2015-sierpien-poprawkowa-podstawowa.pdf",
+            "https://arkusze.pl/maturalne/matematyka-2026-maj-matura-stara-rozszerzona-odpowiedzi.pdf"
+        ]);
+    }
+
     private static void AssertLinksAreExcludedFromOnlineProbe(string[] excludedLinks)
     {
         using var directory = new TemporaryDirectory();

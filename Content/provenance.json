@@ -553,15 +553,239 @@
       ]
     },
     {
+      "id": "cke-2015-main-basic-exam",
+      "paths": [
+        "Content/exam-2015-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-P1_1P-152, https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2015/Matematyka/MMA-P1_1P-152.pdf, SHA-256 677C719F87A6E07F6C5559A218D9DB670F077BC3AEC849BAF37B288D2FEBB3EE; zasady MMA-P1-N, https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2015/Matematyka/MMA-P1-N.pdf, SHA-256 7DE249A72303E8F922A0B3FB950F25DB88578F7E226CE61EA5F55EE9ED98AC40; weryfikacja 2026-09-04",
+      "license": "Brak indywidualnie potwierdzonego uprawnienia do publicznej redystrybucji arkusza i zasad oceniania CKE z 2015 r.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz i zasady oceniania CKE z maja 2015 r.",
+      "evidence": [
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2015-main-extended-exam",
+      "paths": [
+        "Content/exam-2015-main-extended.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-R1_1P-152, https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2015/Matematyka/MMA-R1_1P-152.pdf, SHA-256 87D52CFE7F56D7D0CAC3CD4BF952AAC33A2F6EB19B275483BE45333F8B706791; zasady MMA-R1-N, https://www.oke.waw.pl/wp-content/uploads/OKE_WARSZAWA/EM/EM_2015/Arkusze/Arkusze_2015/Matematyka/MMA-R1-N.pdf, SHA-256 7F5260F5F2628CD781697DE057CABAF145BA1223836148C70D40AEFA2D90A7E4; weryfikacja 2026-09-04",
+      "license": "Brak indywidualnie potwierdzonego uprawnienia do publicznej redystrybucji arkusza i zasad oceniania CKE z 2015 r.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz i zasady oceniania CKE z maja 2015 r.",
+      "evidence": [
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2015-correction-basic-exam",
+      "paths": [
+        "Content/exam-2015-correction-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE MMA-P1_1P-154, https://arkusze.pl/maturalne/matematyka-2015-sierpien-poprawkowa-podstawowa.pdf, SHA-256 E10AFB6E7E4525C517AAAB73366A305F9EEFB2BE522B25B6CBB532E33112E2D8; zasady, https://arkusze.pl/maturalne/matematyka-2015-sierpien-poprawkowa-podstawowa-odpowiedzi.pdf, SHA-256 8CF61A709FD4A0AA929B43B33DA1110905E3CD6D42088C6F7945A3606435F9BC; weryfikacja 2026-09-04",
+      "license": "Brak indywidualnie potwierdzonego uprawnienia do publicznej redystrybucji arkusza i zasad oceniania CKE z 2015 r.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz i zasady oceniania CKE z sierpnia 2015 r.",
+      "evidence": [
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2023-f2015-main-basic-exam",
+      "paths": [
+        "Content/exam-2023-f2015-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-P0-100-2305, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2023/Matematyka/poziom_podstawowy/EMAP-P0-100-2305.pdf, SHA-256 287EF39ABE5097331FB446FD403E636D65CB198E8627FB142AD4424B2A06B1D6; zasady, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2023/Matematyka/poziom_podstawowy/EMAP-P0-100-2305-zasady.pdf, SHA-256 B29002576C2B6B8948535B7D7C46D6D86B1C23DB236B7FF33228AAACB4741322; weryfikacja 2026-09-04",
+      "license": "Brak indywidualnie potwierdzonego uprawnienia do publicznej redystrybucji równoległego arkusza Formuły 2015 i zasad oceniania CKE.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz Formuły 2015 i zasady oceniania CKE z maja 2023 r.",
+      "evidence": [
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2023-f2015-main-extended-exam",
+      "paths": [
+        "Content/exam-2023-f2015-main-extended.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-R0-100-2305, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2023/Matematyka/poziom_rozszerzony/EMAP-R0-100-2305.pdf, SHA-256 A74D6D26BCEBFF58779403F3AE879A8C90EE4AEBBABF9D34E7DCFDA1B2A5FA08; zasady, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2023/Matematyka/poziom_rozszerzony/EMAP-R0-100-2305-zasady.pdf, SHA-256 D6A2312FBDFC142F95EA6BC35B61B017C9619803728D16FA119F4D88C30A471A; weryfikacja 2026-09-04",
+      "license": "Brak indywidualnie potwierdzonego uprawnienia do publicznej redystrybucji równoległego arkusza Formuły 2015 i zasad oceniania CKE.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz Formuły 2015 i zasady oceniania CKE z maja 2023 r.",
+      "evidence": [
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2023-f2015-correction-basic-exam",
+      "paths": [
+        "Content/exam-2023-f2015-correction-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-P0-100-2308, https://arkusze.pl/maturalne/matematyka-2023-sierpien-poprawkowa-stara-podstawowa.pdf, SHA-256 7A1E3BD81B8B281C6DE59B1E53D6C5FFC0E5F94EC542498221C929B9C8F4BF1D; zasady, https://arkusze.pl/maturalne/matematyka-2023-sierpien-poprawkowa-stara-podstawowa-odpowiedzi.pdf, SHA-256 5D93892F2B51AEF581C701B58C2FF1E1B7580EE9F24296A5B5B567BBCFDEFBA2; weryfikacja 2026-09-04",
+      "license": "Brak indywidualnie potwierdzonego uprawnienia do publicznej redystrybucji równoległego arkusza Formuły 2015 i zasad oceniania CKE.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz Formuły 2015 i zasady oceniania CKE z sierpnia 2023 r.",
+      "evidence": [
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2024-f2015-main-basic-exam",
+      "paths": [
+        "Content/exam-2024-f2015-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-P0-100-2405, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2024/Matematyka/poziom_podstawowy/EMAP-P0-100-A-2405-arkusz.pdf, SHA-256 480CEFBC34C8D8ABCAB4C671E922DE84E30628C33E44CDC84918F710F3538C35; zasady, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2024/Matematyka/poziom_podstawowy/EMAP-P0-100-2405-zasady.pdf, SHA-256 3D0C741C6F7F21FB0CAF0D2E06DBC53D0BB37D4D6FCDED0591DFEA8CDCED2587; weryfikacja 2026-09-04",
+      "license": "Brak indywidualnie potwierdzonego uprawnienia do publicznej redystrybucji równoległego arkusza Formuły 2015 i zasad oceniania CKE.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz Formuły 2015 i zasady oceniania CKE z maja 2024 r.",
+      "evidence": [
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2024-f2015-main-extended-exam",
+      "paths": [
+        "Content/exam-2024-f2015-main-extended.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-R0-100-2405, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2024/Matematyka/poziom_rozszerzony/EMAP-R0-100-A-2405-arkusz.pdf, SHA-256 688E5A7E9C6A3E411122AC9C6FCCB4876BA02BEF471BC15CB5ED8133C54C12A5; zasady, https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2015/Arkusze_egzaminacyjne/2024/Matematyka/poziom_rozszerzony/EMAP-R0-100-2405%20zasady.pdf, SHA-256 BB0BD76B32F70298F035B5A2A9E30067DED5A27A665CDB0B571F2E7FADEF7CAF; weryfikacja 2026-09-04",
+      "license": "Brak indywidualnie potwierdzonego uprawnienia do publicznej redystrybucji równoległego arkusza Formuły 2015 i zasad oceniania CKE.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz Formuły 2015 i zasady oceniania CKE z maja 2024 r.",
+      "evidence": [
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2024-f2015-correction-basic-exam",
+      "paths": [
+        "Content/exam-2024-f2015-correction-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-P0-100-2408, https://arkusze.pl/maturalne/matematyka-2024-sierpien-poprawkowa-stara-podstawowa.pdf, SHA-256 992F987394D46A6D2DCD67FC134BA53AB3A5983B613001708B4A1451E6799008; zasady, https://arkusze.pl/maturalne/matematyka-2024-sierpien-poprawkowa-stara-podstawowa-odpowiedzi.pdf, SHA-256 FF41C64637D5CBB745BAA2E593EAF6897733633C0EDBCDD3B515B2B829F68B89; weryfikacja 2026-09-04",
+      "license": "Brak indywidualnie potwierdzonego uprawnienia do publicznej redystrybucji równoległego arkusza Formuły 2015 i zasad oceniania CKE.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz Formuły 2015 i zasady oceniania CKE z sierpnia 2024 r.",
+      "evidence": [
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2025-f2015-main-basic-exam",
+      "paths": [
+        "Content/exam-2025-f2015-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-P0-100-2505, https://arkusze.pl/maturalne/matematyka-2025-maj-matura-stara-podstawowa.pdf, SHA-256 BE6358F95A065193798E42999422BB9E250991F2016B09C09FB5D9CDB504FA7B; zasady, https://arkusze.pl/maturalne/matematyka-2025-maj-matura-stara-podstawowa-odpowiedzi.pdf, SHA-256 73A6EC2FA481394171B57EA99A39452B7486CEE3BCA1294966EE10E10C0B8E1E; weryfikacja 2026-09-04",
+      "license": "Brak indywidualnie potwierdzonego uprawnienia do publicznej redystrybucji równoległego arkusza Formuły 2015 i zasad oceniania CKE.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz Formuły 2015 i zasady oceniania CKE z maja 2025 r.",
+      "evidence": [
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2025-f2015-main-extended-exam",
+      "paths": [
+        "Content/exam-2025-f2015-main-extended.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-R0-100-2505, https://arkusze.pl/maturalne/matematyka-2025-maj-matura-stara-rozszerzona.pdf, SHA-256 D9DDF492BE9B2BEF5C63D4CE9D9074011B00218128E1001D20B3D0FDC6A1240A; zasady, https://arkusze.pl/maturalne/matematyka-2025-maj-matura-stara-rozszerzona-odpowiedzi.pdf, SHA-256 12C474E22794E967F4C5569B503D8F98C61813ACE979E69CABCE64E5C87FC655; weryfikacja 2026-09-04",
+      "license": "Brak indywidualnie potwierdzonego uprawnienia do publicznej redystrybucji równoległego arkusza Formuły 2015 i zasad oceniania CKE.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz Formuły 2015 i zasady oceniania CKE z maja 2025 r.",
+      "evidence": [
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2025-f2015-correction-basic-exam",
+      "paths": [
+        "Content/exam-2025-f2015-correction-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-P0-100-2508, https://arkusze.pl/maturalne/matematyka-2025-sierpien-poprawkowa-stara-podstawowa.pdf, SHA-256 E0CDE8E52C91023AD831E7BC73930A4DB109416FC92CF6A9670DCA308AC3D29D; zasady, https://arkusze.pl/maturalne/matematyka-2025-sierpien-poprawkowa-stara-podstawowa-odpowiedzi.pdf, SHA-256 34A374F86F40B0709CC1896EC16D62BEF732FDDDFBA231EFC75E23E83453B9BE; weryfikacja 2026-09-04",
+      "license": "Brak indywidualnie potwierdzonego uprawnienia do publicznej redystrybucji równoległego arkusza Formuły 2015 i zasad oceniania CKE.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz Formuły 2015 i zasady oceniania CKE z sierpnia 2025 r.",
+      "evidence": [
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2026-f2015-main-basic-exam",
+      "paths": [
+        "Content/exam-2026-f2015-main-basic.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-P0-100-2605, https://arkusze.pl/maturalne/matematyka-2026-maj-matura-stara-podstawowa.pdf, SHA-256 ACFE6B6E600606E6E1EE1666D97D017A31382DF052211840F3DC9E9EEA05DA23; zasady, https://arkusze.pl/maturalne/matematyka-2026-maj-matura-stara-podstawowa-odpowiedzi.pdf, SHA-256 A5E6BD8CE8709FA7257AAB789103829475D92D4901A9569385246471EFEDAD48; weryfikacja 2026-09-04",
+      "license": "Brak indywidualnie potwierdzonego uprawnienia do publicznej redystrybucji równoległego arkusza Formuły 2015 i zasad oceniania CKE.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz Formuły 2015 i zasady oceniania CKE z maja 2026 r.",
+      "evidence": [
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
+      "id": "cke-2026-f2015-main-extended-exam",
+      "paths": [
+        "Content/exam-2026-f2015-main-extended.json"
+      ],
+      "author": "Centralna Komisja Egzaminacyjna, transkrypcja techniczna i weryfikacja: Adam Kubiś",
+      "source": "Arkusz CKE EMAP-R0-100-2605, https://arkusze.pl/maturalne/matematyka-2026-maj-matura-stara-rozszerzona.pdf, SHA-256 B57931121071DA7BB6B14AEB1EACD79F755E4E96715B32E4A126AB6F3E1FA4B0; zasady, https://arkusze.pl/maturalne/matematyka-2026-maj-matura-stara-rozszerzona-odpowiedzi.pdf, SHA-256 4A3F9B36705869C81133C96C11C6FE52ED8683CFB07AC577AF0F9770F1CD02AA; weryfikacja 2026-09-04",
+      "license": "Brak indywidualnie potwierdzonego uprawnienia do publicznej redystrybucji równoległego arkusza Formuły 2015 i zasad oceniania CKE.",
+      "distributionStatus": "blocked",
+      "blockedReason": "Brak odrębnego, pisemnie wskazanego rozszerzenia deklaracji właściciela na arkusz Formuły 2015 i zasady oceniania CKE z maja 2026 r.",
+      "evidence": [
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
+        "docs/MATURA_ARCHIVE_PLAN.md",
+        "docs/CONTENT_PROVENANCE.md"
+      ]
+    },
+    {
       "id": "runtime-vector-diagrams",
       "paths": [
         "Content/diagrams.json"
       ],
       "author": "Adam Kubiś - implementacje wektorowe Avalonia i nowe definicje kursu; Centralna Komisja Egzaminacyjna - źródłowa treść tablic i arkuszy; historyczni autorzy projektu Ich Troje - źródła zachowanych diagramów",
-      "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym zatwierdzone 195 definicji dla wcześniejszego katalogu oraz siedem figur dla MMA-P1_1P-172, trzy figury dla MMA-R1_1P-172, sześć figur dla MMA-P1_1P-174, siedem figur dla MMA-P1_1P-162, trzy figury dla MMA-R1_1P-162 i pięć figur dla MMA-P1_1P-164; bez aktywnych rastrów, Image ani Bitmap",
-      "license": "MIT dla implementacji wektorowych. Deklaracja z 2026-09-01 obejmuje 195 wcześniejszych definicji, ale nie rozszerza jeszcze praw do 31 nowych figur pochodnych z arkuszy CKE 2017 i 2016.",
+      "source": "Deterministyczne definicje renderowane przez kształty Avalonia, w tym zatwierdzone 195 definicji dla wcześniejszego katalogu oraz siedem figur dla MMA-P1_1P-172, trzy figury dla MMA-R1_1P-172, sześć figur dla MMA-P1_1P-174, siedem figur dla MMA-P1_1P-162, trzy figury dla MMA-R1_1P-162, pięć figur dla MMA-P1_1P-164 i dwadzieścia trzy figury dla nowo dodanych arkuszy Formuły 2015 z 2015 oraz lat równoległych 2023-2026; bez aktywnych rastrów, Image ani Bitmap",
+      "license": "MIT dla implementacji wektorowych. Deklaracja z 2026-09-01 obejmuje 195 wcześniejszych definicji, ale nie rozszerza jeszcze praw do 54 nowych figur pochodnych z arkuszy CKE 2017, 2016 i Formuły 2015 z 2015 oraz lat równoległych 2023-2026.",
       "distributionStatus": "blocked",
-      "blockedReason": "Katalog zawiera 31 nowych figur pochodnych z arkuszy CKE 2017 i 2016, dla których nie ma jeszcze odrębnego rozszerzenia deklaracji praw właściciela.",
+      "blockedReason": "Katalog zawiera 54 nowe figury pochodne z arkuszy CKE 2017, 2016 i Formuły 2015 z 2015 oraz lat równoległych 2023-2026, dla których nie ma jeszcze odrębnego rozszerzenia deklaracji praw właściciela.",
       "evidence": [
         "docs/ASSET_RIGHTS_DECLARATION.md",
         "docs/MATURA_2026_COVERAGE.md",
@@ -595,6 +819,7 @@
         "docs/MATURA_2016_EXTENDED_COVERAGE.md",
         "docs/MATURA_2016_CORRECTION_BASIC_COVERAGE.md",
         "docs/MATURA_2023_EXTENDED_COVERAGE.md",
+        "docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md",
         "docs/CONTENT_PROVENANCE.md",
         "docs/legacy/originals/LICENSE-2022-Ich-Troje.txt",
         "docs/MIGRATION_INVENTORY.md",

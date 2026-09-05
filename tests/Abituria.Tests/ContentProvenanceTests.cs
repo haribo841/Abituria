@@ -29,14 +29,28 @@ public sealed class ContentProvenanceTests
         "cke-2024-correction-basic-exam",
         "cke-2025-correction-basic-exam"
     ];
-    private static readonly string[] NewlyBlockedGroupIds =
+    private static readonly string[] BlockedGroupIds =
     [
-        "cke-2017-main-basic-exam",
-        "cke-2017-main-extended-exam",
-        "cke-2017-correction-basic-exam",
         "cke-2016-main-basic-exam",
         "cke-2016-main-extended-exam",
         "cke-2016-correction-basic-exam",
+        "cke-2017-main-basic-exam",
+        "cke-2017-main-extended-exam",
+        "cke-2017-correction-basic-exam",
+        "cke-2015-main-basic-exam",
+        "cke-2015-main-extended-exam",
+        "cke-2015-correction-basic-exam",
+        "cke-2023-f2015-main-basic-exam",
+        "cke-2023-f2015-main-extended-exam",
+        "cke-2023-f2015-correction-basic-exam",
+        "cke-2024-f2015-main-basic-exam",
+        "cke-2024-f2015-main-extended-exam",
+        "cke-2024-f2015-correction-basic-exam",
+        "cke-2025-f2015-main-basic-exam",
+        "cke-2025-f2015-main-extended-exam",
+        "cke-2025-f2015-correction-basic-exam",
+        "cke-2026-f2015-main-basic-exam",
+        "cke-2026-f2015-main-extended-exam",
         "runtime-vector-diagrams"
     ];
     private static readonly JsonSerializerOptions ManifestJsonOptions = new()
@@ -95,7 +109,7 @@ public sealed class ContentProvenanceTests
     }
 
     [Fact]
-    public void Owner_declaration_preserves_approved_groups_and_blocks_the_new_2017_and_2016_scope()
+    public void Owner_declaration_preserves_approved_groups_and_blocks_every_unconfirmed_exam_scope()
     {
         var manifest = ReadManifest();
         var declaration = File.ReadAllText(Absolute("docs/ASSET_RIGHTS_DECLARATION.md"));
@@ -103,7 +117,7 @@ public sealed class ContentProvenanceTests
             .Where(asset => NewlyApprovedGroupIds.Contains(asset.Id, StringComparer.Ordinal))
             .ToArray();
         var blockedGroups = manifest.Assets
-            .Where(asset => NewlyBlockedGroupIds.Contains(asset.Id, StringComparer.Ordinal))
+            .Where(asset => BlockedGroupIds.Contains(asset.Id, StringComparer.Ordinal))
             .ToArray();
 
         Assert.False(manifest.ReleaseEligible);
@@ -113,7 +127,7 @@ public sealed class ContentProvenanceTests
             Assert.Equal("approved", group.DistributionStatus);
             Assert.Contains(group.Id, declaration, StringComparison.Ordinal);
         });
-        Assert.Equal(7, blockedGroups.Length);
+        Assert.Equal(21, blockedGroups.Length);
         Assert.All(blockedGroups, group =>
         {
             Assert.Equal("blocked", group.DistributionStatus);

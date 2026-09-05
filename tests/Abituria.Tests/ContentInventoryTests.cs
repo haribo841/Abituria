@@ -135,15 +135,26 @@ public sealed class ContentInventoryTests
             [
                 "matura-maj-2026-podstawowa",
                 "matura-maj-2026-rozszerzona",
+                "matura-maj-2026-podstawowa-f2015",
+                "matura-maj-2026-rozszerzona-f2015",
                 "matura-maj-2025-podstawowa",
                 "matura-maj-2025-rozszerzona",
                 "matura-poprawkowa-2025-podstawowa",
+                "matura-maj-2025-podstawowa-f2015",
+                "matura-maj-2025-rozszerzona-f2015",
+                "matura-poprawkowa-2025-podstawowa-f2015",
                 "matura-maj-2024-podstawowa",
                 "matura-maj-2024-rozszerzona",
                 "matura-poprawkowa-2024-podstawowa",
+                "matura-maj-2024-podstawowa-f2015",
+                "matura-maj-2024-rozszerzona-f2015",
+                "matura-poprawkowa-2024-podstawowa-f2015",
                 "matura-maj-2023-podstawowa",
-                "matura-poprawkowa-2023-podstawowa",
                 "matura-maj-2023-rozszerzona",
+                "matura-poprawkowa-2023-podstawowa",
+                "matura-maj-2023-podstawowa-f2015",
+                "matura-maj-2023-rozszerzona-f2015",
+                "matura-poprawkowa-2023-podstawowa-f2015",
                 "matura-maj-2022-podstawowa",
                 "matura-maj-2022-rozszerzona",
                 "matura-poprawkowa-2022-podstawowa",
@@ -164,7 +175,10 @@ public sealed class ContentInventoryTests
                 "matura-poprawkowa-2017-podstawowa",
                 "matura-maj-2016-podstawowa",
                 "matura-maj-2016-rozszerzona",
-                "matura-poprawkowa-2016-podstawowa"
+                "matura-poprawkowa-2016-podstawowa",
+                "matura-maj-2015-podstawowa",
+                "matura-maj-2015-rozszerzona",
+                "matura-poprawkowa-2015-podstawowa"
             ],
             examIndex.Exams.OrderBy(item => item.Order).Select(item => item.Id));
         Assert.Equal(4, course.Groups.Count);
@@ -298,8 +312,8 @@ public sealed class ContentInventoryTests
 
         var diagrams = Read<DiagramCatalog>("Content/diagrams.json");
         Assert.Equal(1, diagrams.SchemaVersion);
-        Assert.Equal(226, diagrams.Diagrams.Count);
-        Assert.Equal(226, diagrams.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(249, diagrams.Diagrams.Count);
+        Assert.Equal(249, diagrams.Diagrams.Select(item => item.Id).Distinct(StringComparer.Ordinal).Count());
     }
 
     [Fact]
@@ -406,75 +420,18 @@ public sealed class ContentInventoryTests
         var formulas = Read<FormulaCatalog>("Content/formulas.json");
         var course = Read<MathCourseCatalog>("Content/chapters.json");
         var courseExercises = Read<CourseExerciseCatalog>("Content/course-exercises.json");
-        var exam = Read<ExamCatalog>("Content/exam-2021-correction.json").Exam;
-        var currentExam = Read<ExamCatalog>("Content/exam-2026-main-basic.json").Exam;
-        var extendedExam = Read<ExamCatalog>("Content/exam-2026-main-extended.json").Exam;
-        var basic2025 = Read<ExamCatalog>("Content/exam-2025-main-basic.json").Exam;
-        var extended2025 = Read<ExamCatalog>("Content/exam-2025-main-extended.json").Exam;
-        var correction2025 = Read<ExamCatalog>("Content/exam-2025-correction-basic.json").Exam;
-        var basic2024 = Read<ExamCatalog>("Content/exam-2024-main-basic.json").Exam;
-        var extended2024 = Read<ExamCatalog>("Content/exam-2024-main-extended.json").Exam;
-        var correction2024 = Read<ExamCatalog>("Content/exam-2024-correction-basic.json").Exam;
-        var basic2023 = Read<ExamCatalog>("Content/exam-2023-main-basic.json").Exam;
-        var correction2023 = Read<ExamCatalog>("Content/exam-2023-correction-basic.json").Exam;
-        var extended2023 = Read<ExamCatalog>("Content/exam-2023-main-extended.json").Exam;
-        var basic2022 = Read<ExamCatalog>("Content/exam-2022-main-basic.json").Exam;
-        var extended2022 = Read<ExamCatalog>("Content/exam-2022-main-extended.json").Exam;
-        var correction2022 = Read<ExamCatalog>("Content/exam-2022-correction-basic.json").Exam;
-        var basic2021 = Read<ExamCatalog>("Content/exam-2021-main-basic.json").Exam;
-        var extended2021 = Read<ExamCatalog>("Content/exam-2021-main-extended.json").Exam;
-        var basic2020 = Read<ExamCatalog>("Content/exam-2020-main-basic.json").Exam;
-        var extended2020 = Read<ExamCatalog>("Content/exam-2020-main-extended.json").Exam;
-        var correction2020 = Read<ExamCatalog>("Content/exam-2020-correction-basic.json").Exam;
-        var basic2019 = Read<ExamCatalog>("Content/exam-2019-main-basic.json").Exam;
-        var extended2019 = Read<ExamCatalog>("Content/exam-2019-main-extended.json").Exam;
-        var correction2019 = Read<ExamCatalog>("Content/exam-2019-correction-basic.json").Exam;
-        var basic2018 = Read<ExamCatalog>("Content/exam-2018-main-basic.json").Exam;
-        var extended2018 = Read<ExamCatalog>("Content/exam-2018-main-extended.json").Exam;
-        var correction2018 = Read<ExamCatalog>("Content/exam-2018-correction-basic.json").Exam;
-        var basic2017 = Read<ExamCatalog>("Content/exam-2017-main-basic.json").Exam;
-        var extended2017 = Read<ExamCatalog>("Content/exam-2017-main-extended.json").Exam;
-        var correction2017 = Read<ExamCatalog>("Content/exam-2017-correction-basic.json").Exam;
-        var basic2016 = Read<ExamCatalog>("Content/exam-2016-main-basic.json").Exam;
-        var extended2016 = Read<ExamCatalog>("Content/exam-2016-main-extended.json").Exam;
-        var correction2016 = Read<ExamCatalog>("Content/exam-2016-correction-basic.json").Exam;
+        var examIndex = Read<ExamIndexCatalog>("Content/exams.json");
+        var exams = examIndex.Exams
+            .Where(item => item.IsActive)
+            .OrderBy(item => item.Order)
+            .Select(item => Read<ExamCatalog>(item.ContentPath).Exam)
+            .ToArray();
         var diagrams = Read<DiagramCatalog>("Content/diagrams.json");
         var referencedDiagramIds = formulas.Articles.SelectMany(item => item.Blocks)
             .Concat(course.Lessons.SelectMany(item => item.Blocks))
             .Where(block => block.Type == "diagram")
             .Select(block => block.DiagramId!)
-            .Concat(exam.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(currentExam.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(extendedExam.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(basic2025.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(extended2025.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(correction2025.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(basic2024.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(extended2024.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(correction2024.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(basic2023.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(correction2023.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(extended2023.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(basic2022.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(extended2022.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(correction2022.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(basic2021.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(extended2021.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(basic2020.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(extended2020.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(correction2020.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(basic2019.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(extended2019.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(correction2019.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(basic2018.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(extended2018.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(correction2018.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(basic2017.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(extended2017.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(correction2017.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(basic2016.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(extended2016.Exercises.SelectMany(item => item.DiagramIds))
-            .Concat(correction2016.Exercises.SelectMany(item => item.DiagramIds))
+            .Concat(exams.SelectMany(item => item.Exercises).SelectMany(item => item.DiagramIds))
             .Concat(courseExercises.Exercises.SelectMany(item => item.DiagramIds))
             .Distinct(StringComparer.Ordinal)
             .Order(StringComparer.Ordinal)
@@ -528,41 +485,11 @@ public sealed class ContentInventoryTests
         var formulas = Read<FormulaCatalog>("Content/formulas.json");
         var course = Read<MathCourseCatalog>("Content/chapters.json");
         var courseExercises = Read<CourseExerciseCatalog>("Content/course-exercises.json");
-        var exams = new[]
-        {
-            Read<ExamCatalog>("Content/exam-2026-main-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2026-main-extended.json").Exam,
-            Read<ExamCatalog>("Content/exam-2025-main-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2025-main-extended.json").Exam,
-            Read<ExamCatalog>("Content/exam-2025-correction-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2024-main-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2024-main-extended.json").Exam,
-            Read<ExamCatalog>("Content/exam-2024-correction-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2023-main-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2023-correction-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2023-main-extended.json").Exam,
-            Read<ExamCatalog>("Content/exam-2022-main-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2022-main-extended.json").Exam,
-            Read<ExamCatalog>("Content/exam-2022-correction-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2021-main-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2021-main-extended.json").Exam,
-            Read<ExamCatalog>("Content/exam-2021-correction.json").Exam,
-            Read<ExamCatalog>("Content/exam-2020-main-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2020-main-extended.json").Exam,
-            Read<ExamCatalog>("Content/exam-2020-correction-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2019-main-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2019-main-extended.json").Exam,
-            Read<ExamCatalog>("Content/exam-2019-correction-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2018-main-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2018-main-extended.json").Exam,
-            Read<ExamCatalog>("Content/exam-2018-correction-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2017-main-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2017-main-extended.json").Exam,
-            Read<ExamCatalog>("Content/exam-2017-correction-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2016-main-basic.json").Exam,
-            Read<ExamCatalog>("Content/exam-2016-main-extended.json").Exam,
-            Read<ExamCatalog>("Content/exam-2016-correction-basic.json").Exam
-        };
+        var exams = Read<ExamIndexCatalog>("Content/exams.json").Exams
+            .Where(item => item.IsActive)
+            .OrderBy(item => item.Order)
+            .Select(item => Read<ExamCatalog>(item.ContentPath).Exam)
+            .ToArray();
         var placeholders = Read<PlaceholderCatalog>("Content/placeholders.json");
         var roadmap = Read<RoadmapCatalog>("Content/roadmap.json");
         var examExercises = exams.SelectMany(item => item.Exercises);
