@@ -265,11 +265,10 @@ public sealed class Issue35MathChaptersRegressionTests
     }
 
     [Fact]
-    public void Issue_35_completion_is_documented_in_primary_project_documents()
+    public void Issue_35_completion_is_documented_in_detailed_project_documents()
     {
         var paths = new[]
         {
-            "README.md",
             "docs/MIGRATION_INVENTORY.md",
             "docs/REQUIREMENTS.md",
             "docs/ROADMAP.md"

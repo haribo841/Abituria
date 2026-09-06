@@ -12,9 +12,12 @@ Katalog `originals` zawiera niezmienione bajtowo kopie pięciu pierwotnych plik�
 | `implementacja.md` | Dystrybucja, dokumentacja i informacje o wydaniu |
 | `opis-struktury-systemu.md` | Pierwotna architektura WPF i lista planowanych funkcji |
 | `tresc-dzialow-matematyki.md` | Szkic przyszłych materiałów działowych |
+| `README-2026-09-05.md` | Pełna migawka strony głównej repozytorium sprzed skrócenia jej do strony produktu |
 
 Wersje Markdown są uporządkowanymi streszczeniami. Przy sprawdzaniu dokładnego brzmienia należy używać kopii z `originals`.
 
 Plik `analiza-biznesowa-pelna.md` jest odrębną historyczną transkrypcją przekazaną przy bieżącym Issue #9, a nie kopią bajtową pliku z dawnych snapshotów. Jest jedynym dokumentem z tego katalogu celowo dostępnym przez DocFX, ponieważ aktywna analiza prowadzi do niego odnośnikiem i wyraźnie rozdziela stan historyczny od bieżącej implementacji. Pozostały katalog `legacy`, w tym `originals`, pozostaje wyłączony z publikacji DocFX.
+
+Plik `README-2026-09-05.md` zachowuje treść głównego README sprzed przebudowy z 6 września 2026 r. Porównania integralności wykonuje się po normalizacji końców linii, aby zachować ten sam kontrakt na Windows, Linux i macOS.
 
 Aktywny stan prac opisują [plan rozwoju](../ROADMAP.md) i [inwentarz migracji](../MIGRATION_INVENTORY.md).

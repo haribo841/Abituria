@@ -30,6 +30,21 @@
         "dest": "docs/legacy"
       }
     ],
+    "resource": [
+      {
+        "files": [
+          "LICENSE"
+        ]
+      },
+      {
+        "files": [
+          "assets/readme/*.png",
+          "legacy/README-2026-09-05.md"
+        ],
+        "src": "docs",
+        "dest": "docs"
+      }
+    ],
     "output": "artifacts/site",
     "template": [
       "default",

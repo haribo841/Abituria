@@ -1,153 +1,103 @@
-# Abituria
+# 🍀 Abituria
 
-Abituria to działająca offline aplikacja desktopowa wspierająca naukę matematyki na poziomie szkoły średniej. Aktualna implementacja używa C#, .NET 10 LTS i AvaloniaUI 12. Dane profili oraz postęp są przechowywane lokalnie w SQLite.
+**Desktopowy tutor matematyczny do nauki i przygotowania do matury - działa lokalnie, bez konta online.**
 
-Bieżące publiczne wydanie beta: [`0.9.3`](https://github.com/haribo841/Abituria/releases/tag/v0.9.3).
+*Offline desktop mathematics tutor for Polish high-school students preparing for the matura exam.*
 
-> [!IMPORTANT]
-> Wydanie `v0.9.3` powstało z commita o spełnionej bramie prawnej. Bieżący lokalny worktree ma `releaseEligible=false`, ponieważ transkrypcje arkuszy CKE z 2015-2017 oraz równoległej Formuły 2015 z lat 2023-2026 oczekują na odrębne rozszerzenie deklaracji praw właściciela. Nie należy z niego tworzyć publicznej paczki.
+[![Build](https://github.com/haribo841/Abituria/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/haribo841/Abituria/actions/workflows/build.yml)
+[![SonarCloud](https://github.com/haribo841/Abituria/actions/workflows/sonarcloud.yml/badge.svg?branch=main)](https://github.com/haribo841/Abituria/actions/workflows/sonarcloud.yml)
+[![CodeQL](https://github.com/haribo841/Abituria/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/haribo841/Abituria/actions/workflows/codeql.yml)
+[![Pages](https://github.com/haribo841/Abituria/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/haribo841/Abituria/actions/workflows/pages.yml)
+
+[**Pobierz v0.9.3**](https://github.com/haribo841/Abituria/releases/tag/v0.9.3) · [Dokumentacja](https://haribo841.github.io/Abituria/) · [Zgłoś problem](https://github.com/haribo841/Abituria/issues/new/choose)
+
+![Ekran główny Abiturii z sześcioma modułami aplikacji](docs/assets/readme/home.png)
 
 ## Pobieranie
 
-Zweryfikowane paczki są dostępne w [GitHub Releases](https://github.com/haribo841/Abituria/releases/tag/v0.9.3):
+Najszybciej zaczniesz na Windows, pobierając pojedynczy, samowystarczalny plik EXE. Instalacja środowiska .NET nie jest potrzebna.
 
-| System | Paczka | Deklarowane środowisko beta |
+[**Pobierz Abituria v0.9.3 dla Windows x64**](https://github.com/haribo841/Abituria/releases/download/v0.9.3/Abituria-v0.9.3-win-x64.exe)
+
+| System | Zweryfikowana paczka | Wspierane środowisko beta |
 | --- | --- | --- |
-| Windows | `Abituria-v0.9.3-win-x64.exe` | Windows 11 24H2 x64 |
-| Ubuntu | `Abituria-v0.9.3-linux-x64.tar.gz` | Ubuntu 24.04 x64 |
-| macOS | `Abituria-v0.9.3-osx-x64.zip` | macOS 15 na komputerze Intel |
+| Windows | [Pojedynczy plik EXE](https://github.com/haribo841/Abituria/releases/download/v0.9.3/Abituria-v0.9.3-win-x64.exe) | Windows 11 24H2 x64 |
+| Ubuntu | [Archiwum portable](https://github.com/haribo841/Abituria/releases/download/v0.9.3/Abituria-v0.9.3-linux-x64.tar.gz) | Ubuntu 24.04 x64 |
+| macOS | [Archiwum aplikacji](https://github.com/haribo841/Abituria/releases/download/v0.9.3/Abituria-v0.9.3-osx-x64.zip) | macOS 15 Intel x64 |
 
-Artefakty są samowystarczalne i nie wymagają instalacji środowiska .NET. Windows otrzymuje pojedynczy plik EXE, natomiast Ubuntu i macOS pozostają wydaniami portable w archiwach. Nie ma instalatora, automatycznej aktualizacji, podpisu kodu ani AOT. Dla Windows dodatkowe archiwum ZIP zachowuje pełne dowody licencyjne i SBOM. Przed uruchomieniem należy sprawdzić sumę SHA-256 oraz attestation artefaktu.
+Wydanie beta jest niepodpisane, dlatego SmartScreen lub Gatekeeper może wyświetlić ostrzeżenie. Sumy SHA-256, bezpieczne uruchomienie i aktualizację opisuje [instrukcja instalacji](docs/INSTALLATION.md).
 
-- [Instrukcja instalacji, aktualizacji i odinstalowania](docs/INSTALLATION.md)
-- [Dokumentacja online](https://haribo841.github.io/Abituria/)
-- [Znane ograniczenia](docs/KNOWN_LIMITATIONS.md)
+## Najprostszy start
 
-## Funkcje
+1. Pobierz paczkę dla swojego systemu i plik [`SHA256SUMS.txt`](https://github.com/haribo841/Abituria/releases/download/v0.9.3/SHA256SUMS.txt).
+2. Zweryfikuj sumę, a następnie uruchom EXE lub rozpakowaną aplikację.
+3. Wybierz profil gościa i rozpocznij naukę. Konto online nie jest wymagane.
 
-- lokalne konta chronione hasłem oraz profile gościa;
-- jednorazowe kody odzyskiwania i postęp zapisywany osobno dla każdego profilu;
-- 18 tablic matematycznych zgodnych zakresem z oficjalnym dokumentem CKE dla Formuły 2023;
-- pełny kurs Formuły 2023: 4 grupy, 13 obszarów, 119 wymagań, 238 rozwiązanych przykładów i 357 ćwiczeń;
-- filtr poziomu podstawowego i rozszerzonego oraz tryby odpowiedzi: wybór, wynik liczbowy, odpowiedź złożona i ujawnienie rozwiązania;
-- matury główne PP i PR oraz poprawkowe PP Formuły 2015 z lat 2015-2025, główne PP i PR Formuły 2015 z 2026, równoległe matury Formuły 2023 z lat 2023-2026 oraz zachowane 35 zadań matury poprawkowej 2021 - łącznie 46 arkuszy i 1 281 jednostek postępu;
-- wybór arkusza, losowanie w obrębie wybranego arkusza i agregacja czterdziestu sześciu arkuszy według 17 tematów;
-- sprawdzanie odpowiedzi A-D, podpowiedzi, ujawnianie odpowiedzi i brudnopis przechowywany osobno dla profilu i zadania do zamknięcia aplikacji;
-- kalkulator ogólny z nawiasami, potęgami, pierwiastkami, notacją naukową, `Ans`, historią, powtarzaniem `=` i automatycznym kopiowaniem wyniku;
-- pojedynczy kalkulator Picture in Picture w oknie nad Abiturią, oknie zawsze na wierzchu albo panelu aplikacji;
-- kalkulator funkcji kwadratowej z postacią ogólną, kanoniczną i iloczynową;
-- główne okno aplikacji z nawigacją między materiałami, zadaniami, kalkulatorami, opcjami, profilem i planem rozwoju;
-- własny pasek tytułu z pełnym sterowaniem oknem oraz skalowalne układy dla szerokości od `720` pikseli;
-- motyw systemowy, jasny, ciemny i wysokiego kontrastu, widoczny fokus oraz jawne stany interakcji kontrolek;
-- ekran „O programie” z wersją, identyfikatorem commita, licencją, autorem i adresem repozytorium.
+## Najważniejsze funkcje
 
-Szczegółową instrukcję korzystania z tych funkcji zawiera [podręcznik użytkownika](docs/USER_GUIDE.md).
+- pełny kurs Formuły 2023: teoria, 238 rozwiązanych przykładów i 357 autorskich ćwiczeń;
+- arkusze maturalne uporządkowane według roku, formuły i 17 tematów;
+- sprawdzanie odpowiedzi, stopniowane podpowiedzi, pełne rozwiązania i postęp profilu;
+- brudnopis zadania oraz kalkulator z historią, `Ans`, schowkiem i trybem Picture in Picture;
+- 18 tablic matematycznych i skalowalne diagramy wektorowe;
+- lokalne profile i SQLite - postęp pozostaje na urządzeniu użytkownika;
+- cztery motywy, obsługa klawiatury, widoczny fokus i układ od szerokości 720 px.
 
-## Szybki start z paczki
+## Jak wygląda nauka
 
-1. Pobierz artefakt przeznaczony dla swojego systemu oraz `SHA256SUMS.txt` z tego samego wydania.
-2. Zweryfikuj sumę i attestation zgodnie z [instrukcją instalacji](docs/INSTALLATION.md#sprawdzenie-integralności-i-pochodzenia).
-3. Na Windows zapisz pojedynczy plik EXE w nowym katalogu. Na Ubuntu i macOS rozpakuj aplikację do nowego katalogu i wejdź do utworzonego podkatalogu `Abituria-v0.9.3-<rid>`.
-4. Uruchom plik EXE Windows, `Abituria` albo `Abituria.app`, zależnie od systemu.
-5. Wybierz profil gościa lub utwórz lokalne konto.
+1. Wybierz dział, temat albo konkretny arkusz maturalny.
+2. Rozwiąż zadanie samodzielnie i odsłaniaj podpowiedzi dopiero wtedy, gdy ich potrzebujesz.
+3. Sprawdź rozwiązanie, zapisz postęp i wykonaj obliczenia bez opuszczania zadania.
 
-Wydanie beta jest niepodpisane. SmartScreen lub Gatekeeper może wyświetlić ostrzeżenie. Dokumentacja opisuje bezpieczną obsługę komunikatu dla konkretnej, zweryfikowanej paczki i nie zaleca globalnego wyłączania zabezpieczeń systemu.
+| Nauka krok po kroku | Kalkulator przy zadaniu |
+| --- | --- |
+| ![Autorskie ćwiczenie kursowe z widoczną stopniowaną podpowiedzią](docs/assets/readme/learning.png) | ![Brudnopis zadania i kalkulator Picture in Picture z wartością Ans](docs/assets/readme/calculator-pip.png) |
+| Podpowiedzi prowadzą do rozwiązania bez odbierania samodzielności. | Wynik kalkulatora można od razu wkleić do brudnopisu lub odpowiedzi. |
 
-## Dane lokalne
+Zrzuty przedstawiają aktualną gałąź `main` i nie zawierają transkrybowanych treści CKE.
 
-Baza `abituria.db` znajduje się poza katalogiem programu, w systemowym katalogu danych lokalnych użytkownika, w podkatalogu `Abituria`. Dzięki temu zastąpienie katalogu aplikacji nowszą wersją nie usuwa kont ani postępu. Przed aktualizacją zalecane jest wykonanie kopii bazy.
+## Technologie i architektura
 
-Hasła nie są przechowywane jawnie. Aplikacja używa PBKDF2-HMAC-SHA256, osobnej soli dla każdego konta i wersjonowanej liczby iteracji. Kod odzyskiwania jest wyświetlany tylko raz, a w bazie pozostaje jego skrót.
+Projekt wykorzystuje **C#**, **.NET 10 LTS**, **AvaloniaUI 12**, **SQLite z Entity Framework Core**, **CSharpMath**, **xUnit**, **GitHub Actions**, **SonarCloud**, **CodeQL** i **DocFX**.
 
-Przy pierwszym uruchomieniu aplikacja może zaimportować istniejące nazwy z pliku `Abituria/users.txt` w systemowym katalogu danych aplikacji jako profile gościa. Plik źródłowy nie jest usuwany, a import jest idempotentny. Jeżeli nie istnieje żaden profil, tworzony jest gość `Maturzysta`.
+```mermaid
+flowchart LR
+    U["Uczeń"] --> UI["Avalonia UI"]
+    UI --> M["Kurs, matury i kalkulatory"]
+    M --> C["Wersjonowane treści JSON i diagramy"]
+    UI --> D["SQLite: profile i postęp"]
+    Q["Testy i CI"] --> UI
+    Q --> C
+```
+
+Warstwy, odpowiedzialności i przepływ danych opisuje [dokumentacja architektury](docs/ARCHITECTURE.md).
 
 ## Uruchomienie ze źródeł
 
-Wymagany jest .NET SDK `10.0.302`, przypięty w `global.json`. Na Windows testy integracyjne skryptów wydawniczych działają z wbudowanym PowerShell 5.1 lub PowerShell 7 (`pwsh`); na macOS i Linux wymagany jest `pwsh` w `PATH`.
+Wymagany jest .NET SDK `10.0.302` przypięty w `global.json`.
 
 ```powershell
 dotnet restore Abituria.sln --configfile NuGet.Config --locked-mode
-dotnet build Abituria.sln --configuration Release --no-restore
-dotnet test Abituria.sln --configuration Release --no-build
 dotnet run --project Abituria.csproj
 ```
 
-Podstawowe kontrole developerskie:
+Pełne bramki developerskie i proces publikacji opisuje [proces wydania](docs/RELEASE_PROCESS.md).
 
-```powershell
-dotnet list Abituria.sln package --vulnerable --include-transitive
-dotnet format whitespace Abituria.sln --verify-no-changes --no-restore
-git diff --check
-```
+## Dokumentacja i projekt
 
-Pełny zestaw bram, obejmujący wymuszony audyt podatności, pochodzenie zasobów, aktualność dokumentacji zależności, DocFX i odnośniki, opisuje [proces wydania](docs/RELEASE_PROCESS.md#2-bramy-lokalne).
+- [Podręcznik użytkownika](docs/USER_GUIDE.md), [instalacja](docs/INSTALLATION.md) i [znane ograniczenia](docs/KNOWN_LIMITATIONS.md)
+- [Analiza biznesowa](docs/BUSINESS_ANALYSIS.md), [wymagania](docs/REQUIREMENTS.md) i [architektura](docs/ARCHITECTURE.md)
+- [Testy i jakość](docs/TESTING.md), [proces wydania](docs/RELEASE_PROCESS.md) i [proweniencja treści](docs/CONTENT_PROVENANCE.md)
+- [Odbiór projektu](docs/acceptance/README.md), [publiczna obrona](docs/DEFENSE_PROTOCOL.md) i [kryteria oceny](docs/EVALUATION_PROTOCOL.md)
+- [Współtworzenie](CONTRIBUTING.md), [wsparcie](SUPPORT.md) i [bezpieczeństwo](SECURITY.md)
 
-Diagnostyka opublikowanego artefaktu działa bez otwierania UI i bez używania prawdziwych danych:
+Autorem i opiekunem aktualnej implementacji jest [Adam Kubiś](AUTHORS.md). Kod jest dostępny na licencji [MIT](LICENSE); prawa do materiałów edukacyjnych są ewidencjonowane osobno.
 
-```powershell
-$process = Start-Process -FilePath .\Abituria.exe `
-  -ArgumentList '--release-smoke-test --data-directory "C:\Temp\abituria-smoke"' `
-  -WindowStyle Hidden -Wait -PassThru
-if ($process.ExitCode -ne 0) { throw "Smoke test nie powiódł się." }
-```
+> [!NOTE]
+> Najnowszym publicznym wydaniem jest `v0.9.3`. Zrzuty pokazują nowszy stan gałęzi `main`, którego manifest ma obecnie `releaseEligible=false`; przyszłe wydanie wymaga zatwierdzenia całej proweniencji. Poprzednia szczegółowa wersja strony projektu jest zachowana w [archiwum README z 2026-09-05](docs/legacy/README-2026-09-05.md).
 
-Na Ubuntu i macOS należy użyć odpowiednio `./Abituria` lub pliku wykonywalnego wewnątrz `Abituria.app`.
+## Kontakt i zgłoszenia
 
-## Dokumentacja
-
-| Dokument | Zakres |
-| --- | --- |
-| [Instalacja](docs/INSTALLATION.md) | wymagania systemowe, integralność, instalacja, aktualizacja i odinstalowanie |
-| [Podręcznik użytkownika](docs/USER_GUIDE.md) | profile, materiały, zadania i kalkulatory |
-| [Analiza biznesowa](docs/BUSINESS_ANALYSIS.md) | uzasadnienie produktu, interesariusze, wartość, model udostępniania, ryzyka i kamienie milowe |
-| [Wymagania](docs/REQUIREMENTS.md) | wymagania funkcjonalne, niefunkcjonalne i kryteria akceptacji |
-| [Architektura](docs/ARCHITECTURE.md) | komponenty, dane i odpowiedzialności modułów |
-| [Proces wydania](docs/RELEASE_PROCESS.md) | bramy, pakowanie, smoke test, Pages i publikacja |
-| [Testy końcowe](docs/TESTING.md) | zakres testów funkcjonalnych, regresyjnych, wydajnościowych i pamięciowych |
-| [Audyt dostępności WCAG 2.2 A/AA](docs/ACCESSIBILITY_WCAG_AUDIT.md) | pełna macierz kryteriów, dowody techniczne i jawna lista kontroli manualnych |
-| [Pakiet dla komisji](docs/COMMISSION_PACKAGE.md) | indeks dokumentacji technicznej, PDF i protokół odbioru |
-| [Odbiór Issue #43](docs/acceptance/README.md) | osobne protokoły przyrostów I-IV, decyzje i bramy zamknięcia |
-| [Publiczna obrona Issue #44](docs/DEFENSE_PROTOCOL.md) | data, komisja, przebieg, nagranie, wynik i potwierdzenie kamienia milowego M7 |
-| [Kryteria oceny Issue #45](docs/EVALUATION_PROTOCOL.md) | macierz siedmiu obszarów, warunki akceptacji, wynik bardzo dobry i gotowy komentarz zamykający |
-| [Testy użyteczności](docs/USABILITY_TEST_RESULTS.md) | dwie wymagane rundy, techniczny przegląd, problemy, poprawki i retesty |
-| [Przekazanie](docs/DELIVERY_PROTOCOL.md) | publiczne wydanie albo ograniczona, prawnie dopuszczalna forma przekazania |
-| [Zależności](docs/DEPENDENCIES.md) | dokładnie rozwiązane pakiety produkcyjne i testowe |
-| [Pochodzenie treści](docs/CONTENT_PROVENANCE.md) | zasady dopuszczania treści, fontów i obrazów do paczek oraz oświadczenie o prawach |
-| [Plan archiwum matur 2026-2015](docs/MATURA_ARCHIVE_PLAN.md) | stan arkuszy na `origin/main` i lokalnie, braki oraz etapy uzupełnienia Formuł 2023 i 2015 |
-| [Pełne archiwum Formuły 2015](docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md) | 14 uzupełnionych arkuszy, przypięte źródła i SHA-256, 23 diagramy wektorowe oraz status proweniencji |
-| [Matura maj 2019 PP - Formuła 2015](docs/MATURA_2019_BASIC_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 34/34/50, diagramy i status proweniencji |
-| [Matura maj 2019 PR - Formuła 2015](docs/MATURA_2019_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 15/15/50, diagramy i status proweniencji |
-| [Matura poprawkowa 2019 PP - Formuła 2015](docs/MATURA_2019_CORRECTION_BASIC_COVERAGE.md) | przypięte źródła z archiwum publicznego, SHA-256, kontrakt 34/34/50, diagramy i status proweniencji |
-| [Matura maj 2018 PP - Formuła 2015](docs/MATURA_2018_BASIC_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 34/34/50, diagramy i status proweniencji |
-| [Matura maj 2018 PR - Formuła 2015](docs/MATURA_2018_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 15/15/50, diagramy i status proweniencji |
-| [Matura poprawkowa 2018 PP - Formuła 2015](docs/MATURA_2018_CORRECTION_BASIC_COVERAGE.md) | przypięte źródła z archiwum publicznego, SHA-256, kontrakt 34/34/50, diagramy i status proweniencji |
-| [Matura maj 2022 PP - Formuła 2015](docs/MATURA_2022_BASIC_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 35/35/45, diagramy i status proweniencji |
-| [Matura maj 2022 PR - Formuła 2015](docs/MATURA_2022_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 15/15/50, diagram i status proweniencji |
-| [Matura poprawkowa 2022 PP - Formuła 2015](docs/MATURA_2022_CORRECTION_BASIC_COVERAGE.md) | przypięte źródła z archiwum publicznego, SHA-256, kontrakt 35/35/45, diagramy i status proweniencji |
-| [Matura maj 2023 PP](docs/MATURA_2023_BASIC_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 31/34/46, diagramy i status proweniencji |
-| [Matura poprawkowa 2024 PP](docs/MATURA_2024_CORRECTION_BASIC_COVERAGE.md) | przypięte źródła z archiwum publicznego, SHA-256, kontrakt 30/36/46, diagramy i status proweniencji |
-| [Matura maj 2023 PR](docs/MATURA_2023_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 13/14/50, diagramy i status proweniencji |
-| [Matura maj 2025 PP](docs/MATURA_2025_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 31/35/50, diagramy i status proweniencji |
-| [Matura maj 2025 PR](docs/MATURA_2025_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 12/13/50 i status proweniencji |
-| [Matura maj 2026 PP](docs/MATURA_2026_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 33/37/50, diagramy i status proweniencji |
-| [Matura maj 2026 PR](docs/MATURA_2026_EXTENDED_COVERAGE.md) | przypięte źródła, SHA-256, kontrakt 12/13/50, diagramy i status proweniencji |
-| [Znane ograniczenia](docs/KNOWN_LIMITATIONS.md) | jawny zakres wersji beta |
-| [Historia zmian](CHANGELOG.md) | pierwsze rzeczywiste wydanie i dalsze zmiany |
-| [Współtworzenie](CONTRIBUTING.md) | przygotowanie zmian, testy, SonarQube Cloud i wymagania pull requestu |
-| [Wsparcie](SUPPORT.md) | zgłaszanie błędów i wymagane dane diagnostyczne |
-| [Bezpieczeństwo](SECURITY.md) | prywatne zgłoszenia podatności i wspierane wersje |
-
-Kompletność kursu rozwijanego w ramach Issue #3, zachowanie treści historycznego Issue #35 oraz regresje opisują [macierz kursu](docs/MATH_COURSE_2023_COVERAGE.md) i [inwentarz migracji](docs/MIGRATION_INVENTORY.md). Stan pełnego technicznego archiwum matur 2026-2015, w tym rozróżnienie Formuł 2023 i 2015, opisują [plan archiwum](docs/MATURA_ARCHIVE_PLAN.md) i [macierz Formuły 2015](docs/MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md). Część nowych arkuszy i powiązanych diagramów pozostaje `blocked` w proweniencji, więc bieżący worktree nie jest podstawą publicznego wydania.
-
-## Autor i licencje
-
-Autorem i opiekunem aktualnej implementacji jest [Adam Kubiś](AUTHORS.md).
-
-Kod projektu jest udostępniany na licencji [MIT](https://github.com/haribo841/Abituria/blob/main/LICENSE). Licencje zależności i dodatkowe informacje dystrybucyjne zawiera [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). Licencja kodu nie oznacza automatycznie prawa do redystrybucji każdego materiału edukacyjnego lub obrazu. O dopuszczeniu zasobu do paczki rozstrzygają [inwentarz pochodzenia](docs/CONTENT_PROVENANCE.md) i powiązane dowody, w tym [oświadczenie właściciela projektu](docs/ASSET_RIGHTS_DECLARATION.md).
-
-## Zgłoszenia
-
-- zwykły błąd lub propozycja: [GitHub Issues](https://github.com/haribo841/Abituria/issues/new);
-- propozycja zmiany w kodzie lub dokumentacji: [CONTRIBUTING.md](CONTRIBUTING.md);
-- pytanie o użycie: [SUPPORT.md](SUPPORT.md);
+- błąd lub propozycja funkcji: [GitHub Issues](https://github.com/haribo841/Abituria/issues/new/choose);
+- pytanie dotyczące użycia: [SUPPORT.md](SUPPORT.md);
 - podatność lub dane wrażliwe: [SECURITY.md](SECURITY.md).

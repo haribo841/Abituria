@@ -34,7 +34,7 @@ public sealed class ReleaseContractTests
         Assert.Contains(expectedTag, File.ReadAllText(Absolute("README.md")), StringComparison.Ordinal);
         Assert.Contains("- \"v*\"", File.ReadAllText(Absolute(".github/workflows/release.yml")), StringComparison.Ordinal);
         Assert.Contains(
-            $"Abituria-v{version}-<rid>",
+            $"Abituria-v{version}-win-x64.exe",
             File.ReadAllText(Absolute("README.md")),
             StringComparison.Ordinal);
     }
@@ -186,7 +186,7 @@ public sealed class ReleaseContractTests
     }
 
     [Fact]
-    public void Pages_build_uses_pinned_docfx_and_does_not_publish_image_directory()
+    public void Pages_build_uses_pinned_docfx_and_only_publishes_documentation_images()
     {
         var workflow = File.ReadAllText(Absolute(".github/workflows/pages.yml"))
             .Replace("\r\n", "\n", StringComparison.Ordinal);
@@ -203,7 +203,10 @@ public sealed class ReleaseContractTests
         Assert.Contains("actions/configure-pages@v6", buildJob, StringComparison.Ordinal);
         Assert.Contains("actions/upload-pages-artifact@v5", buildJob, StringComparison.Ordinal);
         Assert.Contains("https://haribo841.github.io/Abituria/", docfx, StringComparison.Ordinal);
-        Assert.DoesNotContain("\"resource\"", docfx, StringComparison.Ordinal);
+        Assert.Contains("\"resource\"", docfx, StringComparison.Ordinal);
+        Assert.Contains("\"assets/readme/*.png\"", docfx, StringComparison.Ordinal);
+        Assert.Contains("\"legacy/README-2026-09-05.md\"", docfx, StringComparison.Ordinal);
+        Assert.Contains("\"LICENSE\"", docfx, StringComparison.Ordinal);
         Assert.DoesNotContain("img", docfx, StringComparison.OrdinalIgnoreCase);
     }
 
@@ -213,7 +216,6 @@ public sealed class ReleaseContractTests
         var guide = File.ReadAllText(Absolute("tools/release/RELEASE-README.md"));
         var packagingScript = File.ReadAllText(Absolute("tools/release/Publish-ReleaseArtifact.ps1"));
         var installation = File.ReadAllText(Absolute("docs/INSTALLATION.md"));
-        var readme = File.ReadAllText(Absolute("README.md"));
 
         Assert.InRange(guide.Length, 500, 4_000);
         Assert.Contains("Windows 11 x64", guide, StringComparison.Ordinal);
@@ -231,8 +233,6 @@ public sealed class ReleaseContractTests
         Assert.Contains("Start-Process", installation, StringComparison.Ordinal);
         Assert.Contains("-Wait", installation, StringComparison.Ordinal);
         Assert.Contains("$process.ExitCode", installation, StringComparison.Ordinal);
-        Assert.Contains("Start-Process", readme, StringComparison.Ordinal);
-        Assert.Contains("-Wait -PassThru", readme, StringComparison.Ordinal);
         Assert.DoesNotContain("docs/INSTALLATION.md", packagingScript, StringComparison.Ordinal);
     }
 
