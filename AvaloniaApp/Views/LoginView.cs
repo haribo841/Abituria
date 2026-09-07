@@ -79,7 +79,9 @@ public sealed class LoginView : UserControl
             Classes = { "muted" },
             TextWrapping = TextWrapping.Wrap
         });
-        intro.Children.Add(UiFactory.InfoBand("Materiały", "18 tablic, 13 obszarów kursu, 357 ćwiczeń i 35 zadań z matury poprawkowej 2021."));
+        intro.Children.Add(UiFactory.InfoBand(
+            "Materiały",
+            "18 tablic, pełny kurs Formuły 2023 oraz 1 281 zadań i podpunktów z 46 arkuszy CKE w 17 tematach."));
         intro.Children.Add(UiFactory.InfoBand("Prywatność", "Aplikacja działa offline i nie wysyła danych konta poza komputer."));
         return UiFactory.Card(intro, new Thickness(30));
     }

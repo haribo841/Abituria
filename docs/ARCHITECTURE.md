@@ -124,7 +124,7 @@ Widoki są zwykłymi kontrolkami Avalonia `UserControl`. Produkcyjny kod nie uż
 - obszaru przeciągania wywołującego `BeginMoveDrag`;
 - dwukliku przełączającego `WindowState` między `Normal` i `FullScreen`;
 - historycznych przycisków emoji po lewej: `🍓` zamyka, `🍋` włącza pełny ekran lub przywraca okno, a `🍏` minimalizuje okno;
-- wyśrodkowanej marki `🍀 Abituria` oraz przycisku motywu wyrównanego do prawej;
+- wyśrodkowanej marki `🍀 Abituria`; wybór motywu znajduje się w widoku `OptionsView`, poza paskiem tytułu;
 - ośmiu przezroczystych uchwytów wywołujących `BeginResizeDrag` dla czterech krawędzi i czterech narożników;
 - aktualizacji tooltipu i nazwy automatyzacji przycisku `🍋` po zmianie stanu okna, bez zastępowania historycznego emoji standardowym glyphem.
 
@@ -132,7 +132,7 @@ Emoji są znakami Unicode renderowanymi przez font platformy. Archiwalne `close.
 
 ### Motywy i zasoby wizualne
 
-`AppStyles.axaml` zawiera font Mulish, wspólne style oraz słowniki wariantu jasnego i ciemnego. `AppThemeManager` przełącza ustawienie systemowe, jasne, ciemne i wysokiego kontrastu oraz reaguje na zmianę preferencji kontrastu platformy. Tryb wysokiego kontrastu podstawia dynamiczne zasoby palety bez przebudowania widoku.
+`AppStyles.axaml` zawiera font Mulish, wspólne style oraz słowniki wariantu jasnego i ciemnego. `OptionsView` udostępnia jawny wybór ustawienia systemowego, jasnego, ciemnego i wysokiego kontrastu, a `AppThemeManager` stosuje wybór oraz reaguje na zmianę preferencji kontrastu platformy. Tryb wysokiego kontrastu podstawia dynamiczne zasoby palety bez przebudowania widoku.
 
 Kolory w widokach są wiązane przez `DynamicResource`. `UiFactory` przypisuje semantyczne klucze, takie jak `SurfaceBrush`, `TextPrimaryBrush`, `SuccessBrush` i `ErrorBrush`; aktywne widoki nie utrzymują własnych literałów kolorów. Dzięki temu komunikaty i karty zmieniają kolor razem z motywem.
 

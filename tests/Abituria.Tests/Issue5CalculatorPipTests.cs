@@ -295,12 +295,13 @@ public sealed class Issue5CalculatorPipTests
     public async Task Options_save_each_profile_mode_and_restore_previous_choice_after_failure()
     {
         var savedModes = new List<CalculatorPipMode>();
+        var selectedThemes = new List<AppThemeMode>();
         var shouldSave = true;
         var view = new OptionsView(CalculatorPipMode.OwnedWindow, mode =>
         {
             savedModes.Add(mode);
             return Task.FromResult(shouldSave);
-        });
+        }, AppThemeMode.System, selectedThemes.Add);
         var window = Show(view, 720, 520);
 
         try
@@ -308,7 +309,16 @@ public sealed class Issue5CalculatorPipTests
             var owned = FindChoice(view, "Tryb PiP: Nad Abiturią");
             var topmost = FindChoice(view, "Tryb PiP: Zawsze na wierzchu");
             var panel = FindChoice(view, "Tryb PiP: Panel w aplikacji");
+            var systemTheme = FindChoice(view, "Motyw: Systemowy");
+            var darkTheme = FindChoice(view, "Motyw: Ciemny");
             Assert.True(owned.IsChecked);
+            Assert.True(systemTheme.IsChecked);
+
+            darkTheme.IsChecked = true;
+            await DrainAsync();
+            Assert.Equal([AppThemeMode.Dark], selectedThemes);
+            Assert.True(darkTheme.IsChecked);
+            Assert.Contains(StatusTexts(view), text => text == "Ustawiono motyw: Ciemny.");
 
             topmost.IsChecked = true;
             await DrainAsync();

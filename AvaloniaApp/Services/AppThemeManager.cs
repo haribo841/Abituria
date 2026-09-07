@@ -53,17 +53,6 @@ public sealed class AppThemeManager : IDisposable
 
     public AppThemeMode Mode { get; private set; } = AppThemeMode.System;
 
-    public string DisplayName => Mode switch
-    {
-        AppThemeMode.System => "Systemowy",
-        AppThemeMode.Light => "Jasny",
-        AppThemeMode.Dark => "Ciemny",
-        AppThemeMode.HighContrast => "Wysoki kontrast",
-        _ => "Systemowy"
-    };
-
-    public event EventHandler? ModeChanged;
-
     public void AttachPlatformSettings(IPlatformSettings? platformSettings)
     {
         ObjectDisposedException.ThrowIf(_isDisposed, this);
@@ -82,17 +71,6 @@ public sealed class AppThemeManager : IDisposable
         ApplyCurrentMode();
     }
 
-    public void Cycle()
-    {
-        SetMode(Mode switch
-        {
-            AppThemeMode.System => AppThemeMode.Light,
-            AppThemeMode.Light => AppThemeMode.Dark,
-            AppThemeMode.Dark => AppThemeMode.HighContrast,
-            _ => AppThemeMode.System
-        });
-    }
-
     public void SetMode(AppThemeMode mode)
     {
         ObjectDisposedException.ThrowIf(_isDisposed, this);
@@ -102,7 +80,6 @@ public sealed class AppThemeManager : IDisposable
 
         Mode = mode;
         ApplyCurrentMode();
-        ModeChanged?.Invoke(this, EventArgs.Empty);
     }
 
     public void Dispose()

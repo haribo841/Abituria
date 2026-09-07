@@ -20,8 +20,15 @@ public sealed partial class ContentSeparationTests
 
         Assert.NotNull(catalog);
         Assert.Equal(1, catalog.SchemaVersion);
-        Assert.Equal(7, catalog.Entries.Count);
+        Assert.Equal(14, catalog.Entries.Count);
         Assert.Contains("account.registration.rules", catalog.Entries.Keys);
+        Assert.Contains("home.formulas.description", catalog.Entries.Keys);
+        Assert.Contains("home.exams.description", catalog.Entries.Keys);
+        Assert.Contains("home.tasks.description", catalog.Entries.Keys);
+        Assert.Contains("home.calculators.description", catalog.Entries.Keys);
+        Assert.Contains("home.course.description", catalog.Entries.Keys);
+        Assert.Contains("home.roadmap.description", catalog.Entries.Keys);
+        Assert.Contains("calculator.page.description", catalog.Entries.Keys);
         Assert.All(catalog.Entries, entry =>
         {
             Assert.False(string.IsNullOrWhiteSpace(entry.Key));

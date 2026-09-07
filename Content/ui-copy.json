@@ -25,6 +25,34 @@
       "title": "Tryb pracy",
       "body": "Najpierw powtórz materiał, następnie rozwiązuj zadania. Poprawne odpowiedzi i ujawnione rozwiązania są zapisywane w profilu."
     },
+    "home.formulas.description": {
+      "title": "Tablice matematyczne",
+      "body": "{0} tablic z wybranymi wzorami zgodnymi z wytycznymi CKE"
+    },
+    "home.exams.description": {
+      "title": "Matura",
+      "body": "Kompletny katalog: {0} arkuszy CKE z lat {1}-{2}, PP, PR i poprawkowe PP w Formułach 2015 i 2023"
+    },
+    "home.tasks.description": {
+      "title": "Zadania",
+      "body": "{0} zadań i podpunktów z {1} arkuszy w {2} tematach"
+    },
+    "home.calculators.description": {
+      "title": "Kalkulatory",
+      "body": "Kalkulator ogólny i funkcji kwadratowej; kolejne narzędzia są w planie rozwoju"
+    },
+    "home.course.description": {
+      "title": "Działy",
+      "body": "Pełny kurs PP i PR: {0} wymagań, {1} autorskich przykładów, {2} przykładów CKE i {3} ćwiczeń"
+    },
+    "home.roadmap.description": {
+      "title": "Plan rozwoju",
+      "body": "Przeniesione, zaplanowane i zastąpione elementy starych wersji"
+    },
+    "calculator.page.description": {
+      "title": "Kalkulatory",
+      "body": "Korzystaj z kalkulatora ogólnego, Picture in Picture i analizy funkcji kwadratowej. Kolejne narzędzia są w planie rozwoju."
+    },
     "exam.source": {
       "title": "Źródło",
       "body": "{0}, strona {1}. Treść i klucz odpowiedzi zweryfikowano {2}."

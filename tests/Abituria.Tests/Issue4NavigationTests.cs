@@ -15,7 +15,7 @@ namespace Abituria.Tests;
 public sealed class Issue4NavigationTests
 {
     private static readonly string[] HomeTileNames =
-        ["Wzory", "Matura", "Zadania", "Kalkulator", "Działy", "Plan rozwoju"];
+        ["Tablice matematyczne", "Matura", "Zadania", "Kalkulatory", "Działy", "Plan rozwoju"];
 
     [AvaloniaFact]
     public void Home_has_six_named_tiles_and_switches_between_two_by_three_and_one_by_six()
@@ -24,7 +24,7 @@ public sealed class Issue4NavigationTests
         var calls = new int[6];
         var home = new HomeView(
             "Tester",
-            repository.UiCopy,
+            repository,
             new HomeNavigationActions(
                 () => calls[0]++,
                 () => calls[1]++,
@@ -45,6 +45,21 @@ public sealed class Issue4NavigationTests
 
             Assert.Equal(6, tiles.Length);
             Assert.Equal(HomeTileNames.Order(), tiles.Select(AutomationProperties.GetName).Order());
+            Assert.Equal(
+                "18 tablic z wybranymi wzorami zgodnymi z wytycznymi CKE",
+                AutomationProperties.GetHelpText(tiles.Single(tile => AutomationProperties.GetName(tile) == "Tablice matematyczne")));
+            Assert.Equal(
+                "Kompletny katalog: 46 arkuszy CKE z lat 2015-2026, PP, PR i poprawkowe PP w Formułach 2015 i 2023",
+                AutomationProperties.GetHelpText(tiles.Single(tile => AutomationProperties.GetName(tile) == "Matura")));
+            Assert.Equal(
+                "1 281 zadań i podpunktów z 46 arkuszy w 17 tematach",
+                AutomationProperties.GetHelpText(tiles.Single(tile => AutomationProperties.GetName(tile) == "Zadania")));
+            Assert.Equal(
+                "Kalkulator ogólny i funkcji kwadratowej; kolejne narzędzia są w planie rozwoju",
+                AutomationProperties.GetHelpText(tiles.Single(tile => AutomationProperties.GetName(tile) == "Kalkulatory")));
+            Assert.Equal(
+                "Pełny kurs PP i PR: 119 wymagań, 238 autorskich przykładów, 97 przykładów CKE i 357 ćwiczeń",
+                AutomationProperties.GetHelpText(tiles.Single(tile => AutomationProperties.GetName(tile) == "Działy")));
             Assert.Equal(2, grid.ColumnDefinitions.Count);
             Assert.Equal(3, grid.RowDefinitions.Count);
             foreach (var tile in tiles)

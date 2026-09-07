@@ -36,7 +36,7 @@ Testy `[AvaloniaFact]` tworzą izolowane aplikacje, dispatchery i renderery Skia
 | UI i użyteczność przepływów | `ExerciseAndRoutingCoverageTests`, `ExerciseHintProviderTests`, `GeneralCalculatorViewInteractionTests`, `MainWindowPageCoverageTests`, `ExerciseRandomizerTests`, `AboutViewTests`, `NavigationArchitectureTests`, `Issue4NavigationTests`, `Issue5CalculatorPipTests`, `Matura2026UiTests`, `CompoundAnswerEvaluatorTests` | osiągalne ścieżki użytkownika, czterdzieści sześć arkuszy, rzeczywiste podpowiedzi także dla transkrypcji CKE, przewijalne źródła przy `720x520`, agregację 17 tematów, oddzielny postęp, odpowiedzi złożone, wszystkie trasy shella, kontrolowany pojedynczy PiP, wklejanie, losowanie i kontekst zadania |
 | Dostępność kontrolek | `AccessibilityRegressionTests` | nazwy pól i symbolicznych przycisków oraz dynamiczne regiony wyników |
 | Wizualne | `Discussion10VisualRegressionTests` | renderowanie list matematycznych i zachowanie przy minimalnym rozmiarze okna |
-| Styl, motywy i własny chrome | `Discussion49StyleRegressionTests` | Mulish, brak wymuszonego Light i Inter, historyczne emoji `🍓`/`🍋`/`🍏`, tooltipy, pełny ekran bez paska zadań, cztery ustawienia motywu, stany interakcji, fokus, breakpointy, dialogi, sterowanie i skalowanie okna |
+| Styl, motywy i własny chrome | `Discussion49StyleRegressionTests`, `Issue5CalculatorPipTests` | Mulish, brak wymuszonego Light i Inter, wybór czterech motywów w Opcjach, brak przełącznika motywu w chrome, historyczne emoji `🍓`/`🍋`/`🍏`, tooltipy, pełny ekran bez paska zadań, stany interakcji, fokus, breakpointy, dialogi, sterowanie i skalowanie okna |
 | Koszt renderowania UI | `Discussion49StyleRegressionTests` | rozgrzany render reprezentatywnego widoku w motywie jasnym, ciemnym i wysokiego kontrastu oraz budżet czasu i pamięci |
 | Wydanie | `ReleaseRuntimeTests`, `ReleaseContractTests`, `ReleaseValidationScriptTests`, `NuGetLicenseBundleTests` | izolowany smoke test, wersjonowanie, zawartość paczek, dowody licencji i działanie bramki pokrycia |
 | Python i PDF | `tests/python/test_new_commission_pdf.py`, `tests/python/test_import_cke_informer_examples.py` | generowanie PDF, import 97 przykładów CKE, przypięte SHA-256, zakresy stron, mapowania wymagań, punktację, opisy figur oraz błędy wejścia |
@@ -53,6 +53,8 @@ Natywne zachowanie schowka oraz właściwości `Owned` i `Topmost` na Ubuntu 24.
 ## Natywny smoke test Issue #6
 
 10 sierpnia 2026 r. na Windows 11 x64 uruchomiono rzeczywistą aplikację z kompilacji Release. Pasek pokazał po lewej kolorowe `🍓`, `🍋`, `🍏`, wyśrodkowane `🍀 Abituria` i przycisk motywu po prawej. `🍋` włączył `FullScreen`: systemowy pasek zadań nie pozostał widoczny nad aplikacją, symbol zachował się, a tooltip oraz nazwa automatyzacji zmieniły się na „Przywróć”. Drugie użycie przywróciło zwykły rozmiar oraz opis „Pełny ekran”, po czym `🍓` zakończył aplikację.
+
+Powyższy zapis dokumentuje ówczesny stan odbioru Issue #6. W bieżącym interfejsie wybór motywu znajduje się na stronie „Opcje”, a pasek tytułu zawiera tylko historyczne kontrolki okna i wyśrodkowaną markę.
 
 ## Regresje stylu i dostępności dyskusji #49
 

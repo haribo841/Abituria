@@ -25,7 +25,10 @@ public sealed class CalculatorView : UserControl
     {
         ArgumentNullException.ThrowIfNull(openPictureInPicture);
         var root = new StackPanel { Spacing = 18 };
-        root.Children.Add(UiFactory.PageTitle("Kalkulator funkcji kwadratowej", "Poznaj sposób obliczania delty, miejsc zerowych i postaci funkcji krok po kroku."));
+        root.Children.Add(UiFactory.PageTitle(
+            "Kalkulatory",
+            copy.GetRequired("calculator.page.description").Body));
+        root.Children.Add(new TextBlock { Text = "Kalkulator funkcji kwadratowej", Classes = { "h2" } });
         root.Children.Add(UiFactory.InfoBand(copy.GetRequired("calculator.quadratic.usage")));
         root.Children.Add(UiFactory.InfoBand(copy.GetRequired("calculator.quadratic.definition")));
         var form = new Grid { ColumnDefinitions = new ColumnDefinitions("*,*,*"), ColumnSpacing = 12 };

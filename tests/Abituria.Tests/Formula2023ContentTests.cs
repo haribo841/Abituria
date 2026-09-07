@@ -138,13 +138,13 @@ public sealed partial class Formula2023ContentTests
         var rights = ReadText("docs/ASSET_RIGHTS_DECLARATION.md");
         var provenance = ReadText("Content/provenance.json");
         var toc = ReadText("docs/toc.yml");
-        var viewSource = ReadText("AvaloniaApp/Views/ContentViews.cs");
+        var uiCopy = ReadText("Content/ui-copy.json");
 
         Assert.Contains("Rozszerzenie deklaracji z 27 lipca 2026 r.", rights, StringComparison.Ordinal);
         Assert.Contains(ExpectedDocumentHash, rights, StringComparison.Ordinal);
         Assert.Contains("\"id\": \"cke-formula-2023-transcription\"", provenance, StringComparison.Ordinal);
         Assert.Contains("FORMULA_2023_COVERAGE.md", toc, StringComparison.Ordinal);
-        Assert.Contains("zgodnych zakresem z tablicami CKE dla Formuły 2023", viewSource, StringComparison.Ordinal);
+        Assert.Contains("wybranymi wzorami zgodnymi z wytycznymi CKE", uiCopy, StringComparison.Ordinal);
     }
 
     [AvaloniaTheory]

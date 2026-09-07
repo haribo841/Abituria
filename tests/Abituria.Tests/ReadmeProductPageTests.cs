@@ -99,7 +99,7 @@ public sealed class ReadmeProductPageTests
         var screenshots = new Dictionary<string, string>
         {
             ["docs/assets/readme/home.png"] = "Ekran główny Abiturii z sześcioma modułami aplikacji",
-            ["docs/assets/readme/learning.png"] = "Autorskie ćwiczenie kursowe z widoczną stopniowaną podpowiedzią",
+            ["docs/assets/readme/learning.png"] = "Autorskie zadanie o lokacie z brudnopisem, polem odpowiedzi i pierwszą podpowiedzią",
             ["docs/assets/readme/calculator-pip.png"] = "Brudnopis zadania i kalkulator Picture in Picture z wartością Ans"
         };
 

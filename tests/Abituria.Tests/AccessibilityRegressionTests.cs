@@ -12,7 +12,7 @@ namespace Abituria.Tests;
 public sealed class AccessibilityRegressionTests
 {
     [AvaloniaFact]
-    public void Login_and_calculator_controls_expose_names_and_live_results()
+    public void Login_calculator_and_options_controls_expose_names_and_live_results()
     {
         var repository = new ContentRepository();
         var accounts = new AccountService(
@@ -24,6 +24,11 @@ public sealed class AccessibilityRegressionTests
             repository.UiCopy,
             () => { });
         var quadraticCalculator = new CalculatorView(repository.UiCopy, () => { }, _ => { });
+        var options = new OptionsView(
+            CalculatorPipMode.OwnedWindow,
+            _ => Task.FromResult(true),
+            AppThemeMode.System,
+            _ => { });
 
         var loginControls = login.GetLogicalDescendants().OfType<Control>().ToArray();
         Assert.Contains(loginControls, control => AutomationProperties.GetName(control) == "Profil użytkownika");
@@ -46,6 +51,22 @@ public sealed class AccessibilityRegressionTests
             quadraticControls,
             control => AutomationProperties.GetName(control) == "Wynik kalkulatora funkcji kwadratowej");
         Assert.Equal(AutomationLiveSetting.Polite, AutomationProperties.GetLiveSetting(quadraticResult));
+
+        var optionControls = options.GetLogicalDescendants().OfType<Control>().ToArray();
+        foreach (var name in new[]
+                 {
+                     "Motyw: Systemowy",
+                     "Motyw: Jasny",
+                     "Motyw: Ciemny",
+                     "Motyw: Wysoki kontrast",
+                     "Tryb PiP: Nad Abiturią",
+                     "Tryb PiP: Zawsze na wierzchu",
+                     "Tryb PiP: Panel w aplikacji"
+                 })
+        {
+            var choice = Assert.Single(optionControls, control => AutomationProperties.GetName(control) == name);
+            Assert.False(string.IsNullOrWhiteSpace(AutomationProperties.GetHelpText(choice)));
+        }
     }
 
     [AvaloniaFact]

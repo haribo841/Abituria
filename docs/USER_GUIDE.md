@@ -11,12 +11,12 @@ Jeżeli w systemowym katalogu danych aplikacji istnieje historyczny plik `Abitur
 Górna nawigacja po zalogowaniu zawiera:
 
 - **Start** - skróty do głównych funkcji;
-- **Wzory** - tablice matematyczne;
-- **Matura** - wybór matur 2015-2026, na poziomie podstawowym lub rozszerzonym zależnie od roku, oraz archiwalnych placeholderów;
-- **Zadania** - zadania z dwudziestu sześciu aktywnych arkuszy pogrupowane według 17 tematów;
-- **Działy** - materiały edukacyjne;
-- **Kalkulator** - funkcja kwadratowa i kalkulator ogólny;
-- **Opcje** - sposób wyświetlania kalkulatora Picture in Picture;
+- **Tablice** - otwiera 18 tablic matematycznych z wybranymi wzorami zgodnymi z wytycznymi CKE;
+- **Matura** - kompletny katalog 46 arkuszy CKE z lat 2015-2026: PP, PR i poprawkowe PP w Formułach 2015 i 2023;
+- **Zadania** - 1 281 zadań i podpunktów z 46 arkuszy pogrupowanych według 17 tematów;
+- **Działy** - pełny kurs PP i PR z 119 wymaganiami, 238 autorskimi przykładami, 97 przykładami CKE i 357 ćwiczeniami;
+- **Kalkulatory** - kalkulator funkcji kwadratowej i kalkulator ogólny;
+- **Opcje** - wybór motywu oraz sposób wyświetlania kalkulatora Picture in Picture;
 - **Plan rozwoju** - funkcje ukończone, zaplanowane i zastąpione;
 - **Profil** - postęp i zmiana hasła;
 - **O programie** - wersja, commit, licencja, autor i repozytorium.
@@ -29,18 +29,18 @@ Abituria używa własnego paska tytułu inspirowanego historyczną wersją aplik
 - `🍋` - pełny ekran albo przywrócenie;
 - `🍏` - minimalizacja.
 
-Marka `🍀 Abituria` jest wyśrodkowana, a przycisk motywu znajduje się po prawej. Najechanie na dowolną kontrolkę paska pokazuje opisowy tooltip po krótkim opóźnieniu. Symbol `🍋` pozostaje taki sam po wejściu w pełny ekran, natomiast tooltip zmienia się na „Przywróć”. Pełny ekran wykorzystuje cały ekran Windows, bez widocznego nad aplikacją paska zadań.
+Marka `🍀 Abituria` jest wyśrodkowana. Pasek tytułu nie zawiera sterowania motywem; wszystkie warianty są dostępne na stronie „Opcje”. Najechanie na dowolną kontrolkę okna pokazuje opisowy tooltip po krótkim opóźnieniu. Symbol `🍋` pozostaje taki sam po wejściu w pełny ekran, natomiast tooltip zmienia się na „Przywróć”. Pełny ekran wykorzystuje cały ekran Windows, bez widocznego nad aplikacją paska zadań.
 
 Przeciągnięcie pustego obszaru paska przenosi okno, a dwuklik włącza pełny ekran albo przywraca zwykły rozmiar. Rozmiar zwykłego okna można zmieniać z każdej krawędzi i narożnika. Minimalny obsługiwany rozmiar to `720x520`.
 
-Przycisk motywu przełącza cyklicznie ustawienia:
+Sekcja „Motyw aplikacji” na stronie „Opcje” udostępnia cztery ustawienia:
 
 1. Systemowy.
 2. Jasny.
 3. Ciemny.
 4. Wysoki kontrast.
 
-Ustawienie systemowe śledzi jasny lub ciemny wariant systemu, a po wykryciu systemowej preferencji wysokiego kontrastu włącza kontrastową paletę aplikacji. Zmiana działa od razu, bez zamykania widoku.
+Ustawienie systemowe śledzi jasny lub ciemny wariant systemu, a po wykryciu systemowej preferencji wysokiego kontrastu włącza kontrastową paletę aplikacji. Zmiana działa od razu, bez zamykania widoku. Wybór motywu dotyczy bieżącej sesji aplikacji, natomiast tryb PiP jest zapisywany osobno dla aktywnego profilu.
 
 Interfejs używa kroju Mulish. Teksty, karty i komunikaty korzystają ze wspólnych zasobów kolorów, a elementy interaktywne mają osobne stany najechania, naciśnięcia i fokusu. Przy obsłudze klawiaturą aktywna kontrolka ma wyraźną kontrastową ramkę.
 
@@ -80,9 +80,9 @@ Aby odzyskać konto, wpisz jego nazwę, zapisany kod odzyskiwania i nowe hasło.
 
 Zalogowany użytkownik konta chronionego hasłem może zmienić hasło na stronie „Profil”. Wymagane jest bieżące hasło. Po zmianie również generowany jest nowy kod odzyskiwania.
 
-## Wzory
+## Tablice matematyczne
 
-Strona „Wzory” zawiera 18 działów obejmujących kompletny zakres oficjalnych tablic CKE dla Formuły 2023. Historyczny układ 18 pozycji został zachowany, dlatego sekcja CKE „Ciągi” jest rozdzielona między działy „Ciągi” i „Granica ciągu”. Wybierz pozycję z listy, aby otworzyć artykuł z tekstem, wzorami inline, dostępnymi tabelami i ilustracjami. Wróć do listy przyciskiem widoku lub górną nawigacją.
+Strona „Tablice matematyczne” zawiera 18 działów obejmujących wybrane wzory zgodne z wytycznymi CKE dla Formuły 2023. Historyczny układ 18 pozycji został zachowany, dlatego sekcja CKE „Ciągi” jest rozdzielona między działy „Ciągi” i „Granica ciągu”. Wybierz pozycję z listy, aby otworzyć artykuł z tekstem, wzorami inline, dostępnymi tabelami i ilustracjami. Wróć do listy przyciskiem widoku lub górną nawigacją.
 
 Źródło, data weryfikacji i suma SHA-256 dokumentu CKE są zapisane w danych aplikacji oraz w [macierzy pokrycia tablic](FORMULA_2023_COVERAGE.md).
 
@@ -106,7 +106,7 @@ Dokładne wymagania pochodzą z aktu urzędowego. Nagłówek „Autorskie rozwi�
 
 Strona „Matura” pokazuje 46 arkuszy w kolejności od 2026 do 2015. Dla lat 2023-2026 obok arkuszy Formuły 2023 widoczne są równoległe arkusze Formuły 2015. Formuła 2015 obejmuje główne PP i PR od 2015 do 2026 oraz poprawkowe PP do 2025 r.; Formuła 2023 obejmuje główne PP i PR od 2023 do 2026 oraz poprawkowe PP do 2025 r. Wybierz arkusz, aby zobaczyć jego pełną listę. Losowanie w tym widoku korzysta wyłącznie z aktualnie wybranego arkusza.
 
-Strona „Zadania” agreguje dwadzieścia sześć aktywnych arkuszy według 17 tematów. Każdy wpis na liście pokazuje źródłowy arkusz. Losowanie tematyczne nie wychodzi poza wybrany temat, ale może zwrócić zadanie z 2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019 albo 2018. Strzałki poprzedniego i następnego zadania pozostają w puli wynikającej z drogi wejścia, a przycisk powrotu prowadzi odpowiednio do „Matury” lub „Zadań”.
+Strona „Zadania” agreguje 1 281 zadań i podpunktów ze wszystkich 46 aktywnych arkuszy według 17 tematów. Każdy wpis na liście pokazuje źródłowy arkusz. Losowanie tematyczne nie wychodzi poza wybrany temat, ale może zwrócić zadanie z dowolnego rocznika od 2015 do 2026. Strzałki poprzedniego i następnego zadania pozostają w puli wynikającej z drogi wejścia, a przycisk powrotu prowadzi odpowiednio do „Matury” lub „Zadań”.
 
 Lista oznacza ukończone zadania znakiem wyboru. Katalog ma 46 arkuszy i 1 281 jednostek postępu: Formułę 2015 od 2015 r., równoległe arkusze F2015 z lat 2023-2026 oraz Formułę 2023 z lat 2023-2026. Przykładowo matura maj 2026 PP ma `33/37/50`, PR `12/13/50`, a równoległe arkusze F2015 z 2026 r. mają odpowiednio `34/34/50` i `15/15/50`. Poprawki z sierpnia 2026 nie są widoczne do czasu opublikowania zasad oceniania. Szczegóły źródeł i liczników zawierają osobne macierze pokrycia matur, w tym [pełne archiwum Formuły 2015](MATURA_FORMULA_2015_ARCHIVE_COVERAGE.md).
 

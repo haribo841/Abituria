@@ -36,12 +36,12 @@ Wydanie beta jest niepodpisane, dlatego SmartScreen lub Gatekeeper może wyświe
 ## Najważniejsze funkcje
 
 - pełny kurs Formuły 2023: teoria, 238 rozwiązanych przykładów i 357 autorskich ćwiczeń;
-- arkusze maturalne uporządkowane według roku, formuły i 17 tematów;
+- kompletny katalog 46 arkuszy CKE z lat 2015-2026 oraz 1 281 zadań i podpunktów w 17 tematach;
 - sprawdzanie odpowiedzi, stopniowane podpowiedzi, pełne rozwiązania i postęp profilu;
 - brudnopis zadania oraz kalkulator z historią, `Ans`, schowkiem i trybem Picture in Picture;
 - 18 tablic matematycznych i skalowalne diagramy wektorowe;
 - lokalne profile i SQLite - postęp pozostaje na urządzeniu użytkownika;
-- cztery motywy, obsługa klawiatury, widoczny fokus i układ od szerokości 720 px.
+- cztery motywy wybierane w Opcjach, obsługa klawiatury, widoczny fokus i układ od szerokości 720 px.
 
 ## Jak wygląda nauka
 
@@ -51,8 +51,8 @@ Wydanie beta jest niepodpisane, dlatego SmartScreen lub Gatekeeper może wyświe
 
 | Nauka krok po kroku | Kalkulator przy zadaniu |
 | --- | --- |
-| ![Autorskie ćwiczenie kursowe z widoczną stopniowaną podpowiedzią](docs/assets/readme/learning.png) | ![Brudnopis zadania i kalkulator Picture in Picture z wartością Ans](docs/assets/readme/calculator-pip.png) |
-| Podpowiedzi prowadzą do rozwiązania bez odbierania samodzielności. | Wynik kalkulatora można od razu wkleić do brudnopisu lub odpowiedzi. |
+| ![Autorskie zadanie o lokacie z brudnopisem, polem odpowiedzi i pierwszą podpowiedzią](docs/assets/readme/learning.png) | ![Brudnopis zadania i kalkulator Picture in Picture z wartością Ans](docs/assets/readme/calculator-pip.png) |
+| Na jednym ekranie widać treść zadania, miejsce na obliczenia, własną odpowiedź i pierwszą z dwóch stopniowanych podpowiedzi. | Wynik kalkulatora można od razu wkleić do brudnopisu lub odpowiedzi. |
 
 Zrzuty przedstawiają aktualną gałąź `main` i nie zawierają transkrybowanych treści CKE.
 

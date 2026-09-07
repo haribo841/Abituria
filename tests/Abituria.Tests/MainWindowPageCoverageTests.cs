@@ -38,7 +38,7 @@ public sealed class MainWindowPageCoverageTests
             Render();
             AssertPage<HomeView>(window);
 
-            Click(window, "Wzory");
+            Click(window, "Tablice");
             AssertPage<FormulaListView>(window);
 
             viewModel.OpenFormula(content.Formulas.Articles[0]);
@@ -92,7 +92,7 @@ public sealed class MainWindowPageCoverageTests
             Click(window, "← Zadania");
             AssertPage<TaskTopicsView>(window);
 
-            Click(window, "Kalkulator");
+            Click(window, "Kalkulatory");
             AssertPage<CalculatorView>(window);
             viewModel.OpenGeneralCalculator();
             Render();

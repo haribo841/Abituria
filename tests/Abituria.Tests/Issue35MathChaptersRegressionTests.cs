@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using System.Text.Json;
 using Abituria.Models;
+using Abituria.Services;
 using Abituria.Ui;
 using Abituria.Views;
 using Avalonia;
@@ -352,7 +353,7 @@ public sealed class Issue35MathChaptersRegressionTests
 
             var home = new HomeView(
                 "Tester",
-                Read<UiCopyCatalog>("Content/ui-copy.json"),
+                new ContentRepository(),
                 new HomeNavigationActions(
                     () => { },
                     () => { },
@@ -364,7 +365,7 @@ public sealed class Issue35MathChaptersRegressionTests
             Dispatcher.UIThread.RunJobs();
             Assert.Contains(
                 home.GetLogicalDescendants().OfType<TextBlock>(),
-                text => text.Text == "13 obszarów: teoria, przykłady i 357 ćwiczeń");
+                text => text.Text == "Pełny kurs PP i PR: 119 wymagań, 238 autorskich przykładów, 97 przykładów CKE i 357 ćwiczeń");
         }
         finally
         {

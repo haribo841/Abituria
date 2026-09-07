@@ -63,15 +63,6 @@
                       ToolTip.Tip="Minimalizuj" />
             </StackPanel>
 
-            <Button x:Name="ThemeButton"
-                    ZIndex="1"
-                    Classes="window-control theme"
-                    MinWidth="132"
-                    HorizontalAlignment="Right"
-                    Content="Motyw: Systemowy"
-                    Click="ThemeButtonOnClick"
-                    ToolTip.ShowDelay="250"
-                    ToolTip.Tip="Zmień motyw: systemowy, jasny, ciemny lub wysoki kontrast" />
           </Grid>
         </Border>
 

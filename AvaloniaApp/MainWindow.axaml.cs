@@ -33,7 +33,6 @@ public partial class MainWindow : Window
     private readonly AppThemeManager _themeManager;
     private Border _shellHost = null!;
     private Border _pipOverlayHost = null!;
-    private Button? _themeButton;
     private Button? _maximizeButton;
     private Grid? _resizeGrips;
 
@@ -98,7 +97,6 @@ public partial class MainWindow : Window
         _shellHost = this.FindControl<Border>("ShellHost") ?? throw new InvalidOperationException("Nie znaleziono ShellHost.");
         _pipOverlayHost = this.FindControl<Border>("PipOverlayHost") ?? throw new InvalidOperationException("Nie znaleziono PipOverlayHost.");
         _pipOverlayHost.ZIndex = 90;
-        _themeButton = this.FindControl<Button>("ThemeButton") ?? throw new InvalidOperationException("Nie znaleziono ThemeButton.");
         _maximizeButton = this.FindControl<Button>("MaximizeButton") ?? throw new InvalidOperationException("Nie znaleziono MaximizeButton.");
         _resizeGrips = this.FindControl<Grid>("ResizeGrips") ?? throw new InvalidOperationException("Nie znaleziono ResizeGrips.");
         _pipController = new CalculatorPipController(
@@ -109,11 +107,9 @@ public partial class MainWindow : Window
             _clipboardCoordinator,
             _viewModel.CalculatorPipMode);
         _themeManager = new AppThemeManager(Application.Current ?? throw new InvalidOperationException("Aplikacja nie została zainicjalizowana."));
-        _themeManager.ModeChanged += ThemeManagerOnModeChanged;
         Opened += MainWindowOnOpened;
         Closed += MainWindowOnClosed;
         ConfigureWindowControlAccessibility();
-        UpdateThemeButton();
         UpdateWindowChromeState();
         _viewModel.PropertyChanged += ViewModelOnPropertyChanged;
         Render();
@@ -175,11 +171,11 @@ public partial class MainWindow : Window
 
         var nav = new WrapPanel { HorizontalAlignment = HorizontalAlignment.Center, VerticalAlignment = VerticalAlignment.Center };
         AddNav(nav, "Start", AppPage.Home);
-        AddNav(nav, "Wzory", AppPage.Formulas);
+        AddNav(nav, "Tablice", AppPage.Formulas);
         AddNav(nav, "Matura", AppPage.Matura);
         AddNav(nav, "Zadania", AppPage.Tasks);
         AddNav(nav, "Działy", AppPage.Chapters);
-        AddNav(nav, "Kalkulator", AppPage.Calculator);
+        AddNav(nav, "Kalkulatory", AppPage.Calculator);
         AddNav(nav, "Opcje", AppPage.Options);
         AddNav(nav, "Plan rozwoju", AppPage.Roadmap);
         AddNav(nav, "Profil", AppPage.Profile);
@@ -228,7 +224,7 @@ public partial class MainWindow : Window
     {
         AppPage.Home => new HomeView(
             _viewModel.ActiveProfile!.DisplayName,
-            _content.UiCopy,
+            _content,
             new HomeNavigationActions(
                 () => _viewModel.Navigate(AppPage.Formulas),
                 () => _viewModel.Navigate(AppPage.Matura),
@@ -291,7 +287,11 @@ public partial class MainWindow : Window
             _content.UiCopy,
             () => _viewModel.Navigate(AppPage.Calculator),
             _clipboardCoordinator),
-        AppPage.Options => new OptionsView(_viewModel.CalculatorPipMode, SaveCalculatorPipModeAsync),
+        AppPage.Options => new OptionsView(
+            _viewModel.CalculatorPipMode,
+            SaveCalculatorPipModeAsync,
+            _themeManager.Mode,
+            _themeManager.SetMode),
         AppPage.Roadmap => new RoadmapView(_content.Roadmap, _viewModel.SelectedRoadmapId),
         AppPage.About => new AboutView(_buildInfo),
         AppPage.Profile => new ProfileView(
@@ -453,37 +453,20 @@ public partial class MainWindow : Window
         _pipController.Dispose();
         _clipboardCoordinator.Dispose();
         _textClipboard.Attach(null);
-        _themeManager.ModeChanged -= ThemeManagerOnModeChanged;
         _themeManager.Dispose();
     }
 
     private void ConfigureWindowControlAccessibility()
     {
-        var themeButton = _themeButton ?? throw new InvalidOperationException("Nie znaleziono ThemeButton.");
         var maximizeButton = _maximizeButton ?? throw new InvalidOperationException("Nie znaleziono MaximizeButton.");
         var minimizeButton = this.FindControl<Button>("MinimizeButton") ?? throw new InvalidOperationException("Nie znaleziono MinimizeButton.");
         var closeButton = this.FindControl<Button>("CloseButton") ?? throw new InvalidOperationException("Nie znaleziono CloseButton.");
 
-        AutomationProperties.SetName(themeButton, "Zmień motyw aplikacji");
-        AutomationProperties.SetAutomationId(themeButton, "ThemeButton");
         AutomationProperties.SetName(minimizeButton, "Minimalizuj okno");
         AutomationProperties.SetAutomationId(minimizeButton, "MinimizeButton");
         AutomationProperties.SetAutomationId(maximizeButton, "MaximizeButton");
         AutomationProperties.SetName(closeButton, "Zamknij okno");
         AutomationProperties.SetAutomationId(closeButton, "CloseButton");
-    }
-
-    private void ThemeManagerOnModeChanged(object? sender, EventArgs e) => UpdateThemeButton();
-
-    private void ThemeButtonOnClick(object? sender, RoutedEventArgs e) => _themeManager.Cycle();
-
-    private void UpdateThemeButton()
-    {
-        if (_themeButton is null)
-            return;
-
-        _themeButton.Content = $"Motyw: {_themeManager.DisplayName}";
-        AutomationProperties.SetHelpText(_themeButton, $"Aktualny motyw: {_themeManager.DisplayName}. Aktywuj, aby wybrać następny motyw.");
     }
 
     private void MinimizeButtonOnClick(object? sender, RoutedEventArgs e) => WindowState = WindowState.Minimized;

@@ -49,7 +49,7 @@ public sealed class Discussion49StyleRegressionTests
         Assert.Equal("720", window.Attribute("MinWidth")?.Value);
         Assert.Equal("520", window.Attribute("MinHeight")?.Value);
         Assert.Single(window.Descendants(), element => element.Attribute(x + "Name")?.Value == "TitleBarDragArea");
-        Assert.Single(window.Descendants(), element => element.Attribute(x + "Name")?.Value == "ThemeButton");
+        Assert.DoesNotContain(window.Descendants(), element => element.Attribute(x + "Name")?.Value == "ThemeButton");
         Assert.Single(window.Descendants(), element => element.Attribute(x + "Name")?.Value == "MinimizeButton");
         Assert.Single(window.Descendants(), element => element.Attribute(x + "Name")?.Value == "MaximizeButton");
         Assert.Single(window.Descendants(), element => element.Attribute(x + "Name")?.Value == "CloseButton");
@@ -69,9 +69,6 @@ public sealed class Discussion49StyleRegressionTests
         Assert.DoesNotContain(
             window.Descendants(avalonia + "Button"),
             element => new[] { "_", "□", "❐", "×" }.Contains(element.Attribute("Content")?.Value, StringComparer.Ordinal));
-        var themeButton = window.Descendants(avalonia + "Button")
-            .Single(element => element.Attribute(x + "Name")?.Value == "ThemeButton");
-        Assert.Equal("250", themeButton.Attribute("ToolTip.ShowDelay")?.Value);
         Assert.Single(
             window.Descendants(avalonia + "StackPanel"),
             element => element.Attribute(x + "Name")?.Value == "TitleBarBrand" &&
@@ -87,6 +84,7 @@ public sealed class Discussion49StyleRegressionTests
         Assert.Contains("WindowState.Minimized", mainWindowSource, StringComparison.Ordinal);
         Assert.Contains("WindowState.FullScreen", mainWindowSource, StringComparison.Ordinal);
         Assert.DoesNotContain("WindowState.Maximized", mainWindowSource, StringComparison.Ordinal);
+        Assert.DoesNotContain("ThemeButtonOnClick", mainWindowSource, StringComparison.Ordinal);
 
         var appSource = File.ReadAllText(appPath);
         var styleSource = File.ReadAllText(stylesPath);
@@ -225,7 +223,7 @@ public sealed class Discussion49StyleRegressionTests
         var application = Assert.IsType<TestApplication>(Application.Current);
         using var manager = new AppThemeManager(application);
         var content = new ContentRepository();
-        var view = new HomeView("Tester", content.UiCopy, EmptyHomeActions());
+        var view = new HomeView("Tester", content, EmptyHomeActions());
         var window = ShowInWindow(view, 960, 640);
 
         try
@@ -263,7 +261,7 @@ public sealed class Discussion49StyleRegressionTests
             var login = new LoginView(accounts, content.UiCopy, _ => { });
             AssertResponsiveColumns(login, "LoginLayoutRoot", 1100, 720, 2, 1);
 
-            var home = new HomeView("Tester", content.UiCopy, EmptyHomeActions());
+            var home = new HomeView("Tester", content, EmptyHomeActions());
             AssertResponsiveColumns(home, "HomeLayoutRoot", 1100, 720, 2, 1);
 
             var calculator = new GeneralCalculatorView(
@@ -422,6 +420,8 @@ public sealed class Discussion49StyleRegressionTests
     [AvaloniaFact]
     public async Task Legacy_emoji_chrome_renders_without_overlap_in_every_theme_and_supported_window_size()
     {
+        var application = Assert.IsType<TestApplication>(Application.Current);
+        using var themeManager = new AppThemeManager(application);
         var directory = Path.Combine(Path.GetTempPath(), "Abituria.Tests", Guid.NewGuid().ToString("N"));
         var accounts = new AccountService(
             new AppDbContextFactory(Path.Combine(directory, "discussion49-legacy-chrome.db")),
@@ -440,11 +440,12 @@ public sealed class Discussion49StyleRegressionTests
             Dispatcher.UIThread.RunJobs();
             var titleBar = Assert.IsType<Border>(window.FindControl<Border>("TitleBar"));
             var legacyControls = Assert.IsType<StackPanel>(window.FindControl<StackPanel>("LegacyWindowControls"));
-            var themeButton = Assert.IsType<Button>(window.FindControl<Button>("ThemeButton"));
             var brand = Assert.IsType<StackPanel>(window.FindControl<StackPanel>("TitleBarBrand"));
+            Assert.Null(window.FindControl<Button>("ThemeButton"));
 
-            for (var themeIndex = 0; themeIndex < 4; themeIndex++)
+            foreach (var mode in new[] { AppThemeMode.System, AppThemeMode.Light, AppThemeMode.Dark, AppThemeMode.HighContrast })
             {
+                themeManager.SetMode(mode);
                 foreach (var (width, height) in new[] { (720d, 520d), (960d, 640d), (1280d, 820d) })
                 {
                     window.Width = width;
@@ -457,29 +458,15 @@ public sealed class Discussion49StyleRegressionTests
                     var titleBounds = BoundsRelativeTo(titleBar, window);
                     var controlsBounds = BoundsRelativeTo(legacyControls, window);
                     var brandBounds = BoundsRelativeTo(brand, window);
-                    var themeBounds = BoundsRelativeTo(themeButton, window);
                     Assert.True(titleBounds.Contains(controlsBounds));
                     Assert.True(titleBounds.Contains(brandBounds));
-                    Assert.True(titleBounds.Contains(themeBounds));
                     Assert.True(controlsBounds.Right <= brandBounds.Left);
-                    Assert.True(brandBounds.Right <= themeBounds.Left);
                 }
-
-                themeButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                Dispatcher.UIThread.RunJobs();
             }
         }
         finally
         {
-            var themeButton = window.FindControl<Button>("ThemeButton");
-            for (var attempt = 0;
-                 attempt < 4 && !((themeButton?.Content as string)?.Contains("Systemowy", StringComparison.Ordinal) ?? false);
-                 attempt++)
-            {
-                themeButton?.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                Dispatcher.UIThread.RunJobs();
-            }
-
+            themeManager.SetMode(AppThemeMode.System);
             window.Close();
             SqliteConnection.ClearAllPools();
             if (Directory.Exists(directory)) Directory.Delete(directory, recursive: true);
@@ -509,16 +496,24 @@ public sealed class Discussion49StyleRegressionTests
             Width = 960,
             Height = 640
         };
+        var application = Assert.IsType<TestApplication>(Application.Current);
+        using var themeManager = new AppThemeManager(application);
 
         try
         {
             window.Show();
             viewModel.Login(profile);
             Dispatcher.UIThread.RunJobs();
-            var themeButton = window.GetLogicalDescendants()
-                .OfType<Button>()
-                .Single(button => AutomationProperties.GetAutomationId(button) == "ThemeButton");
             var pages = new[] { AppPage.Home, AppPage.Formulas, AppPage.Matura, AppPage.Tasks, AppPage.Calculator, AppPage.About };
+            var themes = new[]
+            {
+                AppThemeMode.System,
+                AppThemeMode.Light,
+                AppThemeMode.Dark,
+                AppThemeMode.HighContrast,
+                AppThemeMode.System,
+                AppThemeMode.Light
+            };
             var hashes = new HashSet<string>(StringComparer.Ordinal);
 
             // Prime platform-specific text and control caches before measuring the
@@ -540,9 +535,7 @@ public sealed class Discussion49StyleRegressionTests
             var stopwatch = Stopwatch.StartNew();
             for (var index = 0; index < pages.Length; index++)
             {
-                if (index > 0)
-                    themeButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-
+                themeManager.SetMode(themes[index]);
                 viewModel.Navigate(pages[index]);
                 window.Width = index % 2 == 0 ? 960 : 1280;
                 window.Height = index % 2 == 0 ? 640 : 820;
@@ -574,17 +567,12 @@ public sealed class Discussion49StyleRegressionTests
                 allocatedBytes <= allocationBudget,
                 $"Renderowanie zaalokowało {allocatedBytes} B przy limicie {allocationBudget} B.");
             Assert.True(hashes.Count >= 3, $"Oczekiwano co najmniej 3 różnych klatek, uzyskano {hashes.Count}.");
-            for (var attempt = 0;
-                 attempt < 4 && !((themeButton.Content as string)?.Contains("Systemowy", StringComparison.Ordinal) ?? false);
-                 attempt++)
-            {
-                themeButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                Dispatcher.UIThread.RunJobs();
-            }
-            Assert.Contains("Systemowy", themeButton.Content as string, StringComparison.Ordinal);
+            themeManager.SetMode(AppThemeMode.System);
+            Assert.Same(ThemeVariant.Default, application.RequestedThemeVariant);
         }
         finally
         {
+            themeManager.SetMode(AppThemeMode.System);
             window.Close();
             SqliteConnection.ClearAllPools();
             if (Directory.Exists(directory)) Directory.Delete(directory, recursive: true);
